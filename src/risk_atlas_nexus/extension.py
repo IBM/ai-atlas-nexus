@@ -1,3 +1,4 @@
+import importlib
 import subprocess
 import sys
 
@@ -34,3 +35,39 @@ def install(extension_name: str) -> None:
     subprocess.check_call(
         [sys.executable, "-m", "pip", "install", extension_location]
     )  # nosec
+
+
+class Extension:
+    """
+    Imports and loads a risk atlas nexus extension main class
+    """
+
+    @staticmethod
+    def load(extension_name: str, *args, **kwargs) -> type:
+        """Import the main extension class.
+
+        Args:
+            extension_name (str): a Risk Atlas Nexus extension name
+
+        Raises:
+            ModuleNotFoundError: if the main module is not present
+            TypeError: if the main Extension class is not present
+
+        Returns:
+            type: The class for instantiation.
+        """
+
+        try:
+            # Looking for an absolute class path
+            module = importlib.import_module(extension_name.replace("-", "_") + ".main")
+        except ModuleNotFoundError as no_mod:
+            logger.error(f"Following extension not found: {extension_name}")
+            logger.error(f"Install with: ran-extension install {extension_name}")
+            sys.exit()
+
+        try:
+            extension_class = getattr(module, "Extension")
+        except:
+            raise TypeError("Extension class does not exist in the main module.")
+
+        return extension_class(*args, **kwargs)

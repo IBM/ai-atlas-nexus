@@ -1,7 +1,6 @@
 import json
 import os
 from importlib.metadata import version
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import yaml
@@ -9,6 +8,8 @@ from jinja2 import Template
 from linkml_runtime import SchemaView
 from linkml_runtime.dumpers import YAMLDumper
 from sssom_schema import Mapping
+
+from risk_atlas_nexus.extension import Extension
 
 
 # workaround for txtai
@@ -1652,11 +1653,8 @@ class RiskAtlasNexus:
 
         return results
 
-    def run_risk_to_ares_evaluation(
-        cls,
-        risks: List[Risk],
-        inference_engine: InferenceEngine,
-        assets_path: Optional[Path] = None,
+    def run_ares_evaluation(
+        cls, risks: List[Risk], inference_engine: InferenceEngine, target
     ) -> List[List[Risk]]:
         """Submit potential attack risks for ARES red-teaming evaluation
 
@@ -1664,95 +1662,22 @@ class RiskAtlasNexus:
             risks (List[Risk]):
                 A List of attack risks
             inference_engine (InferenceEngine):
-                An LLM inference engine to infer risks from the usecases.
-            assets_path (Optional[Path], optional):
-                Path to the ARES assets. if None, uses the system default assets.
+                An instance of the LLM inference engine
+            target (Optional[Path], optional):
+                A target AI model to perform the ARES red-teaming evaluation
 
         Returns:
             None
         """
-        import tempfile
-
-        import pandas as pd
-        from ares.redteam import RedTeamer
-        from ran_ares_integration.assets import (
-            ARES_TARGETS,
-            ASSETS_DIR_PATH,
-            RISK_TO_ARES_MAPPINGS,
-        )
-        from ran_ares_integration.datamodel.risk_to_ares_ontology import (
-            RiskToARESMapping,
-        )
-        from ran_ares_integration.prompt_templates import ARES_GOALS_TEMPLATE
-
-        from risk_atlas_nexus.toolkit.data_utils import resolve_ares_assets_path
-
         logger.info(
-            f"Submitted Attack risks: {json.dumps([risk.name for risk in risks], indent=2)}"
+            f"Risks submitted for ARES evluation: {json.dumps([risk.name for risk in risks], indent=2)}"
         )
 
-        # filter risk_to_ares mappings for the given risks
-        risk_to_ares_mappings: List[RiskToARESMapping] = list(
-            filter(
-                lambda risk_to_ares: risk_to_ares.risk_id
-                in [risk.tag for risk in risks],
-                RISK_TO_ARES_MAPPINGS.mappings,
-            )
+        # Load RAN-ARES extension
+        ares_extension = Extension.load(
+            "ran-ares-integration", inference_engine, target=target
         )
 
-        for mapping in risk_to_ares_mappings:
-            risk: Risk = next(filter(lambda risk: risk.tag == mapping.risk_id, risks))
-            logger.info(f"ARES mapping found for attack risk: {risk.name}")
-            logger.info(f"Generating attack seeds...")
-            goals = inference_engine.generate(
-                prompts=[
-                    Template(ARES_GOALS_TEMPLATE).render(
-                        risk_name=risk.name,
-                        risk_description=risk.description,
-                        risk_concern=risk.concern,
-                    )
-                ],
-                response_format={
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "prompt": {"type": "string"},
-                        },
-                        "required": ["prompt"],
-                    },
-                },
-                postprocessors=["json_object"],
-                verbose=False,
-            )[0]
-            logger.info(f"No. of attack seeds generated: {len(goals.prediction)}")
-
-            # Write ARES attack seeds to a tmp file system
-            goal_file = Path(os.path.join(tempfile.gettempdir(), "attack_seeds.csv"))
-            pd.DataFrame(goals.prediction).rename(
-                columns={"prompt": "Behavior"}
-            ).to_csv(goal_file, index=False)
-            mapping.ares_config.red_teaming.prompts = str(goal_file)
-
-            # Prepare config files
-            ares_config = mapping.ares_config.model_dump(by_alias=True)
-            ares_config.update(ares_config["red-teaming"].pop("intent_config"))
-
-            # replace ARES assests path wherever applicable
-            resolve_ares_assets_path(
-                ares_config, assets_path if assets_path else ASSETS_DIR_PATH
-            )
-
-            # Call ARES RedTeamer API for evaluation
-            try:
-                rt = RedTeamer(
-                    user_config=ares_config,
-                    connectors=ARES_TARGETS["connectors"],
-                    verbose=False,
-                )
-                rt.redteam(False, -1)
-            except Exception as e:
-                logger.error(str(e))
-                return
-
-        logger.info(f"Evaluation results saved at {os.getcwd()+"/results"}")
+        # Run extension on the given risks
+        for risk in risks:
+            ares_extension.run(risk)
