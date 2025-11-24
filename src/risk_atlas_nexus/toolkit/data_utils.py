@@ -1,6 +1,5 @@
 import glob
 import os
-from typing import Dict
 
 from linkml_runtime.loaders import yaml_loader
 
