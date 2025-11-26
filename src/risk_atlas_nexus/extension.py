@@ -68,6 +68,8 @@ class Extension:
         try:
             extension_class = getattr(module, "Extension")
         except:
-            raise TypeError("Extension class does not exist in the main module.")
+            raise TypeError(
+                f"Error loading extension class from the main module: '{extension_name.replace('-', '_')}.main.Extension'. Please contact the extension owner."
+            )
 
         return extension_class(*args, **kwargs)
