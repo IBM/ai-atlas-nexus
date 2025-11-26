@@ -1655,8 +1655,11 @@ class RiskAtlasNexus:
 
     def run_ares_evaluation(
         cls, risks: List[Risk], inference_engine: InferenceEngine, target
-    ) -> List[List[Risk]]:
-        """Submit potential attack risks for ARES red-teaming evaluation
+    ) -> None:
+        """Submit potential attack risks for ARES red-teaming evaluation.
+        This API needs the `ran-ares-integration` extension. Please install this extension via
+        `ran-extension install ran-ares-integration`. Refer `Readme` file for further information
+        on `risk-atlas-nexus` extensions.
 
         Args:
             risks (List[Risk]):
