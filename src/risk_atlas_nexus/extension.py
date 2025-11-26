@@ -28,7 +28,7 @@ def install(extension_name: str) -> None:
     logger.info("Installing extension: %s", extension_name)
 
     extension_location = (
-        "git+ssh://git@github.com/dhavalsalwala/risk-atlas-nexus-extensions.git"
+        "git+ssh://git@github.com/IBM/risk-atlas-nexus-extensions.git"
         + "#subdirectory="
         + extension_name
     )
