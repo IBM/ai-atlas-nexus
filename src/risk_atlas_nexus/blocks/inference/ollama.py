@@ -119,7 +119,7 @@ class OllamaInferenceEngine(InferenceEngine):
                 think=self.think,
                 **kwargs,
             )
-            return self._prepare_prediction_output(response.message)
+            return self._prepare_prediction_output(response)
 
         return run_parallel(
             chat_response,
@@ -132,7 +132,7 @@ class OllamaInferenceEngine(InferenceEngine):
     def _prepare_prediction_output(self, response):
         return TextGenerationInferenceOutput(
             prediction=(
-                response.content if hasattr(response, "content") else response.response
+                response.message.content if hasattr(response, "message") else response.response
             ),
             input_tokens=response.prompt_eval_count,
             output_tokens=response.eval_count,
