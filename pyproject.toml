@@ -55,6 +55,7 @@ dependencies = [
     "jsonschema",
     "isort",
     "pre-commit",
+    "typer"
 ]
 
 
@@ -71,6 +72,9 @@ docs = [
     "griffe-pydantic",
     "mkdocs-awesome-nav",
 ]
+
+[project.scripts]
+ran-extension = "risk_atlas_nexus.extension:app"
 
 [tool.isort]
 skip_glob = ["vrisk-atlas-nexus/*"]

@@ -152,6 +152,16 @@ RITS_API_URL=<RITS url key goes here>
 pip install -e ".[rits]"
 ```
 
+## Risk Atlas Nexus Extensions
+
+Install Risk Atlas Nexus extension using the below command
+```command
+ran-extension install <EXTENSION_NAME>
+```
+
+Currently, following extensions are available
+  - [ran-ares-integration](https://github.com/ibm/risk-atlas-nexus-extensions/tree/main/ran-ares-integration): ARES Integration for Risk Atlas Nexus to run AI robustness evaluations on AI Systems derived from use cases. 
+
 ## Compatibility
 
 - View the [releases changelog](https://github.com/IBM/risk-atlas-nexus/releases).

@@ -1,7 +1,6 @@
 import json
 import os
 from importlib.metadata import version
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import yaml
@@ -9,6 +8,8 @@ from jinja2 import Template
 from linkml_runtime import SchemaView
 from linkml_runtime.dumpers import YAMLDumper
 from sssom_schema import Mapping
+
+from risk_atlas_nexus.extension import Extension
 
 
 # workaround for txtai
@@ -574,8 +575,17 @@ class RiskAtlasNexus:
                     f"<RAN47275F12W> Chain of Thought (CoT) examples were not provided, or do not exist in the master for this taxonomy. The API will use the Zero shot method. To improve the accuracy of risk identification, please provide CoT examples in `cot_examples` when calling this API. You may also consider raising an issue to permanently add these examples to the Risk Atlas Nexus master."
                 )
 
+        if set_taxonomy == "ibm-attack-risk-atlas":
+            risks = [
+                risk
+                for risk in cls._risk_explorer.get_all_risks("ibm-risk-atlas")
+                if risk.tag.endswith("-attack")
+            ]
+        else:
+            risks = cls._risk_explorer.get_all_risks(set_taxonomy)
+
         risk_detector = GenericRiskDetector(
-            risks=cls._risk_explorer.get_all_risks(set_taxonomy),
+            risks=risks,
             inference_engine=inference_engine,
             cot_examples=processed_examples,
             max_risk=max_risk,
@@ -1186,7 +1196,9 @@ class RiskAtlasNexus:
             taxonomy=taxonomy,
         )
 
-        stakeholder_instances: list[Stakeholder] = cls._risk_explorer.get_stakeholders(taxonomy)
+        stakeholder_instances: list[Stakeholder] = cls._risk_explorer.get_stakeholders(
+            taxonomy
+        )
         return stakeholder_instances
 
     def get_stakeholder(cls, id=str):
@@ -1212,8 +1224,6 @@ class RiskAtlasNexus:
         stakeholder: Stakeholder | None = cls._risk_explorer.get_stakeholder(id=id)
         return stakeholder
 
-
-
     def get_intrinsics(cls, taxonomy=None):
         """Get all intrinsic definitions from the LinkML
 
@@ -1232,7 +1242,9 @@ class RiskAtlasNexus:
             taxonomy=taxonomy,
         )
 
-        intrinsic_instances: list[LLMIntrinsic] = cls._risk_explorer.get_llmintrinsics(taxonomy)
+        intrinsic_instances: list[LLMIntrinsic] = cls._risk_explorer.get_llmintrinsics(
+            taxonomy
+        )
         return intrinsic_instances
 
     def get_intrinsic(cls, id=str):
@@ -1314,7 +1326,6 @@ class RiskAtlasNexus:
         )
         return intrinsics
 
-
     def get_adapters(cls, taxonomy=None):
         """Get all adapter definitions from the LinkML
 
@@ -1359,7 +1370,6 @@ class RiskAtlasNexus:
         adapter: Adapter | None = cls._risk_explorer.get_adapter(id=id)
         return adapter
 
-
     def get_llm_question_policies(cls, taxonomy=None):
         """Get all LLM Quesiton Policy definitions from the LinkML
 
@@ -1378,7 +1388,9 @@ class RiskAtlasNexus:
             taxonomy=taxonomy,
         )
 
-        llm_question_policy_instances: list[LLMQuestionPolicy] = cls._risk_explorer.get_llm_question_policies(taxonomy)
+        llm_question_policy_instances: list[LLMQuestionPolicy] = (
+            cls._risk_explorer.get_llm_question_policies(taxonomy)
+        )
         return llm_question_policy_instances
 
     def get_llm_question_policy(cls, id=str):
@@ -1401,7 +1413,9 @@ class RiskAtlasNexus:
             id=id,
         )
 
-        llm_question_policy: LLMQuestionPolicy | None = cls._risk_explorer.get_llm_question_policy(id=id)
+        llm_question_policy: LLMQuestionPolicy | None = (
+            cls._risk_explorer.get_llm_question_policy(id=id)
+        )
         return llm_question_policy
 
     def get_principles(cls, taxonomy=None, document=None):
@@ -1431,7 +1445,9 @@ class RiskAtlasNexus:
             document=document,
         )
 
-        principle_instances: list[Principle] = cls._risk_explorer.get_principles(taxonomy, document)
+        principle_instances: list[Principle] = cls._risk_explorer.get_principles(
+            taxonomy, document
+        )
         return principle_instances
 
     def get_principle(cls, id=str):
@@ -1454,7 +1470,6 @@ class RiskAtlasNexus:
 
         principle: Principle | None = cls._risk_explorer.get_principle(id=id)
         return principle
-
 
     def get_instances(cls, target_class, taxonomy=None):
         """Get all instance definitions from the LinkML
@@ -1637,3 +1652,35 @@ class RiskAtlasNexus:
             )
 
         return results
+
+    def run_ares_evaluation(
+        cls, risks: List[Risk], inference_engine: InferenceEngine, target
+    ) -> None:
+        """Submit potential attack risks for ARES red-teaming evaluation.
+        This API needs the `ran-ares-integration` extension. Please install this extension via
+        `ran-extension install ran-ares-integration`. Refer `Readme` file for further information
+        on `risk-atlas-nexus` extensions.
+
+        Args:
+            risks (List[Risk]):
+                A List of attack risks
+            inference_engine (InferenceEngine):
+                An instance of the LLM inference engine
+            target (Optional[Path], optional):
+                A target AI model to perform the ARES red-teaming evaluation
+
+        Returns:
+            None
+        """
+        logger.info(
+            f"Risks submitted for ARES evluation: {json.dumps([risk.name for risk in risks], indent=2)}"
+        )
+
+        # Load RAN-ARES extension
+        ares_extension = Extension.load(
+            "ran-ares-integration", inference_engine, target=target
+        )
+
+        # Run extension on the given risks
+        for risk in risks:
+            ares_extension.run(risk)
