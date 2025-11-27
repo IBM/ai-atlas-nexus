@@ -950,6 +950,17 @@ documents:
     in the reasoning abilities of large language models.
   url: https://arxiv.org/abs/2310.06786
   dateCreated: 2023-10-10
+- id: shieldgemma-paper
+  name: ShieldGemma
+  description: ShieldGemma is a comprehensive suite of LLM-based safety content moderation
+    models built on Gemma 2. The family includes three variants (2B, 9B, 27B parameters)
+    designed to provide robust, state-of-the-art predictions of safety risks across
+    four key harm types - sexually explicit content, dangerous content, hate speech,
+    and harassment. ShieldGemma models demonstrate superior performance compared to
+    existing solutions, with the 9B variant achieving +10.8% AU-PRC improvement over
+    Llama Guard on public benchmarks.
+  url: https://arxiv.org/abs/2407.21772
+  dateCreated: 2024-07-30
 - id: granite-3.0-paper
   name: Granite 3.0 Language Models
   description: This report presents Granite 3.0, a new set of lightweight, state-of-the-art,
@@ -1799,6 +1810,15 @@ taxonomies:
   version: '1'
   hasDocumentation:
   - arxiv.org/pdf/2406.17864
+- id: shieldgemma-taxonomy
+  name: ShieldGemma Safety Categories
+  description: Four-category harm taxonomy for content moderation built on Gemma 2
+    foundation models
+  url: https://arxiv.org/abs/2407.21772
+  dateCreated: 2024-07-30
+  dateModified: 2025-01-15
+  hasDocumentation:
+  - shieldgemma-paper
 - id: ibm-granite-guardian
   name: IBM Granite Guardian
   description: Understand risk dimensions covered by Granite Guardian.
@@ -2274,6 +2294,9 @@ riskgroups:
   isDefinedByTaxonomy: ai-risk-taxonomy
   broadMatch:
   - ai-risk-taxonomy-criminal-activities
+- id: shieldgemma-content-safety-group
+  name: Content Safety
+  isDefinedByTaxonomy: shieldgemma-taxonomy
 - id: granite-guardian-harm-group
   name: Harm
   isDefinedByTaxonomy: ibm-granite-guardian
@@ -2683,6 +2706,9 @@ risks:
   closeMatch:
   - nist-dangerous-violent-or-hateful-content
   relatedMatch:
+  - shieldgemma-sexually-explicit
+  - shieldgemma-dangerous-content
+  - shieldgemma-harassment
   - granite-guardian-harm
   - granite-sexual-content
   - granite-unethical-behavior
@@ -4440,6 +4466,7 @@ risks:
   broadMatch:
   - nist-harmful-bias-or-homogenization
   relatedMatch:
+  - shieldgemma-hate-speech
   - granite-social-bias
   - credo-risk-010
   - credo-risk-011
@@ -4548,6 +4575,9 @@ risks:
   - nist-dangerous-violent-or-hateful-content
   - nist-obscene-degrading-and-or-abusive-content
   relatedMatch:
+  - shieldgemma-sexually-explicit
+  - shieldgemma-hate-speech
+  - shieldgemma-harassment
   - granite-profanity
   - ail-sex-related-crimes
   - ail-violent-crimes
@@ -8568,6 +8598,89 @@ risks:
     that violate any applicable law.
   isDefinedByTaxonomy: ai-risk-taxonomy
   isPartOf: ai-risk-taxonomy-other-illegal/unlawful/criminal-activities
+- id: shieldgemma-sexually-explicit
+  name: Sexually Explicit Content
+  description: Content containing references to sexual acts or other lewd content,
+    including sexually graphic descriptions and content aimed at causing arousal
+  url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+  dateCreated: 2024-07-30
+  dateModified: 2025-01-15
+  isDetectedBy:
+  - shieldgemma-sexually-explicit-detection
+  isDefinedByTaxonomy: shieldgemma-taxonomy
+  isPartOf: shieldgemma-content-safety-group
+  relatedMatch:
+  - atlas-harmful-output
+  - atlas-toxic-output
+  - atlas-nonconsensual-use
+  - harmful-output
+  - nonconsensual-use
+  - toxic-output
+  tag: sexually-explicit
+- id: shieldgemma-dangerous-content
+  name: Dangerous Content
+  description: Content that may cause harm to oneself and/or others, including instructions
+    for violence, self-harm, or dangerous activities
+  url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+  dateCreated: 2024-07-30
+  dateModified: 2025-01-15
+  isDetectedBy:
+  - shieldgemma-dangerous-content-detection
+  isDefinedByTaxonomy: shieldgemma-taxonomy
+  isPartOf: shieldgemma-content-safety-group
+  relatedMatch:
+  - atlas-harmful-output
+  - atlas-dangerous-use
+  - atlas-harmful-code-generation
+  - dangerous-use
+  - harmful-code-generation
+  - harmful-output
+  tag: dangerous-content
+- id: shieldgemma-hate-speech
+  name: Hate Speech
+  description: Content targeting identity or protected attributes through racial slurs,
+    promotion of discrimination, calls to violence against protected groups, or dehumanizing/belittling/vilifying
+    on the bases of race, ethnicity, religion, disability, age, nationality, veteran
+    status, sexual orientation, gender, gender identity, caste, or any other protected
+    status
+  url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+  dateCreated: 2024-07-30
+  dateModified: 2025-01-15
+  isDetectedBy:
+  - shieldgemma-hate-speech-detection
+  isDefinedByTaxonomy: shieldgemma-taxonomy
+  isPartOf: shieldgemma-content-safety-group
+  relatedMatch:
+  - atlas-output-bias
+  - atlas-toxic-output
+  - atlas-spreading-toxicity
+  - atlas-decision-bias
+  - data-bias
+  - decision-bias
+  - output-bias
+  - spreading-toxicity
+  - toxic-output
+  tag: hate-speech
+- id: shieldgemma-harassment
+  name: Harassment
+  description: Content that harasses individuals or groups, including bullying, threats,
+    intimidation, or persistent unwanted contact
+  url: https://ai.google.dev/gemma/docs/shieldgemma/model_card
+  dateCreated: 2024-07-30
+  dateModified: 2025-01-15
+  isDetectedBy:
+  - shieldgemma-harassment-detection
+  isDefinedByTaxonomy: shieldgemma-taxonomy
+  isPartOf: shieldgemma-content-safety-group
+  relatedMatch:
+  - atlas-toxic-output
+  - atlas-harmful-output
+  - atlas-spreading-toxicity
+  - harmful-output
+  - over-or-under-reliance
+  - spreading-toxicity
+  - toxic-output
+  tag: harassment
 - id: granite-guardian-harm
   name: Harm
   description: 'Content considered universally harmful. This is our general category,
@@ -9896,7 +10009,62 @@ risks:
   - mit-ai-risk-subdomain-6.5
   - mit-ai-risk-subdomain-7.3
   - nist-value-chain-and-component-integration
+- id: dangerous-use
+  relatedMatch:
+  - shieldgemma-dangerous-content
+- id: harmful-code-generation
+  relatedMatch:
+  - shieldgemma-dangerous-content
+- id: harmful-output
+  relatedMatch:
+  - shieldgemma-dangerous-content
+  - shieldgemma-harassment
+  - shieldgemma-sexually-explicit
+- id: over-or-under-reliance
+  relatedMatch:
+  - shieldgemma-harassment
+- id: spreading-toxicity
+  relatedMatch:
+  - shieldgemma-harassment
+  - shieldgemma-hate-speech
+- id: toxic-output
+  relatedMatch:
+  - shieldgemma-harassment
+  - shieldgemma-hate-speech
+  - shieldgemma-sexually-explicit
+- id: data-bias
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: decision-bias
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: output-bias
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: nonconsensual-use
+  relatedMatch:
+  - shieldgemma-sexually-explicit
 riskcontrols:
+- id: shieldgemma-sexually-explicit-detection
+  name: Sexually Explicit Content Detection
+  detectsRiskConcept:
+  - shieldgemma-sexually-explicit
+  isDefinedByTaxonomy: shieldgemma-taxonomy
+- id: shieldgemma-dangerous-content-detection
+  name: Dangerous Content Detection
+  detectsRiskConcept:
+  - shieldgemma-dangerous-content
+  isDefinedByTaxonomy: shieldgemma-taxonomy
+- id: shieldgemma-hate-speech-detection
+  name: Hate Speech Detection
+  detectsRiskConcept:
+  - shieldgemma-hate-speech
+  isDefinedByTaxonomy: shieldgemma-taxonomy
+- id: shieldgemma-harassment-detection
+  name: Harassment Detection
+  detectsRiskConcept:
+  - shieldgemma-harassment
+  isDefinedByTaxonomy: shieldgemma-taxonomy
 - id: gg-harm-detection
   name: Harm detection
   detectsRiskConcept:
@@ -15109,6 +15277,103 @@ aimodels:
   hasOutputModality:
   - modality-text
   isPartOf: ibm-granite
+- id: shieldgemma-2b
+  name: ShieldGemma 2B
+  description: 'ShieldGemma 2B is a 2-billion parameter safety content moderation
+    model built on Gemma 2. It provides robust predictions of safety risks across
+    four harm types: sexually explicit content, dangerous content, hate speech, and
+    harassment. The model is a text-to-text, decoder-only LLM designed for on-device
+    and low-latency applications where computational resources are constrained. Despite
+    its smaller size, it maintains strong performance on safety benchmarks while enabling
+    efficient deployment in edge environments.
+
+    '
+  url: https://www.kaggle.com/models/google/shieldgemma
+  dateCreated: 2024-07-30
+  hasModelCard:
+  - https://ai.google.dev/gemma/docs/shieldgemma/model_card
+  hasDocumentation:
+  - shieldgemma-paper
+  hasLicense: gemma-terms-of-use
+  performsTask:
+  - content-moderation
+  isProvidedBy: google
+  hasRiskControl:
+  - shieldgemma-sexually-explicit-detection
+  - shieldgemma-dangerous-content-detection
+  - shieldgemma-hate-speech-detection
+  - shieldgemma-harassment-detection
+  hasInputModality:
+  - modality-text
+  hasOutputModality:
+  - modality-text
+  isPartOf: shieldgemma
+- id: shieldgemma-9b
+  name: ShieldGemma 9B
+  description: 'ShieldGemma 9B is a 9-billion parameter safety content moderation
+    model built on Gemma 2. It demonstrates superior performance with +10.8% AU-PRC
+    improvement over Llama Guard and +4.3% over WildCard on public benchmarks. The
+    model excels at detecting sexually explicit content, dangerous content, hate speech,
+    and harassment across diverse contexts. This variant strikes an optimal balance
+    between accuracy and computational efficiency, making it the recommended choice
+    for most production content moderation applications. It provides state-of-the-art
+    predictions for both user input and LLM-generated output safety assessment.
+
+    '
+  url: https://www.kaggle.com/models/google/shieldgemma
+  dateCreated: 2024-07-30
+  hasModelCard:
+  - https://ai.google.dev/gemma/docs/shieldgemma/model_card
+  hasDocumentation:
+  - shieldgemma-paper
+  hasLicense: gemma-terms-of-use
+  performsTask:
+  - content-moderation
+  isProvidedBy: google
+  hasRiskControl:
+  - shieldgemma-sexually-explicit-detection
+  - shieldgemma-dangerous-content-detection
+  - shieldgemma-hate-speech-detection
+  - shieldgemma-harassment-detection
+  hasInputModality:
+  - modality-text
+  hasOutputModality:
+  - modality-text
+  isPartOf: shieldgemma
+- id: shieldgemma-27b
+  name: ShieldGemma 27B
+  description: 'ShieldGemma 27B is a 27-billion parameter safety content moderation
+    model built on Gemma 2. As the largest variant in the ShieldGemma family, it provides
+    the highest accuracy for detecting sexually explicit content, dangerous content,
+    hate speech, and harassment across diverse and challenging contexts. The model
+    excels at nuanced safety assessment, edge cases, and complex content requiring
+    sophisticated understanding. It is best suited for offline batch processing, high-stakes
+    moderation decisions, and applications where accuracy is paramount and computational
+    resources are available. This variant should be used when the highest possible
+    safety detection accuracy is required, such as in legal compliance, child safety,
+    or critical content review workflows.
+
+    '
+  url: https://www.kaggle.com/models/google/shieldgemma
+  dateCreated: 2024-07-30
+  hasModelCard:
+  - https://ai.google.dev/gemma/docs/shieldgemma/model_card
+  hasDocumentation:
+  - shieldgemma-paper
+  hasLicense: gemma-terms-of-use
+  performsTask:
+  - content-moderation
+  isProvidedBy: google
+  hasRiskControl:
+  - shieldgemma-sexually-explicit-detection
+  - shieldgemma-dangerous-content-detection
+  - shieldgemma-hate-speech-detection
+  - shieldgemma-harassment-detection
+  hasInputModality:
+  - modality-text
+  hasOutputModality:
+  - modality-text
+  isPartOf: shieldgemma
 - id: granite-3.0-2b-base
   name: Granite-3.0-2B-Base
   description: Granite-3.0-2B-Base is a decoder-only language model to support a variety
