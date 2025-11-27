@@ -103,7 +103,7 @@ URI: [dpv:Policy](https://w3id.org/dpv#Policy)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -132,7 +132,7 @@ URI: [dpv:Policy](https://w3id.org/dpv#Policy)
 name: Policy
 description: 'A guidance document outlining any of: procedures, plans, principles,
   decisions, intent, or protocols.'
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 slots:
 - isDefinedByTaxonomy
@@ -148,14 +148,14 @@ class_uri: dpv:Policy
 name: Policy
 description: 'A guidance document outlining any of: procedures, plans, principles,
   decisions, intent, or protocols.'
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 attributes:
   isDefinedByTaxonomy:
     name: isDefinedByTaxonomy
     description: A relationship where a risk or a risk group is defined by a risk
       taxonomy
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
     alias: isDefinedByTaxonomy
@@ -174,7 +174,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -187,7 +187,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -199,7 +199,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -210,7 +210,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -221,7 +221,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -233,7 +233,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

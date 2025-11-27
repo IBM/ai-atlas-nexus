@@ -9,7 +9,7 @@ _A relationship indicating that an entity has been deployed by an organization._
 
 
 
-URI: [nexus:isDeployedBy](https://ibm.github.io/risk-atlas-nexus/ontology/isDeployedBy)
+URI: [nexus:isDeployedBy](https://ibm.github.io/ai-atlas-nexus/ontology/isDeployedBy)
 Alias: isDeployedBy
 
 <!-- no inheritance hierarchy -->
@@ -40,7 +40,7 @@ Alias: isDeployedBy
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -61,7 +61,7 @@ Alias: isDeployedBy
 ```yaml
 name: isDeployedBy
 description: A relationship indicating that an entity has been deployed by an organization.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: isDeployedBy
 range: Organization

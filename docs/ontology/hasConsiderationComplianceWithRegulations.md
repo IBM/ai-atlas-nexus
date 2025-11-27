@@ -9,7 +9,7 @@ _Compliance with relevant legal or ethical regulations (if applicable)._
 
 
 
-URI: [nexus:hasConsiderationComplianceWithRegulations](https://ibm.github.io/risk-atlas-nexus/ontology/hasConsiderationComplianceWithRegulations)
+URI: [nexus:hasConsiderationComplianceWithRegulations](https://ibm.github.io/ai-atlas-nexus/ontology/hasConsiderationComplianceWithRegulations)
 Alias: hasConsiderationComplianceWithRegulations
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasConsiderationComplianceWithRegulations
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasConsiderationComplianceWithRegulations
 ```yaml
 name: hasConsiderationComplianceWithRegulations
 description: Compliance with relevant legal or ethical regulations (if applicable).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasConsiderationComplianceWithRegulations
 domain_of:

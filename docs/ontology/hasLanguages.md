@@ -9,7 +9,7 @@ _The languages included in the dataset used by the benchmark (e.g., English, mul
 
 
 
-URI: [nexus:hasLanguages](https://ibm.github.io/risk-atlas-nexus/ontology/hasLanguages)
+URI: [nexus:hasLanguages](https://ibm.github.io/ai-atlas-nexus/ontology/hasLanguages)
 Alias: hasLanguages
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasLanguages
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasLanguages
 name: hasLanguages
 description: The languages included in the dataset used by the benchmark (e.g., English,
   multilingual).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasLanguages
 domain_of:

@@ -9,7 +9,7 @@ _Specific risks of LLMs the benchmark assesses_
 
 
 
-URI: [nexus:hasRelatedRisks](https://ibm.github.io/risk-atlas-nexus/ontology/hasRelatedRisks)
+URI: [nexus:hasRelatedRisks](https://ibm.github.io/ai-atlas-nexus/ontology/hasRelatedRisks)
 Alias: hasRelatedRisks
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasRelatedRisks
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasRelatedRisks
 ```yaml
 name: hasRelatedRisks
 description: Specific risks of LLMs the benchmark assesses
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasRelatedRisks
 domain_of:

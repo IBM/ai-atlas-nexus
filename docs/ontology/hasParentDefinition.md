@@ -9,7 +9,7 @@ _Indicates parent terms associated with a term_
 
 
 
-URI: [nexus:hasParentDefinition](https://ibm.github.io/risk-atlas-nexus/ontology/hasParentDefinition)
+URI: [nexus:hasParentDefinition](https://ibm.github.io/ai-atlas-nexus/ontology/hasParentDefinition)
 Alias: hasParentDefinition
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasParentDefinition
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasParentDefinition
 ```yaml
 name: hasParentDefinition
 description: Indicates parent terms associated with a term
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasParentDefinition
 alias: hasParentDefinition

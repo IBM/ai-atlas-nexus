@@ -22,9 +22,9 @@ Alias: version
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |  no  |
 | [License](License.md) | The general notion of a license which defines terms and grants permissions to... |  no  |
 | [RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |  no  |
+| [Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |  no  |
 
 
 
@@ -51,7 +51,7 @@ Alias: version
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: version
 ```yaml
 name: version
 description: The version of the entity embodied by a specified resource.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:version
 alias: version

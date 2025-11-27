@@ -9,7 +9,7 @@ _A list of AI evaluation benchmark metadata cards_
 
 
 
-URI: [nexus:benchmarkmetadatacards](https://ibm.github.io/risk-atlas-nexus/ontology/benchmarkmetadatacards)
+URI: [nexus:benchmarkmetadatacards](https://ibm.github.io/ai-atlas-nexus/ontology/benchmarkmetadatacards)
 Alias: benchmarkmetadatacards
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: benchmarkmetadatacards
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: benchmarkmetadatacards
 ```yaml
 name: benchmarkmetadatacards
 description: A list of AI evaluation benchmark metadata cards
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: benchmarkmetadatacards
 owner: Container

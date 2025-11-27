@@ -9,7 +9,7 @@ _A relationship where an entity relates to a term_
 
 
 
-URI: [nexus:hasRelatedTerm](https://ibm.github.io/risk-atlas-nexus/ontology/hasRelatedTerm)
+URI: [nexus:hasRelatedTerm](https://ibm.github.io/ai-atlas-nexus/ontology/hasRelatedTerm)
 Alias: hasRelatedTerm
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasRelatedTerm
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasRelatedTerm
 ```yaml
 name: hasRelatedTerm
 description: A relationship where an entity relates to a term
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: Any
 alias: hasRelatedTerm

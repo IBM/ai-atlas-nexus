@@ -22,8 +22,8 @@ Alias: exactMatch
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 | [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 
 
 
@@ -52,7 +52,7 @@ Alias: exactMatch
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ name: exactMatch
 description: The property is used to link two concepts, indicating a high degree of
   confidence that the concepts can be used interchangeably across a wide range of
   information retrieval applications
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: skos:exactMatch
 alias: exactMatch

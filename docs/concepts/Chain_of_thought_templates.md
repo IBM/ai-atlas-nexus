@@ -2,15 +2,15 @@
 
 CoT templates are designed to enhance interpretability, support systematic reasoning, and provide examples that aid model predictions, resulting in improved accuracy.
 
-Risk Atlas Nexus currently supports adding custom CoT templates for [Auto-assist Risk Questionnaire](#auto-assist-risk-questionnaire) and [Risk Identification](#risk-identification).
+AI Atlas Nexus currently supports adding custom CoT templates for [Auto-assist Risk Questionnaire](#auto-assist-risk-questionnaire) and [Risk Identification](#risk-identification).
 
 ## Auto-assist Risk Questionnaire
 
-The auto-assist feature utilizes few-shot examples defined in the file `risk_atlas_nexus/data/templates/risk_questionnaire_cot.json` to predict the output of the risk questionnaire. The example of usage can be found in the notebook [autoassist_questionnaire.ipynb](../examples/notebooks/autoassist_questionnaire.ipynb)
+The auto-assist feature utilizes few-shot examples defined in the file `ai_atlas_nexus/data/templates/risk_questionnaire_cot.json` to predict the output of the risk questionnaire. The example of usage can be found in the notebook [autoassist_questionnaire.ipynb](../examples/notebooks/autoassist_questionnaire.ipynb)
 
 ### Customization
 
-To adapt this auto-assist functionality to custom risk questionnaire, users need to provide their own set of questions, example intents, and corresponding answers in a json file such as in [risk_questionnaire_cot.json](https://github.com/IBM/risk-atlas-nexus/blob/main/src/risk_atlas_nexus/data/templates/risk_questionnaire_cot.json). This will enable the LLM to learn from these few-shot examples and generate responses for unseen queries.
+To adapt this auto-assist functionality to custom risk questionnaire, users need to provide their own set of questions, example intents, and corresponding answers in a json file such as in [risk_questionnaire_cot.json](https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/templates/risk_questionnaire_cot.json). This will enable the LLM to learn from these few-shot examples and generate responses for unseen queries.
 
 There are two different template formats: the Zero-Shot method and the Few-Shot method.
 
@@ -56,11 +56,11 @@ Each question is associated with a list of examples, each containing intent, ans
 
 ## Risk Identification
 
-The risk identification feature utilizes few-shot examples defined in the file `risk_atlas_nexus/data/templates/risk_generation_cot.json` to predict potential risks associated with a usecase. The usage example is shown in the notebook [risk_identification.ipynb](../examples/notebooks/risk_identification.ipynb)
+The risk identification feature utilizes few-shot examples defined in the file `ai_atlas_nexus/data/templates/risk_generation_cot.json` to predict potential risks associated with a usecase. The usage example is shown in the notebook [risk_identification.ipynb](../examples/notebooks/risk_identification.ipynb)
 
 ### Customization
 
-To use custom risk CoT examples for a new taxonomy or an existing taxonomy, users must provide their own set of example usecase and associated risks in a JSON file such as in [risk_generation_cot.json](https://github.com/IBM/risk-atlas-nexus/blob/main/src/risk_atlas_nexus/data/templates/risk_generation_cot.json). This will enable the LLM to learn from these few-shot examples and generate better responses.
+To use custom risk CoT examples for a new taxonomy or an existing taxonomy, users must provide their own set of example usecase and associated risks in a JSON file such as in [risk_generation_cot.json](https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/templates/risk_generation_cot.json). This will enable the LLM to learn from these few-shot examples and generate better responses.
 
 ### CoT Template
 
@@ -96,4 +96,4 @@ Each taxonomy is associated with a list of examples, each containing usecase and
 
 If you would like to contribute your own templates to the project for others to use:
 
-- Save your new template in the `risk_atlas_nexus/data/templates/` folder, push your changes and make a PR to the main project.
+- Save your new template in the `ai_atlas_nexus/data/templates/` folder, push your changes and make a PR to the main project.

@@ -11,7 +11,7 @@ _Any type of AI, be it a LLM, RL agent, SVM, etc._
 * __NOTE__: this is an abstract class and should not be instantiated directly
 
 
-URI: [nexus:BaseAi](https://ibm.github.io/risk-atlas-nexus/ontology/BaseAi)
+URI: [nexus:BaseAi](https://ibm.github.io/ai-atlas-nexus/ontology/BaseAi)
 
 
 
@@ -152,7 +152,7 @@ URI: [nexus:BaseAi](https://ibm.github.io/risk-atlas-nexus/ontology/BaseAi)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -180,7 +180,7 @@ URI: [nexus:BaseAi](https://ibm.github.io/risk-atlas-nexus/ontology/BaseAi)
 ```yaml
 name: BaseAi
 description: Any type of AI, be it a LLM, RL agent, SVM, etc.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 abstract: true
 slots:
@@ -200,14 +200,14 @@ slots:
 ```yaml
 name: BaseAi
 description: Any type of AI, be it a LLM, RL agent, SVM, etc.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 abstract: true
 attributes:
   producer:
     name: producer
     description: A relationship to the Organization instance which produces this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: producer
     owner: BaseAi
@@ -217,7 +217,7 @@ attributes:
   hasModelCard:
     name: hasModelCard
     description: A relationship to model card references.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasModelCard
     owner: BaseAi
@@ -230,7 +230,7 @@ attributes:
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
     alias: hasDocumentation
@@ -254,7 +254,7 @@ attributes:
   hasLicense:
     name: hasLicense
     description: Indicates licenses associated with a resource
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
     alias: hasLicense
@@ -272,7 +272,7 @@ attributes:
   performsTask:
     name: performsTask
     description: relationship indicating the AI tasks an AI model can perform.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: performsTask
     owner: BaseAi
@@ -285,7 +285,7 @@ attributes:
     name: isProvidedBy
     description: A relationship indicating the AI model has been provided by an AI
       model provider.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isProvidedBy
     alias: isProvidedBy
@@ -297,7 +297,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -310,7 +310,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -322,7 +322,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -333,7 +333,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -344,7 +344,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -356,7 +356,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

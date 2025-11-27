@@ -9,7 +9,7 @@ _A list of terms from a vocabulary_
 
 
 
-URI: [nexus:terms](https://ibm.github.io/risk-atlas-nexus/ontology/terms)
+URI: [nexus:terms](https://ibm.github.io/ai-atlas-nexus/ontology/terms)
 Alias: terms
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: terms
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: terms
 ```yaml
 name: terms
 description: A list of terms from a vocabulary
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: terms
 owner: Container

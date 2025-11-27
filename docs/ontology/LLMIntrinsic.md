@@ -146,7 +146,7 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -175,7 +175,7 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 name: LLMIntrinsic
 description: A capability that can be invoked through a well-defined API that is reasonably
   stable and independent of how the LLM intrinsic itself is implemented.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 slots:
 - hasRelatedRisk
@@ -195,13 +195,13 @@ class_uri: ai:Capability
 name: LLMIntrinsic
 description: A capability that can be invoked through a well-defined API that is reasonably
   stable and independent of how the LLM intrinsic itself is implemented.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 attributes:
   hasRelatedRisk:
     name: hasRelatedRisk
     description: A relationship where an entity relates to a risk
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: Any
     alias: hasRelatedRisk
@@ -223,7 +223,7 @@ attributes:
   hasRelatedTerm:
     name: hasRelatedTerm
     description: A relationship where an entity relates to a term
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: Any
     alias: hasRelatedTerm
@@ -239,7 +239,7 @@ attributes:
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
     alias: hasDocumentation
@@ -263,7 +263,7 @@ attributes:
   isDefinedByVocabulary:
     name: isDefinedByVocabulary
     description: A relationship where a term or a term group is defined by a vocabulary
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
     alias: isDefinedByVocabulary
@@ -276,7 +276,7 @@ attributes:
   hasAdapter:
     name: hasAdapter
     description: The Adapter for the intrinsic
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: LLMIntrinsic
     alias: hasAdapter
@@ -290,7 +290,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -303,7 +303,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -315,7 +315,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -326,7 +326,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -337,7 +337,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -349,7 +349,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

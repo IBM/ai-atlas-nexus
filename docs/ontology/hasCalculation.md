@@ -9,7 +9,7 @@ _The way metrics are computed based on model outputs and the benchmark data._
 
 
 
-URI: [nexus:hasCalculation](https://ibm.github.io/risk-atlas-nexus/ontology/hasCalculation)
+URI: [nexus:hasCalculation](https://ibm.github.io/ai-atlas-nexus/ontology/hasCalculation)
 Alias: hasCalculation
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasCalculation
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasCalculation
 name: hasCalculation
 description: The way metrics are computed based on model outputs and the benchmark
   data.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasCalculation
 domain_of:

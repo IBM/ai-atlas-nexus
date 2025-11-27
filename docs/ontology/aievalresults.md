@@ -9,7 +9,7 @@ _A list of AI evaluation results_
 
 
 
-URI: [nexus:aievalresults](https://ibm.github.io/risk-atlas-nexus/ontology/aievalresults)
+URI: [nexus:aievalresults](https://ibm.github.io/ai-atlas-nexus/ontology/aievalresults)
 Alias: aievalresults
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: aievalresults
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: aievalresults
 ```yaml
 name: aievalresults
 description: A list of AI evaluation results
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: aievalresults
 owner: Container

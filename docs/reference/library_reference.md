@@ -1,8 +1,8 @@
 # Library convenience methods
 
-This is an automatic generated API reference of the library convenience methods for Risk Atlas Nexus
+This is an automatic generated API reference of the library convenience methods for AI Atlas Nexus
 
-::: risk_atlas_nexus.library
+::: ai_atlas_nexus.library
     handler: python
     options:
         show_if_no_docstring: true

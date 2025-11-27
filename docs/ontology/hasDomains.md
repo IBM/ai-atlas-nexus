@@ -9,7 +9,7 @@ _The specific domains or areas where the benchmark is applied (e.g., natural lan
 
 
 
-URI: [nexus:hasDomains](https://ibm.github.io/risk-atlas-nexus/ontology/hasDomains)
+URI: [nexus:hasDomains](https://ibm.github.io/ai-atlas-nexus/ontology/hasDomains)
 Alias: hasDomains
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasDomains
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasDomains
 name: hasDomains
 description: The specific domains or areas where the benchmark is applied (e.g., natural
   language processing,computer vision).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDomains
 domain_of:

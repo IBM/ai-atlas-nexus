@@ -9,7 +9,7 @@ _A list of Principles_
 
 
 
-URI: [nexus:principles](https://ibm.github.io/risk-atlas-nexus/ontology/principles)
+URI: [nexus:principles](https://ibm.github.io/ai-atlas-nexus/ontology/principles)
 Alias: principles
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: principles
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: principles
 ```yaml
 name: principles
 description: A list of Principles
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: principles
 owner: Container

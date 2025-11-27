@@ -22,12 +22,12 @@ Alias: isProvidedBy
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [BaseAi](BaseAi.md) | Any type of AI, be it a LLM, RL agent, SVM, etc |  no  |
-| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
 | [AiAgent](AiAgent.md) | An artificial intelligence (AI) agent refers to a system or program that is c... |  yes  |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
+| [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
+| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities |  no  |
+| [BaseAi](BaseAi.md) | Any type of AI, be it a LLM, RL agent, SVM, etc |  no  |
 
 
 
@@ -54,7 +54,7 @@ Alias: isProvidedBy
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -76,7 +76,7 @@ Alias: isProvidedBy
 name: isProvidedBy
 description: A relationship indicating the AI model has been provided by an AI model
   provider.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: airo:isProvidedBy
 alias: isProvidedBy

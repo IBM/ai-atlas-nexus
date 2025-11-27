@@ -9,7 +9,7 @@ _A relationship indicating the input modalities supported by an AI component. Ex
 
 
 
-URI: [nexus:hasInputModality](https://ibm.github.io/risk-atlas-nexus/ontology/hasInputModality)
+URI: [nexus:hasInputModality](https://ibm.github.io/ai-atlas-nexus/ontology/hasInputModality)
 Alias: hasInputModality
 
 <!-- no inheritance hierarchy -->
@@ -52,7 +52,7 @@ Alias: hasInputModality
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: hasInputModality
 name: hasInputModality
 description: A relationship indicating the input modalities supported by an AI component.
   Examples include text, image, video.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasInputModality
 domain_of:

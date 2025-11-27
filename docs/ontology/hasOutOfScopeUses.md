@@ -9,7 +9,7 @@ _Use cases where the benchmark is not designed to be applied and could give misl
 
 
 
-URI: [nexus:hasOutOfScopeUses](https://ibm.github.io/risk-atlas-nexus/ontology/hasOutOfScopeUses)
+URI: [nexus:hasOutOfScopeUses](https://ibm.github.io/ai-atlas-nexus/ontology/hasOutOfScopeUses)
 Alias: hasOutOfScopeUses
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasOutOfScopeUses
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasOutOfScopeUses
 name: hasOutOfScopeUses
 description: Use cases where the benchmark is not designed to be applied and could
   give misleading results.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasOutOfScopeUses
 domain_of:

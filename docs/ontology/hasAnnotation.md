@@ -9,7 +9,7 @@ _The process used to annotate or label the dataset, including who or what perfor
 
 
 
-URI: [nexus:hasAnnotation](https://ibm.github.io/risk-atlas-nexus/ontology/hasAnnotation)
+URI: [nexus:hasAnnotation](https://ibm.github.io/ai-atlas-nexus/ontology/hasAnnotation)
 Alias: hasAnnotation
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasAnnotation
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: hasAnnotation
 name: hasAnnotation
 description: The process used to annotate or label the dataset, including who or what
   performed the annotations (e.g., human annotators, automated processes).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasAnnotation
 domain_of:

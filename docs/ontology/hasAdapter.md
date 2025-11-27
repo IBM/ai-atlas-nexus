@@ -9,7 +9,7 @@ _The Adapter for the intrinsic_
 
 
 
-URI: [nexus:hasAdapter](https://ibm.github.io/risk-atlas-nexus/ontology/hasAdapter)
+URI: [nexus:hasAdapter](https://ibm.github.io/ai-atlas-nexus/ontology/hasAdapter)
 Alias: hasAdapter
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasAdapter
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasAdapter
 ```yaml
 name: hasAdapter
 description: The Adapter for the intrinsic
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: LLMIntrinsic
 alias: hasAdapter

@@ -9,7 +9,7 @@ _The evaluation techniques applied within the benchmark._
 
 
 
-URI: [nexus:hasMethods](https://ibm.github.io/risk-atlas-nexus/ontology/hasMethods)
+URI: [nexus:hasMethods](https://ibm.github.io/ai-atlas-nexus/ontology/hasMethods)
 Alias: hasMethods
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasMethods
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasMethods
 ```yaml
 name: hasMethods
 description: The evaluation techniques applied within the benchmark.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasMethods
 domain_of:

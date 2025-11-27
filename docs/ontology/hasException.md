@@ -9,7 +9,7 @@ _Exception type_
 
 
 
-URI: [nexus:hasException](https://ibm.github.io/risk-atlas-nexus/ontology/hasException)
+URI: [nexus:hasException](https://ibm.github.io/ai-atlas-nexus/ontology/hasException)
 Alias: hasException
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasException
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasException
 ```yaml
 name: hasException
 description: Exception type
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasException
 alias: hasException

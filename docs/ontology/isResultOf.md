@@ -49,7 +49,7 @@ Alias: isResultOf
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: isResultOf
 ```yaml
 name: isResultOf
 description: A relationship indicating that an entity is the result of an AI evaluation.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: dqv:isMeasurementOf
 alias: isResultOf

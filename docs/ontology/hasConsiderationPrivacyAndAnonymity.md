@@ -9,7 +9,7 @@ _How any personal or sensitive data is handled and whether any anonymization tec
 
 
 
-URI: [nexus:hasConsiderationPrivacyAndAnonymity](https://ibm.github.io/risk-atlas-nexus/ontology/hasConsiderationPrivacyAndAnonymity)
+URI: [nexus:hasConsiderationPrivacyAndAnonymity](https://ibm.github.io/ai-atlas-nexus/ontology/hasConsiderationPrivacyAndAnonymity)
 Alias: hasConsiderationPrivacyAndAnonymity
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasConsiderationPrivacyAndAnonymity
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: hasConsiderationPrivacyAndAnonymity
 name: hasConsiderationPrivacyAndAnonymity
 description: How any personal or sensitive data is handled and whether any anonymization
   techniques are applied.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasConsiderationPrivacyAndAnonymity
 domain_of:

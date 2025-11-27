@@ -4,7 +4,7 @@
 
 
 
-URI: [nexus:author](https://ibm.github.io/risk-atlas-nexus/ontology/author)
+URI: [nexus:author](https://ibm.github.io/ai-atlas-nexus/ontology/author)
 Alias: author
 
 <!-- no inheritance hierarchy -->
@@ -17,8 +17,8 @@ Alias: author
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Documentation](Documentation.md) | Documented information about a concept or other topic(s) of interest |  no  |
 | [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
+| [Documentation](Documentation.md) | Documented information about a concept or other topic(s) of interest |  no  |
 
 
 

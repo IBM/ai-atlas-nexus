@@ -19,8 +19,8 @@ feat|fix|docs|style|refactor|perf|test|chore: changed function X
 
 Further details of the code going into the commit
 
-Contributes to: IBM/risk-atlas-nexus#XYZ
-Closes: IBM/risk-atlas-nexus#XYZ
+Contributes to: IBM/ai-atlas-nexus#XYZ
+Closes: IBM/ai-atlas-nexus#XYZ
 
 Signed-off-by: Your Name <email@ie.ibm.com>
 ```
@@ -35,8 +35,8 @@ Signed-off-by: Your Name <email@ie.ibm.com>
 
 ## Which issue(s) does this pull-request fix?
 <!-- Please include a link to the issue -->
-<!-- Contributes to: IBM/risk-atlas-nexus# -->
-<!-- Closes: IBM/risk-atlas-nexus# -->
+<!-- Contributes to: IBM/ai-atlas-nexus# -->
+<!-- Closes: IBM/ai-atlas-nexus# -->
 
 ## Any special notes for your reviewer?
 

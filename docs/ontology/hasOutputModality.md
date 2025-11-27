@@ -9,7 +9,7 @@ _A relationship indicating the output modalities supported by an AI component. E
 
 
 
-URI: [nexus:hasOutputModality](https://ibm.github.io/risk-atlas-nexus/ontology/hasOutputModality)
+URI: [nexus:hasOutputModality](https://ibm.github.io/ai-atlas-nexus/ontology/hasOutputModality)
 Alias: hasOutputModality
 
 <!-- no inheritance hierarchy -->
@@ -52,7 +52,7 @@ Alias: hasOutputModality
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: hasOutputModality
 name: hasOutputModality
 description: A relationship indicating the output modalities supported by an AI component.
   Examples include text, image, video.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasOutputModality
 domain_of:

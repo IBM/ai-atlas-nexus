@@ -74,7 +74,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -101,7 +101,7 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 <details>
 ```yaml
 name: Any
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 class_uri: linkml:Any
 
 ```
@@ -112,7 +112,7 @@ class_uri: linkml:Any
 <details>
 ```yaml
 name: Any
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 class_uri: linkml:Any
 
 ```

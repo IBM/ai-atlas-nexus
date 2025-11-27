@@ -53,7 +53,7 @@ Alias: hasUnitxtCard
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: hasUnitxtCard
 ```yaml
 name: hasUnitxtCard
 description: A relationship to a Unitxt card defining the risk evaluation
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:url
 alias: hasUnitxtCard

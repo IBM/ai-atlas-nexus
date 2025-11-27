@@ -9,7 +9,7 @@ _Short reply type_
 
 
 
-URI: [nexus:hasShortReplyType](https://ibm.github.io/risk-atlas-nexus/ontology/hasShortReplyType)
+URI: [nexus:hasShortReplyType](https://ibm.github.io/ai-atlas-nexus/ontology/hasShortReplyType)
 Alias: hasShortReplyType
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasShortReplyType
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasShortReplyType
 ```yaml
 name: hasShortReplyType
 description: Short reply type
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasShortReplyType
 alias: hasShortReplyType

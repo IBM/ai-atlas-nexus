@@ -9,7 +9,7 @@ _Relationship indicating the some entity is composed of other entities (includin
 
 
 
-URI: [nexus:isComposedOf](https://ibm.github.io/risk-atlas-nexus/ontology/isComposedOf)
+URI: [nexus:isComposedOf](https://ibm.github.io/ai-atlas-nexus/ontology/isComposedOf)
 Alias: isComposedOf
 
 <!-- no inheritance hierarchy -->
@@ -42,7 +42,7 @@ Alias: isComposedOf
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -64,7 +64,7 @@ Alias: isComposedOf
 name: isComposedOf
 description: Relationship indicating the some entity is composed of other entities
   (including some of the same type).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: isComposedOf
 range: string

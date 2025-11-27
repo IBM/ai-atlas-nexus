@@ -9,7 +9,7 @@ _A list of prohibitions_
 
 
 
-URI: [nexus:prohibitions](https://ibm.github.io/risk-atlas-nexus/ontology/prohibitions)
+URI: [nexus:prohibitions](https://ibm.github.io/ai-atlas-nexus/ontology/prohibitions)
 Alias: prohibitions
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: prohibitions
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: prohibitions
 ```yaml
 name: prohibitions
 description: A list of prohibitions
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: prohibitions
 owner: Container

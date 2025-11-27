@@ -9,7 +9,7 @@ _A relationship where an entity relates to an action_
 
 
 
-URI: [nexus:hasRelatedAction](https://ibm.github.io/risk-atlas-nexus/ontology/hasRelatedAction)
+URI: [nexus:hasRelatedAction](https://ibm.github.io/ai-atlas-nexus/ontology/hasRelatedAction)
 Alias: hasRelatedAction
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasRelatedAction
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasRelatedAction
 ```yaml
 name: hasRelatedAction
 description: A relationship where an entity relates to an action
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasRelatedAction
 domain_of:

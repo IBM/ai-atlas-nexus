@@ -9,7 +9,7 @@ _Limitations in evaluating or addressing risks, such as gaps in demographic cove
 
 
 
-URI: [nexus:hasLimitations](https://ibm.github.io/risk-atlas-nexus/ontology/hasLimitations)
+URI: [nexus:hasLimitations](https://ibm.github.io/ai-atlas-nexus/ontology/hasLimitations)
 Alias: hasLimitations
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasLimitations
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasLimitations
 name: hasLimitations
 description: Limitations in evaluating or addressing risks, such as gaps in demographic
   coverage or specific domains.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasLimitations
 domain_of:

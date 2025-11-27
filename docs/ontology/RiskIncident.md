@@ -216,7 +216,7 @@ URI: [https://w3id.org/dpv/risk#Incident](https://w3id.org/dpv/risk#Incident)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -244,7 +244,7 @@ URI: [https://w3id.org/dpv/risk#Incident](https://w3id.org/dpv/risk#Incident)
 ```yaml
 name: RiskIncident
 description: An event occuring or occured which is a realised or materialised risk.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - RiskConcept
@@ -262,14 +262,14 @@ attributes:
   author:
     name: author
     description: The author or authors of the incident report
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
     domain_of:
     - Documentation
     - RiskIncident
   source_uri:
     name: source_uri
     description: The uri of the incident
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
     rank: 1000
     domain_of:
     - RiskIncident
@@ -284,7 +284,7 @@ class_uri: https://w3id.org/dpv/risk#Incident
 ```yaml
 name: RiskIncident
 description: An event occuring or occured which is a realised or materialised risk.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - RiskConcept
@@ -292,7 +292,7 @@ attributes:
   author:
     name: author
     description: The author or authors of the incident report
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
     alias: author
     owner: RiskIncident
     domain_of:
@@ -302,7 +302,7 @@ attributes:
   source_uri:
     name: source_uri
     description: The uri of the incident
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_risk
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
     rank: 1000
     alias: source_uri
     owner: RiskIncident
@@ -313,7 +313,7 @@ attributes:
     name: refersToRisk
     description: Indicates the incident (subject) is a materialisation of the indicated
       risk (object)
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     exact_mappings:
     - dpv:refersToRisk
     rank: 1000
@@ -329,7 +329,7 @@ attributes:
     name: isDefinedByTaxonomy
     description: A relationship where a risk or a risk group is defined by a risk
       taxonomy
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
     alias: isDefinedByTaxonomy
@@ -347,7 +347,7 @@ attributes:
   hasStatus:
     name: hasStatus
     description: Indicates the status of specified concept
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: RiskConcept
     alias: hasStatus
@@ -358,7 +358,7 @@ attributes:
   hasSeverity:
     name: hasSeverity
     description: Indicates the severity associated with a concept
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: RiskConcept
     alias: hasSeverity
@@ -370,7 +370,7 @@ attributes:
     name: hasLikelihood
     description: The likelihood or probability or chance of something taking place
       or occuring
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: RiskConcept
     alias: hasLikelihood
@@ -382,7 +382,7 @@ attributes:
     name: hasImpactOn
     description: Indicates impact(s) possible or arising as consequences from specified
       concept
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     broad_mappings:
     - dpv:hasConsequenceOn
     rank: 1000
@@ -395,7 +395,7 @@ attributes:
   hasConsequence:
     name: hasConsequence
     description: Indicates consequence(s) possible or arising from specified concept
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: RiskConcept
     alias: hasConsequence
@@ -407,7 +407,7 @@ attributes:
     name: hasImpact
     description: Indicates impact(s) possible or arising as consequences from specified
       concept
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     broad_mappings:
     - dpv:hasConsequence
     rank: 1000
@@ -421,7 +421,7 @@ attributes:
     name: hasVariant
     description: Indicates an incident that shares the same causative factors, produces
       similar harms, and involves the same intelligent systems as a known AI incident.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: RiskIncident
     alias: hasVariant
@@ -433,7 +433,7 @@ attributes:
     name: isDetectedBy
     description: A relationship where a risk, risk source, consequence, or impact
       is detected by a risk control.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: RiskConcept
     alias: isDetectedBy
@@ -448,7 +448,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -461,7 +461,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -473,7 +473,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -484,7 +484,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -495,7 +495,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -507,7 +507,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

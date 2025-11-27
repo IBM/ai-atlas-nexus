@@ -9,7 +9,7 @@ _Indicates the status of specified concept_
 
 
 
-URI: [nexus:hasStatus](https://ibm.github.io/risk-atlas-nexus/ontology/hasStatus)
+URI: [nexus:hasStatus](https://ibm.github.io/ai-atlas-nexus/ontology/hasStatus)
 Alias: hasStatus
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasStatus
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasStatus
 ```yaml
 name: hasStatus
 description: Indicates the status of specified concept
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
 alias: hasStatus

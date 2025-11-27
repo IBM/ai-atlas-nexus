@@ -9,7 +9,7 @@ _A relationship to a Benchmark Metadata Card which contains metadata about the b
 
 
 
-URI: [nexus:hasBenchmarkMetadata](https://ibm.github.io/risk-atlas-nexus/ontology/hasBenchmarkMetadata)
+URI: [nexus:hasBenchmarkMetadata](https://ibm.github.io/ai-atlas-nexus/ontology/hasBenchmarkMetadata)
 Alias: hasBenchmarkMetadata
 
 <!-- no inheritance hierarchy -->
@@ -53,7 +53,7 @@ Alias: hasBenchmarkMetadata
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ Alias: hasBenchmarkMetadata
 name: hasBenchmarkMetadata
 description: A relationship to a Benchmark Metadata Card which contains metadata about
   the benchmark.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: AiEval
 alias: hasBenchmarkMetadata

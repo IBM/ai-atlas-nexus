@@ -37,7 +37,7 @@ URI: [AdapterType](AdapterType.md)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -49,7 +49,7 @@ URI: [AdapterType](AdapterType.md)
 <details>
 ```yaml
 name: AdapterType
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 permissible_values:
   LORA:

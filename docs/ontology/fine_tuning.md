@@ -9,7 +9,7 @@ _A description of the fine-tuning mechanism(s) applied to a model._
 
 
 
-URI: [nexus:fine_tuning](https://ibm.github.io/risk-atlas-nexus/ontology/fine_tuning)
+URI: [nexus:fine_tuning](https://ibm.github.io/ai-atlas-nexus/ontology/fine_tuning)
 Alias: fine_tuning
 
 <!-- no inheritance hierarchy -->
@@ -50,7 +50,7 @@ Alias: fine_tuning
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: fine_tuning
 ```yaml
 name: fine_tuning
 description: A description of the fine-tuning mechanism(s) applied to a model.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: fine_tuning
 domain_of:

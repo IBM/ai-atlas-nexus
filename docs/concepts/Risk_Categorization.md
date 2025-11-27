@@ -4,7 +4,7 @@ Assess and categorize the severity of risks associated with an AI system usecase
 
 ## Prompt Templates
 
-The service categorizes risk severity, as defined in the EU AI Act, using the following prompt templates located  in `src/risk_atlas_nexus/blocks/prompt_templates.py`
+The service categorizes risk severity, as defined in the EU AI Act, using the following prompt templates located  in `src/ai_atlas_nexus/blocks/prompt_templates.py`
 
  - RISK_SEVERITY_INSTRUCTION
  - RISK_SEVERITY_TEMPLATE
@@ -29,7 +29,7 @@ of the AAAI/ACM Conference on AI, Ethics, and Society, vol. 7, pp. 584-596. 2024
 The API receives a list of usecases along with an inference engine instance for LLM evaluation. It extracts key attributes - domain, purpose, capabilities, AI user, and AI subject—from each usecase. These attributes are then sent to the categorization service `RiskSeverityCategorizer.categorize()` to determine the Risk Severity and retrieve related information.
 
 
-**API:** RiskAtlasNexus.categorize_risk_severity()
+**API:** AIAtlasNexus.categorize_risk_severity()
 
 **Params:**
  - usecases (List[str]):

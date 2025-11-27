@@ -22,8 +22,8 @@ Alias: broadMatch
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 | [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 
 
 
@@ -52,7 +52,7 @@ Alias: broadMatch
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -75,7 +75,7 @@ name: broadMatch
 description: The property is used to state a hierarchical mapping link between two
   concepts, indicating that the concept linked to, is a broader concept than the originating
   concept.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: skos:broadMatch
 alias: broadMatch

@@ -9,7 +9,7 @@ _The likelihood or probability or chance of something taking place or occuring_
 
 
 
-URI: [nexus:hasLikelihood](https://ibm.github.io/risk-atlas-nexus/ontology/hasLikelihood)
+URI: [nexus:hasLikelihood](https://ibm.github.io/ai-atlas-nexus/ontology/hasLikelihood)
 Alias: hasLikelihood
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasLikelihood
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: hasLikelihood
 name: hasLikelihood
 description: The likelihood or probability or chance of something taking place or
   occuring
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
 alias: hasLikelihood

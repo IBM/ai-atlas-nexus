@@ -9,7 +9,7 @@ _A list of AI risk groups_
 
 
 
-URI: [nexus:riskgroups](https://ibm.github.io/risk-atlas-nexus/ontology/riskgroups)
+URI: [nexus:riskgroups](https://ibm.github.io/ai-atlas-nexus/ontology/riskgroups)
 Alias: riskgroups
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: riskgroups
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: riskgroups
 ```yaml
 name: riskgroups
 description: A list of AI risk groups
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: riskgroups
 owner: Container

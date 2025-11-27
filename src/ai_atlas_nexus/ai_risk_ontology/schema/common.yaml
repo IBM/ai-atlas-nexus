@@ -1,0 +1,262 @@
+id: https://ibm.github.io/ai-atlas-nexus/ontology/common
+name: common
+description:
+  A core schema supporting the AI Risk Model ontology
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  airo: https://w3id.org/airo#
+  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  dpv: https://w3id.org/dpv#
+  ai: https://w3id.org/dpv/ai#
+
+default_range: string
+default_prefix: nexus
+
+classes:
+
+  Entity:
+    description:
+      A generic grouping for any identifiable entity.
+    abstract: true
+    class_uri: schema:Thing
+    slots:
+      - id
+      - name
+      - description
+      - url
+      - dateCreated
+      - dateModified
+
+  Organization:
+    is_a: Entity
+    class_uri: schema:Organization
+    description: Any organizational entity such as a corporation, educational institution, consortium, government, etc.
+    slots:
+      - grants_license
+
+  License:
+    is_a: Entity
+    class_uri: airo:License
+    description: The general notion of a license which defines terms and grants permissions to users of AI systems, datasets and software.
+    slots:
+      - version
+
+  Dataset:
+    is_a: Entity
+    class_uri: schema:Dataset
+    description: A body of structured information describing some topic(s) of interest.
+    slots:
+      - hasLicense
+      - hasDocumentation
+      - provider
+
+  Documentation:
+    is_a: Entity
+    class_uri: airo:Documentation
+    description: Documented information about a concept or other topic(s) of interest.
+    slots:
+      - hasLicense
+    attributes:
+      author:
+        name: author
+        description: The author or authors of the documentation
+
+  Fact:
+    abstract: true
+    class_uri: schema:Statement
+    description: A fact about something, for example the result of a measurement. In addition to the value, evidence is provided.
+    slots:
+    - value
+    - evidence
+
+  Vocabulary:
+    is_a: Entity
+    description: A collection of terms, with their definitions and relationships.
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  Term:
+    is_a: Entity
+    description: A term and its definitions
+    slots:
+      - isDefinedByVocabulary
+      - hasDocumentation
+      - hasParentDefinition
+      - hasSubDefinition
+      - hasRelatedRisk
+
+  Principle:
+    is_a: Entity
+    description: A representation of values or norms that must be taken into consideration when conducting activities
+    class_uri: dpv:Principle
+    slots:
+      - hasDocumentation
+
+  Policy:
+    is_a: Entity
+    description: "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."
+    class_uri: dpv:Policy
+    slots:
+      - isDefinedByTaxonomy
+
+  LLMQuestionPolicy:
+    is_a: Policy
+    description: The policy guides how the language model should answer a diverse set of sensitive questions.
+    slots:
+      - hasRelatedRisk
+      - hasRule
+      - hasReasonDenial
+      - hasShortReplyType
+      - hasException
+
+  Rule:
+    is_a: Entity
+    class_uri: dpv:Rule
+    description: "A rule describing a process or control that directs or determines if and how an activity should be conducted."
+
+  Permission:
+    is_a: Rule
+    description: "A rule describing a permission to perform an activity"
+    class_uri: dpv:Permission
+
+  Prohibition:
+    is_a: Rule
+    description: "A rule describing a prohibition to perform an activity"
+    class_uri: dpv:Prohibition
+
+  Obligation:
+    is_a: Rule
+    description: "A rule describing an obligation for performing an activity"
+    class_uri: dpv:Obligation
+
+slots:
+  id:
+    identifier: true
+    required: true
+    slot_uri: schema:identifier
+    description: A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
+  isDefinedByVocabulary:
+    slot_uri: schema:isPartOf
+    description: A relationship where a term or a term group is defined by a vocabulary
+    range: Vocabulary
+  name:
+    slot_uri: schema:name
+    description: A text name of this instance.
+  description:
+    slot_uri: schema:description
+    description: The description of an entity
+  url:
+    slot_uri: schema:url
+    range: uri
+    description: An optional URL associated with this instance.
+  dateCreated:
+    slot_uri: schema:dateCreated
+    range: date
+    required: false
+    description: The date on which the entity was created.
+  dateModified:
+    slot_uri: schema:dateModified
+    range: date
+    required: false
+    description: The date on which the entity was most recently modified.
+  version:
+    slot_uri: schema:version
+    description: The version of the entity embodied by a specified resource.
+  hasDocumentation:
+    slot_uri: airo:hasDocumentation
+    range: Documentation
+    multivalued: true
+    inlined: false
+    description: Indicates documentation associated with an entity.
+  hasLicense:
+    slot_uri: airo:hasLicense
+    range: License
+    description: Indicates licenses associated with a resource
+  isComposedOf:
+    multivalued: true
+    inlined: false
+    description: Relationship indicating the some entity is composed of other entities (including some of the same type).
+  hasDataset:
+    range: Dataset
+    multivalued: true
+    inlined: false
+    description: A relationship to datasets that are used.
+  producer:
+    range: Organization
+    description: A relationship to the Organization instance which produces this instance.
+  provider:
+    slot_uri: schema:provider
+    range: Organization
+    description: A relationship to the Organization instance that provides this instance.
+  grants_license:
+    range: License
+    description: A relationship from a granting entity such as an Organization to a License instance.
+  value:
+    description: Some numeric or string value
+    required: true
+  evidence:
+    description: Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.
+  isPartOf:
+    slot_uri: schema:isPartOf
+    description: A relationship where an entity is part of another entity
+  hasPart:
+    slot_uri: schema:hasPart
+    description: A relationship where an entity has another entity
+    multivalued: true
+  hasTerm:
+    slot_uri: nexus:hasTerm
+    range: Term
+    description: Indicates terms associated with a vocabulary
+    multivalued: true
+    inlined: false
+  hasRelatedTerm:
+    description: A relationship where an entity relates to a term
+    domain: Any
+    any_of:
+      - range: RiskConcept
+      - range: Term
+    range: Term
+    multivalued: true
+    inlined: false
+  hasParentDefinition:
+    slot_uri: nexus:hasParentDefinition
+    range: Term
+    description: Indicates parent terms associated with a term
+    multivalued: true
+    inlined: false
+  hasSubDefinition:
+    slot_uri: nexus:hasSubDefinition
+    range: Term
+    description: Indicates child terms associated with a term
+    multivalued: true
+    inlined: false
+  hasRule:
+    slot_uri: dpv:hasRule
+    range: Rule
+    multivalued: true
+    inlined: false
+    description: Specifying applicability or inclusion of a rule within specified context.
+  hasReasonDenial:
+    slot_uri: nexus:hasReasonDenial
+    range: string
+    multivalued: false
+    inlined: true
+    description: Reason for denial
+  hasShortReplyType:
+    slot_uri: nexus:hasShortReplyType
+    range: string
+    multivalued: false
+    inlined: true
+    description: Short reply type
+  hasException:
+    slot_uri: nexus:hasException
+    range: string
+    multivalued: false
+    inlined: true
+    description: Exception type

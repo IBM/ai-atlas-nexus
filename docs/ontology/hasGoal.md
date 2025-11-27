@@ -9,7 +9,7 @@ _The specific goal or primary use case the benchmark is designed for._
 
 
 
-URI: [nexus:hasGoal](https://ibm.github.io/risk-atlas-nexus/ontology/hasGoal)
+URI: [nexus:hasGoal](https://ibm.github.io/ai-atlas-nexus/ontology/hasGoal)
 Alias: hasGoal
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasGoal
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasGoal
 ```yaml
 name: hasGoal
 description: The specific goal or primary use case the benchmark is designed for.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasGoal
 domain_of:

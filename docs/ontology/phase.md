@@ -9,7 +9,7 @@ _Annotation whether an AI risk shows specifically during the training-tuning or 
 
 
 
-URI: [nexus:phase](https://ibm.github.io/risk-atlas-nexus/ontology/phase)
+URI: [nexus:phase](https://ibm.github.io/ai-atlas-nexus/ontology/phase)
 Alias: phase
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: phase
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: phase
 name: phase
 description: Annotation whether an AI risk shows specifically during the training-tuning
   or inference phase.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: phase
 owner: Risk

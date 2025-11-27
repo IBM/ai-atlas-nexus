@@ -2,7 +2,7 @@
 
 An ontology describing AI systems and their risks
 
-URI: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+URI: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 Name: ai-risk-ontology
 

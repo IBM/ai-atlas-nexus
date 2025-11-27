@@ -9,7 +9,7 @@ _A relationship to datasets that are used._
 
 
 
-URI: [nexus:hasDataset](https://ibm.github.io/risk-atlas-nexus/ontology/hasDataset)
+URI: [nexus:hasDataset](https://ibm.github.io/ai-atlas-nexus/ontology/hasDataset)
 Alias: hasDataset
 
 <!-- no inheritance hierarchy -->
@@ -53,7 +53,7 @@ Alias: hasDataset
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: hasDataset
 ```yaml
 name: hasDataset
 description: A relationship to datasets that are used.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDataset
 domain_of:

@@ -9,7 +9,7 @@ _Indicates consequence(s) possible or arising from specified concept_
 
 
 
-URI: [nexus:hasConsequence](https://ibm.github.io/risk-atlas-nexus/ontology/hasConsequence)
+URI: [nexus:hasConsequence](https://ibm.github.io/ai-atlas-nexus/ontology/hasConsequence)
 Alias: hasConsequence
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasConsequence
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasConsequence
 ```yaml
 name: hasConsequence
 description: Indicates consequence(s) possible or arising from specified concept
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
 alias: hasConsequence

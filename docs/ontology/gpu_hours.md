@@ -9,7 +9,7 @@ _GPU consumption in terms of hours_
 
 
 
-URI: [nexus:gpu_hours](https://ibm.github.io/risk-atlas-nexus/ontology/gpu_hours)
+URI: [nexus:gpu_hours](https://ibm.github.io/ai-atlas-nexus/ontology/gpu_hours)
 Alias: gpu_hours
 
 <!-- no inheritance hierarchy -->
@@ -23,8 +23,8 @@ Alias: gpu_hours
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 | [AiModel](AiModel.md) | A base AI Model class |  no  |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 
 
 
@@ -53,7 +53,7 @@ Alias: gpu_hours
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: gpu_hours
 ```yaml
 name: gpu_hours
 description: GPU consumption in terms of hours
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: gpu_hours
 domain_of:

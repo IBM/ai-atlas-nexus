@@ -9,7 +9,7 @@ _A list of vocabularies_
 
 
 
-URI: [nexus:vocabularies](https://ibm.github.io/risk-atlas-nexus/ontology/vocabularies)
+URI: [nexus:vocabularies](https://ibm.github.io/ai-atlas-nexus/ontology/vocabularies)
 Alias: vocabularies
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: vocabularies
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: vocabularies
 ```yaml
 name: vocabularies
 description: A list of vocabularies
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: vocabularies
 owner: Container

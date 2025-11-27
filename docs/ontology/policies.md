@@ -9,7 +9,7 @@ _A list of policies_
 
 
 
-URI: [nexus:policies](https://ibm.github.io/risk-atlas-nexus/ontology/policies)
+URI: [nexus:policies](https://ibm.github.io/ai-atlas-nexus/ontology/policies)
 Alias: policies
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: policies
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: policies
 ```yaml
 name: policies
 description: A list of policies
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: policies
 owner: Container

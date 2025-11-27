@@ -9,7 +9,7 @@ _The size of the dataset, including the number of data points or examples._
 
 
 
-URI: [nexus:hasDataSize](https://ibm.github.io/risk-atlas-nexus/ontology/hasDataSize)
+URI: [nexus:hasDataSize](https://ibm.github.io/ai-atlas-nexus/ontology/hasDataSize)
 Alias: hasDataSize
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasDataSize
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasDataSize
 ```yaml
 name: hasDataSize
 description: The size of the dataset, including the number of data points or examples.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDataSize
 domain_of:

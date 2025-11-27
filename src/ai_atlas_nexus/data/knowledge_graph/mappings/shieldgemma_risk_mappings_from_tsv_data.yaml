@@ -1,0 +1,91 @@
+risks:
+- id: shieldgemma-dangerous-content
+  relatedMatch:
+  - dangerous-use
+- id: dangerous-use
+  relatedMatch:
+  - shieldgemma-dangerous-content
+- id: shieldgemma-dangerous-content
+  relatedMatch:
+  - harmful-code-generation
+- id: harmful-code-generation
+  relatedMatch:
+  - shieldgemma-dangerous-content
+- id: shieldgemma-dangerous-content
+  relatedMatch:
+  - harmful-output
+- id: harmful-output
+  relatedMatch:
+  - shieldgemma-dangerous-content
+- id: shieldgemma-harassment
+  relatedMatch:
+  - harmful-output
+- id: harmful-output
+  relatedMatch:
+  - shieldgemma-harassment
+- id: shieldgemma-harassment
+  relatedMatch:
+  - over-or-under-reliance
+- id: over-or-under-reliance
+  relatedMatch:
+  - shieldgemma-harassment
+- id: shieldgemma-harassment
+  relatedMatch:
+  - spreading-toxicity
+- id: spreading-toxicity
+  relatedMatch:
+  - shieldgemma-harassment
+- id: shieldgemma-harassment
+  relatedMatch:
+  - toxic-output
+- id: toxic-output
+  relatedMatch:
+  - shieldgemma-harassment
+- id: shieldgemma-hate-speech
+  relatedMatch:
+  - data-bias
+- id: data-bias
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: shieldgemma-hate-speech
+  relatedMatch:
+  - decision-bias
+- id: decision-bias
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: shieldgemma-hate-speech
+  relatedMatch:
+  - output-bias
+- id: output-bias
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: shieldgemma-hate-speech
+  relatedMatch:
+  - spreading-toxicity
+- id: spreading-toxicity
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: shieldgemma-hate-speech
+  relatedMatch:
+  - toxic-output
+- id: toxic-output
+  relatedMatch:
+  - shieldgemma-hate-speech
+- id: shieldgemma-sexually-explicit
+  relatedMatch:
+  - harmful-output
+- id: harmful-output
+  relatedMatch:
+  - shieldgemma-sexually-explicit
+- id: shieldgemma-sexually-explicit
+  relatedMatch:
+  - nonconsensual-use
+- id: nonconsensual-use
+  relatedMatch:
+  - shieldgemma-sexually-explicit
+- id: shieldgemma-sexually-explicit
+  relatedMatch:
+  - toxic-output
+- id: toxic-output
+  relatedMatch:
+  - shieldgemma-sexually-explicit

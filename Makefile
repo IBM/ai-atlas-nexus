@@ -6,9 +6,9 @@ MAKEFLAGS += --warn-undefined-variables
 
 SCHEMA_NAME = ai-risk-ontology
 LINKML_SCHEMA_NAME = ai-risk-ontology
-SOURCE_SCHEMA_PATH = src/risk_atlas_nexus/ai_risk_ontology/schema
-KG_DATA_PATH = src/risk_atlas_nexus/data/knowledge_graph
-DATAMODEL_PATH = src/risk_atlas_nexus/ai_risk_ontology/datamodel
+SOURCE_SCHEMA_PATH = src/ai_atlas_nexus/ai_risk_ontology/schema
+KG_DATA_PATH = src/ai_atlas_nexus/data/knowledge_graph
+DATAMODEL_PATH = src/ai_atlas_nexus/ai_risk_ontology/datamodel
 
 SHELL := bash
 .SHELLFLAGS := -eu -o pipefail -c
@@ -41,22 +41,22 @@ regenerate_documentation:
 	gen-doc -d docs/ontology $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
 
 lift_mappings_from_tsv:
-	python ./src/risk_atlas_nexus/ai_risk_ontology/util/lifting/import_risk_mappings.py
+	python ./src/ai_atlas_nexus/ai_risk_ontology/util/lifting/import_risk_mappings.py
 
 compile_pydantic_model:
 	gen-pydantic --meta AUTO $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml > ${DATAMODEL_PATH}/ai_risk_ontology.py
 
 regenerate_graph_output:
-	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_graph.py
+	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_graph.py
 
 regenerate_owl_schema:
 	gen-owl $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml --metadata-profile 'linkml' > graph_export/owl/${LINKML_SCHEMA_NAME}_schema.ttl
 
 regenerate_risk_atlas_as_tex:
-	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py
+	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py
 
 regenerate_cypher_code: lift_mappings_from_tsv
-	python ./src/risk_atlas_nexus/ai_risk_ontology/util/export_cypher.py
+	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_cypher.py
 
 lint_schema:
 	linkml-lint $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml

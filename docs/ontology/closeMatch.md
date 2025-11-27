@@ -22,8 +22,8 @@ Alias: closeMatch
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 | [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
 
 
 
@@ -52,7 +52,7 @@ Alias: closeMatch
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: closeMatch
 name: closeMatch
 description: The property is used to link two concepts that are sufficiently similar
   that they can be used interchangeably in some information retrieval applications.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: skos:closeMatch
 alias: closeMatch

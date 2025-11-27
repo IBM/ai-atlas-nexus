@@ -1,8 +1,8 @@
 # AI Risk Ontology documentation
 
-This is an automatic generated API reference of the main components of Risk Atlas Nexus
+This is an automatic generated API reference of the main components of AI Atlas Nexus
 
-::: risk_atlas_nexus.ai_risk_ontology
+::: ai_atlas_nexus.ai_risk_ontology
     handler: python
     options:
         show_if_no_docstring: true

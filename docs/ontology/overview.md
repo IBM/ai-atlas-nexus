@@ -9,7 +9,7 @@ _A brief description of the benchmark's main goals and scope._
 
 
 
-URI: [nexus:overview](https://ibm.github.io/risk-atlas-nexus/ontology/overview)
+URI: [nexus:overview](https://ibm.github.io/ai-atlas-nexus/ontology/overview)
 Alias: overview
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: overview
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: overview
 ```yaml
 name: overview
 description: A brief description of the benchmark's main goals and scope.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: overview
 owner: BenchmarkMetadataCard

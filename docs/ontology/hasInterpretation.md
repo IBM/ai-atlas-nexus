@@ -9,7 +9,7 @@ _How users should interpret the scores or results from the metrics._
 
 
 
-URI: [nexus:hasInterpretation](https://ibm.github.io/risk-atlas-nexus/ontology/hasInterpretation)
+URI: [nexus:hasInterpretation](https://ibm.github.io/ai-atlas-nexus/ontology/hasInterpretation)
 Alias: hasInterpretation
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasInterpretation
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasInterpretation
 ```yaml
 name: hasInterpretation
 description: How users should interpret the scores or results from the metrics.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasInterpretation
 domain_of:

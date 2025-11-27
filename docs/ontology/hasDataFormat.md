@@ -9,7 +9,7 @@ _The structure and modality of the data (e.g., sentence pairs, question-answer f
 
 
 
-URI: [nexus:hasDataFormat](https://ibm.github.io/risk-atlas-nexus/ontology/hasDataFormat)
+URI: [nexus:hasDataFormat](https://ibm.github.io/ai-atlas-nexus/ontology/hasDataFormat)
 Alias: hasDataFormat
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasDataFormat
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: hasDataFormat
 name: hasDataFormat
 description: The structure and modality of the data (e.g., sentence pairs, question-answer
   format, tabular data).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDataFormat
 domain_of:

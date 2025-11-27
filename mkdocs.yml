@@ -1,7 +1,7 @@
-site_name: Risk Atlas Nexus
-site_url: https://ibm.github.io/risk-atlas-nexus/
-repo_name: IBM/risk-atlas-nexus
-repo_url: https://github.com/IBM/risk-atlas-nexus
+site_name: AI Atlas Nexus
+site_url: https://ibm.github.io/ai-atlas-nexus/
+repo_name: IBM/ai-atlas-nexus
+repo_url: https://github.com/IBM/ai-atlas-nexus
 
 theme:
   name: material
@@ -32,8 +32,8 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
-  logo: assets/risk_atlas_nexus_vector.svg
-  favicon: assets/risk_atlas_nexus_vector.svg
+  logo: assets/ai_atlas_nexus_vector.svg
+  favicon: assets/ai_atlas_nexus_vector.svg
   features:
     - content.tabs.link
     - content.code.annotate
@@ -78,7 +78,7 @@ plugins:
             extensions:
             - griffe_inherited_docstrings
             preload_modules:
-              - risk_atlas_nexus
+              - ai_atlas_nexus
   - mkdocs-jupyter
   - search
 

@@ -3,6 +3,7 @@
 .idea/
 
 # Ignore venv
+v-ai-atlas-nexus
 vrisk-atlas-nexus
 not for upload/
 

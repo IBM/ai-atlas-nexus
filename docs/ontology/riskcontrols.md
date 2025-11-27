@@ -9,7 +9,7 @@ _A list of AI risk controls_
 
 
 
-URI: [nexus:riskcontrols](https://ibm.github.io/risk-atlas-nexus/ontology/riskcontrols)
+URI: [nexus:riskcontrols](https://ibm.github.io/ai-atlas-nexus/ontology/riskcontrols)
 Alias: riskcontrols
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: riskcontrols
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: riskcontrols
 ```yaml
 name: riskcontrols
 description: A list of AI risk controls
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: riskcontrols
 owner: Container

@@ -23,8 +23,8 @@ Alias: isDefinedByVocabulary
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
 | [Term](Term.md) | A term and its definitions |  no  |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
 | [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
 
 
 
@@ -51,7 +51,7 @@ Alias: isDefinedByVocabulary
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: isDefinedByVocabulary
 ```yaml
 name: isDefinedByVocabulary
 description: A relationship where a term or a term group is defined by a vocabulary
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:isPartOf
 alias: isDefinedByVocabulary

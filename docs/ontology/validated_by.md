@@ -9,7 +9,7 @@ _A relationship indicating the model validation steps after AI model training._
 
 
 
-URI: [nexus:validated_by](https://ibm.github.io/risk-atlas-nexus/ontology/validated_by)
+URI: [nexus:validated_by](https://ibm.github.io/ai-atlas-nexus/ontology/validated_by)
 Alias: validated_by
 
 <!-- no inheritance hierarchy -->
@@ -42,7 +42,7 @@ Alias: validated_by
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -63,7 +63,7 @@ Alias: validated_by
 ```yaml
 name: validated_by
 description: A relationship indicating the model validation steps after AI model training.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: validated_by
 range: AiModelValidation

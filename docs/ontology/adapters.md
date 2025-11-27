@@ -9,7 +9,7 @@ _A list of Adapters_
 
 
 
-URI: [nexus:adapters](https://ibm.github.io/risk-atlas-nexus/ontology/adapters)
+URI: [nexus:adapters](https://ibm.github.io/ai-atlas-nexus/ontology/adapters)
 Alias: adapters
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: adapters
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: adapters
 ```yaml
 name: adapters
 description: A list of Adapters
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: adapters
 owner: Container

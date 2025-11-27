@@ -9,7 +9,7 @@ _A list of AI risks_
 
 
 
-URI: [nexus:risks](https://ibm.github.io/risk-atlas-nexus/ontology/risks)
+URI: [nexus:risks](https://ibm.github.io/ai-atlas-nexus/ontology/risks)
 Alias: risks
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: risks
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: risks
 ```yaml
 name: risks
 description: A list of AI risks
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: risks
 owner: Container

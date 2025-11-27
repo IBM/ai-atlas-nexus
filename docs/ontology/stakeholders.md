@@ -9,7 +9,7 @@ _A list of stakeholders_
 
 
 
-URI: [nexus:stakeholders](https://ibm.github.io/risk-atlas-nexus/ontology/stakeholders)
+URI: [nexus:stakeholders](https://ibm.github.io/ai-atlas-nexus/ontology/stakeholders)
 Alias: stakeholders
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: stakeholders
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: stakeholders
 ```yaml
 name: stakeholders
 description: A list of stakeholders
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: stakeholders
 owner: Container

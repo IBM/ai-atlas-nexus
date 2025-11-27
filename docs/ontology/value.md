@@ -9,7 +9,7 @@ _Some numeric or string value_
 
 
 
-URI: [nexus:value](https://ibm.github.io/risk-atlas-nexus/ontology/value)
+URI: [nexus:value](https://ibm.github.io/ai-atlas-nexus/ontology/value)
 Alias: value
 
 <!-- no inheritance hierarchy -->
@@ -22,8 +22,8 @@ Alias: value
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
 | [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
+| [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
 
 
 
@@ -52,7 +52,7 @@ Alias: value
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: value
 ```yaml
 name: value
 description: Some numeric or string value
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: value
 domain_of:

@@ -9,7 +9,7 @@ _The results of well-known or widely used models to give context to new performa
 
 
 
-URI: [nexus:hasBaselineResults](https://ibm.github.io/risk-atlas-nexus/ontology/hasBaselineResults)
+URI: [nexus:hasBaselineResults](https://ibm.github.io/ai-atlas-nexus/ontology/hasBaselineResults)
 Alias: hasBaselineResults
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasBaselineResults
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: hasBaselineResults
 name: hasBaselineResults
 description: The results of well-known or widely used models to give context to new
   performance scores.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasBaselineResults
 domain_of:

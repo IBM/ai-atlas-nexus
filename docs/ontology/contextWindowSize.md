@@ -9,7 +9,7 @@ _The total length, in bytes, of an AI model's context window._
 
 
 
-URI: [nexus:contextWindowSize](https://ibm.github.io/risk-atlas-nexus/ontology/contextWindowSize)
+URI: [nexus:contextWindowSize](https://ibm.github.io/ai-atlas-nexus/ontology/contextWindowSize)
 Alias: contextWindowSize
 
 <!-- no inheritance hierarchy -->
@@ -52,7 +52,7 @@ Alias: contextWindowSize
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: contextWindowSize
 ```yaml
 name: contextWindowSize
 description: The total length, in bytes, of an AI model's context window.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: contextWindowSize
 domain_of:

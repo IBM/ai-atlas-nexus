@@ -9,7 +9,7 @@ _A list of Obligations_
 
 
 
-URI: [nexus:obligations](https://ibm.github.io/risk-atlas-nexus/ontology/obligations)
+URI: [nexus:obligations](https://ibm.github.io/ai-atlas-nexus/ontology/obligations)
 Alias: obligations
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: obligations
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: obligations
 ```yaml
 name: obligations
 description: A list of Obligations
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: obligations
 owner: Container

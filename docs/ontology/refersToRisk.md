@@ -9,7 +9,7 @@ _Indicates the incident (subject) is a materialisation of the indicated risk (ob
 
 
 
-URI: [nexus:refersToRisk](https://ibm.github.io/risk-atlas-nexus/ontology/refersToRisk)
+URI: [nexus:refersToRisk](https://ibm.github.io/ai-atlas-nexus/ontology/refersToRisk)
 Alias: refersToRisk
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: refersToRisk
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: refersToRisk
 name: refersToRisk
 description: Indicates the incident (subject) is a materialisation of the indicated
   risk (object)
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 exact_mappings:
 - dpv:refersToRisk
 rank: 1000

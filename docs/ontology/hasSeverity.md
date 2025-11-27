@@ -9,7 +9,7 @@ _Indicates the severity associated with a concept_
 
 
 
-URI: [nexus:hasSeverity](https://ibm.github.io/risk-atlas-nexus/ontology/hasSeverity)
+URI: [nexus:hasSeverity](https://ibm.github.io/ai-atlas-nexus/ontology/hasSeverity)
 Alias: hasSeverity
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasSeverity
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasSeverity
 ```yaml
 name: hasSeverity
 description: Indicates the severity associated with a concept
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
 alias: hasSeverity

@@ -9,7 +9,7 @@ _Indicates child terms associated with a term_
 
 
 
-URI: [nexus:hasSubDefinition](https://ibm.github.io/risk-atlas-nexus/ontology/hasSubDefinition)
+URI: [nexus:hasSubDefinition](https://ibm.github.io/ai-atlas-nexus/ontology/hasSubDefinition)
 Alias: hasSubDefinition
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasSubDefinition
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasSubDefinition
 ```yaml
 name: hasSubDefinition
 description: Indicates child terms associated with a term
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasSubDefinition
 alias: hasSubDefinition

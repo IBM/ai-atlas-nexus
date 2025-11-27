@@ -9,7 +9,7 @@ _A list of LLMIntrinsics_
 
 
 
-URI: [nexus:llmintrinsics](https://ibm.github.io/risk-atlas-nexus/ontology/llmintrinsics)
+URI: [nexus:llmintrinsics](https://ibm.github.io/ai-atlas-nexus/ontology/llmintrinsics)
 Alias: llmintrinsics
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: llmintrinsics
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: llmintrinsics
 ```yaml
 name: llmintrinsics
 description: A list of LLMIntrinsics
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: llmintrinsics
 owner: Container

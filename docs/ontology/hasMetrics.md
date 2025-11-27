@@ -9,7 +9,7 @@ _The specific performance metrics used to assess models (e.g., accuracy, F1 scor
 
 
 
-URI: [nexus:hasMetrics](https://ibm.github.io/risk-atlas-nexus/ontology/hasMetrics)
+URI: [nexus:hasMetrics](https://ibm.github.io/ai-atlas-nexus/ontology/hasMetrics)
 Alias: hasMetrics
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasMetrics
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasMetrics
 name: hasMetrics
 description: The specific performance metrics used to assess models (e.g., accuracy,
   F1 score, precision, recall).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasMetrics
 domain_of:

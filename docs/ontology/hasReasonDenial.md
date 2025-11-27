@@ -9,7 +9,7 @@ _Reason for denial_
 
 
 
-URI: [nexus:hasReasonDenial](https://ibm.github.io/risk-atlas-nexus/ontology/hasReasonDenial)
+URI: [nexus:hasReasonDenial](https://ibm.github.io/ai-atlas-nexus/ontology/hasReasonDenial)
 Alias: hasReasonDenial
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasReasonDenial
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: hasReasonDenial
 ```yaml
 name: hasReasonDenial
 description: Reason for denial
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasReasonDenial
 alias: hasReasonDenial

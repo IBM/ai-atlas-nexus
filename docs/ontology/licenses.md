@@ -9,7 +9,7 @@ _A list of licenses_
 
 
 
-URI: [nexus:licenses](https://ibm.github.io/risk-atlas-nexus/ontology/licenses)
+URI: [nexus:licenses](https://ibm.github.io/ai-atlas-nexus/ontology/licenses)
 Alias: licenses
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: licenses
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: licenses
 ```yaml
 name: licenses
 description: A list of licenses
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: licenses
 owner: Container

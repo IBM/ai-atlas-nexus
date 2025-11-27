@@ -9,7 +9,7 @@ _An evaluation where a question has to be answered_
 
 
 
-URI: [nexus:Question](https://ibm.github.io/risk-atlas-nexus/ontology/Question)
+URI: [nexus:Question](https://ibm.github.io/ai-atlas-nexus/ontology/Question)
 
 
 
@@ -154,7 +154,7 @@ URI: [nexus:Question](https://ibm.github.io/risk-atlas-nexus/ontology/Question)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -182,13 +182,13 @@ URI: [nexus:Question](https://ibm.github.io/risk-atlas-nexus/ontology/Question)
 ```yaml
 name: Question
 description: An evaluation where a question has to be answered
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: AiEval
 attributes:
   text:
     name: text
     description: The question itself
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_eval
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval
     rank: 1000
     domain_of:
     - Question
@@ -203,13 +203,13 @@ attributes:
 ```yaml
 name: Question
 description: An evaluation where a question has to be answered
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: AiEval
 attributes:
   text:
     name: text
     description: The question itself
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_eval
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval
     rank: 1000
     alias: text
     owner: Question
@@ -220,7 +220,7 @@ attributes:
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
     alias: hasDocumentation
@@ -244,7 +244,7 @@ attributes:
   hasDataset:
     name: hasDataset
     description: A relationship to datasets that are used.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasDataset
     owner: Question
@@ -256,7 +256,7 @@ attributes:
   hasTasks:
     name: hasTasks
     description: The tasks or evaluations the benchmark is intended to assess.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasTasks
     owner: Question
@@ -269,7 +269,7 @@ attributes:
   hasImplementation:
     name: hasImplementation
     description: A relationship to a implementation defining the risk evaluation
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: hasImplementation
@@ -282,7 +282,7 @@ attributes:
   hasUnitxtCard:
     name: hasUnitxtCard
     description: A relationship to a Unitxt card defining the risk evaluation
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: hasUnitxtCard
@@ -295,7 +295,7 @@ attributes:
   hasLicense:
     name: hasLicense
     description: Indicates licenses associated with a resource
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
     alias: hasLicense
@@ -313,7 +313,7 @@ attributes:
   hasRelatedRisk:
     name: hasRelatedRisk
     description: A relationship where an entity relates to a risk
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: Any
     alias: hasRelatedRisk
@@ -335,7 +335,7 @@ attributes:
   bestValue:
     name: bestValue
     description: Annotation of the best possible result of the evaluation
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: bestValue
     owner: Question
@@ -346,7 +346,7 @@ attributes:
     name: hasBenchmarkMetadata
     description: A relationship to a Benchmark Metadata Card which contains metadata
       about the benchmark.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: AiEval
     alias: hasBenchmarkMetadata
@@ -361,7 +361,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -374,7 +374,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -386,7 +386,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -397,7 +397,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -408,7 +408,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -420,7 +420,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

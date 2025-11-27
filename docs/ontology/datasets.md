@@ -9,7 +9,7 @@ _A list of data sets_
 
 
 
-URI: [nexus:datasets](https://ibm.github.io/risk-atlas-nexus/ontology/datasets)
+URI: [nexus:datasets](https://ibm.github.io/ai-atlas-nexus/ontology/datasets)
 Alias: datasets
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: datasets
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: datasets
 ```yaml
 name: datasets
 description: A list of data sets
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: datasets
 owner: Container

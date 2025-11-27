@@ -9,7 +9,7 @@ _A list of LLM question policies_
 
 
 
-URI: [nexus:llmquestionpolicies](https://ibm.github.io/risk-atlas-nexus/ontology/llmquestionpolicies)
+URI: [nexus:llmquestionpolicies](https://ibm.github.io/ai-atlas-nexus/ontology/llmquestionpolicies)
 Alias: llmquestionpolicies
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: llmquestionpolicies
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: llmquestionpolicies
 ```yaml
 name: llmquestionpolicies
 description: A list of LLM question policies
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: llmquestionpolicies
 owner: Container

@@ -9,7 +9,7 @@ _The type of data used in the benchmark (e.g., text, images, or multi-modal)_
 
 
 
-URI: [nexus:hasDataType](https://ibm.github.io/risk-atlas-nexus/ontology/hasDataType)
+URI: [nexus:hasDataType](https://ibm.github.io/ai-atlas-nexus/ontology/hasDataType)
 Alias: hasDataType
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasDataType
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasDataType
 ```yaml
 name: hasDataType
 description: The type of data used in the benchmark (e.g., text, images, or multi-modal)
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDataType
 domain_of:

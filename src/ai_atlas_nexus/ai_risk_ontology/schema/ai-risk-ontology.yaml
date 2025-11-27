@@ -1,0 +1,212 @@
+id: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+name: ai-risk-ontology
+version: 0.5.0
+license: https://www.apache.org/licenses/LICENSE-2.0.html
+description:
+  An ontology describing AI systems and their risks
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+  - common
+  - ai_risk
+  - ai_system
+  - ai_eval
+  - ai_intrinsic
+  - ai_csiro_rai
+prefixes:
+  linkml: https://w3id.org/linkml/
+  airo: https://w3id.org/airo#
+  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+
+default_range: string
+default_prefix: nexus
+
+# ----------------
+# Classes
+# ----------------
+classes:
+  Container:
+    tree_root: true
+    description: An umbrella object that holds the ontology class instances
+    attributes:
+      organizations:
+        description: A list of organizations
+        multivalued: true
+        range: Organization
+        inlined: true
+        inlined_as_list: true
+      licenses:
+        description: A list of licenses
+        multivalued: true
+        range: License
+        inlined: true
+        inlined_as_list: true
+      modalities:
+        description: A list of AI modalities
+        multivalued: true
+        range: Modality
+        inlined: true
+        inlined_as_list: true
+      aitasks:
+        description: A list of AI tasks
+        multivalued: true
+        range: AiTask
+        inlined: true
+        inlined_as_list: true
+      documents:
+        description: A list of documents
+        multivalued: true
+        range: Documentation
+        inlined: true
+        inlined_as_list: true
+      datasets:
+        description: A list of data sets
+        multivalued: true
+        range: Dataset
+        inlined: true
+        inlined_as_list: true
+      llmintrinsics:
+        description: A list of LLMIntrinsics
+        multivalued: true
+        range: LLMIntrinsic
+        inlined: true
+        inlined_as_list: true
+      adapters:
+        description: A list of Adapters
+        multivalued: true
+        range: Adapter
+        inlined: true
+        inlined_as_list: true
+      taxonomies:
+        description: A list of AI risk taxonomies
+        multivalued: true
+        range: RiskTaxonomy
+        inlined: true
+        inlined_as_list: true
+      vocabularies:
+        description: A list of vocabularies
+        multivalued: true
+        range: Vocabulary
+        inlined: true
+        inlined_as_list: true
+      riskgroups:
+        description: A list of AI risk groups
+        multivalued: true
+        range: RiskGroup
+        inlined: true
+        inlined_as_list: true
+      risks:
+        description: A list of AI risks
+        multivalued: true
+        range: Risk
+        inlined: true
+        inlined_as_list: true
+      riskcontrols:
+        description: A list of AI risk controls
+        multivalued: true
+        range: RiskControl
+        inlined: true
+        inlined_as_list: true
+      riskincidents:
+        description: A list of AI risk incidents
+        multivalued: true
+        range: RiskIncident
+        inlined: true
+        inlined_as_list: true
+      terms:
+        description: A list of terms from a vocabulary
+        multivalued: true
+        range: Term
+        inlined: true
+        inlined_as_list: true
+      stakeholdergroups:
+        description: A list of AI stakeholder groups
+        multivalued: true
+        range: StakeholderGroup
+        inlined: true
+        inlined_as_list: true
+      stakeholders:
+        description: A list of stakeholders
+        multivalued: true
+        range: Stakeholder
+        inlined: true
+        inlined_as_list: true
+      actions:
+        description: A list of risk related actions
+        multivalued: true
+        range: Action
+        inlined: true
+        inlined_as_list: true
+      evaluations:
+        description: A list of AI evaluation methods
+        multivalued: true
+        range: AiEval
+        inlined: true
+        inlined_as_list: true
+      aievalresults:
+        description: A list of AI evaluation results
+        multivalued: true
+        range: AiEvalResult
+        inlined: true
+        inlined_as_list: true
+      benchmarkmetadatacards:
+        description: A list of AI evaluation benchmark metadata cards
+        multivalued: true
+        range: BenchmarkMetadataCard
+        inlined: true
+        inlined_as_list: true
+      aimodelfamilies:
+        description: A list of AI model families
+        multivalued: true
+        range: LargeLanguageModelFamily
+        inlined: true
+        inlined_as_list: true
+      aimodels:
+        description: A list of AI models
+        multivalued: true
+        range: LargeLanguageModel
+        inlined: true
+        inlined_as_list: true
+      policies:
+        description: A list of policies
+        multivalued: true
+        range: Policy
+        inlined: true
+        inlined_as_list: true
+      llmquestionpolicies:
+        description: A list of LLM question policies
+        multivalued: true
+        range: LLMQuestionPolicy
+        inlined: true
+        inlined_as_list: true
+      rules:
+        description: A list of rules
+        multivalued: true
+        range: Rule
+        inlined: true
+        inlined_as_list: true
+      prohibitions:
+        description: A list of prohibitions
+        multivalued: true
+        range: Prohibition
+        inlined: true
+        inlined_as_list: true
+      permissions:
+        description: A list of Permissions
+        multivalued: true
+        range: Permission
+        inlined: true
+        inlined_as_list: true
+      obligations:
+        description: A list of Obligations
+        multivalued: true
+        range: Obligation
+        inlined: true
+        inlined_as_list: true
+      principles:
+        description: A list of Principles
+        multivalued: true
+        range: Principle
+        inlined: true
+        inlined_as_list: true

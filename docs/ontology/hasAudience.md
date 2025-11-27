@@ -9,7 +9,7 @@ _The intended audience, such as researchers, developers, policymakers, etc._
 
 
 
-URI: [nexus:hasAudience](https://ibm.github.io/risk-atlas-nexus/ontology/hasAudience)
+URI: [nexus:hasAudience](https://ibm.github.io/ai-atlas-nexus/ontology/hasAudience)
 Alias: hasAudience
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasAudience
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: hasAudience
 name: hasAudience
 description: The intended audience, such as researchers, developers, policymakers,
   etc.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasAudience
 domain_of:

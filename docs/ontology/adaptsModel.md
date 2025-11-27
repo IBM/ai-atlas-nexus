@@ -9,7 +9,7 @@ _The LargeLanguageModel being adapted_
 
 
 
-URI: [nexus:adaptsModel](https://ibm.github.io/risk-atlas-nexus/ontology/adaptsModel)
+URI: [nexus:adaptsModel](https://ibm.github.io/ai-atlas-nexus/ontology/adaptsModel)
 Alias: adaptsModel
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: adaptsModel
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -70,7 +70,7 @@ Alias: adaptsModel
 ```yaml
 name: adaptsModel
 description: The LargeLanguageModel being adapted
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: adaptsModel
 domain_of:

@@ -9,7 +9,7 @@ _The origin or source of the data used in the benchmark (e.g., curated datasets,
 
 
 
-URI: [nexus:hasDataSource](https://ibm.github.io/risk-atlas-nexus/ontology/hasDataSource)
+URI: [nexus:hasDataSource](https://ibm.github.io/ai-atlas-nexus/ontology/hasDataSource)
 Alias: hasDataSource
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasDataSource
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasDataSource
 name: hasDataSource
 description: The origin or source of the data used in the benchmark (e.g., curated
   datasets, user submissions).
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDataSource
 domain_of:

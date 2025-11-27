@@ -14,7 +14,7 @@ sort:
 
 nav:
   - Home:
-    - "Risk Atlas Nexus": index.md
+    - "AI Atlas Nexus": index.md
     - Installation:
       - Installation: installation/index.md
     - Usage:
@@ -28,7 +28,7 @@ nav:
   - Examples:
     - Examples: examples/index.md
     - 🚀 Quick start:
-      - "Risk Atlas Nexus Quickstart": examples/notebooks/Risk_Atlas_Nexus_Quickstart.ipynb
+      - "AI Atlas Nexus Quickstart": examples/notebooks/AI_Atlas_Nexus_Quickstart.ipynb
     - 🔍 Discovery:
       - "Risk identification": examples/notebooks/risk_identification.ipynb
       - "AI Tasks identification": examples/notebooks/ai_tasks_identification.ipynb

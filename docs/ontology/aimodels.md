@@ -9,7 +9,7 @@ _A list of AI models_
 
 
 
-URI: [nexus:aimodels](https://ibm.github.io/risk-atlas-nexus/ontology/aimodels)
+URI: [nexus:aimodels](https://ibm.github.io/ai-atlas-nexus/ontology/aimodels)
 Alias: aimodels
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: aimodels
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: aimodels
 ```yaml
 name: aimodels
 description: A list of AI models
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: aimodels
 owner: Container

@@ -1,14 +1,14 @@
-# Risk Atlas Nexus
+# AI Atlas Nexus
 
-<img src="assets/risk_atlas_nexus_vector.svg" width="200">
+<img src="assets/ai_atlas_nexus_vector.svg" width="200">
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0) ![main branch](https://github.com/IBM/risk-atlas-nexus/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main) [![](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/) <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0) ![main branch](https://github.com/IBM/ai-atlas-nexus/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main) [![](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/) <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
-👉 (Jun-2025) Our [HF spaces demo site](https://huggingface.co/spaces/ibm/risk-atlas-nexus) has been updated to show related benchmarks!
+👉 (Jun-2025) Our [HF spaces demo site](https://huggingface.co/spaces/ibm/ai-atlas-nexus) has been updated to show related benchmarks!
 
-👉 (Jun-2025) The [demo projects repository](https://github.com/ibm/risk-atlas-nexus-demos) showcases implementations of Risk Atlas Nexus.
+👉 (Jun-2025) The [demo projects repository](https://github.com/IBM/ai-atlas-nexus-demos) showcases implementations of AI Atlas Nexus.
 ## Overview
-Risk Atlas Nexus aims to provide tooling to help bring together resources related to governance of foundation models. We support a community driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations. Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, Risk Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. Risk Atlas Nexus builds on the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) making this educational resource a nexus of governance assets and tooling. An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data.
+AI Atlas Nexus aims to provide tooling to help bring together resources related to governance of foundation models. We support a community driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations. Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, AI Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. AI Atlas Nexus builds on the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) making this educational resource a nexus of governance assets and tooling. An AI System's Knowledge Graph is used to provide a unified structure that links and contextualize the very heterogeneous domain data.
 
 Our intention is to create a starting point for an open AI Systems ontology whose focus is on risk and that the community can extend and enhance. This ontology serves as the foundation that unifies innovation and tooling in the AI risk space. By lowering the barrier to entry for developers, it fosters a governance-first approach to AI solutions, while also inviting the broader community to contribute their own tools and methodologies to expand its impact.
 
@@ -19,7 +19,7 @@ Our intention is to create a starting point for an open AI Systems ontology whos
 - 🔍 Use the python library methods to quickly explore available risks, relations and actions
 - 🚨 Use the python library methods to detect potential risks in your usecase
 - 📤 Download an exported graph populated with data instances
-- ✨ Example use-case of auto-assistance in compliance questionnaires using CoT examples and Risk Atlas Nexus
+- ✨ Example use-case of auto-assistance in compliance questionnaires using CoT examples and AI Atlas Nexus
 - 🔧 Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database
 
 ## Architecture
@@ -28,11 +28,11 @@ Our intention is to create a starting point for an open AI Systems ontology whos
 ## Links
 - **AI Risk Ontology**
     - [LinkML schema documentation](ontology/index.md)
-    - [LinkML instance data for an example knowledge graph](https://github.com/IBM/risk-atlas-nexus/blob/main/src/risk_atlas_nexus/data/knowledge_graph/README.md)
-    - [Download a populated graph](https://github.com/IBM/risk-atlas-nexus/blob/main/graph_export/README.md)
+    - [LinkML instance data for an example knowledge graph](https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/knowledge_graph/README.md)
+    - [Download a populated graph](https://github.com/IBM/ai-atlas-nexus/blob/main/graph_export/README.md)
     - [Contribute your own taxonomy files and CoT templates](concepts/Contributing_a_taxonomy.md)
 - **Notebooks:**
-    - [Risk Atlas Nexus Quickstart](examples/notebooks/Risk_Atlas_Nexus_Quickstart.ipynb) Overview of library functionality
+    - [AI Atlas Nexus Quickstart](examples/notebooks/AI_Atlas_Nexus_Quickstart.ipynb) Overview of library functionality
     - [Risk identification](examples/notebooks/risk_identification.ipynb) Uncover risks related to your usecase
     - [Auto assist questionnaire](examples/notebooks/autoassist_questionnaire.ipynb) Auto-fill questionnaire using Chain of Thought or Few-Shot Examples
     - [AI Tasks identification](examples/notebooks/ai_tasks_identification.ipynb) Uncover ai tasks related to your usecase
@@ -54,21 +54,21 @@ This project targets python version ">=3.11, <3.12". You can download specific v
 
 To install the current release
 ```
-pip install risk-atlas-nexus[INFERENCE_LIB]
+pip install ai-atlas-nexus[INFERENCE_LIB]
 ```
 
 To install the latest code
 ```
-git clone git@github.com:IBM/risk-atlas-nexus.git
-cd risk-atlas-nexus
-python -m venv vrisk-atlas-nexus
-source vrisk-atlas-nexus/bin/activate
+git clone git@github.com:IBM/ai-atlas-nexus.git
+cd ai-atlas-nexus
+python -m venv v-ai-atlas-nexus
+source v-ai-atlas-nexus/bin/activate
 pip install -e .
 ```
 
 ### Install for inference APIs
 
-Risk Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:
+AI Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:
 
 - [IBM Watsonx AI](https://www.ibm.com/products/watsonx-ai) (Watson Machine Learning)
 - [Ollama](https://ollama.com/)
@@ -108,7 +108,7 @@ pip install -e ".[ollama]"
 
 2. Please follow the [quickstart](https://github.com/ollama/ollama/blob/main/README.md#ollama) guide to start Ollama LLM server. Server will start by default at http://localhost:11434
 
-3. When selecting Ollama engine in Risk Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
+3. When selecting Ollama engine in AI Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
 
 #### vLLM
 
@@ -122,7 +122,7 @@ When using the vLLM inference, you need to:
 pip install -e ".[vllm]"
 ```
 
-Above package is enough to run vLLM in once-off offline mode. When selecting vLLM execution from Risk Atlas Nexus, `credentials` should be passed as `None` to use vLLM offline mode.
+Above package is enough to run vLLM in once-off offline mode. When selecting vLLM execution from AI Atlas Nexus, `credentials` should be passed as `None` to use vLLM offline mode.
 
 3. (Optional) To run vLLM on an OpenAI-Compatible vLLM Server, execute the command:
 
@@ -132,7 +132,7 @@ vllm serve ibm-granite/granite-3.1-8b-instruct --max_model_len 4096 --host local
 
 The CUSTOM_API_KEY can be any string that you choose to use as your API key. Above command will start vLLM server at http://localhost:8000. The server currently hosts one model at a time. Check all supported APIs at `http://localhost:8000/docs`
 
-**Note:** When selecting vLLM engine in Risk Atlas Nexus, pass `api_url` as `host:port` and given `api_key` to `credentials` with values from the vllm serve command above.
+**Note:** When selecting vLLM engine in AI Atlas Nexus, pass `api_url` as `host:port` and given `api_key` to `credentials` with values from the vllm serve command above.
 
 #### RITS (IBM Internal Only)
 
@@ -152,10 +152,10 @@ pip install -e ".[rits]"
 ```
 
 ## Compatibility
-- View the [releases changelog](https://github.com/IBM/risk-atlas-nexus/releases).
+- View the [releases changelog](https://github.com/IBM/ai-atlas-nexus/releases).
 
 ## Referencing the project
-If you use Risk Atlas Nexus in your projects, please consider citing the following:
+If you use AI Atlas Nexus in your projects, please consider citing the following:
 ```bib
 @article{airiskatlas2025,
       title={AI Risk Atlas: Taxonomy and Tooling for Navigating AI Risks and Resources},
@@ -168,10 +168,10 @@ If you use Risk Atlas Nexus in your projects, please consider citing the followi
 }
 ```
 ## License
-Risk Atlas Nexus is under Apache 2.0 license.
+AI Atlas Nexus is under Apache 2.0 license.
 
 ## Contributing
-- Get started by checking our [contribution guidelines](https://github.com/ibm/risk-atlas-nexus/CONTRIBUTING.md).
+- Get started by checking our [contribution guidelines](https://github.com/IBM/ai-atlas-nexus/CONTRIBUTING.md).
 - Read the wiki for more technical and design details.
 - If you have any questions, just ask!
 - [Contribute your own taxonomy files and CoT templates](concepts/Contributing_a_taxonomy.md)
@@ -186,4 +186,4 @@ Tip: Use the makefile provided to regenerate artifacts provided in the repositor
 
 ## IBM ❤️ Open Source AI
 
-Risk Atlas Nexus has been brought to you by IBM.
+AI Atlas Nexus has been brought to you by IBM.

@@ -9,7 +9,7 @@ _A list of rules_
 
 
 
-URI: [nexus:rules](https://ibm.github.io/risk-atlas-nexus/ontology/rules)
+URI: [nexus:rules](https://ibm.github.io/ai-atlas-nexus/ontology/rules)
 Alias: rules
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: rules
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: rules
 ```yaml
 name: rules
 description: A list of rules
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: rules
 owner: Container

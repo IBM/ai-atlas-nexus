@@ -9,7 +9,7 @@ _Benchmark metadata cards offer a standardized way to document LLM benchmarks cl
 
 
 
-URI: [nexus:benchmarkmetadatacard](https://ibm.github.io/risk-atlas-nexus/ontology/benchmarkmetadatacard)
+URI: [nexus:benchmarkmetadatacard](https://ibm.github.io/ai-atlas-nexus/ontology/benchmarkmetadatacard)
 
 
 
@@ -212,7 +212,7 @@ URI: [nexus:benchmarkmetadatacard](https://ibm.github.io/risk-atlas-nexus/ontolo
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -245,7 +245,7 @@ description: 'Benchmark metadata cards offer a standardized way to document LLM 
   how they relate to real-world risks, and how to interpret their results responsibly.  This
   is an implementation of the design set out in ''BenchmarkCards: Large Language Model
   and Risk Reporting'' (https://doi.org/10.48550/arXiv.2410.12974)'
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 slots:
 - describesAiEval
@@ -280,14 +280,14 @@ attributes:
   name:
     name: name
     description: The official name of the benchmark.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_eval
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval
     domain_of:
     - Entity
     - BenchmarkMetadataCard
   overview:
     name: overview
     description: A brief description of the benchmark's main goals and scope.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_eval
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval
     rank: 1000
     domain_of:
     - BenchmarkMetadataCard
@@ -307,13 +307,13 @@ description: 'Benchmark metadata cards offer a standardized way to document LLM 
   how they relate to real-world risks, and how to interpret their results responsibly.  This
   is an implementation of the design set out in ''BenchmarkCards: Large Language Model
   and Risk Reporting'' (https://doi.org/10.48550/arXiv.2410.12974)'
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 attributes:
   name:
     name: name
     description: The official name of the benchmark.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_eval
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval
     alias: name
     owner: BenchmarkMetadataCard
     domain_of:
@@ -323,7 +323,7 @@ attributes:
   overview:
     name: overview
     description: A brief description of the benchmark's main goals and scope.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai_eval
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval
     rank: 1000
     alias: overview
     owner: BenchmarkMetadataCard
@@ -334,7 +334,7 @@ attributes:
     name: describesAiEval
     description: A relationship where a BenchmarkMetadataCard describes and AI evaluation
       (benchmark).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: BenchmarkMetadataCard
     alias: describesAiEval
@@ -348,7 +348,7 @@ attributes:
   hasDataType:
     name: hasDataType
     description: The type of data used in the benchmark (e.g., text, images, or multi-modal)
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasDataType
     owner: BenchmarkMetadataCard
@@ -360,7 +360,7 @@ attributes:
     name: hasDomains
     description: The specific domains or areas where the benchmark is applied (e.g.,
       natural language processing,computer vision).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasDomains
     owner: BenchmarkMetadataCard
@@ -372,7 +372,7 @@ attributes:
     name: hasLanguages
     description: The languages included in the dataset used by the benchmark (e.g.,
       English, multilingual).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasLanguages
     owner: BenchmarkMetadataCard
@@ -383,7 +383,7 @@ attributes:
   hasSimilarBenchmarks:
     name: hasSimilarBenchmarks
     description: Benchmarks that are closely related in terms of goals or data type.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasSimilarBenchmarks
     owner: BenchmarkMetadataCard
@@ -395,7 +395,7 @@ attributes:
     name: hasResources
     description: Links to relevant resources, such as repositories or papers related
       to the benchmark.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasResources
     owner: BenchmarkMetadataCard
@@ -406,7 +406,7 @@ attributes:
   hasGoal:
     name: hasGoal
     description: The specific goal or primary use case the benchmark is designed for.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasGoal
     owner: BenchmarkMetadataCard
@@ -417,7 +417,7 @@ attributes:
     name: hasAudience
     description: The intended audience, such as researchers, developers, policymakers,
       etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasAudience
     owner: BenchmarkMetadataCard
@@ -427,7 +427,7 @@ attributes:
   hasTasks:
     name: hasTasks
     description: The tasks or evaluations the benchmark is intended to assess.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasTasks
     owner: BenchmarkMetadataCard
@@ -441,7 +441,7 @@ attributes:
     name: hasLimitations
     description: Limitations in evaluating or addressing risks, such as gaps in demographic
       coverage or specific domains.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasLimitations
     owner: BenchmarkMetadataCard
@@ -453,7 +453,7 @@ attributes:
     name: hasOutOfScopeUses
     description: Use cases where the benchmark is not designed to be applied and could
       give misleading results.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasOutOfScopeUses
     owner: BenchmarkMetadataCard
@@ -465,7 +465,7 @@ attributes:
     name: hasDataSource
     description: The origin or source of the data used in the benchmark (e.g., curated
       datasets, user submissions).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasDataSource
     owner: BenchmarkMetadataCard
@@ -476,7 +476,7 @@ attributes:
   hasDataSize:
     name: hasDataSize
     description: The size of the dataset, including the number of data points or examples.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasDataSize
     owner: BenchmarkMetadataCard
@@ -487,7 +487,7 @@ attributes:
     name: hasDataFormat
     description: The structure and modality of the data (e.g., sentence pairs, question-answer
       format, tabular data).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasDataFormat
     owner: BenchmarkMetadataCard
@@ -498,7 +498,7 @@ attributes:
     name: hasAnnotation
     description: The process used to annotate or label the dataset, including who
       or what performed the annotations (e.g., human annotators, automated processes).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasAnnotation
     owner: BenchmarkMetadataCard
@@ -508,7 +508,7 @@ attributes:
   hasMethods:
     name: hasMethods
     description: The evaluation techniques applied within the benchmark.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasMethods
     owner: BenchmarkMetadataCard
@@ -520,7 +520,7 @@ attributes:
     name: hasMetrics
     description: The specific performance metrics used to assess models (e.g., accuracy,
       F1 score, precision, recall).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasMetrics
     owner: BenchmarkMetadataCard
@@ -532,7 +532,7 @@ attributes:
     name: hasCalculation
     description: The way metrics are computed based on model outputs and the benchmark
       data.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasCalculation
     owner: BenchmarkMetadataCard
@@ -543,7 +543,7 @@ attributes:
   hasInterpretation:
     name: hasInterpretation
     description: How users should interpret the scores or results from the metrics.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasInterpretation
     owner: BenchmarkMetadataCard
@@ -555,7 +555,7 @@ attributes:
     name: hasBaselineResults
     description: The results of well-known or widely used models to give context to
       new performance scores.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasBaselineResults
     owner: BenchmarkMetadataCard
@@ -566,7 +566,7 @@ attributes:
     name: hasValidation
     description: Measures taken to ensure that the benchmark provides valid and reliable
       evaluations.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasValidation
     owner: BenchmarkMetadataCard
@@ -577,7 +577,7 @@ attributes:
   hasRelatedRisk:
     name: hasRelatedRisk
     description: A relationship where an entity relates to a risk
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: Any
     alias: hasRelatedRisk
@@ -600,7 +600,7 @@ attributes:
     name: hasDemographicAnalysis
     description: How the benchmark evaluates performance across different demographic
       groups (e.g., gender, race).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasDemographicAnalysis
     owner: BenchmarkMetadataCard
@@ -611,7 +611,7 @@ attributes:
     name: hasConsiderationPrivacyAndAnonymity
     description: How any personal or sensitive data is handled and whether any anonymization
       techniques are applied.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasConsiderationPrivacyAndAnonymity
     owner: BenchmarkMetadataCard
@@ -621,7 +621,7 @@ attributes:
   hasLicense:
     name: hasLicense
     description: Indicates licenses associated with a resource
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
     alias: hasLicense
@@ -640,7 +640,7 @@ attributes:
     name: hasConsiderationConsentProcedures
     description: Information on how consent was obtained (if applicable), especially
       for datasets involving personal data.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasConsiderationConsentProcedures
     owner: BenchmarkMetadataCard
@@ -650,7 +650,7 @@ attributes:
   hasConsiderationComplianceWithRegulations:
     name: hasConsiderationComplianceWithRegulations
     description: Compliance with relevant legal or ethical regulations (if applicable).
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     alias: hasConsiderationComplianceWithRegulations
     owner: BenchmarkMetadataCard
@@ -660,7 +660,7 @@ attributes:
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
     alias: hasDocumentation
@@ -685,7 +685,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -698,7 +698,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -709,7 +709,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -720,7 +720,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -732,7 +732,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

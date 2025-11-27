@@ -4,21 +4,21 @@ This project targets python version ">=3.11, <3.12". You can download specific v
 
 To install the current release
 ```
-pip install risk-atlas-nexus[INFERENCE_LIB]
+pip install ai-atlas-nexus[INFERENCE_LIB]
 ```
 
 To install the latest code
 ```
-git clone git@github.com:IBM/risk-atlas-nexus.git
-cd risk-atlas-nexus
-python -m venv vrisk-atlas-nexus
-source vrisk-atlas-nexus/bin/activate
+git clone git@github.com:IBM/ai-atlas-nexus.git
+cd ai-atlas-nexus
+python -m venv v-ai-atlas-nexus
+source v-ai-atlas-nexus/bin/activate
 pip install -e ".[INFERENCE_LIB]"
 ```
 
 ### Install for inference APIs
 
-Risk Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:
+AI Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:
 
 - [IBM Watsonx AI](https://www.ibm.com/products/watsonx-ai) (Watson Machine Learning)
 - [Ollama](https://ollama.com/)
@@ -58,7 +58,7 @@ pip install -e ".[ollama]"
 
 2. Please follow the [quickstart](https://github.com/ollama/ollama/blob/main/README.md#ollama) guide to start Ollama LLM server. Server will start by default at http://localhost:11434
 
-3. When selecting Ollama engine in Risk Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
+3. When selecting Ollama engine in AI Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
 
 #### vLLM
 
@@ -72,7 +72,7 @@ When using the vLLM inference, you need to:
 pip install -e ".[vllm]"
 ```
 
-Above package is enough to run vLLM in once-off offline mode. When selecting vLLM execution from Risk Atlas Nexus, `credentials` should be passed as `None` to use vLLM offline mode.
+Above package is enough to run vLLM in once-off offline mode. When selecting vLLM execution from AI Atlas Nexus, `credentials` should be passed as `None` to use vLLM offline mode.
 
 3. (Optional) To run vLLM on an OpenAI-Compatible vLLM Server, execute the command:
 
@@ -82,7 +82,7 @@ vllm serve ibm-granite/granite-3.1-8b-instruct --max_model_len 4096 --host local
 
 The CUSTOM_API_KEY can be any string that you choose to use as your API key. Above command will start vLLM server at http://localhost:8000. The server currently hosts one model at a time. Check all supported APIs at `http://localhost:8000/docs`
 
-**Note:** When selecting vLLM engine in Risk Atlas Nexus, pass `api_url` as `host:port` and given `api_key` to `credentials` with values from the vllm serve command above.
+**Note:** When selecting vLLM engine in AI Atlas Nexus, pass `api_url` as `host:port` and given `api_key` to `credentials` with values from the vllm serve command above.
 
 #### RITS (IBM Internal Only)
 

@@ -9,7 +9,7 @@ _A list of languages, expressed as ISO two letter codes. For example, 'jp, fr, e
 
 
 
-URI: [nexus:supported_languages](https://ibm.github.io/risk-atlas-nexus/ontology/supported_languages)
+URI: [nexus:supported_languages](https://ibm.github.io/ai-atlas-nexus/ontology/supported_languages)
 Alias: supported_languages
 
 <!-- no inheritance hierarchy -->
@@ -52,7 +52,7 @@ Alias: supported_languages
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -74,7 +74,7 @@ Alias: supported_languages
 name: supported_languages
 description: A list of languages, expressed as ISO two letter codes. For example,
   'jp, fr, en, de'
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: supported_languages
 domain_of:

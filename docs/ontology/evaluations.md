@@ -9,7 +9,7 @@ _A list of AI evaluation methods_
 
 
 
-URI: [nexus:evaluations](https://ibm.github.io/risk-atlas-nexus/ontology/evaluations)
+URI: [nexus:evaluations](https://ibm.github.io/ai-atlas-nexus/ontology/evaluations)
 Alias: evaluations
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: evaluations
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: evaluations
 ```yaml
 name: evaluations
 description: A list of AI evaluation methods
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: evaluations
 owner: Container

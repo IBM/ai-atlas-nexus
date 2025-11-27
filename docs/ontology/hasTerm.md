@@ -9,7 +9,7 @@ _Indicates terms associated with a vocabulary_
 
 
 
-URI: [nexus:hasTerm](https://ibm.github.io/risk-atlas-nexus/ontology/hasTerm)
+URI: [nexus:hasTerm](https://ibm.github.io/ai-atlas-nexus/ontology/hasTerm)
 Alias: hasTerm
 
 <!-- no inheritance hierarchy -->
@@ -42,7 +42,7 @@ Alias: hasTerm
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -63,7 +63,7 @@ Alias: hasTerm
 ```yaml
 name: hasTerm
 description: Indicates terms associated with a vocabulary
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasTerm
 alias: hasTerm

@@ -9,7 +9,7 @@ _Evidence provides a source (typical a chunk, paragraph or link) describing wher
 
 
 
-URI: [nexus:evidence](https://ibm.github.io/risk-atlas-nexus/ontology/evidence)
+URI: [nexus:evidence](https://ibm.github.io/ai-atlas-nexus/ontology/evidence)
 Alias: evidence
 
 <!-- no inheritance hierarchy -->
@@ -22,8 +22,8 @@ Alias: evidence
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
 | [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
+| [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
 
 
 
@@ -50,7 +50,7 @@ Alias: evidence
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: evidence
 name: evidence
 description: Evidence provides a source (typical a chunk, paragraph or link) describing
   where some value was found or how it was generated.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: evidence
 domain_of:

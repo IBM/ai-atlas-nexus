@@ -1,0 +1,65 @@
+id: https://ibm.github.io/ai-atlas-nexus/ontology/eu_ai_act
+name: eu_ai_act
+description:
+  Vocabulary pertaining to the EU AI Act
+imports:
+  - linkml:types
+  - common
+default_curi_maps:
+  - semweb_context
+prefixes:
+  linkml: https://w3id.org/linkml/
+  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+
+default_range: string
+default_prefix: nexus
+
+classes:
+  AiOffice:
+    is_a: Organization
+    class_uri: schema:Organization
+    description: "The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)"
+
+enums:
+  EuAiRiskCategory:
+    permissible_values:
+      EXCLUDED: Excluded
+      PROHIBITED: Prohibited
+      HIGH_RISK_EXCEPTION: "High-Risk Exception"
+      HIGH_RISK: "High Risk"
+      LIMITED_OR_LOW_RISK: "Limited or Low Risk"
+
+  AiSystemType:
+    permissible_values:
+      GPAI:
+        description: General-purpose AI (GPAI)
+      GPAI_OS:
+        description: General-purpose AI (GPAI) models released under free and open-source licences
+      PROHIBITED:
+        description: Prohibited AI system due to unacceptable risk category (e.g. social scoring systems and manipulative AI).
+      SCIENTIFIC_RD:
+        description: AI used for scientific research and development
+      MILITARY_SECURITY:
+        description: AI used for military, defense and security purposes.
+      HIGH_RISK:
+        description: AI systems pursuant to Article 6(1)(2) Classification Rules for High-Risk AI Systems
+
+slots:
+  isDeployedBy:
+    description: A relationship indicating that an entity has been deployed by an organization.
+    range: Organization
+    inlined_as_list: true
+  isImportedBy:
+    description: A relationship indicating that an entity has been imported by an organization.
+    range: Organization
+    inlined_as_list: true
+  isDistributedBy:
+    description: A relationship indicating that an entity has been distributed by an organization.
+    range: Organization
+    inlined_as_list: true
+  hasEuAiSystemType:
+    description: The type of system as defined by the EU AI Act.
+    range: AiSystemType
+  hasEuRiskCategory:
+    description: The risk category of an AI system as defined by the EU AI Act.
+    range: EuAiRiskCategory

@@ -1,0 +1,210 @@
+id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_system
+name: ai_system
+description:
+  An ontology describing AI systems
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+  - common
+  - ai_eval
+  - energy
+  - eu_ai_act
+  - ai_risk
+prefixes:
+  linkml: https://w3id.org/linkml/
+  airo: https://w3id.org/airo#
+  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+
+default_range: string
+default_prefix: nexus
+
+# ----------------
+# Classes
+# ----------------
+classes:
+  BaseAi:
+    is_a: Entity
+    abstract: true
+    description:
+      Any type of AI, be it a LLM, RL agent, SVM, etc.
+    slots:
+      - producer
+      - hasModelCard
+      - hasDocumentation
+      - hasLicense
+      - performsTask
+      - isProvidedBy
+
+  AiSystem:
+    is_a: BaseAi
+    class_uri: airo:AISystem
+    description:
+      A compound AI System composed of one or more AI capablities. ChatGPT is an example of an AI system which deploys multiple GPT AI models.
+    mixins:
+    slot_usage:
+      isComposedOf:
+        range: BaseAi
+        description: Relationship indicating the AI components from which a complete AI system is composed.
+    slots:
+      - hasEuAiSystemType
+      - hasEuRiskCategory
+
+  AiAgent:
+    is_a: AiSystem
+    description:
+      An artificial intelligence (AI) agent refers to a system or program that is capable of autonomously performing tasks on behalf of a user or another system by designing its workflow and utilizing available tools.
+    slot_usage:
+      isProvidedBy:
+        description: A relationship indicating the AI agent has been provided by an AI systems provider.
+
+  AiModel:
+    is_a: BaseAi
+    description:
+      A base AI Model class. No assumption about the type (SVM, LLM, etc.). Subclassed by model types (see LargeLanguageModel).
+    slots:
+      - hasEvaluation
+      - architecture
+      - gpu_hours
+      - power_consumption_w
+      - carbon_emitted
+      - hasRiskControl
+
+  LargeLanguageModel:
+    is_a: AiModel
+    description: A large language model (LLM) is an AI model which supports a range of language-related tasks such as generation, summarization, classification, among others. A LLM is implemented as an artificial neural networks using a transformer architecture.
+    aliases:
+      - LLM
+    slot_usage:
+      isPartOf:
+        description: Annotation that a Large Language model is part of a family of models
+        range: LargeLanguageModelFamily
+    slots:
+      - numParameters
+      - numTrainingTokens
+      - contextWindowSize
+      - hasInputModality
+      - hasOutputModality
+      - hasTrainingData
+      - fine_tuning
+      - supported_languages
+      - isPartOf
+
+  LargeLanguageModelFamily:
+    is_a: Entity
+    description: A large language model family is a set of models that are provided by the same AI systems provider and are built around the same architecture, but differ e.g. in the number of parameters. Examples are Meta's Llama2 family or the IBM granite models.
+    slots:
+      - hasDocumentation
+
+  AiTask:
+    is_a: Entity
+    class_uri: airo:AiCapability
+    description: A task, such as summarization and classification, performed by an AI.
+    slots:
+
+  AiLifecyclePhase:
+    is_a: Entity
+    class_uri: airo:AILifecyclePhase
+    abstract: true
+    description: A Phase of AI lifecycle which indicates evolution of the system from conception through retirement.
+
+  DataPreprocessing:
+    is_a: AiLifecyclePhase
+    description: Data transformations, such as PI filtering, performed to ensure high quality of AI model training data.
+    slots:
+
+  AiModelValidation:
+    is_a: AiLifecyclePhase
+    description: AI model validation steps that have been performed after the model training to ensure high AI model quality.
+    slots:
+
+  AiProvider:
+    is_a: Organization
+    class_uri: airo:AIProvider
+    description: A provider under the AI Act is defined by Article 3(3) as a natural or legal person or body that develops an AI system or general-purpose AI model or has an AI system or general-purpose AI model developed; and places that system or model on the market, or puts that system into service, under the provider's own name or trademark, whether for payment or free for charge.
+    slots:
+
+  Modality:
+    is_a: Entity
+    class_uri: airo:Modality
+    description: A modality supported by an Ai component. Examples include text, image, video.
+    slots:
+
+  Input:
+    is_a: Entity
+    class_uri: airo:Input
+    description: Input for which the system or component generates output.
+    slots:
+
+# ----------------
+# Slots
+# ----------------
+slots:
+  numParameters:
+    range: integer
+    minimum_value: 0
+    description: A property indicating the number of parameters in a LLM.
+  numTrainingTokens:
+    range: integer
+    minimum_value: 0
+    description: The number of tokens a AI model was trained on.
+  contextWindowSize:
+    range: integer
+    minimum_value: 0
+    description: The total length, in bytes, of an AI model's context window.
+  architecture:
+    range: string
+    description: A description of the architecture of an AI such as 'Decoder-only'.
+  hasInputModality:
+    multivalued: true
+    inlined: false
+    description: A relationship indicating the input modalities supported by an AI component. Examples include text, image, video.
+    range: Modality
+  hasOutputModality:
+    multivalued: true
+    inlined: false
+    description: A relationship indicating the output modalities supported by an AI component. Examples include text, image, video.
+    range: Modality
+  hasTrainingData:
+    slot_uri: airo:hasTrainingData
+    multivalued: true
+    inlined: false
+    description: A relationship indicating the datasets an AI model was trained on.
+    range: Dataset
+  training_data_preprocessing:
+    multivalued: true
+    inlined: false
+    description: relationship indicating data preprocessing steps performed on training data sets to ensure high quality training data.
+    range: DataPreprocessing
+  isProvidedBy:
+    slot_uri: airo:isProvidedBy
+    description: A relationship indicating the AI model has been provided by an AI model provider.
+    range: AiProvider
+  validated_by:
+    multivalued: true
+    inlined_as_list: true
+    description: A relationship indicating the model validation steps after AI model training.
+    range: AiModelValidation
+  performsTask:
+    multivalued: true
+    inlined: false
+    description: relationship indicating the AI tasks an AI model can perform.
+    range: AiTask
+  fine_tuning:
+    range: string
+    description: A description of the fine-tuning mechanism(s) applied to a model.
+  supported_languages:
+    range: string
+    multivalued: true
+    inlined_as_list: true
+    description: A list of languages, expressed as ISO two letter codes. For example, 'jp, fr, en, de'
+  hasModelCard:
+    range: string
+    multivalued: true
+    inlined_as_list: true
+    description: A relationship to model card references.
+  hasRiskControl:
+    slot_uri: airo:hasRiskControl
+    description: Indicates the control measures associated with a system or component to modify risks.
+    multivalued: true
+    range: RiskControl

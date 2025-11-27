@@ -9,7 +9,7 @@ _Indicates impact(s) possible or arising as consequences from specified concept_
 
 
 
-URI: [nexus:hasImpact](https://ibm.github.io/risk-atlas-nexus/ontology/hasImpact)
+URI: [nexus:hasImpact](https://ibm.github.io/ai-atlas-nexus/ontology/hasImpact)
 Alias: hasImpact
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasImpact
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: hasImpact
 name: hasImpact
 description: Indicates impact(s) possible or arising as consequences from specified
   concept
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 broad_mappings:
 - dpv:hasConsequence
 rank: 1000

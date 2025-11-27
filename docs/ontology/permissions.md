@@ -9,7 +9,7 @@ _A list of Permissions_
 
 
 
-URI: [nexus:permissions](https://ibm.github.io/risk-atlas-nexus/ontology/permissions)
+URI: [nexus:permissions](https://ibm.github.io/ai-atlas-nexus/ontology/permissions)
 Alias: permissions
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: permissions
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: permissions
 ```yaml
 name: permissions
 description: A list of Permissions
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: permissions
 owner: Container

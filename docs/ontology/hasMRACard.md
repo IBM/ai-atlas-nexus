@@ -43,7 +43,7 @@ URI: [schema:url](http://schema.org/url)
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -64,7 +64,7 @@ URI: [schema:url](http://schema.org/url)
 ```yaml
 name: hasMRACard
 description: A relationship to an MRA (IBM internal) card defining the risk evaluation
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 slot_uri: schema:url
 alias: hasMRACard

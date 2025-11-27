@@ -9,7 +9,7 @@ _Information on how consent was obtained (if applicable), especially for dataset
 
 
 
-URI: [nexus:hasConsiderationConsentProcedures](https://ibm.github.io/risk-atlas-nexus/ontology/hasConsiderationConsentProcedures)
+URI: [nexus:hasConsiderationConsentProcedures](https://ibm.github.io/ai-atlas-nexus/ontology/hasConsiderationConsentProcedures)
 Alias: hasConsiderationConsentProcedures
 
 <!-- no inheritance hierarchy -->
@@ -49,7 +49,7 @@ Alias: hasConsiderationConsentProcedures
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -71,7 +71,7 @@ Alias: hasConsiderationConsentProcedures
 name: hasConsiderationConsentProcedures
 description: Information on how consent was obtained (if applicable), especially for
   datasets involving personal data.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasConsiderationConsentProcedures
 domain_of:

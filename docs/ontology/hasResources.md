@@ -9,7 +9,7 @@ _Links to relevant resources, such as repositories or papers related to the benc
 
 
 
-URI: [nexus:hasResources](https://ibm.github.io/risk-atlas-nexus/ontology/hasResources)
+URI: [nexus:hasResources](https://ibm.github.io/ai-atlas-nexus/ontology/hasResources)
 Alias: hasResources
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: hasResources
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -73,7 +73,7 @@ Alias: hasResources
 name: hasResources
 description: Links to relevant resources, such as repositories or papers related to
   the benchmark.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasResources
 domain_of:

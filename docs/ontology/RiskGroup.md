@@ -9,7 +9,7 @@ _A group of AI system related risks that are part of a risk taxonomy._
 
 
 
-URI: [nexus:RiskGroup](https://ibm.github.io/risk-atlas-nexus/ontology/RiskGroup)
+URI: [nexus:RiskGroup](https://ibm.github.io/ai-atlas-nexus/ontology/RiskGroup)
 
 
 
@@ -194,7 +194,7 @@ URI: [nexus:RiskGroup](https://ibm.github.io/risk-atlas-nexus/ontology/RiskGroup
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -222,7 +222,7 @@ URI: [nexus:RiskGroup](https://ibm.github.io/risk-atlas-nexus/ontology/RiskGroup
 ```yaml
 name: RiskGroup
 description: A group of AI system related risks that are part of a risk taxonomy.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - RiskConcept
@@ -249,7 +249,7 @@ slot_usage:
 ```yaml
 name: RiskGroup
 description: A group of AI system related risks that are part of a risk taxonomy.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 mixins:
 - RiskConcept
@@ -263,7 +263,7 @@ attributes:
     name: isDefinedByTaxonomy
     description: A relationship where a risk or a risk group is defined by a risk
       taxonomy
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
     alias: isDefinedByTaxonomy
@@ -282,7 +282,7 @@ attributes:
     name: closeMatch
     description: The property is used to link two concepts that are sufficiently similar
       that they can be used interchangeably in some information retrieval applications.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
     alias: closeMatch
@@ -301,7 +301,7 @@ attributes:
     description: The property is used to link two concepts, indicating a high degree
       of confidence that the concepts can be used interchangeably across a wide range
       of information retrieval applications
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
     alias: exactMatch
@@ -320,7 +320,7 @@ attributes:
     description: The property is used to state a hierarchical mapping link between
       two concepts, indicating that the concept linked to, is a broader concept than
       the originating concept.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broadMatch
@@ -339,7 +339,7 @@ attributes:
     description: The property is used to state a hierarchical mapping link between
       two concepts, indicating that the concept linked to, is a narrower concept than
       the originating concept.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
     alias: narrowMatch
@@ -357,7 +357,7 @@ attributes:
     name: relatedMatch
     description: The property skos:relatedMatch is used to state an associative mapping
       link between two concepts.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
     alias: relatedMatch
@@ -374,7 +374,7 @@ attributes:
   hasPart:
     name: hasPart
     description: A relationship where a riskgroup has a risk
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:hasPart
     alias: hasPart
@@ -387,7 +387,7 @@ attributes:
     name: isDetectedBy
     description: A relationship where a risk, risk source, consequence, or impact
       is detected by a risk control.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: RiskConcept
     alias: isDetectedBy
@@ -402,7 +402,7 @@ attributes:
     name: id
     description: A unique identifier to this instance of the model element. Example
       identifiers include UUID, URI, URN, etc.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
@@ -415,7 +415,7 @@ attributes:
   name:
     name: name
     description: A text name of this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
     alias: name
@@ -427,7 +427,7 @@ attributes:
   description:
     name: description
     description: The description of an entity
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
     alias: description
@@ -438,7 +438,7 @@ attributes:
   url:
     name: url
     description: An optional URL associated with this instance.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
     alias: url
@@ -449,7 +449,7 @@ attributes:
   dateCreated:
     name: dateCreated
     description: The date on which the entity was created.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
     alias: dateCreated
@@ -461,7 +461,7 @@ attributes:
   dateModified:
     name: dateModified
     description: The date on which the entity was most recently modified.
-    from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
     alias: dateModified

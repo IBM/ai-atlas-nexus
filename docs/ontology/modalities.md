@@ -9,7 +9,7 @@ _A list of AI modalities_
 
 
 
-URI: [nexus:modalities](https://ibm.github.io/risk-atlas-nexus/ontology/modalities)
+URI: [nexus:modalities](https://ibm.github.io/ai-atlas-nexus/ontology/modalities)
 Alias: modalities
 
 <!-- no inheritance hierarchy -->
@@ -51,7 +51,7 @@ Alias: modalities
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -72,7 +72,7 @@ Alias: modalities
 ```yaml
 name: modalities
 description: A list of AI modalities
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: modalities
 owner: Container

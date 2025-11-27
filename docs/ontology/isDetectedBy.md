@@ -9,7 +9,7 @@ _A relationship where a risk, risk source, consequence, or impact is detected by
 
 
 
-URI: [nexus:isDetectedBy](https://ibm.github.io/risk-atlas-nexus/ontology/isDetectedBy)
+URI: [nexus:isDetectedBy](https://ibm.github.io/ai-atlas-nexus/ontology/isDetectedBy)
 Alias: isDetectedBy
 
 <!-- no inheritance hierarchy -->
@@ -22,13 +22,13 @@ Alias: isDetectedBy
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
-| [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
 | [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
 | [Action](Action.md) | Action to remediate a risk |  no  |
-| [Impact](Impact.md) |  |  no  |
 | [RiskConcept](RiskConcept.md) | An umbrella term for refering to risk, risk source, consequence and impact |  no  |
 | [RiskGroup](RiskGroup.md) | A group of AI system related risks that are part of a risk taxonomy |  no  |
+| [Impact](Impact.md) |  |  no  |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
+| [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
 
 
 
@@ -57,7 +57,7 @@ Alias: isDetectedBy
 ### Schema Source
 
 
-* from schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 
 
@@ -79,7 +79,7 @@ Alias: isDetectedBy
 name: isDetectedBy
 description: A relationship where a risk, risk source, consequence, or impact is detected
   by a risk control.
-from_schema: https://ibm.github.io/risk-atlas-nexus/ontology/ai-risk-ontology
+from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
 alias: isDetectedBy
