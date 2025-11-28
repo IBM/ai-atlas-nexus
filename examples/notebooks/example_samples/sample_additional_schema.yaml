@@ -1,4 +1,4 @@
-id: https://ibm.github.io/risk-atlas-nexus/ontology/sample_additional_schema
+id: https://ibm.github.io/ai-atlas-nexus/ontology/sample_additional_schema
 name: sample_additional_schema
 description:
   A sample_additional_schema for an example notebook
@@ -9,7 +9,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/risk-atlas-nexus/ontology/
+  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
   dpv: https://w3c.github.io/dpv/2.1/dpv/#
   ai: https://w3c.github.io/dpv/2.1/ai/#
 
