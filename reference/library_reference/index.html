@@ -786,6 +786,8 @@
       
         
       
+        
+      
     
     
     
@@ -1250,6 +1252,84 @@
   
   <span class="md-ellipsis">
     Generate a Crosswalk with AI Atlas Nexus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Extensions
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Extensions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/risk_to_ares_evaluation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Risk to ARES Evaluation
     
   </span>
   
@@ -7645,6 +7725,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ai_atlas_nexus.library.AIAtlasNexus.run_ares_evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;run_ares_evaluation
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8190,6 +8279,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ai_atlas_nexus.library.AIAtlasNexus.run_ares_evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;run_ares_evaluation
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -8715,6 +8813,13 @@
             –
             <div class="doc-md-description">
               <p>Identify potential risks from a usecase description</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            run_ares_evaluation (ai_atlas_nexus.library.AIAtlasNexus.run_ares_evaluation)" href="#ai_atlas_nexus.library.AIAtlasNexus.run_ares_evaluation">run_ares_evaluation</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Submit potential attack risks for ARES red-teaming evaluation.</p>
             </div>
           </li>
     </ul>
@@ -11221,6 +11326,70 @@ If the <code>cot_examples</code> is omitted, the API default to a Zero-Shot appr
         <p>Returns:
     List[List[Risk]]:
         Result containing a list of risks</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="ai_atlas_nexus.library.AIAtlasNexus.run_ares_evaluation" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">run_ares_evaluation</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">run_ares_evaluation</span><span class="p">(</span><span class="n">risks</span><span class="p">:</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="            Risk (ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk)" href="../ai_ontology_reference/#ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk">Risk</a></span><span class="p">],</span> <span class="n">inference_engine</span><span class="p">:</span> <span class="n"><span title="ai_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Submit potential attack risks for ARES red-teaming evaluation.
+This API needs the <code>ran-ares-integration</code> extension. Please install this extension via
+<code>ran-extension install ran-ares-integration</code>. Refer <code>Readme</code> file for further information
+on <code>ai-atlas-nexus</code> extensions.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>risks</code></b>
+              (<code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="            Risk (ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk)" href="../ai_ontology_reference/#ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk">Risk</a>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>A List of attack risks</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>inference_engine</code></b>
+              (<code><span title="ai_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>An instance of the LLM inference engine</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>target</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="pathlib.Path">Path</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>A target AI model to perform the ARES red-teaming evaluation</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code>None</code>
+          –
+          <div class="doc-md-description">
+            <p>None</p>
+          </div>
+        </li>
+    </ul>
 
 
     </div>
