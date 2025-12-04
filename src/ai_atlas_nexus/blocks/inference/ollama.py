@@ -81,9 +81,9 @@ class OllamaInferenceEngine(InferenceEngine):
                 model=self.model_name_or_path,
                 prompt=prompt,
                 format=response_format,
-                logprobs=self.parameters.pop("logprobs", None),
-                top_logprobs=self.parameters.pop("top_logprobs", None),
-                options=self.parameters,  # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
+                logprobs=self.parameters.get("logprobs", None),
+                top_logprobs=self.parameters.get("top_logprobs", None),
+                options={k:v for k,v in self.parameters.items() if (k != "logprobs" or k != "top_logprobs")},  # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
                 think=self.think,
                 **kwargs,
             )
@@ -117,9 +117,9 @@ class OllamaInferenceEngine(InferenceEngine):
                 messages=self._to_openai_format(messages),
                 tools=tools,
                 format=response_format,
-                logprobs=self.parameters.pop("logprobs", None),
-                top_logprobs=self.parameters.pop("top_logprobs", None),
-                options=self.parameters,  # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
+                logprobs=self.parameters.get("logprobs", None),
+                top_logprobs=self.parameters.get("top_logprobs", None),
+                options={k:v for k,v in self.parameters.items() if (k != "logprobs" or k != "top_logprobs")},  # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
                 think=self.think,
                 **kwargs,
             )
