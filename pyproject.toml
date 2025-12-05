@@ -1,6 +1,6 @@
 [project]
 name = "ai-atlas-nexus"
-version = "1.1.0"
+version = "1.1.1"
 authors = [
     { name = "AI Atlas Nexus", email = "ai-atlas-nexus@ibm.com" },
     { name = "Elizabeth Daly", email = "elizabeth.daly@ie.ibm.com" },
