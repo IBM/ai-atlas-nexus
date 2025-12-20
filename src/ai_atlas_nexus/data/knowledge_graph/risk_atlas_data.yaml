@@ -1420,10 +1420,10 @@ risks:
   type: training-data
   descriptor:
   - amplified by generative AI
-  concern: '"There are several ways of collecting data for building a foundation models:
+  concern: There are several ways of collecting data for building a foundation models:
     web scraping, web crawling, crowdsourcing, and curating public datasets. Data
     acquisition restrictions can also impact the availability of the data that is
-    required for training an AI model and can lead to poorly represented data."'
+    required for training an AI model and can lead to poorly represented data.
 - id: atlas-sharing-info-tools-agentic
   name: Sharing IP/PI/confidential information with tools
   description: AI agents with unrestricted access to resources or databases or tools
