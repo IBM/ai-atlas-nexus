@@ -13,6 +13,7 @@ documents:
 taxonomies:
 - id: ibm-risk-atlas
   name: IBM AI Risk Atlas
+  type: RiskTaxonomy
   description: Explore this atlas to understand some of the risks of working with
     generative AI, foundation models, and machine learning models.
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas
@@ -20,54 +21,70 @@ taxonomies:
   dateModified: "2025-10-22"
   hasDocumentation:
   - 10a99803d8afd656
-riskgroups:
+groups:
 - id: ibm-risk-atlas-accuracy
   name: Accuracy
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-computational-inefficiency
   name: Computational inefficiency
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-data-laws
   name: Data laws
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-explainability
   name: Explainability
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-fairness
   name: Fairness
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-governance
   name: Governance
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-intellectual-property
   name: Intellectual property
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-legal-compliance
   name: Legal compliance
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-misuse
   name: Misuse
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-privacy
   name: Privacy
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-robustness
   name: Robustness
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-robustness-model-behavior-manipulation
   name: 'Robustness: model behavior manipulation'
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-robustness-prompt-attacks
   name: 'Robustness: prompt attacks'
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-societal-impact
   name: Societal impact
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-transparency
   name: Transparency
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 - id: ibm-risk-atlas-value-alignment
   name: Value alignment
+  type: RiskGroup
   isDefinedByTaxonomy: ibm-risk-atlas
 risks:
 - id: atlas-evasion-attack
@@ -80,7 +97,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-model-behavior-manipulation
   tag: evasion-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - amplified by generative AI
   concern: Evasion attacks alter model behavior, usually to benefit the attacker.
@@ -94,7 +111,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-on-the-environment
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   concern: Training and operating large AI models, building data centers, and manufacturing
@@ -112,7 +129,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: incorrect-risk-testing
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   concern: If the metrics do not measure the risk as intended, then the understanding
@@ -132,7 +149,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: over-or-under-reliance
-  type: output
+  risk_type: output
   descriptor:
   - amplified by generative AI
   concern: In tasks where humans make choices based on AI-based suggestions, over/under
@@ -151,7 +168,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: membership-inference-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - amplified by generative AI
   concern: Identifying whether a data sample was used for training data can reveal
@@ -168,7 +185,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   tag: confidential-data-in-prompt
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: If not properly developed to secure confidential data, the model might
@@ -184,7 +201,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: prompt-leaking
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: 'A successful prompt leaking attack copies the system prompt used in the
@@ -204,7 +221,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: data-privacy-rights
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -222,7 +239,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   tag: discriminatory-actions-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: Discriminatory actions can cause harm to people. Discriminatory actions
@@ -238,7 +255,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   tag: ip-information-in-prompt
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Inclusion of such data might result in it being disclosed in the model
@@ -258,7 +275,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-legal-compliance
   tag: legal-accountability
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -281,7 +298,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   tag: hallucination
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   - amplified by synthetic data
@@ -302,7 +319,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: social-hacking-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Social hacking attacks can be used to alter model behavior and benefit
@@ -318,7 +335,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: harmful-output
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: A model generating harmful output can cause immediate physical harm or
@@ -334,7 +351,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: indirect-instructions-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Indirect instructions attacks can be used to alter model behavior and benefit
@@ -349,7 +366,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: mitigation-maintenance-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: AI agents may interact with other systems, tools, or other agents. Tracing
@@ -366,7 +383,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: ai-agent-compliance-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: AI agents may interact with other systems, tools, or other agents. AI agents
@@ -386,7 +403,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   tag: function-calling-hallucination-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - specific to agentic AI
   concern: Hallucinations when generating function calls might result in wrong or
@@ -403,7 +420,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   tag: confidential-information-in-data
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   concern: If confidential data is not properly protected, there could be an unwanted
@@ -420,7 +437,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: lack-of-model-transparency
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - traditional risk of AI
   concern: Transparency is important for legal compliance, AI ethics, and guiding
@@ -442,7 +459,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   tag: exploit-trust-mismatch-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: This could lead to mismatched (expected vs. realized) trust boundaries
@@ -461,7 +478,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-accuracy
   tag: unrepresentative-data
-  type: training-data
+  risk_type: training-data
   descriptor:
   - traditional risk of AI
   - amplified by synthetic data
@@ -477,7 +494,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-human-agency-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: 'AI agents might shift the decision, thinking, and control from humans
@@ -494,7 +511,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: personal-information-in-prompt
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: If personal information or sensitive personal information is included in
@@ -511,7 +528,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-on-human-agency
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   concern: AI can generate false or misleading information that looks real.  It may
@@ -532,7 +549,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: sharing-info-user-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: AI agents may share privileged information to users. The act of sharing
@@ -549,7 +566,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: lack-of-testing-diversity
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   concern: Without diversity and the relevant experience, an organization might not
@@ -565,7 +582,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   tag: nonconsensual-use
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   - amplified by synthetic data
@@ -585,7 +602,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   tag: decision-bias
-  type: output
+  risk_type: output
   descriptor:
   - traditional risk of AI
   concern: Bias can harm persons affected by the decisions of the model.
@@ -601,7 +618,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: exposing-personal-information
-  type: output
+  risk_type: output
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -617,7 +634,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-jobs-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: 'As trust in agentic systems increases, business may be more motivated
@@ -634,7 +651,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: data-curation
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -659,7 +676,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: over-or-under-reliance-on-ai-agents-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: Over/under reliance can lead to poor decision making by humans because
@@ -677,7 +694,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   tag: external-resources-attack-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - specific to agentic AI
   concern: Compromised external resources could impact the AI agent’s performance
@@ -696,7 +713,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   tag: revealing-confidential-information
-  type: output
+  risk_type: output
   descriptor:
   - amplified by generative AI
   concern: If not properly developed to secure confidential data, the model might
@@ -712,7 +729,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   tag: spreading-disinformation
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: Spreading disinformation might affect human’s ability to make informed
@@ -729,7 +746,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-transparency
   tag: data-provenance
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -748,7 +765,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: unrepresentative-risk-testing
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   concern: If the model is evaluated in a use, context, or setting that is not the
@@ -765,7 +782,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   tag: data-bias
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -782,7 +799,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   tag: data-usage-rights
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   concern: Laws and regulations concerning the use of data to train AI are unsettled
@@ -805,7 +822,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   tag: unauthorized-use-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: Attackers accessing the agent can alter AI agent’s behavior and make it
@@ -825,7 +842,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-computational-inefficiency
   tag: redundant-actions-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - specific to agentic AI
   concern: Executing actions that are not needed for the goal might result in wasting
@@ -845,7 +862,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-environment-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: The operation of AI agents could contribute to carbon emissions. If not
@@ -867,7 +884,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: misaligned-actions-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: 'Misaligned actions can adversely impact or harm people. '
@@ -882,7 +899,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-accuracy
   tag: data-contamination
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   concern: Data that differs from the intended training data might skew model accuracy
@@ -897,7 +914,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: harmful-code-generation
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: The execution of harmful code might open vulnerabilities in IT systems.
@@ -912,7 +929,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: incomplete-usage-definition
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - specific to generative AI
   concern: It might be difficult to accurately determine and mitigate the relevant
@@ -929,7 +946,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: lack-of-data-transparency
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -953,7 +970,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-intellectual-property
   tag: copyright-infringement
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   - amplified by synthetic data
@@ -972,7 +989,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: context-overload-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Context overload attacks can be used to alter model behavior and benefit
@@ -989,7 +1006,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-on-affected-communities
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - traditional risk of AI
   concern: Failing to engage with communities that are affected by a model’s outcomes
@@ -1004,7 +1021,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: improper-retraining
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   concern: Repurposing generated output for retraining a model without implementing
@@ -1021,7 +1038,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   tag: spreading-toxicity
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: Toxic content might negatively affect the well-being of its recipients.
@@ -1037,7 +1054,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   tag: introduce-data-bias-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: AI agents can introduce or magnify existing discriminatory behaviors. It
@@ -1053,7 +1070,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: accountability-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: 'Without properly documenting decisions and assigning responsibility, determining
@@ -1068,7 +1085,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: incomplete-ai-agent-evaluation-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: Insufficient evaluation of an agent’s performance or accuracy can lead
@@ -1084,7 +1101,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   tag: inaccessible-training-data
-  type: output
+  risk_type: output
   descriptor:
   - amplified by generative AI
   concern: Low quality explanations without source data make it difficult for users,
@@ -1099,7 +1116,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: bypassing-learning
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - specific to generative AI
   concern: AI models are quick to find solutions or solve complex problems. These
@@ -1117,7 +1134,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   tag: untraceable-attribution
-  type: output
+  risk_type: output
   descriptor:
   - amplified by generative AI
   concern: Without the ability to access training data content, the possibility of
@@ -1133,7 +1150,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   tag: non-disclosure
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: Users must be notified when they are interacting with an AI system. Not
@@ -1150,7 +1167,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-transparency
   tag: data-transparency
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -1170,7 +1187,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-legal-compliance
   tag: model-usage-rights
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - traditional risk of AI
   concern: Laws and regulations that concern the use of AI are in place and vary from
@@ -1187,7 +1204,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: reproducibility-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - specific to agentic AI
   concern: Because AI agents behavior may rely on Application Programming Interfaces
@@ -1205,7 +1222,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: specialized-tokens-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Specialized tokens attacks can be used to alter model behavior and benefit
@@ -1221,7 +1238,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: incomplete-advice
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: A person might act on incomplete advice or worry about a situation that
@@ -1240,7 +1257,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: prompt-injection
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: 'Injection attacks can be used to alter model behavior and benefit the
@@ -1255,7 +1272,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: lack-of-system-transparency
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - traditional risk of AI
   concern: A lack of documentation makes it difficult to understand how the model’s
@@ -1270,7 +1287,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
   tag: data-usage
-  type: training-data
+  risk_type: training-data
   descriptor:
   - traditional risk of AI
   concern: Data usage restrictions can impact the availability of the data required
@@ -1285,7 +1302,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-on-cultural-diversity
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - specific to generative AI
   - amplified by synthetic data
@@ -1305,7 +1322,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: plagiarism
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - specific to generative AI
   concern: AI models can be used to claim the authorship or originality of works that
@@ -1322,7 +1339,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: personal-information-in-data
-  type: training-data
+  risk_type: training-data
   descriptor:
   - traditional risk of AI
   concern: If not properly developed to protect sensitive data, the model might expose
@@ -1339,7 +1356,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: direct-instructions-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Direct instructions attacks can be used to alter model behavior and benefit
@@ -1354,7 +1371,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   tag: improper-usage
-  type: output
+  risk_type: output
   descriptor:
   - amplified by generative AI
   concern: Reusing a model without understanding its original data, design intent,
@@ -1369,7 +1386,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-on-jobs
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   concern: Job loss might lead to a loss of income and thus might negatively impact
@@ -1386,7 +1403,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-model-behavior-manipulation
   tag: extraction-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - amplified by generative AI
   concern: 'With a successful extraction attack, the attacker can perform further
@@ -1402,7 +1419,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-model-behavior-manipulation
   tag: jailbreaking
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Jailbreaking attacks can be used to alter model behavior and benefit the
@@ -1417,7 +1434,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
   tag: data-acquisition
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by generative AI
   concern: There are several ways of collecting data for building a foundation models:
@@ -1435,7 +1452,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: sharing-info-tools-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - specific to agentic AI
   concern: AI agents may share privileged information with other tools/agents. The
@@ -1455,7 +1472,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: prompt-priming
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: 'The attack can be used to alter model behavior and benefit the attacker.'
@@ -1470,7 +1487,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: reidentification
-  type: training-data
+  risk_type: training-data
   descriptor:
   - traditional risk of AI
   - amplified by synthetic data
@@ -1489,7 +1506,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-privacy
   tag: attribute-inference-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - amplified by generative AI
   concern: With a successful attack, the attacker can gain valuable information such
@@ -1505,7 +1522,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-accuracy
   tag: poor-model-accuracy
-  type: inference
+  risk_type: inference
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
@@ -1522,7 +1539,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-data-laws
   tag: data-transfer
-  type: training-data
+  risk_type: training-data
   descriptor:
   - traditional risk of AI
   concern: Data transfer restrictions can also impact the availability of the data
@@ -1537,7 +1554,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-legal-compliance
   tag: generated-content-ownership
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - specific to generative AI
   concern: Laws and regulations that relate to the ownership of AI-generated content
@@ -1555,7 +1572,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: lack-of-ai-agent-transparency-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: 'Transparency is important for AI ethics and guiding appropriate use of
@@ -1576,7 +1593,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
   tag: encoded-interactions-attack
-  type: inference
+  risk_type: inference
   descriptor:
   - specific to generative AI
   concern: Encoded interactions attacks can be used to alter model behavior and benefit
@@ -1591,7 +1608,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: impact-human-dignity-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: Human workers perceiving AI agents as being better at doing the humans’
@@ -1607,7 +1624,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-fairness
   tag: output-bias
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: Bias can harm users of the AI models and magnify existing discriminatory
@@ -1622,7 +1639,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-misuse
   tag: dangerous-use
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: Large language models are often trained on vast amounts of publicly-available
@@ -1638,7 +1655,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   tag: unexplainable-output
-  type: output
+  risk_type: output
   descriptor:
   - amplified by generative AI
   concern: Foundation models are based on complex deep learning architectures, making
@@ -1657,7 +1674,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: human-exploitation
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by generative AI
   concern: 'Foundation models still depend on human labor to source, manage, and program
@@ -1673,7 +1690,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-value-alignment
   tag: toxic-output
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   concern: Hateful, abusive, and profane (HAP) or obscene content can adversely impact
@@ -1688,7 +1705,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   tag: unexplainable-untraceable-actions-agentic
-  type: agentic
+  risk_type: agentic
   descriptor:
   - amplified by agentic AI
   concern: 'Without clear explanations, lineage trace information, and source attributions
@@ -1705,7 +1722,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-robustness
   tag: data-poisoning
-  type: training-data
+  risk_type: training-data
   descriptor:
   - traditional risk of AI
   - amplified by synthetic data
@@ -1725,7 +1742,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-explainability
   tag: unreliable-source-attribution
-  type: output
+  risk_type: output
   descriptor:
   - specific to generative AI
   - amplified by synthetic data
@@ -1748,7 +1765,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: temporal-gap
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - amplified by synthetic data
   concern: Temporal gaps in synthetic data can render it outdated or obsolete as real-world
@@ -1771,7 +1788,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-governance
   tag: lack-domain-expertise
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - specific to synthetic data
   concern: Lack of domain expertise can lead to AI models that are not well-suited
@@ -1790,7 +1807,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-societal-impact
   tag: exclusion
-  type: non-technical
+  risk_type: non-technical
   descriptor:
   - specific to synthetic data
   concern: Exclusion can lead to unfair model outcomes, erosion of trust, and potential
@@ -1813,7 +1830,7 @@ risks:
   isDefinedByTaxonomy: ibm-risk-atlas
   isPartOf: ibm-risk-atlas-accuracy
   tag: overfitting
-  type: training-data
+  risk_type: training-data
   descriptor:
   - amplified by synthetic data
   concern: 'Overfitting to synthetic data can undermine the broad applicability and

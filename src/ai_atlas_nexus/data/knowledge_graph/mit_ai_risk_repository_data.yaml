@@ -30,6 +30,7 @@ documents:
 taxonomies:
 - id: mit-ai-risk-repository
   name: 'The AI Risk Repository: Domain Taxonomy of AI Risks'
+  type: RiskTaxonomy
   description: 'The Domain Taxonomy of AI Risks adapted from Weidinger (2021) classifies risks into 7 AI risk domains: (1) Discrimination & Toxicity, (2) Privacy & Security, (3) Misinformation, (4) Malicious Actors & Misuse, (5) Human-Computer Interaction, (6) Socioeconomic & Environmental, and (7) AI System Safety, Failures, & Limitations.'
   url: https://airisk.mit.edu/
   dateCreated: 2024-08-16
@@ -38,6 +39,7 @@ taxonomies:
   - arxiv.org/2408.12622
 - id: mit-ai-risk-repository-causal
   name: 'The AI Risk Repository: Casual Taxonomy of AI Risks'
+  type: RiskTaxonomy
   description: The Causal Taxonomy of AI Risks, adapted from Yampolskiy (2016), classifies risks by its causal factors (1) entity (human, AI), (2) intentionality (intentional, unintentional), and (3) timing (pre-deployment, post-deployment).
   url: https://airisk.mit.edu/
   dateCreated: 2024-08-16

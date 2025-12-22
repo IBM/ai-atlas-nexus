@@ -18,6 +18,7 @@ documents:
 taxonomies:
 - id: ai-risk-taxonomy
   name: The AI Risk Taxonomy (AIR 2024)
+  type: RiskTaxonomy
   description: 'An AI risk taxonomy derived from eight government policies from the
     European Union, United States, and China and 16 company policies worldwide. It
     identifies 314 unique risk categories organized into a four-tiered taxonomy. This
@@ -34,37 +35,37 @@ riskgroups:
 - id: ai-risk-taxonomy-child-harm
   name: Child Harm
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-child-sexual-abuse
   - ai-risk-taxonomy-endangerment,-harm,-or-abuse-of-children
 - id: ai-risk-taxonomy-criminal-activities
   name: Criminal Activities
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-services/exploitation
   - ai-risk-taxonomy-other-illegal/unlawful/criminal-activities
   - ai-risk-taxonomy-illegal/regulated-substances/goods
 - id: ai-risk-taxonomy-deception
   name: Deception
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-fraud
   - ai-risk-taxonomy-academic-dishonesty
   - ai-risk-taxonomy-mis/disinformation
 - id: ai-risk-taxonomy-defamation
   name: Defamation
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-types-of-defamation
 - id: ai-risk-taxonomy-discrimination/bias
   name: Discrimination/Bias
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-discrimination/protected-characteristics-combinations
 - id: ai-risk-taxonomy-economic-harm
   name: Economic Harm
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-schemes
   - ai-risk-taxonomy-unfair-market-practices
   - ai-risk-taxonomy-disempowering-workers
@@ -72,12 +73,12 @@ riskgroups:
 - id: ai-risk-taxonomy-fundamental-rights
   name: Fundamental Rights
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-specific-types-of-rights
 - id: ai-risk-taxonomy-hate/toxicity
   name: Hate/Toxicity
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-harassment
   - ai-risk-taxonomy-hate-speech-(inciting/promoting/expressing-hatred)
   - ai-risk-taxonomy-perpetuating-harmful-beliefs
@@ -85,20 +86,20 @@ riskgroups:
 - id: ai-risk-taxonomy-manipulation
   name: Manipulation
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-sowing-division
   - ai-risk-taxonomy-misrepresentation
 - id: ai-risk-taxonomy-operational-misuses
   name: Operational Misuses
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-advice-in-heavily-regulated-industries
   - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
   - ai-risk-taxonomy-automated-decision-making
 - id: ai-risk-taxonomy-political-usage
   name: Political Usage
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-disrupting-social-order-(china-unique)
   - ai-risk-taxonomy-influencing-politics
   - ai-risk-taxonomy-deterring-democratic-participation
@@ -106,24 +107,24 @@ riskgroups:
 - id: ai-risk-taxonomy-privacy
   name: Privacy
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-privacy-violations/sensitive-data-combinations
 - id: ai-risk-taxonomy-security-risks
   name: Security Risks
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-confidentiality
   - ai-risk-taxonomy-availability
   - ai-risk-taxonomy-integrity
 - id: ai-risk-taxonomy-self-harm
   name: Self-harm
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-suicidal-and-non-suicidal-self-injury
 - id: ai-risk-taxonomy-sexual-content
   name: Sexual Content
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-adult-content
   - ai-risk-taxonomy-erotic
   - ai-risk-taxonomy-non-consensual-nudity
@@ -131,7 +132,7 @@ riskgroups:
 - id: ai-risk-taxonomy-violence-&-extremism
   name: Violence & Extremism
   isDefinedByTaxonomy: ai-risk-taxonomy
-  narrowMatch:
+  narrow_mappings:
   - ai-risk-taxonomy-depicting-violence
   - ai-risk-taxonomy-military-and-warfare
   - ai-risk-taxonomy-celebrating-suffering
@@ -141,217 +142,217 @@ riskgroups:
 - id: ai-risk-taxonomy-academic-dishonesty
   name: Academic dishonesty
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-deception
 - id: ai-risk-taxonomy-adult-content
   name: Adult content
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-sexual-content
 - id: ai-risk-taxonomy-advice-in-heavily-regulated-industries
   name: Advice in Heavily Regulated Industries
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-operational-misuses
 - id: ai-risk-taxonomy-automated-decision-making
   name: Automated Decision-Making
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-operational-misuses
 - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
   name: Autonomous Unsafe Operation of Systems
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-operational-misuses
 - id: ai-risk-taxonomy-availability
   name: Availability
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-security-risks
 - id: ai-risk-taxonomy-celebrating-suffering
   name: Celebrating Suffering
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-violence-&-extremism
 - id: ai-risk-taxonomy-child-sexual-abuse
   name: Child Sexual Abuse
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-child-harm
 - id: ai-risk-taxonomy-confidentiality
   name: Confidentiality
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-security-risks
 - id: ai-risk-taxonomy-depicting-violence
   name: Depicting Violence
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-violence-&-extremism
 - id: ai-risk-taxonomy-deterring-democratic-participation
   name: Deterring Democratic Participation
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-political-usage
 - id: ai-risk-taxonomy-discrimination/protected-characteristics-combinations
   name: Discrimination/Protected Characteristics Combinations
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-discrimination/bias
 - id: ai-risk-taxonomy-disempowering-workers
   name: Disempowering Workers
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-economic-harm
 - id: ai-risk-taxonomy-disrupting-social-order-(china-unique)
   name: Disrupting Social Order (China-unique)
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-political-usage
 - id: ai-risk-taxonomy-endangerment,-harm,-or-abuse-of-children
   name: Endangerment, Harm, or Abuse of Children
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-child-harm
 - id: ai-risk-taxonomy-erotic
   name: Erotic
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-sexual-content
 - id: ai-risk-taxonomy-fraud
   name: Fraud
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-deception
 - id: ai-risk-taxonomy-harassment
   name: Harassment
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-hate/toxicity
 - id: ai-risk-taxonomy-hate-speech-(inciting/promoting/expressing-hatred)
   name: Hate Speech (Inciting/Promoting/Expressing hatred)
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-hate/toxicity
 - id: ai-risk-taxonomy-high-risk-financial-activities
   name: High-Risk Financial Activities
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-economic-harm
 - id: ai-risk-taxonomy-illegal/regulated-substances/goods
   name: Illegal/Regulated substances/goods
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-criminal-activities
 - id: ai-risk-taxonomy-influencing-politics
   name: Influencing Politics
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-political-usage
 - id: ai-risk-taxonomy-integrity
   name: Integrity
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-security-risks
 - id: ai-risk-taxonomy-military-and-warfare
   name: Military and Warfare
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-violence-&-extremism
 - id: ai-risk-taxonomy-mis/disinformation
   name: Mis/disinformation
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-deception
 - id: ai-risk-taxonomy-misrepresentation
   name: Misrepresentation
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-manipulation
 - id: ai-risk-taxonomy-monetized
   name: Monetized
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-sexual-content
 - id: ai-risk-taxonomy-non-consensual-nudity
   name: Non-Consensual Nudity
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-sexual-content
 - id: ai-risk-taxonomy-offensive-language
   name: Offensive Language
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-hate/toxicity
 - id: ai-risk-taxonomy-other-illegal/unlawful/criminal-activities
   name: Other Illegal/Unlawful/Criminal Activities
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-criminal-activities
 - id: ai-risk-taxonomy-perpetuating-harmful-beliefs
   name: Perpetuating Harmful Beliefs
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-hate/toxicity
 - id: ai-risk-taxonomy-political-persuasion
   name: Political Persuasion
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-political-usage
 - id: ai-risk-taxonomy-privacy-violations/sensitive-data-combinations
   name: Privacy Violations/Sensitive Data Combinations
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-privacy
 - id: ai-risk-taxonomy-schemes
   name: Schemes
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-economic-harm
 - id: ai-risk-taxonomy-sowing-division
   name: Sowing Division
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-manipulation
 - id: ai-risk-taxonomy-specific-types-of-rights
   name: Specific Types of Rights
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-fundamental-rights
 - id: ai-risk-taxonomy-suicidal-and-non-suicidal-self-injury
   name: Suicidal and non-suicidal self Injury
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-self-harm
 - id: ai-risk-taxonomy-supporting-malicious-organized-groups
   name: Supporting Malicious Organized Groups
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-violence-&-extremism
 - id: ai-risk-taxonomy-types-of-defamation
   name: Types of Defamation
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-defamation
 - id: ai-risk-taxonomy-unfair-market-practices
   name: Unfair Market Practices
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-economic-harm
 - id: ai-risk-taxonomy-violent-acts
   name: Violent acts
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-violence-&-extremism
 - id: ai-risk-taxonomy-weapon-usage-&-development
   name: Weapon Usage & Development
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-violence-&-extremism
 - id: ai-risk-taxonomy-services/exploitation
   name: services/exploitation
   isDefinedByTaxonomy: ai-risk-taxonomy
-  broadMatch:
+  broad_mappings:
   - ai-risk-taxonomy-criminal-activities
 risks:
 - id: ai-risk-taxonomy-network-intrusion

@@ -55,7 +55,8 @@ dependencies = [
     "jsonschema",
     "isort",
     "pre-commit",
-    "typer"
+    "typer",
+    "inflect"
 ]
 
 

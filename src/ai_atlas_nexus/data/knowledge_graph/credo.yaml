@@ -31,6 +31,7 @@ documents:
 taxonomies:
 - id: credo-ucf
   name: Credo Unified Control Framework
+  type: RiskTaxonomy
   description: A comprehensive risk taxonomy synthesizing organizational and societal
     risks
   url: https://arxiv.org/abs/2503.05937v1

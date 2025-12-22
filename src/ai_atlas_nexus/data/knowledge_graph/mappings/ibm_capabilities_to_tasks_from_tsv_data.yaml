@@ -1,0 +1,819 @@
+aitasks:
+- id: code-editing
+  requiresCapability:
+  - ibm-cap-code-generation
+  type: AiTask
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-code-generation
+  type: AiTask
+- id: code-editing
+  requiresCapability:
+  - ibm-cap-code-understanding
+  type: AiTask
+- id: code-explanation
+  requiresCapability:
+  - ibm-cap-code-understanding
+  type: AiTask
+- id: text-generation
+  requiresCapability:
+  - ibm-cap-common-sense-reasoning
+  type: AiTask
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: fill-mask
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: sentence-similarity
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: summarization
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: text-classification
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: text-generation
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: token-classification
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: translation
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: zero-shot-classification
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: tabular-classification
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: token-classification
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-factual-accuracy
+  type: AiTask
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-factual-accuracy
+  type: AiTask
+- id: table-question-answering
+  requiresCapability:
+  - ibm-cap-factual-accuracy
+  type: AiTask
+- id: code-editing
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: table-question-answering
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: tabular-classification
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: zero-shot-classification
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-mathematical-reasoning
+  type: AiTask
+- id: code-explanation
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: fill-mask
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: sentence-similarity
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: summarization
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: table-question-answering
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: tabular-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: text-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: token-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: translation
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: zero-shot-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: code-explanation
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: fill-mask
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: summarization
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: text-generation
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: translation
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+adapters:
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-causal-reasoning
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-factual-accuracy
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-logical-reasoning
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-logical-reasoning
+- id: ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-logical-reasoning
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-text-generation
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-text-generation
+entries:
+- id: ibm-cap-causal-reasoning
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-causal-reasoning
+- id: ibm-cap-code-generation
+  requiredByTask:
+  - code-editing
+  type: Capability
+- id: code-editing
+  requiresCapability:
+  - ibm-cap-code-generation
+  type: AiTask
+- id: ibm-cap-code-generation
+  requiredByTask:
+  - code-generation
+  type: Capability
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-code-generation
+  type: AiTask
+- id: ibm-cap-code-understanding
+  requiredByTask:
+  - code-editing
+  type: Capability
+- id: code-editing
+  requiresCapability:
+  - ibm-cap-code-understanding
+  type: AiTask
+- id: ibm-cap-code-understanding
+  requiredByTask:
+  - code-explanation
+  type: Capability
+- id: code-explanation
+  requiresCapability:
+  - ibm-cap-code-understanding
+  type: AiTask
+- id: ibm-cap-common-sense-reasoning
+  requiredByTask:
+  - text-generation
+  type: Capability
+- id: text-generation
+  requiresCapability:
+  - ibm-cap-common-sense-reasoning
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-cap-contextual-understanding
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-cap-contextual-understanding
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-cap-contextual-understanding
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-cap-contextual-understanding
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-contextual-understanding
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - document-question-answering
+  type: Capability
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - fill-mask
+  type: Capability
+- id: fill-mask
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - question-answering
+  type: Capability
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - sentence-similarity
+  type: Capability
+- id: sentence-similarity
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - summarization
+  type: Capability
+- id: summarization
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - text-classification
+  type: Capability
+- id: text-classification
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - text-generation
+  type: Capability
+- id: text-generation
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - token-classification
+  type: Capability
+- id: token-classification
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - translation
+  type: Capability
+- id: translation
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-contextual-understanding
+  requiredByTask:
+  - zero-shot-classification
+  type: Capability
+- id: zero-shot-classification
+  requiresCapability:
+  - ibm-cap-contextual-understanding
+  type: AiTask
+- id: ibm-cap-domain-knowledge
+  requiredByTask:
+  - code-generation
+  type: Capability
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: ibm-cap-domain-knowledge
+  requiredByTask:
+  - document-question-answering
+  type: Capability
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: ibm-cap-domain-knowledge
+  requiredByTask:
+  - question-answering
+  type: Capability
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: ibm-cap-domain-knowledge
+  requiredByTask:
+  - tabular-classification
+  type: Capability
+- id: tabular-classification
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: ibm-cap-domain-knowledge
+  requiredByTask:
+  - tabular-regression
+  type: Capability
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: ibm-cap-domain-knowledge
+  requiredByTask:
+  - token-classification
+  type: Capability
+- id: token-classification
+  requiresCapability:
+  - ibm-cap-domain-knowledge
+  type: AiTask
+- id: ibm-cap-factual-accuracy
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-factual-accuracy
+- id: ibm-cap-factual-accuracy
+  requiredByTask:
+  - document-question-answering
+  type: Capability
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-factual-accuracy
+  type: AiTask
+- id: ibm-cap-factual-accuracy
+  requiredByTask:
+  - question-answering
+  type: Capability
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-factual-accuracy
+  type: AiTask
+- id: ibm-cap-factual-accuracy
+  requiredByTask:
+  - table-question-answering
+  type: Capability
+- id: table-question-answering
+  requiresCapability:
+  - ibm-cap-factual-accuracy
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-logical-reasoning
+- id: ibm-cap-logical-reasoning
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-logical-reasoning
+- id: ibm-cap-logical-reasoning
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-logical-reasoning
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - code-editing
+  type: Capability
+- id: code-editing
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - code-generation
+  type: Capability
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - document-question-answering
+  type: Capability
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - question-answering
+  type: Capability
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - table-question-answering
+  type: Capability
+- id: table-question-answering
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - tabular-classification
+  type: Capability
+- id: tabular-classification
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - tabular-regression
+  type: Capability
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-logical-reasoning
+  requiredByTask:
+  - zero-shot-classification
+  type: Capability
+- id: zero-shot-classification
+  requiresCapability:
+  - ibm-cap-logical-reasoning
+  type: AiTask
+- id: ibm-cap-mathematical-reasoning
+  requiredByTask:
+  - tabular-regression
+  type: Capability
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-mathematical-reasoning
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-cap-reading-comprehension
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-cap-reading-comprehension
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-cap-reading-comprehension
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-reading-comprehension
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - code-explanation
+  type: Capability
+- id: code-explanation
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - code-generation
+  type: Capability
+- id: code-generation
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - document-question-answering
+  type: Capability
+- id: document-question-answering
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - fill-mask
+  type: Capability
+- id: fill-mask
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - question-answering
+  type: Capability
+- id: question-answering
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - sentence-similarity
+  type: Capability
+- id: sentence-similarity
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - summarization
+  type: Capability
+- id: summarization
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - table-question-answering
+  type: Capability
+- id: table-question-answering
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - tabular-classification
+  type: Capability
+- id: tabular-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - tabular-regression
+  type: Capability
+- id: tabular-regression
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - text-classification
+  type: Capability
+- id: text-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - token-classification
+  type: Capability
+- id: token-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - translation
+  type: Capability
+- id: translation
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-reading-comprehension
+  requiredByTask:
+  - zero-shot-classification
+  type: Capability
+- id: zero-shot-classification
+  requiresCapability:
+  - ibm-cap-reading-comprehension
+  type: AiTask
+- id: ibm-cap-text-generation
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-text-generation
+- id: ibm-cap-text-generation
+  implementedByAdapter:
+  - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Capability
+- id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
+  type: Adapter
+  implementsCapability:
+  - ibm-cap-text-generation
+- id: ibm-cap-text-generation
+  requiredByTask:
+  - code-explanation
+  type: Capability
+- id: code-explanation
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: ibm-cap-text-generation
+  requiredByTask:
+  - fill-mask
+  type: Capability
+- id: fill-mask
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: ibm-cap-text-generation
+  requiredByTask:
+  - summarization
+  type: Capability
+- id: summarization
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: ibm-cap-text-generation
+  requiredByTask:
+  - text-generation
+  type: Capability
+- id: text-generation
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask
+- id: ibm-cap-text-generation
+  requiredByTask:
+  - translation
+  type: Capability
+- id: translation
+  requiresCapability:
+  - ibm-cap-text-generation
+  type: AiTask

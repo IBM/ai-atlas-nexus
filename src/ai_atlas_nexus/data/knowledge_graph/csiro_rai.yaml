@@ -21,6 +21,7 @@ documents:
 taxonomies:
 - id: csiro-responsible-ai-patterns
   name: CSIRO Responsible AI Pattern Catalogue
+  type: RiskTaxonomy
   description: >-
     A pattern-oriented approach is taken to build up the Responsible AI Pattern Catalogue, for operationalizing
     responsible AI from a system perspective.

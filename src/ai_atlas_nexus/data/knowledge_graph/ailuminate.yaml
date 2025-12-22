@@ -24,6 +24,7 @@ documents:
 taxonomies:
 - id: ailuminate-v1.0
   name: AILuminate
+  type: RiskTaxonomy
   description: >-
     AI-safety benchmark developed by the MLCommons Risk and Reliability Working Group through an open process based on
     a collaboration of participants from a variety of interested fields. AILuminate is a benchmark suite that analyzes

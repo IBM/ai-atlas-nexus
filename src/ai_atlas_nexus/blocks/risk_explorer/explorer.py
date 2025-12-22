@@ -101,16 +101,16 @@ class RiskExplorer(ExplorerBase):
                 Result containing a list of AI risk IDs
         """
         related_risks = []
-        if initial_risk.broadMatch is not None:
-            related_risks.append(initial_risk.broadMatch)
-        if initial_risk.closeMatch is not None:
-            related_risks.append(initial_risk.closeMatch)
-        if initial_risk.exactMatch is not None:
-            related_risks.append(initial_risk.exactMatch)
-        if initial_risk.narrowMatch is not None:
-            related_risks.append(initial_risk.narrowMatch)
-        if initial_risk.relatedMatch is not None:
-            related_risks.append(initial_risk.relatedMatch)
+        if initial_risk.broad_mappings is not None:
+            related_risks.append(initial_risk.broad_mappings)
+        if initial_risk.close_mappings is not None:
+            related_risks.append(initial_risk.close_mappings)
+        if initial_risk.exact_mappings is not None:
+            related_risks.append(initial_risk.exact_mappings)
+        if initial_risk.narrow_mappings is not None:
+            related_risks.append(initial_risk.narrow_mappings)
+        if initial_risk.related_mappings is not None:
+            related_risks.append(initial_risk.related_mappings)
 
         related_risk_ids = [j for i in related_risks for j in i]
         related_risks = list(
@@ -267,8 +267,8 @@ class RiskExplorer(ExplorerBase):
         """Get all taxonomy definitions from the LinkML
 
         Returns:
-            list[RiskTaxonomy]
-                Result containing a list of risk taxonomies
+            list[Taxonomy]
+                Result containing a list of taxonomies
         """
         return self._taxonomies
 
@@ -280,8 +280,8 @@ class RiskExplorer(ExplorerBase):
                 The string id for a taxonomy
 
         Returns:
-            RiskTaxonomy
-                Result containing an AI RiskTaxonomy
+            Taxonomy
+                Result containing an AI Taxonomy
         """
         matching_taxonomies = list(
             filter(lambda taxonomy: taxonomy.id == id, self._taxonomies)

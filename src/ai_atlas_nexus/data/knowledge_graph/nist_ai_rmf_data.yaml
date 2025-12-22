@@ -11,6 +11,7 @@ documents:
 taxonomies:
 - id: nist-ai-rmf
   name: NIST AI Risk Management Framework (AI RMF)
+  type: RiskTaxonomy
   description: In collaboration with the private and public sectors, NIST has developed
     a framework to better manage risks to individuals, organizations, and society
     associated with artificial intelligence (AI). The NIST AI Risk Management Framework
