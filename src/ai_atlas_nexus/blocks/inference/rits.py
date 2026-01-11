@@ -3,7 +3,7 @@ from typing import Dict, List, Union
 
 import httpx
 from dotenv import load_dotenv
-from openai import NotFoundError
+from openai import BadRequestError, NotFoundError
 
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
@@ -13,6 +13,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     TextGenerationInferenceOutput,
 )
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
+from ai_atlas_nexus.exceptions import RiskInferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 
@@ -97,13 +98,16 @@ class RITSInferenceEngine(InferenceEngine):
             )
             return self._prepare_chat_output(response)
 
-        return run_parallel(
-            chat_response,
-            messages,
-            f"Inferring with {self._inference_engine_type}",
-            self.concurrency_limit,
-            verbose=verbose,
-        )
+        try:
+            return run_parallel(
+                chat_response,
+                messages,
+                f"Inferring with {self._inference_engine_type}",
+                self.concurrency_limit,
+                verbose=verbose,
+            )
+        except BadRequestError as e:
+            raise RiskInferenceError(e.body["message"])
 
     def _prepare_chat_output(self, response):
         return TextGenerationInferenceOutput(

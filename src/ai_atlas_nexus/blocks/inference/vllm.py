@@ -2,6 +2,7 @@ import os
 from typing import Any, Dict, List, Union
 
 from dotenv import load_dotenv
+from openai import BadRequestError
 
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
@@ -11,6 +12,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     VLLMInferenceEngineParams,
 )
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
+from ai_atlas_nexus.exceptions import RiskInferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 from ai_atlas_nexus.toolkit.logging import configure_logger
@@ -117,13 +119,16 @@ class VLLMInferenceEngine(InferenceEngine):
                 )
                 return self._prepare_chat_output(response, offline=False)
 
-            return run_parallel(
-                chat_response,
-                prompts,
-                f"Inferring with {self._inference_engine_type}",
-                self.concurrency_limit,
-                verbose=verbose,
-            )
+            try:
+                return run_parallel(
+                    chat_response,
+                    prompts,
+                    f"Inferring with {self._inference_engine_type}",
+                    self.concurrency_limit,
+                    verbose=verbose,
+                )
+            except BadRequestError as e:
+                raise RiskInferenceError(e.body["message"])
 
     def _prepare_generate_output(self, response, offline=True):
         return TextGenerationInferenceOutput(
@@ -170,13 +175,16 @@ class VLLMInferenceEngine(InferenceEngine):
                 )
                 return self._prepare_chat_output(response, offline=False)
 
-            return run_parallel(
-                chat_response,
-                messages,
-                f"Inferring with {self._inference_engine_type}",
-                self.concurrency_limit,
-                verbose=verbose,
-            )
+            try:
+                return run_parallel(
+                    chat_response,
+                    messages,
+                    f"Inferring with {self._inference_engine_type}",
+                    self.concurrency_limit,
+                    verbose=verbose,
+                )
+            except BadRequestError as e:
+                raise RiskInferenceError(e.body["message"])
 
     def _prepare_chat_output(self, response, offline=True):
         return TextGenerationInferenceOutput(

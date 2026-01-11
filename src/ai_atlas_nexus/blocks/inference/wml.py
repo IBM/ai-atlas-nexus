@@ -11,6 +11,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     WMLInferenceEngineParams,
 )
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
+from ai_atlas_nexus.exceptions import RiskInferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 from ai_atlas_nexus.toolkit.logging import configure_logger
@@ -109,12 +110,16 @@ class WMLInferenceEngine(InferenceEngine):
         verbose=True,
     ) -> List[TextGenerationInferenceOutput]:
         responses = []
-        for response in self.client.generate(
-            prompt=prompts,
-            params=self.parameters,
-            concurrency_limit=self.concurrency_limit,
-        ):
-            responses.append(self._prepare_generation_output(response))
+
+        try:
+            for response in self.client.generate(
+                prompt=prompts,
+                params=self.parameters,
+                concurrency_limit=self.concurrency_limit,
+            ):
+                responses.append(self._prepare_generation_output(response))
+        except Exception as e:
+            raise RiskInferenceError(str(e))
 
         return responses
 
@@ -149,13 +154,16 @@ class WMLInferenceEngine(InferenceEngine):
             )
             return self._prepare_chat_output(response)
 
-        return run_parallel(
-            chat_response,
-            messages,
-            f"Inferring with {self._inference_engine_type}",
-            self.concurrency_limit,
-            verbose=verbose,
-        )
+        try:
+            return run_parallel(
+                chat_response,
+                messages,
+                f"Inferring with {self._inference_engine_type}",
+                self.concurrency_limit,
+                verbose=verbose,
+            )
+        except Exception as e:
+            raise RiskInferenceError(str(e))
 
     def _prepare_chat_output(self, response) -> List[TextGenerationInferenceOutput]:
         print(response["choices"][0]["message"]["content"])
