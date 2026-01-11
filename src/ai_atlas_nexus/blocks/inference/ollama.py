@@ -95,7 +95,6 @@ class OllamaInferenceEngine(InferenceEngine):
             return self._prepare_prediction_output(response)
 
         try:
-            self.client.show(self.model_name_or_path)
             return run_parallel(
                 generate_text,
                 prompts,
