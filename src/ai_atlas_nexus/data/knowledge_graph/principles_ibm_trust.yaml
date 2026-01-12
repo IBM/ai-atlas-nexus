@@ -2,7 +2,7 @@ documents:
   - id: doc-ibms-principles-for-trust-and-transparency
     name: "IBM's Principles for Trust and Transparency"
     description: >-
-      "For more than a century, IBM has earned the trust of our clients by responsibly managing their most valuable data.
+      For more than a century, IBM has earned the trust of our clients by responsibly managing their most valuable data.
 
       And we have worked to earn the trust of society by ushering powerful new technologies into the world responsibly
       and with clear purpose.
@@ -13,7 +13,7 @@ documents:
 
       We encourage all technology companies to adopt similar principles to protect client data and insights, and to
       ensure the responsible and transparent use of artificial intelligence (AI) and other transformative innovations.
-      We offer our own Trust and Transparency Principles here as a roadmap."
+      We offer our own Trust and Transparency Principles here as a roadmap.
     url: https://www.ibm.com/policy/trust-transparency
     dateCreated: 2024-10-11
 

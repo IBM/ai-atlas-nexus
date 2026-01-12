@@ -2,15 +2,15 @@ documents:
 - id: doc-oecd-ai-principles
   name: "OECD AI Principles"
   description: >-
-    "The OECD AI Principles promote use of AI that is innovative and trustworthy and that respects human rights and
+    The OECD AI Principles promote use of AI that is innovative and trustworthy and that respects human rights and
     democratic values. Adopted in May 2019, they set standards for AI that are practical and flexible enough to stand
-    the test of time."
+    the test of time.
   url: https://oecd.ai/en/ai-principles
   dateCreated: 2019-05-22
 
 principles:
 - id: principle-oecd-inclusive-growth
-  name: Inclusive growth, sustainable development and well-being (Principle 1.1)
+  name: "Inclusive growth, sustainable development and well-being (Principle 1.1)"
   description: >-
     This Principle highlights the potential for trustworthy AI to contribute to overall growth and prosperity for all
     – individuals, society, and planet – and advance global development objectives.
@@ -23,7 +23,7 @@ principles:
   hasDocumentation:
   - doc-oecd-ai-principles
 - id: principle-oecd-human-rights
-  name: Human rights and democratic values, including fairness and privacy (Principle 1.2)
+  name: "Human rights and democratic values, including fairness and privacy (Principle 1.2)"
   description: >-
     AI systems should be designed in a way that respects the rule of law, human rights, democratic values and diversity,
     and should include appropriate safeguards to ensure a fair and just society.
@@ -40,7 +40,7 @@ principles:
   hasDocumentation:
   - doc-oecd-ai-principles
 - id: principle-oecd-transparency
-  name: Transparency and explainability (Principle 1.3)
+  name: "Transparency and explainability (Principle 1.3)"
   description: >-
     This principle is about transparency and responsible disclosure around AI systems to ensure that people understand
     when they are engaging with them and can challenge outcomes.
@@ -56,7 +56,7 @@ principles:
   hasDocumentation:
   - doc-oecd-ai-principles
 - id: principle-oecd-robustness
-  name: Robustness, security and safety (Principle 1.4)
+  name: "Robustness, security and safety (Principle 1.4)"
   description: >-
     AI systems must function in a robust, secure and safe way throughout their lifetimes, and potential risks should be
     continually assessed and managed.
@@ -73,7 +73,7 @@ principles:
   hasDocumentation:
   - doc-oecd-ai-principles
 - id: principle-oecd-accountability
-  name: Accountability (Principle 1.5)
+  name: "Accountability (Principle 1.5)"
   description: >-
     Organisations and individuals developing, deploying or operating AI systems should be held accountable for their proper functioning in line with the OECD’s values-based principles for AI.
 

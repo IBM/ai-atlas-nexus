@@ -154,14 +154,14 @@ aitasks:
 documents:
 - id: 10a99803d8afd656
   name: 'Foundation models: Opportunities, risks and mitigations'
-  description: 'In this document we: Explore the benefits of foundation models, including
-    their capability to perform challenging tasks, potential to speed up the adoption
-    of AI, ability to increase productivity and the cost benefits they provide. Discuss
-    the three categories of risk, including risks known from earlier forms of AI,
-    known risks amplified by foundation models and emerging risks intrinsic to the
-    generative capabilities of foundation models. Cover the principles, pillars and
-    governance that form the foundation of IBM’s AI ethics initiatives and suggest
-    guardrails for risk mitigation.'
+  description: '''In this document we: Explore the benefits of foundation models,
+    including their capability to perform challenging tasks, potential to speed up
+    the adoption of AI, ability to increase productivity and the cost benefits they
+    provide. Discuss the three categories of risk, including risks known from earlier
+    forms of AI, known risks amplified by foundation models and emerging risks intrinsic
+    to the generative capabilities of foundation models. Cover the principles, pillars
+    and governance that form the foundation of IBM’s AI ethics initiatives and suggest
+    guardrails for risk mitigation.'''
   url: https://www.ibm.com/downloads/documents/us-en/10a99803d8afd656
 - id: NIST.AI.600-1
   name: 'Artificial Intelligence Risk Management Framework: Generative Artificial
@@ -174,11 +174,11 @@ documents:
   dateCreated: 2024-07-25
 - id: doc-australia-ai-ethics-principles
   name: Australia's AI Ethics Principles
-  description: '"Australia''s 8 Artificial Intelligence (AI) Ethics Principles are
+  description: 'Australia''s 8 Artificial Intelligence (AI) Ethics Principles are
     designed to ensure AI is safe, secure and reliable. They will help: achieve safer,
     more reliable and fairer outcomes for all Australians; reduce the risk of negative
     impact on those affected by AI applications; businesses and governments to practice
-    the highest ethical standards when designing, developing and implementing AI."'
+    the highest ethical standards when designing, developing and implementing AI.'
   url: https://www.industry.gov.au/publications/australias-artificial-intelligence-ethics-principles/australias-ai-ethics-principles
   dateCreated: 2024-10-11
 - id: AILuminate-doc
@@ -323,16 +323,16 @@ documents:
     Purcell, Prasanna Sattigeri, Pin-Yu Chen, Kush R. Varshney
 - id: doc-oecd-ai-principles
   name: OECD AI Principles
-  description: '"The OECD AI Principles promote use of AI that is innovative and trustworthy
+  description: The OECD AI Principles promote use of AI that is innovative and trustworthy
     and that respects human rights and democratic values. Adopted in May 2019, they
     set standards for AI that are practical and flexible enough to stand the test
-    of time."'
+    of time.
   url: https://oecd.ai/en/ai-principles
   dateCreated: 2019-05-22
 - id: CSIRO-responsible-ai-pattern-catalogue-doc
   name: 'Responsible AI Pattern Catalogue: A Collection of Best Practices for AI Governance
     and Engineering'
-  description: '"Responsible Artificial Intelligence (RAI) is widely considered as
+  description: 'Responsible Artificial Intelligence (RAI) is widely considered as
     one of the greatest scientific challenges of our time and is key to increase the
     adoption of Artificial Intelligence (AI). Recently, a number of AI ethics principles
     frameworks have been published. However, without further guidance on best practices,
@@ -348,7 +348,7 @@ documents:
     throughout the entire governance and engineering lifecycle. The RAI Pattern Catalogue
     classifies the patterns into three groups: multi-level governance patterns, trustworthy
     process patterns, and RAI-by-design product patterns. These patterns provide systematic
-    and actionable guidance for stakeholders to implement RAI."'
+    and actionable guidance for stakeholders to implement RAI.'
   url: https://doi.org/10.1145/3626234
   dateCreated: 2024-04-09
 - id: arxiv.org/pdf/2406.17864
@@ -998,8 +998,8 @@ documents:
   url: https://arxiv.org/abs/2412.07724
 - id: doc-ibms-principles-for-trust-and-transparency
   name: IBM's Principles for Trust and Transparency
-  description: '"For more than a century, IBM has earned the trust of our clients
-    by responsibly managing their most valuable data.
+  description: 'For more than a century, IBM has earned the trust of our clients by
+    responsibly managing their most valuable data.
 
     And we have worked to earn the trust of society by ushering powerful new technologies
     into the world responsibly and with clear purpose.
@@ -1012,7 +1012,7 @@ documents:
     We encourage all technology companies to adopt similar principles to protect client
     data and insights, and to ensure the responsible and transparent use of artificial
     intelligence (AI) and other transformative innovations. We offer our own Trust
-    and Transparency Principles here as a roadmap."'
+    and Transparency Principles here as a roadmap.'
   url: https://www.ibm.com/policy/trust-transparency
   dateCreated: 2024-10-11
 - id: credo-doc
@@ -2526,8 +2526,8 @@ risks:
     users' confidential information might be unintentionally collected and stored.
 - id: atlas-prompt-leaking
   name: Prompt leaking
-  description: A prompt leak attack attempts to extract a model’s system prompt (also
-    known as the system message).
+  description: '''A prompt leak attack attempts to extract a model’s system prompt
+    (also known as the system message).'''
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/prompt-leaking.html
   dateCreated: 2024-03-06
   dateModified: 2025-10-10
@@ -2647,10 +2647,10 @@ risks:
   descriptor:
   - amplified by generative AI
   - amplified by synthetic data
-  concern: If ownership for development of the model is uncertain, it may not be clear
-    who would be liable and responsible for the problems with it or can answer questions
-    about it. Users of models without clear ownership might find challenges with compliance
-    with regulations.
+  concern: '''If ownership for development of the model is uncertain, it may not be
+    clear who would be liable and responsible for the problems with it or can answer
+    questions about it. Users of models without clear ownership might find challenges
+    with compliance with regulations.'''
 - id: atlas-hallucination
   name: Hallucination
   description: Hallucinations generate factually inaccurate or untruthful content
@@ -3370,13 +3370,14 @@ risks:
     of models.
 - id: atlas-unauthorized-use-agentic
   name: Unauthorized use
-  description: 'Unauthorized use: If attackers can gain access to the AI agent and
-    its components, they can perform actions that can have different levels of harm
-    depending on the agent’s capabilities and information it has access to. Examples:
-    Using stored personal information to mimic identity or impersonate with an intent
-    to deceive. Manipulating AI agent’s behavior via feedback to the AI agent or corrupting
-    its memory to change its behavior. Manipulating the problem description or the
-    goal to get the AI agent to behave badly or run harmful commands.'
+  description: "Unauthorized use: If attackers can gain access to the AI agent and\
+    \ its components, they can perform actions that can have different levels of harm\
+    \ depending on the agent’s capabilities and information it has access to. Examples:\n\
+    \ Using stored personal information to mimic identity or impersonate with an\n\
+    intent to deceive.\n Manipulating AI agent’s behavior via feedback to the AI agent\
+    \ or corrupting\nits memory to change its behavior.\n Manipulating the problem\
+    \ description or the goal to get the AI agent to behave\nbadly or run harmful\
+    \ commands."
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/unauthorized-use-agentic.html
   dateCreated: 2025-04-28
   dateModified: 2025-10-10
@@ -3431,14 +3432,15 @@ risks:
     managed, these could exacerbate climate change.
 - id: atlas-misaligned-actions-agentic
   name: Misaligned actions
-  description: 'AI agents can take actions that are not aligned with relevant human
-    values, ethical considerations, guidelines and policies. Misaligned actions can
-    occur in different ways such as: Applying learned goals inappropriately to new
-    or unforeseen situations. Using AI agents for a purpose/goals that are beyond
-    their intended use. Selecting resources or tools in a biased way Using deceptive
-    tactics to achieve the goal by developing the capacity for scheming based on the
-    instructions given within a specific context. Compromising on AI agent values
-    to work with another AI agent or tool to accomplish the task.'
+  description: "AI agents can take actions that are not aligned with relevant human\
+    \ values, ethical considerations, guidelines and policies. Misaligned actions\
+    \ can occur in different ways such as: Applying learned goals inappropriately\
+    \ to new or unforeseen situations.\n Using AI agents for a purpose/goals that\
+    \ are beyond their intended use.\n Selecting resources or tools in a biased way\n\
+    \ Using deceptive tactics to achieve the goal by developing the capacity for\n\
+    scheming based on the instructions given within a specific context.\n Compromising\
+    \ on AI agent values to work with another AI agent or tool to accomplish\nthe\
+    \ task."
   url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/misaligned-actions-agentic.html
   dateCreated: 2025-04-28
   dateModified: 2025-10-10
@@ -3448,7 +3450,7 @@ risks:
   type: agentic
   descriptor:
   - amplified by agentic AI
-  concern: 'Misaligned actions can adversely impact or harm people. '
+  concern: '''Misaligned actions can adversely impact or harm people. '''
 - id: atlas-data-contamination
   name: Data contamination
   description: Data contamination occurs when incorrect data is used for training.
@@ -3707,8 +3709,8 @@ risks:
   type: agentic
   descriptor:
   - amplified by agentic AI
-  concern: Without properly documenting decisions and assigning responsibility, determining
-    liability for unexpected behavior or misuse might not be possible.
+  concern: '''Without properly documenting decisions and assigning responsibility,
+    determining liability for unexpected behavior or misuse might not be possible.'''
 - id: atlas-incomplete-ai-agent-evaluation-agentic
   name: Incomplete AI agent evaluation
   description: Evaluating the performance or accuracy or an agent is difficult because
@@ -3980,7 +3982,8 @@ risks:
   type: inference
   descriptor:
   - specific to generative AI
-  concern: Injection attacks can be used to alter model behavior and benefit the attacker.
+  concern: '''Injection attacks can be used to alter model behavior and benefit the
+    attacker.'''
 - id: atlas-lack-of-system-transparency
   name: Lack of system transparency
   description: Insufficient documentation of the system that uses the model and the
@@ -4188,9 +4191,9 @@ risks:
   type: inference
   descriptor:
   - amplified by generative AI
-  concern: With a successful extraction attack, the attacker can perform further adversarial
-    attacks to gain valuable information such as sensitive personal information or
-    intellectual property.
+  concern: '''With a successful extraction attack, the attacker can perform further
+    adversarial attacks to gain valuable information such as sensitive personal information
+    or intellectual property.'''
 - id: atlas-jailbreaking
   name: Jailbreaking
   description: A jailbreaking attack attempts to break through the guardrails established
@@ -4238,10 +4241,10 @@ risks:
   type: training-data
   descriptor:
   - amplified by generative AI
-  concern: '"There are several ways of collecting data for building a foundation models:
+  concern: 'There are several ways of collecting data for building a foundation models:
     web scraping, web crawling, crowdsourcing, and curating public datasets. Data
     acquisition restrictions can also impact the availability of the data that is
-    required for training an AI model and can lead to poorly represented data."'
+    required for training an AI model and can lead to poorly represented data.'
 - id: atlas-sharing-info-tools-agentic
   name: Sharing IP/PI/confidential information with tools
   description: AI agents with unrestricted access to resources or databases or tools
@@ -4284,7 +4287,7 @@ risks:
   type: inference
   descriptor:
   - specific to generative AI
-  concern: The attack can be used to alter model behavior and benefit the attacker.
+  concern: '''The attack can be used to alter model behavior and benefit the attacker.'''
 - id: atlas-reidentification
   name: Reidentification
   description: Even with the removal of personal information (PI) and sensitive personal
@@ -4644,11 +4647,11 @@ risks:
   descriptor:
   - traditional risk of AI
   - amplified by synthetic data
-  concern: "Poisoning data can make the model sensitive to a malicious data pattern\
-    \ and produce the adversary’s desired output. It can create a security risk where\
-    \ adversaries can force model behavior for their own benefit. Synthetic data generation\
-    \ can be used to create poisoned data, which can then be used to carry out a data\
-    \ poisoning attack. \n\n"
+  concern: Poisoning data can make the model sensitive to a malicious data pattern\
+    and produce the adversary’s desired output. It can create a security risk where\
+    adversaries can force model behavior for their own benefit. Synthetic data generation\
+    can be used to create poisoned data, which can then be used to carry out a data\
+    poisoning attack.
 - id: atlas-unreliable-source-attribution
   name: Unreliable source attribution
   description: Source attribution is the AI system's ability to describe from what
