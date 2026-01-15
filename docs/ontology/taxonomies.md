@@ -3,7 +3,7 @@
 # Slot: taxonomies
 
 
-_A list of AI risk taxonomies_
+_A list of taxonomies_
 
 
 
@@ -31,7 +31,7 @@ Alias: taxonomies
 
 ## Properties
 
-* Range: [RiskTaxonomy](RiskTaxonomy.md)
+* Range: [Taxonomy](Taxonomy.md)
 
 * Multivalued: True
 
@@ -68,14 +68,14 @@ Alias: taxonomies
 <details>
 ```yaml
 name: taxonomies
-description: A list of AI risk taxonomies
+description: A list of taxonomies
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: taxonomies
 owner: Container
 domain_of:
 - Container
-range: RiskTaxonomy
+range: Taxonomy
 multivalued: true
 inlined: true
 inlined_as_list: true

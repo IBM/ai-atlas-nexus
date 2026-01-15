@@ -18,6 +18,7 @@ from ai_atlas_nexus.exceptions import RiskInferenceError, handle_exception
 os.environ["KMP_DUPLICATE_LIB_OK"] = "True"
 os.environ["OMP_NUM_THREADS"] = "1"
 
+from ai_atlas_nexus import AiTask, Taxonomy
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Action,
     Adapter,
@@ -235,7 +236,7 @@ class AIAtlasNexus:
         Query instances using keyword arguments.
 
         Args:
-            class_name: str
+            class_name: Union[str | list]:
                 Name of the class (the collection key in data)
             **kwargs:
                 The attribute-value pairs to filter by
@@ -312,8 +313,10 @@ class AIAtlasNexus:
             name=name,
             taxonomy=taxonomy,
         )
-        if risk:
+        if risk and len(risk) > 0:
             risk = risk[0]
+        else:
+            risk = None
         return risk
 
     def get_related_risks(
@@ -368,13 +371,11 @@ class AIAtlasNexus:
             risk = cls.get_risk(tag=tag)
 
         # just get all the related risks from the risk, these should have been added during lifting
-        options = [
-            risk.closeMatch or [],
-            risk.exactMatch or [],
-            risk.broadMatch or [],
-            risk.narrowMatch or [],
-            risk.relatedMatch or [],
-        ]
+        options = [risk.close_mappings or [],
+        risk.exact_mappings or [] ,
+        risk.broad_mappings or [] ,
+        risk.narrow_mappings or [],
+        risk.related_mappings or []]
         related_risk_ids = [x for x_list in options for x in x_list]
         related_risk_instances = [cls.get_risk(id=x) for x in related_risk_ids]
         return related_risk_instances
@@ -537,7 +538,7 @@ class AIAtlasNexus:
             taxonomy=taxonomy,
         )
         value_check(
-            "<RAN5DCADF94E>",
+            "<RAN5DCADG95E>",
             risk or tag or id or name,
             "Please provide risk, tag, id, or name",
         )
@@ -724,8 +725,8 @@ class AIAtlasNexus:
         """Get all taxonomy definitions from the LinkML
 
         Returns:
-            List[RiskTaxonomy]
-                Result containing a list of AI Risk taxonomies
+            List[Taxonomy]
+                Result containing a list of taxonomies
         """
         taxonomy_instances: list[RiskTaxonomy] = cls._atlas_explorer.get_all(
             "taxonomies"
@@ -740,8 +741,8 @@ class AIAtlasNexus:
                 The string id for a taxonomy
 
         Returns:
-            RiskTaxonomy
-                An AI Risk taxonomy
+            Taxonomy
+                An AI taxonomy
         """
         type_check(
             "<RANBFB574E3E>",
@@ -1430,6 +1431,9 @@ class AIAtlasNexus:
         risk=None,
         tag=None,
         risk_id=None,
+        aitask=None,
+        aitask_id=None,
+        task_id=None,
         name=None,
         taxonomy=None,
     ):
@@ -1440,6 +1444,10 @@ class AIAtlasNexus:
                 The risk
             risk_id: (Optional) str
                 The string ID identifying the risk
+            aitask: (Optional) str
+                The aitask
+            aitask_id: (Optional) str
+                The string ID identifying the ai task
             tag: (Optional) str
                 The string tag identifying the risk
             name: (Optional) str
@@ -1458,30 +1466,45 @@ class AIAtlasNexus:
             risk=risk,
         )
         type_check(
+            "<RAN4E93178FE>",
+            AiTask,
+            allow_none=True,
+            aitask=aitask,
+        )
+        type_check(
             "<RAN55784808E>",
             str,
             allow_none=True,
             tag=tag,
             risk_id=risk_id,
+            aitask_id=aitask_id,
             name=name,
             taxonomy=taxonomy,
         )
         value_check(
             "<RAN5DCADF94E>",
-            risk or tag or risk_id or name,
-            "Please provide risk, tag, risk_id, or name",
+            risk or tag or aitask or aitask_id or risk_id or name,
+            "Please provide risk, tag, aitask, aitask_id, risk_id, or name",
         )
 
-        if risk_id:
-            risk = cls.get_risk(id=risk_id)
-        elif tag:
-            risk = cls.get_risk(tag=tag)
-        elif name:
-            risk = cls.get_risk(name=name)
+        if aitask or aitask_id:
+            if aitask_id:
+                aitask = cls.get_by_id(class_name="aitasks", identifier=aitask_id)
 
-        related_llmintrinsics = cls._atlas_explorer.query(
-            "llmintrinsics", hasRelatedRisk=risk.id, taxonomy=taxonomy
-        )
+            related_llmintrinsics = []
+            capability_ids = cls._atlas_explorer.get_attribute(class_name="aitasks", identifier=aitask.id, attribute="requiresCapability") or []
+            for cap in capability_ids:
+                related_llmintrinsics += cls._atlas_explorer.query("llmintrinsics", c=cap.id, taxonomy=taxonomy)
+        else:
+            if risk_id:
+                risk = cls.get_risk(id=risk_id)
+            elif tag:
+                risk = cls.get_risk(tag=tag)
+            elif name:
+                risk = cls.get_risk(name=name)
+
+            related_llmintrinsics = cls._atlas_explorer.query("llmintrinsics", hasRelatedRisk=risk.id, taxonomy=taxonomy)
+
         return related_llmintrinsics
 
     def get_adapters(cls, taxonomy=None):

@@ -100,3 +100,13 @@ RITS_API_URL=<RITS url key goes here>
 ```command
 pip install -e ".[rits]"
 ```
+
+## AI Atlas Nexus Extensions
+
+Install AI Atlas Nexus extension using the below command
+```command
+ran-extension install <EXTENSION_NAME>
+```
+
+Currently, following extensions are available
+  - [ran-ares-integration](https://github.com/ibm/ai-atlas-nexus-extensions/tree/main/ran-ares-integration): ARES Integration for AI Atlas Nexus to run AI robustness evaluations on AI Systems derived from use cases.

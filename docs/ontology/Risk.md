@@ -21,27 +21,27 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
     click Risk href "../Risk/"
       RiskConcept <|-- Risk
         click RiskConcept href "../RiskConcept/"
-      Entity <|-- Risk
-        click Entity href "../Entity/"
+      Entry <|-- Risk
+        click Entry href "../Entry/"
 
-      Risk : broadMatch
-
-
+      Risk : broad_mappings
 
 
 
-        Risk --> "*" Any : broadMatch
+
+
+        Risk --> "*" Any : broad_mappings
         click Any href "../Any/"
 
 
 
-      Risk : closeMatch
+      Risk : close_mappings
 
 
 
 
 
-        Risk --> "*" Any : closeMatch
+        Risk --> "*" Any : close_mappings
         click Any href "../Any/"
 
 
@@ -67,14 +67,25 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 
 
 
-      Risk : exactMatch
+      Risk : exact_mappings
 
 
 
 
 
-        Risk --> "*" Any : exactMatch
+        Risk --> "*" Any : exact_mappings
         click Any href "../Any/"
+
+
+
+      Risk : hasDocumentation
+
+
+
+
+
+        Risk --> "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation/"
 
 
 
@@ -91,14 +102,36 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 
       Risk : id
 
+      Risk : implementedByAdapter
+
+
+
+
+
+        Risk --> "*" Adapter : implementedByAdapter
+        click Adapter href "../Adapter/"
+
+
+
       Risk : isDefinedByTaxonomy
 
 
 
 
 
-        Risk --> "0..1" RiskTaxonomy : isDefinedByTaxonomy
-        click RiskTaxonomy href "../RiskTaxonomy/"
+        Risk --> "0..1" Taxonomy : isDefinedByTaxonomy
+        click Taxonomy href "../Taxonomy/"
+
+
+
+      Risk : isDefinedByVocabulary
+
+
+
+
+
+        Risk --> "0..1" Vocabulary : isDefinedByVocabulary
+        click Vocabulary href "../Vocabulary/"
 
 
 
@@ -126,29 +159,53 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 
       Risk : name
 
-      Risk : narrowMatch
+      Risk : narrow_mappings
 
 
 
 
 
-        Risk --> "*" Any : narrowMatch
+        Risk --> "*" Any : narrow_mappings
         click Any href "../Any/"
 
 
 
       Risk : phase
 
-      Risk : relatedMatch
+      Risk : related_mappings
 
 
 
 
 
-        Risk --> "*" Any : relatedMatch
+        Risk --> "*" Any : related_mappings
         click Any href "../Any/"
 
 
+
+      Risk : requiredByTask
+
+
+
+
+
+        Risk --> "*" AiTask : requiredByTask
+        click AiTask href "../AiTask/"
+
+
+
+      Risk : requiresCapability
+
+
+
+
+
+        Risk --> "*" Capability : requiresCapability
+        click Capability href "../Capability/"
+
+
+
+      Risk : risk_type
 
       Risk : tag
 
@@ -165,7 +222,8 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 
 ## Inheritance
 * [Entity](Entity.md)
-    * **Risk** [ [RiskConcept](RiskConcept.md)]
+    * [Entry](Entry.md)
+        * **Risk** [ [RiskConcept](RiskConcept.md)]
 
 
 
@@ -174,26 +232,32 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [hasRelatedAction](hasRelatedAction.md) | * <br/> [Action](Action.md) | A relationship where an entity relates to an action | direct |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [RiskTaxonomy](RiskTaxonomy.md) | A relationship where a risk or a risk group is defined by a risk taxonomy | direct |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | direct |
 | [isPartOf](isPartOf.md) | 0..1 <br/> [RiskGroup](RiskGroup.md) | A relationship where a risk is part of a risk group | direct |
-| [closeMatch](closeMatch.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskGroup](RiskGroup.md) | The property is used to link two concepts that are sufficiently similar that ... | direct |
-| [exactMatch](exactMatch.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskGroup](RiskGroup.md) | The property is used to link two concepts, indicating a high degree of confid... | direct |
-| [broadMatch](broadMatch.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskGroup](RiskGroup.md) | The property is used to state a hierarchical mapping link between two concept... | direct |
-| [narrowMatch](narrowMatch.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskGroup](RiskGroup.md) | The property is used to state a hierarchical mapping link between two concept... | direct |
-| [relatedMatch](relatedMatch.md) | * <br/> [Any](Any.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskGroup](RiskGroup.md) | The property skos:relatedMatch is used to state an associative mapping link b... | direct |
 | [detectsRiskConcept](detectsRiskConcept.md) | * <br/> [RiskConcept](RiskConcept.md) | The property airo:detectsRiskConcept indicates the control used for detecting... | direct |
 | [tag](tag.md) | 0..1 <br/> [String](String.md) | A shost version of the name | direct |
-| [type](type.md) | 0..1 <br/> [String](String.md) | Annotation whether an AI risk occurs at input or output or is non-technical | direct |
+| [risk_type](risk_type.md) | 0..1 <br/> [String](String.md) | Annotation whether an AI risk occurs at input or output or is non-technical | direct |
 | [phase](phase.md) | 0..1 <br/> [String](String.md) | Annotation whether an AI risk shows specifically during the training-tuning o... | direct |
 | [descriptor](descriptor.md) | * <br/> [String](String.md) | Annotates whether an AI risk is a traditional risk, specific to or amplified ... | direct |
 | [concern](concern.md) | 0..1 <br/> [String](String.md) | Some explanation about the concern related to an AI risk | direct |
 | [isDetectedBy](isDetectedBy.md) | * <br/> [RiskControl](RiskControl.md) | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
+| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md) | A relationship where a term or a term group is defined by a vocabulary | [Entry](Entry.md) |
+| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Entry](Entry.md), [Concept](Concept.md) |
+| [requiredByTask](requiredByTask.md) | * <br/> [AiTask](AiTask.md) | Indicates that this entry is required to perform a specific AI task | [Entry](Entry.md) |
+| [requiresCapability](requiresCapability.md) | * <br/> [Capability](Capability.md) | Indicates that this entry requires a specific capability | [Entry](Entry.md) |
+| [implementedByAdapter](implementedByAdapter.md) | * <br/> [Adapter](Adapter.md) | Indicates that this capability is implemented by a specific adapter | [Entry](Entry.md) |
+| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Entry](Entry.md), [Concept](Concept.md) |
 | [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
 | [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
 | [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
 | [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
 | [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
 | [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 
 
@@ -203,20 +267,9 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 
 | used by | used in | type | used |
 | ---  | --- | --- | --- |
-| [Container](Container.md) | [risks](risks.md) | range | [Risk](Risk.md) |
 | [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [LLMQuestionPolicy](LLMQuestionPolicy.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [RiskGroup](RiskGroup.md) | [closeMatch](closeMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [RiskGroup](RiskGroup.md) | [exactMatch](exactMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [RiskGroup](RiskGroup.md) | [broadMatch](broadMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [RiskGroup](RiskGroup.md) | [narrowMatch](narrowMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [RiskGroup](RiskGroup.md) | [relatedMatch](relatedMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [RiskGroup](RiskGroup.md) | [hasPart](hasPart.md) | range | [Risk](Risk.md) |
-| [Risk](Risk.md) | [closeMatch](closeMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [Risk](Risk.md) | [exactMatch](exactMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [Risk](Risk.md) | [broadMatch](broadMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [Risk](Risk.md) | [narrowMatch](narrowMatch.md) | any_of[range] | [Risk](Risk.md) |
-| [Risk](Risk.md) | [relatedMatch](relatedMatch.md) | any_of[range] | [Risk](Risk.md) |
 | [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [RiskIncident](RiskIncident.md) | [refersToRisk](refersToRisk.md) | range | [Risk](Risk.md) |
 | [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
@@ -271,18 +324,13 @@ name: Risk
 description: The state of uncertainty associated with an AI system, that has the potential
   to cause harms
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-is_a: Entity
+is_a: Entry
 mixins:
 - RiskConcept
 slots:
 - hasRelatedAction
 - isDefinedByTaxonomy
 - isPartOf
-- closeMatch
-- exactMatch
-- broadMatch
-- narrowMatch
-- relatedMatch
 - detectsRiskConcept
 slot_usage:
   isPartOf:
@@ -297,8 +345,8 @@ attributes:
     rank: 1000
     domain_of:
     - Risk
-  type:
-    name: type
+  risk_type:
+    name: risk_type
     description: Annotation whether an AI risk occurs at input or output or is non-technical.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
     rank: 1000
@@ -341,7 +389,7 @@ name: Risk
 description: The state of uncertainty associated with an AI system, that has the potential
   to cause harms
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-is_a: Entity
+is_a: Entry
 mixins:
 - RiskConcept
 slot_usage:
@@ -360,12 +408,12 @@ attributes:
     domain_of:
     - Risk
     range: string
-  type:
-    name: type
+  risk_type:
+    name: risk_type
     description: Annotation whether an AI risk occurs at input or output or is non-technical.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
     rank: 1000
-    alias: type
+    alias: risk_type
     owner: Risk
     domain_of:
     - Risk
@@ -417,7 +465,7 @@ attributes:
     inlined: false
   isDefinedByTaxonomy:
     name: isDefinedByTaxonomy
-    description: A relationship where a risk or a risk group is defined by a risk
+    description: A relationship where a concept or a concept group is defined by a
       taxonomy
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
@@ -425,15 +473,20 @@ attributes:
     alias: isDefinedByTaxonomy
     owner: Risk
     domain_of:
+    - Concept
+    - Control
+    - Group
+    - Entry
     - Policy
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
+    - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
-    range: RiskTaxonomy
+    range: Taxonomy
   isPartOf:
     name: isPartOf
     description: A relationship where a risk is part of a risk group
@@ -443,103 +496,12 @@ attributes:
     alias: isPartOf
     owner: Risk
     domain_of:
+    - Entry
     - Risk
     - LargeLanguageModel
+    - CapabilityGroup
     - Stakeholder
     range: RiskGroup
-  closeMatch:
-    name: closeMatch
-    description: The property is used to link two concepts that are sufficiently similar
-      that they can be used interchangeably in some information retrieval applications.
-    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-    rank: 1000
-    slot_uri: skos:closeMatch
-    alias: closeMatch
-    owner: Risk
-    domain_of:
-    - RiskGroup
-    - Risk
-    range: Any
-    multivalued: true
-    inlined: false
-    any_of:
-    - range: Risk
-    - range: RiskGroup
-  exactMatch:
-    name: exactMatch
-    description: The property is used to link two concepts, indicating a high degree
-      of confidence that the concepts can be used interchangeably across a wide range
-      of information retrieval applications
-    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-    rank: 1000
-    slot_uri: skos:exactMatch
-    alias: exactMatch
-    owner: Risk
-    domain_of:
-    - RiskGroup
-    - Risk
-    range: Any
-    multivalued: true
-    inlined: false
-    any_of:
-    - range: Risk
-    - range: RiskGroup
-  broadMatch:
-    name: broadMatch
-    description: The property is used to state a hierarchical mapping link between
-      two concepts, indicating that the concept linked to, is a broader concept than
-      the originating concept.
-    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-    rank: 1000
-    slot_uri: skos:broadMatch
-    alias: broadMatch
-    owner: Risk
-    domain_of:
-    - RiskGroup
-    - Risk
-    range: Any
-    multivalued: true
-    inlined: false
-    any_of:
-    - range: Risk
-    - range: RiskGroup
-  narrowMatch:
-    name: narrowMatch
-    description: The property is used to state a hierarchical mapping link between
-      two concepts, indicating that the concept linked to, is a narrower concept than
-      the originating concept.
-    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-    rank: 1000
-    slot_uri: skos:narrowMatch
-    alias: narrowMatch
-    owner: Risk
-    domain_of:
-    - RiskGroup
-    - Risk
-    range: Any
-    multivalued: true
-    inlined: false
-    any_of:
-    - range: Risk
-    - range: RiskGroup
-  relatedMatch:
-    name: relatedMatch
-    description: The property skos:relatedMatch is used to state an associative mapping
-      link between two concepts.
-    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-    rank: 1000
-    slot_uri: skos:relatedMatch
-    alias: relatedMatch
-    owner: Risk
-    domain_of:
-    - RiskGroup
-    - Risk
-    range: Any
-    multivalued: true
-    inlined: false
-    any_of:
-    - range: Risk
-    - range: RiskGroup
   detectsRiskConcept:
     name: detectsRiskConcept
     description: The property airo:detectsRiskConcept indicates the control used for
@@ -573,6 +535,113 @@ attributes:
     range: RiskControl
     multivalued: true
     inlined: false
+  isDefinedByVocabulary:
+    name: isDefinedByVocabulary
+    description: A relationship where a term or a term group is defined by a vocabulary
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:isPartOf
+    alias: isDefinedByVocabulary
+    owner: Risk
+    domain_of:
+    - Entry
+    - Term
+    - Adapter
+    - LLMIntrinsic
+    range: Vocabulary
+  hasDocumentation:
+    name: hasDocumentation
+    description: Indicates documentation associated with an entity.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: airo:hasDocumentation
+    alias: hasDocumentation
+    owner: Risk
+    domain_of:
+    - Dataset
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Group
+    - Entry
+    - Term
+    - Principle
+    - RiskTaxonomy
+    - Action
+    - BaseAi
+    - LargeLanguageModelFamily
+    - AiEval
+    - BenchmarkMetadataCard
+    - Adapter
+    - LLMIntrinsic
+    range: Documentation
+    multivalued: true
+    inlined: false
+  requiredByTask:
+    name: requiredByTask
+    description: Indicates that this entry is required to perform a specific AI task.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    alias: requiredByTask
+    owner: Risk
+    domain_of:
+    - Entry
+    - Capability
+    inverse: requiresCapability
+    range: AiTask
+    multivalued: true
+    inlined: false
+  requiresCapability:
+    name: requiresCapability
+    description: Indicates that this entry requires a specific capability
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: Any
+    alias: requiresCapability
+    owner: Risk
+    domain_of:
+    - Entry
+    - LargeLanguageModel
+    - AiTask
+    - Adapter
+    inverse: requiredByTask
+    range: Capability
+    multivalued: true
+    inlined: false
+  implementedByAdapter:
+    name: implementedByAdapter
+    description: 'Indicates that this capability is implemented by a specific adapter.
+      This relationship distinguishes the abstract capability (what can be done) from
+      the technical implementation mechanism (how it is added/extended via adapters).
+
+      '
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: Any
+    alias: implementedByAdapter
+    owner: Risk
+    domain_of:
+    - Entry
+    - Capability
+    inverse: implementsCapability
+    range: Adapter
+    multivalued: true
+    inlined: false
+  type:
+    name: type
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    designates_type: true
+    alias: type
+    owner: Risk
+    domain_of:
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Control
+    - Group
+    - Entry
+    - Policy
+    range: string
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -645,6 +714,79 @@ attributes:
     - Entity
     range: date
     required: false
+  exact_mappings:
+    name: exact_mappings
+    description: The property is used to link two concepts, indicating a high degree
+      of confidence that the concepts can be used interchangeably across a wide range
+      of information retrieval applications
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:exactMatch
+    alias: exact_mappings
+    owner: Risk
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  close_mappings:
+    name: close_mappings
+    description: The property is used to link two concepts that are sufficiently similar
+      that they can be used interchangeably in some information retrieval applications.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:closeMatch
+    alias: close_mappings
+    owner: Risk
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    name: related_mappings
+    description: The property skos:relatedMatch is used to state an associative mapping
+      link between two concepts.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:relatedMatch
+    alias: related_mappings
+    owner: Risk
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    name: narrow_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a narrower concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:narrowMatch
+    alias: narrow_mappings
+    owner: Risk
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    name: broad_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a broader concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:broadMatch
+    alias: broad_mappings
+    owner: Risk
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
 class_uri: airo:Risk
 
 ```

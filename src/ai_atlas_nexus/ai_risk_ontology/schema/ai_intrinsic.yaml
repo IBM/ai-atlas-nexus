@@ -28,7 +28,7 @@ classes:
 
   Adapter:
     description: Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
-    is_a: Entity
+    is_a: Entry
     mixins:
     - LargeLanguageModel
     slots:
@@ -38,11 +38,14 @@ classes:
     - hasLicense
     - hasRelatedRisk
     - adaptsModel
+    - implementsCapability
+    - hasCapability
+    - requiresCapability
     # Can it be used on any model?
 
   LLMIntrinsic:
     description: A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.
-    is_a: Entity
+    is_a: Entry
     class_uri: ai:Capability
     slots:
       - hasRelatedRisk
@@ -50,6 +53,7 @@ classes:
       - hasDocumentation
       - isDefinedByVocabulary
       - hasAdapter
+      - hasCapability
 
 enums:
   AdapterType:

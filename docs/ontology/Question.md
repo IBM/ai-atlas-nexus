@@ -24,11 +24,44 @@ URI: [nexus:Question](https://ibm.github.io/ai-atlas-nexus/ontology/Question)
 
       Question : bestValue
 
+      Question : broad_mappings
+
+
+
+
+
+        Question --> "*" Any : broad_mappings
+        click Any href "../Any/"
+
+
+
+      Question : close_mappings
+
+
+
+
+
+        Question --> "*" Any : close_mappings
+        click Any href "../Any/"
+
+
+
       Question : dateCreated
 
       Question : dateModified
 
       Question : description
+
+      Question : exact_mappings
+
+
+
+
+
+        Question --> "*" Any : exact_mappings
+        click Any href "../Any/"
+
+
 
       Question : hasBenchmarkMetadata
 
@@ -95,6 +128,28 @@ URI: [nexus:Question](https://ibm.github.io/ai-atlas-nexus/ontology/Question)
 
       Question : name
 
+      Question : narrow_mappings
+
+
+
+
+
+        Question --> "*" Any : narrow_mappings
+        click Any href "../Any/"
+
+
+
+      Question : related_mappings
+
+
+
+
+
+        Question --> "*" Any : related_mappings
+        click Any href "../Any/"
+
+
+
       Question : text
 
       Question : url
@@ -133,6 +188,11 @@ URI: [nexus:Question](https://ibm.github.io/ai-atlas-nexus/ontology/Question)
 | [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
 | [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
 | [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 
 
@@ -226,6 +286,10 @@ attributes:
     domain_of:
     - Dataset
     - Vocabulary
+    - Taxonomy
+    - Concept
+    - Group
+    - Entry
     - Term
     - Principle
     - RiskTaxonomy
@@ -302,6 +366,7 @@ attributes:
     - Dataset
     - Documentation
     - Vocabulary
+    - Taxonomy
     - RiskTaxonomy
     - BaseAi
     - AiEval
@@ -427,6 +492,79 @@ attributes:
     - Entity
     range: date
     required: false
+  exact_mappings:
+    name: exact_mappings
+    description: The property is used to link two concepts, indicating a high degree
+      of confidence that the concepts can be used interchangeably across a wide range
+      of information retrieval applications
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:exactMatch
+    alias: exact_mappings
+    owner: Question
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  close_mappings:
+    name: close_mappings
+    description: The property is used to link two concepts that are sufficiently similar
+      that they can be used interchangeably in some information retrieval applications.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:closeMatch
+    alias: close_mappings
+    owner: Question
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    name: related_mappings
+    description: The property skos:relatedMatch is used to state an associative mapping
+      link between two concepts.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:relatedMatch
+    alias: related_mappings
+    owner: Question
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    name: narrow_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a narrower concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:narrowMatch
+    alias: narrow_mappings
+    owner: Question
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    name: broad_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a broader concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:broadMatch
+    alias: broad_mappings
+    owner: Question
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
 
 ```
 </details>

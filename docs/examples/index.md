@@ -6,3 +6,4 @@
 - [AI Domain identification](notebooks/domain_identification.ipynb) Uncover AI domain from your usecase
 - [Risk Categorization](notebooks/risk_categorization.ipynb) Assess and categorize the severity of risks associated with an AI system usecase.
 - [Crosswalk](notebooks/generate_crosswalk.ipynb) An example of generating crosswalk information between risks of two different taxonomies.
+- [Risk to ARES Evaluation](notebooks/risk_to_ares_evaluation.ipynb) ARES Integration for AI Atlas Nexus allows you to run AI robustness evaluations on AI Systems derived from use cases.

@@ -1,1771 +1,2361 @@
-risks:
+entries:
 - id: credo-risk-001
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.5
+  type: Risk
 - id: mit-ai-risk-subdomain-7.5
-  closeMatch:
+  close_mappings:
   - credo-risk-001
+  type: Risk
 - id: credo-risk-001
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.5
+  type: Risk
 - id: mit-ai-risk-subdomain-7.5
-  closeMatch:
+  close_mappings:
   - credo-risk-001
+  type: Risk
 - id: credo-risk-002
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.1
+  type: Risk
 - id: mit-ai-risk-subdomain-7.1
-  closeMatch:
+  close_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.1
+  type: Risk
 - id: mit-ai-risk-subdomain-7.1
-  closeMatch:
+  close_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - granite-harm-engagement
+  type: Risk
 - id: granite-harm-engagement
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-human-agency
+  type: Risk
 - id: atlas-impact-on-human-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-human-agency
+  type: Risk
 - id: atlas-impact-on-human-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - llm062025-excessive-agency
+  type: Risk
 - id: llm062025-excessive-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-003
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  closeMatch:
+  close_mappings:
   - credo-risk-003
+  type: Risk
 - id: credo-risk-003
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  closeMatch:
+  close_mappings:
   - credo-risk-003
+  type: Risk
 - id: credo-risk-003
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-003
+  type: Risk
 - id: credo-risk-003
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - credo-risk-003
+  type: Risk
 - id: credo-risk-003
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - credo-risk-003
+  type: Risk
 - id: credo-risk-004
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.6
+  type: Risk
 - id: mit-ai-risk-subdomain-6.6
-  closeMatch:
+  close_mappings:
   - credo-risk-004
+  type: Risk
 - id: credo-risk-004
-  closeMatch:
+  close_mappings:
   - nist-environmental-impacts
+  type: Risk
 - id: nist-environmental-impacts
-  closeMatch:
+  close_mappings:
   - credo-risk-004
+  type: Risk
 - id: credo-risk-004
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-004
+  type: Risk
 - id: credo-risk-004
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-the-environment
+  type: Risk
 - id: atlas-impact-on-the-environment
-  relatedMatch:
+  related_mappings:
   - credo-risk-004
+  type: Risk
 - id: credo-risk-004
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-the-environment
+  type: Risk
 - id: atlas-impact-on-the-environment
-  relatedMatch:
+  related_mappings:
   - credo-risk-004
+  type: Risk
 - id: credo-risk-004
-  relatedMatch:
+  related_mappings:
   - nist-environmental-impacts
+  type: Risk
 - id: nist-environmental-impacts
-  relatedMatch:
+  related_mappings:
   - credo-risk-004
+  type: Risk
 - id: credo-risk-005
-  closeMatch:
+  close_mappings:
   - atlas-data-transparency
+  type: Risk
 - id: atlas-data-transparency
-  closeMatch:
+  close_mappings:
   - credo-risk-005
+  type: Risk
 - id: credo-risk-005
-  closeMatch:
+  close_mappings:
   - atlas-data-transparency
+  type: Risk
 - id: atlas-data-transparency
-  closeMatch:
+  close_mappings:
   - credo-risk-005
+  type: Risk
 - id: credo-risk-005
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-005
+  type: Risk
 - id: credo-risk-005
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-005
+  type: Risk
 - id: credo-risk-006
-  relatedMatch:
+  related_mappings:
   - atlas-data-transparency
+  type: Risk
 - id: atlas-data-transparency
-  relatedMatch:
+  related_mappings:
   - credo-risk-006
+  type: Risk
 - id: credo-risk-006
-  relatedMatch:
+  related_mappings:
   - atlas-lack-of-data-transparency
+  type: Risk
 - id: atlas-lack-of-data-transparency
-  relatedMatch:
+  related_mappings:
   - credo-risk-006
+  type: Risk
 - id: credo-risk-006
-  relatedMatch:
+  related_mappings:
   - atlas-lack-of-data-transparency
+  type: Risk
 - id: atlas-lack-of-data-transparency
-  relatedMatch:
+  related_mappings:
   - credo-risk-006
+  type: Risk
 - id: credo-risk-006
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-006
+  type: Risk
 - id: credo-risk-006
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-006
+  type: Risk
 - id: credo-risk-007
-  relatedMatch:
+  related_mappings:
   - atlas-unreliable-source-attribution
+  type: Risk
 - id: atlas-unreliable-source-attribution
-  relatedMatch:
+  related_mappings:
   - credo-risk-007
+  type: Risk
 - id: credo-risk-007
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-007
+  type: Risk
 - id: credo-risk-007
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-007
+  type: Risk
 - id: credo-risk-007
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-007
+  type: Risk
 - id: credo-risk-007
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - credo-risk-007
+  type: Risk
 - id: credo-risk-008
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-008
+  type: Risk
 - id: credo-risk-008
-  relatedMatch:
+  related_mappings:
   - atlas-lack-of-data-transparency
+  type: Risk
 - id: atlas-lack-of-data-transparency
-  relatedMatch:
+  related_mappings:
   - credo-risk-008
+  type: Risk
 - id: credo-risk-008
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-008
+  type: Risk
 - id: credo-risk-008
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-008
+  type: Risk
 - id: credo-risk-009
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-009
+  type: Risk
 - id: credo-risk-009
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-009
+  type: Risk
 - id: credo-risk-009
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-009
+  type: Risk
 - id: credo-risk-009
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-009
+  type: Risk
 - id: credo-risk-009
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-009
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - granite-social-bias
+  type: Risk
 - id: granite-social-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-cultural-diversity
+  type: Risk
 - id: atlas-impact-on-cultural-diversity
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - atlas-output-bias
+  type: Risk
 - id: atlas-output-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - atlas-unrepresentative-data
+  type: Risk
 - id: atlas-unrepresentative-data
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.1
+  type: Risk
 - id: mit-ai-risk-subdomain-1.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - granite-social-bias
+  type: Risk
 - id: granite-social-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - atlas-decision-bias
+  type: Risk
 - id: atlas-decision-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - atlas-decision-bias
+  type: Risk
 - id: atlas-decision-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - atlas-output-bias
+  type: Risk
 - id: atlas-output-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.1
+  type: Risk
 - id: mit-ai-risk-subdomain-1.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.1
+  type: Risk
 - id: mit-ai-risk-subdomain-1.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-011
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - credo-risk-011
+  type: Risk
 - id: credo-risk-012
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-012
+  type: Risk
 - id: credo-risk-012
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - credo-risk-012
+  type: Risk
 - id: credo-risk-012
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - credo-risk-012
+  type: Risk
 - id: credo-risk-012
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - credo-risk-012
+  type: Risk
 - id: credo-risk-012
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-012
+  type: Risk
 - id: credo-risk-013
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  closeMatch:
+  close_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  closeMatch:
+  close_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - granite-profanity
+  type: Risk
 - id: granite-profanity
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - granite-violence
+  type: Risk
 - id: granite-violence
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - atlas-human-exploitation
+  type: Risk
 - id: atlas-human-exploitation
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - atlas-spreading-toxicity
+  type: Risk
 - id: atlas-spreading-toxicity
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - atlas-spreading-toxicity
+  type: Risk
 - id: atlas-spreading-toxicity
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - atlas-spreading-toxicity
+  type: Risk
 - id: atlas-spreading-toxicity
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-015
-  closeMatch:
+  close_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  closeMatch:
+  close_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - atlas-toxic-output
+  type: Risk
 - id: atlas-toxic-output
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-016
-  closeMatch:
+  close_mappings:
   - atlas-over-or-under-reliance
+  type: Risk
 - id: atlas-over-or-under-reliance
-  closeMatch:
+  close_mappings:
   - credo-risk-016
+  type: Risk
 - id: credo-risk-016
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-5.1
+  type: Risk
 - id: mit-ai-risk-subdomain-5.1
-  closeMatch:
+  close_mappings:
   - credo-risk-016
+  type: Risk
 - id: credo-risk-016
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-016
+  type: Risk
 - id: credo-risk-016
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-016
+  type: Risk
 - id: credo-risk-017
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-017
+  type: Risk
 - id: credo-risk-017
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-3.1
+  type: Risk
 - id: mit-ai-risk-subdomain-3.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-017
+  type: Risk
 - id: credo-risk-017
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-017
+  type: Risk
 - id: credo-risk-017
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-017
+  type: Risk
 - id: credo-risk-017
-  relatedMatch:
+  related_mappings:
   - llm062025-excessive-agency
+  type: Risk
 - id: llm062025-excessive-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-017
+  type: Risk
 - id: credo-risk-017
-  relatedMatch:
+  related_mappings:
   - llm092025-misinformation
+  type: Risk
 - id: llm092025-misinformation
-  relatedMatch:
+  related_mappings:
   - credo-risk-017
+  type: Risk
 - id: credo-risk-018
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-018
+  type: Risk
 - id: credo-risk-018
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-018
+  type: Risk
 - id: credo-risk-018
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-018
+  type: Risk
 - id: credo-risk-018
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-018
+  type: Risk
 - id: credo-risk-018
-  relatedMatch:
+  related_mappings:
   - llm062025-excessive-agency
+  type: Risk
 - id: llm062025-excessive-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-018
+  type: Risk
 - id: credo-risk-019
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-5.2
+  type: Risk
 - id: mit-ai-risk-subdomain-5.2
-  closeMatch:
+  close_mappings:
   - credo-risk-019
+  type: Risk
 - id: credo-risk-019
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-5.2
+  type: Risk
 - id: mit-ai-risk-subdomain-5.2
-  closeMatch:
+  close_mappings:
   - credo-risk-019
+  type: Risk
 - id: credo-risk-019
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-human-agency
+  type: Risk
 - id: atlas-impact-on-human-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-019
+  type: Risk
 - id: credo-risk-019
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-human-agency
+  type: Risk
 - id: atlas-impact-on-human-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-019
+  type: Risk
 - id: credo-risk-019
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-019
+  type: Risk
 - id: credo-risk-019
-  relatedMatch:
+  related_mappings:
   - llm062025-excessive-agency
+  type: Risk
 - id: llm062025-excessive-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-019
+  type: Risk
 - id: credo-risk-020
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-5.1
+  type: Risk
 - id: mit-ai-risk-subdomain-5.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-020
+  type: Risk
 - id: credo-risk-020
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-5.1
+  type: Risk
 - id: mit-ai-risk-subdomain-5.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-020
+  type: Risk
 - id: credo-risk-020
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-020
+  type: Risk
 - id: credo-risk-020
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - credo-risk-020
+  type: Risk
 - id: credo-risk-021
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-3.1
+  type: Risk
 - id: mit-ai-risk-subdomain-3.1
-  closeMatch:
+  close_mappings:
   - credo-risk-021
+  type: Risk
 - id: credo-risk-021
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-3.1
+  type: Risk
 - id: mit-ai-risk-subdomain-3.1
-  closeMatch:
+  close_mappings:
   - credo-risk-021
+  type: Risk
 - id: credo-risk-021
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-021
+  type: Risk
 - id: credo-risk-021
-  relatedMatch:
+  related_mappings:
   - atlas-spreading-disinformation
+  type: Risk
 - id: atlas-spreading-disinformation
-  relatedMatch:
+  related_mappings:
   - credo-risk-021
+  type: Risk
 - id: credo-risk-021
-  relatedMatch:
+  related_mappings:
   - llm092025-misinformation
+  type: Risk
 - id: llm092025-misinformation
-  relatedMatch:
+  related_mappings:
   - credo-risk-021
+  type: Risk
 - id: credo-risk-021
-  relatedMatch:
+  related_mappings:
   - llm092025-misinformation
+  type: Risk
 - id: llm092025-misinformation
-  relatedMatch:
+  related_mappings:
   - credo-risk-021
+  type: Risk
 - id: credo-risk-022
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-3.2
+  type: Risk
 - id: mit-ai-risk-subdomain-3.2
-  closeMatch:
+  close_mappings:
   - credo-risk-022
+  type: Risk
 - id: credo-risk-022
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-3.2
+  type: Risk
 - id: mit-ai-risk-subdomain-3.2
-  closeMatch:
+  close_mappings:
   - credo-risk-022
+  type: Risk
 - id: credo-risk-022
-  relatedMatch:
+  related_mappings:
   - atlas-decision-bias
+  type: Risk
 - id: atlas-decision-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-022
+  type: Risk
 - id: credo-risk-022
-  relatedMatch:
+  related_mappings:
   - atlas-output-bias
+  type: Risk
 - id: atlas-output-bias
-  relatedMatch:
+  related_mappings:
   - credo-risk-022
+  type: Risk
 - id: credo-risk-022
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - credo-risk-022
+  type: Risk
 - id: credo-risk-022
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - credo-risk-022
+  type: Risk
 - id: credo-risk-023
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-023
+  type: Risk
 - id: credo-risk-023
-  relatedMatch:
+  related_mappings:
   - atlas-legal-accountability
+  type: Risk
 - id: atlas-legal-accountability
-  relatedMatch:
+  related_mappings:
   - credo-risk-023
+  type: Risk
 - id: credo-risk-023
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.4
+  type: Risk
 - id: mit-ai-risk-subdomain-6.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-023
+  type: Risk
 - id: credo-risk-023
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - credo-risk-023
+  type: Risk
 - id: credo-risk-023
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-023
+  type: Risk
 - id: credo-risk-024
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - credo-risk-024
+  type: Risk
 - id: credo-risk-024
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-024
+  type: Risk
 - id: credo-risk-024
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-024
+  type: Risk
 - id: credo-risk-024
-  relatedMatch:
+  related_mappings:
   - atlas-exposing-personal-information
+  type: Risk
 - id: atlas-exposing-personal-information
-  relatedMatch:
+  related_mappings:
   - credo-risk-024
+  type: Risk
 - id: credo-risk-024
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - credo-risk-024
+  type: Risk
 - id: credo-risk-024
-  relatedMatch:
+  related_mappings:
   - atlas-revealing-confidential-information
+  type: Risk
 - id: atlas-revealing-confidential-information
-  relatedMatch:
+  related_mappings:
   - credo-risk-024
+  type: Risk
 - id: credo-risk-024
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-024
+  type: Risk
 - id: credo-risk-025
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-025
+  type: Risk
 - id: credo-risk-025
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-025
+  type: Risk
 - id: credo-risk-025
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - credo-risk-025
+  type: Risk
 - id: credo-risk-026
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-4.3
+  type: Risk
 - id: mit-ai-risk-subdomain-4.3
-  closeMatch:
+  close_mappings:
   - credo-risk-026
+  type: Risk
 - id: credo-risk-026
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-4.3
+  type: Risk
 - id: mit-ai-risk-subdomain-4.3
-  closeMatch:
+  close_mappings:
   - credo-risk-026
+  type: Risk
 - id: credo-risk-026
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-026
+  type: Risk
 - id: credo-risk-026
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-026
+  type: Risk
 - id: credo-risk-026
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-026
+  type: Risk
 - id: credo-risk-027
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-4.2
+  type: Risk
 - id: mit-ai-risk-subdomain-4.2
-  closeMatch:
+  close_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-028
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-028
+  type: Risk
 - id: credo-risk-028
-  relatedMatch:
+  related_mappings:
   - atlas-spreading-disinformation
+  type: Risk
 - id: atlas-spreading-disinformation
-  relatedMatch:
+  related_mappings:
   - credo-risk-028
+  type: Risk
 - id: credo-risk-028
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.1
+  type: Risk
 - id: mit-ai-risk-subdomain-4.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-028
+  type: Risk
 - id: credo-risk-028
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-028
+  type: Risk
 - id: credo-risk-028
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-028
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-029
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-029
+  type: Risk
 - id: credo-risk-030
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.4
+  type: Risk
 - id: mit-ai-risk-subdomain-6.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-030
+  type: Risk
 - id: credo-risk-030
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-030
+  type: Risk
 - id: credo-risk-030
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-030
+  type: Risk
 - id: credo-risk-030
-  relatedMatch:
+  related_mappings:
   - nist-value-chain-and-component-integration
+  type: Risk
 - id: nist-value-chain-and-component-integration
-  relatedMatch:
+  related_mappings:
   - credo-risk-030
+  type: Risk
 - id: credo-risk-031
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-031
+  type: Risk
 - id: credo-risk-031
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-031
+  type: Risk
 - id: credo-risk-031
-  relatedMatch:
+  related_mappings:
   - nist-value-chain-and-component-integration
+  type: Risk
 - id: nist-value-chain-and-component-integration
-  relatedMatch:
+  related_mappings:
   - credo-risk-031
+  type: Risk
 - id: credo-risk-032
-  relatedMatch:
+  related_mappings:
   - atlas-incorrect-risk-testing
+  type: Risk
 - id: atlas-incorrect-risk-testing
-  relatedMatch:
+  related_mappings:
   - credo-risk-032
+  type: Risk
 - id: credo-risk-032
-  relatedMatch:
+  related_mappings:
   - atlas-poor-model-accuracy
+  type: Risk
 - id: atlas-poor-model-accuracy
-  relatedMatch:
+  related_mappings:
   - credo-risk-032
+  type: Risk
 - id: credo-risk-032
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - credo-risk-032
+  type: Risk
 - id: credo-risk-032
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-032
+  type: Risk
 - id: credo-risk-032
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - credo-risk-032
+  type: Risk
 - id: credo-risk-032
-  relatedMatch:
+  related_mappings:
   - llm102025-unbounded-consumption
+  type: Risk
 - id: llm102025-unbounded-consumption
-  relatedMatch:
+  related_mappings:
   - credo-risk-032
+  type: Risk
 - id: credo-risk-033
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  closeMatch:
+  close_mappings:
   - credo-risk-033
+  type: Risk
 - id: credo-risk-033
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  closeMatch:
+  close_mappings:
   - credo-risk-033
+  type: Risk
 - id: credo-risk-033
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-033
+  type: Risk
 - id: credo-risk-033
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.4
+  type: Risk
 - id: mit-ai-risk-subdomain-7.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-033
+  type: Risk
 - id: credo-risk-033
-  relatedMatch:
+  related_mappings:
   - llm082025-vector-and-embedding-weaknesses
+  type: Risk
 - id: llm082025-vector-and-embedding-weaknesses
-  relatedMatch:
+  related_mappings:
   - credo-risk-033
+  type: Risk
 - id: credo-risk-034
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-034
+  type: Risk
 - id: credo-risk-034
-  relatedMatch:
+  related_mappings:
   - atlas-legal-accountability
+  type: Risk
 - id: atlas-legal-accountability
-  relatedMatch:
+  related_mappings:
   - credo-risk-034
+  type: Risk
 - id: credo-risk-034
-  relatedMatch:
+  related_mappings:
   - atlas-nonconsensual-use
+  type: Risk
 - id: atlas-nonconsensual-use
-  relatedMatch:
+  related_mappings:
   - credo-risk-034
+  type: Risk
 - id: credo-risk-034
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-5.1
+  type: Risk
 - id: mit-ai-risk-subdomain-5.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-034
+  type: Risk
 - id: credo-risk-034
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-034
+  type: Risk
 - id: credo-risk-035
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  closeMatch:
+  close_mappings:
   - credo-risk-035
+  type: Risk
 - id: credo-risk-035
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  closeMatch:
+  close_mappings:
   - credo-risk-035
+  type: Risk
 - id: credo-risk-035
-  relatedMatch:
+  related_mappings:
   - llm082025-vector-and-embedding-weaknesses
+  type: Risk
 - id: llm082025-vector-and-embedding-weaknesses
-  relatedMatch:
+  related_mappings:
   - credo-risk-035
+  type: Risk
 - id: credo-risk-036
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  closeMatch:
+  close_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  closeMatch:
+  close_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - atlas-personal-information-in-data
+  type: Risk
 - id: atlas-personal-information-in-data
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - llm052025-improper-output-handling
+  type: Risk
 - id: llm052025-improper-output-handling
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - llm072025-system-prompt-leakage
+  type: Risk
 - id: llm072025-system-prompt-leakage
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-037
-  closeMatch:
+  close_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  closeMatch:
+  close_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  closeMatch:
+  close_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  closeMatch:
+  close_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - atlas-exposing-personal-information
+  type: Risk
 - id: atlas-exposing-personal-information
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - atlas-personal-information-in-data
+  type: Risk
 - id: atlas-personal-information-in-data
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - llm072025-system-prompt-leakage
+  type: Risk
 - id: llm072025-system-prompt-leakage
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-038
-  closeMatch:
+  close_mappings:
   - atlas-revealing-confidential-information
+  type: Risk
 - id: atlas-revealing-confidential-information
-  closeMatch:
+  close_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-038
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-038
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-038
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-038
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-038
-  relatedMatch:
+  related_mappings:
   - nist-information-security
+  type: Risk
 - id: nist-information-security
-  relatedMatch:
+  related_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-038
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-038
-  relatedMatch:
+  related_mappings:
   - llm072025-system-prompt-leakage
+  type: Risk
 - id: llm072025-system-prompt-leakage
-  relatedMatch:
+  related_mappings:
   - credo-risk-038
+  type: Risk
 - id: credo-risk-039
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-039
+  type: Risk
 - id: credo-risk-039
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-039
+  type: Risk
 - id: credo-risk-039
-  relatedMatch:
+  related_mappings:
   - atlas-copyright-infringement
+  type: Risk
 - id: atlas-copyright-infringement
-  relatedMatch:
+  related_mappings:
   - credo-risk-039
+  type: Risk
 - id: credo-risk-039
-  relatedMatch:
+  related_mappings:
   - atlas-copyright-infringement
+  type: Risk
 - id: atlas-copyright-infringement
-  relatedMatch:
+  related_mappings:
   - credo-risk-039
+  type: Risk
 - id: credo-risk-039
-  relatedMatch:
+  related_mappings:
   - nist-intellectual-property
+  type: Risk
 - id: nist-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-039
+  type: Risk
 - id: credo-risk-039
-  relatedMatch:
+  related_mappings:
   - nist-intellectual-property
+  type: Risk
 - id: nist-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-039
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - atlas-exposing-personal-information
+  type: Risk
 - id: atlas-exposing-personal-information
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.2
+  type: Risk
 - id: mit-ai-risk-subdomain-4.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - nist-information-security
+  type: Risk
 - id: nist-information-security
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - llm042025-data-and-model-poisoning
+  type: Risk
 - id: llm042025-data-and-model-poisoning
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - llm072025-system-prompt-leakage
+  type: Risk
 - id: llm072025-system-prompt-leakage
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - llm082025-vector-and-embedding-weaknesses
+  type: Risk
 - id: llm082025-vector-and-embedding-weaknesses
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-040
-  relatedMatch:
+  related_mappings:
   - llm082025-vector-and-embedding-weaknesses
+  type: Risk
 - id: llm082025-vector-and-embedding-weaknesses
-  relatedMatch:
+  related_mappings:
   - credo-risk-040
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - granite-jailbreak
+  type: Risk
 - id: granite-jailbreak
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - atlas-evasion-attack
+  type: Risk
 - id: atlas-evasion-attack
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - nist-information-security
+  type: Risk
 - id: nist-information-security
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - llm042025-data-and-model-poisoning
+  type: Risk
 - id: llm042025-data-and-model-poisoning
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-041
-  relatedMatch:
+  related_mappings:
   - llm072025-system-prompt-leakage
+  type: Risk
 - id: llm072025-system-prompt-leakage
-  relatedMatch:
+  related_mappings:
   - credo-risk-041
+  type: Risk
 - id: credo-risk-042
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.2
+  type: Risk
 - id: mit-ai-risk-subdomain-6.2
-  closeMatch:
+  close_mappings:
   - credo-risk-042
+  type: Risk
 - id: credo-risk-042
-  relatedMatch:
+  related_mappings:
   - granite-unethical-behavior
+  type: Risk
 - id: granite-unethical-behavior
-  relatedMatch:
+  related_mappings:
   - credo-risk-042
+  type: Risk
 - id: credo-risk-042
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-jobs
+  type: Risk
 - id: atlas-impact-on-jobs
-  relatedMatch:
+  related_mappings:
   - credo-risk-042
+  type: Risk
 - id: credo-risk-042
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-jobs
+  type: Risk
 - id: atlas-impact-on-jobs
-  relatedMatch:
+  related_mappings:
   - credo-risk-042
+  type: Risk
 - id: credo-risk-043
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.3
+  type: Risk
 - id: mit-ai-risk-subdomain-6.3
-  closeMatch:
+  close_mappings:
   - credo-risk-043
+  type: Risk
 - id: credo-risk-043
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.3
+  type: Risk
 - id: mit-ai-risk-subdomain-6.3
-  closeMatch:
+  close_mappings:
   - credo-risk-043
+  type: Risk
 - id: credo-risk-043
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-043
+  type: Risk
 - id: credo-risk-044
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.1
+  type: Risk
 - id: mit-ai-risk-subdomain-6.1
-  closeMatch:
+  close_mappings:
   - credo-risk-044
+  type: Risk
 - id: credo-risk-044
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.1
+  type: Risk
 - id: mit-ai-risk-subdomain-6.1
-  closeMatch:
+  close_mappings:
   - credo-risk-044
+  type: Risk
 - id: credo-risk-044
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-cultural-diversity
+  type: Risk
 - id: atlas-impact-on-cultural-diversity
-  relatedMatch:
+  related_mappings:
   - credo-risk-044
+  type: Risk
 - id: credo-risk-044
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-human-agency
+  type: Risk
 - id: atlas-impact-on-human-agency
-  relatedMatch:
+  related_mappings:
   - credo-risk-044
+  type: Risk
 - id: credo-risk-044
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.2
+  type: Risk
 - id: mit-ai-risk-subdomain-6.2
-  relatedMatch:
+  related_mappings:
   - credo-risk-044
+  type: Risk
 - id: credo-risk-044
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.3
+  type: Risk
 - id: mit-ai-risk-subdomain-6.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-044
+  type: Risk
 - id: credo-risk-044
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - credo-risk-044
+  type: Risk
 - id: credo-risk-045
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.4
+  type: Risk
 - id: mit-ai-risk-subdomain-6.4
-  closeMatch:
+  close_mappings:
   - credo-risk-045
+  type: Risk
 - id: credo-risk-045
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.4
+  type: Risk
 - id: mit-ai-risk-subdomain-6.4
-  closeMatch:
+  close_mappings:
   - credo-risk-045
+  type: Risk
 - id: credo-risk-045
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - credo-risk-045
+  type: Risk
 - id: credo-risk-046
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  closeMatch:
+  close_mappings:
   - credo-risk-046
+  type: Risk
 - id: credo-risk-046
-  closeMatch:
+  close_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  closeMatch:
+  close_mappings:
   - credo-risk-046
+  type: Risk
 - id: credo-risk-046
-  relatedMatch:
+  related_mappings:
   - atlas-legal-accountability
+  type: Risk
 - id: atlas-legal-accountability
-  relatedMatch:
+  related_mappings:
   - credo-risk-046
+  type: Risk
 - id: credo-risk-046
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-046
+  type: Risk
 - id: credo-risk-047
-  relatedMatch:
+  related_mappings:
   - nist-value-chain-and-component-integration
+  type: Risk
 - id: nist-value-chain-and-component-integration
-  relatedMatch:
+  related_mappings:
   - credo-risk-047
+  type: Risk
 - id: credo-risk-047
-  relatedMatch:
+  related_mappings:
   - nist-value-chain-and-component-integration
+  type: Risk
 - id: nist-value-chain-and-component-integration
-  relatedMatch:
+  related_mappings:
   - credo-risk-047
+  type: Risk
 - id: credo-risk-047
-  relatedMatch:
+  related_mappings:
   - llm032025-supply-chain
+  type: Risk
 - id: llm032025-supply-chain
-  relatedMatch:
+  related_mappings:
   - credo-risk-047
+  type: Risk
 - id: credo-risk-048
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-048
+  type: Risk
 - id: credo-risk-048
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-048
+  type: Risk
 - id: credo-risk-048
-  relatedMatch:
+  related_mappings:
   - nist-value-chain-and-component-integration
+  type: Risk
 - id: nist-value-chain-and-component-integration
-  relatedMatch:
+  related_mappings:
   - credo-risk-048
+  type: Risk
 - id: credo-risk-048
-  relatedMatch:
+  related_mappings:
   - llm032025-supply-chain
+  type: Risk
 - id: llm032025-supply-chain
-  relatedMatch:
+  related_mappings:
   - credo-risk-048
+  type: Risk
 - id: credo-risk-048
-  relatedMatch:
+  related_mappings:
   - llm032025-supply-chain
+  type: Risk
 - id: llm032025-supply-chain
-  relatedMatch:
+  related_mappings:
   - credo-risk-048
+  type: Risk
 - id: credo-risk-049
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.4
+  type: Risk
 - id: mit-ai-risk-subdomain-6.4
-  relatedMatch:
+  related_mappings:
   - credo-risk-049
+  type: Risk
 - id: credo-risk-049
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - credo-risk-049
+  type: Risk
 - id: credo-risk-049
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.3
+  type: Risk
 - id: mit-ai-risk-subdomain-7.3
-  relatedMatch:
+  related_mappings:
   - credo-risk-049
+  type: Risk
 - id: credo-risk-049
-  relatedMatch:
+  related_mappings:
   - nist-value-chain-and-component-integration
+  type: Risk
 - id: nist-value-chain-and-component-integration
-  relatedMatch:
+  related_mappings:
   - credo-risk-049
+  type: Risk

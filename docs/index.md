@@ -39,6 +39,7 @@ Our intention is to create a starting point for an open AI Systems ontology whos
     - [AI Domain identification](examples/notebooks/domain_identification.ipynb) Uncover ai domain from your usecase
     - [Risk Categorization](examples/notebooks/risk_categorization.ipynb) Assess and categorize the severity of risks associated with an AI system usecase. Prompt templates are used with thanks to https://doi.org/10.48550/arXiv.2407.12454.
     - [Crosswalk](examples/notebooks/generate_crosswalk.ipynb) An example of generating crosswalk information between risks of two different taxonomies.
+    - [Risk to ARES Evaluation](examples/notebooks/risk_to_ares_evaluation.ipynb) ARES Integration for AI Atlas Nexus allows you to run AI robustness evaluations on AI Systems derived from use cases.
 
 
 - **Additional Resources:**
@@ -150,6 +151,16 @@ RITS_API_URL=<RITS url key goes here>
 ```command
 pip install -e ".[rits]"
 ```
+
+## AI Atlas Nexus Extensions
+
+Install AI Atlas Nexus extension using the below command
+```command
+ran-extension install <EXTENSION_NAME>
+```
+
+Currently, following extensions are available
+  - [ran-ares-integration](https://github.com/ibm/ai-atlas-nexus-extensions/tree/main/ran-ares-integration): ARES Integration for AI Atlas Nexus to run AI robustness evaluations on AI Systems derived from use cases.
 
 ## Compatibility
 - View the [releases changelog](https://github.com/IBM/ai-atlas-nexus/releases).

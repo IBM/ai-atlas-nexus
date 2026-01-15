@@ -29,7 +29,29 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/ai-atlas-nexus/ontology/La
 
       LargeLanguageModel : architecture
 
+      LargeLanguageModel : broad_mappings
+
+
+
+
+
+        LargeLanguageModel --> "*" Any : broad_mappings
+        click Any href "../Any/"
+
+
+
       LargeLanguageModel : carbon_emitted
+
+      LargeLanguageModel : close_mappings
+
+
+
+
+
+        LargeLanguageModel --> "*" Any : close_mappings
+        click Any href "../Any/"
+
+
 
       LargeLanguageModel : contextWindowSize
 
@@ -38,6 +60,17 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/ai-atlas-nexus/ontology/La
       LargeLanguageModel : dateModified
 
       LargeLanguageModel : description
+
+      LargeLanguageModel : exact_mappings
+
+
+
+
+
+        LargeLanguageModel --> "*" Any : exact_mappings
+        click Any href "../Any/"
+
+
 
       LargeLanguageModel : fine_tuning
 
@@ -148,6 +181,17 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/ai-atlas-nexus/ontology/La
 
       LargeLanguageModel : name
 
+      LargeLanguageModel : narrow_mappings
+
+
+
+
+
+        LargeLanguageModel --> "*" Any : narrow_mappings
+        click Any href "../Any/"
+
+
+
       LargeLanguageModel : numParameters
 
       LargeLanguageModel : numTrainingTokens
@@ -173,6 +217,28 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/ai-atlas-nexus/ontology/La
 
         LargeLanguageModel --> "0..1" Organization : producer
         click Organization href "../Organization/"
+
+
+
+      LargeLanguageModel : related_mappings
+
+
+
+
+
+        LargeLanguageModel --> "*" Any : related_mappings
+        click Any href "../Any/"
+
+
+
+      LargeLanguageModel : requiresCapability
+
+
+
+
+
+        LargeLanguageModel --> "*" Capability : requiresCapability
+        click Capability href "../Capability/"
 
 
 
@@ -208,6 +274,7 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/ai-atlas-nexus/ontology/La
 | [fine_tuning](fine_tuning.md) | 0..1 <br/> [String](String.md) | A description of the fine-tuning mechanism(s) applied to a model | direct |
 | [supported_languages](supported_languages.md) | * <br/> [String](String.md) | A list of languages, expressed as ISO two letter codes | direct |
 | [isPartOf](isPartOf.md) | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models | direct |
+| [requiresCapability](requiresCapability.md) | * <br/> [Capability](Capability.md) | Indicates that this entry requires a specific capability | direct |
 | [hasEvaluation](hasEvaluation.md) | * <br/> [AiEvalResult](AiEvalResult.md) | A relationship indicating that an entity has an AI evaluation result | [AiModel](AiModel.md) |
 | [architecture](architecture.md) | 0..1 <br/> [String](String.md) | A description of the architecture of an AI such as 'Decoder-only' | [AiModel](AiModel.md) |
 | [gpu_hours](gpu_hours.md) | 0..1 <br/> [Integer](Integer.md) | GPU consumption in terms of hours | [AiModel](AiModel.md) |
@@ -226,7 +293,19 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/ai-atlas-nexus/ontology/La
 | [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
 | [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
 | [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
+
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |
 
 
 
@@ -293,6 +372,7 @@ from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 aliases:
 - LLM
 is_a: AiModel
+mixin: true
 slots:
 - numParameters
 - numTrainingTokens
@@ -303,6 +383,7 @@ slots:
 - fine_tuning
 - supported_languages
 - isPartOf
+- requiresCapability
 slot_usage:
   isPartOf:
     name: isPartOf
@@ -325,6 +406,7 @@ from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 aliases:
 - LLM
 is_a: AiModel
+mixin: true
 slot_usage:
   isPartOf:
     name: isPartOf
@@ -436,10 +518,29 @@ attributes:
     alias: isPartOf
     owner: LargeLanguageModel
     domain_of:
+    - Entry
     - Risk
     - LargeLanguageModel
+    - CapabilityGroup
     - Stakeholder
     range: LargeLanguageModelFamily
+  requiresCapability:
+    name: requiresCapability
+    description: Indicates that this entry requires a specific capability
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    domain: Any
+    alias: requiresCapability
+    owner: LargeLanguageModel
+    domain_of:
+    - Entry
+    - LargeLanguageModel
+    - AiTask
+    - Adapter
+    inverse: requiredByTask
+    range: Capability
+    multivalued: true
+    inlined: false
   hasEvaluation:
     name: hasEvaluation
     description: A relationship indicating that an entity has an AI evaluation result.
@@ -546,6 +647,10 @@ attributes:
     domain_of:
     - Dataset
     - Vocabulary
+    - Taxonomy
+    - Concept
+    - Group
+    - Entry
     - Term
     - Principle
     - RiskTaxonomy
@@ -571,6 +676,7 @@ attributes:
     - Dataset
     - Documentation
     - Vocabulary
+    - Taxonomy
     - RiskTaxonomy
     - BaseAi
     - AiEval
@@ -673,6 +779,79 @@ attributes:
     - Entity
     range: date
     required: false
+  exact_mappings:
+    name: exact_mappings
+    description: The property is used to link two concepts, indicating a high degree
+      of confidence that the concepts can be used interchangeably across a wide range
+      of information retrieval applications
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:exactMatch
+    alias: exact_mappings
+    owner: LargeLanguageModel
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  close_mappings:
+    name: close_mappings
+    description: The property is used to link two concepts that are sufficiently similar
+      that they can be used interchangeably in some information retrieval applications.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:closeMatch
+    alias: close_mappings
+    owner: LargeLanguageModel
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    name: related_mappings
+    description: The property skos:relatedMatch is used to state an associative mapping
+      link between two concepts.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:relatedMatch
+    alias: related_mappings
+    owner: LargeLanguageModel
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    name: narrow_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a narrower concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:narrowMatch
+    alias: narrow_mappings
+    owner: LargeLanguageModel
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    name: broad_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a broader concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:broadMatch
+    alias: broad_mappings
+    owner: LargeLanguageModel
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
 
 ```
 </details>

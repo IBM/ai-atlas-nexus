@@ -10,6 +10,7 @@ imports:
   - linkml:types
   - common
   - ai_risk
+  - ai_capability
   - ai_system
   - ai_eval
   - ai_intrinsic
@@ -21,6 +22,9 @@ prefixes:
 
 default_range: string
 default_prefix: nexus
+
+settings:
+  strict: false
 
 # ----------------
 # Classes
@@ -79,9 +83,27 @@ classes:
         inlined: true
         inlined_as_list: true
       taxonomies:
-        description: A list of AI risk taxonomies
+        description: A list of taxonomies
         multivalued: true
-        range: RiskTaxonomy
+        range: Taxonomy
+        inlined: true
+        inlined_as_list: true
+      concepts:
+        description: A list of concepts
+        multivalued: true
+        range: Concept
+        inlined: true
+        inlined_as_list: true
+      entries:
+        description: A list of entries
+        multivalued: true
+        range: Entry
+        inlined: true
+        inlined_as_list: true
+      groups:
+        description: A list of groups
+        multivalued: true
+        range: Group
         inlined: true
         inlined_as_list: true
       vocabularies:
@@ -90,34 +112,16 @@ classes:
         range: Vocabulary
         inlined: true
         inlined_as_list: true
-      riskgroups:
-        description: A list of AI risk groups
+      controls:
+        description: A list of AI controls
         multivalued: true
-        range: RiskGroup
-        inlined: true
-        inlined_as_list: true
-      risks:
-        description: A list of AI risks
-        multivalued: true
-        range: Risk
-        inlined: true
-        inlined_as_list: true
-      riskcontrols:
-        description: A list of AI risk controls
-        multivalued: true
-        range: RiskControl
+        range: Control
         inlined: true
         inlined_as_list: true
       riskincidents:
         description: A list of AI risk incidents
         multivalued: true
         range: RiskIncident
-        inlined: true
-        inlined_as_list: true
-      terms:
-        description: A list of terms from a vocabulary
-        multivalued: true
-        range: Term
         inlined: true
         inlined_as_list: true
       stakeholdergroups:
@@ -174,12 +178,6 @@ classes:
         range: Policy
         inlined: true
         inlined_as_list: true
-      llmquestionpolicies:
-        description: A list of LLM question policies
-        multivalued: true
-        range: LLMQuestionPolicy
-        inlined: true
-        inlined_as_list: true
       rules:
         description: A list of rules
         multivalued: true
@@ -202,11 +200,5 @@ classes:
         description: A list of Obligations
         multivalued: true
         range: Obligation
-        inlined: true
-        inlined_as_list: true
-      principles:
-        description: A list of Principles
-        multivalued: true
-        range: Principle
         inlined: true
         inlined_as_list: true

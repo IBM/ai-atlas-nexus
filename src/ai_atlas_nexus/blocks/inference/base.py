@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Literal, Optional, Union
 
 import pydantic
-import requests
 
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
@@ -33,7 +32,7 @@ class InferenceEngine(ABC):
                 VLLMInferenceEngineParams,
             ]
         ] = None,
-        think: Optional[bool] = None,
+        think: Optional[Union[bool, Literal["low", "medium", "high"]]] = None,
         concurrency_limit: int = 10,
     ):
         """Create an instance of the InferenceEngine using the `model_name_or_path` and chosen LLM service.

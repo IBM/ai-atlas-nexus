@@ -12,6 +12,8 @@ prefixes:
   nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
   dpv: https://w3id.org/dpv#
   ai: https://w3id.org/dpv/ai#
+  skos: https://www.w3.org/2009/08/skos-reference/skos.html#
+  tech: https://w3id.org/dpv/tech#
 
 default_range: string
 default_prefix: nexus
@@ -22,6 +24,7 @@ classes:
     description:
       A generic grouping for any identifiable entity.
     abstract: true
+    mixin: true
     class_uri: schema:Thing
     slots:
       - id
@@ -30,6 +33,11 @@ classes:
       - url
       - dateCreated
       - dateModified
+      - exact_mappings
+      - close_mappings
+      - related_mappings
+      - narrow_mappings
+      - broad_mappings
 
   Organization:
     is_a: Entity
@@ -75,15 +83,98 @@ classes:
 
   Vocabulary:
     is_a: Entity
+    mixin: true
+    class_uri: skos:ConceptScheme
     description: A collection of terms, with their definitions and relationships.
+    attributes:
+      type:
+        range: string
+        designates_type: true
     slots:
       - version
       - hasDocumentation
       - hasLicense
 
-  Term:
+  Taxonomy:
     is_a: Entity
-    description: A term and its definitions
+    abstract: true
+    mixin: true
+    class_uri: skos:ConceptScheme
+    description: A hierachical taxonomy of concepts, with their definitions and relationships.
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  Concept:
+    is_a: Entity
+    abstract: true
+    mixin: true
+    class_uri: skos:Concept
+    description: A concept
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    slots:
+      - isDefinedByTaxonomy
+      - hasDocumentation
+
+  Control:
+    is_a: Entity
+    abstract: true
+    mixin: true
+    class_uri: nexus:Control
+    description: A measure that maintains and/or modifies
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    slots:
+      - isDefinedByTaxonomy
+
+  Group:
+    is_a: Entity
+    abstract: true
+    mixin: true
+    class_uri: skos:Collection
+    description: Labelled groups of concepts.
+    attributes:
+      type:
+        range: string
+        designates_type: true
+        ifabsent: string(Group)
+    slots:
+      - isDefinedByTaxonomy
+      - hasDocumentation
+      - hasPart
+      - belongsToDomain
+
+  Entry:
+    is_a: Entity
+    abstract: true
+    class_uri: nexus:Entry
+    description: An entry and its definitions.
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    slots:
+      - isDefinedByTaxonomy
+      - isDefinedByVocabulary
+      - hasDocumentation
+      - isPartOf
+      - requiredByTask
+      - requiresCapability
+      - implementedByAdapter
+
+  Term:
+    is_a: Entry
+    description: A term and its definitions.
     slots:
       - isDefinedByVocabulary
       - hasDocumentation
@@ -92,16 +183,21 @@ classes:
       - hasRelatedRisk
 
   Principle:
-    is_a: Entity
-    description: A representation of values or norms that must be taken into consideration when conducting activities
+    is_a: Entry
+    description: A representation of values or norms that must be taken into consideration when conducting activities.
     class_uri: dpv:Principle
     slots:
       - hasDocumentation
 
   Policy:
     is_a: Entity
+    abstract: true
     description: "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."
     class_uri: dpv:Policy
+    attributes:
+      type:
+        range: string
+        designates_type: true
     slots:
       - isDefinedByTaxonomy
 
@@ -134,6 +230,8 @@ classes:
     is_a: Rule
     description: "A rule describing an obligation for performing an activity"
     class_uri: dpv:Obligation
+
+
 
 slots:
   id:
@@ -206,9 +304,48 @@ slots:
     slot_uri: schema:isPartOf
     description: A relationship where an entity is part of another entity
   hasPart:
-    slot_uri: schema:hasPart
+    slot_uri: skos:member
     description: A relationship where an entity has another entity
     multivalued: true
+  hasCapability:
+    slot_uri: tech:hasCapability
+    description: >
+      Indicates the technical capabilities this entry possesses.
+    multivalued: true
+    inlined: false
+    range: Capability
+  requiredByTask:
+    description: >-
+      Indicates that this entry is required to perform a specific AI task.
+    range: AiTask
+    multivalued: true
+    inlined: false
+    inverse: requiresCapability
+  requiresCapability:
+    description: Indicates that this entry requires a specific capability
+    domain: Any
+    range: Capability
+    multivalued: true
+    inlined: false
+    inverse: requiredByTask
+  implementedByAdapter:
+    description: >
+      Indicates that this capability is implemented by a specific adapter.
+      This relationship distinguishes the abstract capability (what can be done) from
+      the technical implementation mechanism (how it is added/extended via adapters).
+    domain: Any
+    range: Adapter
+    multivalued: true
+    inlined: false
+    inverse: implementsCapability
+  implementsCapability:
+    description: Indicates that this adapter implements a specific capability
+    domain: Any
+    range: Capability
+    multivalued: true
+    inlined: false
+    inverse: implementedByAdapter
+
   hasTerm:
     slot_uri: nexus:hasTerm
     range: Term
@@ -260,3 +397,44 @@ slots:
     multivalued: false
     inlined: true
     description: Exception type
+  isDefinedByTaxonomy:
+    slot_uri: schema:isPartOf
+    description: A relationship where a concept or a concept group is defined by a taxonomy
+    range: Taxonomy
+  close_mappings:
+    slot_uri: skos:closeMatch
+    description: The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.
+    range: Any
+    multivalued: true
+    inlined: false
+  exact_mappings:
+    slot_uri: skos:exactMatch
+    description: The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    slot_uri: skos:broadMatch
+    description: The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    slot_uri: skos:narrowMatch
+    description: The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    slot_uri: skos:relatedMatch
+    description: The property skos:relatedMatch is used to state an associative mapping link between two concepts.
+    range: Any
+    multivalued: true
+    inlined: false
+  belongsToDomain:
+    description: >-
+      A relationship where a group belongs to a domain
+    range: Any
+    multivalued: false
+    inlined: false
+    slot_uri: schema:isPartOf

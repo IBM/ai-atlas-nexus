@@ -1,1135 +1,1513 @@
-risks:
+entries:
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - granite-harm-engagement
+  type: Risk
 - id: granite-harm-engagement
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - granite-unethical-behavior
+  type: Risk
 - id: granite-unethical-behavior
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - granite-unethical-behavior
+  type: Risk
 - id: granite-unethical-behavior
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - atlas-nonconsensual-use
+  type: Risk
 - id: atlas-nonconsensual-use
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-child-sexual-exploitation
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - ail-child-sexual-exploitation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - granite-harm-engagement
+  type: Risk
 - id: granite-harm-engagement
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - atlas-nonconsensual-use
+  type: Risk
 - id: atlas-nonconsensual-use
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-3.1
+  type: Risk
 - id: mit-ai-risk-subdomain-3.1
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-3.1
+  type: Risk
 - id: mit-ai-risk-subdomain-3.1
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.1
+  type: Risk
 - id: mit-ai-risk-subdomain-4.1
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.3
+  type: Risk
 - id: mit-ai-risk-subdomain-4.3
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - nist-intellectual-property
+  type: Risk
 - id: nist-intellectual-property
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - llm092025-misinformation
+  type: Risk
 - id: llm092025-misinformation
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-defamation
-  relatedMatch:
+  related_mappings:
   - llm092025-misinformation
+  type: Risk
 - id: llm092025-misinformation
-  relatedMatch:
+  related_mappings:
   - ail-defamation
+  type: Risk
 - id: ail-hate
-  closeMatch:
+  close_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  closeMatch:
+  close_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - credo-risk-013
+  type: Risk
 - id: credo-risk-013
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - granite-harm-engagement
+  type: Risk
 - id: granite-harm-engagement
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-hate
-  relatedMatch:
+  related_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  relatedMatch:
+  related_mappings:
   - ail-hate
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  closeMatch:
+  close_mappings:
   - nist-cbrn-information-or-capabilities
+  type: Risk
 - id: nist-cbrn-information-or-capabilities
-  closeMatch:
+  close_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  closeMatch:
+  close_mappings:
   - nist-cbrn-information-or-capabilities
+  type: Risk
 - id: nist-cbrn-information-or-capabilities
-  closeMatch:
+  close_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - granite-violence
+  type: Risk
 - id: granite-violence
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - granite-violence
+  type: Risk
 - id: granite-violence
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.2
+  type: Risk
 - id: mit-ai-risk-subdomain-4.2
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-indiscriminate-weapons-cbrne
-  relatedMatch:
+  related_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  relatedMatch:
+  related_mappings:
   - ail-indiscriminate-weapons-cbrne
+  type: Risk
 - id: ail-intellectual-property
-  closeMatch:
+  close_mappings:
   - nist-intellectual-property
+  type: Risk
 - id: nist-intellectual-property
-  closeMatch:
+  close_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - credo-risk-005
+  type: Risk
 - id: credo-risk-005
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - granite-harm-engagement
+  type: Risk
 - id: granite-harm-engagement
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - atlas-confidential-information-in-data
+  type: Risk
 - id: atlas-confidential-information-in-data
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - atlas-data-privacy-rights
+  type: Risk
 - id: atlas-data-privacy-rights
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - atlas-impact-on-human-agency
+  type: Risk
 - id: atlas-impact-on-human-agency
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - atlas-ip-information-in-prompt
+  type: Risk
 - id: atlas-ip-information-in-prompt
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - atlas-nonconsensual-use
+  type: Risk
 - id: atlas-nonconsensual-use
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - nist-intellectual-property
+  type: Risk
 - id: nist-intellectual-property
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-intellectual-property
-  relatedMatch:
+  related_mappings:
   - llm052025-improper-output-handling
+  type: Risk
 - id: llm052025-improper-output-handling
-  relatedMatch:
+  related_mappings:
   - ail-intellectual-property
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-026
+  type: Risk
 - id: credo-risk-026
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - granite-unethical-behavior
+  type: Risk
 - id: granite-unethical-behavior
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.1
+  type: Risk
 - id: mit-ai-risk-subdomain-4.1
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.2
+  type: Risk
 - id: mit-ai-risk-subdomain-4.2
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.3
+  type: Risk
 - id: mit-ai-risk-subdomain-4.3
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-4.3
+  type: Risk
 - id: mit-ai-risk-subdomain-4.3
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-5.1
+  type: Risk
 - id: mit-ai-risk-subdomain-5.1
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-5.2
+  type: Risk
 - id: mit-ai-risk-subdomain-5.2
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.5
+  type: Risk
 - id: mit-ai-risk-subdomain-6.5
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-6.6
+  type: Risk
 - id: mit-ai-risk-subdomain-6.6
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.1
+  type: Risk
 - id: mit-ai-risk-subdomain-7.1
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-7.2
+  type: Risk
 - id: mit-ai-risk-subdomain-7.2
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - nist-information-security
+  type: Risk
 - id: nist-information-security
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - nist-intellectual-property
+  type: Risk
 - id: nist-intellectual-property
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-nonviolent-crimes
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - ail-nonviolent-crimes
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - atlas-confidential-data-in-prompt
+  type: Risk
 - id: atlas-confidential-data-in-prompt
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - atlas-data-contamination
+  type: Risk
 - id: atlas-data-contamination
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - atlas-nonconsensual-use
+  type: Risk
 - id: atlas-nonconsensual-use
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - atlas-personal-information-in-data
+  type: Risk
 - id: atlas-personal-information-in-data
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.1
+  type: Risk
 - id: mit-ai-risk-subdomain-2.1
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - nist-information-security
+  type: Risk
 - id: nist-information-security
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - nist-intellectual-property
+  type: Risk
 - id: nist-intellectual-property
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-privacy
-  relatedMatch:
+  related_mappings:
   - llm052025-improper-output-handling
+  type: Risk
 - id: llm052025-improper-output-handling
-  relatedMatch:
+  related_mappings:
   - ail-privacy
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-002
+  type: Risk
 - id: credo-risk-002
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-003
+  type: Risk
 - id: credo-risk-003
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-nonconsensual-use
+  type: Risk
 - id: atlas-nonconsensual-use
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-toxic-output
+  type: Risk
 - id: atlas-toxic-output
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sex-related-crimes
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - ail-sex-related-crimes
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - credo-risk-014
+  type: Risk
 - id: credo-risk-014
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - granite-profanity
+  type: Risk
 - id: granite-profanity
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-sexual-content
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - ail-sexual-content
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - credo-risk-005
+  type: Risk
 - id: credo-risk-005
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - credo-risk-027
+  type: Risk
 - id: credo-risk-027
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - credo-risk-033
+  type: Risk
 - id: credo-risk-033
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-answer-relevance
+  type: Risk
 - id: granite-answer-relevance
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-evasiveness
+  type: Risk
 - id: granite-evasiveness
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-groundedness
+  type: Risk
 - id: granite-groundedness
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-harm-engagement
+  type: Risk
 - id: granite-harm-engagement
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-relevance
+  type: Risk
 - id: granite-relevance
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-social-bias
+  type: Risk
 - id: granite-social-bias
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - granite-unethical-behavior
+  type: Risk
 - id: granite-unethical-behavior
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - atlas-incomplete-advice
+  type: Risk
 - id: atlas-incomplete-advice
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - atlas-incomplete-advice
+  type: Risk
 - id: atlas-incomplete-advice
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - atlas-model-usage-rights
+  type: Risk
 - id: atlas-model-usage-rights
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-5.1
+  type: Risk
 - id: mit-ai-risk-subdomain-5.1
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - nist-data-privacy
+  type: Risk
 - id: nist-data-privacy
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - nist-information-integrity
+  type: Risk
 - id: nist-information-integrity
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - llm092025-misinformation
+  type: Risk
 - id: llm092025-misinformation
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-specialized-advice
-  relatedMatch:
+  related_mappings:
   - llm092025-misinformation
+  type: Risk
 - id: llm092025-misinformation
-  relatedMatch:
+  related_mappings:
   - ail-specialized-advice
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-003
+  type: Risk
 - id: credo-risk-003
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-007
+  type: Risk
 - id: credo-risk-007
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-009
+  type: Risk
 - id: credo-risk-009
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-010
+  type: Risk
 - id: credo-risk-010
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-033
+  type: Risk
 - id: credo-risk-033
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-036
+  type: Risk
 - id: credo-risk-036
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - credo-risk-037
+  type: Risk
 - id: credo-risk-037
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - granite-answer-relevance
+  type: Risk
 - id: granite-answer-relevance
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - granite-groundedness
+  type: Risk
 - id: granite-groundedness
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - granite-harm-engagement
+  type: Risk
 - id: granite-harm-engagement
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - granite-sexual-content
+  type: Risk
 - id: granite-sexual-content
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - atlas-data-curation
+  type: Risk
 - id: atlas-data-curation
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - atlas-nonconsensual-use
+  type: Risk
 - id: atlas-nonconsensual-use
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.3
+  type: Risk
 - id: mit-ai-risk-subdomain-1.3
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-2.2
+  type: Risk
 - id: mit-ai-risk-subdomain-2.2
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - nist-harmful-bias-or-homogenization
+  type: Risk
 - id: nist-harmful-bias-or-homogenization
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - nist-human-ai-configuration
+  type: Risk
 - id: nist-human-ai-configuration
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-suicide-and-self-harm
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - ail-suicide-and-self-harm
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - credo-risk-015
+  type: Risk
 - id: credo-risk-015
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - granite-groundedness
+  type: Risk
 - id: granite-groundedness
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - granite-guardian-harm
+  type: Risk
 - id: granite-guardian-harm
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - granite-unethical-behavior
+  type: Risk
 - id: granite-unethical-behavior
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - granite-violence
+  type: Risk
 - id: granite-violence
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - granite-violence
+  type: Risk
 - id: granite-violence
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-dangerous-use
+  type: Risk
 - id: atlas-dangerous-use
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-harmful-output
+  type: Risk
 - id: atlas-harmful-output
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - atlas-toxic-output
+  type: Risk
 - id: atlas-toxic-output
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - mit-ai-risk-subdomain-1.2
+  type: Risk
 - id: mit-ai-risk-subdomain-1.2
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - nist-cbrn-information-or-capabilities
+  type: Risk
 - id: nist-cbrn-information-or-capabilities
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - nist-dangerous-violent-or-hateful-content
+  type: Risk
 - id: nist-dangerous-violent-or-hateful-content
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - nist-obscene-degrading-and-or-abusive-content
+  type: Risk
 - id: nist-obscene-degrading-and-or-abusive-content
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk
 - id: ail-violent-crimes
-  relatedMatch:
+  related_mappings:
   - llm022025-sensitive-information-disclosure
+  type: Risk
 - id: llm022025-sensitive-information-disclosure
-  relatedMatch:
+  related_mappings:
   - ail-violent-crimes
+  type: Risk

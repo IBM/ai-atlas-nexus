@@ -23,7 +23,7 @@ default_prefix: nexus
 classes:
 
   StakeholderGroup:
-    is_a: Entity
+    is_a: Group
     description: An AI system stakeholder grouping.
     slots:
     - isDefinedByTaxonomy

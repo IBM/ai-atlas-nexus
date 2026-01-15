@@ -17,15 +17,70 @@ URI: [dpv:Severity](https://w3id.org/dpv#Severity)
       Entity <|-- Severity
         click Entity href "../Entity/"
 
+      Severity : broad_mappings
+
+
+
+
+
+        Severity --> "*" Any : broad_mappings
+        click Any href "../Any/"
+
+
+
+      Severity : close_mappings
+
+
+
+
+
+        Severity --> "*" Any : close_mappings
+        click Any href "../Any/"
+
+
+
       Severity : dateCreated
 
       Severity : dateModified
 
       Severity : description
 
+      Severity : exact_mappings
+
+
+
+
+
+        Severity --> "*" Any : exact_mappings
+        click Any href "../Any/"
+
+
+
       Severity : id
 
       Severity : name
+
+      Severity : narrow_mappings
+
+
+
+
+
+        Severity --> "*" Any : narrow_mappings
+        click Any href "../Any/"
+
+
+
+      Severity : related_mappings
+
+
+
+
+
+        Severity --> "*" Any : related_mappings
+        click Any href "../Any/"
+
+
 
       Severity : url
 
@@ -52,6 +107,11 @@ URI: [dpv:Severity](https://w3id.org/dpv#Severity)
 | [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
 | [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
 | [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 
 
@@ -192,6 +252,79 @@ attributes:
     - Entity
     range: date
     required: false
+  exact_mappings:
+    name: exact_mappings
+    description: The property is used to link two concepts, indicating a high degree
+      of confidence that the concepts can be used interchangeably across a wide range
+      of information retrieval applications
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:exactMatch
+    alias: exact_mappings
+    owner: Severity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  close_mappings:
+    name: close_mappings
+    description: The property is used to link two concepts that are sufficiently similar
+      that they can be used interchangeably in some information retrieval applications.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:closeMatch
+    alias: close_mappings
+    owner: Severity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    name: related_mappings
+    description: The property skos:relatedMatch is used to state an associative mapping
+      link between two concepts.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:relatedMatch
+    alias: related_mappings
+    owner: Severity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    name: narrow_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a narrower concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:narrowMatch
+    alias: narrow_mappings
+    owner: Severity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    name: broad_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a broader concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:broadMatch
+    alias: broad_mappings
+    owner: Severity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
 class_uri: dpv:Severity
 
 ```

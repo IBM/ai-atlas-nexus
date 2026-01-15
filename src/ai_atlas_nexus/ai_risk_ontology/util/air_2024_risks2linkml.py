@@ -66,7 +66,7 @@ def create_container_object() -> Container:
                     + group_l2["l2-name"].lower().replace(" ", "-"),
                     "name": group_l2["l2-name"],
                     "isDefinedByTaxonomy": "ai-risk-taxonomy",
-                    "narrowMatch": list(
+                    "narrow_mappings": list(
                         set(
                             [
                                 "ai-risk-taxonomy-" + cat.lower().replace(" ", "-")
@@ -87,7 +87,7 @@ def create_container_object() -> Container:
                     + group_l3["l3-name"].lower().replace(" ", "-"),
                     "name": group_l3["l3-name"],
                     "isDefinedByTaxonomy": "ai-risk-taxonomy",
-                    "broadMatch": list(
+                    "broad_mappings": list(
                         set(
                             [
                                 "ai-risk-taxonomy-" + cat.lower().replace(" ", "-")

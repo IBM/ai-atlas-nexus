@@ -33,43 +33,52 @@ class JSONGraphDumper(Dumper):
         # Export classes as nodes
         for class_name in self.schema_view.all_classes():
             cls = self.schema_view.get_class(class_name)
-            class_node = {
-                "key": f"{class_name}",
-                "node_type": "schema_class",
-                "tag": "schema_class",
-                "name": class_name,
-                "label": cls.name,
-                "description": cls.description or "",
-                "abstract": cls.abstract or False,
-                "attributes": {
-                    "class_uri": cls.class_uri,
-                    "definition_uri": cls.definition_uri,
-                },
-            }
-            self.nodes.append(class_node)
-            self.processed_ids.add(class_node["key"])
-            self.processed_tags.add("schema_class")
+
+            if "type" in cls.model_fields_set:
+                # check for a subclass
+                label = cls.__getattribute__("type")
+            else:
+                label = cls.name
+
+            if class_name not in self.processed_ids:
+                class_node = {
+                    "key": f"{class_name}",
+                    "node_type": "schema_class",
+                    "tag": "schema_class",
+                    "name": label,
+                    "label": label,
+                    "description": cls.description or "",
+                    "abstract": cls.abstract or False,
+                    "attributes": {
+                        "class_uri": cls.class_uri,
+                        "definition_uri": cls.definition_uri,
+                    },
+                }
+                self.nodes.append(class_node)
+                self.processed_ids.add(class_node["key"])
+                self.processed_tags.add("schema_class")
 
         # Export slots as nodes
         for slot_name in self.schema_view.all_slots():
-            slot = self.schema_view.get_slot(slot_name)
-            slot_node = {
-                "key": f"schema_slot:{slot_name}",
-                "node_type": "schema_slot",
-                "tag": "schema_slot",
-                "name": slot_name,
-                "label": slot.name,
-                "description": slot.description or "",
-                "attributes": {
-                    "range": slot.range,
-                    "multivalued": slot.multivalued or False,
-                    "required": slot.required or False,
-                    "slot_uri": slot.slot_uri,
-                },
-            }
-            self.nodes.append(slot_node)
-            self.processed_ids.add(slot_node["key"])
-            self.processed_tags.add("schema_slot")
+            if slot_name not in self.processed_ids:
+                slot = self.schema_view.get_slot(slot_name)
+                slot_node = {
+                    "key": f"schema_slot:{slot_name}",
+                    "node_type": "schema_slot",
+                    "tag": "schema_slot",
+                    "name": slot_name,
+                    "label": slot.name,
+                    "description": slot.description or "",
+                    "attributes": {
+                        "range": slot.range,
+                        "multivalued": slot.multivalued or False,
+                        "required": slot.required or False,
+                        "slot_uri": slot.slot_uri,
+                    },
+                }
+                self.nodes.append(slot_node)
+                self.processed_ids.add(slot_node["key"])
+                self.processed_tags.add("schema_slot")
 
         # Export schema relationships as edges
         self._export_schema_relationships()

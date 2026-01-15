@@ -22,11 +22,44 @@ URI: [schema:Dataset](http://schema.org/Dataset)
       Entity <|-- Dataset
         click Entity href "../Entity/"
 
+      Dataset : broad_mappings
+
+
+
+
+
+        Dataset --> "*" Any : broad_mappings
+        click Any href "../Any/"
+
+
+
+      Dataset : close_mappings
+
+
+
+
+
+        Dataset --> "*" Any : close_mappings
+        click Any href "../Any/"
+
+
+
       Dataset : dateCreated
 
       Dataset : dateModified
 
       Dataset : description
+
+      Dataset : exact_mappings
+
+
+
+
+
+        Dataset --> "*" Any : exact_mappings
+        click Any href "../Any/"
+
+
 
       Dataset : hasDocumentation
 
@@ -54,6 +87,17 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 
       Dataset : name
 
+      Dataset : narrow_mappings
+
+
+
+
+
+        Dataset --> "*" Any : narrow_mappings
+        click Any href "../Any/"
+
+
+
       Dataset : provider
 
 
@@ -62,6 +106,17 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 
         Dataset --> "0..1" Organization : provider
         click Organization href "../Organization/"
+
+
+
+      Dataset : related_mappings
+
+
+
+
+
+        Dataset --> "*" Any : related_mappings
+        click Any href "../Any/"
 
 
 
@@ -93,6 +148,11 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 | [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
 | [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
 | [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 
 
@@ -184,6 +244,7 @@ attributes:
     - Dataset
     - Documentation
     - Vocabulary
+    - Taxonomy
     - RiskTaxonomy
     - BaseAi
     - AiEval
@@ -201,6 +262,10 @@ attributes:
     domain_of:
     - Dataset
     - Vocabulary
+    - Taxonomy
+    - Concept
+    - Group
+    - Entry
     - Term
     - Principle
     - RiskTaxonomy
@@ -297,6 +362,79 @@ attributes:
     - Entity
     range: date
     required: false
+  exact_mappings:
+    name: exact_mappings
+    description: The property is used to link two concepts, indicating a high degree
+      of confidence that the concepts can be used interchangeably across a wide range
+      of information retrieval applications
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:exactMatch
+    alias: exact_mappings
+    owner: Dataset
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  close_mappings:
+    name: close_mappings
+    description: The property is used to link two concepts that are sufficiently similar
+      that they can be used interchangeably in some information retrieval applications.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:closeMatch
+    alias: close_mappings
+    owner: Dataset
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    name: related_mappings
+    description: The property skos:relatedMatch is used to state an associative mapping
+      link between two concepts.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:relatedMatch
+    alias: related_mappings
+    owner: Dataset
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    name: narrow_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a narrower concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:narrowMatch
+    alias: narrow_mappings
+    owner: Dataset
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    name: broad_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a broader concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:broadMatch
+    alias: broad_mappings
+    owner: Dataset
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
 class_uri: schema:Dataset
 
 ```

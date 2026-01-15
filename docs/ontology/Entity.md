@@ -31,24 +31,20 @@ URI: [schema:Thing](http://schema.org/Thing)
         click Documentation href "../Documentation/"
       Entity <|-- Vocabulary
         click Vocabulary href "../Vocabulary/"
-      Entity <|-- Term
-        click Term href "../Term/"
-      Entity <|-- Principle
-        click Principle href "../Principle/"
+      Entity <|-- Taxonomy
+        click Taxonomy href "../Taxonomy/"
+      Entity <|-- Concept
+        click Concept href "../Concept/"
+      Entity <|-- Control
+        click Control href "../Control/"
+      Entity <|-- Group
+        click Group href "../Group/"
+      Entity <|-- Entry
+        click Entry href "../Entry/"
       Entity <|-- Policy
         click Policy href "../Policy/"
       Entity <|-- Rule
         click Rule href "../Rule/"
-      Entity <|-- RiskTaxonomy
-        click RiskTaxonomy href "../RiskTaxonomy/"
-      Entity <|-- RiskGroup
-        click RiskGroup href "../RiskGroup/"
-      Entity <|-- Risk
-        click Risk href "../Risk/"
-      Entity <|-- RiskConcept
-        click RiskConcept href "../RiskConcept/"
-      Entity <|-- RiskControl
-        click RiskControl href "../RiskControl/"
       Entity <|-- RiskIncident
         click RiskIncident href "../RiskIncident/"
       Entity <|-- Impact
@@ -65,8 +61,6 @@ URI: [schema:Thing](http://schema.org/Thing)
         click BaseAi href "../BaseAi/"
       Entity <|-- LargeLanguageModelFamily
         click LargeLanguageModelFamily href "../LargeLanguageModelFamily/"
-      Entity <|-- AiTask
-        click AiTask href "../AiTask/"
       Entity <|-- AiLifecyclePhase
         click AiLifecyclePhase href "../AiLifecyclePhase/"
       Entity <|-- Modality
@@ -79,14 +73,30 @@ URI: [schema:Thing](http://schema.org/Thing)
         click AiEvalResult href "../AiEvalResult/"
       Entity <|-- BenchmarkMetadataCard
         click BenchmarkMetadataCard href "../BenchmarkMetadataCard/"
-      Entity <|-- Adapter
-        click Adapter href "../Adapter/"
-      Entity <|-- LLMIntrinsic
-        click LLMIntrinsic href "../LLMIntrinsic/"
-      Entity <|-- StakeholderGroup
-        click StakeholderGroup href "../StakeholderGroup/"
       Entity <|-- Stakeholder
         click Stakeholder href "../Stakeholder/"
+
+      Entity : broad_mappings
+
+
+
+
+
+        Entity --> "*" Any : broad_mappings
+        click Any href "../Any/"
+
+
+
+      Entity : close_mappings
+
+
+
+
+
+        Entity --> "*" Any : close_mappings
+        click Any href "../Any/"
+
+
 
       Entity : dateCreated
 
@@ -94,9 +104,42 @@ URI: [schema:Thing](http://schema.org/Thing)
 
       Entity : description
 
+      Entity : exact_mappings
+
+
+
+
+
+        Entity --> "*" Any : exact_mappings
+        click Any href "../Any/"
+
+
+
       Entity : id
 
       Entity : name
+
+      Entity : narrow_mappings
+
+
+
+
+
+        Entity --> "*" Any : narrow_mappings
+        click Any href "../Any/"
+
+
+
+      Entity : related_mappings
+
+
+
+
+
+        Entity --> "*" Any : related_mappings
+        click Any href "../Any/"
+
+
 
       Entity : url
 
@@ -114,15 +157,13 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [Dataset](Dataset.md)
     * [Documentation](Documentation.md)
     * [Vocabulary](Vocabulary.md)
-    * [Term](Term.md)
-    * [Principle](Principle.md)
+    * [Taxonomy](Taxonomy.md)
+    * [Concept](Concept.md)
+    * [Control](Control.md)
+    * [Group](Group.md)
+    * [Entry](Entry.md)
     * [Policy](Policy.md)
     * [Rule](Rule.md)
-    * [RiskTaxonomy](RiskTaxonomy.md)
-    * [RiskGroup](RiskGroup.md) [ [RiskConcept](RiskConcept.md)]
-    * [Risk](Risk.md) [ [RiskConcept](RiskConcept.md)]
-    * [RiskConcept](RiskConcept.md)
-    * [RiskControl](RiskControl.md) [ [RiskConcept](RiskConcept.md)]
     * [RiskIncident](RiskIncident.md) [ [RiskConcept](RiskConcept.md)]
     * [Impact](Impact.md) [ [RiskConcept](RiskConcept.md)]
     * [IncidentStatus](IncidentStatus.md)
@@ -131,16 +172,12 @@ URI: [schema:Thing](http://schema.org/Thing)
     * [Consequence](Consequence.md)
     * [BaseAi](BaseAi.md)
     * [LargeLanguageModelFamily](LargeLanguageModelFamily.md)
-    * [AiTask](AiTask.md)
     * [AiLifecyclePhase](AiLifecyclePhase.md)
     * [Modality](Modality.md)
     * [Input](Input.md)
     * [AiEval](AiEval.md)
     * [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
     * [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
-    * [Adapter](Adapter.md) [ [LargeLanguageModel](LargeLanguageModel.md)]
-    * [LLMIntrinsic](LLMIntrinsic.md)
-    * [StakeholderGroup](StakeholderGroup.md)
     * [Stakeholder](Stakeholder.md)
 
 
@@ -155,7 +192,18 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | direct |
 | [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | direct |
 | [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | direct |
+| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | direct |
+| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | direct |
+| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | direct |
+| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | direct |
+| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | direct |
 
+
+
+## Mixin Usage
+
+| mixed into | description |
+| --- | --- |
 
 
 
@@ -204,6 +252,7 @@ name: Entity
 description: A generic grouping for any identifiable entity.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 abstract: true
+mixin: true
 slots:
 - id
 - name
@@ -211,6 +260,11 @@ slots:
 - url
 - dateCreated
 - dateModified
+- exact_mappings
+- close_mappings
+- related_mappings
+- narrow_mappings
+- broad_mappings
 class_uri: schema:Thing
 
 ```
@@ -224,6 +278,7 @@ name: Entity
 description: A generic grouping for any identifiable entity.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 abstract: true
+mixin: true
 attributes:
   id:
     name: id
@@ -297,6 +352,79 @@ attributes:
     - Entity
     range: date
     required: false
+  exact_mappings:
+    name: exact_mappings
+    description: The property is used to link two concepts, indicating a high degree
+      of confidence that the concepts can be used interchangeably across a wide range
+      of information retrieval applications
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:exactMatch
+    alias: exact_mappings
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  close_mappings:
+    name: close_mappings
+    description: The property is used to link two concepts that are sufficiently similar
+      that they can be used interchangeably in some information retrieval applications.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:closeMatch
+    alias: close_mappings
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    name: related_mappings
+    description: The property skos:relatedMatch is used to state an associative mapping
+      link between two concepts.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:relatedMatch
+    alias: related_mappings
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    name: narrow_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a narrower concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:narrowMatch
+    alias: narrow_mappings
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    name: broad_mappings
+    description: The property is used to state a hierarchical mapping link between
+      two concepts, indicating that the concept linked to, is a broader concept than
+      the originating concept.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:broadMatch
+    alias: broad_mappings
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
 class_uri: schema:Thing
 
 ```

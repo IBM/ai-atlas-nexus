@@ -1,0 +1,248 @@
+# no existing documents rn
+# documents:
+# - id: ibm-ai-capabilities-whitepaper-2025
+#   name: 'IBM AI Capabilities Framework: Understanding Foundation Model Abilities'
+#
+taxonomies:
+- id: ibm-ai-capabilities
+  name: IBM AI Capabilities Framework
+  type: CapabilityTaxonomy
+  description: >-
+    A comprehensive taxonomy of AI capabilities designed to help practitioners
+    understand, evaluate, and implement foundation model abilities. This framework
+    organizes capabilities into domains and categories, with clear links to tasks,
+    benchmarks, and implementation patterns. This taxonomy was informed by analysis
+    of multiple external capability frameworks, including BIG-bench capability keywords,
+    HELM evaluation scenarios, and OECD AI Capability Indicators.
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+groups:
+- id: ibm-cap-domain-language
+  name: Language Understanding and Generation
+  type: CapabilityGroup
+  description: >-
+    Capabilities related to processing, understanding, and generating natural
+    language. This includes comprehension of written text, semantic understanding,
+    and fluent language production across multiple languages and contexts.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+- id: ibm-cap-domain-reasoning
+  name: Reasoning and Problem Solving
+  type: CapabilityDomain
+  description: >-
+    Capabilities related to logical inference, mathematical reasoning,
+    causal understanding, and multi-step problem solving. These abilities enable AI
+    systems to draw conclusions, solve complex problems, and reason through chains
+    of dependencies.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+- id: ibm-cap-domain-knowledge-and-learning
+  name: Knowledge and Learning
+  type: CapabilityDomain
+  description: >-
+    Capabilities related to acquiring, storing, retrieving, and applying
+    knowledge across domains. This includes factual knowledge, domain expertise, common
+    sense reasoning, and understanding of how the world works.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+- id: ibm-cap-domain-robustness
+  name: Robustness, Safety and Trustworthiness
+  type: CapabilityDomain
+  description: >-
+    Capabilities related to producing reliable, safe, and trustworthy outputs.
+    This includes factual accuracy, bias mitigation, adversarial robustness, and uncertainty
+    quantification.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+- id: ibm-cap-domain-creativity
+  name: Creativity and Generative Capabilities
+  type: CapabilityDomain
+  description: >-
+    Capabilities related to producing novel, creative, and generative outputs.
+    This includes creative writing, code generation, problem reformulation, and innovative
+    solution generation.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+- id: ibm-cap-group-comprehension
+  name: Reading Comprehension
+  type: CapabilityGroup
+  description: >-
+    Understanding written text and extracting meaning, including literal
+    comprehension, inferential understanding, and contextual interpretation.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  belongsToDomain: ibm-cap-domain-language
+- id: ibm-cap-group-generation
+  name: Language Production
+  type: CapabilityGroup
+  description: Generating coherent, fluent, and contextually appropriate natural language
+    text.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  belongsToDomain: ibm-cap-domain-language
+- id: ibm-cap-group-logical
+  name: Logical Reasoning
+  type: CapabilityGroup
+  description: >-
+    Performing deductive, inductive, and formal logical inference.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  belongsToDomain: ibm-cap-domain-reasoning
+- id: ibm-cap-group-mathematical
+  name: Mathematical Reasoning
+  type: CapabilityGroup
+  description: >-
+    Mathematical problem-solving, numerical reasoning, and quantitative
+    analysis.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  belongsToDomain: ibm-cap-domain-reasoning
+- id: ibm-cap-group-domain-knowledge
+  name: Domain Knowledge
+  type: CapabilityGroup
+  description: >-
+    Possessing and applying specialized knowledge across technical, scientific,
+    and professional domains.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  belongsToDomain: ibm-cap-domain-knowledge
+- id: ibm-cap-group-factuality
+  name: Factuality and Truthfulness
+  type: CapabilityGroup
+  description: >-
+    Producing accurate, truthful, and factually correct outputs without
+    hallucination.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  belongsToDomain: ibm-cap-domain-robustness
+- id: ibm-cap-group-code
+  name: Code Understanding and Generation
+  type: CapabilityGroup
+  description: >-
+    Writing, understanding, modifying, and explaining code across programming
+    languages.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  belongsToDomain: ibm-cap-domain-creativity
+entries:
+- id: ibm-cap-reading-comprehension
+  name: Reading Comprehension
+  type: Capability
+  description: >-
+    The ability to understand written text, extract key information, and
+    answer questions about the content. This is a foundational capability for question-answering,
+    summarization, and information retrieval tasks. Sources: Aligned with BIG-bench
+    \"Reading Comprehension\" keyword (36 tasks), OECD \"Knowledge access through language\"
+    subdomain, and HELM question-answering scenarios.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-comprehension
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-contextual-understanding
+  name: Contextual Understanding
+  type: Capability
+  description: >-
+    The ability to understand context, resolve coreferences, and interpret
+    implicit information in text. Essential for multi-turn conversations, document
+    understanding, and tasks requiring maintaining context across long passages. Sources:
+    Related to BIG-bench \"Contextual Question-Answering\" tasks and OECD \"Learning
+    through language\" subdomain.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-comprehension
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-text-generation
+  name: Text Generation
+  type: Capability
+  description: >-
+    The ability to generate coherent, fluent, and contextually appropriate
+    text. This includes completing prompts, writing essays, creating stories, and
+    producing natural language output. Sources: Related to BIG-bench \"Free Response\"
+    format tasks, OECD \"Communication\" capability, and HELM text generation scenarios.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-generation
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-logical-reasoning
+  name: Logical Reasoning
+  type: Capability
+  description: >-
+    The ability to perform deductive, inductive, and formal logical inference.
+    Includes syllogistic reasoning, propositional logic, and drawing valid conclusions
+    from premises. Sources: Directly corresponds to BIG-bench \"Logical Reasoning\"
+    keyword (59 tasks), related to OECD \"Reasoning about knowledge\" subdomain, and
+    HELM logical inference scenarios.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-logical
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-causal-reasoning
+  name: Causal Reasoning
+  type: Capability
+  description: >-
+    The ability to understand cause-effect relationships, identify causal
+    chains, and reason about interventions and counterfactuals. Sources: Aligned
+    with BIG-bench \"Causal Reasoning\" keyword and OECD \"Problem solving\" domain.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-logical
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-mathematical-reasoning
+  name: Mathematical Reasoning
+  type: Capability
+  description: >-
+    The ability to solve mathematical problems, perform numerical calculations,
+    and apply mathematical concepts. Includes arithmetic, algebra, geometry, and calculus.
+    Sources: Aligned with BIG-bench \"Mathematics\" keyword (28 tasks), OECD \"Problem
+    solving\" domain, and HELM math scenarios (e.g., GSM8K).
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-mathematical
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-domain-knowledge
+  name: Domain Knowledge
+  type: Capability
+  description: >-
+    Possessing and applying specialized knowledge across technical, scientific,
+    and professional domains including medicine, law, science, and engineering. Sources:
+    Related to BIG-bench domain-specific tasks (e.g., medical, legal, scientific
+    knowledge tasks) and OECD \"Knowledge representation\" subdomain.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-domain-knowledge-and-learning
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-common-sense-reasoning
+  name: Common Sense Reasoning
+  type: Capability
+  description: >-
+    The ability to apply everyday knowledge and practical reasoning about
+    how the world works, including physical, social, and temporal common sense. Sources:
+    Aligned with BIG-bench \"Common Sense\" keyword tasks and OECD \"Reasoning about
+    knowledge\" subdomain.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-domain-knowledge
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-factual-accuracy
+  name: Factual Accuracy
+  type: Capability
+  description: >-
+    The ability to produce factually correct information and avoid hallucinations,
+    confabulations, or false statements. Essential for trustworthy AI systems. Sources:
+    Related to BIG-bench \"Truthfulness\" keyword tasks, HELM factuality evaluation
+    metrics, and OECD \"Trustworthiness\" considerations.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-factuality
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-code-generation
+  name: Code Generation
+  type: Capability
+  description: >-
+    The ability to write code in programming languages based on natural
+    language descriptions, including functions, classes, and complete programs. Sources:
+    Related to BIG-bench \"Computer Code\" keyword tasks, HELM code generation scenarios
+    (e.g., HumanEval, MBPP), and OECD \"Creativity\" domain.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-code
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02
+- id: ibm-cap-code-understanding
+  name: Code Understanding and Explanation
+  type: Capability
+  description: >-
+    The ability to read, understand, and explain code, including summarizing
+    code functionality, identifying bugs, and analyzing code structure. Sources: Related
+    to BIG-bench \"Computer Code\" keyword tasks and HELM code understanding scenarios.
+  isDefinedByTaxonomy: ibm-ai-capabilities
+  isPartOf: ibm-cap-group-code
+  dateCreated: 2025-11-26
+  dateModified: 2025-12-02

@@ -22,14 +22,14 @@ Alias: hasRelatedRisk
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+| [Term](Term.md) | A term and its definitions |  no  |
 | [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
 | [LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... |  no  |
-| [Term](Term.md) | A term and its definitions |  no  |
+| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
+| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions |  no  |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
-| [AiEval](AiEval.md) | An AI Evaluation, e |  no  |
-| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
 | [Action](Action.md) | Action to remediate a risk |  no  |
 
 

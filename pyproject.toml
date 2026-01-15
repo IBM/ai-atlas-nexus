@@ -1,6 +1,6 @@
 [project]
 name = "ai-atlas-nexus"
-version = "1.1.1"
+version = "1.2.0"
 authors = [
     { name = "AI Atlas Nexus", email = "ai-atlas-nexus@ibm.com" },
     { name = "Elizabeth Daly", email = "elizabeth.daly@ie.ibm.com" },
@@ -55,7 +55,8 @@ dependencies = [
     "jsonschema",
     "isort",
     "pre-commit",
-    "typer"
+    "typer",
+    "inflect"
 ]
 
 

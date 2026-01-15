@@ -32,11 +32,11 @@ class TestShieldGemmaIntegration(TestCaseBase):
         # Verify each risk has required attributes
         for risk in shieldgemma_risks:
             self.assertTrue(
-                hasattr(risk, 'relatedMatch'),
-                f"Risk {risk.id} missing relatedMatch"
+                hasattr(risk, 'related_mappings'),
+                f"Risk {risk.id} missing related_mappings"
             )
             self.assertGreater(
-                len(risk.relatedMatch),
+                len(risk.related_mappings),
                 0,
                 f"Risk {risk.id} has no related matches"
             )
@@ -118,7 +118,7 @@ class TestShieldGemmaIntegration(TestCaseBase):
         self.assertIsNotNone(atlas_risk, "Could not retrieve atlas-toxic-output")
 
         # Check ShieldGemma relationships
-        shieldgemma_related = [r for r in atlas_risk.relatedMatch if 'shieldgemma' in r]
+        shieldgemma_related = [r for r in atlas_risk.related_mappings if 'shieldgemma' in r]
         self.assertGreater(
             len(shieldgemma_related),
             0,
@@ -183,13 +183,13 @@ class TestShieldGemmaIntegration(TestCaseBase):
         shieldgemma_controls_from_api = [c for c in related_controls if 'shieldgemma' in c.id]
 
         # Note: This test documents current behavior. If the API doesn't traverse
-        # through relatedMatch relationships, this will be 0 and the assertion will
+        # through related_mappings relationships, this will be 0 and the assertion will
         # produce a warning message in the output
         if len(shieldgemma_controls_from_api) == 0:
             # Log warning but don't fail the test
             print(f"\nWARNING: get_related_risk_controls('atlas-toxic-output') returned 0 ShieldGemma controls")
             print(f"Total controls returned: {len(related_controls)}")
-            print(f"This may indicate the API doesn't traverse through relatedMatch relationships")
+            print(f"This may indicate the API doesn't traverse through related_mappings relationships")
 
     def test_get_related_risk_controls_from_shieldgemma_risk(self):
         """Test get_related_risk_controls() from ShieldGemma risk directly"""

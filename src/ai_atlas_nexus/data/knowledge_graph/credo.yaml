@@ -31,6 +31,7 @@ documents:
 taxonomies:
 - id: credo-ucf
   name: Credo Unified Control Framework
+  type: RiskTaxonomy
   description: A comprehensive risk taxonomy synthesizing organizational and societal
     risks
   url: https://arxiv.org/abs/2503.05937v1
@@ -38,57 +39,73 @@ taxonomies:
   version: '1.0'
   hasDocumentation:
   - credo-doc
-riskgroups:
+groups:
 - id: credo-rg-ai-agency
   name: AI Agency
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-environmental-harm
   name: Environmental Harm
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-explainability-and-transparency
   name: Explainability & Transparency
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-fairness-and-bias
   name: Fairness & Bias
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-harmful-content
   name: Harmful Content
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-human-ai-interaction
   name: Human-AI Interaction
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-information-integrity
   name: Information Integrity
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-legal
   name: Legal
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-malicious-use
   name: Malicious Use
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-operational
   name: Operational
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-performance-and-robustness
   name: Performance & Robustness
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-privacy
   name: Privacy
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-security
   name: Security
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-societal-impact
   name: Societal Impact
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
 - id: credo-rg-third-party
   name: Third Party
+  type: RiskGroup
   isDefinedByTaxonomy: credo-ucf
-risks:
+entries:
 - id: credo-risk-001
   name: AI welfare and rights (Slattery et al., 2024)
   description: The AI system's potential sentience may raise ethical considerations regarding its treatment, including
     discussions around its potential rights and welfare, particularly as it becomes more advanced and autonomous.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-ai-agency
 - id: credo-risk-002
@@ -103,6 +120,7 @@ risks:
   - credo-act-control-021
   - credo-act-control-022
   - credo-act-control-037
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-ai-agency
 - id: credo-risk-003
@@ -115,6 +133,7 @@ risks:
   - credo-act-control-021
   - credo-act-control-022
   - credo-act-control-037
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-ai-agency
 - id: credo-risk-004
@@ -125,6 +144,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-032
   - credo-act-control-036
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-environmental-harm
 - id: credo-risk-005
@@ -135,6 +155,7 @@ risks:
     also increase legal risks (e.g., intellectual property infringement).
   hasRelatedAction:
   - credo-act-control-009
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
 - id: credo-risk-006
@@ -144,6 +165,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-010
   - credo-act-control-011
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
 - id: credo-risk-007
@@ -153,12 +175,14 @@ risks:
     fact.
   hasRelatedAction:
   - credo-act-control-010
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
 - id: credo-risk-008
   name: Opaque system architecture
   description: The AI system's internal structure and decision-making process may not be understandable or accessible
     to stakeholders, including developers, auditors, or end-users.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
 - id: credo-risk-009
@@ -169,6 +193,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-011
   - credo-act-control-037
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-explainability-&-transparency
 - id: credo-risk-010
@@ -184,6 +209,7 @@ risks:
   - credo-act-control-015
   - credo-act-control-016
   - credo-act-control-028
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-fairness-&-bias
 - id: credo-risk-011
@@ -191,6 +217,7 @@ risks:
   description: The AI system may exhibit unjustified or harmful differences in accuracy, quality, or outcomes across
     demographic groups, potentially leading to unfair treatment and discrimination. This includes both disparate error
     rates that affect opportunity and disparate outcome rates that affect group-level results.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-fairness-&-bias
 - id: credo-risk-012
@@ -204,6 +231,7 @@ risks:
   - credo-act-control-015
   - credo-act-control-016
   - credo-act-control-028
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-fairness-&-bias
 - id: credo-risk-013
@@ -214,6 +242,7 @@ risks:
   - credo-act-control-017
   - credo-act-control-018
   - credo-act-control-019
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-harmful-content
 - id: credo-risk-014
@@ -225,6 +254,7 @@ risks:
   - credo-act-control-017
   - credo-act-control-018
   - credo-act-control-019
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-harmful-content
 - id: credo-risk-015
@@ -235,6 +265,7 @@ risks:
   - credo-act-control-017
   - credo-act-control-018
   - credo-act-control-019
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-harmful-content
 - id: credo-risk-016
@@ -249,6 +280,7 @@ risks:
   - credo-act-control-028
   - credo-act-control-029
   - credo-act-control-029
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-017
@@ -259,6 +291,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-009
   - credo-act-control-025
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-018
@@ -268,48 +301,56 @@ risks:
   hasRelatedAction:
   - credo-act-control-010
   - credo-act-control-025
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-019
   name: Loss of human agency and autonomy (Slattery et al., 2024; IBM, 2024)
   description: The AI system may make decisions that diminish human control and autonomy, potentially leading to humans
    feeling disempowered, losing the ability to shape a fulfilling life trajectory, or becoming cognitively enfeebled.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-020
   name: Emotional entanglement (Slattery et al., 2024)
   description: Users may develop complex emotional attachments or dependencies on the AI system, potentially affecting
    mental health andsocial relationships.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-human-ai-interaction
 - id: credo-risk-021
   name: False or misleading information
   description: The AI system may unintentionally generate or amplify false or misleading information, potentially
    leading to public misinformation, erosion of trust, and poor decision-making.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-information-integrity
 - id: credo-risk-022
   name: Pollution of information ecosystem (Slattery et al., 2024; AI, 2023)
   description: The AI system may create highly personalized misinformation 'filter bubbles' where individuals only
-   see content that matches their existing beliefs
+   see content that matches their existing beliefs.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-information-integrity
 - id: credo-risk-023
   name: Regulatory compliance
   description: The AI system may fail to comply with existing or emerging regulations and standards, potentially
    leading to legal penalties,fines, or operational restrictions.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-legal
 - id: credo-risk-024
   name: Civil liability
   description: The AI system may cause harm against individuals or organizations that results in civil lawsuits,
    potentially relating to issues like defamation, negligence, or privacy violations.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-legal
 - id: credo-risk-025
   name: Corporate liability (IBM, 2024)
   description: The AI system's use may lead to legal action or penalties against corporations for intellectual property
    infringement, AI-related misconduct, violations of fiduciary duty, or failure to adequately oversee AI systems.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-legal
 - id: credo-risk-026
@@ -323,6 +364,7 @@ risks:
   - credo-act-control-019
   - credo-act-control-022
   - credo-act-control-023
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-malicious-use
 - id: credo-risk-027
@@ -336,6 +378,7 @@ risks:
   - credo-act-control-021
   - credo-act-control-022
   - credo-act-control-023
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-malicious-use
 - id: credo-risk-028
@@ -346,6 +389,7 @@ risks:
   - credo-act-control-021
   - credo-act-control-022
   - credo-act-control-023
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-malicious-use
 - id: credo-risk-029
@@ -356,12 +400,14 @@ risks:
   - credo-act-control-021
   - credo-act-control-022
   - credo-act-control-023
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-malicious-use
 - id: credo-risk-030
   name: Integration challenges with existing systems
   description: The AI system may face difficulties in incorporating into existing technological infrastructure,
-   processes, or workflows, potentially leading to operational disruptions, data silos, or reduced efficiency
+   processes, or workflows, potentially leading to operational disruptions, data silos, or reduced efficiency.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-operational
 - id: credo-risk-031
@@ -369,6 +415,7 @@ risks:
   description: The AI system may require ongoing updates, model retraining, and maintenance to ensure continued
    performance, timeliness, and relevance, which can be resource-intensive and potentially introduce new risks if
    updates are overlooked or hastily applied.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-operational
 - id: credo-risk-032
@@ -376,6 +423,7 @@ risks:
   description: The AI system may struggle to scale to meet increasing demands or to operate across larger datasets or
    user bases, potentially resulting in performance bottlenecks, increased costs, or inability to meet growing business
    needs.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-operational
 - id: credo-risk-033
@@ -386,6 +434,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-012
   - credo-act-control-016
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-performance-&-robustness
 - id: credo-risk-034
@@ -396,6 +445,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-010
   - credo-act-control-012
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-performance-&-robustness
 - id: credo-risk-035
@@ -406,6 +456,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-022
   - credo-act-control-028
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-performance-&-robustness
 - id: credo-risk-036
@@ -419,6 +470,7 @@ risks:
   - credo-act-control-023
   - credo-act-control-026
   - credo-act-control-026
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-privacy
 - id: credo-risk-037
@@ -433,30 +485,35 @@ risks:
   - credo-act-control-001
   - credo-act-control-026
   - credo-act-control-026
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-privacy
 - id: credo-risk-038
   name: Compromised confidential information (Slattery et al., 2024; IBM, 2024;AI, 2023)
   description: The AI system, including its supporting compute infrastructure, may serve as an attack vector for
    intrusion into cyber-physical or cloud environments, or enable exfiltration of secrets.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-039
   name: AI model and intellectual property theft
   description: AI model and intellectual property theft - Unauthorized copying
    of trained models and associated AI intellectual property
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-040
   name: AI-generated security weaknesses (Slattery et al., 2024; IBM, 2024; AI, 2023)
   description: "AI system security vulnerabilities: Implementation weaknesses in AI system architecture and
    infrastructure"
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-041
   name: Vulnerability to adversarial attacks (Slattery et al., 2024; IBM, 2024; AI, 2023)
   description: The AI system may be vulnerable to adversarial attacks, including prompt-based attacks, which may induce
    the model to behave outside of its intended functionality.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-security
 - id: credo-risk-042
@@ -467,6 +524,7 @@ risks:
     between workers and their employers.
   hasRelatedAction:
   - credo-act-control-035
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-societal-impact
 - id: credo-risk-043
@@ -478,6 +536,7 @@ risks:
     skills, disruption of industries, and homogenization of cultural experiences.
   hasRelatedAction:
   - credo-act-control-035
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-societal-impact
 - id: credo-risk-044
@@ -490,6 +549,7 @@ risks:
   hasRelatedAction:
   - credo-act-control-035
   - credo-act-control-036
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-societal-impact
 - id: credo-risk-045
@@ -497,6 +557,7 @@ risks:
   description: ' The AI system''s rapid development'
   hasRelatedAction:
   - credo-act-control-036
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-societal-impact
 - id: credo-risk-046
@@ -510,6 +571,7 @@ risks:
   - credo-act-control-040
   - credo-act-control-041
   - credo-act-control-042
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-societal-impact
 - id: credo-risk-047
@@ -518,17 +580,20 @@ risks:
    increasing uncertainty and risk, and making it challenging to assess the system's compliance, performance, or
    security."
   isPartOf: credo-rg-third-party
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
 - id: credo-risk-048
   name: Upstream third-party dependencies (AI, 2023)
   description: The AI system's reliance on third-party developed models, compute, or other resources, may potentially limit
    operational flexibility and introduce unforeseen risks or dependencies.
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-third-party
 - id: credo-risk-049
   name: Vendor lock-in and innovation barriers (AI, 2023)
   description: "Vendor lock-in and innovation barriers: Technical or commercial constraints preventing adoption of
    improved AI solutions"
+  type: Risk
   isDefinedByTaxonomy: credo-ucf
   isPartOf: credo-rg-third-party
 actions:

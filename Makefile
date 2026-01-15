@@ -42,7 +42,7 @@ regenerate_documentation:
 	gen-doc -d docs/ontology $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
 
 lift_mappings_from_tsv:
-	python ./src/ai_atlas_nexus/ai_risk_ontology/util/lifting/import_risk_mappings.py
+	python ./src/ai_atlas_nexus/ai_risk_ontology/util/lifting/import_entity_mappings.py
 
 compile_pydantic_model:
 	gen-pydantic --meta auto $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml > ${DATAMODEL_PATH}/ai_risk_ontology.py

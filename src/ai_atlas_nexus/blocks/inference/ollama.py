@@ -149,16 +149,13 @@ class OllamaInferenceEngine(InferenceEngine):
             raise RiskInferenceError(str(e))
 
     def _prepare_prediction_output(self, response):
+        _CHAT_API = True if hasattr(response, "message") else False
         return TextGenerationInferenceOutput(
-            prediction=(
-                response.message.content
-                if hasattr(response, "message")
-                else response.response
-            ),
+            prediction=response.message.content if _CHAT_API else response.response,
             input_tokens=response.prompt_eval_count,
             output_tokens=response.eval_count,
             stop_reason=response.done_reason,
-            thinking=response.thinking if hasattr(response, "thinking") else None,
+            thinking=response.message.thinking if _CHAT_API else response.thinking,
             model_name_or_path=self.model_name_or_path,
             logprobs=(
                 {output.token: output.logprob for output in response.logprobs}

@@ -18,7 +18,7 @@ default_prefix: nexus
 classes:
 
   RiskTaxonomy:
-    is_a: Entity
+    is_a: Taxonomy
     description: A taxonomy of AI system related risks
     slots:
       - version
@@ -26,7 +26,7 @@ classes:
       - hasLicense
 
   RiskGroup:
-    is_a: Entity
+    is_a: Group
     description: A group of AI system related risks that are part of a risk taxonomy.
     mixins:
       - RiskConcept
@@ -36,15 +36,10 @@ classes:
         range: Risk
     slots:
       - isDefinedByTaxonomy
-      - closeMatch
-      - exactMatch
-      - broadMatch
-      - narrowMatch
-      - relatedMatch
       - hasPart
 
   Risk:
-    is_a: Entity
+    is_a: Entry
     mixins:
       - RiskConcept
     description: The state of uncertainty associated with an AI system, that has the potential to cause harms
@@ -52,7 +47,7 @@ classes:
     attributes:
       tag:
         description: A shost version of the name
-      type:
+      risk_type:
         description: Annotation whether an AI risk occurs at input or output or is non-technical.
       phase:
         description: Annotation whether an AI risk shows specifically during the training-tuning or inference phase.
@@ -69,22 +64,19 @@ classes:
       - hasRelatedAction
       - isDefinedByTaxonomy
       - isPartOf
-      - closeMatch
-      - exactMatch
-      - broadMatch
-      - narrowMatch
-      - relatedMatch
       - detectsRiskConcept
 
   RiskConcept:
-    is_a: Entity
-    description: An umbrella term for refering to risk, risk source, consequence and impact.
+    is_a: Concept
+    mixin: true
+    description: An umbrella term for referring to risk, risk source, consequence and impact.
     class_uri: airo:RiskConcept
     slots:
       - isDetectedBy
 
   RiskControl:
-    is_a: Entity
+    is_a: Control
+    mixin: true
     mixins:
       - RiskConcept
     class_uri: airo:RiskControl
@@ -171,10 +163,6 @@ classes:
     class_uri: dpv:Consequence
 
 slots:
-  isDefinedByTaxonomy:
-    slot_uri: schema:isPartOf
-    description: A relationship where a risk or a risk group is defined by a risk taxonomy
-    range: RiskTaxonomy
   hasAiActorTask:
     description: "Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action in the subcategory (i.e., some apply to AI development and others apply to AI deployment)."
     multivalued: true
@@ -190,51 +178,6 @@ slots:
   hasRelatedAction:
     description: A relationship where an entity relates to an action
     range: Action
-    multivalued: true
-    inlined: false
-  closeMatch:
-    slot_uri: skos:closeMatch
-    description: The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.
-    range: Any
-    any_of:
-      - range: Risk
-      - range: RiskGroup
-    multivalued: true
-    inlined: false
-  exactMatch:
-    slot_uri: skos:exactMatch
-    description: The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications
-    range: Any
-    any_of:
-      - range: Risk
-      - range: RiskGroup
-    multivalued: true
-    inlined: false
-  broadMatch:
-    slot_uri: skos:broadMatch
-    description: The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.
-    range: Any
-    any_of:
-      - range: Risk
-      - range: RiskGroup
-    multivalued: true
-    inlined: false
-  narrowMatch:
-    slot_uri: skos:narrowMatch
-    description: The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.
-    range: Any
-    any_of:
-      - range: Risk
-      - range: RiskGroup
-    multivalued: true
-    inlined: false
-  relatedMatch:
-    slot_uri: skos:relatedMatch
-    description: The property skos:relatedMatch is used to state an associative mapping link between two concepts.
-    range: Any
-    any_of:
-      - range: Risk
-      - range: RiskGroup
     multivalued: true
     inlined: false
   detectsRiskConcept:

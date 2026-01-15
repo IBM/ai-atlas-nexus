@@ -105,6 +105,9 @@ def get_linkml_types(schema_view: SchemaView) -> list[str]:
     type_names.extend(str(node.uri) for node in schema_view.all_types().values())
     return list(set(type_names))
 
+def get_induced_slots_with_subclasses(schema_view: SchemaView,linkml_class: str):
+    class_slots = [item for sublist in [schema_view.class_induced_slots(lml_c) for lml_c in schema_view.class_descendants(linkml_class)] for item in sublist]
+    return class_slots
 
 def is_relationship(
     schema_view: SchemaView,
@@ -112,13 +115,15 @@ def is_relationship(
     linkml_slot: str,
     linkml_types: list[str],
 ) -> bool:
-    class_slots = schema_view.class_induced_slots(linkml_class)
+    class_slots = get_induced_slots_with_subclasses(schema_view=schema_view, linkml_class=linkml_class)
     assert linkml_slot in [
         slot.name for slot in class_slots
     ], f"{linkml_slot} is not a known slot for class {linkml_class}."
-    slot_def = [slot for slot in class_slots if slot.name == linkml_slot].pop()
-    if slot_def.range not in linkml_types:
-        return True
+    slot_defs = [slot for slot in class_slots if slot.name == linkml_slot]
+    if slot_defs:
+        slot_def = slot_defs.pop()
+        if slot_def.range not in linkml_types:
+            return True
     return False
 
 
@@ -126,6 +131,11 @@ def convert_entity_to_graph_node(
     entity: BaseModel, label: str, schema_view: SchemaView, linkml_types: list[str]
 ) -> list[GraphNode]:
     return_list: list[GraphNode] = []
+
+    if "type" in entity.model_fields_set:
+       # check for a subclass
+       label =  entity.__getattribute__("type")
+
     # Extract properties, namely slots that have a generic LinkML type as range
     properties = {
         item: entity.__getattribute__(item)
@@ -143,7 +153,7 @@ def convert_entity_to_graph_node(
         and entity.__getattribute__(item) is not None
     ]
     # Retrieve all LinkML slot definitions
-    slot_definitions = schema_view.class_induced_slots(label)
+    slot_definitions = get_induced_slots_with_subclasses(schema_view=schema_view, linkml_class=label)
     for slot_name in relation_slots:
         slot_definition = [
             item for item in slot_definitions if item.name == slot_name

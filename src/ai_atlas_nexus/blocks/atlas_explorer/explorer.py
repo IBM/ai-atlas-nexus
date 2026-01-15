@@ -1,8 +1,12 @@
 from typing import Any, Dict, List
 
+import inflect
+
 from ai_atlas_nexus.blocks.risk_explorer.base import ExplorerBase
 from ai_atlas_nexus.data.knowledge_graph import *
 
+
+ie = inflect.engine()
 
 class AtlasExplorer(ExplorerBase):
 
@@ -20,12 +24,25 @@ class AtlasExplorer(ExplorerBase):
         """
         return list(self._data.model_fields_set)
 
+    def _check_subclasses(self, result, class_name):
+        # look for subclasses within container collections
+        for collection_key, collection_data in self._data:
+            instances = collection_data if isinstance(collection_data, list) else []
+
+            for instance in instances:
+                instance_type_name = type(instance).__name__
+                possible_singular = ie.singular_noun(class_name)
+                if instance_type_name.lower() == class_name or (possible_singular and instance_type_name.lower() == possible_singular.lower()):
+                    result.append(instance)
+
+        return result
+
     def get_all(self, class_name=None, taxonomy=None, vocabulary=None, document=None):
         """
         Get all the instances of a specified class.
 
         Args:
-            class_name: str
+            class_name: Union[str | list | None]:
                 Name of the class (the collection key in data)
             taxonomy: str
                 (Optional) The string id for a taxonomy
@@ -38,16 +55,27 @@ class AtlasExplorer(ExplorerBase):
             list[Dict[str, Any]]
                 List of instances
         """
+        class_names = []
 
-        key = class_name
-        if key not in self._data:
-            for k in self._data.model_fields_set:
-                # handle both the snake_case and the actual class name
-                if k.lower().replace('_', '') == class_name.lower().replace('_', ''):
-                    key = k
-                    break
+        if isinstance(class_name, str):
+            class_names.append(class_name)
+        else:
+            class_names = class_name
+        result = []
 
-        result = getattr(self._data, key) if hasattr(self._data, key) else []
+        for key in class_names:
+            if key not in self._data:
+                for k in self._data.model_fields_set:
+                    # snake_case and the actual class name
+                    if k.lower().replace('_', '') == key.lower().replace('_', ''):
+                        key = k
+                        break
+
+            if hasattr(self._data, key):
+                result = getattr(self._data, key)
+            else:
+                result = self._check_subclasses(result, class_name)
+
         if taxonomy is not None:
             result = list(
                 filter(
@@ -150,7 +178,7 @@ class AtlasExplorer(ExplorerBase):
         A query method using keyword arguments.
 
         Args:
-            class_name: str
+            class_name: Union[str | list]
                 Name of the class (the collection key in data)
             **kwargs:
                 The attribute-value pairs to filter by
@@ -166,7 +194,7 @@ class AtlasExplorer(ExplorerBase):
         Filter instances by multiple criteria.
 
         Args:
-            class_name: str
+            class_name: Union[str | list]
                 Name of the class (the collection key in data)
             filters: Dict[str, Any]
                 Dictionary of attribute-value pairs
@@ -179,12 +207,15 @@ class AtlasExplorer(ExplorerBase):
         matches = []
 
         for instance in instances:
+            match = []
+            for k, v in filters.items():
+                if v is not None:
+                    if ((type(getattr(instance, k)) == str and getattr(instance, k) == v) or (type(getattr(instance, k)) == list and v in getattr(instance, k))):
+                        match.append(1)
+                    else:
+                        match.append(0)
 
-            if all(
-                (type(getattr(instance, k)) == str and getattr(instance, k) == v)
-                or
-                (type(getattr(instance, k)) == list and v in getattr(instance, k))
-                for k, v in filters.items() if v is not None):
+            if not 0 in match:
                 matches.append(instance)
 
         return matches

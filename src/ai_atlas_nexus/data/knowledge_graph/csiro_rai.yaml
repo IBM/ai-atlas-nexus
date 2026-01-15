@@ -2,7 +2,7 @@ documents:
 - id: CSIRO-responsible-ai-pattern-catalogue-doc
   name: 'Responsible AI Pattern Catalogue: A Collection of Best Practices for AI Governance and Engineering'
   description: >-
-    "Responsible Artificial Intelligence (RAI) is widely considered as one of the greatest scientific challenges of our
+    Responsible Artificial Intelligence (RAI) is widely considered as one of the greatest scientific challenges of our
     time and is key to increase the adoption of Artificial Intelligence (AI). Recently, a number of AI ethics
     principles frameworks have been published. However, without further guidance on best practices, practitioners are
     left with nothing much beyond truisms. In addition, significant efforts have been placed at algorithm level rather
@@ -14,13 +14,14 @@ documents:
     practice to ensure that the developed AI systems are responsible throughout the entire governance and engineering
     lifecycle. The RAI Pattern Catalogue classifies the patterns into three groups: multi-level governance patterns,
     trustworthy process patterns, and RAI-by-design product patterns. These patterns provide systematic and actionable
-    guidance for stakeholders to implement RAI."
+    guidance for stakeholders to implement RAI.
   url: https://doi.org/10.1145/3626234
   dateCreated: 2024-04-09
 
 taxonomies:
 - id: csiro-responsible-ai-patterns
   name: CSIRO Responsible AI Pattern Catalogue
+  type: RiskTaxonomy
   description: >-
     A pattern-oriented approach is taken to build up the Responsible AI Pattern Catalogue, for operationalizing
     responsible AI from a system perspective.
