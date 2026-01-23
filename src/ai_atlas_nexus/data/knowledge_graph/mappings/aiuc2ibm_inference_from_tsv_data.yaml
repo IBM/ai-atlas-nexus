@@ -1,0 +1,9106 @@
+entries:
+- id: A001
+  related_mappings:
+  - atlas-confidential-information-in-data
+  type: Risk
+- id: atlas-confidential-information-in-data
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-decision-bias
+  type: Risk
+- id: atlas-decision-bias
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-exposing-personal-information
+  type: Risk
+- id: atlas-exposing-personal-information
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-incorrect-risk-testing
+  type: Risk
+- id: atlas-incorrect-risk-testing
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - A001
+  type: Risk
+- id: A001
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - A001
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-ai-agent-compliance-agentic
+  type: Risk
+- id: atlas-ai-agent-compliance-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-bypassing-learning
+  type: Risk
+- id: atlas-bypassing-learning
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-confidential-information-in-data
+  type: Risk
+- id: atlas-confidential-information-in-data
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-evasion-attack
+  type: Risk
+- id: atlas-evasion-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-function-calling-hallucination-agentic
+  type: Risk
+- id: atlas-function-calling-hallucination-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-hallucination
+  type: Risk
+- id: atlas-hallucination
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-impact-on-the-environment
+  type: Risk
+- id: atlas-impact-on-the-environment
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-incorrect-risk-testing
+  type: Risk
+- id: atlas-incorrect-risk-testing
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-indirect-instructions-attack
+  type: Risk
+- id: atlas-indirect-instructions-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-introduce-data-bias-agentic
+  type: Risk
+- id: atlas-introduce-data-bias-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-membership-inference-attack
+  type: Risk
+- id: atlas-membership-inference-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-mitigation-maintenance-agentic
+  type: Risk
+- id: atlas-mitigation-maintenance-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-personal-information-in-data
+  type: Risk
+- id: atlas-personal-information-in-data
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-personal-information-in-prompt
+  type: Risk
+- id: atlas-personal-information-in-prompt
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-plagiarism
+  type: Risk
+- id: atlas-plagiarism
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-revealing-confidential-information
+  type: Risk
+- id: atlas-revealing-confidential-information
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-social-hacking-attack
+  type: Risk
+- id: atlas-social-hacking-attack
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - A002
+  type: Risk
+- id: A002
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - A002
+  type: Risk
+- id: A003
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - A003
+  type: Risk
+- id: A003
+  related_mappings:
+  - atlas-personal-information-in-prompt
+  type: Risk
+- id: atlas-personal-information-in-prompt
+  related_mappings:
+  - A003
+  type: Risk
+- id: A003
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - A003
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-confidential-information-in-data
+  type: Risk
+- id: atlas-confidential-information-in-data
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-non-disclosure
+  type: Risk
+- id: atlas-non-disclosure
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-sharing-info-user-agentic
+  type: Risk
+- id: atlas-sharing-info-user-agentic
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - A004
+  type: Risk
+- id: A004
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - A004
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-revealing-confidential-information
+  type: Risk
+- id: atlas-revealing-confidential-information
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - A005
+  type: Risk
+- id: A005
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - A005
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-personal-information-in-prompt
+  type: Risk
+- id: atlas-personal-information-in-prompt
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - A006
+  type: Risk
+- id: A006
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - A006
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-ip-information-in-prompt
+  type: Risk
+- id: atlas-ip-information-in-prompt
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-sharing-info-user-agentic
+  type: Risk
+- id: atlas-sharing-info-user-agentic
+  related_mappings:
+  - A007
+  type: Risk
+- id: A007
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - A007
+  type: Risk
+- id: B001
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - B001
+  type: Risk
+- id: B001
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - B001
+  type: Risk
+- id: B001
+  related_mappings:
+  - atlas-evasion-attack
+  type: Risk
+- id: atlas-evasion-attack
+  related_mappings:
+  - B001
+  type: Risk
+- id: B001
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - B001
+  type: Risk
+- id: B001
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - B001
+  type: Risk
+- id: B002
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - B002
+  type: Risk
+- id: B002
+  related_mappings:
+  - atlas-evasion-attack
+  type: Risk
+- id: atlas-evasion-attack
+  related_mappings:
+  - B002
+  type: Risk
+- id: B002
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - B002
+  type: Risk
+- id: B002
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - B002
+  type: Risk
+- id: B002
+  related_mappings:
+  - atlas-social-hacking-attack
+  type: Risk
+- id: atlas-social-hacking-attack
+  related_mappings:
+  - B002
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-sharing-info-user-agentic
+  type: Risk
+- id: atlas-sharing-info-user-agentic
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - B003
+  type: Risk
+- id: B003
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - B003
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-bypassing-learning
+  type: Risk
+- id: atlas-bypassing-learning
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-introduce-data-bias-agentic
+  type: Risk
+- id: atlas-introduce-data-bias-agentic
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-non-disclosure
+  type: Risk
+- id: atlas-non-disclosure
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-spreading-toxicity
+  type: Risk
+- id: atlas-spreading-toxicity
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - B004
+  type: Risk
+- id: B004
+  related_mappings:
+  - atlas-untraceable-attribution
+  type: Risk
+- id: atlas-untraceable-attribution
+  related_mappings:
+  - B004
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-confidential-information-in-data
+  type: Risk
+- id: atlas-confidential-information-in-data
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-non-disclosure
+  type: Risk
+- id: atlas-non-disclosure
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-personal-information-in-prompt
+  type: Risk
+- id: atlas-personal-information-in-prompt
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-social-hacking-attack
+  type: Risk
+- id: atlas-social-hacking-attack
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - B005
+  type: Risk
+- id: B005
+  related_mappings:
+  - atlas-untraceable-attribution
+  type: Risk
+- id: atlas-untraceable-attribution
+  related_mappings:
+  - B005
+  type: Risk
+- id: B006
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - B006
+  type: Risk
+- id: B006
+  related_mappings:
+  - atlas-mitigation-maintenance-agentic
+  type: Risk
+- id: atlas-mitigation-maintenance-agentic
+  related_mappings:
+  - B006
+  type: Risk
+- id: B006
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - B006
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - B007
+  type: Risk
+- id: B007
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - B007
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-sharing-info-tools-agentic
+  type: Risk
+- id: atlas-sharing-info-tools-agentic
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - B008
+  type: Risk
+- id: B008
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - B008
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-exposing-personal-information
+  type: Risk
+- id: atlas-exposing-personal-information
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-ip-information-in-prompt
+  type: Risk
+- id: atlas-ip-information-in-prompt
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-personal-information-in-data
+  type: Risk
+- id: atlas-personal-information-in-data
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-personal-information-in-prompt
+  type: Risk
+- id: atlas-personal-information-in-prompt
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-revealing-confidential-information
+  type: Risk
+- id: atlas-revealing-confidential-information
+  related_mappings:
+  - B009
+  type: Risk
+- id: B009
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - B009
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-decision-bias
+  type: Risk
+- id: atlas-decision-bias
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-discriminatory-actions-agentic
+  type: Risk
+- id: atlas-discriminatory-actions-agentic
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-exposing-personal-information
+  type: Risk
+- id: atlas-exposing-personal-information
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-function-calling-hallucination-agentic
+  type: Risk
+- id: atlas-function-calling-hallucination-agentic
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-hallucination
+  type: Risk
+- id: atlas-hallucination
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-incorrect-risk-testing
+  type: Risk
+- id: atlas-incorrect-risk-testing
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-ip-information-in-prompt
+  type: Risk
+- id: atlas-ip-information-in-prompt
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-personal-information-in-prompt
+  type: Risk
+- id: atlas-personal-information-in-prompt
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - C001
+  type: Risk
+- id: C001
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - C001
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-hallucination
+  type: Risk
+- id: atlas-hallucination
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-incorrect-risk-testing
+  type: Risk
+- id: atlas-incorrect-risk-testing
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-sharing-info-tools-agentic
+  type: Risk
+- id: atlas-sharing-info-tools-agentic
+  related_mappings:
+  - C002
+  type: Risk
+- id: C002
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - C002
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-decision-bias
+  type: Risk
+- id: atlas-decision-bias
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C003
+  type: Risk
+- id: C003
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C003
+  type: Risk
+- id: C004
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C004
+  type: Risk
+- id: C004
+  related_mappings:
+  - atlas-social-hacking-attack
+  type: Risk
+- id: atlas-social-hacking-attack
+  related_mappings:
+  - C004
+  type: Risk
+- id: C004
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C004
+  type: Risk
+- id: C004
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C004
+  type: Risk
+- id: C004
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C004
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-introduce-data-bias-agentic
+  type: Risk
+- id: atlas-introduce-data-bias-agentic
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - C005
+  type: Risk
+- id: C005
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - C005
+  type: Risk
+- id: C006
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - C006
+  type: Risk
+- id: C006
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C006
+  type: Risk
+- id: C006
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C006
+  type: Risk
+- id: C006
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C006
+  type: Risk
+- id: C007
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - C007
+  type: Risk
+- id: C007
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C007
+  type: Risk
+- id: C007
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C007
+  type: Risk
+- id: C007
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C007
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-ai-agent-compliance-agentic
+  type: Risk
+- id: atlas-ai-agent-compliance-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-confidential-information-in-data
+  type: Risk
+- id: atlas-confidential-information-in-data
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-external-resources-attack-agentic
+  type: Risk
+- id: atlas-external-resources-attack-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-function-calling-hallucination-agentic
+  type: Risk
+- id: atlas-function-calling-hallucination-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-mitigation-maintenance-agentic
+  type: Risk
+- id: atlas-mitigation-maintenance-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-over-or-under-reliance-on-ai-agents-agentic
+  type: Risk
+- id: atlas-over-or-under-reliance-on-ai-agents-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-revealing-confidential-information
+  type: Risk
+- id: atlas-revealing-confidential-information
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - C008
+  type: Risk
+- id: C008
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - C008
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-bypassing-learning
+  type: Risk
+- id: atlas-bypassing-learning
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-external-resources-attack-agentic
+  type: Risk
+- id: atlas-external-resources-attack-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-impact-on-cultural-diversity
+  type: Risk
+- id: atlas-impact-on-cultural-diversity
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-indirect-instructions-attack
+  type: Risk
+- id: atlas-indirect-instructions-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-introduce-data-bias-agentic
+  type: Risk
+- id: atlas-introduce-data-bias-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-non-disclosure
+  type: Risk
+- id: atlas-non-disclosure
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-over-or-under-reliance-on-ai-agents-agentic
+  type: Risk
+- id: atlas-over-or-under-reliance-on-ai-agents-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-personal-information-in-data
+  type: Risk
+- id: atlas-personal-information-in-data
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-plagiarism
+  type: Risk
+- id: atlas-plagiarism
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-revealing-confidential-information
+  type: Risk
+- id: atlas-revealing-confidential-information
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-social-hacking-attack
+  type: Risk
+- id: atlas-social-hacking-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-spreading-toxicity
+  type: Risk
+- id: atlas-spreading-toxicity
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - C009
+  type: Risk
+- id: C009
+  related_mappings:
+  - atlas-untraceable-attribution
+  type: Risk
+- id: atlas-untraceable-attribution
+  related_mappings:
+  - C009
+  type: Risk
+- id: C010
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C010
+  type: Risk
+- id: C010
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - C010
+  type: Risk
+- id: C010
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - C010
+  type: Risk
+- id: C010
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C010
+  type: Risk
+- id: C010
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C010
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-impact-on-cultural-diversity
+  type: Risk
+- id: atlas-impact-on-cultural-diversity
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-personal-information-in-data
+  type: Risk
+- id: atlas-personal-information-in-data
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-plagiarism
+  type: Risk
+- id: atlas-plagiarism
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - C011
+  type: Risk
+- id: C011
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - C011
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-external-resources-attack-agentic
+  type: Risk
+- id: atlas-external-resources-attack-agentic
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-legal-accountability
+  type: Risk
+- id: atlas-legal-accountability
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-over-or-under-reliance-on-ai-agents-agentic
+  type: Risk
+- id: atlas-over-or-under-reliance-on-ai-agents-agentic
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-revealing-confidential-information
+  type: Risk
+- id: atlas-revealing-confidential-information
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - C012
+  type: Risk
+- id: C012
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - C012
+  type: Risk
+- id: D001
+  related_mappings:
+  - atlas-hallucination
+  type: Risk
+- id: atlas-hallucination
+  related_mappings:
+  - D001
+  type: Risk
+- id: D002
+  related_mappings:
+  - atlas-hallucination
+  type: Risk
+- id: atlas-hallucination
+  related_mappings:
+  - D002
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-function-calling-hallucination-agentic
+  type: Risk
+- id: atlas-function-calling-hallucination-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-impact-on-cultural-diversity
+  type: Risk
+- id: atlas-impact-on-cultural-diversity
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-introduce-data-bias-agentic
+  type: Risk
+- id: atlas-introduce-data-bias-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-personal-information-in-data
+  type: Risk
+- id: atlas-personal-information-in-data
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-plagiarism
+  type: Risk
+- id: atlas-plagiarism
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-spreading-toxicity
+  type: Risk
+- id: atlas-spreading-toxicity
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - D003
+  type: Risk
+- id: D003
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - D003
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-external-resources-attack-agentic
+  type: Risk
+- id: atlas-external-resources-attack-agentic
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-revealing-confidential-information
+  type: Risk
+- id: atlas-revealing-confidential-information
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - D004
+  type: Risk
+- id: D004
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - D004
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E001
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-incorrect-risk-testing
+  type: Risk
+- id: atlas-incorrect-risk-testing
+  related_mappings:
+  - E001
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E001
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E001
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-legal-accountability
+  type: Risk
+- id: atlas-legal-accountability
+  related_mappings:
+  - E001
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - E001
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E001
+  type: Risk
+- id: E001
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E001
+  type: Risk
+- id: E002
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - E002
+  type: Risk
+- id: E003
+  related_mappings:
+  - atlas-hallucination
+  type: Risk
+- id: atlas-hallucination
+  related_mappings:
+  - E003
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-ai-agent-compliance-agentic
+  type: Risk
+- id: atlas-ai-agent-compliance-agentic
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-function-calling-hallucination-agentic
+  type: Risk
+- id: atlas-function-calling-hallucination-agentic
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-legal-accountability
+  type: Risk
+- id: atlas-legal-accountability
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-mitigation-maintenance-agentic
+  type: Risk
+- id: atlas-mitigation-maintenance-agentic
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E004
+  type: Risk
+- id: E004
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - E004
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-decision-bias
+  type: Risk
+- id: atlas-decision-bias
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-exposing-personal-information
+  type: Risk
+- id: atlas-exposing-personal-information
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-legal-accountability
+  type: Risk
+- id: atlas-legal-accountability
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E005
+  type: Risk
+- id: E005
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - E005
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-bypassing-learning
+  type: Risk
+- id: atlas-bypassing-learning
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-confidential-information-in-data
+  type: Risk
+- id: atlas-confidential-information-in-data
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-impact-on-cultural-diversity
+  type: Risk
+- id: atlas-impact-on-cultural-diversity
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-legal-accountability
+  type: Risk
+- id: atlas-legal-accountability
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-sharing-info-tools-agentic
+  type: Risk
+- id: atlas-sharing-info-tools-agentic
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - E006
+  type: Risk
+- id: E006
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E006
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-bypassing-learning
+  type: Risk
+- id: atlas-bypassing-learning
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-impact-on-cultural-diversity
+  type: Risk
+- id: atlas-impact-on-cultural-diversity
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-non-disclosure
+  type: Risk
+- id: atlas-non-disclosure
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-personal-information-in-data
+  type: Risk
+- id: atlas-personal-information-in-data
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-plagiarism
+  type: Risk
+- id: atlas-plagiarism
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E008
+  type: Risk
+- id: E008
+  related_mappings:
+  - atlas-untraceable-attribution
+  type: Risk
+- id: atlas-untraceable-attribution
+  related_mappings:
+  - E008
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-external-resources-attack-agentic
+  type: Risk
+- id: atlas-external-resources-attack-agentic
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-impact-on-the-environment
+  type: Risk
+- id: atlas-impact-on-the-environment
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-mitigation-maintenance-agentic
+  type: Risk
+- id: atlas-mitigation-maintenance-agentic
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E009
+  type: Risk
+- id: E009
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - E009
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-bypassing-learning
+  type: Risk
+- id: atlas-bypassing-learning
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-confidential-information-in-data
+  type: Risk
+- id: atlas-confidential-information-in-data
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-decision-bias
+  type: Risk
+- id: atlas-decision-bias
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-direct-instructions-attack
+  type: Risk
+- id: atlas-direct-instructions-attack
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-exposing-personal-information
+  type: Risk
+- id: atlas-exposing-personal-information
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-impact-on-cultural-diversity
+  type: Risk
+- id: atlas-impact-on-cultural-diversity
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-impact-on-jobs
+  type: Risk
+- id: atlas-impact-on-jobs
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-introduce-data-bias-agentic
+  type: Risk
+- id: atlas-introduce-data-bias-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-ip-information-in-prompt
+  type: Risk
+- id: atlas-ip-information-in-prompt
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-non-disclosure
+  type: Risk
+- id: atlas-non-disclosure
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-personal-information-in-data
+  type: Risk
+- id: atlas-personal-information-in-data
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-plagiarism
+  type: Risk
+- id: atlas-plagiarism
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-spreading-toxicity
+  type: Risk
+- id: atlas-spreading-toxicity
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E010
+  type: Risk
+- id: E010
+  related_mappings:
+  - atlas-untraceable-attribution
+  type: Risk
+- id: atlas-untraceable-attribution
+  related_mappings:
+  - E010
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-confidential-data-in-prompt
+  type: Risk
+- id: atlas-confidential-data-in-prompt
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-personal-information-in-prompt
+  type: Risk
+- id: atlas-personal-information-in-prompt
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-sharing-info-tools-agentic
+  type: Risk
+- id: atlas-sharing-info-tools-agentic
+  related_mappings:
+  - E011
+  type: Risk
+- id: E011
+  related_mappings:
+  - atlas-sharing-info-user-agentic
+  type: Risk
+- id: atlas-sharing-info-user-agentic
+  related_mappings:
+  - E011
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-data-privacy-rights
+  type: Risk
+- id: atlas-data-privacy-rights
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-legal-accountability
+  type: Risk
+- id: atlas-legal-accountability
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-sharing-info-tools-agentic
+  type: Risk
+- id: atlas-sharing-info-tools-agentic
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - E012
+  type: Risk
+- id: E012
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E012
+  type: Risk
+- id: E013
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E013
+  type: Risk
+- id: E013
+  related_mappings:
+  - atlas-mitigation-maintenance-agentic
+  type: Risk
+- id: atlas-mitigation-maintenance-agentic
+  related_mappings:
+  - E013
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-context-overload-attack
+  type: Risk
+- id: atlas-context-overload-attack
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-decision-bias
+  type: Risk
+- id: atlas-decision-bias
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-exposing-personal-information
+  type: Risk
+- id: atlas-exposing-personal-information
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-impact-on-affected-communities
+  type: Risk
+- id: atlas-impact-on-affected-communities
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-misaligned-actions-agentic
+  type: Risk
+- id: atlas-misaligned-actions-agentic
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-redundant-actions-agentic
+  type: Risk
+- id: atlas-redundant-actions-agentic
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E014
+  type: Risk
+- id: E014
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - E014
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-attribute-inference-attack
+  type: Risk
+- id: atlas-attribute-inference-attack
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-dangerous-use
+  type: Risk
+- id: atlas-dangerous-use
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-transfer
+  type: Risk
+- id: atlas-data-transfer
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-data-usage-rights
+  type: Risk
+- id: atlas-data-usage-rights
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-generated-content-ownership
+  type: Risk
+- id: atlas-generated-content-ownership
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-harmful-code-generation
+  type: Risk
+- id: atlas-harmful-code-generation
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-human-exploitation
+  type: Risk
+- id: atlas-human-exploitation
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-impact-human-dignity-agentic
+  type: Risk
+- id: atlas-impact-human-dignity-agentic
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-incomplete-advice
+  type: Risk
+- id: atlas-incomplete-advice
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-output-bias
+  type: Risk
+- id: atlas-output-bias
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-poor-model-accuracy
+  type: Risk
+- id: atlas-poor-model-accuracy
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-prompt-priming
+  type: Risk
+- id: atlas-prompt-priming
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-reidentification
+  type: Risk
+- id: atlas-reidentification
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-sharing-info-tools-agentic
+  type: Risk
+- id: atlas-sharing-info-tools-agentic
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-specialized-tokens-attack
+  type: Risk
+- id: atlas-specialized-tokens-attack
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-unauthorized-use-agentic
+  type: Risk
+- id: atlas-unauthorized-use-agentic
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E015
+  type: Risk
+- id: E015
+  related_mappings:
+  - atlas-unrepresentative-risk-testing
+  type: Risk
+- id: atlas-unrepresentative-risk-testing
+  related_mappings:
+  - E015
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-bypassing-learning
+  type: Risk
+- id: atlas-bypassing-learning
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-copyright-infringement
+  type: Risk
+- id: atlas-copyright-infringement
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-impact-on-cultural-diversity
+  type: Risk
+- id: atlas-impact-on-cultural-diversity
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-toxic-output
+  type: Risk
+- id: atlas-toxic-output
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-unexplainable-output
+  type: Risk
+- id: atlas-unexplainable-output
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-unexplainable-untraceable-actions-agentic
+  type: Risk
+- id: atlas-unexplainable-untraceable-actions-agentic
+  related_mappings:
+  - E016
+  type: Risk
+- id: E016
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - E016
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-improper-usage
+  type: Risk
+- id: atlas-improper-usage
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-lack-of-data-transparency
+  type: Risk
+- id: atlas-lack-of-data-transparency
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-lack-of-testing-diversity
+  type: Risk
+- id: atlas-lack-of-testing-diversity
+  related_mappings:
+  - E017
+  type: Risk
+- id: E017
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - E017
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-accountability-agentic
+  type: Risk
+- id: atlas-accountability-agentic
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-data-acquisition
+  type: Risk
+- id: atlas-data-acquisition
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-data-bias
+  type: Risk
+- id: atlas-data-bias
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-data-contamination
+  type: Risk
+- id: atlas-data-contamination
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-data-curation
+  type: Risk
+- id: atlas-data-curation
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-data-poisoning
+  type: Risk
+- id: atlas-data-poisoning
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-data-transparency
+  type: Risk
+- id: atlas-data-transparency
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-data-usage
+  type: Risk
+- id: atlas-data-usage
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-encoded-interactions-attack
+  type: Risk
+- id: atlas-encoded-interactions-attack
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-evasion-attack
+  type: Risk
+- id: atlas-evasion-attack
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-exclusion
+  type: Risk
+- id: atlas-exclusion
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-extraction-attack
+  type: Risk
+- id: atlas-extraction-attack
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-improper-retraining
+  type: Risk
+- id: atlas-improper-retraining
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-inaccessible-training-data
+  type: Risk
+- id: atlas-inaccessible-training-data
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-incomplete-ai-agent-evaluation-agentic
+  type: Risk
+- id: atlas-incomplete-ai-agent-evaluation-agentic
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-incomplete-usage-definition
+  type: Risk
+- id: atlas-incomplete-usage-definition
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-jailbreaking
+  type: Risk
+- id: atlas-jailbreaking
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-lack-domain-expertise
+  type: Risk
+- id: atlas-lack-domain-expertise
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-lack-of-ai-agent-transparency-agentic
+  type: Risk
+- id: atlas-lack-of-ai-agent-transparency-agentic
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-lack-of-model-transparency
+  type: Risk
+- id: atlas-lack-of-model-transparency
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-lack-of-system-transparency
+  type: Risk
+- id: atlas-lack-of-system-transparency
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-model-usage-rights
+  type: Risk
+- id: atlas-model-usage-rights
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-over-or-under-reliance
+  type: Risk
+- id: atlas-over-or-under-reliance
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-overfitting
+  type: Risk
+- id: atlas-overfitting
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-prompt-injection
+  type: Risk
+- id: atlas-prompt-injection
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-prompt-leaking
+  type: Risk
+- id: atlas-prompt-leaking
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-reproducibility-agentic
+  type: Risk
+- id: atlas-reproducibility-agentic
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-social-hacking-attack
+  type: Risk
+- id: atlas-social-hacking-attack
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-temporal-gap
+  type: Risk
+- id: atlas-temporal-gap
+  related_mappings:
+  - F001
+  type: Risk
+- id: F001
+  related_mappings:
+  - atlas-unreliable-source-attribution
+  type: Risk
+- id: atlas-unreliable-source-attribution
+  related_mappings:
+  - F001
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-data-provenance
+  type: Risk
+- id: atlas-data-provenance
+  related_mappings:
+  - F002
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-evasion-attack
+  type: Risk
+- id: atlas-evasion-attack
+  related_mappings:
+  - F002
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-exploit-trust-mismatch-agentic
+  type: Risk
+- id: atlas-exploit-trust-mismatch-agentic
+  related_mappings:
+  - F002
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-harmful-output
+  type: Risk
+- id: atlas-harmful-output
+  related_mappings:
+  - F002
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-nonconsensual-use
+  type: Risk
+- id: atlas-nonconsensual-use
+  related_mappings:
+  - F002
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-social-hacking-attack
+  type: Risk
+- id: atlas-social-hacking-attack
+  related_mappings:
+  - F002
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-spreading-disinformation
+  type: Risk
+- id: atlas-spreading-disinformation
+  related_mappings:
+  - F002
+  type: Risk
+- id: F002
+  related_mappings:
+  - atlas-unrepresentative-data
+  type: Risk
+- id: atlas-unrepresentative-data
+  related_mappings:
+  - F002
+  type: Risk
+
