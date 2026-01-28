@@ -934,7 +934,7 @@ class AIAtlasNexus:
         )
 
         # Load HF tasks from the template dir
-        hf_ai_tasks = load_resource("hf_ai_tasks.json")
+        hf_ai_tasks = [{"task_label": task.name, "task_description": task.description} for task in cls.get_all(class_name="aitasks", taxonomy="hf-ml-tasks")]
 
         # Populate schema items
         json_schema = dict(LIST_OF_STR_SCHEMA)
