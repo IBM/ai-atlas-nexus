@@ -4,7 +4,7 @@ This project targets python version ">=3.11, <3.12". You can download specific v
 
 To install the current release
 ```
-pip install ai-atlas-nexus[INFERENCE_LIB]
+pip install "ai-atlas-nexus[INFERENCE_LIB]"
 ```
 
 To install the latest code
