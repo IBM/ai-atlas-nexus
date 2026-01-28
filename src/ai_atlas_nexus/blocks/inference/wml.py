@@ -1,3 +1,4 @@
+import json
 import os
 from typing import Any, Dict, List, Optional, Union
 
@@ -168,7 +169,7 @@ class WMLInferenceEngine(InferenceEngine):
     def _prepare_chat_output(self, response) -> List[TextGenerationInferenceOutput]:
         print(response["choices"][0]["message"]["content"])
         return TextGenerationInferenceOutput(
-            prediction=response["choices"][0]["message"]["content"],
+            prediction=json.loads(response["choices"][0]["message"]["content"]).decode("unicode_escape"),
             input_tokens=response["usage"]["prompt_tokens"],
             output_tokens=response["usage"]["completion_tokens"],
             stop_reason=response["choices"][0]["finish_reason"],
