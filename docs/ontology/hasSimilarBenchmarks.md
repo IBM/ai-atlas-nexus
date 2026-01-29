@@ -1,67 +1,36 @@
-
-
 # Slot: hasSimilarBenchmarks
 
-
 _Benchmarks that are closely related in terms of goals or data type._
-
-
-
-
 
 URI: [nexus:hasSimilarBenchmarks](https://ibm.github.io/ai-atlas-nexus/ontology/hasSimilarBenchmarks)
 Alias: hasSimilarBenchmarks
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
-
-
-
-
-
+| Name                                              | Description                                                                      | Modifies Slot |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasSimilarBenchmarks |
-| native | nexus:hasSimilarBenchmarks |
-
-
-
+| Mapping Type | Mapped Value               |
+| ------------ | -------------------------- |
+| self         | nexus:hasSimilarBenchmarks |
+| native       | nexus:hasSimilarBenchmarks |
 
 ## LinkML Source
 
@@ -79,3 +48,4 @@ multivalued: true
 
 ```
 </details>
+```

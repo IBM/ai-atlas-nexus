@@ -1,48 +1,28 @@
 # Enum: EuAiRiskCategory
 
-
-
 URI: [nexus:EuAiRiskCategory](https://ibm.github.io/ai-atlas-nexus/ontology/EuAiRiskCategory)
 
 ## Permissible Values
 
-| Value | Meaning | Description |
-| --- | --- | --- |
-| EXCLUDED | None | Excluded |
-| PROHIBITED | None | Prohibited |
-| HIGH_RISK_EXCEPTION | None | High-Risk Exception |
-| HIGH_RISK | None | High Risk |
-| LIMITED_OR_LOW_RISK | None | Limited or Low Risk |
-
-
-
+| Value               | Meaning | Description         |
+| ------------------- | ------- | ------------------- |
+| EXCLUDED            | None    | Excluded            |
+| PROHIBITED          | None    | Prohibited          |
+| HIGH_RISK_EXCEPTION | None    | High-Risk Exception |
+| HIGH_RISK           | None    | High Risk           |
+| LIMITED_OR_LOW_RISK | None    | Limited or Low Risk |
 
 ## Slots
 
-| Name | Description |
-| ---  | --- |
+| Name                                      | Description                                                   |
+| ----------------------------------------- | ------------------------------------------------------------- |
 | [hasEuRiskCategory](hasEuRiskCategory.md) | The risk category of an AI system as defined by the EU AI Act |
-
-
-
-
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## LinkML Source
 
@@ -70,3 +50,4 @@ permissible_values:
 
 ```
 </details>
+```

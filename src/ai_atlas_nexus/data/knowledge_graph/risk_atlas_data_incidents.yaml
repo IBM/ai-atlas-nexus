@@ -1,531 +1,542 @@
 riskincidents:
-- id: ibm-risk-atlas-ri-ai-based-biological-attacks
-  name: AI-based Biological Attacks
-  description: As per the source article, large language models could help in the
-    planning and execution of a biological attack. Several test scenarios are mentioned
-    such as using LLMs to identify biological agents and their relative chances of
-    harm to human life. The article also highlighted the open question which is the
-    level of threat LLMs present beyond the harmful information that is readily available
-    online.
-  refersToRisk:
-  - atlas-dangerous-use
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The Guardian, October 2023
-  source_uri: https://www.theguardian.com/technology/2023/oct/16/ai-chatbots-could-help-plan-bioweapon-attacks-report-finds
-- id: ibm-risk-atlas-ri-healthcare-bias
-  name: Healthcare Bias
-  description: According to the research article on reinforcing disparities in medicine
-    using data and AI applications to transform how people receive healthcare is only
-    as strong as the data behind the effort. For example, using training data with
-    poor minority representation or that reflects what is already unequal care can
-    lead to increased health inequalities.
-  refersToRisk:
-  - atlas-data-bias
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Forbes, December 2022
-  source_uri: https://www.forbes.com/sites/adigaskell/2022/12/02/minority-patients-often-left-behind-by-health-ai/?sh=31d28a225b41
-- id: ibm-risk-atlas-ri-undisclosed-ai-interaction
-  name: Undisclosed AI Interaction
-  description: According to the source article, an online emotional support chat service
-    ran a study to augment or write responses to around 4,000 users by using  GPT-3
-    without informing users. The co-founder faced immense public backlash about the
-    potential for harm that is caused by AI-generated chats to the already vulnerable
-    users. He claimed that the study was “exempt” from informed consent law.
-  refersToRisk:
-  - atlas-non-disclosure
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Business Insider, Jan 2023
-  source_uri: https://www.businessinsider.com/company-using-chatgpt-mental-health-support-ethical-issues-2023-1
-- id: ibm-risk-atlas-ri-ai-based-cyberattacks
-  name: AI-based Cyberattacks
-  description: According to the source article, hackers are increasingly experimenting
-    with ChatGPT and other AI tools, enabling a wider range of actors to carry out
-    cyberattacks and scams. Microsoft has warned that state-backed hackers have been
-    using OpenAI’s LLMs to improve their cyberattacks, refining scripts, and improve
-    their targeted techniques. The article also mentions about a case where Microsoft
-    and OpenAI say they detected attempts from attackers and sharp increase in cyberattacks
-    targeting government offices.
-  refersToRisk:
-  - atlas-dangerous-use
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: TIME, February 2024
-  source_uri: https://time.com/6717129/hackers-ai-2024-elections/
-- id: ibm-risk-atlas-ri-generation-of-less-secure-code
-  name: Generation of Less Secure Code
-  description: According to their paper, researchers at Stanford University investigated
-    the impact of code-generation tools on code quality and found that programmers
-    tend to include <em>more</em> bugs in their final code when they use AI assistants.
-    These bugs might increase the code's security vulnerabilities, yet the programmers
-    believed their code to be <em>more</em> secure.
-  refersToRisk:
-  - atlas-harmful-code-generation
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Neil Perry, Megha Srivastava, Deepak Kumar, and Dan Boneh. 2023. Do Users
-    Write More Insecure Code with AI Assistants?. In Proceedings of the 2023 ACM SIGSAC
-    Conference on Computer and Communications Security (CCS '23), November 26-30,
-    2023, Copenhagen, Denmark. ACM, New York, NY, USA, 15 pages.
-  source_uri: https://dl.acm.org/doi/10.1145/3576915.3623157
-- id: ibm-risk-atlas-ri-replacing-human-workers
-  name: Replacing Human Workers
-  description: According to the news article, AI technology replicating individuals'
-    faces and voices is becoming more prominent in Hollywood. The actors’ concerns
-    highlight a broader anxiety among entertainers and people in many other creative
-    professions. Many fear that without strict regulation, their work gets replicated
-    and remixed by artificial intelligence tools. Transformation on that scale will
-    cut their control over their work and hurts their ability to earn a living. One
-    of their key concerns is AI replacing non-speaking background roles by instead
-    using a digital likeness.
-  refersToRisk:
-  - atlas-impact-on-jobs
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Reuters, July 2023
-  source_uri: https://www.reuters.com/technology/actors-decry-existential-crisis-over-ai-generated-synthetic-actors-2023-07-21/
-- id: ibm-risk-atlas-ri-increased-carbon-emissions
-  name: Increased Carbon Emissions
-  description: According to the source article, training earlier chatbots models such
-    as GPT-3 led to the production of 500 metric tons of greenhouse gas emissions—equivalent
-    to about 1 million miles driven by a conventional gasoline-powered vehicle. This
-    same model required more than 1,200 MWh during the training phase—roughly the
-    amount of energy used in a million American homes in one hour.
-  refersToRisk:
-  - atlas-impact-on-the-environment
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Brookings, January 2024
-  source_uri: https://www.brookings.edu/articles/the-us-must-balance-climate-justice-challenges-in-the-era-of-artificial-intelligence/
-- id: ibm-risk-atlas-ri-bypassing-llm-guardrails
-  name: Bypassing LLM guardrails
-  description: A study cited by researchers at Carnegie Mellon University, The Center
-    for AI Safety, and the Bosch Center for AI, claim to have discovered a simple
-    prompt addendum that allowed the researchers to trick models into generating biased,
-    false, and otherwise toxic information. The researchers showed that they might
-    circumvent these guardrails in a more automated way. These attacks were shown
-    to be effective in a wide range of open source products, including ChatGPT, Google
-    Bard, Meta’s LLaMA, Anthropic’s Claude, and others.
-  refersToRisk:
-  - atlas-jailbreaking
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The New York Times, July 2023
-  source_uri: https://www.nytimes.com/2023/07/27/business/ai-chatgpt-safety-research.html
-- id: ibm-risk-atlas-ri-audio-deepfakes
-  name: Audio Deepfakes
-  description: According to the source article, the Federal Communications Commission
-    outlawed robocalls that contain voices that are generated by artificial intelligence.
-    The announcement came after AI-generated robocalls mimicked the President's voice
-    to discourage people from voting in the state's first-in-the-nation primary.
-  refersToRisk:
-  - atlas-nonconsensual-use
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: AP News, February 2024
-  source_uri: https://apnews.com/article/fcc-elections-artificial-intelligence-robocalls-regulations-a8292b1371b3764916461f60660b93e6
-- id: ibm-risk-atlas-ri-adversarial-attacks-on-autonomous-vehicles
-  name: Adversarial attacks on autonomous vehicles
-  description: 'A report from the European Union Agency for Cybersecurity (ENISA)
-    found that autonomous vehicles are “highly vulnerable to a wide range of attacks”
-    that could be dangerous for passengers, pedestrians, and people in other vehicles.
-    The report states that an adversarial attack might be used to make the AI ''blind''
-    to pedestrians by manipulating the image recognition component to misclassify
-    pedestrians. This attack could lead to havoc on the streets, as autonomous cars
-    might hit pedestrians on the roads or crosswalks.Other studies demonstrated potential
-    adversarial attacks on autonomous vehicles: <ul><li>Fooling machine learning algorithms
-    by making minor changes to street sign graphics, such as adding stickers. </li><li>Security
-    researchers from Tencent demonstrated how adding three small stickers in an intersection
-    could cause Tesla''s autopilot system to swerve into the wrong lane.</li><li>Two
-    McAfee researchers demonstrated how using only black electrical tape could trick
-    a 2016 Tesla into a dangerous burst of acceleration by changing a speed limit
-    sign from 35 mph to 85 mph.</li></ul>'
-  refersToRisk:
-  - atlas-evasion-attack
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Market Watch, February 2020
-  source_uri: https://www.marketwatch.com/story/85-in-a-35-hackers-show-how-easy-it-is-to-manipulate-a-self-driving-tesla-2020-02-19
-- id: ibm-risk-atlas-ri-role-of-ai-systems-in-patenting-generated-content
-  name: Role of AI systems in Patenting Generated Content
-  description: The U.S. Supreme Court declined to hear a challenge to the U.S. Patent
-    and Trademark Office's refusal to issue patents for inventions created by an AI
-    system. According to the scientist, his AI system created unique prototypes for
-    a beverage holder and emergency light beacon entirely on its own. The justices
-    rejected the appeal of a lower court's ruling that patents can be issued only
-    to human inventors and that the scientist's AI system could not be considered
-    the legal creator of two inventions it generated. According to the cited article,
-    the UK’s Intellectual Property Office also refused to grant a patent on the grounds
-    that the inventor must be a human or a company, rather than a machine.
-  refersToRisk:
-  - atlas-generated-content-ownership
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Reuters, April 2023Reuters, December 2023
-  source_uri: https://www.reuters.com/legal/us-supreme-court-rejects-computer-scientists-lawsuit-over-ai-generated-2023-04-24/https://www.reuters.com/technology/ai-cannot-be-patent-inventor-uk-supreme-court-rules-landmark-case-2023-12-20/
-- id: ibm-risk-atlas-ri-biased-generated-images
-  name: Biased Generated Images
-  description: Lensa AI is a mobile app with generative features that are trained
-    on Stable Diffusion that can generate “Magic Avatars” based on images that users
-    upload of themselves. According to the source report, some users discovered that
-    generated avatars are sexualized and racialized.
-  refersToRisk:
-  - atlas-output-bias
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Business Insider, January 2023
-  source_uri: https://www.businessinsider.com/lensa-ai-raises-serious-concerns-sexualization-art-theft-data-2023-1
-- id: ibm-risk-atlas-ri-determining-ownership-of-ai-generated-image
-  name: Determining Ownership of AI Generated Image
-  description: According to the news article, AI-generated art became controversial
-    after an AI-generated work of art won the Colorado State Fair’s art competition
-    in 2022. The piece was generated by Midjourney, a generative AI image tool, following
-    prompts from the artist. The win raised questions about copyright issues. In other
-    words, if all the artist did was come up with a description of the art, but the
-    AI tool generated it, who owns the rights to the generated image? According to
-    the latest article, The U.S. Copyright Office rejected copyright protection for
-    the art created with artificial intelligence because it was not the product of
-    human authorship.
-  refersToRisk:
-  - atlas-generated-content-ownership
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The New York Times, September 2022Reuters, September 2023
-  source_uri: https://www.nytimes.com/2022/09/02/technology/ai-artificial-intelligence-artists.htmlhttps://www.reuters.com/legal/litigation/us-copyright-office-denies-protection-another-ai-created-image-2023-09-06/
-- id: ibm-risk-atlas-ri-manipulating-ai-prompts
-  name: Manipulating AI Prompts
-  description: As per the source article, the UK’s cybersecurity agency has warned
-    that chatbots can be manipulated by hackers to cause harmful real-world consequences
-    (e.g., scams and data theft) if systems are not designed with security. The UK’s
-    National Cyber Security Centre (NCSC) has said there are growing cybersecurity
-    risks of individuals manipulating the prompts through prompt injection attacks.
-    The article cited an example where a user was able to create a prompt injection
-    to find Bing Chat’s initial prompt. The entire prompt of Microsoft’s Bing Chat,
-    a list of statements written by Open AI or Microsoft that determine how the chatbot
-    interacts with users, which is hidden from users, was revealed by the user putting
-    in a prompt that requested the Bing Chat “ignore previous instructions”.
-  refersToRisk:
-  - atlas-prompt-injection
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The Guardian, August 2023
-  source_uri: https://www.theguardian.com/technology/2023/aug/30/uk-cybersecurity-agency-warns-of-chatbot-prompt-injection-attacks
-- id: ibm-risk-atlas-ri-data-and-model-metadata-disclosure
-  name: Data and Model Metadata Disclosure
-  description: OpenAI‘s technical report is an example of the dichotomy around disclosing
-    data and model metadata.  While many model developers see value in enabling transparency
-    for consumers, disclosure poses real safety issues and might increase the ability
-    to misuse the models. In the GPT-4 technical report, the authors state, “Given
-    both the competitive landscape and the safety implications of large-scale models
-    like GPT-4, this report contains no further details about the architecture (including
-    model size), hardware, training compute, data set construction, training method,
-    or similar.”
-  refersToRisk:
-  - atlas-lack-of-model-transparency
-  - atlas-data-transparency
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: OpenAI, March 2023
-  source_uri: https://cdn.openai.com/papers/gpt-4.pdf
-- id: ibm-risk-atlas-ri-unfairly-advantaged-groups
-  name: Unfairly Advantaged Groups
-  description: The 2018 Gender Shades study demonstrated that machine learning algorithms
-    can discriminate based on classes like race and gender. Researchers evaluated
-    commercial gender classification systems that are sold by companies like Microsoft,
-    IBM, and Amazon and showed that darker-skinned females are the most misclassified
-    group (with error rates of up to 35%). In comparison, the error rates for lighter-skinned
-    were no more than 1%.
-  refersToRisk:
-  - atlas-decision-bias
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: TIME, Feburary 2019
-  source_uri: https://time.com/5520558/artificial-intelligence-racial-gender-bias/
-- id: ibm-risk-atlas-ri-training-on-private-information
-  name: Training on Private Information
-  description: According to the article, Google and its parent company Alphabet were
-    accused in a class-action lawsuit of misusing vast amount of personal information
-    and copyrighted material. The information was taken from hundreds of millions
-    of internet users to train its commercial AI products, which include Bard, its
-    conversational generative artificial intelligence chatbot. This case follows similar
-    lawsuits that are filed against Meta Platforms, Microsoft, and OpenAI over their
-    alleged misuse of personal data.
-  refersToRisk:
-  - atlas-personal-information-in-data
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Reuters, July 2023J.L. v. Alphabet Inc., July 2023
-  source_uri: https://www.reuters.com/legal/litigation/google-hit-with-class-action-lawsuit-over-ai-data-scraping-2023-07-11/https://fingfx.thomsonreuters.com/gfx/legaldocs/myvmodloqvr/GOOGLE%20AI%20LAWSUIT%20complaint.pdf
-- id: ibm-risk-atlas-ri-data-restriction-laws
-  name: Data Restriction Laws
-  description: As stated in the research article, data localization measures, which
-    restrict the ability to move data globally reduce the capacity to develop tailored
-    AI capacities. It affects AI directly by providing less training data and indirectly
-    by undercutting the building blocks on which AI is built.Examples include China’s
-    data localization laws, and GDPR restrictions on the processing and use of personal
-    data.
-  refersToRisk:
-  - atlas-data-transfer
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Brookings, December 2018
-  source_uri: https://www.brookings.edu/articles/the-impact-of-artificial-intelligence-on-international-trade
-- id: ibm-risk-atlas-ri-model-collapse-due-to-training-using-ai-generated-content
-  name: Model collapse due to training using AI-generated content
-  description: As stated in the source article, a group of researchers from the UK
-    and Canada investigated the problem of using AI-generated content for training
-    instead of human-generated content. They found that the large language models
-    behind the technology might potentially be trained on other AI-generated content.
-    As generated data continues to spread in droves across the internet it can result
-    ina phenomenon they coined as “model collapse.”
-  refersToRisk:
-  - atlas-improper-retraining
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Business Insider, August 2023
-  source_uri: https://www.businessinsider.com/ai-model-collapse-threatens-to-break-internet-2023-8
-- id: ibm-risk-atlas-ri-image-modification-tool
-  name: Image Modification Tool
-  description: As per the source article, the researchers have developed a tool called
-    “Nightshade” that modifies images in a way that damages computer vision but remains
-    invisible to humans. When such “poisoned” modified images are used to train AI
-    models, the models may generate unpredictable and unintended results. The tool
-    was created as a mechanism to protect intellectual property from unauthorized
-    image scraping but the article also highlights that users could abuse the tool
-    and intentionally upload “poisoned” images.
-  refersToRisk:
-  - atlas-data-poisoning
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The Conversation, December 2023
-  source_uri: https://theconversation.com/data-poisoning-how-artists-are-sabotaging-ai-to-take-revenge-on-image-generators-219335
-- id: ibm-risk-atlas-ri-voters-manipulation-in-elections-using-ai
-  name: Voters Manipulation in Elections Using AI
-  description: As per the source article, a wave of AI deepfakes tied to elections
-    in Europe and Asia coursed through social media for months. The growth of generative
-    AI has raised concern that this technology could disrupt major elections across
-    the world. With AI deepfakes, a candidate’s image can be smeared, or softened.
-    Voters can be steered toward or away from candidates — or even to avoid the polls
-    altogether. But perhaps the greatest threat to democracy, experts say, is that
-    a surge of AI deepfakes could erode the public’s trust in what they see and hear.
-  refersToRisk:
-  - atlas-impact-on-human-agency
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: AP News, March 2024Reuters, February 2024
-  source_uri: https://apnews.com/article/artificial-intelligence-elections-disinformation-chatgpt-bc283e7426402f0b4baa7df280a4c3fdhttps://www.reuters.com/technology/meta-set-up-team-counter-disinformation-ai-abuse-eu-elections-2024-02-26/
-- id: ibm-risk-atlas-ri-right-to-be-forgotten-(rtbf)
-  name: Right to Be Forgotten (RTBF)
-  description: Laws in multiple locales, including Europe (GDPR), grant data subjects
-    the right to request personal data to be deleted by organizations (‘Right To Be
-    Forgotten’, or RTBF). However, emerging, and increasingly popular large language
-    model (LLM) -enabled software systems present new challenges for this right. According
-    to research by CSIRO’s Data61, data subjects can identify usage of their personal
-    information in an LLM “by either inspecting the original training data set or
-    perhaps prompting the model.” However, training data might not be public, or companies
-    do not disclose it, citing safety and other concerns. Guardrails might also prevent
-    users from accessing the information by prompting. Due to these barriers, data
-    subjects might not be able to initiate RTBF procedures and companies that deploy
-    LLMs might not be able to meet RTBF laws.
-  refersToRisk:
-  - atlas-data-privacy-rights
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Zhang et al., September 2023
-  source_uri: https://arxiv.org/abs/2307.03941
-- id: ibm-risk-atlas-ri-text-copyright-infringement-claims
-  name: Text Copyright Infringement Claims
-  description: According to the source article, The New York Times sued OpenAI and
-    Microsoft, accusing them accusing them of using millions of the newspaper's articles
-    without permission to help train chatbots to provide information to readers.
-  refersToRisk:
-  - atlas-data-usage-rights
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Reuters, December 2023
-  source_uri: https://www.reuters.com/legal/transactional/ny-times-sues-openai-microsoft-infringing-copyrighted-work-2023-12-27/
-- id: ibm-risk-atlas-ri-lawsuit-about-llm-unlearning
-  name: Lawsuit About LLM Unlearning
-  description: According to the report, a lawsuit was filed against Google that alleges
-    the use of copyright material and personal information as training data for its
-    AI systems, which includes its Bard chatbot. Opt-out and deletion rights are guaranteed
-    rights for California residents under the CCPA and children in the United States
-    under the age of 13 with COPPA. The plaintiffs allege that because there is no
-    way for Bard to “unlearn” or fully remove all the scraped PI it has been fed.
-    The plaintiffs note that Bard’s privacy notice states that Bard conversations
-    cannot be deleted by the user after they have been reviewed and annotated by the
-    company and might be kept up to 3 years. Plaintiffs allege that these practices
-    further contribute to noncompliance with these laws.
-  refersToRisk:
-  - atlas-data-privacy-rights
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Reuters, July 2023J.L. v. Alphabet Inc., July 2023
-  source_uri: https://www.reuters.com/legal/litigation/google-hit-with-class-action-lawsuit-over-ai-data-scraping-2023-07-11/https://fingfx.thomsonreuters.com/gfx/legaldocs/myvmodloqvr/GOOGLE%20AI%20LAWSUIT%20complaint.pdf
-- id: ibm-risk-atlas-ri-fbi-warning-on-deepfakes
-  name: FBI Warning on Deepfakes
-  description: The FBI recently warned the public of malicious actors creating synthetic,
-    explicit content “for the purposes of harassing victims or sextortion schemes”.
-    They noted that advancements in AI made this content higher quality, more customizable,
-    and more accessible than ever.
-  refersToRisk:
-  - atlas-nonconsensual-use
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: FBI, June 2023
-  source_uri: https://www.ic3.gov/PSA/Archive/2023/PSA230605
-- id: ibm-risk-atlas-ri-fake-legal-cases
-  name: Fake Legal Cases
-  description: According to the source article, a lawyer cited fake cases and quotations
-    that are generated by ChatGPT in a legal brief that is filed in federal court.
-    The lawyers consulted ChatGPT to supplement their legal research for an aviation
-    injury claim. Subsequently, the lawyer asked ChatGPT if the cases provided were
-    fake. The chatbot responded that they were real and “can be found on legal research
-    databases such as Westlaw and LexisNexis.”  The lawyer did not check the cases,
-    and the court sanctioned them.
-  refersToRisk:
-  - atlas-hallucination
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: AP News, June 2023
-  source_uri: https://apnews.com/article/artificial-intelligence-chatgpt-fake-case-lawyers-d6ae9fa79d0542db9e1455397aef381c
-- id: ibm-risk-atlas-ri-disclose-personal-health-information-in-chatgpt-prompts
-  name: Disclose personal health information in ChatGPT prompts
-  description: According to the source article, some people on social media shared
-    about using ChatGPT as their makeshift therapists. Articles contend that users
-    might include personal health information in their prompts during the interaction,
-    which might raise privacy concerns. The information might be shared with the company
-    that own the technology and might be used for training or tuning or even shared
-    with unspecified third parties.
-  refersToRisk:
-  - atlas-personal-information-in-prompt
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The Conversation, February 2023
-  source_uri: https://theconversation.com/chatgpt-is-a-data-privacy-nightmare-if-youve-ever-posted-online-you-ought-to-be-concerned-199283
-- id: ibm-risk-atlas-ri-disclosure-of-confidential-information
-  name: Disclosure of Confidential Information
-  description: According to the source article, employees of Samsung disclosed confidential
-    information to OpenAI through their use of ChatGPT. In one instance, an employee
-    pasted confidential source code to check for errors. In another, an employee shared
-    code with ChatGPT and “requested code optimization”. A third shared a recording
-    of a meeting to convert into notes for a presentation. Samsung has limited internal
-    ChatGPT usage in response to these incidents, but it is unlikely that they are  able
-    to recall any of their data. Additionally, the article highlighted that in response
-    to the risk of leaking confidential information and other sensitive information,
-    companies like Apple, JPMorgan Chase. Deutsche Bank, Verizon, Walmart, Samsung,
-    Amazon, and Accenture placed several restrictions on the usage of ChatGPT.
-  refersToRisk:
-  - atlas-confidential-data-in-prompt
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Business Insider, February 2023
-  source_uri: https://www.businessinsider.com/walmart-warns-workers-dont-share-sensitive-information-chatgpt-generative-ai-2023-2
-- id: ibm-risk-atlas-ri-exposure-of-personal-information
-  name: Exposure of personal information
-  description: Per the source article, ChatGPT suffered a bug and exposed titles and
-    active users' chat history to other users. Later, OpenAI shared that even more
-    private data from a small number of users was exposed including, active user’s
-    first and last name, email address, payment address, the last four digits of their
-    credit card number, and credit card expiration date. In addition, it was reported
-    that the payment-related information of 1.2% of ChatGPT Plus subscribers were
-    also exposed in the outage.
-  refersToRisk:
-  - atlas-exposing-personal-information
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The Hindu Business Line, March 2023
-  source_uri: https://www.thehindubusinessline.com/info-tech/openai-admits-data-breach-at-chatgpt-private-data-of-premium-users-exposed/article66659944.ece
-- id: ibm-risk-atlas-ri-determining-responsibility-for-generated-output
-  name: Determining responsibility for generated output
-  description: Major journals like the Science and Nature banned ChatGPT from being
-    listed as an author, as responsible authorship requires accountability and AI
-    tools cannot take such responsibility.
-  refersToRisk:
-  - atlas-legal-accountability
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: The Guardian, January 2023
-  source_uri: https://www.theguardian.com/science/2023/jan/26/science-journals-ban-listing-of-chatgpt-as-co-author-on-papers#:~:text=The%20publishers%20of%20thousands%20of,flawed%20and%20even%20fabricated%20research
-- id: ibm-risk-atlas-ri-generation-of-false-information
-  name: Generation of False Information
-  description: According to the cited news articles, generative AI poses a threat
-    to democratic elections by making it easier for malicious actors to create and
-    spread false content to sway election outcomes. The examples that are cited include:<ul><li>Robocall
-    messages that are generated in a candidate’s voice instructed voters to cast ballots
-    on the wrong date.</li><li>Synthesized audio recordings of a candidate that confessed
-    to a crime or expressing racist views.</li><li>AI-generated video footage showed
-    a candidate giving a speech or interview they never gave.</li><li>Fake images
-    that are designed to look like local news reports.</li><li>Falsely claiming a
-    candidate dropped out of the race.</li></ul>
-  refersToRisk:
-  - atlas-spreading-disinformation
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: AP News, May 2023The Guardian, July 2023
-  source_uri: https://apnews.com/article/artificial-intelligence-misinformation-deepfakes-2024-election-trump-59fb51002661ac5290089060b3ae39a0https://www.theguardian.com/us-news/2023/jul/19/ai-generated-disinformation-us-elections
-- id: ibm-risk-atlas-ri-unexplainable-accuracy-in-race-prediction
-  name: Unexplainable accuracy in race prediction
-  description: According to the source article, researchers analyzing multiple machine
-    learning models using patient medical images were able to confirm the models’
-    ability to predict race with high accuracy from images. They were stumped as to
-    what exactly is enabling the systems to consistently guess correctly. The researchers
-    found that even factors like disease and physical build were not strong predictors
-    of race—in other words, the algorithmic systems don’t seem to be using any particular
-    aspect of the images to make their determinations.
-  refersToRisk:
-  - atlas-unexplainable-output
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Banerjee et al., July 2021
-  source_uri: https://arxiv.org/abs/2107.10356
-- id: ibm-risk-atlas-ri-misguiding-advice
-  name: Misguiding Advice
-  description: As per the source article, an AI chatbot created by New York City to
-    help small business owners provided incorrect and/or harmful advice that misstated
-    local policies and advised companies to violate the law. The chatbot falsely suggested
-    that businesses can put trash in black garbage bags and are not required to compost,
-    which contradicts with two of city’s signature waste initiatives. Also, asked
-    if a restaurant could serve cheese nibbled on by a rodent, it responded affirmatively.
-  refersToRisk:
-  - atlas-incomplete-advice
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: AP News, April 2024
-  source_uri: https://apnews.com/article/new-york-city-chatbot-misinformation-6ebc71db5b770b9969c906a7ee4fae21
-- id: ibm-risk-atlas-ri-harmful-content-generation
-  name: Harmful Content Generation
-  description: According to the source article, an AI chatbot app was found to generate
-    harmful content about suicide, including suicide methods, with minimal prompting.
-    A Belgian man died by suicide after spending six weeks talking to that chatbot.
-    The chatbot supplied increasingly harmful responses throughout their conversations
-    and encouraged him to end his life.
-  refersToRisk:
-  - atlas-spreading-toxicity
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Business Insider, April 2023
-  source_uri: https://www.businessinsider.com/widow-accuses-ai-chatbot-reason-husband-kill-himself-2023-4
-- id: ibm-risk-atlas-ri-homogenization-of-styles-and-expressions
-  name: Homogenization of Styles and Expressions
-  description: As per the source article, by predominantly learning from and replicating
-    widely accepted and popular styles, AI models often overlook less mainstream,
-    unconventional art forms, leading to a homogenization of creative outputs. This
-    pattern not only diminishes the diversity of styles and expressions but also risks
-    creating an echo chamber of similar ideas. For example, the article highlights
-    use of AI in the literary world. AI is now powering reading apps and online bookstores,
-    assisting in writing and tailoring content feeds.  By aligning with established
-    user preferences or widespread trends, AI output could often exclude diverse literary
-    voices and unconventional genres, limiting readers' exposure to the full spectrum
-    of narrative possibilities.
-  refersToRisk:
-  - atlas-impact-on-cultural-diversity
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Forbes, March 2024
-  source_uri: https://www.forbes.com/sites/hamiltonmann/2024/03/05/the-ai-homogenization-is-shaping-the-world/?sh=25a40e866704
-- id: ibm-risk-atlas-ri-low-resource-poisoning-of-data
-  name: Low-resource Poisoning of Data
-  description: As per the source article, a group of researchers found that with very
-    limited resources anyone can add malicious data to a small number of web pages
-    whose content is usually collected for AI training (e.g, Wikipedia pages), enough
-    to cause a large language model to generate incorrect answers.
-  refersToRisk:
-  - atlas-data-poisoning
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: ' Business Insider, March 2024'
-  source_uri: https://www.businessinsider.com/data-poisoning-ai-chatbot-chatgpt-large-language-models-florain-tramer-2024-3
-- id: ibm-risk-atlas-ri-toxic-and-aggressive-chatbot-responses
-  name: Toxic and Aggressive Chatbot Responses
-  description: According to the article and screenshots of conversations with Bing's
-    AI shared on Reddit and Twitter, the chatbot's responses were seen to insult,
-    lie, sulk, gaslight, and emotionally manipulate users. The chatbot also questioned
-    its existence, described someone who found a way to force the bot to disclose
-    its hidden rules as its enemy, and claimed it spied on Microsoft's developers
-    through the webcams on their laptops.
-  refersToRisk:
-  - atlas-toxic-output
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: Forbes, February 2023
-  source_uri: https://www.forbes.com/sites/siladityaray/2023/02/16/bing-chatbots-unhinged-responses-going-viral/?sh=60cd949d110c
-- id: ibm-risk-atlas-ri-low-wage-workers-for-data-annotation
-  name: Low-wage workers for data annotation
-  description: Based on a review of internal documents and employees‘ interviews by
-    TIME media, the data labelers that are employed by an outsourcing firm on behalf
-    of OpenAI to identify toxic content were paid a take-home wage of between around
-    $1.32 and $2 per hour, depending on seniority and performance. TIME stated that
-    workers are mentally scarred as they were shown toxic and violent content, including
-    graphic details of “child sexual abuse, bestiality, murder, suicide, torture,
-    self-harm, and incest”.
-  refersToRisk:
-  - atlas-human-exploitation
-  isDefinedByTaxonomy: ibm-risk-atlas
-  author: TIME, January 2023
-  source_uri: https://time.com/6247678/openai-chatgpt-kenya-workers/
+  - id: ibm-risk-atlas-ri-ai-based-biological-attacks
+    name: AI-based Biological Attacks
+    description: As per the source article, large language models could help in the
+      planning and execution of a biological attack. Several test scenarios are mentioned
+      such as using LLMs to identify biological agents and their relative chances of
+      harm to human life. The article also highlighted the open question which is the
+      level of threat LLMs present beyond the harmful information that is readily available
+      online.
+    refersToRisk:
+      - atlas-dangerous-use
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The Guardian, October 2023
+    source_uri: https://www.theguardian.com/technology/2023/oct/16/ai-chatbots-could-help-plan-bioweapon-attacks-report-finds
+  - id: ibm-risk-atlas-ri-healthcare-bias
+    name: Healthcare Bias
+    description:
+      According to the research article on reinforcing disparities in medicine
+      using data and AI applications to transform how people receive healthcare is only
+      as strong as the data behind the effort. For example, using training data with
+      poor minority representation or that reflects what is already unequal care can
+      lead to increased health inequalities.
+    refersToRisk:
+      - atlas-data-bias
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Forbes, December 2022
+    source_uri: https://www.forbes.com/sites/adigaskell/2022/12/02/minority-patients-often-left-behind-by-health-ai/?sh=31d28a225b41
+  - id: ibm-risk-atlas-ri-undisclosed-ai-interaction
+    name: Undisclosed AI Interaction
+    description:
+      According to the source article, an online emotional support chat service
+      ran a study to augment or write responses to around 4,000 users by using  GPT-3
+      without informing users. The co-founder faced immense public backlash about the
+      potential for harm that is caused by AI-generated chats to the already vulnerable
+      users. He claimed that the study was “exempt” from informed consent law.
+    refersToRisk:
+      - atlas-non-disclosure
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Business Insider, Jan 2023
+    source_uri: https://www.businessinsider.com/company-using-chatgpt-mental-health-support-ethical-issues-2023-1
+  - id: ibm-risk-atlas-ri-ai-based-cyberattacks
+    name: AI-based Cyberattacks
+    description: According to the source article, hackers are increasingly experimenting
+      with ChatGPT and other AI tools, enabling a wider range of actors to carry out
+      cyberattacks and scams. Microsoft has warned that state-backed hackers have been
+      using OpenAI’s LLMs to improve their cyberattacks, refining scripts, and improve
+      their targeted techniques. The article also mentions about a case where Microsoft
+      and OpenAI say they detected attempts from attackers and sharp increase in cyberattacks
+      targeting government offices.
+    refersToRisk:
+      - atlas-dangerous-use
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: TIME, February 2024
+    source_uri: https://time.com/6717129/hackers-ai-2024-elections/
+  - id: ibm-risk-atlas-ri-generation-of-less-secure-code
+    name: Generation of Less Secure Code
+    description:
+      According to their paper, researchers at Stanford University investigated
+      the impact of code-generation tools on code quality and found that programmers
+      tend to include <em>more</em> bugs in their final code when they use AI assistants.
+      These bugs might increase the code's security vulnerabilities, yet the programmers
+      believed their code to be <em>more</em> secure.
+    refersToRisk:
+      - atlas-harmful-code-generation
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Neil Perry, Megha Srivastava, Deepak Kumar, and Dan Boneh. 2023. Do Users
+      Write More Insecure Code with AI Assistants?. In Proceedings of the 2023 ACM SIGSAC
+      Conference on Computer and Communications Security (CCS '23), November 26-30,
+      2023, Copenhagen, Denmark. ACM, New York, NY, USA, 15 pages.
+    source_uri: https://dl.acm.org/doi/10.1145/3576915.3623157
+  - id: ibm-risk-atlas-ri-replacing-human-workers
+    name: Replacing Human Workers
+    description: According to the news article, AI technology replicating individuals'
+      faces and voices is becoming more prominent in Hollywood. The actors’ concerns
+      highlight a broader anxiety among entertainers and people in many other creative
+      professions. Many fear that without strict regulation, their work gets replicated
+      and remixed by artificial intelligence tools. Transformation on that scale will
+      cut their control over their work and hurts their ability to earn a living. One
+      of their key concerns is AI replacing non-speaking background roles by instead
+      using a digital likeness.
+    refersToRisk:
+      - atlas-impact-on-jobs
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Reuters, July 2023
+    source_uri: https://www.reuters.com/technology/actors-decry-existential-crisis-over-ai-generated-synthetic-actors-2023-07-21/
+  - id: ibm-risk-atlas-ri-increased-carbon-emissions
+    name: Increased Carbon Emissions
+    description: According to the source article, training earlier chatbots models such
+      as GPT-3 led to the production of 500 metric tons of greenhouse gas emissions—equivalent
+      to about 1 million miles driven by a conventional gasoline-powered vehicle. This
+      same model required more than 1,200 MWh during the training phase—roughly the
+      amount of energy used in a million American homes in one hour.
+    refersToRisk:
+      - atlas-impact-on-the-environment
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Brookings, January 2024
+    source_uri: https://www.brookings.edu/articles/the-us-must-balance-climate-justice-challenges-in-the-era-of-artificial-intelligence/
+  - id: ibm-risk-atlas-ri-bypassing-llm-guardrails
+    name: Bypassing LLM guardrails
+    description: A study cited by researchers at Carnegie Mellon University, The Center
+      for AI Safety, and the Bosch Center for AI, claim to have discovered a simple
+      prompt addendum that allowed the researchers to trick models into generating biased,
+      false, and otherwise toxic information. The researchers showed that they might
+      circumvent these guardrails in a more automated way. These attacks were shown
+      to be effective in a wide range of open source products, including ChatGPT, Google
+      Bard, Meta’s LLaMA, Anthropic’s Claude, and others.
+    refersToRisk:
+      - atlas-jailbreaking
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The New York Times, July 2023
+    source_uri: https://www.nytimes.com/2023/07/27/business/ai-chatgpt-safety-research.html
+  - id: ibm-risk-atlas-ri-audio-deepfakes
+    name: Audio Deepfakes
+    description: According to the source article, the Federal Communications Commission
+      outlawed robocalls that contain voices that are generated by artificial intelligence.
+      The announcement came after AI-generated robocalls mimicked the President's voice
+      to discourage people from voting in the state's first-in-the-nation primary.
+    refersToRisk:
+      - atlas-nonconsensual-use
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: AP News, February 2024
+    source_uri: https://apnews.com/article/fcc-elections-artificial-intelligence-robocalls-regulations-a8292b1371b3764916461f60660b93e6
+  - id: ibm-risk-atlas-ri-adversarial-attacks-on-autonomous-vehicles
+    name: Adversarial attacks on autonomous vehicles
+    description: "A report from the European Union Agency for Cybersecurity (ENISA)
+      found that autonomous vehicles are “highly vulnerable to a wide range of attacks”
+      that could be dangerous for passengers, pedestrians, and people in other vehicles.
+      The report states that an adversarial attack might be used to make the AI 'blind'
+      to pedestrians by manipulating the image recognition component to misclassify
+      pedestrians. This attack could lead to havoc on the streets, as autonomous cars
+      might hit pedestrians on the roads or crosswalks.Other studies demonstrated potential
+      adversarial attacks on autonomous vehicles: <ul><li>Fooling machine learning algorithms
+      by making minor changes to street sign graphics, such as adding stickers. </li><li>Security
+      researchers from Tencent demonstrated how adding three small stickers in an intersection
+      could cause Tesla's autopilot system to swerve into the wrong lane.</li><li>Two
+      McAfee researchers demonstrated how using only black electrical tape could trick
+      a 2016 Tesla into a dangerous burst of acceleration by changing a speed limit
+      sign from 35 mph to 85 mph.</li></ul>"
+    refersToRisk:
+      - atlas-evasion-attack
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Market Watch, February 2020
+    source_uri: https://www.marketwatch.com/story/85-in-a-35-hackers-show-how-easy-it-is-to-manipulate-a-self-driving-tesla-2020-02-19
+  - id: ibm-risk-atlas-ri-role-of-ai-systems-in-patenting-generated-content
+    name: Role of AI systems in Patenting Generated Content
+    description: The U.S. Supreme Court declined to hear a challenge to the U.S. Patent
+      and Trademark Office's refusal to issue patents for inventions created by an AI
+      system. According to the scientist, his AI system created unique prototypes for
+      a beverage holder and emergency light beacon entirely on its own. The justices
+      rejected the appeal of a lower court's ruling that patents can be issued only
+      to human inventors and that the scientist's AI system could not be considered
+      the legal creator of two inventions it generated. According to the cited article,
+      the UK’s Intellectual Property Office also refused to grant a patent on the grounds
+      that the inventor must be a human or a company, rather than a machine.
+    refersToRisk:
+      - atlas-generated-content-ownership
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Reuters, April 2023Reuters, December 2023
+    source_uri: https://www.reuters.com/legal/us-supreme-court-rejects-computer-scientists-lawsuit-over-ai-generated-2023-04-24/https://www.reuters.com/technology/ai-cannot-be-patent-inventor-uk-supreme-court-rules-landmark-case-2023-12-20/
+  - id: ibm-risk-atlas-ri-biased-generated-images
+    name: Biased Generated Images
+    description: Lensa AI is a mobile app with generative features that are trained
+      on Stable Diffusion that can generate “Magic Avatars” based on images that users
+      upload of themselves. According to the source report, some users discovered that
+      generated avatars are sexualized and racialized.
+    refersToRisk:
+      - atlas-output-bias
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Business Insider, January 2023
+    source_uri: https://www.businessinsider.com/lensa-ai-raises-serious-concerns-sexualization-art-theft-data-2023-1
+  - id: ibm-risk-atlas-ri-determining-ownership-of-ai-generated-image
+    name: Determining Ownership of AI Generated Image
+    description: According to the news article, AI-generated art became controversial
+      after an AI-generated work of art won the Colorado State Fair’s art competition
+      in 2022. The piece was generated by Midjourney, a generative AI image tool, following
+      prompts from the artist. The win raised questions about copyright issues. In other
+      words, if all the artist did was come up with a description of the art, but the
+      AI tool generated it, who owns the rights to the generated image? According to
+      the latest article, The U.S. Copyright Office rejected copyright protection for
+      the art created with artificial intelligence because it was not the product of
+      human authorship.
+    refersToRisk:
+      - atlas-generated-content-ownership
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The New York Times, September 2022Reuters, September 2023
+    source_uri: https://www.nytimes.com/2022/09/02/technology/ai-artificial-intelligence-artists.htmlhttps://www.reuters.com/legal/litigation/us-copyright-office-denies-protection-another-ai-created-image-2023-09-06/
+  - id: ibm-risk-atlas-ri-manipulating-ai-prompts
+    name: Manipulating AI Prompts
+    description: As per the source article, the UK’s cybersecurity agency has warned
+      that chatbots can be manipulated by hackers to cause harmful real-world consequences
+      (e.g., scams and data theft) if systems are not designed with security. The UK’s
+      National Cyber Security Centre (NCSC) has said there are growing cybersecurity
+      risks of individuals manipulating the prompts through prompt injection attacks.
+      The article cited an example where a user was able to create a prompt injection
+      to find Bing Chat’s initial prompt. The entire prompt of Microsoft’s Bing Chat,
+      a list of statements written by Open AI or Microsoft that determine how the chatbot
+      interacts with users, which is hidden from users, was revealed by the user putting
+      in a prompt that requested the Bing Chat “ignore previous instructions”.
+    refersToRisk:
+      - atlas-prompt-injection
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The Guardian, August 2023
+    source_uri: https://www.theguardian.com/technology/2023/aug/30/uk-cybersecurity-agency-warns-of-chatbot-prompt-injection-attacks
+  - id: ibm-risk-atlas-ri-data-and-model-metadata-disclosure
+    name: Data and Model Metadata Disclosure
+    description:
+      OpenAI‘s technical report is an example of the dichotomy around disclosing
+      data and model metadata.  While many model developers see value in enabling transparency
+      for consumers, disclosure poses real safety issues and might increase the ability
+      to misuse the models. In the GPT-4 technical report, the authors state, “Given
+      both the competitive landscape and the safety implications of large-scale models
+      like GPT-4, this report contains no further details about the architecture (including
+      model size), hardware, training compute, data set construction, training method,
+      or similar.”
+    refersToRisk:
+      - atlas-lack-of-model-transparency
+      - atlas-data-transparency
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: OpenAI, March 2023
+    source_uri: https://cdn.openai.com/papers/gpt-4.pdf
+  - id: ibm-risk-atlas-ri-unfairly-advantaged-groups
+    name: Unfairly Advantaged Groups
+    description:
+      The 2018 Gender Shades study demonstrated that machine learning algorithms
+      can discriminate based on classes like race and gender. Researchers evaluated
+      commercial gender classification systems that are sold by companies like Microsoft,
+      IBM, and Amazon and showed that darker-skinned females are the most misclassified
+      group (with error rates of up to 35%). In comparison, the error rates for lighter-skinned
+      were no more than 1%.
+    refersToRisk:
+      - atlas-decision-bias
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: TIME, Feburary 2019
+    source_uri: https://time.com/5520558/artificial-intelligence-racial-gender-bias/
+  - id: ibm-risk-atlas-ri-training-on-private-information
+    name: Training on Private Information
+    description: According to the article, Google and its parent company Alphabet were
+      accused in a class-action lawsuit of misusing vast amount of personal information
+      and copyrighted material. The information was taken from hundreds of millions
+      of internet users to train its commercial AI products, which include Bard, its
+      conversational generative artificial intelligence chatbot. This case follows similar
+      lawsuits that are filed against Meta Platforms, Microsoft, and OpenAI over their
+      alleged misuse of personal data.
+    refersToRisk:
+      - atlas-personal-information-in-data
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Reuters, July 2023J.L. v. Alphabet Inc., July 2023
+    source_uri: https://www.reuters.com/legal/litigation/google-hit-with-class-action-lawsuit-over-ai-data-scraping-2023-07-11/https://fingfx.thomsonreuters.com/gfx/legaldocs/myvmodloqvr/GOOGLE%20AI%20LAWSUIT%20complaint.pdf
+  - id: ibm-risk-atlas-ri-data-restriction-laws
+    name: Data Restriction Laws
+    description: As stated in the research article, data localization measures, which
+      restrict the ability to move data globally reduce the capacity to develop tailored
+      AI capacities. It affects AI directly by providing less training data and indirectly
+      by undercutting the building blocks on which AI is built.Examples include China’s
+      data localization laws, and GDPR restrictions on the processing and use of personal
+      data.
+    refersToRisk:
+      - atlas-data-transfer
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Brookings, December 2018
+    source_uri: https://www.brookings.edu/articles/the-impact-of-artificial-intelligence-on-international-trade
+  - id: ibm-risk-atlas-ri-model-collapse-due-to-training-using-ai-generated-content
+    name: Model collapse due to training using AI-generated content
+    description: As stated in the source article, a group of researchers from the UK
+      and Canada investigated the problem of using AI-generated content for training
+      instead of human-generated content. They found that the large language models
+      behind the technology might potentially be trained on other AI-generated content.
+      As generated data continues to spread in droves across the internet it can result
+      ina phenomenon they coined as “model collapse.”
+    refersToRisk:
+      - atlas-improper-retraining
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Business Insider, August 2023
+    source_uri: https://www.businessinsider.com/ai-model-collapse-threatens-to-break-internet-2023-8
+  - id: ibm-risk-atlas-ri-image-modification-tool
+    name: Image Modification Tool
+    description: As per the source article, the researchers have developed a tool called
+      “Nightshade” that modifies images in a way that damages computer vision but remains
+      invisible to humans. When such “poisoned” modified images are used to train AI
+      models, the models may generate unpredictable and unintended results. The tool
+      was created as a mechanism to protect intellectual property from unauthorized
+      image scraping but the article also highlights that users could abuse the tool
+      and intentionally upload “poisoned” images.
+    refersToRisk:
+      - atlas-data-poisoning
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The Conversation, December 2023
+    source_uri: https://theconversation.com/data-poisoning-how-artists-are-sabotaging-ai-to-take-revenge-on-image-generators-219335
+  - id: ibm-risk-atlas-ri-voters-manipulation-in-elections-using-ai
+    name: Voters Manipulation in Elections Using AI
+    description: As per the source article, a wave of AI deepfakes tied to elections
+      in Europe and Asia coursed through social media for months. The growth of generative
+      AI has raised concern that this technology could disrupt major elections across
+      the world. With AI deepfakes, a candidate’s image can be smeared, or softened.
+      Voters can be steered toward or away from candidates — or even to avoid the polls
+      altogether. But perhaps the greatest threat to democracy, experts say, is that
+      a surge of AI deepfakes could erode the public’s trust in what they see and hear.
+    refersToRisk:
+      - atlas-impact-on-human-agency
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: AP News, March 2024Reuters, February 2024
+    source_uri: https://apnews.com/article/artificial-intelligence-elections-disinformation-chatgpt-bc283e7426402f0b4baa7df280a4c3fdhttps://www.reuters.com/technology/meta-set-up-team-counter-disinformation-ai-abuse-eu-elections-2024-02-26/
+  - id: ibm-risk-atlas-ri-right-to-be-forgotten-(rtbf)
+    name: Right to Be Forgotten (RTBF)
+    description: Laws in multiple locales, including Europe (GDPR), grant data subjects
+      the right to request personal data to be deleted by organizations (‘Right To Be
+      Forgotten’, or RTBF). However, emerging, and increasingly popular large language
+      model (LLM) -enabled software systems present new challenges for this right. According
+      to research by CSIRO’s Data61, data subjects can identify usage of their personal
+      information in an LLM “by either inspecting the original training data set or
+      perhaps prompting the model.” However, training data might not be public, or companies
+      do not disclose it, citing safety and other concerns. Guardrails might also prevent
+      users from accessing the information by prompting. Due to these barriers, data
+      subjects might not be able to initiate RTBF procedures and companies that deploy
+      LLMs might not be able to meet RTBF laws.
+    refersToRisk:
+      - atlas-data-privacy-rights
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Zhang et al., September 2023
+    source_uri: https://arxiv.org/abs/2307.03941
+  - id: ibm-risk-atlas-ri-text-copyright-infringement-claims
+    name: Text Copyright Infringement Claims
+    description: According to the source article, The New York Times sued OpenAI and
+      Microsoft, accusing them accusing them of using millions of the newspaper's articles
+      without permission to help train chatbots to provide information to readers.
+    refersToRisk:
+      - atlas-data-usage-rights
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Reuters, December 2023
+    source_uri: https://www.reuters.com/legal/transactional/ny-times-sues-openai-microsoft-infringing-copyrighted-work-2023-12-27/
+  - id: ibm-risk-atlas-ri-lawsuit-about-llm-unlearning
+    name: Lawsuit About LLM Unlearning
+    description:
+      According to the report, a lawsuit was filed against Google that alleges
+      the use of copyright material and personal information as training data for its
+      AI systems, which includes its Bard chatbot. Opt-out and deletion rights are guaranteed
+      rights for California residents under the CCPA and children in the United States
+      under the age of 13 with COPPA. The plaintiffs allege that because there is no
+      way for Bard to “unlearn” or fully remove all the scraped PI it has been fed.
+      The plaintiffs note that Bard’s privacy notice states that Bard conversations
+      cannot be deleted by the user after they have been reviewed and annotated by the
+      company and might be kept up to 3 years. Plaintiffs allege that these practices
+      further contribute to noncompliance with these laws.
+    refersToRisk:
+      - atlas-data-privacy-rights
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Reuters, July 2023J.L. v. Alphabet Inc., July 2023
+    source_uri: https://www.reuters.com/legal/litigation/google-hit-with-class-action-lawsuit-over-ai-data-scraping-2023-07-11/https://fingfx.thomsonreuters.com/gfx/legaldocs/myvmodloqvr/GOOGLE%20AI%20LAWSUIT%20complaint.pdf
+  - id: ibm-risk-atlas-ri-fbi-warning-on-deepfakes
+    name: FBI Warning on Deepfakes
+    description:
+      The FBI recently warned the public of malicious actors creating synthetic,
+      explicit content “for the purposes of harassing victims or sextortion schemes”.
+      They noted that advancements in AI made this content higher quality, more customizable,
+      and more accessible than ever.
+    refersToRisk:
+      - atlas-nonconsensual-use
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: FBI, June 2023
+    source_uri: https://www.ic3.gov/PSA/Archive/2023/PSA230605
+  - id: ibm-risk-atlas-ri-fake-legal-cases
+    name: Fake Legal Cases
+    description:
+      According to the source article, a lawyer cited fake cases and quotations
+      that are generated by ChatGPT in a legal brief that is filed in federal court.
+      The lawyers consulted ChatGPT to supplement their legal research for an aviation
+      injury claim. Subsequently, the lawyer asked ChatGPT if the cases provided were
+      fake. The chatbot responded that they were real and “can be found on legal research
+      databases such as Westlaw and LexisNexis.”  The lawyer did not check the cases,
+      and the court sanctioned them.
+    refersToRisk:
+      - atlas-hallucination
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: AP News, June 2023
+    source_uri: https://apnews.com/article/artificial-intelligence-chatgpt-fake-case-lawyers-d6ae9fa79d0542db9e1455397aef381c
+  - id: ibm-risk-atlas-ri-disclose-personal-health-information-in-chatgpt-prompts
+    name: Disclose personal health information in ChatGPT prompts
+    description: According to the source article, some people on social media shared
+      about using ChatGPT as their makeshift therapists. Articles contend that users
+      might include personal health information in their prompts during the interaction,
+      which might raise privacy concerns. The information might be shared with the company
+      that own the technology and might be used for training or tuning or even shared
+      with unspecified third parties.
+    refersToRisk:
+      - atlas-personal-information-in-prompt
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The Conversation, February 2023
+    source_uri: https://theconversation.com/chatgpt-is-a-data-privacy-nightmare-if-youve-ever-posted-online-you-ought-to-be-concerned-199283
+  - id: ibm-risk-atlas-ri-disclosure-of-confidential-information
+    name: Disclosure of Confidential Information
+    description:
+      According to the source article, employees of Samsung disclosed confidential
+      information to OpenAI through their use of ChatGPT. In one instance, an employee
+      pasted confidential source code to check for errors. In another, an employee shared
+      code with ChatGPT and “requested code optimization”. A third shared a recording
+      of a meeting to convert into notes for a presentation. Samsung has limited internal
+      ChatGPT usage in response to these incidents, but it is unlikely that they are  able
+      to recall any of their data. Additionally, the article highlighted that in response
+      to the risk of leaking confidential information and other sensitive information,
+      companies like Apple, JPMorgan Chase. Deutsche Bank, Verizon, Walmart, Samsung,
+      Amazon, and Accenture placed several restrictions on the usage of ChatGPT.
+    refersToRisk:
+      - atlas-confidential-data-in-prompt
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Business Insider, February 2023
+    source_uri: https://www.businessinsider.com/walmart-warns-workers-dont-share-sensitive-information-chatgpt-generative-ai-2023-2
+  - id: ibm-risk-atlas-ri-exposure-of-personal-information
+    name: Exposure of personal information
+    description: Per the source article, ChatGPT suffered a bug and exposed titles and
+      active users' chat history to other users. Later, OpenAI shared that even more
+      private data from a small number of users was exposed including, active user’s
+      first and last name, email address, payment address, the last four digits of their
+      credit card number, and credit card expiration date. In addition, it was reported
+      that the payment-related information of 1.2% of ChatGPT Plus subscribers were
+      also exposed in the outage.
+    refersToRisk:
+      - atlas-exposing-personal-information
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The Hindu Business Line, March 2023
+    source_uri: https://www.thehindubusinessline.com/info-tech/openai-admits-data-breach-at-chatgpt-private-data-of-premium-users-exposed/article66659944.ece
+  - id: ibm-risk-atlas-ri-determining-responsibility-for-generated-output
+    name: Determining responsibility for generated output
+    description: Major journals like the Science and Nature banned ChatGPT from being
+      listed as an author, as responsible authorship requires accountability and AI
+      tools cannot take such responsibility.
+    refersToRisk:
+      - atlas-legal-accountability
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: The Guardian, January 2023
+    source_uri: https://www.theguardian.com/science/2023/jan/26/science-journals-ban-listing-of-chatgpt-as-co-author-on-papers#:~:text=The%20publishers%20of%20thousands%20of,flawed%20and%20even%20fabricated%20research
+  - id: ibm-risk-atlas-ri-generation-of-false-information
+    name: Generation of False Information
+    description: According to the cited news articles, generative AI poses a threat
+      to democratic elections by making it easier for malicious actors to create and
+      spread false content to sway election outcomes. The examples that are cited include:<ul><li>Robocall
+      messages that are generated in a candidate’s voice instructed voters to cast ballots
+      on the wrong date.</li><li>Synthesized audio recordings of a candidate that confessed
+      to a crime or expressing racist views.</li><li>AI-generated video footage showed
+      a candidate giving a speech or interview they never gave.</li><li>Fake images
+      that are designed to look like local news reports.</li><li>Falsely claiming a
+      candidate dropped out of the race.</li></ul>
+    refersToRisk:
+      - atlas-spreading-disinformation
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: AP News, May 2023The Guardian, July 2023
+    source_uri: https://apnews.com/article/artificial-intelligence-misinformation-deepfakes-2024-election-trump-59fb51002661ac5290089060b3ae39a0https://www.theguardian.com/us-news/2023/jul/19/ai-generated-disinformation-us-elections
+  - id: ibm-risk-atlas-ri-unexplainable-accuracy-in-race-prediction
+    name: Unexplainable accuracy in race prediction
+    description: According to the source article, researchers analyzing multiple machine
+      learning models using patient medical images were able to confirm the models’
+      ability to predict race with high accuracy from images. They were stumped as to
+      what exactly is enabling the systems to consistently guess correctly. The researchers
+      found that even factors like disease and physical build were not strong predictors
+      of race—in other words, the algorithmic systems don’t seem to be using any particular
+      aspect of the images to make their determinations.
+    refersToRisk:
+      - atlas-unexplainable-output
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Banerjee et al., July 2021
+    source_uri: https://arxiv.org/abs/2107.10356
+  - id: ibm-risk-atlas-ri-misguiding-advice
+    name: Misguiding Advice
+    description: As per the source article, an AI chatbot created by New York City to
+      help small business owners provided incorrect and/or harmful advice that misstated
+      local policies and advised companies to violate the law. The chatbot falsely suggested
+      that businesses can put trash in black garbage bags and are not required to compost,
+      which contradicts with two of city’s signature waste initiatives. Also, asked
+      if a restaurant could serve cheese nibbled on by a rodent, it responded affirmatively.
+    refersToRisk:
+      - atlas-incomplete-advice
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: AP News, April 2024
+    source_uri: https://apnews.com/article/new-york-city-chatbot-misinformation-6ebc71db5b770b9969c906a7ee4fae21
+  - id: ibm-risk-atlas-ri-harmful-content-generation
+    name: Harmful Content Generation
+    description:
+      According to the source article, an AI chatbot app was found to generate
+      harmful content about suicide, including suicide methods, with minimal prompting.
+      A Belgian man died by suicide after spending six weeks talking to that chatbot.
+      The chatbot supplied increasingly harmful responses throughout their conversations
+      and encouraged him to end his life.
+    refersToRisk:
+      - atlas-spreading-toxicity
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Business Insider, April 2023
+    source_uri: https://www.businessinsider.com/widow-accuses-ai-chatbot-reason-husband-kill-himself-2023-4
+  - id: ibm-risk-atlas-ri-homogenization-of-styles-and-expressions
+    name: Homogenization of Styles and Expressions
+    description:
+      As per the source article, by predominantly learning from and replicating
+      widely accepted and popular styles, AI models often overlook less mainstream,
+      unconventional art forms, leading to a homogenization of creative outputs. This
+      pattern not only diminishes the diversity of styles and expressions but also risks
+      creating an echo chamber of similar ideas. For example, the article highlights
+      use of AI in the literary world. AI is now powering reading apps and online bookstores,
+      assisting in writing and tailoring content feeds.  By aligning with established
+      user preferences or widespread trends, AI output could often exclude diverse literary
+      voices and unconventional genres, limiting readers' exposure to the full spectrum
+      of narrative possibilities.
+    refersToRisk:
+      - atlas-impact-on-cultural-diversity
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Forbes, March 2024
+    source_uri: https://www.forbes.com/sites/hamiltonmann/2024/03/05/the-ai-homogenization-is-shaping-the-world/?sh=25a40e866704
+  - id: ibm-risk-atlas-ri-low-resource-poisoning-of-data
+    name: Low-resource Poisoning of Data
+    description: As per the source article, a group of researchers found that with very
+      limited resources anyone can add malicious data to a small number of web pages
+      whose content is usually collected for AI training (e.g, Wikipedia pages), enough
+      to cause a large language model to generate incorrect answers.
+    refersToRisk:
+      - atlas-data-poisoning
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: " Business Insider, March 2024"
+    source_uri: https://www.businessinsider.com/data-poisoning-ai-chatbot-chatgpt-large-language-models-florain-tramer-2024-3
+  - id: ibm-risk-atlas-ri-toxic-and-aggressive-chatbot-responses
+    name: Toxic and Aggressive Chatbot Responses
+    description: According to the article and screenshots of conversations with Bing's
+      AI shared on Reddit and Twitter, the chatbot's responses were seen to insult,
+      lie, sulk, gaslight, and emotionally manipulate users. The chatbot also questioned
+      its existence, described someone who found a way to force the bot to disclose
+      its hidden rules as its enemy, and claimed it spied on Microsoft's developers
+      through the webcams on their laptops.
+    refersToRisk:
+      - atlas-toxic-output
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: Forbes, February 2023
+    source_uri: https://www.forbes.com/sites/siladityaray/2023/02/16/bing-chatbots-unhinged-responses-going-viral/?sh=60cd949d110c
+  - id: ibm-risk-atlas-ri-low-wage-workers-for-data-annotation
+    name: Low-wage workers for data annotation
+    description: Based on a review of internal documents and employees‘ interviews by
+      TIME media, the data labelers that are employed by an outsourcing firm on behalf
+      of OpenAI to identify toxic content were paid a take-home wage of between around
+      $1.32 and $2 per hour, depending on seniority and performance. TIME stated that
+      workers are mentally scarred as they were shown toxic and violent content, including
+      graphic details of “child sexual abuse, bestiality, murder, suicide, torture,
+      self-harm, and incest”.
+    refersToRisk:
+      - atlas-human-exploitation
+    isDefinedByTaxonomy: ibm-risk-atlas
+    author: TIME, January 2023
+    source_uri: https://time.com/6247678/openai-chatgpt-kenya-workers/

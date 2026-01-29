@@ -1,69 +1,38 @@
-
-
 # Slot: carbon_emitted
 
-
 _The number of tons of carbon dioxide equivalent that are emitted during training_
-
-
-
-
 
 URI: [nexus:carbon_emitted](https://ibm.github.io/ai-atlas-nexus/ontology/carbon_emitted)
 Alias: carbon_emitted
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-
-
-
-
-
+| Name                                        | Description                                                                      | Modifies Slot |
+| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
+| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
-* Range: [Float](Float.md)
+- Range: [Float](Float.md)
 
-* Minimum Value: 0
-
-
-
+- Minimum Value: 0
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:carbon_emitted |
-| native | nexus:carbon_emitted |
-
-
-
+| Mapping Type | Mapped Value         |
+| ------------ | -------------------- |
+| self         | nexus:carbon_emitted |
+| native       | nexus:carbon_emitted |
 
 ## LinkML Source
 
@@ -85,3 +54,4 @@ unit:
 
 ```
 </details>
+```

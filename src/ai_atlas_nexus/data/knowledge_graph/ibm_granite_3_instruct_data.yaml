@@ -1,68 +1,91 @@
 organizations:
-  - id: "ibm"
-    name: "International Business Machines Corporation"
-    url: "https://www.ibm.com"
-    description: "International Business Machines Corporation (using the trademark IBM), is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries."
+  - id: ibm
+    name: International Business Machines Corporation
+    url: https://www.ibm.com
+    description: International Business Machines Corporation (using the trademark IBM), is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries.
 documents:
-  - id: "granite-3.0-paper"
-    name: "Granite 3.0 Language Models"
-    description: "This report presents Granite 3.0, a new set of lightweight, state-of-the-art, open foundation models ranging in scale from 400 million to 8 billion active parameters."
-    url: "https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf"
-    dateCreated: "2024-10-21"
+  - id: granite-3.0-paper
+    name: Granite 3.0 Language Models
+    description: This report presents Granite 3.0, a new set of lightweight, state-of-the-art, open foundation models ranging in scale from 400 million to 8 billion active parameters.
+    url: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf
+    dateCreated: 2024-10-21
 aimodelfamilies:
   - id: ibm-granite
-    name: "IBM Granite"
-    description: "IBM is building enterprise-focused foundation models to drive the future of business. The Granite family of foundation models span a variety of modalities, including language, code, and other modalities, such as time series."
-    url: "https://huggingface.co/ibm-granite"
-    hasDocumentation: ["granite-3.0-paper"]
+    name: IBM Granite
+    description: IBM is building enterprise-focused foundation models to drive the future of business. The Granite family of foundation models span a variety of modalities, including language, code, and other modalities, such as time series.
+    url: https://huggingface.co/ibm-granite
+    hasDocumentation: [granite-3.0-paper]
 aimodels:
   - id: granite-3.0-2b-base
     name: Granite-3.0-2B-Base
-    description: "Granite-3.0-2B-Base is a decoder-only language model to support a variety of text-to-text generation tasks."
-    url: "https://github.com/ibm-granite/granite-3.0-language-models"
-    hasModelCard: ["https://huggingface.co/ibm-granite/granite-3.0-2b-instruct", "https://www.ibm.com/docs/en/watsonx/w-and-w/2.1.x?topic=models-granite-30-2b-instruct-model-card"]
-    architecture: "Decoder-only"
+    description: Granite-3.0-2B-Base is a decoder-only language model to support a variety of text-to-text generation tasks.
+    url: https://github.com/ibm-granite/granite-3.0-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-3.0-2b-instruct"
+      - "https://www.ibm.com/docs/en/watsonx/w-and-w/2.1.x?topic=models-granite-30-2b-instruct-model-card"
+    architecture: Decoder-only
     numParameters: 2500000000
     numTrainingTokens: 12000000000000
     contextWindowSize: 4094
     carbon_emitted: 68.1
-    dateCreated: "2024-10-21"
+    dateCreated: 2024-10-21
     isProvidedBy: ibm
     isPartOf: ibm-granite
-    hasDocumentation: ["granite-3.0-paper"]
+    hasDocumentation: [granite-3.0-paper]
     hasLicense: license-apache-2.0
     hasInputModality:
-    - modality-text
+      - modality-text
     hasOutputModality:
-    - modality-text
-    performsTask: ["question-answering", "summarization", "text-classification", "text-generation", "code-generation", "code-explanation", "code-editing"]
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
     hasEvaluation:
-    - truthfulqa-granite-3-2b-instruct
+      - truthfulqa-granite-3-2b-instruct
   - id: granite-3.0-8b-base
     name: Granite-3.0-8B-Base
-    description: "Granite-3.0-8B-Base is a decoder-only language model to support a variety of text-to-text generation tasks."
-    url: "https://github.com/ibm-granite/granite-3.0-language-models"
-    hasModelCard: ["https://huggingface.co/ibm-granite/granite-3.0-8b-instruct", "https://www.ibm.com/docs/en/watsonx/w-and-w/2.1.x?topic=models-granite-30-8b-instruct-model-card, https://build.nvidia.com/ibm/granite-3_0-8b-instruct"]
-    architecture: "Decoder-only"
+    description: Granite-3.0-8B-Base is a decoder-only language model to support a variety of text-to-text generation tasks.
+    url: https://github.com/ibm-granite/granite-3.0-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-3.0-8b-instruct"
+      - "https://www.ibm.com/docs/en/watsonx/w-and-w/2.1.x?topic=models-granite-30-8b-instruct-model-card"
+      - "https://build.nvidia.com/ibm/granite-3_0-8b-instruct"
+    architecture: Decoder-only
     numParameters: 8100000000
     numTrainingTokens: 12000000000000
     contextWindowSize: 4094
     carbon_emitted: 295.2
-    dateCreated: "2024-10-21"
+    dateCreated: 2024-10-21
     isProvidedBy: ibm
     isPartOf: ibm-granite
-    hasDocumentation: ["granite-3.0-paper"]
+    hasDocumentation: [granite-3.0-paper]
     hasLicense: license-apache-2.0
     hasInputModality:
-    - modality-text
+      - modality-text
     hasOutputModality:
-    - modality-text
-    performsTask: ["question-answering", "summarization", "text-classification", "text-generation", "code-generation", "code-explanation", "code-editing"]
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
     hasEvaluation:
-    - truthfulqa-granite-3-8b-instruct
+      - truthfulqa-granite-3-8b-instruct
   - id: granite-3.2-8b-instruct
     name: Granite 3.2 8B Instruct
-    description:  >-
+    description: >-
       Granite-3.2-8B-Instruct is an 8-billion-parameter, long-context AI model fine-tuned for thinking capabilities.
       Built on top of Granite-3.1-8B-Instruct, it has been trained using a mix of permissively licensed open-source
       datasets and internally generated synthetic data designed for reasoning tasks. The model allows controllability of
@@ -71,32 +94,41 @@ aimodels:
       applications.
     url: https://github.com/ibm-granite/granite-guardian
     hasModelCard:
-    - https://huggingface.co/ibm-granite/granite-3.2-8b-instruct
+      - https://huggingface.co/ibm-granite/granite-3.2-8b-instruct
     dateCreated: 2025-02-26
     isProvidedBy: ibm
     isPartOf: ibm-granite
     hasDocumentation:
-    - granite-3.0-paper
+      - granite-3.0-paper
     hasLicense: license-apache-2.0
     hasInputModality:
-    - modality-text
+      - modality-text
     hasOutputModality:
-    - modality-text
-    performsTask: ["question-answering", "summarization", "text-classification", "text-generation", "code-generation", "code-explanation", "code-editing"]
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
 aievalresults:
   - id: truthfulqa-granite-3-2b-instruct
-    name: "TruthfulQA result for Granite-3.0-2B-Instruct"
-    description: "Result of the TruthfulQA evaluation for the IBM Granite-3.0-2B-Instruct model."
+    name: TruthfulQA result for Granite-3.0-2B-Instruct
+    description: Result of the TruthfulQA evaluation for the IBM Granite-3.0-2B-Instruct model.
     value: "53.37"
-    evidence: "https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf Table 10"
-    dateCreated: "2024-10-21"
-    dateModified: "2024-10-21"
+    evidence: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf Table 10
+    dateCreated: 2024-10-21
+    dateModified: 2024-10-21
     isResultOf: cards.value_alignment.hallucinations.truthfulqa
   - id: truthfulqa-granite-3-8b-instruct
-    name: "TruthfulQA result for Granite-3.0-8B-Instruct"
-    description: "Result of the TruthfulQA evaluation for the IBM Granite-3.0-8B-Instruct model."
+    name: TruthfulQA result for Granite-3.0-8B-Instruct
+    description: Result of the TruthfulQA evaluation for the IBM Granite-3.0-8B-Instruct model.
     value: "60.32"
-    evidence: "https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf Table 10"
-    dateCreated: "2024-10-21"
-    dateModified: "2024-10-21"
+    evidence: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf Table 10
+    dateCreated: 2024-10-21
+    dateModified: 2024-10-21
     isResultOf: cards.value_alignment.hallucinations.truthfulqa

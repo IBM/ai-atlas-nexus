@@ -1,21 +1,10 @@
-
-
 # Class: Entity
-
 
 _A generic grouping for any identifiable entity._
 
-
-
-
-* __NOTE__: this is an abstract class and should not be instantiated directly
-
+- **NOTE**: this is an abstract class and should not be instantiated directly
 
 URI: [schema:Thing](http://schema.org/Thing)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -146,99 +135,70 @@ URI: [schema:Thing](http://schema.org/Thing)
 
 ```
 
-
-
-
-
 ## Inheritance
-* **Entity**
-    * [Organization](Organization.md)
-    * [License](License.md)
-    * [Dataset](Dataset.md)
-    * [Documentation](Documentation.md)
-    * [Vocabulary](Vocabulary.md)
-    * [Taxonomy](Taxonomy.md)
-    * [Concept](Concept.md)
-    * [Control](Control.md)
-    * [Group](Group.md)
-    * [Entry](Entry.md)
-    * [Policy](Policy.md)
-    * [Rule](Rule.md)
-    * [RiskIncident](RiskIncident.md) [ [RiskConcept](RiskConcept.md)]
-    * [Impact](Impact.md) [ [RiskConcept](RiskConcept.md)]
-    * [IncidentStatus](IncidentStatus.md)
-    * [Severity](Severity.md)
-    * [Likelihood](Likelihood.md)
-    * [Consequence](Consequence.md)
-    * [BaseAi](BaseAi.md)
-    * [LargeLanguageModelFamily](LargeLanguageModelFamily.md)
-    * [AiLifecyclePhase](AiLifecyclePhase.md)
-    * [Modality](Modality.md)
-    * [Input](Input.md)
-    * [AiEval](AiEval.md)
-    * [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
-    * [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
-    * [Stakeholder](Stakeholder.md)
 
-
+- **Entity**
+  - [Organization](Organization.md)
+  - [License](License.md)
+  - [Dataset](Dataset.md)
+  - [Documentation](Documentation.md)
+  - [Vocabulary](Vocabulary.md)
+  - [Taxonomy](Taxonomy.md)
+  - [Concept](Concept.md)
+  - [Control](Control.md)
+  - [Group](Group.md)
+  - [Entry](Entry.md)
+  - [Policy](Policy.md)
+  - [Rule](Rule.md)
+  - [RiskIncident](RiskIncident.md) [ [RiskConcept](RiskConcept.md)]
+  - [Impact](Impact.md) [ [RiskConcept](RiskConcept.md)]
+  - [IncidentStatus](IncidentStatus.md)
+  - [Severity](Severity.md)
+  - [Likelihood](Likelihood.md)
+  - [Consequence](Consequence.md)
+  - [BaseAi](BaseAi.md)
+  - [LargeLanguageModelFamily](LargeLanguageModelFamily.md)
+  - [AiLifecyclePhase](AiLifecyclePhase.md)
+  - [Modality](Modality.md)
+  - [Input](Input.md)
+  - [AiEval](AiEval.md)
+  - [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
+  - [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
+  - [Stakeholder](Stakeholder.md)
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | direct |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | direct |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | direct |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | direct |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | direct |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | direct |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | direct |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | direct |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | direct |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | direct |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | direct |
-
-
+| Name                                    | Cardinality and Range          | Description                                                                      | Inheritance |
+| --------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------- | ----------- |
+| [id](id.md)                             | 1 <br/> [String](String.md)    | A unique identifier to this instance of the model element                        | direct      |
+| [name](name.md)                         | 0..1 <br/> [String](String.md) | A text name of this instance                                                     | direct      |
+| [description](description.md)           | 0..1 <br/> [String](String.md) | The description of an entity                                                     | direct      |
+| [url](url.md)                           | 0..1 <br/> [Uri](Uri.md)       | An optional URL associated with this instance                                    | direct      |
+| [dateCreated](dateCreated.md)           | 0..1 <br/> [Date](Date.md)     | The date on which the entity was created                                         | direct      |
+| [dateModified](dateModified.md)         | 0..1 <br/> [Date](Date.md)     | The date on which the entity was most recently modified                          | direct      |
+| [exact_mappings](exact_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to link two concepts, indicating a high degree of confid... | direct      |
+| [close_mappings](close_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to link two concepts that are sufficiently similar that ... | direct      |
+| [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)         | The property skos:relatedMatch is used to state an associative mapping link b... | direct      |
+| [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | direct      |
+| [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | direct      |
 
 ## Mixin Usage
 
 | mixed into | description |
-| --- | --- |
-
-
-
-
-
-
-
-
+| ---------- | ----------- |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | schema:Thing |
-| native | nexus:Entity |
-
-
-
-
-
+| ------------ | ------------ |
+| self         | schema:Thing |
+| native       | nexus:Entity |
 
 ## LinkML Source
 
@@ -267,7 +227,7 @@ slots:
 - broad_mappings
 class_uri: schema:Thing
 
-```
+````
 </details>
 
 ### Induced
@@ -427,5 +387,6 @@ attributes:
     inlined: false
 class_uri: schema:Thing
 
-```
+````
+
 </details>

@@ -1,35 +1,63 @@
 organizations:
   - id: codeparrot
-    name: "CodeParrot & Friends"
+    name: CodeParrot and Friends
     url: "https://huggingface.co/codeparrot"
-    description: "This organization is dedicated to language models for code generation. In particular CodeParrot is a GPT-2 model trained to generate Python code."
+    description: >-
+      This organization is dedicated to language models for code generation. In particular CodeParrot is a GPT-2 model
+      trained to generate Python code.
   - id: bigcode
-    name: "BigCode"
-    description: "BigCode is an open scientific collaboration working on the responsible development and use of large language models for code (Code LLMs), empowering the machine learning and open source communities through open governance."
+    name: BigCode
+    description: >-
+      BigCode is an open scientific collaboration working on the responsible development and use of large language
+      models for code (Code LLMs), empowering the machine learning and open source communities through open governance.
     url: "https://www.bigcode-project.org/"
 documents:
   - id: arxiv.org/2310.06786
     name: "OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text"
-    description: "There is growing evidence that pretraining on high quality, carefully thought-out tokens such as code or mathematics plays an important role in improving the reasoning abilities of large language models. For example, Minerva, a PaLM model finetuned on billions of tokens of mathematical documents from arXiv and the web, reported dramatically improved performance on problems that require quantitative reasoning. However, because all known open source web datasets employ preprocessing that does not faithfully preserve mathematical notation, the benefits of large scale training on quantitive web documents are unavailable to the research community. We introduce OpenWebMath, an open dataset inspired by these works containing 14.7B tokens of mathematical webpages from Common Crawl. We describe in detail our method for extracting text and LaTeX content and removing boilerplate from HTML documents, as well as our methods for quality filtering and deduplication. Additionally, we run small-scale experiments by training 1.4B parameter language models on OpenWebMath, showing that models trained on 14.7B tokens of our dataset surpass the performance of models trained on over 20x the amount of general language data. We hope that our dataset, openly released on the Hugging Face Hub, will help spur advances in the reasoning abilities of large language models."
+    description: >-
+      There is growing evidence that pretraining on high quality, carefully thought-out tokens such as code or
+      mathematics plays an important role in improving the reasoning abilities of large language models. For example,
+      Minerva, a PaLM model finetuned on billions of tokens of mathematical documents from arXiv and the web, reported
+      dramatically improved performance on problems that require quantitative reasoning. However, because all known
+      open source web datasets employ preprocessing that does not faithfully preserve mathematical notation, the
+      benefits of large scale training on quantitive web documents are unavailable to the research community. We
+      introduce OpenWebMath, an open dataset inspired by these works containing 14.7B tokens of mathematical webpages
+      from Common Crawl. We describe in detail our method for extracting text and LaTeX content and removing
+      boilerplate from HTML documents, as well as our methods for quality filtering and deduplication. Additionally, we
+      run small-scale experiments by training 1.4B parameter language models on OpenWebMath, showing that models trained
+       on 14.7B tokens of our dataset surpass the performance of models trained on over 20x the amount of general
+       language data. We hope that our dataset, openly released on the Hugging Face Hub, will help spur advances in the
+       reasoning abilities of large language models.
     url: "https://arxiv.org/abs/2310.06786"
     dateCreated: "2023-10-10"
 datasets:
   - id: github-code-clean
-    name: "Github-code-clean"
-    description: "This is a cleaner version of Github-code dataset, we add the following filters: Average line length < 100, Alpha numeric characters fraction > 0.25, Remove auto-generated files (keyword search). 3.39M files are removed making up 2.94% of the dataset."
+    name: Github-code-clean
+    description: >-
+      This is a cleaner version of Github-code dataset, we add the following filters: Average line length < 100, Alpha
+      numeric characters fraction > 0.25, Remove auto-generated files (keyword search). 3.39M files are removed making
+      up 2.94% of the dataset.
     url: "https://huggingface.co/datasets/codeparrot/github-code-clean"
     provider: codeparrot
     hasLicense: license-apache-2.0
   - id: starcoder
-    name: "Star Coder Training Dataset"
-    description: "This is the dataset used for training StarCoder and StarCoderBase. It contains 783GB of code in 86 programming languages, and includes 54GB GitHub Issues + 13GB Jupyter notebooks in scripts and text-code pairs, and 32GB of GitHub commits, which is approximately 250 Billion tokens."
+    name: Star Coder Training Dataset
+    description: >-
+      This is the dataset used for training StarCoder and StarCoderBase. It contains 783GB of code in 86 programming
+      languages, and includes 54GB GitHub Issues + 13GB Jupyter notebooks in scripts and text-code pairs, and 32GB of
+      GitHub commits, which is approximately 250 Billion tokens.
     url: "https://huggingface.co/datasets/bigcode/starcoderdata"
     dateCreated: "2023-03-30"
     dateModified: "2023-05-16"
     provider: bigcode
   - id: open-web-math
-    name: "OpenWebMath Dataset"
-    description: "OpenWebMath is a dataset containing the majority of the high-quality, mathematical text from the internet. It is filtered and extracted from over 200B HTML files on Common Crawl down to a set of 6.3 million documents containing a total of 14.7B tokens. OpenWebMath is intended for use in pretraining and finetuning large language models."
+    name: OpenWebMath Dataset
+    description: >-
+      OpenWebMath is a dataset containing the majority of the high-quality, mathematical text from the internet. It is
+      filtered and extracted from over 200B HTML files on Common Crawl down to a set of 6.3 million documents
+      containing a total of 14.7B tokens. OpenWebMath is intended for use in pretraining and finetuning large language
+      models.
     url: "https://huggingface.co/datasets/open-web-math/open-web-math"
     dateCreated: "2023-09-06"
-    hasDocumentation: ["arxiv.org/2310.06786"]
+    hasDocumentation:
+      - "arxiv.org/2310.06786"

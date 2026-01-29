@@ -1,19 +1,8 @@
-
-
 # Class: Risk
-
 
 _The state of uncertainty associated with an AI system, that has the potential to cause harms_
 
-
-
-
-
 URI: [airo:Risk](https://w3id.org/airo#Risk)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -216,101 +205,72 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Entry](Entry.md)
-        * **Risk** [ [RiskConcept](RiskConcept.md)]
 
-
+- [Entity](Entity.md)
+  - [Entry](Entry.md)
+    - **Risk** [ [RiskConcept](RiskConcept.md)]
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [hasRelatedAction](hasRelatedAction.md) | * <br/> [Action](Action.md) | A relationship where an entity relates to an action | direct |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | direct |
-| [isPartOf](isPartOf.md) | 0..1 <br/> [RiskGroup](RiskGroup.md) | A relationship where a risk is part of a risk group | direct |
-| [detectsRiskConcept](detectsRiskConcept.md) | * <br/> [RiskConcept](RiskConcept.md) | The property airo:detectsRiskConcept indicates the control used for detecting... | direct |
-| [tag](tag.md) | 0..1 <br/> [String](String.md) | A shost version of the name | direct |
-| [risk_type](risk_type.md) | 0..1 <br/> [String](String.md) | Annotation whether an AI risk occurs at input or output or is non-technical | direct |
-| [phase](phase.md) | 0..1 <br/> [String](String.md) | Annotation whether an AI risk shows specifically during the training-tuning o... | direct |
-| [descriptor](descriptor.md) | * <br/> [String](String.md) | Annotates whether an AI risk is a traditional risk, specific to or amplified ... | direct |
-| [concern](concern.md) | 0..1 <br/> [String](String.md) | Some explanation about the concern related to an AI risk | direct |
-| [isDetectedBy](isDetectedBy.md) | * <br/> [RiskControl](RiskControl.md) | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
-| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md) | A relationship where a term or a term group is defined by a vocabulary | [Entry](Entry.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Entry](Entry.md), [Concept](Concept.md) |
-| [requiredByTask](requiredByTask.md) | * <br/> [AiTask](AiTask.md) | Indicates that this entry is required to perform a specific AI task | [Entry](Entry.md) |
-| [requiresCapability](requiresCapability.md) | * <br/> [Capability](Capability.md) | Indicates that this entry requires a specific capability | [Entry](Entry.md) |
-| [implementedByAdapter](implementedByAdapter.md) | * <br/> [Adapter](Adapter.md) | Indicates that this capability is implemented by a specific adapter | [Entry](Entry.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Entry](Entry.md), [Concept](Concept.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                              | Cardinality and Range                      | Description                                                                      | Inheritance                              |
+| ------------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | ---------------------------------------- |
+| [hasRelatedAction](hasRelatedAction.md)           | \* <br/> [Action](Action.md)               | A relationship where an entity relates to an action                              | direct                                   |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | direct                                   |
+| [isPartOf](isPartOf.md)                           | 0..1 <br/> [RiskGroup](RiskGroup.md)       | A relationship where a risk is part of a risk group                              | direct                                   |
+| [detectsRiskConcept](detectsRiskConcept.md)       | \* <br/> [RiskConcept](RiskConcept.md)     | The property airo:detectsRiskConcept indicates the control used for detecting... | direct                                   |
+| [tag](tag.md)                                     | 0..1 <br/> [String](String.md)             | A shost version of the name                                                      | direct                                   |
+| [risk_type](risk_type.md)                         | 0..1 <br/> [String](String.md)             | Annotation whether an AI risk occurs at input or output or is non-technical      | direct                                   |
+| [phase](phase.md)                                 | 0..1 <br/> [String](String.md)             | Annotation whether an AI risk shows specifically during the training-tuning o... | direct                                   |
+| [descriptor](descriptor.md)                       | \* <br/> [String](String.md)               | Annotates whether an AI risk is a traditional risk, specific to or amplified ... | direct                                   |
+| [concern](concern.md)                             | 0..1 <br/> [String](String.md)             | Some explanation about the concern related to an AI risk                         | direct                                   |
+| [isDetectedBy](isDetectedBy.md)                   | \* <br/> [RiskControl](RiskControl.md)     | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)            |
+| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)     | A relationship where a term or a term group is defined by a vocabulary           | [Entry](Entry.md)                        |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Entry](Entry.md) |
+| [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)               | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)                        |
+| [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)       | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)                        |
+| [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)             | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)                        |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)             |                                                                                  | [Concept](Concept.md), [Entry](Entry.md) |
+| [id](id.md)                                       | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
+| [name](name.md)                                   | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md)                      |
+| [description](description.md)                     | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md)                      |
+| [url](url.md)                                     | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md)                      |
+| [dateCreated](dateCreated.md)                     | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md)                      |
+| [dateModified](dateModified.md)                   | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md)                      |
+| [exact_mappings](exact_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)                      |
+| [close_mappings](close_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)                      |
+| [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                      |
+| [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
+| [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [RiskGroup](RiskGroup.md) | [hasPart](hasPart.md) | range | [Risk](Risk.md) |
-| [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [RiskIncident](RiskIncident.md) | [refersToRisk](refersToRisk.md) | range | [Risk](Risk.md) |
-| [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| used by                                           | used in                             | type  | used            |
+| ------------------------------------------------- | ----------------------------------- | ----- | --------------- |
+| [Term](Term.md)                                   | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md)         | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [RiskGroup](RiskGroup.md)                         | [hasPart](hasPart.md)               | range | [Risk](Risk.md) |
+| [Action](Action.md)                               | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [RiskIncident](RiskIncident.md)                   | [refersToRisk](refersToRisk.md)     | range | [Risk](Risk.md) |
+| [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [Adapter](Adapter.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
-
-
-
-
-
-
+| [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [Questionnaire](Questionnaire.md)                 | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [Adapter](Adapter.md)                             | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                   | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | airo:Risk |
-| native | nexus:Risk |
-
-
-
-
-
+| ------------ | ------------ |
+| self         | airo:Risk    |
+| native       | nexus:Risk   |
 
 ## LinkML Source
 
@@ -378,7 +338,7 @@ attributes:
     - Risk
 class_uri: airo:Risk
 
-```
+````
 </details>
 
 ### Induced
@@ -789,5 +749,6 @@ attributes:
     inlined: false
 class_uri: airo:Risk
 
-```
+````
+
 </details>

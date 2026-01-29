@@ -1,14 +1,6 @@
-
-
 # Class: Severity
 
-
-
 URI: [dpv:Severity](https://w3id.org/dpv#Severity)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -87,74 +79,45 @@ URI: [dpv:Severity](https://w3id.org/dpv#Severity)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * **Severity**
 
-
+- [Entity](Entity.md)
+  - **Severity**
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |
+| --------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [id](id.md)                             | 1 <br/> [String](String.md)    | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                         | 0..1 <br/> [String](String.md) | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)           | 0..1 <br/> [String](String.md) | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                           | 0..1 <br/> [Uri](Uri.md)       | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)           | 0..1 <br/> [Date](Date.md)     | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)         | 0..1 <br/> [Date](Date.md)     | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)         | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
+| used by                         | used in                       | type  | used                    |
+| ------------------------------- | ----------------------------- | ----- | ----------------------- |
 | [RiskIncident](RiskIncident.md) | [hasSeverity](hasSeverity.md) | range | [Severity](Severity.md) |
-
-
-
-
-
-
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | dpv:Severity |
-| native | nexus:Severity |
-
-
-
-
-
+| Mapping Type | Mapped Value   |
+| ------------ | -------------- |
+| self         | dpv:Severity   |
+| native       | nexus:Severity |
 
 ## LinkML Source
 
@@ -169,7 +132,7 @@ from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 class_uri: dpv:Severity
 
-```
+````
 </details>
 
 ### Induced
@@ -327,5 +290,6 @@ attributes:
     inlined: false
 class_uri: dpv:Severity
 
-```
+````
+
 </details>

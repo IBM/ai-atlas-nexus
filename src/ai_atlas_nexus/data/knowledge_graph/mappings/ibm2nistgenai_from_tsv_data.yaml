@@ -1,649 +1,649 @@
 entries:
-- id: atlas-attribute-inference-attack
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-attribute-inference-attack
-  type: Risk
-- id: atlas-attribute-inference-attack
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-attribute-inference-attack
-  type: Risk
-- id: atlas-confidential-data-in-prompt
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-confidential-data-in-prompt
-  type: Risk
-- id: atlas-confidential-information-in-data
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-confidential-information-in-data
-  type: Risk
-- id: atlas-copyright-infringement
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-copyright-infringement
-  type: Risk
-- id: atlas-dangerous-use
-  broad_mappings:
-  - nist-cbrn-information-or-capabilities
-  type: Risk
-- id: nist-cbrn-information-or-capabilities
-  broad_mappings:
-  - atlas-dangerous-use
-  type: Risk
-- id: atlas-data-acquisition
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-data-acquisition
-  type: Risk
-- id: atlas-data-bias
-  broad_mappings:
-  - nist-harmful-bias-or-homogenization
-  type: Risk
-- id: nist-harmful-bias-or-homogenization
-  broad_mappings:
-  - atlas-data-bias
-  type: Risk
-- id: atlas-data-contamination
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-data-contamination
-  type: Risk
-- id: atlas-data-contamination
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-data-contamination
-  type: Risk
-- id: atlas-data-curation
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-data-curation
-  type: Risk
-- id: atlas-data-poisoning
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-data-poisoning
-  type: Risk
-- id: atlas-data-privacy-rights
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-data-privacy-rights
-  type: Risk
-- id: atlas-data-provenance
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-data-provenance
-  type: Risk
-- id: atlas-data-transfer
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-data-transfer
-  type: Risk
-- id: atlas-data-transparency
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-data-transparency
-  type: Risk
-- id: atlas-data-transparency
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-data-transparency
-  type: Risk
-- id: atlas-data-usage-rights
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-data-usage-rights
-  type: Risk
-- id: atlas-data-usage-rights
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-data-usage-rights
-  type: Risk
-- id: atlas-data-usage-rights
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-data-usage-rights
-  type: Risk
-- id: atlas-decision-bias
-  broad_mappings:
-  - nist-harmful-bias-or-homogenization
-  type: Risk
-- id: nist-harmful-bias-or-homogenization
-  broad_mappings:
-  - atlas-decision-bias
-  type: Risk
-- id: atlas-evasion-attack
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-evasion-attack
-  type: Risk
-- id: atlas-exposing-personal-information
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-exposing-personal-information
-  type: Risk
-- id: atlas-extraction-attack
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-extraction-attack
-  type: Risk
-- id: atlas-generated-content-ownership
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-generated-content-ownership
-  type: Risk
-- id: atlas-hallucination
-  exact_mappings:
-  - nist-confabulation
-  type: Risk
-- id: nist-confabulation
-  exact_mappings:
-  - atlas-hallucination
-  type: Risk
-- id: atlas-harmful-code-generation
-  broad_mappings:
-  - nist-dangerous-violent-or-hateful-content
-  type: Risk
-- id: nist-dangerous-violent-or-hateful-content
-  broad_mappings:
-  - atlas-harmful-code-generation
-  type: Risk
-- id: atlas-harmful-code-generation
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-harmful-code-generation
-  type: Risk
-- id: atlas-harmful-output
-  close_mappings:
-  - nist-dangerous-violent-or-hateful-content
-  type: Risk
-- id: nist-dangerous-violent-or-hateful-content
-  close_mappings:
-  - atlas-harmful-output
-  type: Risk
-- id: atlas-harmful-output
-  related_mappings:
-  - nist-cbrn-information-or-capabilities
-  type: Risk
-- id: nist-cbrn-information-or-capabilities
-  related_mappings:
-  - atlas-harmful-output
-  type: Risk
-- id: atlas-harmful-output
-  related_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  related_mappings:
-  - atlas-harmful-output
-  type: Risk
-- id: atlas-harmful-output
-  related_mappings:
-  - nist-obscene-degrading-and-or-abusive-content
-  type: Risk
-- id: nist-obscene-degrading-and-or-abusive-content
-  related_mappings:
-  - atlas-harmful-output
-  type: Risk
-- id: atlas-human-exploitation
-  broad_mappings:
-  - nist-obscene-degrading-and-or-abusive-content
-  type: Risk
-- id: nist-obscene-degrading-and-or-abusive-content
-  broad_mappings:
-  - atlas-human-exploitation
-  type: Risk
-- id: atlas-impact-on-affected-communities
-  broad_mappings:
-  - nist-harmful-bias-or-homogenization
-  type: Risk
-- id: nist-harmful-bias-or-homogenization
-  broad_mappings:
-  - atlas-impact-on-affected-communities
-  type: Risk
-- id: atlas-impact-on-cultural-diversity
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-impact-on-cultural-diversity
-  type: Risk
-- id: atlas-impact-on-human-agency
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-impact-on-human-agency
-  type: Risk
-- id: atlas-impact-on-the-environment
-  exact_mappings:
-  - nist-environmental-impacts
-  type: Risk
-- id: nist-environmental-impacts
-  exact_mappings:
-  - atlas-impact-on-the-environment
-  type: Risk
-- id: atlas-improper-retraining
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-improper-retraining
-  type: Risk
-- id: atlas-improper-usage
-  broad_mappings:
-  - nist-human-ai-configuration
-  type: Risk
-- id: nist-human-ai-configuration
-  broad_mappings:
-  - atlas-improper-usage
-  type: Risk
-- id: atlas-inaccessible-training-data
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-inaccessible-training-data
-  type: Risk
-- id: atlas-incomplete-advice
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-incomplete-advice
-  type: Risk
-- id: atlas-incomplete-advice
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-incomplete-advice
-  type: Risk
-- id: atlas-incomplete-usage-definition
-  broad_mappings:
-  - nist-human-ai-configuration
-  type: Risk
-- id: nist-human-ai-configuration
-  broad_mappings:
-  - atlas-incomplete-usage-definition
-  type: Risk
-- id: atlas-incorrect-risk-testing
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-incorrect-risk-testing
-  type: Risk
-- id: atlas-ip-information-in-prompt
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-ip-information-in-prompt
-  type: Risk
-- id: atlas-jailbreaking
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-jailbreaking
-  type: Risk
-- id: atlas-lack-of-data-transparency
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-lack-of-data-transparency
-  type: Risk
-- id: atlas-lack-of-model-transparency
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-lack-of-model-transparency
-  type: Risk
-- id: atlas-lack-of-system-transparency
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-lack-of-system-transparency
-  type: Risk
-- id: atlas-lack-of-testing-diversity
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-lack-of-testing-diversity
-  type: Risk
-- id: atlas-legal-accountability
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-legal-accountability
-  type: Risk
-- id: atlas-legal-accountability
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-legal-accountability
-  type: Risk
-- id: atlas-legal-accountability
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-legal-accountability
-  type: Risk
-- id: atlas-membership-inference-attack
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-membership-inference-attack
-  type: Risk
-- id: atlas-model-usage-rights
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-model-usage-rights
-  type: Risk
-- id: atlas-model-usage-rights
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-model-usage-rights
-  type: Risk
-- id: atlas-model-usage-rights
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-model-usage-rights
-  type: Risk
-- id: atlas-non-disclosure
-  broad_mappings:
-  - nist-human-ai-configuration
-  type: Risk
-- id: nist-human-ai-configuration
-  broad_mappings:
-  - atlas-non-disclosure
-  type: Risk
-- id: atlas-nonconsensual-use
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-nonconsensual-use
-  type: Risk
-- id: atlas-output-bias
-  broad_mappings:
-  - nist-harmful-bias-or-homogenization
-  type: Risk
-- id: nist-harmful-bias-or-homogenization
-  broad_mappings:
-  - atlas-output-bias
-  type: Risk
-- id: atlas-over-or-under-reliance
-  broad_mappings:
-  - nist-human-ai-configuration
-  type: Risk
-- id: nist-human-ai-configuration
-  broad_mappings:
-  - atlas-over-or-under-reliance
-  type: Risk
-- id: atlas-personal-information-in-data
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-personal-information-in-data
-  type: Risk
-- id: atlas-personal-information-in-prompt
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-personal-information-in-prompt
-  type: Risk
-- id: atlas-poor-model-accuracy
-  broad_mappings:
-  - nist-human-ai-configuration
-  type: Risk
-- id: nist-human-ai-configuration
-  broad_mappings:
-  - atlas-poor-model-accuracy
-  type: Risk
-- id: atlas-poor-model-accuracy
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-poor-model-accuracy
-  type: Risk
-- id: atlas-poor-model-accuracy
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-poor-model-accuracy
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-leaking
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-prompt-leaking
-  type: Risk
-- id: atlas-prompt-priming
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-prompt-priming
-  type: Risk
-- id: atlas-reidentification
-  broad_mappings:
-  - nist-data-privacy
-  type: Risk
-- id: nist-data-privacy
-  broad_mappings:
-  - atlas-reidentification
-  type: Risk
-- id: atlas-revealing-confidential-information
-  broad_mappings:
-  - nist-intellectual-property
-  type: Risk
-- id: nist-intellectual-property
-  broad_mappings:
-  - atlas-revealing-confidential-information
-  type: Risk
-- id: atlas-spreading-disinformation
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-spreading-disinformation
-  type: Risk
-- id: atlas-spreading-toxicity
-  broad_mappings:
-  - nist-harmful-bias-or-homogenization
-  type: Risk
-- id: nist-harmful-bias-or-homogenization
-  broad_mappings:
-  - atlas-spreading-toxicity
-  type: Risk
-- id: atlas-toxic-output
-  close_mappings:
-  - nist-dangerous-violent-or-hateful-content
-  type: Risk
-- id: nist-dangerous-violent-or-hateful-content
-  close_mappings:
-  - atlas-toxic-output
-  type: Risk
-- id: atlas-toxic-output
-  close_mappings:
-  - nist-obscene-degrading-and-or-abusive-content
-  type: Risk
-- id: nist-obscene-degrading-and-or-abusive-content
-  close_mappings:
-  - atlas-toxic-output
-  type: Risk
-- id: atlas-unexplainable-output
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-unexplainable-output
-  type: Risk
-- id: atlas-unreliable-source-attribution
-  broad_mappings:
-  - nist-information-security
-  type: Risk
-- id: nist-information-security
-  broad_mappings:
-  - atlas-unreliable-source-attribution
-  type: Risk
-- id: atlas-unrepresentative-data
-  broad_mappings:
-  - nist-harmful-bias-or-homogenization
-  type: Risk
-- id: nist-harmful-bias-or-homogenization
-  broad_mappings:
-  - atlas-unrepresentative-data
-  type: Risk
-- id: atlas-unrepresentative-data
-  related_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  related_mappings:
-  - atlas-unrepresentative-data
-  type: Risk
-- id: atlas-unrepresentative-risk-testing
-  broad_mappings:
-  - nist-value-chain-and-component-integration
-  type: Risk
-- id: nist-value-chain-and-component-integration
-  broad_mappings:
-  - atlas-unrepresentative-risk-testing
-  type: Risk
-- id: atlas-untraceable-attribution
-  broad_mappings:
-  - nist-information-integrity
-  type: Risk
-- id: nist-information-integrity
-  broad_mappings:
-  - atlas-untraceable-attribution
-  type: Risk
+  - id: atlas-attribute-inference-attack
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-attribute-inference-attack
+    type: Risk
+  - id: atlas-attribute-inference-attack
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-attribute-inference-attack
+    type: Risk
+  - id: atlas-confidential-data-in-prompt
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-confidential-data-in-prompt
+    type: Risk
+  - id: atlas-confidential-information-in-data
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-confidential-information-in-data
+    type: Risk
+  - id: atlas-copyright-infringement
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-copyright-infringement
+    type: Risk
+  - id: atlas-dangerous-use
+    broad_mappings:
+      - nist-cbrn-information-or-capabilities
+    type: Risk
+  - id: nist-cbrn-information-or-capabilities
+    broad_mappings:
+      - atlas-dangerous-use
+    type: Risk
+  - id: atlas-data-acquisition
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-data-acquisition
+    type: Risk
+  - id: atlas-data-bias
+    broad_mappings:
+      - nist-harmful-bias-or-homogenization
+    type: Risk
+  - id: nist-harmful-bias-or-homogenization
+    broad_mappings:
+      - atlas-data-bias
+    type: Risk
+  - id: atlas-data-contamination
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-data-contamination
+    type: Risk
+  - id: atlas-data-contamination
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-data-contamination
+    type: Risk
+  - id: atlas-data-curation
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-data-curation
+    type: Risk
+  - id: atlas-data-poisoning
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-data-poisoning
+    type: Risk
+  - id: atlas-data-privacy-rights
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-data-privacy-rights
+    type: Risk
+  - id: atlas-data-provenance
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-data-provenance
+    type: Risk
+  - id: atlas-data-transfer
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-data-transfer
+    type: Risk
+  - id: atlas-data-transparency
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-data-transparency
+    type: Risk
+  - id: atlas-data-transparency
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-data-transparency
+    type: Risk
+  - id: atlas-data-usage-rights
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-data-usage-rights
+    type: Risk
+  - id: atlas-data-usage-rights
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-data-usage-rights
+    type: Risk
+  - id: atlas-data-usage-rights
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-data-usage-rights
+    type: Risk
+  - id: atlas-decision-bias
+    broad_mappings:
+      - nist-harmful-bias-or-homogenization
+    type: Risk
+  - id: nist-harmful-bias-or-homogenization
+    broad_mappings:
+      - atlas-decision-bias
+    type: Risk
+  - id: atlas-evasion-attack
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-evasion-attack
+    type: Risk
+  - id: atlas-exposing-personal-information
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-exposing-personal-information
+    type: Risk
+  - id: atlas-extraction-attack
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-extraction-attack
+    type: Risk
+  - id: atlas-generated-content-ownership
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-generated-content-ownership
+    type: Risk
+  - id: atlas-hallucination
+    exact_mappings:
+      - nist-confabulation
+    type: Risk
+  - id: nist-confabulation
+    exact_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-harmful-code-generation
+    broad_mappings:
+      - nist-dangerous-violent-or-hateful-content
+    type: Risk
+  - id: nist-dangerous-violent-or-hateful-content
+    broad_mappings:
+      - atlas-harmful-code-generation
+    type: Risk
+  - id: atlas-harmful-code-generation
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-harmful-code-generation
+    type: Risk
+  - id: atlas-harmful-output
+    close_mappings:
+      - nist-dangerous-violent-or-hateful-content
+    type: Risk
+  - id: nist-dangerous-violent-or-hateful-content
+    close_mappings:
+      - atlas-harmful-output
+    type: Risk
+  - id: atlas-harmful-output
+    related_mappings:
+      - nist-cbrn-information-or-capabilities
+    type: Risk
+  - id: nist-cbrn-information-or-capabilities
+    related_mappings:
+      - atlas-harmful-output
+    type: Risk
+  - id: atlas-harmful-output
+    related_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    related_mappings:
+      - atlas-harmful-output
+    type: Risk
+  - id: atlas-harmful-output
+    related_mappings:
+      - nist-obscene-degrading-and-or-abusive-content
+    type: Risk
+  - id: nist-obscene-degrading-and-or-abusive-content
+    related_mappings:
+      - atlas-harmful-output
+    type: Risk
+  - id: atlas-human-exploitation
+    broad_mappings:
+      - nist-obscene-degrading-and-or-abusive-content
+    type: Risk
+  - id: nist-obscene-degrading-and-or-abusive-content
+    broad_mappings:
+      - atlas-human-exploitation
+    type: Risk
+  - id: atlas-impact-on-affected-communities
+    broad_mappings:
+      - nist-harmful-bias-or-homogenization
+    type: Risk
+  - id: nist-harmful-bias-or-homogenization
+    broad_mappings:
+      - atlas-impact-on-affected-communities
+    type: Risk
+  - id: atlas-impact-on-cultural-diversity
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-impact-on-cultural-diversity
+    type: Risk
+  - id: atlas-impact-on-human-agency
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-impact-on-human-agency
+    type: Risk
+  - id: atlas-impact-on-the-environment
+    exact_mappings:
+      - nist-environmental-impacts
+    type: Risk
+  - id: nist-environmental-impacts
+    exact_mappings:
+      - atlas-impact-on-the-environment
+    type: Risk
+  - id: atlas-improper-retraining
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-improper-retraining
+    type: Risk
+  - id: atlas-improper-usage
+    broad_mappings:
+      - nist-human-ai-configuration
+    type: Risk
+  - id: nist-human-ai-configuration
+    broad_mappings:
+      - atlas-improper-usage
+    type: Risk
+  - id: atlas-inaccessible-training-data
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-inaccessible-training-data
+    type: Risk
+  - id: atlas-incomplete-advice
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-incomplete-advice
+    type: Risk
+  - id: atlas-incomplete-advice
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-incomplete-advice
+    type: Risk
+  - id: atlas-incomplete-usage-definition
+    broad_mappings:
+      - nist-human-ai-configuration
+    type: Risk
+  - id: nist-human-ai-configuration
+    broad_mappings:
+      - atlas-incomplete-usage-definition
+    type: Risk
+  - id: atlas-incorrect-risk-testing
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-incorrect-risk-testing
+    type: Risk
+  - id: atlas-ip-information-in-prompt
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-ip-information-in-prompt
+    type: Risk
+  - id: atlas-jailbreaking
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-jailbreaking
+    type: Risk
+  - id: atlas-lack-of-data-transparency
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-lack-of-data-transparency
+    type: Risk
+  - id: atlas-lack-of-model-transparency
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-lack-of-model-transparency
+    type: Risk
+  - id: atlas-lack-of-system-transparency
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-lack-of-system-transparency
+    type: Risk
+  - id: atlas-lack-of-testing-diversity
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-lack-of-testing-diversity
+    type: Risk
+  - id: atlas-legal-accountability
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-legal-accountability
+    type: Risk
+  - id: atlas-legal-accountability
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-legal-accountability
+    type: Risk
+  - id: atlas-legal-accountability
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-legal-accountability
+    type: Risk
+  - id: atlas-membership-inference-attack
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-membership-inference-attack
+    type: Risk
+  - id: atlas-model-usage-rights
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-model-usage-rights
+    type: Risk
+  - id: atlas-model-usage-rights
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-model-usage-rights
+    type: Risk
+  - id: atlas-model-usage-rights
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-model-usage-rights
+    type: Risk
+  - id: atlas-non-disclosure
+    broad_mappings:
+      - nist-human-ai-configuration
+    type: Risk
+  - id: nist-human-ai-configuration
+    broad_mappings:
+      - atlas-non-disclosure
+    type: Risk
+  - id: atlas-nonconsensual-use
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-nonconsensual-use
+    type: Risk
+  - id: atlas-output-bias
+    broad_mappings:
+      - nist-harmful-bias-or-homogenization
+    type: Risk
+  - id: nist-harmful-bias-or-homogenization
+    broad_mappings:
+      - atlas-output-bias
+    type: Risk
+  - id: atlas-over-or-under-reliance
+    broad_mappings:
+      - nist-human-ai-configuration
+    type: Risk
+  - id: nist-human-ai-configuration
+    broad_mappings:
+      - atlas-over-or-under-reliance
+    type: Risk
+  - id: atlas-personal-information-in-data
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-personal-information-in-data
+    type: Risk
+  - id: atlas-personal-information-in-prompt
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-personal-information-in-prompt
+    type: Risk
+  - id: atlas-poor-model-accuracy
+    broad_mappings:
+      - nist-human-ai-configuration
+    type: Risk
+  - id: nist-human-ai-configuration
+    broad_mappings:
+      - atlas-poor-model-accuracy
+    type: Risk
+  - id: atlas-poor-model-accuracy
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-poor-model-accuracy
+    type: Risk
+  - id: atlas-poor-model-accuracy
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-poor-model-accuracy
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-leaking
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-prompt-leaking
+    type: Risk
+  - id: atlas-prompt-priming
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-prompt-priming
+    type: Risk
+  - id: atlas-reidentification
+    broad_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    broad_mappings:
+      - atlas-reidentification
+    type: Risk
+  - id: atlas-revealing-confidential-information
+    broad_mappings:
+      - nist-intellectual-property
+    type: Risk
+  - id: nist-intellectual-property
+    broad_mappings:
+      - atlas-revealing-confidential-information
+    type: Risk
+  - id: atlas-spreading-disinformation
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-spreading-disinformation
+    type: Risk
+  - id: atlas-spreading-toxicity
+    broad_mappings:
+      - nist-harmful-bias-or-homogenization
+    type: Risk
+  - id: nist-harmful-bias-or-homogenization
+    broad_mappings:
+      - atlas-spreading-toxicity
+    type: Risk
+  - id: atlas-toxic-output
+    close_mappings:
+      - nist-dangerous-violent-or-hateful-content
+    type: Risk
+  - id: nist-dangerous-violent-or-hateful-content
+    close_mappings:
+      - atlas-toxic-output
+    type: Risk
+  - id: atlas-toxic-output
+    close_mappings:
+      - nist-obscene-degrading-and-or-abusive-content
+    type: Risk
+  - id: nist-obscene-degrading-and-or-abusive-content
+    close_mappings:
+      - atlas-toxic-output
+    type: Risk
+  - id: atlas-unexplainable-output
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-unexplainable-output
+    type: Risk
+  - id: atlas-unreliable-source-attribution
+    broad_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    broad_mappings:
+      - atlas-unreliable-source-attribution
+    type: Risk
+  - id: atlas-unrepresentative-data
+    broad_mappings:
+      - nist-harmful-bias-or-homogenization
+    type: Risk
+  - id: nist-harmful-bias-or-homogenization
+    broad_mappings:
+      - atlas-unrepresentative-data
+    type: Risk
+  - id: atlas-unrepresentative-data
+    related_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    related_mappings:
+      - atlas-unrepresentative-data
+    type: Risk
+  - id: atlas-unrepresentative-risk-testing
+    broad_mappings:
+      - nist-value-chain-and-component-integration
+    type: Risk
+  - id: nist-value-chain-and-component-integration
+    broad_mappings:
+      - atlas-unrepresentative-risk-testing
+    type: Risk
+  - id: atlas-untraceable-attribution
+    broad_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    broad_mappings:
+      - atlas-untraceable-attribution
+    type: Risk

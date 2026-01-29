@@ -1,19 +1,8 @@
-
-
 # Class: RiskGroup
-
 
 _A group of AI system related risks that are part of a risk taxonomy._
 
-
-
-
-
 URI: [nexus:RiskGroup](https://ibm.github.io/ai-atlas-nexus/ontology/RiskGroup)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -151,81 +140,52 @@ URI: [nexus:RiskGroup](https://ibm.github.io/ai-atlas-nexus/ontology/RiskGroup)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Group](Group.md)
-        * **RiskGroup** [ [RiskConcept](RiskConcept.md)]
 
-
+- [Entity](Entity.md)
+  - [Group](Group.md)
+    - **RiskGroup** [ [RiskConcept](RiskConcept.md)]
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | direct |
-| [hasPart](hasPart.md) | * <br/> [Risk](Risk.md) | A relationship where a riskgroup has a risk | direct |
-| [isDetectedBy](isDetectedBy.md) | * <br/> [RiskControl](RiskControl.md) | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Group](Group.md), [Concept](Concept.md) |
-| [belongsToDomain](belongsToDomain.md) | 0..1 <br/> [Any](Any.md) | A relationship where a group belongs to a domain | [Group](Group.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Group](Group.md), [Concept](Concept.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance                              |
+| --------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | ---------------------------------------- |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | direct                                   |
+| [hasPart](hasPart.md)                         | \* <br/> [Risk](Risk.md)                   | A relationship where a riskgroup has a risk                                      | direct                                   |
+| [isDetectedBy](isDetectedBy.md)               | \* <br/> [RiskControl](RiskControl.md)     | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)            |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Group](Group.md), [Concept](Concept.md) |
+| [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                   | A relationship where a group belongs to a domain                                 | [Group](Group.md)                        |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Group](Group.md), [Concept](Concept.md) |
+| [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
+| [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md)                      |
+| [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md)                      |
+| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md)                      |
+| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md)                      |
+| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md)                      |
+| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)                      |
+| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)                      |
+| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                      |
+| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
+| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
+| used by         | used in                 | type  | used                      |
+| --------------- | ----------------------- | ----- | ------------------------- |
 | [Risk](Risk.md) | [isPartOf](isPartOf.md) | range | [RiskGroup](RiskGroup.md) |
-
-
-
-
-
-
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:RiskGroup |
-| native | nexus:RiskGroup |
-
-
-
-
-
+| Mapping Type | Mapped Value    |
+| ------------ | --------------- |
+| self         | nexus:RiskGroup |
+| native       | nexus:RiskGroup |
 
 ## LinkML Source
 
@@ -250,7 +210,7 @@ slot_usage:
     description: A relationship where a riskgroup has a risk
     range: Risk
 
-```
+````
 </details>
 
 ### Induced
@@ -526,5 +486,6 @@ attributes:
     multivalued: true
     inlined: false
 
-```
+````
+
 </details>

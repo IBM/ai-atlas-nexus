@@ -1,67 +1,36 @@
-
-
 # Slot: hasMetrics
 
-
 _The specific performance metrics used to assess models (e.g., accuracy, F1 score, precision, recall)._
-
-
-
-
 
 URI: [nexus:hasMetrics](https://ibm.github.io/ai-atlas-nexus/ontology/hasMetrics)
 Alias: hasMetrics
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
-
-
-
-
-
+| Name                                              | Description                                                                      | Modifies Slot |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasMetrics |
-| native | nexus:hasMetrics |
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | nexus:hasMetrics |
+| native       | nexus:hasMetrics |
 
 ## LinkML Source
 
@@ -80,3 +49,4 @@ multivalued: true
 
 ```
 </details>
+```

@@ -1,21 +1,10 @@
-
-
 # Class: Fact
-
 
 _A fact about something, for example the result of a measurement. In addition to the value, evidence is provided._
 
-
-
-
-* __NOTE__: this is an abstract class and should not be instantiated directly
-
+- **NOTE**: this is an abstract class and should not be instantiated directly
 
 URI: [schema:Statement](http://schema.org/Statement)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -31,54 +20,27 @@ URI: [schema:Statement](http://schema.org/Statement)
 
 ```
 
-
-
-
 <!-- no inheritance hierarchy -->
-
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [value](value.md) | 1 <br/> [String](String.md) | Some numeric or string value | direct |
-| [evidence](evidence.md) | 0..1 <br/> [String](String.md) | Evidence provides a source (typical a chunk, paragraph or link) describing wh... | direct |
-
-
-
-
-
-
-
-
-
+| Name                    | Cardinality and Range          | Description                                                                      | Inheritance |
+| ----------------------- | ------------------------------ | -------------------------------------------------------------------------------- | ----------- |
+| [value](value.md)       | 1 <br/> [String](String.md)    | Some numeric or string value                                                     | direct      |
+| [evidence](evidence.md) | 0..1 <br/> [String](String.md) | Evidence provides a source (typical a chunk, paragraph or link) describing wh... | direct      |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | schema:Statement |
-| native | nexus:Fact |
-
-
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | schema:Statement |
+| native       | nexus:Fact       |
 
 ## LinkML Source
 
@@ -98,7 +60,7 @@ slots:
 - evidence
 class_uri: schema:Statement
 
-```
+````
 </details>
 
 ### Induced
@@ -135,5 +97,6 @@ attributes:
     range: string
 class_uri: schema:Statement
 
-```
+````
+
 </details>

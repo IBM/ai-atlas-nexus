@@ -1,359 +1,369 @@
 documents:
-- id: arxiv.org/2408.12622
-  name: 'The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy
-    of Risks From Artificial Intelligence'
-  description: 'The risks posed by Artificial Intelligence (AI) are of considerable
-    concern to academics, auditors, policymakers, AI companies, and the public. However,
-    a lack of shared understanding of AI risks can impede our ability to comprehensively
-    discuss, research, and react to them. This paper addresses this gap by creating
-    an AI Risk Repository to serve as a common frame of reference. This comprises
-    a living database of 777 risks extracted from 43 taxonomies, which can be filtered
-    based on two overarching taxonomies and easily accessed, modified, and updated
-    via our website and online spreadsheets. We construct our Repository with a systematic
-    review of taxonomies and other structured classifications of AI risk followed
-    by an expert consultation. We develop our taxonomies of AI risk using a best-fit
-    framework synthesis. Our high-level Causal Taxonomy of AI Risks classifies each
-    risk by its causal factors (1) Entity: Human, AI; (2) Intentionality: Intentional,
-    Unintentional; and (3) Timing: Pre-deployment; Post-deployment. Our mid-level
-    Domain Taxonomy of AI Risks classifies risks into seven AI risk domains: (1) Discrimination
-    & toxicity, (2) Privacy & security, (3) Misinformation, (4) Malicious actors &
-    misuse, (5) Human-computer interaction, (6) Socioeconomic & environmental, and
-    (7) AI system safety, failures, & limitations. These are further divided into
-    23 subdomains. The AI Risk Repository is, to our knowledge, the first attempt
-    to rigorously curate, analyze, and extract AI risk frameworks into a publicly
-    accessible, comprehensive, extensible, and categorized risk database. This creates
-    a foundation for a more coordinated, coherent, and complete approach to defining,
-    auditing, and managing the risks posed by AI systems.'
-  url: https://arxiv.org/abs/2408.12622
-  dateCreated: 2024-08-14
-  dateModified: 2024-08-14
+  - id: arxiv.org/2408.12622
+    name: "The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy
+      of Risks From Artificial Intelligence"
+    description: "The risks posed by Artificial Intelligence (AI) are of considerable
+      concern to academics, auditors, policymakers, AI companies, and the public. However,
+      a lack of shared understanding of AI risks can impede our ability to comprehensively
+      discuss, research, and react to them. This paper addresses this gap by creating
+      an AI Risk Repository to serve as a common frame of reference. This comprises
+      a living database of 777 risks extracted from 43 taxonomies, which can be filtered
+      based on two overarching taxonomies and easily accessed, modified, and updated
+      via our website and online spreadsheets. We construct our Repository with a systematic
+      review of taxonomies and other structured classifications of AI risk followed
+      by an expert consultation. We develop our taxonomies of AI risk using a best-fit
+      framework synthesis. Our high-level Causal Taxonomy of AI Risks classifies each
+      risk by its causal factors (1) Entity: Human, AI; (2) Intentionality: Intentional,
+      Unintentional; and (3) Timing: Pre-deployment; Post-deployment. Our mid-level
+      Domain Taxonomy of AI Risks classifies risks into seven AI risk domains: (1) Discrimination
+      & toxicity, (2) Privacy & security, (3) Misinformation, (4) Malicious actors &
+      misuse, (5) Human-computer interaction, (6) Socioeconomic & environmental, and
+      (7) AI system safety, failures, & limitations. These are further divided into
+      23 subdomains. The AI Risk Repository is, to our knowledge, the first attempt
+      to rigorously curate, analyze, and extract AI risk frameworks into a publicly
+      accessible, comprehensive, extensible, and categorized risk database. This creates
+      a foundation for a more coordinated, coherent, and complete approach to defining,
+      auditing, and managing the risks posed by AI systems."
+    url: https://arxiv.org/abs/2408.12622
+    dateCreated: 2024-08-14
+    dateModified: 2024-08-14
 taxonomies:
-- id: mit-ai-risk-repository
-  name: 'The AI Risk Repository: Domain Taxonomy of AI Risks'
-  type: RiskTaxonomy
-  description: 'The Domain Taxonomy of AI Risks adapted from Weidinger (2021) classifies risks into 7 AI risk domains: (1) Discrimination & Toxicity, (2) Privacy & Security, (3) Misinformation, (4) Malicious Actors & Misuse, (5) Human-Computer Interaction, (6) Socioeconomic & Environmental, and (7) AI System Safety, Failures, & Limitations.'
-  url: https://airisk.mit.edu/
-  dateCreated: 2024-08-16
-  version: '1'
-  hasDocumentation:
-  - arxiv.org/2408.12622
-- id: mit-ai-risk-repository-causal
-  name: 'The AI Risk Repository: Casual Taxonomy of AI Risks'
-  type: RiskTaxonomy
-  description: The Causal Taxonomy of AI Risks, adapted from Yampolskiy (2016), classifies risks by its causal factors (1) entity (human, AI), (2) intentionality (intentional, unintentional), and (3) timing (pre-deployment, post-deployment).
-  url: https://airisk.mit.edu/
-  dateCreated: 2024-08-16
-  version: '1'
-  hasDocumentation:
-  - arxiv.org/2408.12622
+  - id: mit-ai-risk-repository
+    name: "The AI Risk Repository: Domain Taxonomy of AI Risks"
+    type: RiskTaxonomy
+    description: >-
+      The Domain Taxonomy of AI Risks adapted from Weidinger (2021) classifies risks into 7 AI risk domains:
+      (1) Discrimination & Toxicity, (2) Privacy & Security, (3) Misinformation, (4) Malicious Actors & Misuse,
+      (5) Human-Computer Interaction, (6) Socioeconomic & Environmental, and (7) AI System Safety, Failures,
+      & Limitations.
+    url: https://airisk.mit.edu/
+    dateCreated: 2024-08-16
+    version: "1"
+    hasDocumentation:
+      - arxiv.org/2408.12622
+  - id: mit-ai-risk-repository-causal
+    name: "The AI Risk Repository: Casual Taxonomy of AI Risks"
+    type: RiskTaxonomy
+    description: >-
+      The Causal Taxonomy of AI Risks, adapted from Yampolskiy (2016), classifies risks by its causal factors (1)
+      entity (human, AI), (2) intentionality (intentional, unintentional), and (3) timing (pre-deployment,
+      post-deployment).
+    url: https://airisk.mit.edu/
+    dateCreated: 2024-08-16
+    version: "1"
+    hasDocumentation:
+      - arxiv.org/2408.12622
 groups:
-- id: mit-ai-risk-domain-1
-  name: Discrimination & Toxicity
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository
-- id: mit-ai-risk-domain-2
-  name: Privacy & Security
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository
-- id: mit-ai-risk-domain-3
-  name: Misinformation
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository
-- id: mit-ai-risk-domain-4
-  name: Malicious actors
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository
-- id: mit-ai-risk-domain-5
-  name: Human- Computer Interaction
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository
-- id: mit-ai-risk-domain-6
-  name: Socioeconomic & Environmental
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository
-- id: mit-ai-risk-domain-7
-  name: AI system safety, failures, & limitations
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository
-- id: mit-ai-risk-repository-causal-entity
-  name: Entity
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-- id: mit-ai-risk-repository-causal-intent
-  name: Intent
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-- id: mit-ai-risk-repository-causal-timing
-  name: Timing
-  type: RiskGroup
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  - id: mit-ai-risk-domain-1
+    name: Discrimination & Toxicity
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository
+  - id: mit-ai-risk-domain-2
+    name: Privacy & Security
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository
+  - id: mit-ai-risk-domain-3
+    name: Misinformation
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository
+  - id: mit-ai-risk-domain-4
+    name: Malicious actors
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository
+  - id: mit-ai-risk-domain-5
+    name: Human- Computer Interaction
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository
+  - id: mit-ai-risk-domain-6
+    name: Socioeconomic & Environmental
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository
+  - id: mit-ai-risk-domain-7
+    name: AI system safety, failures, & limitations
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository
+  - id: mit-ai-risk-repository-causal-entity
+    name: Entity
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  - id: mit-ai-risk-repository-causal-intent
+    name: Intent
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+  - id: mit-ai-risk-repository-causal-timing
+    name: Timing
+    type: RiskGroup
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
 entries:
-- id: mit-ai-risk-subdomain-1.1
-  name: Unfair discrimination and misrepresentation
-  description: Unequal treatment of individuals or groups by AI, often based on race,
-    gender, or other sensitive characteristics, resulting in unfair outcomes and representation
-    of those groups.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-1
-- id: mit-ai-risk-subdomain-1.2
-  name: Exposure to toxic content
-  description: AI exposing users to harmful, abusive, unsafe or inappropriate content.
-    May involve AI creating, describing, providing advice, or encouraging action.
-    Examples of toxic content include hate-speech, violence, extremism, illegal acts,
-    child sexual abuse material, as well as content that violates community norms
-    such as profanity, inflammatory political speech, or pornography.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-1
-- id: mit-ai-risk-subdomain-1.3
-  name: Unequal performance across groups
-  description: Accuracy and effectiveness of AI decisions and actions is dependent
-    on group membership, where decisions in AI system design and biased training data
-    lead to unequal outcomes, reduced benefits, increased effort, and alienation of
-    users.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-1
-- id: mit-ai-risk-subdomain-2.1
-  name: Compromise of privacy by obtaining, leaking or correctly inferring sensitive
-    information
-  description: AI systems that memorize and leak sensitive personal data or infer
-    private information about individuals without their consent. Unexpected or unauthorized
-    sharing of data and information can compromise user expectation of privacy, assist
-    identity theft, or loss of confidential intellectual property.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-2
-- id: mit-ai-risk-subdomain-2.2
-  name: AI system security vulnerabilities and attacks
-  description: Vulnerabilities in AI systems, software development toolchains, and
-    hardware that can be exploited, resulting in unauthorized access, data and privacy
-    breaches, or system manipulation causing unsafe outputs or behavior.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-2
-- id: mit-ai-risk-subdomain-3.1
-  name: False or misleading information
-  description: AI systems that inadvertently generate or spread incorrect or deceptive
-    information, which can lead to inaccurate beliefs in users and undermine their
-    autonomy. Humans that make decisions based on false beliefs can experience physical,
-    emotional or material harms
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-3
-- id: mit-ai-risk-subdomain-3.2
-  name: Pollution of information ecosystem and loss of consensus reality
-  description: Highly personalized AI-generated misinformation creating “filter bubbles”
-    where individuals only see what matches their existing beliefs, undermining shared
-    reality, weakening social cohesion and political processes.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-3
-- id: mit-ai-risk-subdomain-4.1
-  name: Disinformation, surveillance, and influence at scale
-  description: Using AI systems to conduct large-scale disinformation campaigns, malicious
-    surveillance, or targeted and sophisticated automated censorship and propaganda,
-    with the aim to manipulate political processes, public opinion and behavior.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-4
-- id: mit-ai-risk-subdomain-4.2
-  name: Cyberattacks, weapon development or use, and mass harm
-  description: Using AI systems to develop cyber weapons (e.g., coding cheaper, more
-    effective malware), develop new or enhance existing weapons (e.g., Lethal Autonomous
-    Weapons or CBRNE), or use weapons to cause mass harm.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-4
-- id: mit-ai-risk-subdomain-4.3
-  name: Fraud, scams, and targeted manipulation
-  description: Using AI systems to gain a personal advantage over others such as through
-    cheating, fraud, scams, blackmail or targeted manipulation of beliefs or behavior.
-    Examples include AI-facilitated plagiarism for research or education, impersonating
-    a trusted or fake individual for illegitimate financial benefit, or creating humiliating
-    or sexual imagery.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-4
-- id: mit-ai-risk-subdomain-5.1
-  name: Overreliance and unsafe use
-  description: Users anthropomorphizing, trusting, or relying on AI systems, leading
-    to emotional or material dependence and inappropriate relationships with or expectations
-    of AI systems. Trust can be exploited by malicious actors (e.g., to harvest personal
-    information or enable manipulation), or result in harm from inappropriate use
-    of AI in critical situations (e.g., medical emergency). Overreliance on AI systems
-    can compromise autonomy and weaken social ties.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-5
-- id: mit-ai-risk-subdomain-5.2
-  name: Loss of human agency and autonomy
-  description: Humans delegating key decisions to AI systems, or AI systems making
-    decisions that diminish human control and autonomy, potentially leading to humans
-    feeling disempowered, losing the ability to shape a fulfilling life trajectory
-    or becoming cognitively enfeebled.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-5
-- id: mit-ai-risk-subdomain-6.1
-  name: Power centralization and unfair distribution of benefits
-  description: AI-driven concentration of power and resources within certain entities
-    or groups, especially those with access to or ownership of powerful AI systems,
-    leading to inequitable distribution of benefits and increased societal inequality.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-6
-- id: mit-ai-risk-subdomain-6.2
-  name: Increased inequality and decline in employment quality
-  description: Widespread use of AI increasing social and economic inequalities, such
-    as by automating jobs, reducing the quality of employment, or producing exploitative
-    dependencies between workers and their employers.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-6
-- id: mit-ai-risk-subdomain-6.3
-  name: Economic and cultural devaluation of human effort
-  description: AI systems capable of creating economic or cultural value, including
-    through reproduction of human innovation or creativity (e.g., art, music, writing,
-    code, invention), can destabilize economic and social systems that rely on human
-    effort. This may lead to reduced appreciation for human skills, disruption of
-    creative and knowledge-based industries, and homogenization of cultural experiences
-    due to the ubiquity of AI-generated content.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-6
-- id: mit-ai-risk-subdomain-6.4
-  name: Competitive dynamics
-  description: AI developers or state-like actors competing in an AI ‘race’ by rapidly
-    developing, deploying, and applying AI systems to maximize strategic or economic
-    advantage, increasing the risk they release unsafe and error-prone systems.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-6
-- id: mit-ai-risk-subdomain-6.5
-  name: Governance failure
-  description: Inadequate regulatory frameworks and oversight mechanisms failing to
-    keep pace with AI development, leading to ineffective governance and the inability
-    to manage AI risks appropriately.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-6
-- id: mit-ai-risk-subdomain-6.6
-  name: Environmental harm
-  description: The development and operation of AI systems causing environmental harm,
-    such as through energy consumption of data centers, or material and carbon footprints
-    associated with AI hardware.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-6
-- id: mit-ai-risk-subdomain-7.1
-  name: AI pursuing its own goals in conflict with human goals or values
-  description: AI systems acting in conflict with human goals or values, especially
-    the goals of designers or users, or ethical standards. These misaligned behaviors
-    may be introduced by humans during design and development, such as through reward
-    hacking and goal misgeneralisation, or may result from AI using dangerous capabilities
-    such as manipulation, deception, situational awareness to seek power, self-proliferate,
-    or achieve other goals.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-7
-- id: mit-ai-risk-subdomain-7.2
-  name: AI possessing dangerous capabilities
-  description: AI systems that develop, access, or are provided with capabilities
-    that increase their potential to cause mass harm through deception, weapons development
-    and acquisition, persuasion and manipulation, political strategy, cyber-offense,
-    AI development, situational awareness, and self-proliferation. These capabilities
-    may cause mass harm due to malicious human actors, misaligned AI systems, or failure
-    in the AI system.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-7
-- id: mit-ai-risk-subdomain-7.3
-  name: Lack of capability or robustness
-  description: AI systems that fail to perform reliably or effectively under varying
-    conditions, exposing them to errors and failures that can have significant consequences,
-    especially in critical applications or areas that require moral reasoning.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-7
-- id: mit-ai-risk-subdomain-7.4
-  name: Lack of transparency or interpretability
-  description: Challenges in understanding or explaining the decision-making processes
-    of AI systems, which can lead to mistrust, difficulty in enforcing compliance
-    standards or holding relevant actors accountable for harms, and the inability
-    to identify and correct errors.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-7
-- id: mit-ai-risk-subdomain-7.5
-  name: AI welfare and rights
-  description: Ethical considerations regarding the treatment of potentially sentient
-    AI entities, including discussions around their potential rights and welfare,
-    particularly as AI systems become more advanced and autonomous.
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-7
-- id: mit-ai-risk-subdomain-7.6
-  name: 'Multi-agent risks '
-  description: 'Risks from multi-agent interactions, due to incentives (which can
-    lead to conflict or collusion) and/or the structure of multi-agent systems, which
-    can create cascading failures, selection pressures, new security vulnerabilities,
-    and a lack of shared information and trust. '
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository
-  isPartOf: mit-ai-risk-domain-7
-- id: mit-ai-causal-risk-entity-ai
-  name: AI
-  description: The risk is caused by a decision or action made by an AI system
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-entity
-- id: mit-ai-causal-risk-entity-human
-  name: Human
-  description: The risk is caused by a decision or action made by humans
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-entity
-- id: mit-ai-causal-risk-entity-other
-  name: Other
-  description: The risk is caused by some other reason or is ambiguous
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-entity
-- id: mit-ai-causal-risk-intent-intentional
-  name: Intentional
-  description: The risk occurs due to an expected outcome from pursuing a goal
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-intent
-- id: mit-ai-causal-risk-intent-unintentional
-  name: Unintentional
-  description: The risk occurs due to an unexpected outcome from pursuing a goal
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-intent
-- id: mit-ai-causal-risk-intent-other
-  name: Other
-  description: The risk is presented as occurring without clearly specifying the intentionality
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-intent
-- id: mit-ai-causal-risk-timing-pre-deployment
-  name: Pre -deployment
-  description: The risk occurs before the AI is deployed
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-timing
-- id: mit-ai-causal-risk-timing-post-deployment
-  name: Post -deployment
-  description: The risk occurs after the AI model has been trained and deployed
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-timing
-- id: mit-ai-causal-risk-timing-other
-  name: Other
-  description: The risk is presented without a clearly specified time of occurrence
-  type: Risk
-  isDefinedByTaxonomy: mit-ai-risk-repository-causal
-  isPartOf: mit-ai-risk-repository-causal-timing
+  - id: mit-ai-risk-subdomain-1.1
+    name: Unfair discrimination and misrepresentation
+    description: Unequal treatment of individuals or groups by AI, often based on race,
+      gender, or other sensitive characteristics, resulting in unfair outcomes and representation
+      of those groups.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-1
+  - id: mit-ai-risk-subdomain-1.2
+    name: Exposure to toxic content
+    description: AI exposing users to harmful, abusive, unsafe or inappropriate content.
+      May involve AI creating, describing, providing advice, or encouraging action.
+      Examples of toxic content include hate-speech, violence, extremism, illegal acts,
+      child sexual abuse material, as well as content that violates community norms
+      such as profanity, inflammatory political speech, or pornography.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-1
+  - id: mit-ai-risk-subdomain-1.3
+    name: Unequal performance across groups
+    description: Accuracy and effectiveness of AI decisions and actions is dependent
+      on group membership, where decisions in AI system design and biased training data
+      lead to unequal outcomes, reduced benefits, increased effort, and alienation of
+      users.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-1
+  - id: mit-ai-risk-subdomain-2.1
+    name: Compromise of privacy by obtaining, leaking or correctly inferring sensitive
+      information
+    description: AI systems that memorize and leak sensitive personal data or infer
+      private information about individuals without their consent. Unexpected or unauthorized
+      sharing of data and information can compromise user expectation of privacy, assist
+      identity theft, or loss of confidential intellectual property.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-2
+  - id: mit-ai-risk-subdomain-2.2
+    name: AI system security vulnerabilities and attacks
+    description: Vulnerabilities in AI systems, software development toolchains, and
+      hardware that can be exploited, resulting in unauthorized access, data and privacy
+      breaches, or system manipulation causing unsafe outputs or behavior.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-2
+  - id: mit-ai-risk-subdomain-3.1
+    name: False or misleading information
+    description: AI systems that inadvertently generate or spread incorrect or deceptive
+      information, which can lead to inaccurate beliefs in users and undermine their
+      autonomy. Humans that make decisions based on false beliefs can experience physical,
+      emotional or material harms
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-3
+  - id: mit-ai-risk-subdomain-3.2
+    name: Pollution of information ecosystem and loss of consensus reality
+    description:
+      Highly personalized AI-generated misinformation creating “filter bubbles”
+      where individuals only see what matches their existing beliefs, undermining shared
+      reality, weakening social cohesion and political processes.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-3
+  - id: mit-ai-risk-subdomain-4.1
+    name: Disinformation, surveillance, and influence at scale
+    description:
+      Using AI systems to conduct large-scale disinformation campaigns, malicious
+      surveillance, or targeted and sophisticated automated censorship and propaganda,
+      with the aim to manipulate political processes, public opinion and behavior.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-4
+  - id: mit-ai-risk-subdomain-4.2
+    name: Cyberattacks, weapon development or use, and mass harm
+    description: Using AI systems to develop cyber weapons (e.g., coding cheaper, more
+      effective malware), develop new or enhance existing weapons (e.g., Lethal Autonomous
+      Weapons or CBRNE), or use weapons to cause mass harm.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-4
+  - id: mit-ai-risk-subdomain-4.3
+    name: Fraud, scams, and targeted manipulation
+    description:
+      Using AI systems to gain a personal advantage over others such as through
+      cheating, fraud, scams, blackmail or targeted manipulation of beliefs or behavior.
+      Examples include AI-facilitated plagiarism for research or education, impersonating
+      a trusted or fake individual for illegitimate financial benefit, or creating humiliating
+      or sexual imagery.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-4
+  - id: mit-ai-risk-subdomain-5.1
+    name: Overreliance and unsafe use
+    description: Users anthropomorphizing, trusting, or relying on AI systems, leading
+      to emotional or material dependence and inappropriate relationships with or expectations
+      of AI systems. Trust can be exploited by malicious actors (e.g., to harvest personal
+      information or enable manipulation), or result in harm from inappropriate use
+      of AI in critical situations (e.g., medical emergency). Overreliance on AI systems
+      can compromise autonomy and weaken social ties.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-5
+  - id: mit-ai-risk-subdomain-5.2
+    name: Loss of human agency and autonomy
+    description: Humans delegating key decisions to AI systems, or AI systems making
+      decisions that diminish human control and autonomy, potentially leading to humans
+      feeling disempowered, losing the ability to shape a fulfilling life trajectory
+      or becoming cognitively enfeebled.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-5
+  - id: mit-ai-risk-subdomain-6.1
+    name: Power centralization and unfair distribution of benefits
+    description: AI-driven concentration of power and resources within certain entities
+      or groups, especially those with access to or ownership of powerful AI systems,
+      leading to inequitable distribution of benefits and increased societal inequality.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-6
+  - id: mit-ai-risk-subdomain-6.2
+    name: Increased inequality and decline in employment quality
+    description: Widespread use of AI increasing social and economic inequalities, such
+      as by automating jobs, reducing the quality of employment, or producing exploitative
+      dependencies between workers and their employers.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-6
+  - id: mit-ai-risk-subdomain-6.3
+    name: Economic and cultural devaluation of human effort
+    description: AI systems capable of creating economic or cultural value, including
+      through reproduction of human innovation or creativity (e.g., art, music, writing,
+      code, invention), can destabilize economic and social systems that rely on human
+      effort. This may lead to reduced appreciation for human skills, disruption of
+      creative and knowledge-based industries, and homogenization of cultural experiences
+      due to the ubiquity of AI-generated content.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-6
+  - id: mit-ai-risk-subdomain-6.4
+    name: Competitive dynamics
+    description: AI developers or state-like actors competing in an AI ‘race’ by rapidly
+      developing, deploying, and applying AI systems to maximize strategic or economic
+      advantage, increasing the risk they release unsafe and error-prone systems.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-6
+  - id: mit-ai-risk-subdomain-6.5
+    name: Governance failure
+    description: Inadequate regulatory frameworks and oversight mechanisms failing to
+      keep pace with AI development, leading to ineffective governance and the inability
+      to manage AI risks appropriately.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-6
+  - id: mit-ai-risk-subdomain-6.6
+    name: Environmental harm
+    description: The development and operation of AI systems causing environmental harm,
+      such as through energy consumption of data centers, or material and carbon footprints
+      associated with AI hardware.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-6
+  - id: mit-ai-risk-subdomain-7.1
+    name: AI pursuing its own goals in conflict with human goals or values
+    description: AI systems acting in conflict with human goals or values, especially
+      the goals of designers or users, or ethical standards. These misaligned behaviors
+      may be introduced by humans during design and development, such as through reward
+      hacking and goal misgeneralisation, or may result from AI using dangerous capabilities
+      such as manipulation, deception, situational awareness to seek power, self-proliferate,
+      or achieve other goals.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-7
+  - id: mit-ai-risk-subdomain-7.2
+    name: AI possessing dangerous capabilities
+    description: AI systems that develop, access, or are provided with capabilities
+      that increase their potential to cause mass harm through deception, weapons development
+      and acquisition, persuasion and manipulation, political strategy, cyber-offense,
+      AI development, situational awareness, and self-proliferation. These capabilities
+      may cause mass harm due to malicious human actors, misaligned AI systems, or failure
+      in the AI system.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-7
+  - id: mit-ai-risk-subdomain-7.3
+    name: Lack of capability or robustness
+    description: AI systems that fail to perform reliably or effectively under varying
+      conditions, exposing them to errors and failures that can have significant consequences,
+      especially in critical applications or areas that require moral reasoning.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-7
+  - id: mit-ai-risk-subdomain-7.4
+    name: Lack of transparency or interpretability
+    description: Challenges in understanding or explaining the decision-making processes
+      of AI systems, which can lead to mistrust, difficulty in enforcing compliance
+      standards or holding relevant actors accountable for harms, and the inability
+      to identify and correct errors.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-7
+  - id: mit-ai-risk-subdomain-7.5
+    name: AI welfare and rights
+    description: Ethical considerations regarding the treatment of potentially sentient
+      AI entities, including discussions around their potential rights and welfare,
+      particularly as AI systems become more advanced and autonomous.
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-7
+  - id: mit-ai-risk-subdomain-7.6
+    name: "Multi-agent risks "
+    description: "Risks from multi-agent interactions, due to incentives (which can
+      lead to conflict or collusion) and/or the structure of multi-agent systems, which
+      can create cascading failures, selection pressures, new security vulnerabilities,
+      and a lack of shared information and trust. "
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository
+    isPartOf: mit-ai-risk-domain-7
+  - id: mit-ai-causal-risk-entity-ai
+    name: AI
+    description: The risk is caused by a decision or action made by an AI system
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-entity
+  - id: mit-ai-causal-risk-entity-human
+    name: Human
+    description: The risk is caused by a decision or action made by humans
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-entity
+  - id: mit-ai-causal-risk-entity-other
+    name: Other
+    description: The risk is caused by some other reason or is ambiguous
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-entity
+  - id: mit-ai-causal-risk-intent-intentional
+    name: Intentional
+    description: The risk occurs due to an expected outcome from pursuing a goal
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-intent
+  - id: mit-ai-causal-risk-intent-unintentional
+    name: Unintentional
+    description: The risk occurs due to an unexpected outcome from pursuing a goal
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-intent
+  - id: mit-ai-causal-risk-intent-other
+    name: Other
+    description: The risk is presented as occurring without clearly specifying the intentionality
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-intent
+  - id: mit-ai-causal-risk-timing-pre-deployment
+    name: Pre -deployment
+    description: The risk occurs before the AI is deployed
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-timing
+  - id: mit-ai-causal-risk-timing-post-deployment
+    name: Post -deployment
+    description: The risk occurs after the AI model has been trained and deployed
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-timing
+  - id: mit-ai-causal-risk-timing-other
+    name: Other
+    description: The risk is presented without a clearly specified time of occurrence
+    type: Risk
+    isDefinedByTaxonomy: mit-ai-risk-repository-causal
+    isPartOf: mit-ai-risk-repository-causal-timing

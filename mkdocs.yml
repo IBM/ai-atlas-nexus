@@ -76,7 +76,7 @@ plugins:
         python:
           options:
             extensions:
-            - griffe_inherited_docstrings
+              - griffe_inherited_docstrings
             preload_modules:
               - ai_atlas_nexus
   - mkdocs-jupyter

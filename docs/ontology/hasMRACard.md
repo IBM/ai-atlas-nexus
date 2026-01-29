@@ -1,62 +1,29 @@
-
-
 # Slot: hasMRACard
-
 
 _A relationship to an MRA (IBM internal) card defining the risk evaluation_
 
-
-
-
-
 URI: [schema:url](http://schema.org/url)
-
-
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
-
-
-
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Multivalued: True
-
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | schema:url |
-| native | nexus:hasMRACard |
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | schema:url       |
+| native       | nexus:hasMRACard |
 
 ## LinkML Source
 
@@ -74,3 +41,4 @@ inlined: false
 
 ```
 </details>
+```

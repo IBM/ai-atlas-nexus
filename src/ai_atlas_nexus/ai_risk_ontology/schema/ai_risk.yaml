@@ -1,7 +1,6 @@
 id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
 name: ai_risk
-description:
-  Vocabulary describing AI risks as used by IBM Risk Atlas
+description: Vocabulary describing AI risks as used by IBM Risk Atlas
 default_curi_maps:
   - semweb_context
 imports:
@@ -16,7 +15,6 @@ default_range: string
 default_prefix: nexus
 
 classes:
-
   RiskTaxonomy:
     is_a: Taxonomy
     description: A taxonomy of AI system related risks
@@ -90,10 +88,10 @@ classes:
     description: Action to remediate a risk
     attributes:
     slots:
-    - hasRelatedRisk
-    - hasDocumentation
-    - isDefinedByTaxonomy
-    - hasAiActorTask
+      - hasRelatedRisk
+      - hasDocumentation
+      - isDefinedByTaxonomy
+      - hasAiActorTask
 
   Any:
     class_uri: linkml:Any
@@ -164,7 +162,9 @@ classes:
 
 slots:
   hasAiActorTask:
-    description: "Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action in the subcategory (i.e., some apply to AI development and others apply to AI deployment)."
+    description: >-
+      Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested
+      action in the subcategory (i.e., some apply to AI development and others apply to AI deployment).
     multivalued: true
   hasRelatedRisk:
     description: A relationship where an entity relates to a risk
@@ -182,7 +182,7 @@ slots:
     inlined: false
   detectsRiskConcept:
     exact_mappings:
-    - airo:detectsRiskConcept
+      - airo:detectsRiskConcept
     description: >-
       The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources,
       consequences, and impacts.
@@ -220,7 +220,7 @@ slots:
     domain: RiskConcept
     range: Impact
     broad_mappings:
-    - dpv:hasConsequenceOn
+      - dpv:hasConsequenceOn
   hasConsequence:
     description: >-
       Indicates consequence(s) possible or arising from specified concept
@@ -232,7 +232,7 @@ slots:
     domain: RiskConcept
     range: Impact
     broad_mappings:
-    - dpv:hasConsequence
+      - dpv:hasConsequence
   hasVariant:
     description: >-
       Indicates an incident that shares the same causative factors, produces similar harms, and involves the same intelligent systems as a known AI incident.
@@ -240,7 +240,7 @@ slots:
     range: RiskIncident
   refersToRisk:
     exact_mappings:
-    - dpv:refersToRisk
+      - dpv:refersToRisk
     description: >-
       Indicates the incident (subject) is a materialisation of the indicated risk (object)
     domain: RiskIncident

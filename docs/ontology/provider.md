@@ -1,65 +1,34 @@
-
-
 # Slot: provider
 
-
 _A relationship to the Organization instance that provides this instance._
-
-
-
-
 
 URI: [schema:provider](http://schema.org/provider)
 Alias: provider
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Dataset](Dataset.md) | A body of structured information describing some topic(s) of interest |  no  |
-
-
-
-
-
+| Name                  | Description                                                           | Modifies Slot |
+| --------------------- | --------------------------------------------------------------------- | ------------- |
+| [Dataset](Dataset.md) | A body of structured information describing some topic(s) of interest | no            |
 
 ## Properties
 
-* Range: [Organization](Organization.md)
-
-
-
+- Range: [Organization](Organization.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | schema:provider |
-| native | nexus:provider |
-
-
-
+| Mapping Type | Mapped Value    |
+| ------------ | --------------- |
+| self         | schema:provider |
+| native       | nexus:provider  |
 
 ## LinkML Source
 
@@ -77,3 +46,4 @@ range: Organization
 
 ```
 </details>
+```

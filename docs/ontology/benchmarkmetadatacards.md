@@ -1,67 +1,36 @@
-
-
 # Slot: benchmarkmetadatacards
 
-
 _A list of AI evaluation benchmark metadata cards_
-
-
-
-
 
 URI: [nexus:benchmarkmetadatacards](https://ibm.github.io/ai-atlas-nexus/ontology/benchmarkmetadatacards)
 Alias: benchmarkmetadatacards
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
+- Range: [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:benchmarkmetadatacards |
-| native | nexus:benchmarkmetadatacards |
-
-
-
+| Mapping Type | Mapped Value                 |
+| ------------ | ---------------------------- |
+| self         | nexus:benchmarkmetadatacards |
+| native       | nexus:benchmarkmetadatacards |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

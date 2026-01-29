@@ -1,6 +1,6 @@
 documents:
   - id: doc-ibms-principles-for-trust-and-transparency
-    name: "IBM's Principles for Trust and Transparency"
+    name: IBM's Principles for Trust and Transparency
     description: >-
       For more than a century, IBM has earned the trust of our clients by responsibly managing their most valuable data.
 
@@ -19,7 +19,7 @@ documents:
 
 entries:
   - id: principle-ibm-tt-principle-1
-    name: "1. The purpose of AI is to augment human intelligence"
+    name: 1. The purpose of AI is to augment human intelligence
     type: Principle
     description: >-
       The purpose of AI and cognitive systems developed and applied by IBM is to augment—not replace—human intelligence.
@@ -29,9 +29,9 @@ entries:
       in partnership with these technologies. That includes preparing more people for new collar jobs, which prioritize
       skills over specific degrees.
     hasDocumentation:
-    - doc-ibms-principles-for-trust-and-transparency
+      - doc-ibms-principles-for-trust-and-transparency
   - id: principle-ibm-tt-principle-2
-    name: "2. Data and insights belong to their creator"
+    name: 2. Data and insights belong to their creator
     type: Principle
     description: >-
       IBM clients' data is their data, and their insights are
@@ -59,9 +59,9 @@ entries:
       movement of data across borders as essential to
       21st century commerce.
     hasDocumentation:
-    - doc-ibms-principles-for-trust-and-transparency
+      - doc-ibms-principles-for-trust-and-transparency
   - id: principle-ibm-tt-principle-3
-    name: "3. New technology, including AI systems, must be transparent and explainable"
+    name: 3. New technology, including AI systems, must be transparent and explainable
     type: Principle
     description: >-
       For the public to trust AI, it must be transparent.
@@ -81,4 +81,4 @@ entries:
       our systems and find new data sets to better align
       their output with human values and expectations.
     hasDocumentation:
-    - doc-ibms-principles-for-trust-and-transparency
+      - doc-ibms-principles-for-trust-and-transparency

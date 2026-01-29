@@ -1,19 +1,8 @@
-
-
 # Class: AiProvider
 
-
-_A provider under the AI Act is defined by Article 3(3) as a natural or legal person or body that develops an AI system or general-purpose AI model or has an AI system or general-purpose AI model developed; and places that system or model on the market, or puts that system into service, under the provider's own name or trademark, whether for payment or free for charge._
-
-
-
-
+_A provider under the AI Act is defined by Article 3(3) as a natural or legal person or body that develops an AI system or general-purpose AI model or has an AI system or general-purpose AI model developed; and places that ystem or model on the market, or puts that system into service, under the provider's own name or trademark, whether for payment or free for charge._
 
 URI: [airo:AIProvider](https://w3id.org/airo#AIProvider)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -103,81 +92,52 @@ URI: [airo:AIProvider](https://w3id.org/airo#AIProvider)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Organization](Organization.md)
-        * **AiProvider**
 
-
+- [Entity](Entity.md)
+  - [Organization](Organization.md)
+    - **AiProvider**
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [grants_license](grants_license.md) | 0..1 <br/> [License](License.md) | A relationship from a granting entity such as an Organization to a License in... | [Organization](Organization.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                    | Cardinality and Range            | Description                                                                      | Inheritance                     |
+| --------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------- | ------------------------------- |
+| [grants_license](grants_license.md)     | 0..1 <br/> [License](License.md) | A relationship from a granting entity such as an Organization to a License in... | [Organization](Organization.md) |
+| [id](id.md)                             | 1 <br/> [String](String.md)      | A unique identifier to this instance of the model element                        | [Entity](Entity.md)             |
+| [name](name.md)                         | 0..1 <br/> [String](String.md)   | A text name of this instance                                                     | [Entity](Entity.md)             |
+| [description](description.md)           | 0..1 <br/> [String](String.md)   | The description of an entity                                                     | [Entity](Entity.md)             |
+| [url](url.md)                           | 0..1 <br/> [Uri](Uri.md)         | An optional URL associated with this instance                                    | [Entity](Entity.md)             |
+| [dateCreated](dateCreated.md)           | 0..1 <br/> [Date](Date.md)       | The date on which the entity was created                                         | [Entity](Entity.md)             |
+| [dateModified](dateModified.md)         | 0..1 <br/> [Date](Date.md)       | The date on which the entity was most recently modified                          | [Entity](Entity.md)             |
+| [exact_mappings](exact_mappings.md)     | \* <br/> [Any](Any.md)           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)             |
+| [close_mappings](close_mappings.md)     | \* <br/> [Any](Any.md)           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)             |
+| [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)             |
+| [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)             |
+| [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)             |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [BaseAi](BaseAi.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
-| [AiSystem](AiSystem.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
-| [AiAgent](AiAgent.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
-| [AiModel](AiModel.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
+| used by                                     | used in                         | type  | used                        |
+| ------------------------------------------- | ------------------------------- | ----- | --------------------------- |
+| [BaseAi](BaseAi.md)                         | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
+| [AiSystem](AiSystem.md)                     | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
+| [AiAgent](AiAgent.md)                       | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
+| [AiModel](AiModel.md)                       | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
-| [Adapter](Adapter.md) | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
-
-
-
-
-
-
+| [Adapter](Adapter.md)                       | [isProvidedBy](isProvidedBy.md) | range | [AiProvider](AiProvider.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | airo:AIProvider |
-| native | nexus:AiProvider |
-
-
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | airo:AIProvider  |
+| native       | nexus:AiProvider |
 
 ## LinkML Source
 
@@ -190,14 +150,14 @@ URI: [airo:AIProvider](https://w3id.org/airo#AIProvider)
 name: AiProvider
 description: A provider under the AI Act is defined by Article 3(3) as a natural or
   legal person or body that develops an AI system or general-purpose AI model or has
-  an AI system or general-purpose AI model developed; and places that system or model
+  an AI system or general-purpose AI model developed; and places that ystem or model
   on the market, or puts that system into service, under the provider's own name or
   trademark, whether for payment or free for charge.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Organization
 class_uri: airo:AIProvider
 
-```
+````
 </details>
 
 ### Induced
@@ -207,7 +167,7 @@ class_uri: airo:AIProvider
 name: AiProvider
 description: A provider under the AI Act is defined by Article 3(3) as a natural or
   legal person or body that develops an AI system or general-purpose AI model or has
-  an AI system or general-purpose AI model developed; and places that system or model
+  an AI system or general-purpose AI model developed; and places that ystem or model
   on the market, or puts that system into service, under the provider's own name or
   trademark, whether for payment or free for charge.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
@@ -371,5 +331,6 @@ attributes:
     inlined: false
 class_uri: airo:AIProvider
 
-```
+````
+
 </details>

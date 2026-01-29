@@ -1,58 +1,30 @@
-
-
 # Slot: validated_by
 
-
 _A relationship indicating the model validation steps after AI model training._
-
-
-
-
 
 URI: [nexus:validated_by](https://ibm.github.io/ai-atlas-nexus/ontology/validated_by)
 Alias: validated_by
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
-
-
 ## Properties
 
-* Range: [AiModelValidation](AiModelValidation.md)
+- Range: [AiModelValidation](AiModelValidation.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:validated_by |
-| native | nexus:validated_by |
-
-
-
+| Mapping Type | Mapped Value       |
+| ------------ | ------------------ |
+| self         | nexus:validated_by |
+| native       | nexus:validated_by |
 
 ## LinkML Source
 
@@ -69,3 +41,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

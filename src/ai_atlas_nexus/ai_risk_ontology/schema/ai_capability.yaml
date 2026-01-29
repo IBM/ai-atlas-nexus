@@ -1,8 +1,9 @@
 id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability
 name: ai_capability
-description:
-  Vocabulary describing AI capabilities as used by IBM Risk Atlas. Aligned with the W3C Data Privacy Vocabulary (DPV) Capability concept.
-  Capabilities represent what AI technologies are capable of achieving or providing, distinct from their intended purpose or actual
+description: >-
+  Vocabulary describing AI capabilities as used by IBM Risk Atlas. Aligned with the W3C Data Privacy Vocabulary (DPV)
+  Capability concept. Capabilities represent what AI technologies are capable of achieving or providing, distinct from
+  their intended purpose or actual
 default_curi_maps:
   - semweb_context
 imports:
@@ -22,7 +23,6 @@ default_range: string
 default_prefix: nexus
 
 classes:
-
   CapabilityTaxonomy:
     is_a: Taxonomy
     class_uri: skos:ConceptScheme
@@ -31,7 +31,7 @@ classes:
   CapabilityConcept:
     is_a: Concept
     mixin: true
-    description: An umbrella term for referring to capability domains, groups, and individual capabilities..
+    description: An umbrella term for referring to capability domains, groups, and individual capabilities.
     class_uri: nexus:CapabilityConcept
 
   CapabilityDomain:
@@ -73,7 +73,9 @@ classes:
       - CapabilityConcept
     description: >-
       A specific AI capability or ability, such as reading comprehension, logical reasoning, or code generation.
-      Aligned with the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of achieving or providing.
+      Aligned with the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of
+      achieving or providing.
+
       Capabilities are distinct from:
       (1) the intended purpose for which the technology is designed,
       (2) the actual tasks performed in a specific deployment context, and

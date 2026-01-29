@@ -1,67 +1,36 @@
-
-
 # Slot: permissions
 
-
 _A list of Permissions_
-
-
-
-
 
 URI: [nexus:permissions](https://ibm.github.io/ai-atlas-nexus/ontology/permissions)
 Alias: permissions
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [Permission](Permission.md)
+- Range: [Permission](Permission.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:permissions |
-| native | nexus:permissions |
-
-
-
+| Mapping Type | Mapped Value      |
+| ------------ | ----------------- |
+| self         | nexus:permissions |
+| native       | nexus:permissions |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

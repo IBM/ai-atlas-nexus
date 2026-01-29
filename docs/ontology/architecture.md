@@ -1,67 +1,36 @@
-
-
 # Slot: architecture
 
-
 _A description of the architecture of an AI such as 'Decoder-only'._
-
-
-
-
 
 URI: [nexus:architecture](https://ibm.github.io/ai-atlas-nexus/ontology/architecture)
 Alias: architecture
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-
-
-
-
-
+| Name                                        | Description                                                                      | Modifies Slot |
+| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
+| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
-
-
-
+- Range: [String](String.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:architecture |
-| native | nexus:architecture |
-
-
-
+| Mapping Type | Mapped Value       |
+| ------------ | ------------------ |
+| self         | nexus:architecture |
+| native       | nexus:architecture |
 
 ## LinkML Source
 
@@ -78,3 +47,4 @@ range: string
 
 ```
 </details>
+```

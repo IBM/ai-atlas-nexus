@@ -1,19 +1,10 @@
-
-
 # Class: Capability
 
+_A specific AI capability or ability, such as reading comprehension, logical reasoning, or code generation. Aligned with the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of achieving or providing._
 
-_A specific AI capability or ability, such as reading comprehension, logical reasoning, or code generation. Aligned with the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of achieving or providing. Capabilities are distinct from: (1) the intended purpose for which the technology is designed, (2) the actual tasks performed in a specific deployment context, and (3) the technical implementation mechanisms (intrinsics, adapters) that enable the capability._
-
-
-
-
+_Capabilities are distinct from: (1) the intended purpose for which the technology is designed, (2) the actual tasks performed in a specific deployment context, and (3) the technical implementation mechanisms (intrinsics, adapters) that enable the capability._
 
 URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -173,99 +164,70 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Entry](Entry.md)
-        * **Capability** [ [CapabilityConcept](CapabilityConcept.md)]
 
-
+- [Entity](Entity.md)
+  - [Entry](Entry.md)
+    - **Capability** [ [CapabilityConcept](CapabilityConcept.md)]
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [requiredByTask](requiredByTask.md) | * <br/> [AiTask](AiTask.md) | Indicates that this capability is required to perform a specific AI task | direct |
-| [implementedByAdapter](implementedByAdapter.md) | * <br/> [Adapter](Adapter.md) | Indicates that this capability is implemented by a specific adapter | direct |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | [Entry](Entry.md), [Concept](Concept.md) |
-| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md) | A relationship where a term or a term group is defined by a vocabulary | [Entry](Entry.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Entry](Entry.md), [Concept](Concept.md) |
-| [isPartOf](isPartOf.md) | 0..1 <br/> [CapabilityGroup](CapabilityGroup.md) | A relationship where a capability is part of a capability group | [Entry](Entry.md) |
-| [requiresCapability](requiresCapability.md) | * <br/> [Capability](Capability.md) | Indicates that this entry requires a specific capability | [Entry](Entry.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Entry](Entry.md), [Concept](Concept.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                              | Cardinality and Range                            | Description                                                                      | Inheritance                              |
+| ------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ---------------------------------------- |
+| [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)                     | Indicates that this capability is required to perform a specific AI task         | direct                                   |
+| [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)                   | Indicates that this capability is implemented by a specific adapter              | direct                                   |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)               | A relationship where a concept or a concept group is defined by a taxonomy       | [Concept](Concept.md), [Entry](Entry.md) |
+| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)           | A relationship where a term or a term group is defined by a vocabulary           | [Entry](Entry.md)                        |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Entry](Entry.md) |
+| [isPartOf](isPartOf.md)                           | 0..1 <br/> [CapabilityGroup](CapabilityGroup.md) | A relationship where a capability is part of a capability group                  | [Entry](Entry.md)                        |
+| [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)             | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)                        |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)                   |                                                                                  | [Concept](Concept.md), [Entry](Entry.md) |
+| [id](id.md)                                       | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
+| [name](name.md)                                   | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md)                      |
+| [description](description.md)                     | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md)                      |
+| [url](url.md)                                     | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md)                      |
+| [dateCreated](dateCreated.md)                     | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was created                                         | [Entity](Entity.md)                      |
+| [dateModified](dateModified.md)                   | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was most recently modified                          | [Entity](Entity.md)                      |
+| [exact_mappings](exact_mappings.md)               | \* <br/> [Any](Any.md)                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)                      |
+| [close_mappings](close_mappings.md)               | \* <br/> [Any](Any.md)                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)                      |
+| [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                      |
+| [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
+| [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Entry](Entry.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [Term](Term.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [Principle](Principle.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [Risk](Risk.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [AiSystem](AiSystem.md) | [hasCapability](hasCapability.md) | range | [Capability](Capability.md) |
-| [AiAgent](AiAgent.md) | [hasCapability](hasCapability.md) | range | [Capability](Capability.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [AiTask](AiTask.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [CapabilityGroup](CapabilityGroup.md) | [hasPart](hasPart.md) | range | [Capability](Capability.md) |
-| [Capability](Capability.md) | [implementedByAdapter](implementedByAdapter.md) | domain | [Capability](Capability.md) |
-| [Capability](Capability.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [Adapter](Adapter.md) | [implementsCapability](implementsCapability.md) | range | [Capability](Capability.md) |
-| [Adapter](Adapter.md) | [hasCapability](hasCapability.md) | range | [Capability](Capability.md) |
-| [Adapter](Adapter.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [hasCapability](hasCapability.md) | range | [Capability](Capability.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [requiresCapability](requiresCapability.md) | range | [Capability](Capability.md) |
-
-
-
-
-
-
+| used by                                     | used in                                         | type   | used                        |
+| ------------------------------------------- | ----------------------------------------------- | ------ | --------------------------- |
+| [Entry](Entry.md)                           | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [Term](Term.md)                             | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [Principle](Principle.md)                   | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [Risk](Risk.md)                             | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [AiSystem](AiSystem.md)                     | [hasCapability](hasCapability.md)               | range  | [Capability](Capability.md) |
+| [AiAgent](AiAgent.md)                       | [hasCapability](hasCapability.md)               | range  | [Capability](Capability.md) |
+| [LargeLanguageModel](LargeLanguageModel.md) | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [AiTask](AiTask.md)                         | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [CapabilityGroup](CapabilityGroup.md)       | [hasPart](hasPart.md)                           | range  | [Capability](Capability.md) |
+| [Capability](Capability.md)                 | [implementedByAdapter](implementedByAdapter.md) | domain | [Capability](Capability.md) |
+| [Capability](Capability.md)                 | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [Adapter](Adapter.md)                       | [implementsCapability](implementsCapability.md) | range  | [Capability](Capability.md) |
+| [Adapter](Adapter.md)                       | [hasCapability](hasCapability.md)               | range  | [Capability](Capability.md) |
+| [Adapter](Adapter.md)                       | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)             | [hasCapability](hasCapability.md)               | range  | [Capability](Capability.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)             | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | ai:Capability |
-| native | nexus:Capability |
-| broad | tech:Capability |
-
-
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | ai:Capability    |
+| native       | nexus:Capability |
+| broad        | tech:Capability  |
 
 ## LinkML Source
 
@@ -278,41 +240,44 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 name: Capability
 description: 'A specific AI capability or ability, such as reading comprehension,
   logical reasoning, or code generation. Aligned with the W3C DPV AI extension dpv-ai:Capability,
-  representing what an AI technology is capable of achieving or providing. Capabilities
-  are distinct from: (1) the intended purpose for which the technology is designed,
-  (2) the actual tasks performed in a specific deployment context, and (3) the technical
-  implementation mechanisms (intrinsics, adapters) that enable the capability.'
+  representing what an AI technology is capable of achieving or providing.
+
+Capabilities are distinct from: (1) the intended purpose for which the technology
+is designed, (2) the actual tasks performed in a specific deployment context, and
+(3) the technical implementation mechanisms (intrinsics, adapters) that enable the
+capability.'
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 broad_mappings:
+
 - tech:Capability
-is_a: Entry
-mixins:
+  is_a: Entry
+  mixins:
 - CapabilityConcept
-slots:
+  slots:
 - requiredByTask
 - implementedByAdapter
-slot_usage:
+  slot_usage:
   isPartOf:
-    name: isPartOf
-    description: A relationship where a capability is part of a capability group
-    range: CapabilityGroup
+  name: isPartOf
+  description: A relationship where a capability is part of a capability group
+  range: CapabilityGroup
   requiredByTask:
-    name: requiredByTask
-    description: Indicates that this capability is required to perform a specific
-      AI task. This links abstract capabilities (technical abilities) to concrete
-      tasks (application-level operations). An AI system with this capability can
-      perform tasks that require it.
-    range: AiTask
+  name: requiredByTask
+  description: Indicates that this capability is required to perform a specific
+  AI task. This links abstract capabilities (technical abilities) to concrete
+  tasks (application-level operations). An AI system with this capability can
+  perform tasks that require it.
+  range: AiTask
   implementedByAdapter:
-    name: implementedByAdapter
-    description: Indicates that this capability is implemented by a specific adapter.
-      This relationship distinguishes the abstract capability (what can be done) from
-      the technical implementation mechanism (how it is added/extended via adapters).
-    domain: Capability
-    range: Adapter
-class_uri: ai:Capability
+  name: implementedByAdapter
+  description: Indicates that this capability is implemented by a specific adapter.
+  This relationship distinguishes the abstract capability (what can be done) from
+  the technical implementation mechanism (how it is added/extended via adapters).
+  domain: Capability
+  range: Adapter
+  class_uri: ai:Capability
 
-```
+````
 </details>
 
 ### Induced
@@ -322,10 +287,12 @@ class_uri: ai:Capability
 name: Capability
 description: 'A specific AI capability or ability, such as reading comprehension,
   logical reasoning, or code generation. Aligned with the W3C DPV AI extension dpv-ai:Capability,
-  representing what an AI technology is capable of achieving or providing. Capabilities
-  are distinct from: (1) the intended purpose for which the technology is designed,
-  (2) the actual tasks performed in a specific deployment context, and (3) the technical
-  implementation mechanisms (intrinsics, adapters) that enable the capability.'
+  representing what an AI technology is capable of achieving or providing.
+
+  Capabilities are distinct from: (1) the intended purpose for which the technology
+  is designed, (2) the actual tasks performed in a specific deployment context, and
+  (3) the technical implementation mechanisms (intrinsics, adapters) that enable the
+  capability.'
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 broad_mappings:
 - tech:Capability
@@ -646,5 +613,6 @@ attributes:
     inlined: false
 class_uri: ai:Capability
 
-```
+````
+
 </details>

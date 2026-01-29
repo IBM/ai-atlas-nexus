@@ -1,65 +1,34 @@
-
-
 # Slot: hasSeverity
 
-
 _Indicates the severity associated with a concept_
-
-
-
-
 
 URI: [nexus:hasSeverity](https://ibm.github.io/ai-atlas-nexus/ontology/hasSeverity)
 Alias: hasSeverity
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
-
-
-
-
-
+| Name                            | Description                                                           | Modifies Slot |
+| ------------------------------- | --------------------------------------------------------------------- | ------------- |
+| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk | no            |
 
 ## Properties
 
-* Range: [Severity](Severity.md)
-
-
-
+- Range: [Severity](Severity.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasSeverity |
-| native | nexus:hasSeverity |
-
-
-
+| Mapping Type | Mapped Value      |
+| ------------ | ----------------- |
+| self         | nexus:hasSeverity |
+| native       | nexus:hasSeverity |
 
 ## LinkML Source
 
@@ -77,3 +46,4 @@ range: Severity
 
 ```
 </details>
+```

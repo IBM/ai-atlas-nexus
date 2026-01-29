@@ -1,46 +1,26 @@
 # Enum: AdapterType
 
-
-
 URI: [nexus:AdapterType](https://ibm.github.io/ai-atlas-nexus/ontology/AdapterType)
 
 ## Permissible Values
 
-| Value | Meaning | Description |
-| --- | --- | --- |
-| LORA | None | Low-rank adapters, or LoRAs, are a fast way to give generalist large language... |
-| ALORA | None | Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reu... |
-| X-LORA | None | Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA whic... |
-
-
-
+| Value  | Meaning | Description                                                                      |
+| ------ | ------- | -------------------------------------------------------------------------------- |
+| LORA   | None    | Low-rank adapters, or LoRAs, are a fast way to give generalist large language... |
+| ALORA  | None    | Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reu... |
+| X-LORA | None    | Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA whic... |
 
 ## Slots
 
-| Name | Description |
-| ---  | --- |
+| Name                                | Description                                        |
+| ----------------------------------- | -------------------------------------------------- |
 | [hasAdapterType](hasAdapterType.md) | The Adapter type, for example: LORA, ALORA, X-LORA |
-
-
-
-
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## LinkML Source
 
@@ -77,3 +57,4 @@ permissible_values:
 
 ```
 </details>
+```

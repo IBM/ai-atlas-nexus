@@ -1,312 +1,417 @@
 taxonomies:
-- id: hf-ml-tasks
-  name: Hugging Face ML Tasks
-  type: Taxonomy
-  description: "Hugging Face is the home for all Machine Learning tasks. Here you can find what you need to get started with a task: demos, use cases, models, datasets, and more!"
-  url: https://huggingface.co/tasks
-  dateCreated: 2025-12-17
-  dateModified: 2025-12-17
+  - id: hf-ml-tasks
+    name: Hugging Face ML Tasks
+    type: Taxonomy
+    description: >-
+      Hugging Face is the home for all Machine Learning tasks. Here you can find what you need to get started with a
+      task: demos, use cases, models, datasets, and more!
+    url: https://huggingface.co/tasks
+    dateCreated: 2025-12-17
+    dateModified: 2025-12-17
 
 groups:
-- id: hf-ml-tasks-group-multimodal
-  name: Mutimodal
-  isDefinedByTaxonomy: hf-ml-tasks
-- id: hf-ml-tasks-group-nlp
-  name: Natural Language Processing
-  isDefinedByTaxonomy: hf-ml-tasks
-- id: hf-ml-tasks-group-computer-vision
-  name: Computer Vision
-  isDefinedByTaxonomy: hf-ml-tasks
-- id: hf-ml-tasks-group-audio
-  name: Audio
-  isDefinedByTaxonomy: hf-ml-tasks
-- id: hf-ml-tasks-group-tabular
-  name: Tabular
-  isDefinedByTaxonomy: hf-ml-tasks
-- id: hf-ml-tasks-group-reinforcement-learning
-  name: Reinforcement Learning
-  isDefinedByTaxonomy: hf-ml-tasks
+  - id: hf-ml-tasks-group-multimodal
+    name: Mutimodal
+    isDefinedByTaxonomy: hf-ml-tasks
+  - id: hf-ml-tasks-group-nlp
+    name: Natural Language Processing
+    isDefinedByTaxonomy: hf-ml-tasks
+  - id: hf-ml-tasks-group-computer-vision
+    name: Computer Vision
+    isDefinedByTaxonomy: hf-ml-tasks
+  - id: hf-ml-tasks-group-audio
+    name: Audio
+    isDefinedByTaxonomy: hf-ml-tasks
+  - id: hf-ml-tasks-group-tabular
+    name: Tabular
+    isDefinedByTaxonomy: hf-ml-tasks
+  - id: hf-ml-tasks-group-reinforcement-learning
+    name: Reinforcement Learning
+    isDefinedByTaxonomy: hf-ml-tasks
 
 aitasks:
-- id: any-to-any
-  name: "Any-to-Any"
-  description: "Any-to-any models can understand two or more modalities and output two or more modalities."
-  url: "https://huggingface.co/tasks/any-to-any"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: audio-text-to-text
-  name: "Audio-Text-to-Text"
-  description: "Any-to-any models can understand two or more modalities and output two or more modalities."
-  url: "https://huggingface.co/tasks/audio-text-to-text"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: document-question-answering
-  name: Document Question Answering
-  description: "Document Question Answering (also known as Document Visual Question Answering) is the task of answering questions on document images. Document question answering models take a (document, question) pair as input and return an answer in natural language. Models usually rely on multi-modal features, combining text, position of words (bounding-boxes) and image."
-  url: "https://huggingface.co/tasks/document-question-answering"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: visual-document-retrieval
-  name: Visual Document Retrieval
-  description: "Visual document retrieval is the task of searching for relevant image-based documents, such as PDFs. These models take a text query and multiple documents as input and return the top-most relevant documents and relevancy scores as output."
-  url: "https://huggingface.co/tasks/visual-document-retrieval"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: image-text-to-text
-  name: Image-Text-to-Text
-  description: "Image-text-to-text models take in an image and text prompt and output text. These models are also called vision-language models, or VLMs. The difference from image-to-text models is that these models take an additional text input, not restricting the model to certain use cases like image captioning, and may also be trained to accept a conversation as input."
-  url: "https://huggingface.co/tasks/image-text-to-text"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: image-text-to-image
-  name: Image-Text-to-Image
-  description: "Image-text-to-image models take an image and a text prompt as input and generate a new image based on the reference image and text instructions. These models are useful for image editing, style transfer, image variations, and guided image generation tasks."
-  url: "https://huggingface.co/tasks/image-text-to-image"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: image-text-to-video
-  name: Image-Text-to-Video
-  description: "Image-text-to-video models take an reference image and a text instructions as and generate a video based on them. These models are useful for animating still images, creating dynamic content from static references, and generating videos with specific motion or transformation guidance."
-  url: "https://huggingface.co/tasks/image-text-to-video"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: video-text-to-text
-  name: Video-Text-to-Text
-  description: "Video-text-to-text models take in a video and a text prompt and output text. These models are also called video-language models."
-  url: "https://huggingface.co/tasks/video-text-to-text"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: visual-question-answering
-  name: Visual Question Answering
-  description: "Visual Question Answering is the task of answering open-ended questions based on an image. They output natural language responses to natural language questions."
-  url: "https://huggingface.co/tasks/visual-question-answering"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-multimodal
-- id: feature extraction
-  name: Feature Extraction
-  description: "Feature extraction is the task of extracting features learnt in a model."
-  url: "https://huggingface.co/tasks/feature-extraction"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: fill-mask
-  name: Fill-Mask
-  description: "Masked language modeling is the task of masking some of the words in a sentence and predicting which words should replace those masks. These models are useful when we want to get a statistical understanding of the language in which the model is trained in."
-  url: "https://huggingface.co/tasks/fill-mask"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: question-answering
-  name: Question Answering
-  description: "Question Answering models can retrieve the answer to a question from a given text, which is useful for searching for an answer in a document. Some question answering models can generate answers without context!"
-  url: "https://huggingface.co/tasks/question-answering"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: sentence-similarity
-  name: Sentence Similarity
-  description: "Sentence Similarity is the task of determining how similar two texts are. Sentence similarity models convert input texts into vectors (embeddings) that capture semantic information and calculate how close (similar) they are between them. This task is particularly useful for information retrieval and clustering/grouping."
-  url: "https://huggingface.co/tasks/sentence-similarity"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: summarization
-  name: Summarization
-  description: "Summarization is the task of producing a shorter version of a document while preserving its important information. Some models can extract text from the original input, while other models can generate entirely new text."
-  url: "https://huggingface.co/tasks/summarization"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: table-question-answering
-  name: Table Question Answering
-  description: "Summarization is the task of producing a shorter version of a document while preserving its important information. Some models can extract text from the original input, while other models can generate entirely new text."
-  url: "https://huggingface.co/tasks/table-question-answering"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: text-classification
-  name: Text Classification
-  description: "Text Classification is the task of assigning a label or class to a given text. Some use cases are sentiment analysis, natural language inference, and assessing grammatical correctness."
-  url: "https://huggingface.co/tasks/text-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: text-generation
-  name: Text Generation
-  description: "Generating text is the task of generating new text given another text. These models can, for example, fill in incomplete text or paraphrase."
-  url: "https://huggingface.co/tasks/text-generation"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: text-ranking
-  name: Text Ranking
-  description: "Text Ranking is the task of ranking a set of texts based on their relevance to a query. Text ranking models are trained on large datasets of queries and relevant documents to learn how to rank documents based on their relevance to the query. This task is particularly useful for search engines and information retrieval systems."
-  url: "https://huggingface.co/tasks/text-ranking"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: token-classification
-  name: Token Classification
-  description: "Token classification is a natural language understanding task in which a label is assigned to some tokens in a text. Some popular token classification subtasks are Named Entity Recognition (NER) and Part-of-Speech (PoS) tagging. NER models could be trained to identify specific entities in a text, such as dates, individuals and places; and PoS tagging would identify, for example, which words in a text are verbs, nouns, and punctuation marks."
-  url: "https://huggingface.co/tasks/token-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: "translation"
-  name: "Translation"
-  description: "Translation converts a sequence of text from one language to another. It is one of several tasks you can formulate as a sequence-to-sequence problem, a powerful framework for returning some output from an input, like translation or summarization. Translation systems are commonly used for translation between different language texts, but it can also be used for speech or some combination in between like text-to-speech or speech-to-text."
-  url: "https://huggingface.co/docs/transformers/tasks/translation"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: zero-shot-classification
-  name: Zero-Shot Classification
-  description: "Zero-shot text classification is a task in natural language processing where a model is trained on a set of labeled examples but is then able to classify new examples from previously unseen classes."
-  url: "https://huggingface.co/tasks/zero-shot-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-nlp
-- id: depth-estimation
-  name: Depth Estimation
-  description: "Depth estimation is the task of predicting depth of the objects present in an image."
-  url: "https://huggingface.co/tasks/depth-estimation"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: image-classification
-  name: Image Classification
-  description: "Image classification is the task of assigning a label or class to an entire image. Images are expected to have only one class for each image. Image classification models take an image as input and return a prediction about which class the image belongs to."
-  url: "https://huggingface.co/tasks/image-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: image-feature-extraction
-  name: Image Feature Extraction
-  description: "Image feature extraction is the task of extracting features learnt in a computer vision model."
-  url: "https://huggingface.co/tasks/image-feature-extraction"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: image-segmentation
-  name: Image Segmentation
-  description: "Image Segmentation divides an image into segments where each pixel in the image is mapped to an object. This task has multiple variants such as instance segmentation, panoptic segmentation and semantic segmentation."
-  url: "https://huggingface.co/tasks/image-segmentation"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: image-to-image
-  name: Image-to-Image
-  description: "Image-to-image is the task of transforming an input image through a variety of possible manipulations and enhancements, such as super-resolution, image inpainting, colorization, and more."
-  url: "https://huggingface.co/tasks/image-to-image"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: image-to-text
-  name: Image-to-Text
-  description: "Image to text models output a text from a given image. Image captioning or optical character recognition can be considered as the most common applications of image to text."
-  url: "https://huggingface.co/tasks/image-to-text"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: image-to-video
-  name: Image-to-Video
-  description: "Image-to-video models take a still image as input and generate a video. These models can be guided by text prompts to influence the content and style of the output video."
-  url: "https://huggingface.co/tasks/image-to-video"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: keypoint-detection
-  name: Keypoint Detection
-  description: "Keypoint detection is the task of identifying meaningful distinctive points or features in an image."
-  url: "https://huggingface.co/tasks/keypoint-detection"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: mask-generation
-  name: Mask Generation
-  description: "Mask generation is the task of generating masks that identify a specific object or region of interest in a given image. Masks are often used in segmentation tasks, where they provide a precise way to isolate the object of interest for further processing or analysis."
-  url: "https://huggingface.co/tasks/mask-generation"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: object-detection
-  name: Object Detection
-  description: "Object Detection models allow users to identify objects of certain defined classes. Object detection models receive an image as input and output the images with bounding boxes and labels on detected objects."
-  url: "https://huggingface.co/tasks/object-detection"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: video-classification
-  name: Video Classification
-  description: "Video classification is the task of assigning a label or class to an entire video. Videos are expected to have only one class for each video. Video classification models take a video as input and return a prediction about which class the video belongs to."
-  url: "https://huggingface.co/tasks/video-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: text-to-image
-  name: Text-to-Image
-  description: "Text-to-image is the task of generating images from input text. These pipelines can also be used to modify and edit images based on text prompts."
-  url: "https://huggingface.co/tasks/text-to-image"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: text-to-video
-  name: Text-to-Video
-  description: "Text-to-video models can be used in any application that requires generating consistent sequence of images from text."
-  url: "https://huggingface.co/tasks/text-to-video"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: unconditional-image-generation
-  name: Unconditional Image Generation
-  description: "Unconditional image generation is the task of generating images with no condition in any context (like a prompt text or another image). Once trained, the model will create images that resemble its training data distribution."
-  url: "https://huggingface.co/tasks/unconditional-image-generation"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: video-to-video
-  name: Video-to-Video
-  description: "Video-to-video models take one or more videos as input and generate new videos as output. They can enhance quality, interpolate frames, modify styles, or create new motion dynamics, enabling creative applications, video production, and research."
-  url: "https://huggingface.co/tasks/video-to-video"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: zero-shot-image-classification
-  name: Zero-Shot Image Classification
-  description: "Zero-shot image classification is the task of classifying previously unseen classes during training of a model."
-  url: "https://huggingface.co/tasks/zero-shot-image-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: zero-shot-object-detection
-  name: Zero-Shot Object Detection
-  description: "Zero-shot object detection is a computer vision task to detect objects and their classes in images, without any prior training or knowledge of the classes. Zero-shot object detection models receive an image as input, as well as a list of candidate classes, and output the bounding boxes and labels where the objects have been detected."
-  url: "https://huggingface.co/tasks/zero-shot-object-detection"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: text-to-3d
-  name: Text-to-3D
-  description: "Text-to-3D models take in text input and produce 3D output."
-  url: "https://huggingface.co/tasks/text-to-3d"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: image-to-3d
-  name: Image-to-3D
-  description: "Image-to-3D models take in image input and produce 3D output."
-  url: "https://huggingface.co/tasks/image-to-3d"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-vision
-- id: audio-classification
-  name: Audio Classification
-  description: "Audio classification is the task of assigning a label or class to a given audio. It can be used for recognizing which command a user is giving or the emotion of a statement, as well as identifying a speaker."
-  url: "https://huggingface.co/tasks/audio-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-audio
-- id: audio-to-audio
-  name: Audio-to-Audio
-  description: "Audio-to-Audio is a family of tasks in which the input is an audio and the output is one or multiple generated audios. Some example tasks are speech enhancement and source separation."
-  url: "https://huggingface.co/tasks/audio-to-audio"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-audio
-- id: automatic-speech-recognition
-  name: Automatic Speech Recognition
-  description: "Automatic Speech Recognition (ASR), also known as Speech to Text (STT), is the task of transcribing a given audio to text. It has many applications, such as voice user interfaces."
-  url: "https://huggingface.co/tasks/automatic-speech-recognition"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-audio
-- id: text-to-speech
-  name: Text-to-Speech
-  description: "Text-to-Speech (TTS) is the task of generating natural sounding speech given text input. TTS models can be extended to have a single model that generates speech for multiple speakers and multiple languages."
-  url: "https://huggingface.co/tasks/text-to-speech"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-audio
-- id: tabular-classification
-  name: Tabular Classification
-  description: "Tabular classification is the task of classifying a target category (a group) based on set of attributes."
-  url: "https://huggingface.co/tasks/tabular-classification"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-tabular
-- id: tabular-regression
-  name: Tabular Regression
-  description: "Tabular regression is the task of predicting a numerical value given a set of attributes."
-  url: "https://huggingface.co/tasks/tabular-regression"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-tabular
-- id: reinforcement-learning
-  name: Reinforcement Learning
-  description: "Reinforcement learning is the computational approach of learning from action by interacting with an environment through trial and error and receiving rewards (negative or positive) as feedback."
-  url: "https://huggingface.co/tasks/reinforcement-learning"
-  isDefinedByTaxonomy: hf-ml-tasks
-  isPartOf: hf-ml-tasks-group-computer-reinforcement-learning
+  - id: any-to-any
+    name: Any-to-Any
+    description: >-
+      Any-to-any models can understand two or more modalities and output two or more modalities.
+    url: https://huggingface.co/tasks/any-to-any
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: audio-text-to-text
+    name: Audio-Text-to-Text
+    description: >-
+      Any-to-any models can understand two or more modalities and output two or more modalities.
+    url: https://huggingface.co/tasks/audio-text-to-text
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: document-question-answering
+    name: Document Question Answering
+    description: >-
+      Document Question Answering (also known as Document Visual Question Answering) is the task of answering questions
+      on document images. Document question answering models take a (document, question) pair as input and return an
+      answer in natural language. Models usually rely on multi-modal features, combining text, position of words
+      (bounding-boxes) and image.
+    url: https://huggingface.co/tasks/document-question-answering
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: visual-document-retrieval
+    name: Visual Document Retrieval
+    description: >-
+      Visual document retrieval is the task of searching for relevant image-based documents, such as PDFs. These models
+      take a text query and multiple documents as input and return the top-most relevant documents and relevancy scores
+      as output.
+    url: https://huggingface.co/tasks/visual-document-retrieval
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: image-text-to-text
+    name: Image-Text-to-Text
+    description: >-
+      Image-text-to-text models take in an image and text prompt and output text. These models are also called
+      vision-language models, or VLMs. The difference from image-to-text models is that these models take an additional
+      text input, not restricting the model to certain use cases like image captioning, and may also be trained to
+      accept a conversation as input.
+    url: https://huggingface.co/tasks/image-text-to-text
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: image-text-to-image
+    name: Image-Text-to-Image
+    description: >-
+      Image-text-to-image models take an image and a text prompt as input and generate a new image based on the
+      reference image and text instructions. These models are useful for image editing, style transfer, image
+      variations, and guided image generation tasks.
+    url: https://huggingface.co/tasks/image-text-to-image
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: image-text-to-video
+    name: Image-Text-to-Video
+    description: >-
+      Image-text-to-video models take an reference image and a text instructions as and generate a video based on them.
+      These models are useful for animating still images, creating dynamic content from static references, and
+      generating videos with specific motion or transformation guidance.
+    url: https://huggingface.co/tasks/image-text-to-video
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: video-text-to-text
+    name: Video-Text-to-Text
+    description: >-
+      Video-text-to-text models take in a video and a text prompt and output text. These models are also called
+      video-language models.
+    url: https://huggingface.co/tasks/video-text-to-text
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: visual-question-answering
+    name: Visual Question Answering
+    description: >-
+      Visual Question Answering is the task of answering open-ended questions based on an image. They output natural
+      language responses to natural language questions.
+    url: https://huggingface.co/tasks/visual-question-answering
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-multimodal
+  - id: feature extraction
+    name: Feature Extraction
+    description: >-
+      Feature extraction is the task of extracting features learnt in a model.
+    url: https://huggingface.co/tasks/feature-extraction
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: fill-mask
+    name: Fill-Mask
+    description: >-
+      Masked language modeling is the task of masking some of the words in a sentence and predicting which words should
+      replace those masks. These models are useful when we want to get a statistical understanding of the language in
+      which the model is trained in.
+    url: https://huggingface.co/tasks/fill-mask
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: question-answering
+    name: Question Answering
+    description: >-
+      Question Answering models can retrieve the answer to a question from a given text, which is useful for searching
+      for an answer in a document. Some question answering models can generate answers without context!
+    url: https://huggingface.co/tasks/question-answering
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: sentence-similarity
+    name: Sentence Similarity
+    description: >-
+      Sentence Similarity is the task of determining how similar two texts are. Sentence similarity models convert input
+       texts into vectors (embeddings) that capture semantic information and calculate how close (similar) they are
+       between them. This task is particularly useful for information retrieval and clustering/grouping.
+    url: https://huggingface.co/tasks/sentence-similarity
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: summarization
+    name: Summarization
+    description: >-
+      Summarization is the task of producing a shorter version of a document while preserving its important information.
+       Some models can extract text from the original input, while other models can generate entirely new text.
+    url: https://huggingface.co/tasks/summarization
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: table-question-answering
+    name: Table Question Answering
+    description: >-
+      Summarization is the task of producing a shorter version of a document while preserving its important information.
+       Some models can extract text from the original input, while other models can generate entirely new text.
+    url: https://huggingface.co/tasks/table-question-answering
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: text-classification
+    name: Text Classification
+    description: >-
+      Text Classification is the task of assigning a label or class to a given text. Some use cases are sentiment
+      analysis, natural language inference, and assessing grammatical correctness.
+    url: https://huggingface.co/tasks/text-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: text-generation
+    name: Text Generation
+    description: >-
+      Generating text is the task of generating new text given another text. These models can, for example, fill in
+      incomplete text or paraphrase.
+    url: https://huggingface.co/tasks/text-generation
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: text-ranking
+    name: Text Ranking
+    description: >-
+      Text Ranking is the task of ranking a set of texts based on their relevance to a query. Text ranking models are
+      trained on large datasets of queries and relevant documents to learn how to rank documents based on their
+      relevance to the query. This task is particularly useful for search engines and information retrieval systems.
+    url: https://huggingface.co/tasks/text-ranking
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: token-classification
+    name: Token Classification
+    description: >-
+      Token classification is a natural language understanding task in which a label is assigned to some tokens in a
+      text. Some popular token classification subtasks are Named Entity Recognition (NER) and Part-of-Speech (PoS)
+      tagging. NER models could be trained to identify specific entities in a text, such as dates, individuals and
+      places; and PoS tagging would identify, for example, which words in a text are verbs, nouns, and punctuation
+      marks.
+    url: https://huggingface.co/tasks/token-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: translation
+    name: Translation
+    description: >-
+      Translation converts a sequence of text from one language to another. It is one of several tasks you can
+      formulate as a sequence-to-sequence problem, a powerful framework for returning some output from an input, like
+      translation or summarization. Translation systems are commonly used for translation between different language
+      texts, but it can also be used for speech or some combination in between like text-to-speech or speech-to-text.
+    url: https://huggingface.co/docs/transformers/tasks/translation
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: zero-shot-classification
+    name: Zero-Shot Classification
+    description: >-
+      Zero-shot text classification is a task in natural language processing where a model is trained on a set of
+      labeled examples but is then able to classify new examples from previously unseen classes.
+    url: https://huggingface.co/tasks/zero-shot-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-nlp
+  - id: depth-estimation
+    name: Depth Estimation
+    description: >-
+      Depth estimation is the task of predicting depth of the objects present in an image.
+    url: https://huggingface.co/tasks/depth-estimation
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: image-classification
+    name: Image Classification
+    description: >-
+      Image classification is the task of assigning a label or class to an entire image. Images are expected to have
+      only one class for each image. Image classification models take an image as input and return a prediction about
+      which class the image belongs to.
+    url: https://huggingface.co/tasks/image-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: image-feature-extraction
+    name: Image Feature Extraction
+    description: >-
+      Image feature extraction is the task of extracting features learnt in a computer vision model.
+    url: https://huggingface.co/tasks/image-feature-extraction
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: image-segmentation
+    name: Image Segmentation
+    description: >-
+      Image Segmentation divides an image into segments where each pixel in the image is mapped to an object. This task
+      has multiple variants such as instance segmentation, panoptic segmentation and semantic segmentation.
+    url: https://huggingface.co/tasks/image-segmentation
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: image-to-image
+    name: Image-to-Image
+    description: >-
+      Image-to-image is the task of transforming an input image through a variety of possible manipulations and
+      enhancements, such as super-resolution, image inpainting, colorization, and more.
+    url: https://huggingface.co/tasks/image-to-image
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: image-to-text
+    name: Image-to-Text
+    description: >-
+      Image to text models output a text from a given image. Image captioning or optical character recognition can be
+      considered as the most common applications of image to text.
+    url: https://huggingface.co/tasks/image-to-text
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: image-to-video
+    name: Image-to-Video
+    description: >-
+      Image-to-video models take a still image as input and generate a video. These models can be guided by text prompts
+       to influence the content and style of the output video.
+    url: https://huggingface.co/tasks/image-to-video
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: keypoint-detection
+    name: Keypoint Detection
+    description: >-
+      Keypoint detection is the task of identifying meaningful distinctive points or features in an image.
+    url: https://huggingface.co/tasks/keypoint-detection
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: mask-generation
+    name: Mask Generation
+    description: >-
+      Mask generation is the task of generating masks that identify a specific object or region of interest in a given
+      image. Masks are often used in segmentation tasks, where they provide a precise way to isolate the object of
+      interest for further processing or analysis.
+    url: https://huggingface.co/tasks/mask-generation
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: object-detection
+    name: Object Detection
+    description: >-
+      Object Detection models allow users to identify objects of certain defined classes. Object detection models
+      receive an image as input and output the images with bounding boxes and labels on detected objects.
+    url: https://huggingface.co/tasks/object-detection
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: video-classification
+    name: Video Classification
+    description: >-
+      Video classification is the task of assigning a label or class to an entire video. Videos are expected to have
+      only one class for each video. Video classification models take a video as input and return a prediction about
+      which class the video belongs to.
+    url: https://huggingface.co/tasks/video-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: text-to-image
+    name: Text-to-Image
+    description: >-
+      Text-to-image is the task of generating images from input text. These pipelines can also be used to modify and
+      edit images based on text prompts.
+    url: https://huggingface.co/tasks/text-to-image
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: text-to-video
+    name: Text-to-Video
+    description: >-
+      Text-to-video models can be used in any application that requires generating consistent sequence of images from
+      text.
+    url: https://huggingface.co/tasks/text-to-video
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: unconditional-image-generation
+    name: Unconditional Image Generation
+    description: >-
+      Unconditional image generation is the task of generating images with no condition in any context (like a prompt
+      text or another image). Once trained, the model will create images that resemble its training data distribution.
+    url: https://huggingface.co/tasks/unconditional-image-generation
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: video-to-video
+    name: Video-to-Video
+    description: >-
+      Video-to-video models take one or more videos as input and generate new videos as output. They can enhance
+      quality, interpolate frames, modify styles, or create new motion dynamics, enabling creative applications, video
+      production, and research.
+    url: https://huggingface.co/tasks/video-to-video
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: zero-shot-image-classification
+    name: Zero-Shot Image Classification
+    description: >-
+      Zero-shot image classification is the task of classifying previously unseen classes during training of a model.
+    url: https://huggingface.co/tasks/zero-shot-image-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: zero-shot-object-detection
+    name: Zero-Shot Object Detection
+    description: >-
+      Zero-shot object detection is a computer vision task to detect objects and their classes in images, without any
+      prior training or knowledge of the classes. Zero-shot object detection models receive an image as input, as well
+      as a list of candidate classes, and output the bounding boxes and labels where the objects have been detected.
+    url: https://huggingface.co/tasks/zero-shot-object-detection
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: text-to-3d
+    name: Text-to-3D
+    description: >-
+      Text-to-3D models take in text input and produce 3D output.
+    url: https://huggingface.co/tasks/text-to-3d
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: image-to-3d
+    name: Image-to-3D
+    description: >-
+      Image-to-3D models take in image input and produce 3D output.
+    url: https://huggingface.co/tasks/image-to-3d
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-vision
+  - id: audio-classification
+    name: Audio Classification
+    description: >-
+      Audio classification is the task of assigning a label or class to a given audio. It can be used for recognizing
+      which command a user is giving or the emotion of a statement, as well as identifying a speaker.
+    url: https://huggingface.co/tasks/audio-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-audio
+  - id: audio-to-audio
+    name: Audio-to-Audio
+    description: >-
+      Audio-to-Audio is a family of tasks in which the input is an audio and the output is one or multiple generated
+      audios. Some example tasks are speech enhancement and source separation.
+    url: https://huggingface.co/tasks/audio-to-audio
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-audio
+  - id: automatic-speech-recognition
+    name: Automatic Speech Recognition
+    description: >-
+      Automatic Speech Recognition (ASR), also known as Speech to Text (STT), is the task of transcribing a given audio
+      to text. It has many applications, such as voice user interfaces.
+    url: https://huggingface.co/tasks/automatic-speech-recognition
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-audio
+  - id: text-to-speech
+    name: Text-to-Speech
+    description: >-
+      Text-to-Speech (TTS) is the task of generating natural sounding speech given text input. TTS models can be
+      extended to have a single model that generates speech for multiple speakers and multiple languages.
+    url: https://huggingface.co/tasks/text-to-speech
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-audio
+  - id: tabular-classification
+    name: Tabular Classification
+    description: >-
+      Tabular classification is the task of classifying a target category (a group) based on set of attributes.
+    url: https://huggingface.co/tasks/tabular-classification
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-tabular
+  - id: tabular-regression
+    name: Tabular Regression
+    description: >-
+      Tabular regression is the task of predicting a numerical value given a set of attributes.
+    url: https://huggingface.co/tasks/tabular-regression
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-tabular
+  - id: reinforcement-learning
+    name: Reinforcement Learning
+    description: >-
+      Reinforcement learning is the computational approach of learning from action by interacting with an environment
+      through trial and error and receiving rewards (negative or positive) as feedback.
+    url: https://huggingface.co/tasks/reinforcement-learning
+    isDefinedByTaxonomy: hf-ml-tasks
+    isPartOf: hf-ml-tasks-group-computer-reinforcement-learning

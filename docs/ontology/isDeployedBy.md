@@ -1,56 +1,28 @@
-
-
 # Slot: isDeployedBy
 
-
 _A relationship indicating that an entity has been deployed by an organization._
-
-
-
-
 
 URI: [nexus:isDeployedBy](https://ibm.github.io/ai-atlas-nexus/ontology/isDeployedBy)
 Alias: isDeployedBy
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
-
-
 ## Properties
 
-* Range: [Organization](Organization.md)
-
-
-
+- Range: [Organization](Organization.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:isDeployedBy |
-| native | nexus:isDeployedBy |
-
-
-
+| Mapping Type | Mapped Value       |
+| ------------ | ------------------ |
+| self         | nexus:isDeployedBy |
+| native       | nexus:isDeployedBy |
 
 ## LinkML Source
 
@@ -66,3 +38,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

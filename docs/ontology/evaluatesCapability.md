@@ -1,58 +1,30 @@
-
-
 # Slot: evaluatesCapability
 
-
 _Indicates that this benchmark evaluates a specific capability_
-
-
-
-
 
 URI: [nexus:evaluatesCapability](https://ibm.github.io/ai-atlas-nexus/ontology/evaluatesCapability)
 Alias: evaluatesCapability
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
-
-
 ## Properties
 
-* Range: [Capability](Capability.md)
+- Range: [Capability](Capability.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:evaluatesCapability |
-| native | nexus:evaluatesCapability |
-
-
-
+| Mapping Type | Mapped Value              |
+| ------------ | ------------------------- |
+| self         | nexus:evaluatesCapability |
+| native       | nexus:evaluatesCapability |
 
 ## LinkML Source
 
@@ -71,3 +43,4 @@ inlined: false
 
 ```
 </details>
+```

@@ -1,67 +1,36 @@
-
-
 # Slot: hasAdapter
 
-
 _The Adapter for the intrinsic_
-
-
-
-
 
 URI: [nexus:hasAdapter](https://ibm.github.io/ai-atlas-nexus/ontology/hasAdapter)
 Alias: hasAdapter
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
-
-
-
-
-
+| Name                            | Description                                                                      | Modifies Slot |
+| ------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 
 ## Properties
 
-* Range: [Adapter](Adapter.md)
+- Range: [Adapter](Adapter.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasAdapter |
-| native | nexus:hasAdapter |
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | nexus:hasAdapter |
+| native       | nexus:hasAdapter |
 
 ## LinkML Source
 
@@ -81,3 +50,4 @@ inlined: false
 
 ```
 </details>
+```

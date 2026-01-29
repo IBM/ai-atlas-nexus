@@ -1,19 +1,8 @@
-
-
 # Class: RiskIncident
-
 
 _An event occuring or occured which is a realised or materialised risk._
 
-
-
-
-
 URI: [https://w3id.org/dpv/risk#Incident](https://w3id.org/dpv/risk#Incident)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -221,91 +210,62 @@ URI: [https://w3id.org/dpv/risk#Incident](https://w3id.org/dpv/risk#Incident)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * **RiskIncident** [ [RiskConcept](RiskConcept.md)]
 
-
+- [Entity](Entity.md)
+  - **RiskIncident** [ [RiskConcept](RiskConcept.md)]
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [refersToRisk](refersToRisk.md) | * <br/> [Risk](Risk.md) | Indicates the incident (subject) is a materialisation of the indicated risk (... | direct |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | direct |
-| [hasStatus](hasStatus.md) | 0..1 <br/> [IncidentStatus](IncidentStatus.md) | Indicates the status of specified concept | direct |
-| [hasSeverity](hasSeverity.md) | 0..1 <br/> [Severity](Severity.md) | Indicates the severity associated with a concept | direct |
-| [hasLikelihood](hasLikelihood.md) | 0..1 <br/> [Likelihood](Likelihood.md) | The likelihood or probability or chance of something taking place or occuring | direct |
-| [hasImpactOn](hasImpactOn.md) | 0..1 <br/> [Impact](Impact.md) | Indicates impact(s) possible or arising as consequences from specified concep... | direct |
-| [hasConsequence](hasConsequence.md) | 0..1 <br/> [Consequence](Consequence.md) | Indicates consequence(s) possible or arising from specified concept | direct |
-| [hasImpact](hasImpact.md) | 0..1 <br/> [Impact](Impact.md) | Indicates impact(s) possible or arising as consequences from specified concep... | direct |
-| [hasVariant](hasVariant.md) | 0..1 <br/> [RiskIncident](RiskIncident.md) | Indicates an incident that shares the same causative factors, produces simila... | direct |
-| [author](author.md) | 0..1 <br/> [String](String.md) | The author or authors of the incident report | direct |
-| [source_uri](source_uri.md) | 0..1 <br/> [String](String.md) | The uri of the incident | direct |
-| [isDetectedBy](isDetectedBy.md) | * <br/> [RiskControl](RiskControl.md) | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Concept](Concept.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Concept](Concept.md) |
-
-
-
-
+| Name                                          | Cardinality and Range                          | Description                                                                      | Inheritance                   |
+| --------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------- | ----------------------------- |
+| [refersToRisk](refersToRisk.md)               | \* <br/> [Risk](Risk.md)                       | Indicates the incident (subject) is a materialisation of the indicated risk (... | direct                        |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)             | A relationship where a concept or a concept group is defined by a taxonomy       | direct                        |
+| [hasStatus](hasStatus.md)                     | 0..1 <br/> [IncidentStatus](IncidentStatus.md) | Indicates the status of specified concept                                        | direct                        |
+| [hasSeverity](hasSeverity.md)                 | 0..1 <br/> [Severity](Severity.md)             | Indicates the severity associated with a concept                                 | direct                        |
+| [hasLikelihood](hasLikelihood.md)             | 0..1 <br/> [Likelihood](Likelihood.md)         | The likelihood or probability or chance of something taking place or occuring    | direct                        |
+| [hasImpactOn](hasImpactOn.md)                 | 0..1 <br/> [Impact](Impact.md)                 | Indicates impact(s) possible or arising as consequences from specified concep... | direct                        |
+| [hasConsequence](hasConsequence.md)           | 0..1 <br/> [Consequence](Consequence.md)       | Indicates consequence(s) possible or arising from specified concept              | direct                        |
+| [hasImpact](hasImpact.md)                     | 0..1 <br/> [Impact](Impact.md)                 | Indicates impact(s) possible or arising as consequences from specified concep... | direct                        |
+| [hasVariant](hasVariant.md)                   | 0..1 <br/> [RiskIncident](RiskIncident.md)     | Indicates an incident that shares the same causative factors, produces simila... | direct                        |
+| [author](author.md)                           | 0..1 <br/> [String](String.md)                 | The author or authors of the incident report                                     | direct                        |
+| [source_uri](source_uri.md)                   | 0..1 <br/> [String](String.md)                 | The uri of the incident                                                          | direct                        |
+| [isDetectedBy](isDetectedBy.md)               | \* <br/> [RiskControl](RiskControl.md)         | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
+| [id](id.md)                                   | 1 <br/> [String](String.md)                    | A unique identifier to this instance of the model element                        | [Entity](Entity.md)           |
+| [name](name.md)                               | 0..1 <br/> [String](String.md)                 | A text name of this instance                                                     | [Entity](Entity.md)           |
+| [description](description.md)                 | 0..1 <br/> [String](String.md)                 | The description of an entity                                                     | [Entity](Entity.md)           |
+| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                       | An optional URL associated with this instance                                    | [Entity](Entity.md)           |
+| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                     | The date on which the entity was created                                         | [Entity](Entity.md)           |
+| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                     | The date on which the entity was most recently modified                          | [Entity](Entity.md)           |
+| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                         | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)           |
+| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                         | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)           |
+| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                         | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)           |
+| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)           |
+| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)           |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)     | Indicates documentation associated with an entity                                | [Concept](Concept.md)         |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                 |                                                                                  | [Concept](Concept.md)         |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Container](Container.md) | [riskincidents](riskincidents.md) | range | [RiskIncident](RiskIncident.md) |
-| [RiskIncident](RiskIncident.md) | [refersToRisk](refersToRisk.md) | domain | [RiskIncident](RiskIncident.md) |
-| [RiskIncident](RiskIncident.md) | [hasVariant](hasVariant.md) | domain | [RiskIncident](RiskIncident.md) |
-| [RiskIncident](RiskIncident.md) | [hasVariant](hasVariant.md) | range | [RiskIncident](RiskIncident.md) |
-
-
-
-
-
-
+| used by                         | used in                           | type   | used                            |
+| ------------------------------- | --------------------------------- | ------ | ------------------------------- |
+| [Container](Container.md)       | [riskincidents](riskincidents.md) | range  | [RiskIncident](RiskIncident.md) |
+| [RiskIncident](RiskIncident.md) | [refersToRisk](refersToRisk.md)   | domain | [RiskIncident](RiskIncident.md) |
+| [RiskIncident](RiskIncident.md) | [hasVariant](hasVariant.md)       | domain | [RiskIncident](RiskIncident.md) |
+| [RiskIncident](RiskIncident.md) | [hasVariant](hasVariant.md)       | range  | [RiskIncident](RiskIncident.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | https://w3id.org/dpv/risk#Incident |
-| native | nexus:RiskIncident |
-
-
-
-
-
+| Mapping Type | Mapped Value                       |
+| ------------ | ---------------------------------- |
+| self         | https://w3id.org/dpv/risk#Incident |
+| native       | nexus:RiskIncident                 |
 
 ## LinkML Source
 
@@ -348,7 +308,7 @@ attributes:
     - RiskIncident
 class_uri: https://w3id.org/dpv/risk#Incident
 
-```
+````
 </details>
 
 ### Induced
@@ -712,5 +672,6 @@ attributes:
     range: string
 class_uri: https://w3id.org/dpv/risk#Incident
 
-```
+````
+
 </details>

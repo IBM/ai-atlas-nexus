@@ -1,7 +1,6 @@
 id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval
 name: ai_eval
-description:
-  Defines vocabulary relating to AI model evaluation
+description: Defines vocabulary relating to AI model evaluation
 imports:
   - linkml:types
   - common
@@ -17,7 +16,6 @@ default_range: string
 default_prefix: nexus
 
 classes:
-
   AiEval:
     is_a: Entity
     class_uri: dqv:Metric
@@ -42,9 +40,9 @@ classes:
     class_uri: dqv:QualityMeasurement
     description: The result of an evaluation for a specific AI model.
     mixins:
-    - Fact
+      - Fact
     slots:
-    - isResultOf
+      - isResultOf
 
   BenchmarkMetadataCard:
     is_a: Entity
@@ -197,7 +195,7 @@ slots:
     description: Measures taken to ensure that the benchmark provides valid and reliable evaluations.
     multivalued: true
   hasDemographicAnalysis:
-    description:  How the benchmark evaluates performance across different demographic groups (e.g., gender, race).
+    description: How the benchmark evaluates performance across different demographic groups (e.g., gender, race).
   hasConsiderationPrivacyAndAnonymity:
     description: How any personal or sensitive data is handled and whether any anonymization techniques are applied.
   hasConsiderationConsentProcedures:

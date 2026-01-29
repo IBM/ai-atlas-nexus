@@ -1,54 +1,29 @@
-
-
 # Slot: author
-
-
 
 URI: [nexus:author](https://ibm.github.io/ai-atlas-nexus/ontology/author)
 Alias: author
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
-| [Documentation](Documentation.md) | Documented information about a concept or other topic(s) of interest |  no  |
-
-
-
-
-
+| Name                              | Description                                                           | Modifies Slot |
+| --------------------------------- | --------------------------------------------------------------------- | ------------- |
+| [RiskIncident](RiskIncident.md)   | An event occuring or occured which is a realised or materialised risk | no            |
+| [Documentation](Documentation.md) | Documented information about a concept or other topic(s) of interest  | no            |
 
 ## Properties
 
-* Range: [String](String.md)
-
-
-
+- Range: [String](String.md)
 
 ## Identifier and Mapping Information
-
-
-
-
-
-
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:author |
-| native | nexus:author |
-
-
-
+| ------------ | ------------ |
+| self         | nexus:author |
+| native       | nexus:author |
 
 ## LinkML Source
 
@@ -63,3 +38,4 @@ range: string
 
 ```
 </details>
+```

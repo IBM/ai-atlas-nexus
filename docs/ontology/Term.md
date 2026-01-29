@@ -1,19 +1,8 @@
-
-
 # Class: Term
-
 
 _A term and its definitions._
 
-
-
-
-
 URI: [nexus:Term](https://ibm.github.io/ai-atlas-nexus/ontology/Term)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -195,98 +184,69 @@ URI: [nexus:Term](https://ibm.github.io/ai-atlas-nexus/ontology/Term)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Entry](Entry.md)
-        * **Term**
 
-
+- [Entity](Entity.md)
+  - [Entry](Entry.md)
+    - **Term**
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md) | A relationship where a term or a term group is defined by a vocabulary | direct |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | direct |
-| [hasParentDefinition](hasParentDefinition.md) | * <br/> [Term](Term.md) | Indicates parent terms associated with a term | direct |
-| [hasSubDefinition](hasSubDefinition.md) | * <br/> [Term](Term.md) | Indicates child terms associated with a term | direct |
-| [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk | direct |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | [Entry](Entry.md) |
-| [isPartOf](isPartOf.md) | 0..1 <br/> [String](String.md) | A relationship where an entity is part of another entity | [Entry](Entry.md) |
-| [requiredByTask](requiredByTask.md) | * <br/> [AiTask](AiTask.md) | Indicates that this entry is required to perform a specific AI task | [Entry](Entry.md) |
-| [requiresCapability](requiresCapability.md) | * <br/> [Capability](Capability.md) | Indicates that this entry requires a specific capability | [Entry](Entry.md) |
-| [implementedByAdapter](implementedByAdapter.md) | * <br/> [Adapter](Adapter.md) | Indicates that this capability is implemented by a specific adapter | [Entry](Entry.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Entry](Entry.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                              | Cardinality and Range                                                                                        | Description                                                                      | Inheritance         |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)                                                                       | A relationship where a term or a term group is defined by a vocabulary           | direct              |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)                                                                   | Indicates documentation associated with an entity                                | direct              |
+| [hasParentDefinition](hasParentDefinition.md)     | \* <br/> [Term](Term.md)                                                                                     | Indicates parent terms associated with a term                                    | direct              |
+| [hasSubDefinition](hasSubDefinition.md)           | \* <br/> [Term](Term.md)                                                                                     | Indicates child terms associated with a term                                     | direct              |
+| [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk                                 | direct              |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                                                                           | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)   |
+| [isPartOf](isPartOf.md)                           | 0..1 <br/> [String](String.md)                                                                               | A relationship where an entity is part of another entity                         | [Entry](Entry.md)   |
+| [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)                                                                                 | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)   |
+| [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)                                                                         | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)   |
+| [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)                                                                               | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)   |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                                                               |                                                                                  | [Entry](Entry.md)   |
+| [id](id.md)                                       | 1 <br/> [String](String.md)                                                                                  | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                                   | 0..1 <br/> [String](String.md)                                                                               | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)                     | 0..1 <br/> [String](String.md)                                                                               | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                     | 0..1 <br/> [Uri](Uri.md)                                                                                     | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                     | 0..1 <br/> [Date](Date.md)                                                                                   | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)                   | 0..1 <br/> [Date](Date.md)                                                                                   | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)               | \* <br/> [Any](Any.md)                                                                                       | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)               | \* <br/> [Any](Any.md)                                                                                       | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                                                                                       | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                                                                                       | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                                                                                       | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Term](Term.md) | [hasParentDefinition](hasParentDefinition.md) | range | [Term](Term.md) |
-| [Term](Term.md) | [hasSubDefinition](hasSubDefinition.md) | range | [Term](Term.md) |
-| [Term](Term.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [Action](Action.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [AiEval](AiEval.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [Question](Question.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [Questionnaire](Questionnaire.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [Adapter](Adapter.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedRisk](hasRelatedRisk.md) | any_of[range] | [Term](Term.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedTerm](hasRelatedTerm.md) | range | [Term](Term.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [hasRelatedTerm](hasRelatedTerm.md) | any_of[range] | [Term](Term.md) |
-
-
-
-
-
-
+| used by                                           | used in                                       | type          | used            |
+| ------------------------------------------------- | --------------------------------------------- | ------------- | --------------- |
+| [Term](Term.md)                                   | [hasParentDefinition](hasParentDefinition.md) | range         | [Term](Term.md) |
+| [Term](Term.md)                                   | [hasSubDefinition](hasSubDefinition.md)       | range         | [Term](Term.md) |
+| [Term](Term.md)                                   | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md)         | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [Action](Action.md)                               | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [Questionnaire](Questionnaire.md)                 | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [Adapter](Adapter.md)                             | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                   | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                   | [hasRelatedTerm](hasRelatedTerm.md)           | range         | [Term](Term.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                   | [hasRelatedTerm](hasRelatedTerm.md)           | any_of[range] | [Term](Term.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:Term |
-| native | nexus:Term |
-
-
-
-
-
+| ------------ | ------------ |
+| self         | nexus:Term   |
+| native       | nexus:Term   |
 
 ## LinkML Source
 
@@ -307,7 +267,7 @@ slots:
 - hasSubDefinition
 - hasRelatedRisk
 
-```
+````
 </details>
 
 ### Induced
@@ -659,5 +619,6 @@ attributes:
     multivalued: true
     inlined: false
 
-```
+````
+
 </details>

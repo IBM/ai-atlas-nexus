@@ -1,65 +1,34 @@
-
-
 # Slot: adaptsModel
 
-
 _The LargeLanguageModel being adapted_
-
-
-
-
 
 URI: [nexus:adaptsModel](https://ibm.github.io/ai-atlas-nexus/ontology/adaptsModel)
 Alias: adaptsModel
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-
-
-
-
-
+| Name                  | Description                                                                      | Modifies Slot |
+| --------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
-* Range: [LargeLanguageModel](LargeLanguageModel.md)
-
-
-
+- Range: [LargeLanguageModel](LargeLanguageModel.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:adaptsModel |
-| native | nexus:adaptsModel |
-
-
-
+| Mapping Type | Mapped Value      |
+| ------------ | ----------------- |
+| self         | nexus:adaptsModel |
+| native       | nexus:adaptsModel |
 
 ## LinkML Source
 
@@ -76,3 +45,4 @@ range: LargeLanguageModel
 
 ```
 </details>
+```

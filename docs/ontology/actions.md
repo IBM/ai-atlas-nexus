@@ -1,67 +1,36 @@
-
-
 # Slot: actions
 
-
 _A list of risk related actions_
-
-
-
-
 
 URI: [nexus:actions](https://ibm.github.io/ai-atlas-nexus/ontology/actions)
 Alias: actions
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [Action](Action.md)
+- Range: [Action](Action.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:actions |
-| native | nexus:actions |
-
-
-
+| Mapping Type | Mapped Value  |
+| ------------ | ------------- |
+| self         | nexus:actions |
+| native       | nexus:actions |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

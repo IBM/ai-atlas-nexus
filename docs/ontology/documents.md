@@ -1,67 +1,36 @@
-
-
 # Slot: documents
 
-
 _A list of documents_
-
-
-
-
 
 URI: [nexus:documents](https://ibm.github.io/ai-atlas-nexus/ontology/documents)
 Alias: documents
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [Documentation](Documentation.md)
+- Range: [Documentation](Documentation.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:documents |
-| native | nexus:documents |
-
-
-
+| Mapping Type | Mapped Value    |
+| ------------ | --------------- |
+| self         | nexus:documents |
+| native       | nexus:documents |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

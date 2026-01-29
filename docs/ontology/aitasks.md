@@ -1,67 +1,36 @@
-
-
 # Slot: aitasks
 
-
 _A list of AI tasks_
-
-
-
-
 
 URI: [nexus:aitasks](https://ibm.github.io/ai-atlas-nexus/ontology/aitasks)
 Alias: aitasks
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [AiTask](AiTask.md)
+- Range: [AiTask](AiTask.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:aitasks |
-| native | nexus:aitasks |
-
-
-
+| Mapping Type | Mapped Value  |
+| ------------ | ------------- |
+| self         | nexus:aitasks |
+| native       | nexus:aitasks |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

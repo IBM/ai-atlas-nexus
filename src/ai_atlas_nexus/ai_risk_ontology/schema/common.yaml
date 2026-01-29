@@ -1,7 +1,6 @@
 id: https://ibm.github.io/ai-atlas-nexus/ontology/common
 name: common
-description:
-  A core schema supporting the AI Risk Model ontology
+description: A core schema supporting the AI Risk Model ontology
 default_curi_maps:
   - semweb_context
 imports:
@@ -19,10 +18,8 @@ default_range: string
 default_prefix: nexus
 
 classes:
-
   Entity:
-    description:
-      A generic grouping for any identifiable entity.
+    description: A generic grouping for any identifiable entity.
     abstract: true
     mixin: true
     class_uri: schema:Thing
@@ -78,8 +75,8 @@ classes:
     class_uri: schema:Statement
     description: A fact about something, for example the result of a measurement. In addition to the value, evidence is provided.
     slots:
-    - value
-    - evidence
+      - value
+      - evidence
 
   Vocabulary:
     is_a: Entity
@@ -214,24 +211,23 @@ classes:
   Rule:
     is_a: Entity
     class_uri: dpv:Rule
-    description: "A rule describing a process or control that directs or determines if and how an activity should be conducted."
+    description: >-
+      A rule describing a process or control that directs or determines if and how an activity should be conducted.
 
   Permission:
     is_a: Rule
-    description: "A rule describing a permission to perform an activity"
+    description: A rule describing a permission to perform an activity
     class_uri: dpv:Permission
 
   Prohibition:
     is_a: Rule
-    description: "A rule describing a prohibition to perform an activity"
+    description: A rule describing a prohibition to perform an activity
     class_uri: dpv:Prohibition
 
   Obligation:
     is_a: Rule
-    description: "A rule describing an obligation for performing an activity"
+    description: A rule describing an obligation for performing an activity
     class_uri: dpv:Obligation
-
-
 
 slots:
   id:

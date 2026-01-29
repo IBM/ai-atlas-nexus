@@ -1,56 +1,28 @@
-
-
 # Slot: isImportedBy
 
-
 _A relationship indicating that an entity has been imported by an organization._
-
-
-
-
 
 URI: [nexus:isImportedBy](https://ibm.github.io/ai-atlas-nexus/ontology/isImportedBy)
 Alias: isImportedBy
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
-
-
 ## Properties
 
-* Range: [Organization](Organization.md)
-
-
-
+- Range: [Organization](Organization.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:isImportedBy |
-| native | nexus:isImportedBy |
-
-
-
+| Mapping Type | Mapped Value       |
+| ------------ | ------------------ |
+| self         | nexus:isImportedBy |
+| native       | nexus:isImportedBy |
 
 ## LinkML Source
 
@@ -66,3 +38,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

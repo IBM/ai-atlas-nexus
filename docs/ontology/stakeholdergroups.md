@@ -1,67 +1,36 @@
-
-
 # Slot: stakeholdergroups
 
-
 _A list of AI stakeholder groups_
-
-
-
-
 
 URI: [nexus:stakeholdergroups](https://ibm.github.io/ai-atlas-nexus/ontology/stakeholdergroups)
 Alias: stakeholdergroups
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [StakeholderGroup](StakeholderGroup.md)
+- Range: [StakeholderGroup](StakeholderGroup.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:stakeholdergroups |
-| native | nexus:stakeholdergroups |
-
-
-
+| Mapping Type | Mapped Value            |
+| ------------ | ----------------------- |
+| self         | nexus:stakeholdergroups |
+| native       | nexus:stakeholdergroups |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

@@ -5,7 +5,7 @@ The IBM AI Risk Atlas is a taxonomy of AI risks collected from prior research, r
 
 ![IBM AI Risk Atlas categories](../assets/ibm_ai_risk_atlas.png)
 
-
 ## Find out more
+
 - [IBM's AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
 - Read the the IBM AI Ethics Board publication [Foundation models: Opportunities, risks and mitigations](https://www.ibm.com/downloads/documents/us-en/10a99803d8afd656) which goes into more detail about the risk taxonomy, and describes the point of view of IBM on the ethics of foundation models.

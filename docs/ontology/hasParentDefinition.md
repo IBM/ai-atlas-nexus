@@ -1,67 +1,36 @@
-
-
 # Slot: hasParentDefinition
 
-
 _Indicates parent terms associated with a term_
-
-
-
-
 
 URI: [nexus:hasParentDefinition](https://ibm.github.io/ai-atlas-nexus/ontology/hasParentDefinition)
 Alias: hasParentDefinition
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Term](Term.md) | A term and its definitions |  no  |
-
-
-
-
-
+| Name            | Description                | Modifies Slot |
+| --------------- | -------------------------- | ------------- |
+| [Term](Term.md) | A term and its definitions | no            |
 
 ## Properties
 
-* Range: [Term](Term.md)
+- Range: [Term](Term.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasParentDefinition |
-| native | nexus:hasParentDefinition |
-
-
-
+| Mapping Type | Mapped Value              |
+| ------------ | ------------------------- |
+| self         | nexus:hasParentDefinition |
+| native       | nexus:hasParentDefinition |
 
 ## LinkML Source
 
@@ -81,3 +50,4 @@ inlined: false
 
 ```
 </details>
+```

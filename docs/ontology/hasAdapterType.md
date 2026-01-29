@@ -1,65 +1,34 @@
-
-
 # Slot: hasAdapterType
 
-
 _The Adapter type, for example: LORA, ALORA, X-LORA_
-
-
-
-
 
 URI: [nexus:hasAdapterType](https://ibm.github.io/ai-atlas-nexus/ontology/hasAdapterType)
 Alias: hasAdapterType
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-
-
-
-
-
+| Name                  | Description                                                                      | Modifies Slot |
+| --------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
-* Range: [AdapterType](AdapterType.md)
-
-
-
+- Range: [AdapterType](AdapterType.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasAdapterType |
-| native | nexus:hasAdapterType |
-
-
-
+| Mapping Type | Mapped Value         |
+| ------------ | -------------------- |
+| self         | nexus:hasAdapterType |
+| native       | nexus:hasAdapterType |
 
 ## LinkML Source
 
@@ -76,3 +45,4 @@ range: AdapterType
 
 ```
 </details>
+```
