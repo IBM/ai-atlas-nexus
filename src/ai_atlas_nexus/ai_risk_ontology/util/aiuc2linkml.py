@@ -30,16 +30,16 @@ def convert_datetime_to_date(datetime_str: str) -> str:
 
 def create_container_object() -> Container:
     # Create paper
-    documents = [
-        Documentation(
-            **{
-                "id": "10a99803d8afd999",
-                "name": "Foundation models: Opportunities, risks and mitigations",
-                "description": "In this document we: Explore the benefits of foundation models, including their capability to perform challenging tasks, potential to speed up the adoption of AI, ability to increase productivity and the cost benefits they provide. Discuss the three categories of risk, including risks known from earlier forms of AI, known risks amplified by foundation models and emerging risks intrinsic to the generative capabilities of foundation models. Cover the principles, pillars and governance that form the foundation of IBM’s AI ethics initiatives and suggest guardrails for risk mitigation.",
-                "url": "https://www.ibm.com/downloads/documents/us-en/10a99803d8afd656",
-            }
-        )
-    ]
+    # documents = [
+    #     Documentation(
+    #         **{
+    #             "id": "10a99803d8afd999",
+    #             "name": "Foundation models: Opportunities, risks and mitigations",
+    #             "description": "In this document we: Explore the benefits of foundation models, including their capability to perform challenging tasks, potential to speed up the adoption of AI, ability to increase productivity and the cost benefits they provide. Discuss the three categories of risk, including risks known from earlier forms of AI, known risks amplified by foundation models and emerging risks intrinsic to the generative capabilities of foundation models. Cover the principles, pillars and governance that form the foundation of IBM’s AI ethics initiatives and suggest guardrails for risk mitigation.",
+    #             "url": "https://www.ibm.com/downloads/documents/us-en/10a99803d8afd656",
+    #         }
+    #     )
+    # ]
 
     # Create taxonomy
     taxonomies = [
@@ -88,7 +88,6 @@ def create_container_object() -> Container:
 
     # Create container
     container = Container(
-        documents=documents,
         taxonomies=taxonomies,
         groups=riskgroups,
         entries=risk_objects,
