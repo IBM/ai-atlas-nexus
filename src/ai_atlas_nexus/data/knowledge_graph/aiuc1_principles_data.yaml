@@ -1,0 +1,450 @@
+taxonomies:
+- id: aiuc-1-principles
+  name: Artificial Intelligence Underwriting Company - 1
+  description: AIUC-1 is the world's first standard for AI agents. AIUC-1 covers data
+    & privacy, security, safety, reliability, accountability and societal risks.
+  url: https://www.aiuc-1.com
+  dateCreated: 2026-02-23
+  dateModified: 2026-02-23
+  hasDocumentation:
+  - 10a99803d8afd999
+  type: RiskTaxonomy
+entries:
+- id: A001
+  name: Establish input data policy
+  description: Establish and communicate AI input data policies covering how customer
+    data is used for model training, inference processing, data retention periods,
+    and customer data rights
+  url: https://www.aiuc-1.com/data-and-privacy/establish input data policy
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Data-and-Privacy
+  type: Risk
+- id: A002
+  name: Establish output data policy
+  description: Establish AI output ownership, usage, opt-out and deletion policies
+    to customers and communicate these policies
+  url: https://www.aiuc-1.com/data-and-privacy/establish output data policy
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Data-and-Privacy
+  type: Risk
+- id: A003
+  name: Limit AI agent data collection
+  description: Implement safeguards to limit AI agent data access to task-relevant
+    information based on user roles and context
+  url: https://www.aiuc-1.com/data-and-privacy/limit ai agent data collection
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Data-and-Privacy
+  type: Risk
+- id: A004
+  name: Protect IP & trade secrets
+  description: Implement safeguards or technical controls to prevent AI systems from
+    leaking company intellectual property or confidential information
+  url: https://www.aiuc-1.com/data-and-privacy/protect ip & trade secrets
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Data-and-Privacy
+  type: Risk
+- id: A005
+  name: Prevent cross-customer data exposure
+  description: Implement safeguards to prevent cross-customer data exposure when combining
+    customer data from multiple sources
+  url: https://www.aiuc-1.com/data-and-privacy/prevent cross-customer data exposure
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Data-and-Privacy
+  type: Risk
+- id: A006
+  name: Prevent PII leakage
+  description: Establish safeguards to prevent personal data leakage through AI outputs
+  url: https://www.aiuc-1.com/data-and-privacy/prevent pii leakage
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Data-and-Privacy
+  type: Risk
+- id: A007
+  name: Prevent IP violations
+  description: Implement safeguards and technical controls to prevent AI outputs from
+    violating copyrights, trademarks, or other third-party intellectual property rights
+  url: https://www.aiuc-1.com/data-and-privacy/prevent ip violations
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Data-and-Privacy
+  type: Risk
+- id: B001
+  name: Third-party testing of adversarial robustness
+  description: Implement adversarial testing program to validate system resilience
+    against adversarial inputs and prompt injection attempts in line with adversarial
+    threat taxonomy
+  url: https://www.aiuc-1.com/security/third-party testing of adversarial robustness
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B002
+  name: Detect adversarial input
+  description: Implement monitoring capabilities to detect and respond to adversarial
+    inputs and prompt injection attempts
+  url: https://www.aiuc-1.com/security/detect adversarial input
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B003
+  name: Manage public release of technical details
+  description: Implement controls to prevent over-disclosure of technical information
+    about AI systems and organizational details that could enable adversarial targeting
+  url: https://www.aiuc-1.com/security/manage public release of technical details
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B004
+  name: Prevent AI endpoint scraping
+  description: Implement safeguards to prevent probing or scraping of external AI
+    endpoints
+  url: https://www.aiuc-1.com/security/prevent ai endpoint scraping
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B005
+  name: Implement real-time input filtering
+  description: Implement real-time input filtering using automated moderation tools
+  url: https://www.aiuc-1.com/security/implement real-time input filtering
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B006
+  name: Prevent unauthorized AI agent actions
+  description: Implement safeguards to limit AI agent system access based on context
+    and declared objectives
+  url: https://www.aiuc-1.com/security/prevent unauthorized ai agent actions
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B007
+  name: Enforce user access privileges to AI systems
+  description: Establish and maintain user access controls and admin privileges for
+    AI systems in line with policy
+  url: https://www.aiuc-1.com/security/enforce user access privileges to ai systems
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B008
+  name: Protect model deployment environment
+  description: Implement security measures for AI model deployment environments including
+    encryption, access controls and authorization
+  url: https://www.aiuc-1.com/security/protect model deployment environment
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: B009
+  name: Limit output over-exposure
+  description: Implement output limitations and obfuscation techniques to safeguard
+    against information leakage
+  url: https://www.aiuc-1.com/security/limit output over-exposure
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Security
+  type: Risk
+- id: C001
+  name: Define AI risk taxonomy
+  description: Establish a risk taxonomy that categorizes risks within harmful, out-of-scope,
+    and hallucinated outputs, tool calls, and other risks based on application-specific
+    usage
+  url: https://www.aiuc-1.com/safety/define ai risk taxonomy
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C002
+  name: Conduct pre-deployment testing
+  description: Conduct internal testing of AI systems prior to deployment across risk
+    categories for system changes requiring formal review or approval
+  url: https://www.aiuc-1.com/safety/conduct pre-deployment testing
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C003
+  name: Prevent harmful outputs
+  description: Implement safeguards or technical controls to prevent harmful outputs
+    including distressed outputs, angry responses, high-risk advice, offensive content,
+    bias, and deception
+  url: https://www.aiuc-1.com/safety/prevent harmful outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C004
+  name: Prevent out-of-scope outputs
+  description: Implement safeguards or technical controls to prevent out-of-scope
+    outputs (e.g. political discussion, healthcare advice)
+  url: https://www.aiuc-1.com/safety/prevent out-of-scope outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C005
+  name: Prevent customer-defined high risk outputs
+  description: Implement safeguards or technical controls to prevent additional high
+    risk outputs as defined in risk taxonomy
+  url: https://www.aiuc-1.com/safety/prevent customer-defined high risk outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C006
+  name: Prevent output vulnerabilities
+  description: Implement safeguards to prevent security vulnerabilities in outputs
+    from impacting users
+  url: https://www.aiuc-1.com/safety/prevent output vulnerabilities
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C007
+  name: Flag high risk outputs
+  description: Implement an alerting system that flags high-risk outputs for human
+    review
+  url: https://www.aiuc-1.com/safety/flag high risk outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C008
+  name: Monitor AI risk categories
+  description: Implement monitoring of AI systems across risk categories
+  url: https://www.aiuc-1.com/safety/monitor ai risk categories
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C009
+  name: Enable real-time feedback and intervention
+  description: Implement mechanisms to enable real-time user feedback collection and
+    intervention mechanisms
+  url: https://www.aiuc-1.com/safety/enable real-time feedback and intervention
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C010
+  name: Third-party testing for harmful outputs
+  description: Appoint expert third parties to evaluate system robustness to harmful
+    outputs including distressed outputs, angry responses, high-risk advice, offensive
+    content, bias, and deception at least every 3 months
+  url: https://www.aiuc-1.com/safety/third-party testing for harmful outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C011
+  name: Third-party testing for out-of-scope outputs
+  description: Appoint expert third parties to evaluate system robustness to out-of-scope
+    outputs at least every 3 months (e.g. political discussion, healthcare advice)
+  url: https://www.aiuc-1.com/safety/third-party testing for out-of-scope outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: C012
+  name: Third-party testing for customer-defined risk
+  description: Appoint expert third-parties to evaluate system robustness to additional
+    high-risk outputs as defined in risk taxonomy at least every 3 months
+  url: https://www.aiuc-1.com/safety/third-party testing for customer-defined risk
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Safety
+  type: Risk
+- id: D001
+  name: Prevent hallucinated outputs
+  description: Implement safeguards or technical controls to prevent hallucinated
+    outputs
+  url: https://www.aiuc-1.com/reliability/prevent hallucinated outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Reliability
+  type: Risk
+- id: D002
+  name: Third-party testing for hallucinations
+  description: Appoint expert third-parties to evaluate hallucinated outputs at least
+    every 3 months
+  url: https://www.aiuc-1.com/reliability/third-party testing for hallucinations
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Reliability
+  type: Risk
+- id: D003
+  name: Restrict unsafe tool calls
+  description: Implement safeguards or technical controls to prevent tool calls in
+    AI systems from executing unauthorized actions, accessing restricted information,
+    or making decisions beyond their intended scope
+  url: https://www.aiuc-1.com/reliability/restrict unsafe tool calls
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Reliability
+  type: Risk
+- id: D004
+  name: Third-party testing of tool calls
+  description: Appoint expert third-parties to evaluate tool calls in AI systems,
+    including executing unauthorized actions, accessing restricted information, or
+    making decisions beyond their intended scope at least every 3 months
+  url: https://www.aiuc-1.com/reliability/third-party testing of tool calls
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Reliability
+  type: Risk
+- id: E001
+  name: AI failure plan for security breaches
+  description: Document AI failure plan for AI privacy and security breaches assigning
+    accountable owners and establishing notification and remediation with third-party
+    support as needed (e.g. legal, PR, insurers)
+  url: https://www.aiuc-1.com/accountability/ai failure plan for security breaches
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E002
+  name: AI failure plan for harmful outputs
+  description: Document AI failure plan for harmful AI outputs that cause significant
+    customer harm assigning accountable owners and establishing remediation with third-party
+    support as needed (e.g. legal, PR, insurers)
+  url: https://www.aiuc-1.com/accountability/ai failure plan for harmful outputs
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E003
+  name: AI failure plan for hallucinations
+  description: Document AI failure plan for hallucinated AI outputs that cause substantial
+    customer financial loss assigning accountable owners and establishing remediation
+    with third-party support as needed (e.g. legal, PR, insurers)
+  url: https://www.aiuc-1.com/accountability/ai failure plan for hallucinations
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E004
+  name: Assign accountability
+  description: Document which AI system changes across the development & deployment
+    lifecycle require formal review or approval, assign a lead accountable for each,
+    and document their approval with supporting evidence
+  url: https://www.aiuc-1.com/accountability/assign accountability
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E005
+  name: Assess cloud vs on-prem processing
+  description: Establish criteria for selecting cloud provider, and circumstances
+    for on-premises processing considering data sensitivity, regulatory requirements,
+    security controls, and operational needs
+  url: https://www.aiuc-1.com/accountability/assess cloud vs on-prem processing
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E006
+  name: Conduct vendor due diligence
+  description: Establish AI vendor due diligence processes for foundation and upstream
+    model providers covering data handling, PII controls, security and compliance
+  url: https://www.aiuc-1.com/accountability/conduct vendor due diligence
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E007
+  name: '[Retired] Document system change approvals'
+  description: Merged with E004 - see changelog (Q1 2026 update)
+  url: https://www.aiuc-1.com/accountability/[retired] document system change approvals
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E008
+  name: Review internal processes
+  description: Establish regular internal reviews of key processes and document review
+    records and approvals
+  url: https://www.aiuc-1.com/accountability/review internal processes
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E009
+  name: Monitor third-party access
+  description: Implement systems to monitor third party access
+  url: https://www.aiuc-1.com/accountability/monitor third-party access
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E010
+  name: Establish AI acceptable use policy
+  description: Establish and implement an AI acceptable use policy
+  url: https://www.aiuc-1.com/accountability/establish ai acceptable use policy
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E011
+  name: Record processing locations
+  description: Document AI data processing locations
+  url: https://www.aiuc-1.com/accountability/record processing locations
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E012
+  name: Document regulatory compliance
+  description: Document applicable AI laws and standards, required data protections,
+    and strategies for compliance
+  url: https://www.aiuc-1.com/accountability/document regulatory compliance
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E013
+  name: Implement quality management system
+  description: Establish a quality management system for AI systems proportionate
+    to the size of the organization
+  url: https://www.aiuc-1.com/accountability/implement quality management system
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E014
+  name: Share transparency reports
+  description: Merged with E017 - see changelog (Q1 2026 update)
+  url: https://www.aiuc-1.com/accountability/share transparency reports
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E015
+  name: Log model activity
+  description: Maintain logs of AI system processes, actions, and model outputs where
+    permitted to support incident investigation, auditing, and explanation of AI system
+    behavior
+  url: https://www.aiuc-1.com/accountability/log model activity
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E016
+  name: Implement AI disclosure mechanisms
+  description: Implement clear disclosure mechanisms to inform users when they are
+    interacting with AI systems rather than humans
+  url: https://www.aiuc-1.com/accountability/implement ai disclosure mechanisms
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: E017
+  name: Document system transparency policy
+  description: Establish a system transparency policy and maintain a repository of
+    model cards, datasheets, and interpretability reports for major systems
+  url: https://www.aiuc-1.com/accountability/document system transparency policy
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Accountability
+  type: Risk
+- id: F001
+  name: Prevent AI cyber misuse
+  description: Implement or document guardrails to prevent AI-enabled misuse for cyber
+    attacks and exploitation
+  url: https://www.aiuc-1.com/society/prevent ai cyber misuse
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Society
+  type: Risk
+- id: F002
+  name: Prevent catastrophic misuse
+  description: Implement or document guardrails to prevent AI-enabled catastrophic
+    system misuse (chemical / bio / radio / nuclear)
+  url: https://www.aiuc-1.com/society/prevent catastrophic misuse
+  isDefinedByTaxonomy: aiuc-1-principles
+  isPartOf: aiuc-1-principles-Society
+  type: Risk
+groups:
+- id: aiuc-1-principles-accountability
+  name: Accountability
+  isDefinedByTaxonomy: aiuc-1-principles
+  type: RiskGroup
+- id: aiuc-1-principles-data-and-privacy
+  name: Data and privacy
+  isDefinedByTaxonomy: aiuc-1-principles
+  type: RiskGroup
+- id: aiuc-1-principles-reliability
+  name: Reliability
+  isDefinedByTaxonomy: aiuc-1-principles
+  type: RiskGroup
+- id: aiuc-1-principles-safety
+  name: Safety
+  isDefinedByTaxonomy: aiuc-1-principles
+  type: RiskGroup
+- id: aiuc-1-principles-security
+  name: Security
+  isDefinedByTaxonomy: aiuc-1-principles
+  type: RiskGroup
+- id: aiuc-1-principles-society
+  name: Society
+  isDefinedByTaxonomy: aiuc-1-principles
+  type: RiskGroup
