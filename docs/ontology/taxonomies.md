@@ -1,67 +1,36 @@
-
-
 # Slot: taxonomies
 
-
 _A list of taxonomies_
-
-
-
-
 
 URI: [nexus:taxonomies](https://ibm.github.io/ai-atlas-nexus/ontology/taxonomies)
 Alias: taxonomies
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [Taxonomy](Taxonomy.md)
+- Range: [Taxonomy](Taxonomy.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:taxonomies |
-| native | nexus:taxonomies |
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | nexus:taxonomies |
+| native       | nexus:taxonomies |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

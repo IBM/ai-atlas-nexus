@@ -1,67 +1,36 @@
-
-
 # Slot: obligations
 
-
 _A list of Obligations_
-
-
-
-
 
 URI: [nexus:obligations](https://ibm.github.io/ai-atlas-nexus/ontology/obligations)
 Alias: obligations
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [Obligation](Obligation.md)
+- Range: [Obligation](Obligation.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:obligations |
-| native | nexus:obligations |
-
-
-
+| Mapping Type | Mapped Value      |
+| ------------ | ----------------- |
+| self         | nexus:obligations |
+| native       | nexus:obligations |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

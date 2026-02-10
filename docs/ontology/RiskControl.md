@@ -1,19 +1,8 @@
-
-
 # Class: RiskControl
-
 
 _A measure that maintains and/or modifies risk (and risk concepts)_
 
-
-
-
-
 URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -145,99 +134,69 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Control](Control.md)
-        * **RiskControl** [ [RiskConcept](RiskConcept.md)]
-            * [Action](Action.md)
 
-
+- [Entity](Entity.md)
+  - [Control](Control.md)
+    - **RiskControl** [ [RiskConcept](RiskConcept.md)]
+      - [Action](Action.md)
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [detectsRiskConcept](detectsRiskConcept.md) | * <br/> [RiskConcept](RiskConcept.md) | The property airo:detectsRiskConcept indicates the control used for detecting... | direct |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | direct |
-| [isDetectedBy](isDetectedBy.md) | * <br/> [RiskControl](RiskControl.md) | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Control](Control.md), [Concept](Concept.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Concept](Concept.md) |
-
-
+| Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance                                  |
+| --------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | -------------------------------------------- |
+| [detectsRiskConcept](detectsRiskConcept.md)   | \* <br/> [RiskConcept](RiskConcept.md)     | The property airo:detectsRiskConcept indicates the control used for detecting... | direct                                       |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | direct                                       |
+| [isDetectedBy](isDetectedBy.md)               | \* <br/> [RiskControl](RiskControl.md)     | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)                |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Concept](Concept.md), [Control](Control.md) |
+| [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                          |
+| [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md)                          |
+| [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md)                          |
+| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md)                          |
+| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md)                          |
+| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md)                          |
+| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)                          |
+| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)                          |
+| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                          |
+| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                          |
+| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                          |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Concept](Concept.md)                        |
 
 ## Mixin Usage
 
 | mixed into | description |
-| --- | --- |
-
-
-
+| ---------- | ----------- |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [RiskGroup](RiskGroup.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
-| [Risk](Risk.md) | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
-| [Risk](Risk.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
-| [RiskConcept](RiskConcept.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
-| [RiskControl](RiskControl.md) | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
-| [RiskControl](RiskControl.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
-| [Action](Action.md) | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
-| [Action](Action.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
-| [RiskIncident](RiskIncident.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
-| [Impact](Impact.md) | [isDetectedBy](isDetectedBy.md) | range | [RiskControl](RiskControl.md) |
-| [AiModel](AiModel.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
-| [Adapter](Adapter.md) | [hasRiskControl](hasRiskControl.md) | range | [RiskControl](RiskControl.md) |
-
-
-
-
-
-
+| used by                                     | used in                                     | type   | used                          |
+| ------------------------------------------- | ------------------------------------------- | ------ | ----------------------------- |
+| [RiskGroup](RiskGroup.md)                   | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
+| [Risk](Risk.md)                             | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
+| [Risk](Risk.md)                             | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
+| [RiskConcept](RiskConcept.md)               | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
+| [RiskControl](RiskControl.md)               | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
+| [RiskControl](RiskControl.md)               | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
+| [Action](Action.md)                         | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
+| [Action](Action.md)                         | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
+| [RiskIncident](RiskIncident.md)             | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
+| [Impact](Impact.md)                         | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
+| [AiModel](AiModel.md)                       | [hasRiskControl](hasRiskControl.md)         | range  | [RiskControl](RiskControl.md) |
+| [LargeLanguageModel](LargeLanguageModel.md) | [hasRiskControl](hasRiskControl.md)         | range  | [RiskControl](RiskControl.md) |
+| [Adapter](Adapter.md)                       | [hasRiskControl](hasRiskControl.md)         | range  | [RiskControl](RiskControl.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | airo:RiskControl |
-| native | nexus:RiskControl |
-
-
-
-
-
+| Mapping Type | Mapped Value      |
+| ------------ | ----------------- |
+| self         | airo:RiskControl  |
+| native       | nexus:RiskControl |
 
 ## LinkML Source
 
@@ -259,7 +218,7 @@ slots:
 - isDefinedByTaxonomy
 class_uri: airo:RiskControl
 
-```
+````
 </details>
 
 ### Induced
@@ -521,5 +480,6 @@ attributes:
     inlined: false
 class_uri: airo:RiskControl
 
-```
+````
+
 </details>

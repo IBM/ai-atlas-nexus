@@ -1,44 +1,24 @@
 # Type: Jsonpointer
 
-
-
-
 _A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form._
-
-
 
 URI: [xsd:string](http://www.w3.org/2001/XMLSchema#string)
 
-* [base](https://w3id.org/linkml/base): str
+- [base](https://w3id.org/linkml/base): str
 
-* [uri](https://w3id.org/linkml/uri): xsd:string
+- [uri](https://w3id.org/linkml/uri): xsd:string
 
-* [repr](https://w3id.org/linkml/repr): str
-
-
-
-
-
-
+- [repr](https://w3id.org/linkml/repr): str
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | xsd:string |
-| native | nexus:jsonpointer |
+| Mapping Type | Mapped Value      |
+| ------------ | ----------------- |
+| self         | xsd:string        |
+| native       | nexus:jsonpointer |

@@ -1,65 +1,34 @@
-
-
 # Slot: isResultOf
 
-
 _A relationship indicating that an entity is the result of an AI evaluation._
-
-
-
-
 
 URI: [dqv:isMeasurementOf](https://www.w3.org/TR/vocab-dqv/isMeasurementOf)
 Alias: isResultOf
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
-
-
-
-
-
+| Name                            | Description                                         | Modifies Slot |
+| ------------------------------- | --------------------------------------------------- | ------------- |
+| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model | no            |
 
 ## Properties
 
-* Range: [AiEval](AiEval.md)
-
-
-
+- Range: [AiEval](AiEval.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | dqv:isMeasurementOf |
-| native | nexus:isResultOf |
-
-
-
+| Mapping Type | Mapped Value        |
+| ------------ | ------------------- |
+| self         | dqv:isMeasurementOf |
+| native       | nexus:isResultOf    |
 
 ## LinkML Source
 
@@ -79,3 +48,4 @@ inlined: false
 
 ```
 </details>
+```

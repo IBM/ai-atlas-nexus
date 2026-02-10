@@ -1,19 +1,8 @@
-
-
 # Class: AiEval
-
 
 _An AI Evaluation, e.g. a metric, benchmark, unitxt card evaluation, a question or a combination of such entities._
 
-
-
-
-
 URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -162,90 +151,61 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * **AiEval**
-        * [Question](Question.md)
-        * [Questionnaire](Questionnaire.md)
 
-
+- [Entity](Entity.md)
+  - **AiEval**
+    - [Question](Question.md)
+    - [Questionnaire](Questionnaire.md)
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | direct |
-| [hasDataset](hasDataset.md) | * <br/> [Dataset](Dataset.md) | A relationship to datasets that are used | direct |
-| [hasTasks](hasTasks.md) | * <br/> [String](String.md) | The tasks or evaluations the benchmark is intended to assess | direct |
-| [hasImplementation](hasImplementation.md) | * <br/> [Uri](Uri.md) | A relationship to a implementation defining the risk evaluation | direct |
-| [hasUnitxtCard](hasUnitxtCard.md) | * <br/> [Uri](Uri.md) | A relationship to a Unitxt card defining the risk evaluation | direct |
-| [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | direct |
-| [hasRelatedRisk](hasRelatedRisk.md) | * <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk | direct |
-| [bestValue](bestValue.md) | 0..1 <br/> [String](String.md) | Annotation of the best possible result of the evaluation | direct |
-| [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | * <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | A relationship to a Benchmark Metadata Card which contains metadata about the... | direct |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                            | Cardinality and Range                                                                                        | Description                                                                      | Inheritance         |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [hasDocumentation](hasDocumentation.md)         | \* <br/> [Documentation](Documentation.md)                                                                   | Indicates documentation associated with an entity                                | direct              |
+| [hasDataset](hasDataset.md)                     | \* <br/> [Dataset](Dataset.md)                                                                               | A relationship to datasets that are used                                         | direct              |
+| [hasTasks](hasTasks.md)                         | \* <br/> [String](String.md)                                                                                 | The tasks or evaluations the benchmark is intended to assess                     | direct              |
+| [hasImplementation](hasImplementation.md)       | \* <br/> [Uri](Uri.md)                                                                                       | A relationship to a implementation defining the risk evaluation                  | direct              |
+| [hasUnitxtCard](hasUnitxtCard.md)               | \* <br/> [Uri](Uri.md)                                                                                       | A relationship to a Unitxt card defining the risk evaluation                     | direct              |
+| [hasLicense](hasLicense.md)                     | 0..1 <br/> [License](License.md)                                                                             | Indicates licenses associated with a resource                                    | direct              |
+| [hasRelatedRisk](hasRelatedRisk.md)             | \* <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk                                 | direct              |
+| [bestValue](bestValue.md)                       | 0..1 <br/> [String](String.md)                                                                               | Annotation of the best possible result of the evaluation                         | direct              |
+| [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | \* <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                                                   | A relationship to a Benchmark Metadata Card which contains metadata about the... | direct              |
+| [id](id.md)                                     | 1 <br/> [String](String.md)                                                                                  | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                                 | 0..1 <br/> [String](String.md)                                                                               | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)                   | 0..1 <br/> [String](String.md)                                                                               | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                   | 0..1 <br/> [Uri](Uri.md)                                                                                     | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                   | 0..1 <br/> [Date](Date.md)                                                                                   | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)                 | 0..1 <br/> [Date](Date.md)                                                                                   | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)             | \* <br/> [Any](Any.md)                                                                                       | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)             | \* <br/> [Any](Any.md)                                                                                       | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)         | \* <br/> [Any](Any.md)                                                                                       | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)           | \* <br/> [Any](Any.md)                                                                                       | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)             | \* <br/> [Any](Any.md)                                                                                       | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Container](Container.md) | [evaluations](evaluations.md) | range | [AiEval](AiEval.md) |
-| [AiEval](AiEval.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
-| [AiEvalResult](AiEvalResult.md) | [isResultOf](isResultOf.md) | range | [AiEval](AiEval.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [describesAiEval](describesAiEval.md) | range | [AiEval](AiEval.md) |
-| [Question](Question.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
-| [Questionnaire](Questionnaire.md) | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
-
-
-
-
-
-
+| used by                                           | used in                                         | type   | used                |
+| ------------------------------------------------- | ----------------------------------------------- | ------ | ------------------- |
+| [Container](Container.md)                         | [evaluations](evaluations.md)                   | range  | [AiEval](AiEval.md) |
+| [AiEval](AiEval.md)                               | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
+| [AiEvalResult](AiEvalResult.md)                   | [isResultOf](isResultOf.md)                     | range  | [AiEval](AiEval.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [describesAiEval](describesAiEval.md)           | range  | [AiEval](AiEval.md) |
+| [Question](Question.md)                           | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
+| [Questionnaire](Questionnaire.md)                 | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | dqv:Metric |
-| native | nexus:AiEval |
-
-
-
-
-
+| ------------ | ------------ |
+| self         | dqv:Metric   |
+| native       | nexus:AiEval |
 
 ## LinkML Source
 
@@ -278,7 +238,7 @@ slot_usage:
     range: AiEval
 class_uri: dqv:Metric
 
-```
+````
 </details>
 
 ### Induced
@@ -589,5 +549,6 @@ attributes:
     inlined: false
 class_uri: dqv:Metric
 
-```
+````
+
 </details>

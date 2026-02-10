@@ -1,19 +1,8 @@
-
-
 # Class: AiTask
-
 
 _A task, such as summarization and classification, performed by an AI._
 
-
-
-
-
 URI: [airo:AiCapability](https://w3id.org/airo#AiCapability)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -162,97 +151,68 @@ URI: [airo:AiCapability](https://w3id.org/airo#AiCapability)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Entry](Entry.md)
-        * **AiTask**
 
-
+- [Entity](Entity.md)
+  - [Entry](Entry.md)
+    - **AiTask**
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [requiresCapability](requiresCapability.md) | * <br/> [Capability](Capability.md) | Indicates that this entry requires a specific capability | direct |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | [Entry](Entry.md) |
-| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md) | A relationship where a term or a term group is defined by a vocabulary | [Entry](Entry.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Entry](Entry.md) |
-| [isPartOf](isPartOf.md) | 0..1 <br/> [String](String.md) | A relationship where an entity is part of another entity | [Entry](Entry.md) |
-| [requiredByTask](requiredByTask.md) | * <br/> [AiTask](AiTask.md) | Indicates that this entry is required to perform a specific AI task | [Entry](Entry.md) |
-| [implementedByAdapter](implementedByAdapter.md) | * <br/> [Adapter](Adapter.md) | Indicates that this capability is implemented by a specific adapter | [Entry](Entry.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Entry](Entry.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
-
-
+| Name                                              | Cardinality and Range                      | Description                                                                      | Inheritance         |
+| ------------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)       | Indicates that this entry requires a specific capability                         | direct              |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)   |
+| [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)     | A relationship where a term or a term group is defined by a vocabulary           | [Entry](Entry.md)   |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Entry](Entry.md)   |
+| [isPartOf](isPartOf.md)                           | 0..1 <br/> [String](String.md)             | A relationship where an entity is part of another entity                         | [Entry](Entry.md)   |
+| [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)               | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)   |
+| [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)             | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)   |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)             |                                                                                  | [Entry](Entry.md)   |
+| [id](id.md)                                       | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                                   | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)                     | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                     | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                     | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)                   | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 ## Usages
 
-| used by | used in | type | used |
-| ---  | --- | --- | --- |
-| [Container](Container.md) | [aitasks](aitasks.md) | range | [AiTask](AiTask.md) |
-| [Entry](Entry.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Term](Term.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Principle](Principle.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Risk](Risk.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [BaseAi](BaseAi.md) | [performsTask](performsTask.md) | range | [AiTask](AiTask.md) |
-| [AiSystem](AiSystem.md) | [performsTask](performsTask.md) | range | [AiTask](AiTask.md) |
-| [AiAgent](AiAgent.md) | [performsTask](performsTask.md) | range | [AiTask](AiTask.md) |
-| [AiModel](AiModel.md) | [performsTask](performsTask.md) | range | [AiTask](AiTask.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [performsTask](performsTask.md) | range | [AiTask](AiTask.md) |
-| [AiTask](AiTask.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Capability](Capability.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Adapter](Adapter.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Adapter](Adapter.md) | [performsTask](performsTask.md) | range | [AiTask](AiTask.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-
-
-
-
-
-
+| used by                                     | used in                             | type  | used                |
+| ------------------------------------------- | ----------------------------------- | ----- | ------------------- |
+| [Container](Container.md)                   | [aitasks](aitasks.md)               | range | [AiTask](AiTask.md) |
+| [Entry](Entry.md)                           | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| [Term](Term.md)                             | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| [Principle](Principle.md)                   | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| [Risk](Risk.md)                             | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| [BaseAi](BaseAi.md)                         | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
+| [AiSystem](AiSystem.md)                     | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
+| [AiAgent](AiAgent.md)                       | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
+| [AiModel](AiModel.md)                       | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
+| [LargeLanguageModel](LargeLanguageModel.md) | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
+| [AiTask](AiTask.md)                         | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| [Capability](Capability.md)                 | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| [Adapter](Adapter.md)                       | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| [Adapter](Adapter.md)                       | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)             | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | airo:AiCapability |
-| native | nexus:AiTask |
-
-
-
-
-
+| Mapping Type | Mapped Value      |
+| ------------ | ----------------- |
+| self         | airo:AiCapability |
+| native       | nexus:AiTask      |
 
 ## LinkML Source
 
@@ -270,7 +230,7 @@ slots:
 - requiresCapability
 class_uri: airo:AiCapability
 
-```
+````
 </details>
 
 ### Induced
@@ -575,5 +535,6 @@ attributes:
     inlined: false
 class_uri: airo:AiCapability
 
-```
+````
+
 </details>

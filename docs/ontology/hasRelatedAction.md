@@ -1,67 +1,36 @@
-
-
 # Slot: hasRelatedAction
 
-
 _A relationship where an entity relates to an action_
-
-
-
-
 
 URI: [nexus:hasRelatedAction](https://ibm.github.io/ai-atlas-nexus/ontology/hasRelatedAction)
 Alias: hasRelatedAction
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
-
-
-
-
-
+| Name            | Description                                                                      | Modifies Slot |
+| --------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... | no            |
 
 ## Properties
 
-* Range: [Action](Action.md)
+- Range: [Action](Action.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasRelatedAction |
-| native | nexus:hasRelatedAction |
-
-
-
+| Mapping Type | Mapped Value           |
+| ------------ | ---------------------- |
+| self         | nexus:hasRelatedAction |
+| native       | nexus:hasRelatedAction |
 
 ## LinkML Source
 
@@ -80,3 +49,4 @@ inlined: false
 
 ```
 </details>
+```

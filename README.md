@@ -49,7 +49,6 @@ Our intention is to create a starting point for an open AI Systems ontology whos
   - [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
   - [Usage Governance Advisor: From Intent to AI Governance](https://arxiv.org/abs/2412.01957)
 
-
 ## Installation
 
 This project targets python version ">=3.11, <3.12". You can download specific versions of python here: https://www.python.org/downloads/
@@ -57,11 +56,13 @@ This project targets python version ">=3.11, <3.12". You can download specific v
 **Note:** Replace `INFERENCE_LIB` with one of the LLM inference library [ollama, vllm, wml, rits] as explained [here](#install-for-inference-apis)
 
 To install the current release
+
 ```
 pip install "ai-atlas-nexus[INFERENCE_LIB]"
 ```
 
 To install the latest code
+
 ```
 git clone git@github.com:IBM/ai-atlas-nexus.git
 cd ai-atlas-nexus
@@ -158,12 +159,14 @@ pip install -e ".[rits]"
 ## AI Atlas Nexus Extensions
 
 Install AI Atlas Nexus extension using the below command
+
 ```command
 ran-extension install <EXTENSION_NAME>
 ```
 
 Currently, following extensions are available
-  - [ran-ares-integration](https://github.com/ibm/ai-atlas-nexus-extensions/tree/main/ran-ares-integration): ARES Integration for AI Atlas Nexus to run AI robustness evaluations on AI Systems derived from use cases.
+
+- [ran-ares-integration](https://github.com/ibm/ai-atlas-nexus-extensions/tree/main/ran-ares-integration): ARES Integration for AI Atlas Nexus to run AI robustness evaluations on AI Systems derived from use cases.
 
 ## Compatibility
 

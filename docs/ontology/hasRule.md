@@ -1,67 +1,36 @@
-
-
 # Slot: hasRule
 
-
 _Specifying applicability or inclusion of a rule within specified context._
-
-
-
-
 
 URI: [dpv:hasRule](https://w3id.org/dpv#hasRule)
 Alias: hasRule
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... |  no  |
-
-
-
-
-
+| Name                                      | Description                                                                      | Modifies Slot |
+| ----------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... | no            |
 
 ## Properties
 
-* Range: [Rule](Rule.md)
+- Range: [Rule](Rule.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | dpv:hasRule |
-| native | nexus:hasRule |
-
-
-
+| Mapping Type | Mapped Value  |
+| ------------ | ------------- |
+| self         | dpv:hasRule   |
+| native       | nexus:hasRule |
 
 ## LinkML Source
 
@@ -81,3 +50,4 @@ inlined: false
 
 ```
 </details>
+```

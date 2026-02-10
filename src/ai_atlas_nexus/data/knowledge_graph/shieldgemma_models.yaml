@@ -2,18 +2,18 @@
 # This file defines the ShieldGemma model family from Google
 # Based on: https://arxiv.org/abs/2407.21772
 licenses:
-  - id: "gemma-terms-of-use"
-    name: "Gemma Terms of Use"
-    description: "Gemma Terms of Use"
+  - id: gemma-terms-of-use
+    name: Gemma Terms of Use
+    description: Gemma Terms of Use
     url: "https://ai.google.dev/gemma/terms"
     version: "1.0"
     dateCreated: "2025-03-24"
 
 organizations:
-  - id: "google"
-    name: "Google"
+  - id: google
+    name: Google
     url: "https://www.google.com"
-    description: "Google LLC is an American multinational technology corporation focused on information technology, online advertising, search engine technology, email, cloud computing, software, quantum computing, e-commerce, consumer electronics, and artificial intelligence."
+    description: Google LLC is an American multinational technology corporation focused on information technology, online advertising, search engine technology, email, cloud computing, software, quantum computing, e-commerce, consumer electronics, and artificial intelligence.
 
 aimodels:
   - id: shieldgemma-2b

@@ -1,49 +1,29 @@
 # Enum: AiSystemType
 
-
-
 URI: [nexus:AiSystemType](https://ibm.github.io/ai-atlas-nexus/ontology/AiSystemType)
 
 ## Permissible Values
 
-| Value | Meaning | Description |
-| --- | --- | --- |
-| GPAI | None | General-purpose AI (GPAI) |
-| GPAI_OS | None | General-purpose AI (GPAI) models released under free and open-source licences |
-| PROHIBITED | None | Prohibited AI system due to unacceptable risk category (e |
-| SCIENTIFIC_RD | None | AI used for scientific research and development |
-| MILITARY_SECURITY | None | AI used for military, defense and security purposes |
-| HIGH_RISK | None | AI systems pursuant to Article 6(1)(2) Classification Rules for High-Risk AI ... |
-
-
-
+| Value             | Meaning | Description                                                                      |
+| ----------------- | ------- | -------------------------------------------------------------------------------- |
+| GPAI              | None    | General-purpose AI (GPAI)                                                        |
+| GPAI_OS           | None    | General-purpose AI (GPAI) models released under free and open-source licences    |
+| PROHIBITED        | None    | Prohibited AI system due to unacceptable risk category (e                        |
+| SCIENTIFIC_RD     | None    | AI used for scientific research and development                                  |
+| MILITARY_SECURITY | None    | AI used for military, defense and security purposes                              |
+| HIGH_RISK         | None    | AI systems pursuant to Article 6(1)(2) Classification Rules for High-Risk AI ... |
 
 ## Slots
 
-| Name | Description |
-| ---  | --- |
+| Name                                      | Description                                    |
+| ----------------------------------------- | ---------------------------------------------- |
 | [hasEuAiSystemType](hasEuAiSystemType.md) | The type of system as defined by the EU AI Act |
-
-
-
-
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## LinkML Source
 
@@ -77,3 +57,4 @@ permissible_values:
 
 ```
 </details>
+```

@@ -1,65 +1,34 @@
-
-
 # Slot: tag
 
-
 _A shost version of the name_
-
-
-
-
 
 URI: [nexus:tag](https://ibm.github.io/ai-atlas-nexus/ontology/tag)
 Alias: tag
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
-
-
-
-
-
+| Name            | Description                                                                      | Modifies Slot |
+| --------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
-
-
-
+- Range: [String](String.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:tag |
-| native | nexus:tag |
-
-
-
+| ------------ | ------------ |
+| self         | nexus:tag    |
+| native       | nexus:tag    |
 
 ## LinkML Source
 
@@ -77,3 +46,4 @@ range: string
 
 ```
 </details>
+```

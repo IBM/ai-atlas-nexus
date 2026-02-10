@@ -1,7 +1,6 @@
 id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_csiro_rai
 name: ai_csiro_rai
-description:
-  Vocabulary describing CSIRO Responsible AI patterns as used by AI Atlas Nexus
+description: Vocabulary describing CSIRO Responsible AI patterns as used by AI Atlas Nexus
 license: license-apache-2.0
 version: "1.0.0"
 default_curi_maps:
@@ -21,12 +20,11 @@ default_range: string
 default_prefix: nexus
 
 classes:
-
   StakeholderGroup:
     is_a: Group
     description: An AI system stakeholder grouping.
     slots:
-    - isDefinedByTaxonomy
+      - isDefinedByTaxonomy
 
   Stakeholder:
     is_a: Entity
@@ -36,5 +34,5 @@ classes:
         description: A relationship where a stakeholder is part of a stakeholder group
         range: StakeholderGroup
     slots:
-    - isDefinedByTaxonomy
-    - isPartOf
+      - isDefinedByTaxonomy
+      - isPartOf

@@ -1,19 +1,8 @@
-
-
 # Class: AiAgent
-
 
 _An artificial intelligence (AI) agent refers to a system or program that is capable of autonomously performing tasks on behalf of a user or another system by designing its workflow and utilizing available tools._
 
-
-
-
-
 URI: [nexus:AiAgent](https://ibm.github.io/ai-atlas-nexus/ontology/AiAgent)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -182,84 +171,55 @@ URI: [nexus:AiAgent](https://ibm.github.io/ai-atlas-nexus/ontology/AiAgent)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [BaseAi](BaseAi.md)
-        * [AiSystem](AiSystem.md)
-            * **AiAgent**
 
-
+- [Entity](Entity.md)
+  - [BaseAi](BaseAi.md)
+    - [AiSystem](AiSystem.md)
+      - **AiAgent**
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [hasEuAiSystemType](hasEuAiSystemType.md) | 0..1 <br/> [AiSystemType](AiSystemType.md) | The type of system as defined by the EU AI Act | [AiSystem](AiSystem.md) |
-| [hasEuRiskCategory](hasEuRiskCategory.md) | 0..1 <br/> [EuAiRiskCategory](EuAiRiskCategory.md) | The risk category of an AI system as defined by the EU AI Act | [AiSystem](AiSystem.md) |
-| [hasCapability](hasCapability.md) | * <br/> [Capability](Capability.md) | Indicates the technical capabilities this entry possesses | [AiSystem](AiSystem.md) |
-| [producer](producer.md) | 0..1 <br/> [Organization](Organization.md) | A relationship to the Organization instance which produces this instance | [BaseAi](BaseAi.md) |
-| [hasModelCard](hasModelCard.md) | * <br/> [String](String.md) | A relationship to model card references | [BaseAi](BaseAi.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [BaseAi](BaseAi.md) |
-| [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | [BaseAi](BaseAi.md) |
-| [performsTask](performsTask.md) | * <br/> [AiTask](AiTask.md) | relationship indicating the AI tasks an AI model can perform | [BaseAi](BaseAi.md) |
-| [isProvidedBy](isProvidedBy.md) | 0..1 <br/> [AiProvider](AiProvider.md) | A relationship indicating the AI agent has been provided by an AI systems pro... | [BaseAi](BaseAi.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
+| Name                                      | Cardinality and Range                              | Description                                                                      | Inheritance             |
+| ----------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------------------------- | ----------------------- |
+| [hasEuAiSystemType](hasEuAiSystemType.md) | 0..1 <br/> [AiSystemType](AiSystemType.md)         | The type of system as defined by the EU AI Act                                   | [AiSystem](AiSystem.md) |
+| [hasEuRiskCategory](hasEuRiskCategory.md) | 0..1 <br/> [EuAiRiskCategory](EuAiRiskCategory.md) | The risk category of an AI system as defined by the EU AI Act                    | [AiSystem](AiSystem.md) |
+| [hasCapability](hasCapability.md)         | \* <br/> [Capability](Capability.md)               | Indicates the technical capabilities this entry possesses                        | [AiSystem](AiSystem.md) |
+| [producer](producer.md)                   | 0..1 <br/> [Organization](Organization.md)         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)     |
+| [hasModelCard](hasModelCard.md)           | \* <br/> [String](String.md)                       | A relationship to model card references                                          | [BaseAi](BaseAi.md)     |
+| [hasDocumentation](hasDocumentation.md)   | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md)     |
+| [hasLicense](hasLicense.md)               | 0..1 <br/> [License](License.md)                   | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md)     |
+| [performsTask](performsTask.md)           | \* <br/> [AiTask](AiTask.md)                       | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md)     |
+| [isProvidedBy](isProvidedBy.md)           | 0..1 <br/> [AiProvider](AiProvider.md)             | A relationship indicating the AI agent has been provided by an AI systems pro... | [BaseAi](BaseAi.md)     |
+| [id](id.md)                               | 1 <br/> [String](String.md)                        | A unique identifier to this instance of the model element                        | [Entity](Entity.md)     |
+| [name](name.md)                           | 0..1 <br/> [String](String.md)                     | A text name of this instance                                                     | [Entity](Entity.md)     |
+| [description](description.md)             | 0..1 <br/> [String](String.md)                     | The description of an entity                                                     | [Entity](Entity.md)     |
+| [url](url.md)                             | 0..1 <br/> [Uri](Uri.md)                           | An optional URL associated with this instance                                    | [Entity](Entity.md)     |
+| [dateCreated](dateCreated.md)             | 0..1 <br/> [Date](Date.md)                         | The date on which the entity was created                                         | [Entity](Entity.md)     |
+| [dateModified](dateModified.md)           | 0..1 <br/> [Date](Date.md)                         | The date on which the entity was most recently modified                          | [Entity](Entity.md)     |
+| [exact_mappings](exact_mappings.md)       | \* <br/> [Any](Any.md)                             | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)     |
+| [close_mappings](close_mappings.md)       | \* <br/> [Any](Any.md)                             | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)     |
+| [related_mappings](related_mappings.md)   | \* <br/> [Any](Any.md)                             | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)     |
+| [narrow_mappings](narrow_mappings.md)     | \* <br/> [Any](Any.md)                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)     |
+| [broad_mappings](broad_mappings.md)       | \* <br/> [Any](Any.md)                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)     |
 
 ## Mixin Usage
 
 | mixed into | description |
-| --- | --- |
-
-
-
-
-
-
-
-
+| ---------- | ----------- |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:AiAgent |
-| native | nexus:AiAgent |
-
-
-
-
-
+| Mapping Type | Mapped Value  |
+| ------------ | ------------- |
+| self         | nexus:AiAgent |
+| native       | nexus:AiAgent |
 
 ## LinkML Source
 
@@ -282,7 +242,7 @@ slot_usage:
     description: A relationship indicating the AI agent has been provided by an AI
       systems provider.
 
-```
+````
 </details>
 
 ### Induced
@@ -579,5 +539,6 @@ attributes:
     multivalued: true
     inlined: false
 
-```
+````
+
 </details>

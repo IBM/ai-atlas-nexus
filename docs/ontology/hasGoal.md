@@ -1,65 +1,34 @@
-
-
 # Slot: hasGoal
 
-
 _The specific goal or primary use case the benchmark is designed for._
-
-
-
-
 
 URI: [nexus:hasGoal](https://ibm.github.io/ai-atlas-nexus/ontology/hasGoal)
 Alias: hasGoal
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
-
-
-
-
-
+| Name                                              | Description                                                                      | Modifies Slot |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
-
-
-
+- Range: [String](String.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasGoal |
-| native | nexus:hasGoal |
-
-
-
+| Mapping Type | Mapped Value  |
+| ------------ | ------------- |
+| self         | nexus:hasGoal |
+| native       | nexus:hasGoal |
 
 ## LinkML Source
 
@@ -76,3 +45,4 @@ range: string
 
 ```
 </details>
+```

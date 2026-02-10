@@ -1,65 +1,34 @@
-
-
 # Slot: hasShortReplyType
 
-
 _Short reply type_
-
-
-
-
 
 URI: [nexus:hasShortReplyType](https://ibm.github.io/ai-atlas-nexus/ontology/hasShortReplyType)
 Alias: hasShortReplyType
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... |  no  |
-
-
-
-
-
+| Name                                      | Description                                                                      | Modifies Slot |
+| ----------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
-
-
-
+- Range: [String](String.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasShortReplyType |
-| native | nexus:hasShortReplyType |
-
-
-
+| Mapping Type | Mapped Value            |
+| ------------ | ----------------------- |
+| self         | nexus:hasShortReplyType |
+| native       | nexus:hasShortReplyType |
 
 ## LinkML Source
 
@@ -79,3 +48,4 @@ inlined: true
 
 ```
 </details>
+```

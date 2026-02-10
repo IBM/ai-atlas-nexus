@@ -1,19 +1,8 @@
-
-
 # Class: AiModel
-
 
 _A base AI Model class. No assumption about the type (SVM, LLM, etc.). Subclassed by model types (see LargeLanguageModel)._
 
-
-
-
-
 URI: [nexus:AiModel](https://ibm.github.io/ai-atlas-nexus/ontology/AiModel)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -184,87 +173,58 @@ URI: [nexus:AiModel](https://ibm.github.io/ai-atlas-nexus/ontology/AiModel)
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [BaseAi](BaseAi.md)
-        * **AiModel**
-            * [LargeLanguageModel](LargeLanguageModel.md)
 
-
+- [Entity](Entity.md)
+  - [BaseAi](BaseAi.md)
+    - **AiModel**
+      - [LargeLanguageModel](LargeLanguageModel.md)
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [hasEvaluation](hasEvaluation.md) | * <br/> [AiEvalResult](AiEvalResult.md) | A relationship indicating that an entity has an AI evaluation result | direct |
-| [architecture](architecture.md) | 0..1 <br/> [String](String.md) | A description of the architecture of an AI such as 'Decoder-only' | direct |
-| [gpu_hours](gpu_hours.md) | 0..1 <br/> [Integer](Integer.md) | GPU consumption in terms of hours | direct |
-| [power_consumption_w](power_consumption_w.md) | 0..1 <br/> [Integer](Integer.md) | power consumption in Watts | direct |
-| [carbon_emitted](carbon_emitted.md) | 0..1 <br/> [Float](Float.md) | The number of tons of carbon dioxide equivalent that are emitted during train... | direct |
-| [hasRiskControl](hasRiskControl.md) | * <br/> [RiskControl](RiskControl.md) | Indicates the control measures associated with a system or component to modif... | direct |
-| [producer](producer.md) | 0..1 <br/> [Organization](Organization.md) | A relationship to the Organization instance which produces this instance | [BaseAi](BaseAi.md) |
-| [hasModelCard](hasModelCard.md) | * <br/> [String](String.md) | A relationship to model card references | [BaseAi](BaseAi.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [BaseAi](BaseAi.md) |
-| [hasLicense](hasLicense.md) | 0..1 <br/> [License](License.md) | Indicates licenses associated with a resource | [BaseAi](BaseAi.md) |
-| [performsTask](performsTask.md) | * <br/> [AiTask](AiTask.md) | relationship indicating the AI tasks an AI model can perform | [BaseAi](BaseAi.md) |
-| [isProvidedBy](isProvidedBy.md) | 0..1 <br/> [AiProvider](AiProvider.md) | A relationship indicating the AI model has been provided by an AI model provi... | [BaseAi](BaseAi.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
+| Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance         |
+| --------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [hasEvaluation](hasEvaluation.md)             | \* <br/> [AiEvalResult](AiEvalResult.md)   | A relationship indicating that an entity has an AI evaluation result             | direct              |
+| [architecture](architecture.md)               | 0..1 <br/> [String](String.md)             | A description of the architecture of an AI such as 'Decoder-only'                | direct              |
+| [gpu_hours](gpu_hours.md)                     | 0..1 <br/> [Integer](Integer.md)           | GPU consumption in terms of hours                                                | direct              |
+| [power_consumption_w](power_consumption_w.md) | 0..1 <br/> [Integer](Integer.md)           | power consumption in Watts                                                       | direct              |
+| [carbon_emitted](carbon_emitted.md)           | 0..1 <br/> [Float](Float.md)               | The number of tons of carbon dioxide equivalent that are emitted during train... | direct              |
+| [hasRiskControl](hasRiskControl.md)           | \* <br/> [RiskControl](RiskControl.md)     | Indicates the control measures associated with a system or component to modif... | direct              |
+| [producer](producer.md)                       | 0..1 <br/> [Organization](Organization.md) | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md) |
+| [hasModelCard](hasModelCard.md)               | \* <br/> [String](String.md)               | A relationship to model card references                                          | [BaseAi](BaseAi.md) |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md) |
+| [hasLicense](hasLicense.md)                   | 0..1 <br/> [License](License.md)           | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md) |
+| [performsTask](performsTask.md)               | \* <br/> [AiTask](AiTask.md)               | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md) |
+| [isProvidedBy](isProvidedBy.md)               | 0..1 <br/> [AiProvider](AiProvider.md)     | A relationship indicating the AI model has been provided by an AI model provi... | [BaseAi](BaseAi.md) |
+| [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 ## Mixin Usage
 
 | mixed into | description |
-| --- | --- |
-
-
-
-
-
-
-
-
+| ---------- | ----------- |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:AiModel |
-| native | nexus:AiModel |
-
-
-
-
-
+| Mapping Type | Mapped Value  |
+| ------------ | ------------- |
+| self         | nexus:AiModel |
+| native       | nexus:AiModel |
 
 ## LinkML Source
 
@@ -288,7 +248,7 @@ slots:
 - carbon_emitted
 - hasRiskControl
 
-```
+````
 </details>
 
 ### Induced
@@ -614,5 +574,6 @@ attributes:
     multivalued: true
     inlined: false
 
-```
+````
+
 </details>

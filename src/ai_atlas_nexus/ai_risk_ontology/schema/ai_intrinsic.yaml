@@ -1,7 +1,6 @@
 id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic
 name: ai_intrinsic
-description:
-  An ontology describing AI Intrinsics and representing LoRA (Low-Rank Adaptation) adapters
+description: An ontology describing AI Intrinsics and representing LoRA (Low-Rank Adaptation) adapters
 license: license-apache-2.0
 version: "1.0.0"
 default_curi_maps:
@@ -25,23 +24,22 @@ default_prefix: nexus
 # Classes
 # ----------------
 classes:
-
   Adapter:
     description: Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
     is_a: Entry
     mixins:
-    - LargeLanguageModel
+      - LargeLanguageModel
     slots:
-    - hasAdapterType
-    - isDefinedByVocabulary
-    - hasDocumentation
-    - hasLicense
-    - hasRelatedRisk
-    - adaptsModel
-    - implementsCapability
-    - hasCapability
-    - requiresCapability
-    # Can it be used on any model?
+      - hasAdapterType
+      - isDefinedByVocabulary
+      - hasDocumentation
+      - hasLicense
+      - hasRelatedRisk
+      - adaptsModel
+      - implementsCapability
+      - hasCapability
+      - requiresCapability
+      # Can it be used on any model?
 
   LLMIntrinsic:
     description: A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.

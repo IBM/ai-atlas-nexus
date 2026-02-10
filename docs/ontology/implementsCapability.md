@@ -1,67 +1,36 @@
-
-
 # Slot: implementsCapability
 
-
 _Indicates that this adapter implements a specific capability_
-
-
-
-
 
 URI: [nexus:implementsCapability](https://ibm.github.io/ai-atlas-nexus/ontology/implementsCapability)
 Alias: implementsCapability
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-
-
-
-
-
+| Name                  | Description                                                                      | Modifies Slot |
+| --------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
-* Range: [Capability](Capability.md)
+- Range: [Capability](Capability.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:implementsCapability |
-| native | nexus:implementsCapability |
-
-
-
+| Mapping Type | Mapped Value               |
+| ------------ | -------------------------- |
+| self         | nexus:implementsCapability |
+| native       | nexus:implementsCapability |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined: false
 
 ```
 </details>
+```

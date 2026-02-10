@@ -2,8 +2,7 @@ id: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 name: ai-risk-ontology
 version: 0.5.0
 license: https://www.apache.org/licenses/LICENSE-2.0.html
-description:
-  An ontology describing AI systems and their risks
+description: An ontology describing AI systems and their risks
 default_curi_maps:
   - semweb_context
 imports:

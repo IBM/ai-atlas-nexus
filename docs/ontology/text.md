@@ -1,67 +1,36 @@
-
-
 # Slot: text
 
-
 _The question itself_
-
-
-
-
 
 URI: [nexus:text](https://ibm.github.io/ai-atlas-nexus/ontology/text)
 Alias: text
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Question](Question.md) | An evaluation where a question has to be answered |  no  |
-
-
-
-
-
+| Name                    | Description                                       | Modifies Slot |
+| ----------------------- | ------------------------------------------------- | ------------- |
+| [Question](Question.md) | An evaluation where a question has to be answered | no            |
 
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Required: True
-
-
-
+- Required: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:text |
-| native | nexus:text |
-
-
-
+| ------------ | ------------ |
+| self         | nexus:text   |
+| native       | nexus:text   |
 
 ## LinkML Source
 
@@ -80,3 +49,4 @@ required: true
 
 ```
 </details>
+```

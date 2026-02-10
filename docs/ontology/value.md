@@ -1,68 +1,37 @@
-
-
 # Slot: value
 
-
 _Some numeric or string value_
-
-
-
-
 
 URI: [nexus:value](https://ibm.github.io/ai-atlas-nexus/ontology/value)
 Alias: value
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Fact](Fact.md) | A fact about something, for example the result of a measurement |  no  |
-| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model |  no  |
-
-
-
-
-
+| Name                            | Description                                                     | Modifies Slot |
+| ------------------------------- | --------------------------------------------------------------- | ------------- |
+| [Fact](Fact.md)                 | A fact about something, for example the result of a measurement | no            |
+| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model             | no            |
 
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Required: True
-
-
-
+- Required: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
 | Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:value |
-| native | nexus:value |
-
-
-
+| ------------ | ------------ |
+| self         | nexus:value  |
+| native       | nexus:value  |
 
 ## LinkML Source
 
@@ -80,3 +49,4 @@ required: true
 
 ```
 </details>
+```

@@ -1,67 +1,36 @@
-
-
 # Slot: aimodelfamilies
 
-
 _A list of AI model families_
-
-
-
-
 
 URI: [nexus:aimodelfamilies](https://ibm.github.io/ai-atlas-nexus/ontology/aimodelfamilies)
 Alias: aimodelfamilies
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [LargeLanguageModelFamily](LargeLanguageModelFamily.md)
+- Range: [LargeLanguageModelFamily](LargeLanguageModelFamily.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:aimodelfamilies |
-| native | nexus:aimodelfamilies |
-
-
-
+| Mapping Type | Mapped Value          |
+| ------------ | --------------------- |
+| self         | nexus:aimodelfamilies |
+| native       | nexus:aimodelfamilies |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

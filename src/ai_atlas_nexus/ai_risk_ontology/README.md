@@ -17,6 +17,7 @@ See the full documentation of the LinkML classes and slots in the [docs folder](
 ## The risk taxonomy data
 
 Included are 7 different risk taxonomies:
+
 - the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
 - [IBM Granite Guardian](https://arxiv.org/abs/2412.07724)
 - the [NIST AI Risk Management Framework](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf)

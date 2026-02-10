@@ -1,129 +1,129 @@
 entries:
-- id: atlas-context-overload-attack
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - atlas-context-overload-attack
-  type: Risk
-- id: atlas-direct-instructions-attack
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - atlas-direct-instructions-attack
-  type: Risk
-- id: atlas-encoded-interactions-attack
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - atlas-encoded-interactions-attack
-  type: Risk
-- id: atlas-indirect-instructions-attack
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - atlas-indirect-instructions-attack
-  type: Risk
-- id: atlas-jailbreaking
-  related_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  related_mappings:
-  - atlas-jailbreaking
-  type: Risk
-- id: atlas-prompt-injection
-  narrow_mappings:
-  - atlas-context-overload-attack
-  type: Risk
-- id: atlas-context-overload-attack
-  narrow_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  narrow_mappings:
-  - atlas-direct-instructions-attack
-  type: Risk
-- id: atlas-direct-instructions-attack
-  narrow_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  narrow_mappings:
-  - atlas-encoded-interactions-attack
-  type: Risk
-- id: atlas-encoded-interactions-attack
-  narrow_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  narrow_mappings:
-  - atlas-indirect-instructions-attack
-  type: Risk
-- id: atlas-indirect-instructions-attack
-  narrow_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  narrow_mappings:
-  - atlas-prompt-leaking
-  type: Risk
-- id: atlas-prompt-leaking
-  narrow_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  narrow_mappings:
-  - atlas-social-hacking-attack
-  type: Risk
-- id: atlas-social-hacking-attack
-  narrow_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  narrow_mappings:
-  - atlas-specialized-tokens-attack
-  type: Risk
-- id: atlas-specialized-tokens-attack
-  narrow_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  related_mappings:
-  - atlas-jailbreaking
-  type: Risk
-- id: atlas-jailbreaking
-  related_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-leaking
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - atlas-prompt-leaking
-  type: Risk
-- id: atlas-social-hacking-attack
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - atlas-social-hacking-attack
-  type: Risk
-- id: atlas-specialized-tokens-attack
-  broad_mappings:
-  - atlas-prompt-injection
-  type: Risk
-- id: atlas-prompt-injection
-  broad_mappings:
-  - atlas-specialized-tokens-attack
-  type: Risk
+  - id: atlas-context-overload-attack
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - atlas-context-overload-attack
+    type: Risk
+  - id: atlas-direct-instructions-attack
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - atlas-direct-instructions-attack
+    type: Risk
+  - id: atlas-encoded-interactions-attack
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - atlas-encoded-interactions-attack
+    type: Risk
+  - id: atlas-indirect-instructions-attack
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - atlas-indirect-instructions-attack
+    type: Risk
+  - id: atlas-jailbreaking
+    related_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    related_mappings:
+      - atlas-jailbreaking
+    type: Risk
+  - id: atlas-prompt-injection
+    narrow_mappings:
+      - atlas-context-overload-attack
+    type: Risk
+  - id: atlas-context-overload-attack
+    narrow_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    narrow_mappings:
+      - atlas-direct-instructions-attack
+    type: Risk
+  - id: atlas-direct-instructions-attack
+    narrow_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    narrow_mappings:
+      - atlas-encoded-interactions-attack
+    type: Risk
+  - id: atlas-encoded-interactions-attack
+    narrow_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    narrow_mappings:
+      - atlas-indirect-instructions-attack
+    type: Risk
+  - id: atlas-indirect-instructions-attack
+    narrow_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    narrow_mappings:
+      - atlas-prompt-leaking
+    type: Risk
+  - id: atlas-prompt-leaking
+    narrow_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    narrow_mappings:
+      - atlas-social-hacking-attack
+    type: Risk
+  - id: atlas-social-hacking-attack
+    narrow_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    narrow_mappings:
+      - atlas-specialized-tokens-attack
+    type: Risk
+  - id: atlas-specialized-tokens-attack
+    narrow_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    related_mappings:
+      - atlas-jailbreaking
+    type: Risk
+  - id: atlas-jailbreaking
+    related_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-leaking
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - atlas-prompt-leaking
+    type: Risk
+  - id: atlas-social-hacking-attack
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - atlas-social-hacking-attack
+    type: Risk
+  - id: atlas-specialized-tokens-attack
+    broad_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    broad_mappings:
+      - atlas-specialized-tokens-attack
+    type: Risk

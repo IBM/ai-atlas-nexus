@@ -1,69 +1,38 @@
-
-
 # Slot: version
 
-
 _The version of the entity embodied by a specified resource._
-
-
-
-
 
 URI: [schema:version](http://schema.org/version)
 Alias: version
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [License](License.md) | The general notion of a license which defines terms and grants permissions to... |  no  |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md) | A taxonomy of AI capabilities describing the abilities of AI systems |  no  |
-| [RiskTaxonomy](RiskTaxonomy.md) | A taxonomy of AI system related risks |  no  |
-| [Vocabulary](Vocabulary.md) | A collection of terms, with their definitions and relationships |  no  |
-| [Taxonomy](Taxonomy.md) | A hierachical taxonomy of concepts, with their definitions and relationships |  no  |
-
-
-
-
-
+| Name                                        | Description                                                                      | Modifies Slot |
+| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Vocabulary](Vocabulary.md)                 | A collection of terms, with their definitions and relationships                  | no            |
+| [Taxonomy](Taxonomy.md)                     | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [License](License.md)                       | The general notion of a license which defines terms and grants permissions to... | no            |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md) | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
+| [RiskTaxonomy](RiskTaxonomy.md)             | A taxonomy of AI system related risks                                            | no            |
 
 ## Properties
 
-* Range: [String](String.md)
-
-
-
+- Range: [String](String.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | schema:version |
-| native | nexus:version |
-
-
-
+| Mapping Type | Mapped Value   |
+| ------------ | -------------- |
+| self         | schema:version |
+| native       | nexus:version  |
 
 ## LinkML Source
 
@@ -84,3 +53,4 @@ range: string
 
 ```
 </details>
+```

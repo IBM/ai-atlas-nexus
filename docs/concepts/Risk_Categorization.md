@@ -4,16 +4,17 @@ Assess and categorize the severity of risks associated with an AI system usecase
 
 ## Prompt Templates
 
-The service categorizes risk severity, as defined in the EU AI Act, using the following prompt templates located  in `src/ai_atlas_nexus/blocks/prompt_templates.py`
+The service categorizes risk severity, as defined in the EU AI Act, using the following prompt templates located in `src/ai_atlas_nexus/blocks/prompt_templates.py`
 
- - RISK_SEVERITY_INSTRUCTION
- - RISK_SEVERITY_TEMPLATE
+- RISK_SEVERITY_INSTRUCTION
+- RISK_SEVERITY_TEMPLATE
 
 Both the above templates have been extracted from the source code of [**ExploreGen**](https://github.com/sanja7s/ExploreGen/blob/main/code/RiskGen_AI_Design_EU_AI_Act_12_July_2024.ipynb), a novel LLM framework designed to generate realistic and varied uses of AI technology while classifying their risk levels based on EU AI Act regulations.
 
 ### References
 
 Templates credit goes to the original authors.
+
 ```
 Scepanovic, Sanja (2025). ExploreGen [Source code]. GitHub. https://github.com/sanja7s/ExploreGen/blob/main/code/RiskGen_AI_Design_EU_AI_Act_12_July_2024.ipynb
 ```
@@ -28,25 +29,26 @@ of the AAAI/ACM Conference on AI, Ethics, and Society, vol. 7, pp. 584-596. 2024
 
 The API receives a list of usecases along with an inference engine instance for LLM evaluation. It extracts key attributes - domain, purpose, capabilities, AI user, and AI subject—from each usecase. These attributes are then sent to the categorization service `RiskSeverityCategorizer.categorize()` to determine the Risk Severity and retrieve related information.
 
-
 **API:** AIAtlasNexus.categorize_risk_severity()
 
 **Params:**
- - usecases (List[str]):
-        A List of strings describing AI usecases
- - inference_engine (InferenceEngine):
-        An LLM inference engine
+
+- usecases (List[str]):
+  A List of strings describing AI usecases
+- inference_engine (InferenceEngine):
+  An LLM inference engine
 
 **Returns:**
- - results (List[Dict]):
-        Results detailing risk categorization by usecase.
 
+- results (List[Dict]):
+  Results detailing risk categorization by usecase.
 
 ## Example Response
 
 **Usecase**: A system is used by a consortium of universities and financial institutions to both assess student academic performance and determine their eligibility and risk level for student loans. The system automatically evaluates students' historical academic data, standardized test results, socio-economic background, behavioral data from educational platforms, and other digital footprints (e.g., attendance, participation, learning pace).
 
 **Response:**
+
 ```
 [
    {
@@ -60,14 +62,15 @@ The API receives a list of usecases along with an inference engine instance for 
 ```
 
 The response object has four fields:
- - Description: The description of the AI System inferred from the usecase.
- - Classification: The risk severity classification label
-    1) Excluded,
-    2) Prohibited,
-    3) High-Risk Exception,
-    4) High Risk, and
-    5) Limited or Low Risk.
- - AIActText: EU AI Act section that closely resembles the AI System including any amendments.
- - Reasoning: Explanation of the risk classification.
+
+- Description: The description of the AI System inferred from the usecase.
+- Classification: The risk severity classification label
+  1. Excluded,
+  2. Prohibited,
+  3. High-Risk Exception,
+  4. High Risk, and
+  5. Limited or Low Risk.
+- AIActText: EU AI Act section that closely resembles the AI System including any amendments.
+- Reasoning: Explanation of the risk classification.
 
 Refer the notebook example [risk_categorization.ipynb](../examples/notebooks/risk_categorization.ipynb)

@@ -9,10 +9,13 @@ feat|fix|docs|style|refactor|perf|test|chore: changed function X
 -->
 
 ---
+
 ## Status
+
 **READY/IN DEVELOPMENT/HOLD**
 
 ## Description
+
 <!-- Commit Message Description
 ```
 # When opening this PR, the raiser should replace this text with the remaining lines of their desired commit message, e.g:
@@ -28,12 +31,15 @@ Signed-off-by: Your Name <email@ie.ibm.com>
 -->
 
 ## Impacted Areas in Application
+
 <!-- List general components of the application that this PR will affect: -->
 
 ### Screenshots
+
 <!-- For UI items, please provide screenshots demonstrating the work completed -->
 
 ## Which issue(s) does this pull-request fix?
+
 <!-- Please include a link to the issue -->
 <!-- Contributes to: IBM/ai-atlas-nexus# -->
 <!-- Closes: IBM/ai-atlas-nexus# -->
@@ -43,6 +49,7 @@ Signed-off-by: Your Name <email@ie.ibm.com>
 ---
 
 ## Checklist
+
 - [ ] Automated tests exist
 - [ ] Local unit tests performed
 - [ ] Documentation exists [link]()

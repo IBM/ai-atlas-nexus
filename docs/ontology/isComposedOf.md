@@ -1,58 +1,30 @@
-
-
 # Slot: isComposedOf
 
-
 _Relationship indicating the some entity is composed of other entities (including some of the same type)._
-
-
-
-
 
 URI: [nexus:isComposedOf](https://ibm.github.io/ai-atlas-nexus/ontology/isComposedOf)
 Alias: isComposedOf
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
-
-
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:isComposedOf |
-| native | nexus:isComposedOf |
-
-
-
+| Mapping Type | Mapped Value       |
+| ------------ | ------------------ |
+| self         | nexus:isComposedOf |
+| native       | nexus:isComposedOf |
 
 ## LinkML Source
 
@@ -70,3 +42,4 @@ inlined: false
 
 ```
 </details>
+```

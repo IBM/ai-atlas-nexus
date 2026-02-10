@@ -1,67 +1,36 @@
-
-
 # Slot: modalities
 
-
 _A list of AI modalities_
-
-
-
-
 
 URI: [nexus:modalities](https://ibm.github.io/ai-atlas-nexus/ontology/modalities)
 Alias: modalities
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [Modality](Modality.md)
+- Range: [Modality](Modality.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:modalities |
-| native | nexus:modalities |
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | nexus:modalities |
+| native       | nexus:modalities |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

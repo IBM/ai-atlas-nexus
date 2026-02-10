@@ -1,65 +1,34 @@
-
-
 # Slot: hasStatus
 
-
 _Indicates the status of specified concept_
-
-
-
-
 
 URI: [nexus:hasStatus](https://ibm.github.io/ai-atlas-nexus/ontology/hasStatus)
 Alias: hasStatus
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
-
-
-
-
-
+| Name                            | Description                                                           | Modifies Slot |
+| ------------------------------- | --------------------------------------------------------------------- | ------------- |
+| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk | no            |
 
 ## Properties
 
-* Range: [IncidentStatus](IncidentStatus.md)
-
-
-
+- Range: [IncidentStatus](IncidentStatus.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasStatus |
-| native | nexus:hasStatus |
-
-
-
+| Mapping Type | Mapped Value    |
+| ------------ | --------------- |
+| self         | nexus:hasStatus |
+| native       | nexus:hasStatus |
 
 ## LinkML Source
 
@@ -77,3 +46,4 @@ range: IncidentStatus
 
 ```
 </details>
+```

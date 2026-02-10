@@ -1,65 +1,34 @@
-
-
 # Slot: hasConsequence
 
-
 _Indicates consequence(s) possible or arising from specified concept_
-
-
-
-
 
 URI: [nexus:hasConsequence](https://ibm.github.io/ai-atlas-nexus/ontology/hasConsequence)
 Alias: hasConsequence
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
-
-
-
-
-
+| Name                            | Description                                                           | Modifies Slot |
+| ------------------------------- | --------------------------------------------------------------------- | ------------- |
+| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk | no            |
 
 ## Properties
 
-* Range: [Consequence](Consequence.md)
-
-
-
+- Range: [Consequence](Consequence.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasConsequence |
-| native | nexus:hasConsequence |
-
-
-
+| Mapping Type | Mapped Value         |
+| ------------ | -------------------- |
+| self         | nexus:hasConsequence |
+| native       | nexus:hasConsequence |
 
 ## LinkML Source
 
@@ -77,3 +46,4 @@ range: Consequence
 
 ```
 </details>
+```

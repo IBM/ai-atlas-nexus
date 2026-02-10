@@ -1,70 +1,39 @@
-
-
 # Slot: detectsRiskConcept
 
-
 _The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources, consequences, and impacts._
-
-
-
-
 
 URI: [nexus:detectsRiskConcept](https://ibm.github.io/ai-atlas-nexus/ontology/detectsRiskConcept)
 Alias: detectsRiskConcept
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Action](Action.md) | Action to remediate a risk |  no  |
-| [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) |  no  |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
-
-
-
-
-
+| Name                          | Description                                                                      | Modifies Slot |
+| ----------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
+| [Risk](Risk.md)               | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Action](Action.md)           | Action to remediate a risk                                                       | no            |
 
 ## Properties
 
-* Range: [RiskConcept](RiskConcept.md)
+- Range: [RiskConcept](RiskConcept.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:detectsRiskConcept |
-| native | nexus:detectsRiskConcept |
-| exact | airo:detectsRiskConcept |
-
-
-
+| Mapping Type | Mapped Value             |
+| ------------ | ------------------------ |
+| self         | nexus:detectsRiskConcept |
+| native       | nexus:detectsRiskConcept |
+| exact        | airo:detectsRiskConcept  |
 
 ## LinkML Source
 
@@ -89,3 +58,4 @@ inlined: false
 
 ```
 </details>
+```

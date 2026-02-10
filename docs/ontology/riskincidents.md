@@ -1,67 +1,36 @@
-
-
 # Slot: riskincidents
 
-
 _A list of AI risk incidents_
-
-
-
-
 
 URI: [nexus:riskincidents](https://ibm.github.io/ai-atlas-nexus/ontology/riskincidents)
 Alias: riskincidents
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Container](Container.md) | An umbrella object that holds the ontology class instances |  no  |
-
-
-
-
-
+| Name                      | Description                                                | Modifies Slot |
+| ------------------------- | ---------------------------------------------------------- | ------------- |
+| [Container](Container.md) | An umbrella object that holds the ontology class instances | no            |
 
 ## Properties
 
-* Range: [RiskIncident](RiskIncident.md)
+- Range: [RiskIncident](RiskIncident.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:riskincidents |
-| native | nexus:riskincidents |
-
-
-
+| Mapping Type | Mapped Value        |
+| ------------ | ------------------- |
+| self         | nexus:riskincidents |
+| native       | nexus:riskincidents |
 
 ## LinkML Source
 
@@ -82,3 +51,4 @@ inlined_as_list: true
 
 ```
 </details>
+```

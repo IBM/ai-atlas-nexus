@@ -56,7 +56,8 @@ dependencies = [
     "isort",
     "pre-commit",
     "typer",
-    "inflect"
+    "inflect",
+    "cymple"
 ]
 
 

@@ -1,67 +1,36 @@
-
-
 # Slot: hasLimitations
 
-
 _Limitations in evaluating or addressing risks, such as gaps in demographic coverage or specific domains._
-
-
-
-
 
 URI: [nexus:hasLimitations](https://ibm.github.io/ai-atlas-nexus/ontology/hasLimitations)
 Alias: hasLimitations
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... |  no  |
-
-
-
-
-
+| Name                                              | Description                                                                      | Modifies Slot |
+| ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:hasLimitations |
-| native | nexus:hasLimitations |
-
-
-
+| Mapping Type | Mapped Value         |
+| ------------ | -------------------- |
+| self         | nexus:hasLimitations |
+| native       | nexus:hasLimitations |
 
 ## LinkML Source
 
@@ -80,3 +49,4 @@ multivalued: true
 
 ```
 </details>
+```

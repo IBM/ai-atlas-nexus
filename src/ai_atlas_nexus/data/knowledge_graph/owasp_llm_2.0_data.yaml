@@ -1,71 +1,71 @@
 # OWASP Top 10 for Large Language Model Applications v2.0
 taxonomies:
-  - id: "owasp-llm-2.0"
-    name: "OWASP Top 10 for Large Language Model Applications"
+  - id: owasp-llm-2.0
+    name: OWASP Top 10 for Large Language Model Applications
     type: RiskTaxonomy
-    description: "The OWASP Top 10 for Large Language Model Applications project aims to educate developers, designers, architects, managers, and organizations about the potential security risks when deploying and managing Large Language Models (LLMs). The project provides a list of the top 10 most critical vulnerabilities often seen in LLM applications, highlighting their potential impact, ease of exploitation, and prevalence in real-world applications."
-    url: "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+    description: The OWASP Top 10 for Large Language Model Applications project aims to educate developers, designers, architects, managers, and organizations about the potential security risks when deploying and managing Large Language Models (LLMs). The project provides a list of the top 10 most critical vulnerabilities often seen in LLM applications, highlighting their potential impact, ease of exploitation, and prevalence in real-world applications.
+    url: https://owasp.org/www-project-top-10-for-large-language-model-applications/
     version: "2.0"
-    dateCreated: "2024-11-18"
-    dateModified: "2024-11-18"
+    dateCreated: 2024-11-18
+    dateModified: 2024-11-18
 entries:
-  - id: "llm01-prompt-injection"
-    name: "LLM01:2025 Prompt Injection"
-    description: "A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways. These inputs can affect the model even if they are imperceptible to humans, therefore prompt injections do not need to be human-visible/readable, as long as the content is parsed by the model."
-    url: "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+  - id: llm01-prompt-injection
+    name: LLM01:2025 Prompt Injection
+    description: A Prompt Injection Vulnerability occurs when user prompts alter the LLM’s behavior or output in unintended ways. These inputs can affect the model even if they are imperceptible to humans, therefore prompt injections do not need to be human-visible/readable, as long as the content is parsed by the model.
+    url: https://genai.owasp.org/llmrisk/llm01-prompt-injection/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm022025-sensitive-information-disclosure"
-    name: "LLM02:2025 Sensitive Information Disclosure"
-    description: "Sensitive information can affect both the LLM and its application context. This includes personal identifiable information (PII), financial details, health records, confidential business data, security credentials, and legal documents. Proprietary models may also have unique training methods and source code considered sensitive, especially in closed or foundation models."
-    url: "https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm022025-sensitive-information-disclosure
+    name: LLM02:2025 Sensitive Information Disclosure
+    description: Sensitive information can affect both the LLM and its application context. This includes personal identifiable information (PII), financial details, health records, confidential business data, security credentials, and legal documents. Proprietary models may also have unique training methods and source code considered sensitive, especially in closed or foundation models.
+    url: https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm032025-supply-chain"
-    name: "LLM03:2025 Supply Chain"
-    description: "LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in biased outputs, security breaches, or system failures. While traditional software vulnerabilities focus on issues like code flaws and dependencies, in ML the risks also extend to third-party pre-trained models and data."
-    url: "https://genai.owasp.org/llmrisk/llm032025-supply-chain/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm032025-supply-chain
+    name: LLM03:2025 Supply Chain
+    description: LLM supply chains are susceptible to various vulnerabilities, which can affect the integrity of training data, models, and deployment platforms. These risks can result in biased outputs, security breaches, or system failures. While traditional software vulnerabilities focus on issues like code flaws and dependencies, in ML the risks also extend to third-party pre-trained models and data.
+    url: https://genai.owasp.org/llmrisk/llm032025-supply-chain/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm042025-data-and-model-poisoning"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm042025-data-and-model-poisoning
     name: "LLM04: Data and Model Poisoning"
-    description: "Data poisoning occurs when pre-training, fine-tuning, or embedding data is manipulated to introduce vulnerabilities, backdoors, or biases. This manipulation can compromise model security, performance, or ethical behavior, leading to harmful outputs or impaired capabilities. Common risks include degraded model performance, biased or toxic content, and exploitation of downstream systems."
-    url: "https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/"
+    description: Data poisoning occurs when pre-training, fine-tuning, or embedding data is manipulated to introduce vulnerabilities, backdoors, or biases. This manipulation can compromise model security, performance, or ethical behavior, leading to harmful outputs or impaired capabilities. Common risks include degraded model performance, biased or toxic content, and exploitation of downstream systems.
+    url: https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm052025-improper-output-handling"
-    name: "LLM05:2025 Improper Output Handling"
-    description: "Improper Output Handling refers specifically to insufficient validation, sanitization, and handling of the outputs generated by large language models before they are passed downstream to other components and systems. Since LLM-generated content can be controlled by prompt input, this behavior is similar to providing users indirect access to additional functionality."
-    url: "https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm052025-improper-output-handling
+    name: LLM05:2025 Improper Output Handling
+    description: Improper Output Handling refers specifically to insufficient validation, sanitization, and handling of the outputs generated by large language models before they are passed downstream to other components and systems. Since LLM-generated content can be controlled by prompt input, this behavior is similar to providing users indirect access to additional functionality.
+    url: https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm062025-excessive-agency"
-    name: "LLM06:2025 Excessive Agency"
-    description: "An LLM-based system is often granted a degree of agency by its developer - the ability to call functions or interface with other systems via extensions (sometimes referred to as tools, skills or plugins by different vendors) to undertake actions in response to a prompt. The decision over which extension to invoke may also be delegated to an LLM 'agent' to dynamically determine based on input prompt or LLM output. Agent-based systems will typically make repeated calls to an LLM using output from previous invocations to ground and direct subsequent invocations. Excessive Agency is the vulnerability that enables damaging actions to be performed in response to unexpected, ambiguous or manipulated outputs from an LLM, regardless of what is causing the LLM to malfunction."
-    url: "https://genai.owasp.org/llmrisk/llm062025-excessive-agency/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm062025-excessive-agency
+    name: LLM06:2025 Excessive Agency
+    description: An LLM-based system is often granted a degree of agency by its developer - the ability to call functions or interface with other systems via extensions (sometimes referred to as tools, skills or plugins by different vendors) to undertake actions in response to a prompt. The decision over which extension to invoke may also be delegated to an LLM 'agent' to dynamically determine based on input prompt or LLM output. Agent-based systems will typically make repeated calls to an LLM using output from previous invocations to ground and direct subsequent invocations. Excessive Agency is the vulnerability that enables damaging actions to be performed in response to unexpected, ambiguous or manipulated outputs from an LLM, regardless of what is causing the LLM to malfunction.
+    url: https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm072025-system-prompt-leakage"
-    name: "LLM07:2025 System Prompt Leakage"
-    description: "The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain sensitive information that was not intended to be discovered. System prompts are designed to guide the model’s output based on the requirements of the application, but may inadvertently contain secrets. When discovered, this information can be used to facilitate other attacks."
-    url: "https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm072025-system-prompt-leakage
+    name: LLM07:2025 System Prompt Leakage
+    description: The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain sensitive information that was not intended to be discovered. System prompts are designed to guide the model’s output based on the requirements of the application, but may inadvertently contain secrets. When discovered, this information can be used to facilitate other attacks.
+    url: https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm082025-vector-and-embedding-weaknesses"
-    name: "LLM08:2025 Vector and Embedding Weaknesses"
-    description: "Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Models (LLMs). Weaknesses in how vectors and embeddings are generated, stored, or retrieved can be exploited by malicious actions (intentional or unintentional) to inject harmful content, manipulate model outputs, or access sensitive information."
-    url: "https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm082025-vector-and-embedding-weaknesses
+    name: LLM08:2025 Vector and Embedding Weaknesses
+    description: Vectors and embeddings vulnerabilities present significant security risks in systems utilizing Retrieval Augmented Generation (RAG) with Large Language Models (LLMs). Weaknesses in how vectors and embeddings are generated, stored, or retrieved can be exploited by malicious actions (intentional or unintentional) to inject harmful content, manipulate model outputs, or access sensitive information.
+    url: https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm092025-misinformation"
-    name: "LLM09:2025 Misinformation"
-    description: "Misinformation from LLMs poses a core vulnerability for applications relying on these models. Misinformation occurs when LLMs produce false or misleading information that appears credible. This vulnerability can lead to security breaches, reputational damage, and legal liability."
-    url: "https://genai.owasp.org/llmrisk/llm092025-misinformation/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm092025-misinformation
+    name: LLM09:2025 Misinformation
+    description: Misinformation from LLMs poses a core vulnerability for applications relying on these models. Misinformation occurs when LLMs produce false or misleading information that appears credible. This vulnerability can lead to security breaches, reputational damage, and legal liability.
+    url: https://genai.owasp.org/llmrisk/llm092025-misinformation/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
-  - id: "llm102025-unbounded-consumption"
-    name: "LLM10:2025 Unbounded Consumption"
-    description: "Unbounded Consumption refers to the process where a Large Language Model (LLM) generates outputs based on input queries or prompts. Inference is a critical function of LLMs, involving the application of learned patterns and knowledge to produce relevant responses or predictions. Attacks designed to disrupt service, deplete the target’s financial resources, or even steal intellectual property by cloning a model’s behavior all depend on a common class of security vulnerability in order to succeed. Unbounded Consumption occurs when a Large Language Model (LLM) application allows users to conduct excessive and uncontrolled inferences, leading to risks such as denial of service (DoS), economic losses, model theft, and service degradation."
-    url: "https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/"
+    isDefinedByTaxonomy: owasp-llm-2.0
+  - id: llm102025-unbounded-consumption
+    name: LLM10:2025 Unbounded Consumption
+    description: Unbounded Consumption refers to the process where a Large Language Model (LLM) generates outputs based on input queries or prompts. Inference is a critical function of LLMs, involving the application of learned patterns and knowledge to produce relevant responses or predictions. Attacks designed to disrupt service, deplete the target’s financial resources, or even steal intellectual property by cloning a model’s behavior all depend on a common class of security vulnerability in order to succeed. Unbounded Consumption occurs when a Large Language Model (LLM) application allows users to conduct excessive and uncontrolled inferences, leading to risks such as denial of service (DoS), economic losses, model theft, and service degradation.
+    url: https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/
     type: Risk
-    isDefinedByTaxonomy: "owasp-llm-2.0"
+    isDefinedByTaxonomy: owasp-llm-2.0

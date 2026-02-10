@@ -1,19 +1,8 @@
-
-
 # Class: CapabilityConcept
 
-
-_An umbrella term for referring to capability domains, groups, and individual capabilities.._
-
-
-
-
+_An umbrella term for referring to capability domains, groups, and individual capabilities._
 
 URI: [nexus:CapabilityConcept](https://ibm.github.io/ai-atlas-nexus/ontology/CapabilityConcept)
-
-
-
-
 
 ```mermaid
  classDiagram
@@ -125,80 +114,51 @@ URI: [nexus:CapabilityConcept](https://ibm.github.io/ai-atlas-nexus/ontology/Cap
 
 ```
 
-
-
-
-
 ## Inheritance
-* [Entity](Entity.md)
-    * [Concept](Concept.md)
-        * **CapabilityConcept**
 
-
+- [Entity](Entity.md)
+  - [Concept](Concept.md)
+    - **CapabilityConcept**
 
 ## Slots
 
-| Name | Cardinality and Range | Description | Inheritance |
-| ---  | --- | --- | --- |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy | [Concept](Concept.md) |
-| [hasDocumentation](hasDocumentation.md) | * <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity | [Concept](Concept.md) |
-| [type](type.md) | 0..1 <br/> [String](String.md) |  | [Concept](Concept.md) |
-| [id](id.md) | 1 <br/> [String](String.md) | A unique identifier to this instance of the model element | [Entity](Entity.md) |
-| [name](name.md) | 0..1 <br/> [String](String.md) | A text name of this instance | [Entity](Entity.md) |
-| [description](description.md) | 0..1 <br/> [String](String.md) | The description of an entity | [Entity](Entity.md) |
-| [url](url.md) | 0..1 <br/> [Uri](Uri.md) | An optional URL associated with this instance | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was created | [Entity](Entity.md) |
-| [dateModified](dateModified.md) | 0..1 <br/> [Date](Date.md) | The date on which the entity was most recently modified | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md) | * <br/> [Any](Any.md) | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | * <br/> [Any](Any.md) | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md) | * <br/> [Any](Any.md) | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-
-
+| Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance           |
+| --------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | --------------------- |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | [Concept](Concept.md) |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Concept](Concept.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Concept](Concept.md) |
+| [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)   |
+| [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md)   |
+| [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md)   |
+| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md)   |
+| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md)   |
+| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md)   |
+| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)   |
+| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)   |
+| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)   |
+| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)   |
+| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)   |
 
 ## Mixin Usage
 
-| mixed into | description |
-| --- | --- |
-| [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e |
-| [CapabilityGroup](CapabilityGroup.md) | A group of AI capabilities that are part of a capability taxonomy, organized ... |
-| [Capability](Capability.md) | A specific AI capability or ability, such as reading comprehension, logical r... |
-
-
-
-
-
-
-
-
+| mixed into                              | description                                                                      |
+| --------------------------------------- | -------------------------------------------------------------------------------- |
+| [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        |
+| [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... |
+| [Capability](Capability.md)             | A specific AI capability or ability, such as reading comprehension, logical r... |
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:CapabilityConcept |
-| native | nexus:CapabilityConcept |
-
-
-
-
-
+| Mapping Type | Mapped Value            |
+| ------------ | ----------------------- |
+| self         | nexus:CapabilityConcept |
+| native       | nexus:CapabilityConcept |
 
 ## LinkML Source
 
@@ -210,13 +170,13 @@ URI: [nexus:CapabilityConcept](https://ibm.github.io/ai-atlas-nexus/ontology/Cap
 ```yaml
 name: CapabilityConcept
 description: An umbrella term for referring to capability domains, groups, and individual
-  capabilities..
+  capabilities.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Concept
 mixin: true
 class_uri: nexus:CapabilityConcept
 
-```
+````
 </details>
 
 ### Induced
@@ -225,7 +185,7 @@ class_uri: nexus:CapabilityConcept
 ```yaml
 name: CapabilityConcept
 description: An umbrella term for referring to capability domains, groups, and individual
-  capabilities..
+  capabilities.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Concept
 mixin: true
@@ -444,5 +404,6 @@ attributes:
     inlined: false
 class_uri: nexus:CapabilityConcept
 
-```
+````
+
 </details>

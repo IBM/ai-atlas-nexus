@@ -1,4 +1,3 @@
-
 preserve_directory_names: true
 
 flatten_single_child_sections: false
@@ -14,34 +13,34 @@ sort:
 
 nav:
   - Home:
-    - "AI Atlas Nexus": index.md
-    - Installation:
-      - Installation: installation/index.md
-    - Usage:
-      - Usage: usage/index.md
+      - "AI Atlas Nexus": index.md
+      - Installation:
+          - Installation: installation/index.md
+      - Usage:
+          - Usage: usage/index.md
   - Concepts:
-    - Concepts: concepts/index.md
-    - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md
-    - Architecture: concepts/architecture.md
-    - "Contribute your own taxonomy files": concepts/Contributing_a_taxonomy.md
-    - "concepts/*"
+      - Concepts: concepts/index.md
+      - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md
+      - Architecture: concepts/architecture.md
+      - "Contribute your own taxonomy files": concepts/Contributing_a_taxonomy.md
+      - "concepts/*"
   - Examples:
-    - Examples: examples/index.md
-    - 🚀 Quick start:
-      - "AI Atlas Nexus Quickstart": examples/notebooks/AI_Atlas_Nexus_Quickstart.ipynb
-    - 🔍 Discovery:
-      - "Risk identification": examples/notebooks/risk_identification.ipynb
-      - "AI Tasks identification": examples/notebooks/ai_tasks_identification.ipynb
-      - "Domain identification": examples/notebooks/domain_identification.ipynb
-      - "Risk categorization": examples/notebooks/risk_categorization.ipynb
-      - "Using Schemaview": examples/notebooks/schema_viewer.ipynb
-    - 📝 Questionnaire:
-      -  "Auto assist questionnaire" : examples/notebooks/autoassist_questionnaire.ipynb
-    - 🔀  Mapping:
-      - "Preparing mappings": examples/notebooks/Prepare_taxonomy_mappings.ipynb
-      - "Generate crosswalks": examples/notebooks/generate_crosswalk.ipynb
-    - Extensions:
-      - "Risk to ARES Evaluation" : examples/notebooks/risk_to_ares_evaluation.ipynb
+      - Examples: examples/index.md
+      - 🚀 Quick start:
+          - "AI Atlas Nexus Quickstart": examples/notebooks/AI_Atlas_Nexus_Quickstart.ipynb
+      - 🔍 Discovery:
+          - "Risk identification": examples/notebooks/risk_identification.ipynb
+          - "AI Tasks identification": examples/notebooks/ai_tasks_identification.ipynb
+          - "Domain identification": examples/notebooks/domain_identification.ipynb
+          - "Risk categorization": examples/notebooks/risk_categorization.ipynb
+          - "Using Schemaview": examples/notebooks/schema_viewer.ipynb
+      - 📝 Questionnaire:
+          - "Auto assist questionnaire": examples/notebooks/autoassist_questionnaire.ipynb
+      - 🔀  Mapping:
+          - "Preparing mappings": examples/notebooks/Prepare_taxonomy_mappings.ipynb
+          - "Generate crosswalks": examples/notebooks/generate_crosswalk.ipynb
+      - Extensions:
+          - "Risk to ARES Evaluation": examples/notebooks/risk_to_ares_evaluation.ipynb
   - Ontology:
       - Ontology: ontology/index.md
       - "ontology/*"

@@ -1,69 +1,38 @@
-
-
 # Slot: power_consumption_w
 
-
 _power consumption in Watts_
-
-
-
-
 
 URI: [nexus:power_consumption_w](https://ibm.github.io/ai-atlas-nexus/ontology/power_consumption_w)
 Alias: power_consumption_w
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... |  no  |
-| [AiModel](AiModel.md) | A base AI Model class |  no  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-
-
-
-
-
+| Name                                        | Description                                                                      | Modifies Slot |
+| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
+| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
-* Range: [Integer](Integer.md)
+- Range: [Integer](Integer.md)
 
-* Minimum Value: 0
-
-
-
+- Minimum Value: 0
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:power_consumption_w |
-| native | nexus:power_consumption_w |
-
-
-
+| Mapping Type | Mapped Value              |
+| ------------ | ------------------------- |
+| self         | nexus:power_consumption_w |
+| native       | nexus:power_consumption_w |
 
 ## LinkML Source
 
@@ -81,3 +50,4 @@ minimum_value: 0
 
 ```
 </details>
+```

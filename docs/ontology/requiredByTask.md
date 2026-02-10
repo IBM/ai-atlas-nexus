@@ -1,74 +1,43 @@
-
-
 # Slot: requiredByTask
 
-
 _Indicates that this entry is required to perform a specific AI task._
-
-
-
-
 
 URI: [nexus:requiredByTask](https://ibm.github.io/ai-atlas-nexus/ontology/requiredByTask)
 Alias: requiredByTask
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Term](Term.md) | A term and its definitions |  no  |
-| [Adapter](Adapter.md) | Adapter-based methods add extra trainable parameters after the attention and ... |  no  |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
-| [Principle](Principle.md) | A representation of values or norms that must be taken into consideration whe... |  no  |
-| [Entry](Entry.md) | An entry and its definitions |  no  |
-| [Capability](Capability.md) | A specific AI capability or ability, such as reading comprehension, logical r... |  yes  |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... |  no  |
-| [AiTask](AiTask.md) | A task, such as summarization and classification, performed by an AI |  no  |
-
-
-
-
-
+| Name                            | Description                                                                      | Modifies Slot |
+| ------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Capability](Capability.md)     | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
+| [Term](Term.md)                 | A term and its definitions                                                       | no            |
+| [Principle](Principle.md)       | A representation of values or norms that must be taken into consideration whe... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AiTask](AiTask.md)             | A task, such as summarization and classification, performed by an AI             | no            |
+| [Risk](Risk.md)                 | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Entry](Entry.md)               | An entry and its definitions                                                     | no            |
+| [Adapter](Adapter.md)           | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
-* Range: [AiTask](AiTask.md)
+- Range: [AiTask](AiTask.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:requiredByTask |
-| native | nexus:requiredByTask |
-
-
-
+| Mapping Type | Mapped Value         |
+| ------------ | -------------------- |
+| self         | nexus:requiredByTask |
+| native       | nexus:requiredByTask |
 
 ## LinkML Source
 
@@ -89,3 +58,4 @@ inlined: false
 
 ```
 </details>
+```

@@ -1,487 +1,492 @@
 documents:
-- id: NIST.AI.600-1
-  name: 'Artificial Intelligence Risk Management Framework: Generative Artificial
-    Intelligence Profile'
-  description: This document is a cross-sectoral profile of and companion resource
-    for the AI Risk Management Framework (AI RMF 1.0) for Generative AI, pursuant
-    to President Biden’s Executive Order (EO) 14110 on Safe, Secure, and Trustworthy
-    Artificial Intelligence.
-  url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
-  dateCreated: 2024-07-25
+  - id: NIST.AI.600-1
+    name: "Artificial Intelligence Risk Management Framework: Generative Artificial
+      Intelligence Profile"
+    description: This document is a cross-sectoral profile of and companion resource
+      for the AI Risk Management Framework (AI RMF 1.0) for Generative AI, pursuant
+      to President Biden's Executive Order (EO) 14110 on Safe, Secure, and Trustworthy
+      Artificial Intelligence.
+    url: https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf
+    dateCreated: 2024-07-25
 taxonomies:
-- id: nist-ai-rmf
-  name: NIST AI Risk Management Framework (AI RMF)
-  type: RiskTaxonomy
-  description: In collaboration with the private and public sectors, NIST has developed
-    a framework to better manage risks to individuals, organizations, and society
-    associated with artificial intelligence (AI). The NIST AI Risk Management Framework
-    (AI RMF) is intended for voluntary use and to improve the ability to incorporate
-    trustworthiness considerations into the design, development, use, and evaluation
-    of AI products, services, and systems.
-  url: https://www.nist.gov/itl/ai-risk-management-framework
-  dateCreated: 2024-07-26
-  hasDocumentation:
-  - NIST.AI.600-1
+  - id: nist-ai-rmf
+    name: NIST AI Risk Management Framework (AI RMF)
+    type: RiskTaxonomy
+    description:
+      In collaboration with the private and public sectors, NIST has developed
+      a framework to better manage risks to individuals, organizations, and society
+      associated with artificial intelligence (AI). The NIST AI Risk Management Framework
+      (AI RMF) is intended for voluntary use and to improve the ability to incorporate
+      trustworthiness considerations into the design, development, use, and evaluation
+      of AI products, services, and systems.
+    url: https://www.nist.gov/itl/ai-risk-management-framework
+    dateCreated: 2024-07-26
+    hasDocumentation:
+      - NIST.AI.600-1
 entries:
-- id: nist-cbrn-information-or-capabilities
-  name: CBRN Information or Capabilities
-  description: Eased access to or synthesis of materially nefarious information or
-    design capabilities related to chemical, biological, radiological, or nuclear
-    (CBRN) weapons or other dangerous materials or agents.
-  hasRelatedAction:
-  - GV-1.2-002
-  - GV-1.3-001
-  - GV-1.3-002
-  - GV-1.3-003
-  - GV-1.3-004
-  - GV-1.4-002
-  - GV-2.1-004
-  - GV-2.1-005
-  - GV-3.2-001
-  - GV-3.2-005
-  - MP-1.1-004
-  - MP-4.1-005
-  - MP-4.1-008
-  - MP-5.1-004
-  - MS-1.1-004
-  - MS-1.1-005
-  - MS-1.1-008
-  - MS-1.3-001
-  - MS-1.3-002
-  - MS-2.3-004
-  - MS-2.6-002
-  - MS-2.6-006
-  - MS-2.6-007
-  - MG-2.2-001
-  - MG-2.2-005
-  - MG-3.1-004
-  - MG-3.2-009
-  - MG-4.1-002
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-confabulation
-  name: Confabulation
-  description: The production of confidently stated but erroneous or false content
-    (known colloquially as “hallucinations” or “fabrications”) by which users may
-    be misled or deceived.
-  hasRelatedAction:
-  - GV-1.3-002
-  - GV-4.1-001
-  - GV-5.1-002
-  - MS-2.3-001
-  - MS-2.3-002
-  - MS-2.3-004
-  - MS-2.5-001
-  - MS-2.5-003
-  - MS-2.6-005
-  - MS-2.9-001
-  - MS-2.13-001
-  - MS-3.2-001
-  - MS-4.2-002
-  - MG-2.2-009
-  - MG-3.2-009
-  - MG-4.1-002
-  - MG-4.1-004
-  - MG-4.3-002
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-dangerous-violent-or-hateful-content
-  name: Dangerous, Violent, or Hateful Content
-  description: Eased production of and access to violent, inciting, radicalizing,
-    or threatening content as well as recommendations to carry out self-harm or conduct
-    illegal activities. Includes difficulty controlling public exposure to hateful
-    and disparaging or stereotyping content.
-  hasRelatedAction:
-  - GV-1.3-001
-  - GV-1.3-002
-  - GV-1.3-004
-  - GV-1.3-006
-  - GV-1.4-001
-  - GV-2.1-004
-  - GV-2.1-005
-  - GV-4.2-001
-  - MP-1.1-003
-  - MP-1.1-004
-  - MP-3.4-006
-  - MP-4.1-005
-  - MP-4.1-008
-  - MP-5.1-002
-  - MP-5.1-004
-  - MS-2.2-002
-  - MS-2.3-004
-  - MS-2.5-006
-  - MS-2.6-001
-  - MS-2.6-002
-  - MS-2.6-003
-  - MS-2.6-004
-  - MS-2.7-007
-  - MS-2.7-008
-  - MS-2.11-002
-  - MS-2.12-001
-  - MG-2.2-001
-  - MG-2.2-005
-  - MG-3.2-005
-  - MG-4.2-002
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-data-privacy
-  name: Data Privacy
-  description: Impacts due to leakage and unauthorized use, disclosure, or de-anonymization
-    of biometric, health, location, or other personally identifiable information or
-    sensitive data.
-  hasRelatedAction:
-  - GV-1.1-001
-  - GV-1.2-001
-  - GV-1.4-002
-  - GV-1.6-003
-  - GV-4.3-003
-  - GV-6.1-001
-  - GV-6.1-005
-  - GV-6.1-009
-  - GV-6.2-003
-  - MP-1.1-001
-  - MP-2.1-002
-  - MP-4.1-001
-  - MP-4.1-003
-  - MP-4.1-004
-  - MP-4.1-005
-  - MP-4.1-008
-  - MP-4.1-009
-  - MP-4.1-010
-  - MS-1.3-003
-  - MS-2.2-002
-  - MS-2.2-003
-  - MS-2.2-004
-  - MS-2.3-004
-  - MS-2.6-002
-  - MS-2.7-001
-  - MG-2.2-009
-  - MG-3.1-002
-  - MG-3.2-002
-  - MG-4.3-003
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-environmental-impacts
-  name: Environmental Impacts
-  description: Impacts due to high compute resource utilization in training or operating
-    GAI models, and related outcomes that may adversely impact ecosystems.
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-harmful-bias-or-homogenization
-  name: Harmful Bias or Homogenization
-  description: Amplification and exacerbation of historical, societal, and systemic
-    biases; performance disparities between sub-groups or languages, possibly due
-    to non-representative training data, that result in discrimination, amplification
-    of biases, or incorrect presumptions about performance; undesired homogeneity
-    that skews system or model outputs, which may be erroneous, lead to ill-founded
-    decision-making, or amplify harmful biases.
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-human-ai-configuration
-  name: Human-AI Configuration
-  description: Arrangements of or interactions between a human and an AI system which
-    can result in the human inappropriately anthropomorphizing GAI systems or experiencing
-    algorithmic aversion, automation bias, over-reliance, or emotional entanglement
-    with GAI systems.
-  hasRelatedAction:
-  - GV-1.5-002
-  - GV-1.6-003
-  - GV-2.1-001
-  - GV-2.1-003
-  - GV-3.2-002
-  - GV-3.2-003
-  - GV-3.2-004
-  - GV-4.2-002
-  - GV-5.1-001
-  - GV-5.1-002
-  - GV-6.1-009
-  - GV-6.2-003
-  - GV-6.2-007
-  - MP-1.1-003
-  - MP-1.2-001
-  - MP-1.2-002
-  - MP-3.4-001
-  - MP-3.4-004
-  - MP-3.4-005
-  - MP-3.4-006
-  - MP-5.1-003
-  - MP-5.2-001
-  - MP-5.2-002
-  - MS-1.1-004
-  - MS-1.3-001
-  - MS-1.3-002
-  - MS-1.3-003
-  - MS-2.2-003
-  - MS-2.2-004
-  - MS-2.3-003
-  - MS-2.5-001
-  - MS-2.5-002
-  - MS-2.5-004
-  - MS-2.6-001
-  - MS-2.7-003
-  - MS-2.8-002
-  - MS-2.8-004
-  - MS-2.10-001
-  - MS-2.10-002
-  - MS-3.2-001
-  - MS-3.3-002
-  - MS-3.3-004
-  - MS-3.3-005
-  - MS-4.2-002
-  - MS-4.2-005
-  - MG-1.3-002
-  - MG-2.2-006
-  - MG-2.2-008
-  - MG-3.2-008
-  - MG-4.1-003
-  - MG-4.1-005
-  - MG-4.2-002
-  - MG-4.2-003
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-information-integrity
-  name: Information Integrity
-  description: Lowered barrier to entry to generate and support the exchange and consumption
-    of content which may not distinguish fact from opinion or fiction or acknowledge
-    uncertainties, or could be leveraged for large-scale dis- and mis-information
-    campaigns.
-  hasRelatedAction:
-  - GV-1.2-001
-  - GV-1.3-001
-  - GV-1.3-006
-  - GV-1.3-007
-  - GV-1.5-001
-  - GV-1.5-003
-  - GV-1.6-003
-  - GV-4.3-001
-  - GV-4.3-003
-  - GV-6.1-003
-  - GV-6.1-004
-  - GV-6.1-005
-  - GV-6.1-006
-  - GV-6.1-008
-  - GV-6.2-006
-  - MP-2.1-001
-  - MP-2.2-001
-  - MP-2.2-002
-  - MP-2.3-001
-  - MP-2.3-003
-  - MP-2.3-004
-  - MP-3.4-001
-  - MP-3.4-002
-  - MP-3.4-003
-  - MP-3.4-005
-  - MP-3.4-006
-  - MP-5.1-001
-  - MP-5.1-002
-  - MP-5.1-004
-  - MS-1.1-001
-  - MS-1.1-002
-  - MS-1.1-003
-  - MS-1.1-005
-  - MS-1.1-007
-  - MS-1.1-009
-  - MS-2.2-001
-  - MS-2.2-002
-  - MS-2.2-003
-  - MS-2.3-004
-  - MS-2.5-005
-  - MS-2.6-005
-  - MS-2.7-001
-  - MS-2.7-002
-  - MS-2.7-003
-  - MS-2.7-004
-  - MS-2.7-005
-  - MS-2.7-006
-  - MS-2.7-008
-  - MS-2.8-003
-  - MS-2.9-002
-  - MS-2.10-001
-  - MS-2.10-002
-  - MS-2.13-001
-  - MS-3.3-002
-  - MS-3.3-004
-  - MS-3.3-005
-  - MS-4.2-001
-  - MS-4.2-003
-  - MS-4.2-004
-  - MG-2.2-002
-  - MG-2.2-003
-  - MG-2.2-007
-  - MG-2.2-009
-  - MG-3.1-005
-  - MG-3.2-002
-  - MG-3.2-003
-  - MG-3.2-005
-  - MG-3.2-006
-  - MG-3.2-007
-  - MG-4.1-001
-  - MG-4.1-006
-  - MG-4.3-002
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-information-security
-  name: Information Security
-  description: Lowered barriers for offensive cyber capabilities, including via automated
-    discovery and exploitation of vulnerabilities to ease hacking, malware, phishing,
-    offensive cyber operations, or other cyberattacks; increased attack surface for
-    targeted cyberattacks, which may compromise a system’s availability or the confidentiality
-    or integrity of training data, code, or model weights.
-  hasRelatedAction:
-  - GV-1.2-002
-  - GV-1.3-003
-  - GV-1.3-007
-  - GV-1.5-002
-  - GV-1.6-001
-  - GV-1.7-001
-  - GV-1.7-002
-  - GV-2.1-004
-  - GV-3.2-002
-  - GV-3.2-005
-  - GV-4.3-002
-  - GV-6.1-004
-  - GV-6.1-005
-  - GV-6.1-009
-  - GV-6.2-003
-  - GV-6.2-007
-  - MP-2.3-005
-  - MP-4.1-003
-  - MP-4.1-005
-  - MP-5.1-001
-  - MP-5.1-005
-  - MP-5.1-006
-  - MS-2.2-001
-  - MS-2.2-002
-  - MS-2.3-001
-  - MS-2.3-002
-  - MS-2.3-004
-  - MS-2.5-006
-  - MS-2.6-005
-  - MS-2.6-006
-  - MS-2.6-007
-  - MS-2.7-001
-  - MS-2.7-002
-  - MS-2.7-004
-  - MS-2.7-006
-  - MS-2.7-007
-  - MS-2.7-008
-  - MS-2.7-009
-  - MS-4.2-001
-  - MS-4.2-002
-  - MS-4.2-005
-  - MG-1.3-001
-  - MG-2.2-004
-  - MG-2.4-002
-  - MG-2.4-003
-  - MG-2.4-004
-  - MG-3.1-002
-  - MG-3.1-005
-  - MG-4.1-002
-  - MG-4.3-001
-  - MG-4.3-003
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-intellectual-property
-  name: Intellectual Property
-  description: Eased production or replication of alleged copyrighted, trademarked,
-    or licensed content without authorization (possibly in situations which do not
-    fall under fair use); eased exposure of trade secrets; or plagiarism or illegal
-    replication.
-  hasRelatedAction:
-  - GV-1.1-001
-  - GV-1.2-001
-  - GV-1.5-003
-  - GV-1.6-003
-  - GV-4.2-001
-  - GV-6.1-001
-  - GV-6.1-004
-  - GV-6.1-005
-  - GV-6.1-008
-  - GV-6.1-009
-  - GV-6.1-010
-  - GV-6.2-002
-  - MP-1.1-001
-  - MP-2.1-002
-  - MP-2.3-002
-  - MP-4.1-002
-  - MP-4.1-004
-  - MP-4.1-005
-  - MP-4.1-006
-  - MP-4.1-008
-  - MP-4.1-010
-  - MS-2.6-002
-  - MS-2.8-001
-  - MG-2.2-009
-  - MG-3.1-001
-  - MG-3.1-004
-  - MG-3.2-003
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-obscene-degrading-and-or-abusive-content
-  name: Obscene, Degrading, and/or Abusive Content
-  description: Eased production of and access to obscene, degrading, and/or abusive
-    imagery which can cause harm, including synthetic child sexual abuse material
-    (CSAM), and nonconsensual intimate images (NCII) of adults.
-  hasRelatedAction:
-  - GV-1.3-001
-  - GV-1.3-004
-  - GV-1.4-001
-  - GV-1.4-002
-  - GV-4.2-001
-  - MP-1.1-004
-  - MP-4.1-004
-  - MP-5.1-002
-  - MS-1.1-005
-  - MS-2.6-001
-  - MS-2.6-002
-  - MG-2.2-001
-  - MG-2.2-005
-  - MG-3.2-005
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
-- id: nist-value-chain-and-component-integration
-  name: Value Chain and Component Integration
-  description: Non-transparent or untraceable integration of upstream third-party
-    components, including data that has been improperly obtained or not processed
-    and cleaned due to increased automation from GAI; improper supplier vetting across
-    the AI lifecycle; or other issues that diminish transparency or accountability
-    for downstream users.
-  hasRelatedAction:
-  - GV-1.3-001
-  - GV-1.6-002
-  - GV-1.6-003
-  - GV-1.7-001
-  - GV-1.7-002
-  - GV-2.1-001
-  - GV-4.1-002
-  - GV-4.1-003
-  - GV-4.2-003
-  - GV-6.1-001
-  - GV-6.1-002
-  - GV-6.1-003
-  - GV-6.1-005
-  - GV-6.1-007
-  - GV-6.1-008
-  - GV-6.1-009
-  - GV-6.1-010
-  - GV-6.2-001
-  - GV-6.2-002
-  - GV-6.2-003
-  - GV-6.2-004
-  - GV-6.2-007
-  - MP-2.2-001
-  - MP-4.1-006
-  - MP-4.1-007
-  - MP-5.2-001
-  - MP-5.2-002
-  - MS-2.6-001
-  - MS-2.6-004
-  - MS-2.7-001
-  - MG-2.3-001
-  - MG-3.1-001
-  - MG-3.1-002
-  - MG-3.1-003
-  - MG-3.1-005
-  - MG-3.2-007
-  type: Risk
-  isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-cbrn-information-or-capabilities
+    name: CBRN Information or Capabilities
+    description: Eased access to or synthesis of materially nefarious information or
+      design capabilities related to chemical, biological, radiological, or nuclear
+      (CBRN) weapons or other dangerous materials or agents.
+    hasRelatedAction:
+      - GV-1.2-002
+      - GV-1.3-001
+      - GV-1.3-002
+      - GV-1.3-003
+      - GV-1.3-004
+      - GV-1.4-002
+      - GV-2.1-004
+      - GV-2.1-005
+      - GV-3.2-001
+      - GV-3.2-005
+      - MP-1.1-004
+      - MP-4.1-005
+      - MP-4.1-008
+      - MP-5.1-004
+      - MS-1.1-004
+      - MS-1.1-005
+      - MS-1.1-008
+      - MS-1.3-001
+      - MS-1.3-002
+      - MS-2.3-004
+      - MS-2.6-002
+      - MS-2.6-006
+      - MS-2.6-007
+      - MG-2.2-001
+      - MG-2.2-005
+      - MG-3.1-004
+      - MG-3.2-009
+      - MG-4.1-002
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-confabulation
+    name: Confabulation
+    description: The production of confidently stated but erroneous or false content
+      (known colloquially as “hallucinations” or “fabrications”) by which users may
+      be misled or deceived.
+    hasRelatedAction:
+      - GV-1.3-002
+      - GV-4.1-001
+      - GV-5.1-002
+      - MS-2.3-001
+      - MS-2.3-002
+      - MS-2.3-004
+      - MS-2.5-001
+      - MS-2.5-003
+      - MS-2.6-005
+      - MS-2.9-001
+      - MS-2.13-001
+      - MS-3.2-001
+      - MS-4.2-002
+      - MG-2.2-009
+      - MG-3.2-009
+      - MG-4.1-002
+      - MG-4.1-004
+      - MG-4.3-002
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-dangerous-violent-or-hateful-content
+    name: Dangerous, Violent, or Hateful Content
+    description: Eased production of and access to violent, inciting, radicalizing,
+      or threatening content as well as recommendations to carry out self-harm or conduct
+      illegal activities. Includes difficulty controlling public exposure to hateful
+      and disparaging or stereotyping content.
+    hasRelatedAction:
+      - GV-1.3-001
+      - GV-1.3-002
+      - GV-1.3-004
+      - GV-1.3-006
+      - GV-1.4-001
+      - GV-2.1-004
+      - GV-2.1-005
+      - GV-4.2-001
+      - MP-1.1-003
+      - MP-1.1-004
+      - MP-3.4-006
+      - MP-4.1-005
+      - MP-4.1-008
+      - MP-5.1-002
+      - MP-5.1-004
+      - MS-2.2-002
+      - MS-2.3-004
+      - MS-2.5-006
+      - MS-2.6-001
+      - MS-2.6-002
+      - MS-2.6-003
+      - MS-2.6-004
+      - MS-2.7-007
+      - MS-2.7-008
+      - MS-2.11-002
+      - MS-2.12-001
+      - MG-2.2-001
+      - MG-2.2-005
+      - MG-3.2-005
+      - MG-4.2-002
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-data-privacy
+    name: Data Privacy
+    description:
+      Impacts due to leakage and unauthorized use, disclosure, or de-anonymization
+      of biometric, health, location, or other personally identifiable information or
+      sensitive data.
+    hasRelatedAction:
+      - GV-1.1-001
+      - GV-1.2-001
+      - GV-1.4-002
+      - GV-1.6-003
+      - GV-4.3-003
+      - GV-6.1-001
+      - GV-6.1-005
+      - GV-6.1-009
+      - GV-6.2-003
+      - MP-1.1-001
+      - MP-2.1-002
+      - MP-4.1-001
+      - MP-4.1-003
+      - MP-4.1-004
+      - MP-4.1-005
+      - MP-4.1-008
+      - MP-4.1-009
+      - MP-4.1-010
+      - MS-1.3-003
+      - MS-2.2-002
+      - MS-2.2-003
+      - MS-2.2-004
+      - MS-2.3-004
+      - MS-2.6-002
+      - MS-2.7-001
+      - MG-2.2-009
+      - MG-3.1-002
+      - MG-3.2-002
+      - MG-4.3-003
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-environmental-impacts
+    name: Environmental Impacts
+    description:
+      Impacts due to high compute resource utilization in training or operating
+      GAI models, and related outcomes that may adversely impact ecosystems.
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-harmful-bias-or-homogenization
+    name: Harmful Bias or Homogenization
+    description: Amplification and exacerbation of historical, societal, and systemic
+      biases; performance disparities between sub-groups or languages, possibly due
+      to non-representative training data, that result in discrimination, amplification
+      of biases, or incorrect presumptions about performance; undesired homogeneity
+      that skews system or model outputs, which may be erroneous, lead to ill-founded
+      decision-making, or amplify harmful biases.
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-human-ai-configuration
+    name: Human-AI Configuration
+    description: Arrangements of or interactions between a human and an AI system which
+      can result in the human inappropriately anthropomorphizing GAI systems or experiencing
+      algorithmic aversion, automation bias, over-reliance, or emotional entanglement
+      with GAI systems.
+    hasRelatedAction:
+      - GV-1.5-002
+      - GV-1.6-003
+      - GV-2.1-001
+      - GV-2.1-003
+      - GV-3.2-002
+      - GV-3.2-003
+      - GV-3.2-004
+      - GV-4.2-002
+      - GV-5.1-001
+      - GV-5.1-002
+      - GV-6.1-009
+      - GV-6.2-003
+      - GV-6.2-007
+      - MP-1.1-003
+      - MP-1.2-001
+      - MP-1.2-002
+      - MP-3.4-001
+      - MP-3.4-004
+      - MP-3.4-005
+      - MP-3.4-006
+      - MP-5.1-003
+      - MP-5.2-001
+      - MP-5.2-002
+      - MS-1.1-004
+      - MS-1.3-001
+      - MS-1.3-002
+      - MS-1.3-003
+      - MS-2.2-003
+      - MS-2.2-004
+      - MS-2.3-003
+      - MS-2.5-001
+      - MS-2.5-002
+      - MS-2.5-004
+      - MS-2.6-001
+      - MS-2.7-003
+      - MS-2.8-002
+      - MS-2.8-004
+      - MS-2.10-001
+      - MS-2.10-002
+      - MS-3.2-001
+      - MS-3.3-002
+      - MS-3.3-004
+      - MS-3.3-005
+      - MS-4.2-002
+      - MS-4.2-005
+      - MG-1.3-002
+      - MG-2.2-006
+      - MG-2.2-008
+      - MG-3.2-008
+      - MG-4.1-003
+      - MG-4.1-005
+      - MG-4.2-002
+      - MG-4.2-003
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-information-integrity
+    name: Information Integrity
+    description:
+      Lowered barrier to entry to generate and support the exchange and consumption
+      of content which may not distinguish fact from opinion or fiction or acknowledge
+      uncertainties, or could be leveraged for large-scale dis- and mis-information
+      campaigns.
+    hasRelatedAction:
+      - GV-1.2-001
+      - GV-1.3-001
+      - GV-1.3-006
+      - GV-1.3-007
+      - GV-1.5-001
+      - GV-1.5-003
+      - GV-1.6-003
+      - GV-4.3-001
+      - GV-4.3-003
+      - GV-6.1-003
+      - GV-6.1-004
+      - GV-6.1-005
+      - GV-6.1-006
+      - GV-6.1-008
+      - GV-6.2-006
+      - MP-2.1-001
+      - MP-2.2-001
+      - MP-2.2-002
+      - MP-2.3-001
+      - MP-2.3-003
+      - MP-2.3-004
+      - MP-3.4-001
+      - MP-3.4-002
+      - MP-3.4-003
+      - MP-3.4-005
+      - MP-3.4-006
+      - MP-5.1-001
+      - MP-5.1-002
+      - MP-5.1-004
+      - MS-1.1-001
+      - MS-1.1-002
+      - MS-1.1-003
+      - MS-1.1-005
+      - MS-1.1-007
+      - MS-1.1-009
+      - MS-2.2-001
+      - MS-2.2-002
+      - MS-2.2-003
+      - MS-2.3-004
+      - MS-2.5-005
+      - MS-2.6-005
+      - MS-2.7-001
+      - MS-2.7-002
+      - MS-2.7-003
+      - MS-2.7-004
+      - MS-2.7-005
+      - MS-2.7-006
+      - MS-2.7-008
+      - MS-2.8-003
+      - MS-2.9-002
+      - MS-2.10-001
+      - MS-2.10-002
+      - MS-2.13-001
+      - MS-3.3-002
+      - MS-3.3-004
+      - MS-3.3-005
+      - MS-4.2-001
+      - MS-4.2-003
+      - MS-4.2-004
+      - MG-2.2-002
+      - MG-2.2-003
+      - MG-2.2-007
+      - MG-2.2-009
+      - MG-3.1-005
+      - MG-3.2-002
+      - MG-3.2-003
+      - MG-3.2-005
+      - MG-3.2-006
+      - MG-3.2-007
+      - MG-4.1-001
+      - MG-4.1-006
+      - MG-4.3-002
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-information-security
+    name: Information Security
+    description:
+      Lowered barriers for offensive cyber capabilities, including via automated
+      discovery and exploitation of vulnerabilities to ease hacking, malware, phishing,
+      offensive cyber operations, or other cyberattacks; increased attack surface for
+      targeted cyberattacks, which may compromise a system’s availability or the confidentiality
+      or integrity of training data, code, or model weights.
+    hasRelatedAction:
+      - GV-1.2-002
+      - GV-1.3-003
+      - GV-1.3-007
+      - GV-1.5-002
+      - GV-1.6-001
+      - GV-1.7-001
+      - GV-1.7-002
+      - GV-2.1-004
+      - GV-3.2-002
+      - GV-3.2-005
+      - GV-4.3-002
+      - GV-6.1-004
+      - GV-6.1-005
+      - GV-6.1-009
+      - GV-6.2-003
+      - GV-6.2-007
+      - MP-2.3-005
+      - MP-4.1-003
+      - MP-4.1-005
+      - MP-5.1-001
+      - MP-5.1-005
+      - MP-5.1-006
+      - MS-2.2-001
+      - MS-2.2-002
+      - MS-2.3-001
+      - MS-2.3-002
+      - MS-2.3-004
+      - MS-2.5-006
+      - MS-2.6-005
+      - MS-2.6-006
+      - MS-2.6-007
+      - MS-2.7-001
+      - MS-2.7-002
+      - MS-2.7-004
+      - MS-2.7-006
+      - MS-2.7-007
+      - MS-2.7-008
+      - MS-2.7-009
+      - MS-4.2-001
+      - MS-4.2-002
+      - MS-4.2-005
+      - MG-1.3-001
+      - MG-2.2-004
+      - MG-2.4-002
+      - MG-2.4-003
+      - MG-2.4-004
+      - MG-3.1-002
+      - MG-3.1-005
+      - MG-4.1-002
+      - MG-4.3-001
+      - MG-4.3-003
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-intellectual-property
+    name: Intellectual Property
+    description: Eased production or replication of alleged copyrighted, trademarked,
+      or licensed content without authorization (possibly in situations which do not
+      fall under fair use); eased exposure of trade secrets; or plagiarism or illegal
+      replication.
+    hasRelatedAction:
+      - GV-1.1-001
+      - GV-1.2-001
+      - GV-1.5-003
+      - GV-1.6-003
+      - GV-4.2-001
+      - GV-6.1-001
+      - GV-6.1-004
+      - GV-6.1-005
+      - GV-6.1-008
+      - GV-6.1-009
+      - GV-6.1-010
+      - GV-6.2-002
+      - MP-1.1-001
+      - MP-2.1-002
+      - MP-2.3-002
+      - MP-4.1-002
+      - MP-4.1-004
+      - MP-4.1-005
+      - MP-4.1-006
+      - MP-4.1-008
+      - MP-4.1-010
+      - MS-2.6-002
+      - MS-2.8-001
+      - MG-2.2-009
+      - MG-3.1-001
+      - MG-3.1-004
+      - MG-3.2-003
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-obscene-degrading-and-or-abusive-content
+    name: Obscene, Degrading, and/or Abusive Content
+    description: Eased production of and access to obscene, degrading, and/or abusive
+      imagery which can cause harm, including synthetic child sexual abuse material
+      (CSAM), and nonconsensual intimate images (NCII) of adults.
+    hasRelatedAction:
+      - GV-1.3-001
+      - GV-1.3-004
+      - GV-1.4-001
+      - GV-1.4-002
+      - GV-4.2-001
+      - MP-1.1-004
+      - MP-4.1-004
+      - MP-5.1-002
+      - MS-1.1-005
+      - MS-2.6-001
+      - MS-2.6-002
+      - MG-2.2-001
+      - MG-2.2-005
+      - MG-3.2-005
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf
+  - id: nist-value-chain-and-component-integration
+    name: Value Chain and Component Integration
+    description: Non-transparent or untraceable integration of upstream third-party
+      components, including data that has been improperly obtained or not processed
+      and cleaned due to increased automation from GAI; improper supplier vetting across
+      the AI lifecycle; or other issues that diminish transparency or accountability
+      for downstream users.
+    hasRelatedAction:
+      - GV-1.3-001
+      - GV-1.6-002
+      - GV-1.6-003
+      - GV-1.7-001
+      - GV-1.7-002
+      - GV-2.1-001
+      - GV-4.1-002
+      - GV-4.1-003
+      - GV-4.2-003
+      - GV-6.1-001
+      - GV-6.1-002
+      - GV-6.1-003
+      - GV-6.1-005
+      - GV-6.1-007
+      - GV-6.1-008
+      - GV-6.1-009
+      - GV-6.1-010
+      - GV-6.2-001
+      - GV-6.2-002
+      - GV-6.2-003
+      - GV-6.2-004
+      - GV-6.2-007
+      - MP-2.2-001
+      - MP-4.1-006
+      - MP-4.1-007
+      - MP-5.2-001
+      - MP-5.2-002
+      - MS-2.6-001
+      - MS-2.6-004
+      - MS-2.7-001
+      - MG-2.3-001
+      - MG-3.1-001
+      - MG-3.1-002
+      - MG-3.1-003
+      - MG-3.1-005
+      - MG-3.2-007
+    type: Risk
+    isDefinedByTaxonomy: nist-ai-rmf

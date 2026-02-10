@@ -1,67 +1,36 @@
-
-
 # Slot: descriptor
 
-
 _Annotates whether an AI risk is a traditional risk, specific to or amplified by AI._
-
-
-
-
 
 URI: [nexus:descriptor](https://ibm.github.io/ai-atlas-nexus/ontology/descriptor)
 Alias: descriptor
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... |  no  |
-
-
-
-
-
+| Name            | Description                                                                      | Modifies Slot |
+| --------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Risk](Risk.md) | The state of uncertainty associated with an AI system, that has the potential... | no            |
 
 ## Properties
 
-* Range: [String](String.md)
+- Range: [String](String.md)
 
-* Multivalued: True
-
-
-
+- Multivalued: True
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:descriptor |
-| native | nexus:descriptor |
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | nexus:descriptor |
+| native       | nexus:descriptor |
 
 ## LinkML Source
 
@@ -81,3 +50,4 @@ multivalued: true
 
 ```
 </details>
+```

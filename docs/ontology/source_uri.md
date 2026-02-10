@@ -1,65 +1,34 @@
-
-
 # Slot: source_uri
 
-
 _The uri of the incident_
-
-
-
-
 
 URI: [nexus:source_uri](https://ibm.github.io/ai-atlas-nexus/ontology/source_uri)
 Alias: source_uri
 
 <!-- no inheritance hierarchy -->
 
-
-
-
-
 ## Applicable Classes
 
-| Name | Description | Modifies Slot |
-| --- | --- | --- |
-| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk |  no  |
-
-
-
-
-
+| Name                            | Description                                                           | Modifies Slot |
+| ------------------------------- | --------------------------------------------------------------------- | ------------- |
+| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk | no            |
 
 ## Properties
 
-* Range: [String](String.md)
-
-
-
+- Range: [String](String.md)
 
 ## Identifier and Mapping Information
 
-
-
-
-
-
 ### Schema Source
 
-
-* from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
-
-
-
+- from schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 
 ## Mappings
 
-| Mapping Type | Mapped Value |
-| ---  | ---  |
-| self | nexus:source_uri |
-| native | nexus:source_uri |
-
-
-
+| Mapping Type | Mapped Value     |
+| ------------ | ---------------- |
+| self         | nexus:source_uri |
+| native       | nexus:source_uri |
 
 ## LinkML Source
 
@@ -77,3 +46,4 @@ range: string
 
 ```
 </details>
+```
