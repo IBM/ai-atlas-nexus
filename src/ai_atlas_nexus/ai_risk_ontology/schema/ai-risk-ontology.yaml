@@ -14,6 +14,8 @@ imports:
   - ai_eval
   - ai_intrinsic
   - ai_csiro_rai
+  - ai_aiuc
+
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#

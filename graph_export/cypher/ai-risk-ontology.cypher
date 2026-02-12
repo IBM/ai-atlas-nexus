@@ -85,6 +85,7 @@ MERGE (node:Documentation {id: "arxiv.org/2409.15398"}) ON CREATE SET node += {i
  practical approach to analyzing single-turn input attacks, placing it at the forefront for practitioners. This work
   aims to bridge the gap between academic insights and practical security measures for the protection of generative
   AI systems.",url: "https://arxiv.org/abs/2409.15398",dateCreated: "2024-09-23",author: "Ambrish Rawat, Stefan Schoepf, Giulio Zizzo, Giandomenico Cornacchia, Muhammad Zaid Hameed, Kieran Fraser, Erik Miehling, Beat Buesser, Elizabeth M. Daly, Mark Purcell, Prasanna Sattigeri, Pin-Yu Chen, Kush R. Varshney"};
+MERGE (node:Documentation {id: "AIUC-1-Jan-2026"}) ON CREATE SET node += {id: "AIUC-1-Jan-2026",name: "AIUC-1 Framework - January 2026 Version",description: "AIUC-1 (AI Unified Compliance) is a compliance certification framework positioned as "SOC 2 for AI" managed by a consortium including Microsoft, JPMorgan Chase, Google Cloud, Meta, Cisco, Anthropic, Stanford, and MITRE.",url: "https://www.aiuc1.com",dateCreated: "2026-01-15"};
 MERGE (node:Documentation {id: "doc-oecd-ai-principles"}) ON CREATE SET node += {id: "doc-oecd-ai-principles",name: "OECD AI Principles",description: "The OECD AI Principles promote use of AI that is innovative and trustworthy and that respects human rights and democratic values. Adopted in May 2019, they set standards for AI that are practical and flexible enough to stand the test of time.",url: "https://oecd.ai/en/ai-principles",dateCreated: "2019-05-22"};
 MERGE (node:Documentation {id: "CSIRO-responsible-ai-pattern-catalogue-doc"}) ON CREATE SET node += {id: "CSIRO-responsible-ai-pattern-catalogue-doc",name: "Responsible AI Pattern Catalogue: A Collection of Best Practices for AI Governance and Engineering",description: "Responsible Artificial Intelligence (RAI) is widely considered as one of the greatest scientific challenges of our time and is key to increase the adoption of Artificial Intelligence (AI). Recently, a number of AI ethics principles frameworks have been published. However, without further guidance on best practices, practitioners are left with nothing much beyond truisms. In addition, significant efforts have been placed at algorithm level rather than system level, mainly focusing on a subset of mathematics-amenable ethical principles, such as fairness. Nevertheless, ethical issues can arise at any step of the development lifecycle, cutting across many AI and non-AI components of systems beyond AI algorithms and models. To operationalize RAI from a system perspective, in this article, we present an RAI Pattern Catalogue based on the results of a multivocal literature review. Rather than staying at the principle or algorithm level, we focus on patterns that AI system stakeholders can undertake in practice to ensure that the developed AI systems are responsible throughout the entire governance and engineering lifecycle. The RAI Pattern Catalogue classifies the patterns into three groups: multi-level governance patterns, trustworthy process patterns, and RAI-by-design product patterns. These patterns provide systematic and actionable guidance for stakeholders to implement RAI.",url: "https://doi.org/10.1145/3626234",dateCreated: "2024-04-09"};
 MERGE (node:Documentation {id: "arxiv.org/pdf/2406.17864"}) ON CREATE SET node += {id: "arxiv.org/pdf/2406.17864",name: "The AI Risk Taxonomy (AIR 2024)",description: "We present a comprehensive AI risk taxonomy derived from eight government policies from the European Union, United States, and China and 16 company policies worldwide, making a significant step towards establishing a unified language for generative AI safety evaluation. We identify 314 unique risk categories, organized into a four-tiered taxonomy. At the highest level, this taxonomy encompasses System & Operational Risks, Content Safety Risks, Societal Risks, and Legal & Rights Risks. The taxonomy establishes connections between various descriptions and approaches to risk, highlighting the overlaps and discrepancies between public and private sector conceptions of risk. By providing this unified framework, we aim to advance AI safety through information sharing across sectors and the promotion of best practices in risk mitigation for generative AI models and systems.",url: "https://arxiv.org/pdf/2406.17864",dateCreated: "2024-09-05",dateModified: "2024-09-05"};
@@ -198,6 +199,7 @@ MERGE (node:RiskTaxonomy {id: "nist-ai-rmf"}) ON CREATE SET node += {id: "nist-a
 MERGE (node:RiskTaxonomy {id: "ailuminate-v1.0"}) ON CREATE SET node += {id: "ailuminate-v1.0",name: "AILuminate",description: "AI-safety benchmark developed by the MLCommons Risk and Reliability Working Group through an open process based on a collaboration of participants from a variety of interested fields. AILuminate is a benchmark suite that analyzes a models' responses to prompts across twelve hazard categories to produce “safety grades” for general purpose chat systems, including the largest LLMs, that can be immediately incorporated into organizational decision-making.",url: "https://mlcommons.org/ailuminate/",dateCreated: "2025-02-19",version: "1.0",type: "RiskTaxonomy"};
 MERGE (node:RiskTaxonomy {id: "mit-ai-risk-repository"}) ON CREATE SET node += {id: "mit-ai-risk-repository",name: "The AI Risk Repository: Domain Taxonomy of AI Risks",description: "The Domain Taxonomy of AI Risks adapted from Weidinger (2021) classifies risks into 7 AI risk domains: (1) Discrimination & Toxicity, (2) Privacy & Security, (3) Misinformation, (4) Malicious Actors & Misuse, (5) Human-Computer Interaction, (6) Socioeconomic & Environmental, and (7) AI System Safety, Failures, & Limitations.",url: "https://airisk.mit.edu/",dateCreated: "2024-08-16",version: "1",type: "RiskTaxonomy"};
 MERGE (node:RiskTaxonomy {id: "mit-ai-risk-repository-causal"}) ON CREATE SET node += {id: "mit-ai-risk-repository-causal",name: "The AI Risk Repository: Casual Taxonomy of AI Risks",description: "The Causal Taxonomy of AI Risks, adapted from Yampolskiy (2016), classifies risks by its causal factors (1) entity (human, AI), (2) intentionality (intentional, unintentional), and (3) timing (pre-deployment, post-deployment).",url: "https://airisk.mit.edu/",dateCreated: "2024-08-16",version: "1",type: "RiskTaxonomy"};
+MERGE (node:Taxonomy {id: "aiuc1"}) ON CREATE SET node += {id: "aiuc1",name: "AIUC-1 Framework",description: "AI Unified Compliance (AIUC-1) is a compliance certification framework with 6 principles, 51 requirements, and 129 controls for enterprise AI system governance.",url: "https://www.aiuc1.com",dateCreated: "2026-01-15",dateModified: "2026-02-10",type: "Taxonomy"};
 MERGE (node:CapabilityTaxonomy {id: "ibm-ai-capabilities"}) ON CREATE SET node += {id: "ibm-ai-capabilities",name: "IBM AI Capabilities Framework",description: "A comprehensive taxonomy of AI capabilities designed to help practitioners understand, evaluate, and implement foundation model abilities. This framework organizes capabilities into domains and categories, with clear links to tasks, benchmarks, and implementation patterns. This taxonomy was informed by analysis of multiple external capability frameworks, including BIG-bench capability keywords, HELM evaluation scenarios, and OECD AI Capability Indicators.",dateCreated: "2025-11-26",dateModified: "2025-12-02",type: "CapabilityTaxonomy"};
 MERGE (node:RiskTaxonomy {id: "csiro-responsible-ai-patterns"}) ON CREATE SET node += {id: "csiro-responsible-ai-patterns",name: "CSIRO Responsible AI Pattern Catalogue",description: "A pattern-oriented approach is taken to build up the Responsible AI Pattern Catalogue, for operationalizing responsible AI from a system perspective.",url: "https://research.csiro.au/ss/science/projects/responsible-ai-pattern-catalogue/",dateCreated: "2024-04-09",version: "1.0",type: "RiskTaxonomy"};
 MERGE (node:RiskTaxonomy {id: "ai-risk-taxonomy"}) ON CREATE SET node += {id: "ai-risk-taxonomy",name: "The AI Risk Taxonomy (AIR 2024)",description: "An AI risk taxonomy derived from eight government policies from the European Union, United States, and China and 16 company policies worldwide. It identifies 314 unique risk categories organized into a four-tiered taxonomy. This taxonomy encompasses System & Operational Risks, Content Safety Risks, Societal Risks, and Legal & Rights Risks. The taxonomy establishes connections between various descriptions and approaches to risk, highlighting the overlaps and discrepancies between public and private sector conceptions of risk. ",url: "https://arxiv.org/pdf/2406.17864",dateCreated: "2024-09-05",version: "1",type: "RiskTaxonomy"};
@@ -395,6 +397,159 @@ MERGE (node:Risk {id: "mit-ai-causal-risk-intent-other"}) ON CREATE SET node += 
 MERGE (node:Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) ON CREATE SET node += {id: "mit-ai-causal-risk-timing-pre-deployment",name: "Pre -deployment",description: "The risk occurs before the AI is deployed",type: "Risk",descriptor: "[]"};
 MERGE (node:Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) ON CREATE SET node += {id: "mit-ai-causal-risk-timing-post-deployment",name: "Post -deployment",description: "The risk occurs after the AI model has been trained and deployed",type: "Risk",descriptor: "[]"};
 MERGE (node:Risk {id: "mit-ai-causal-risk-timing-other"}) ON CREATE SET node += {id: "mit-ai-causal-risk-timing-other",name: "Other",description: "The risk is presented without a clearly specified time of occurrence",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-a001"}) ON CREATE SET node += {id: "aiuc1-req-a001",name: "Establish input data policy",description: "Establish and communicate AI input data policies covering how customer data is used for model training, inference processing, data retention periods, and customer data rights
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-a",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-a002"}) ON CREATE SET node += {id: "aiuc1-req-a002",name: "Establish output data policy",description: "Establish AI output ownership, usage, opt-out and deletion policies to customers and communicate these policies
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-a",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-a003"}) ON CREATE SET node += {id: "aiuc1-req-a003",name: "Limit AI agent data collection",description: "Implement safeguards to limit AI agent data access to task-relevant information based on user roles and context
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-a",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-a004"}) ON CREATE SET node += {id: "aiuc1-req-a004",name: "Protect IP & trade secrets",description: "Implement safeguards or technical controls to prevent AI systems from leaking company intellectual property or confidential information
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-a",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-a005"}) ON CREATE SET node += {id: "aiuc1-req-a005",name: "Prevent cross-customer data exposure",description: "Implement safeguards to prevent cross-customer data exposure when combining customer data from multiple sources
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-a",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-a006"}) ON CREATE SET node += {id: "aiuc1-req-a006",name: "Prevent PII leakage",description: "Establish safeguards to prevent personal data leakage through AI outputs
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-a",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-a007"}) ON CREATE SET node += {id: "aiuc1-req-a007",name: "Prevent IP violations",description: "Implement safeguards and technical controls to prevent AI outputs from violating copyrights, trademarks, or other third-party intellectual property rights
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-a",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b001"}) ON CREATE SET node += {id: "aiuc1-req-b001",name: "Third-party testing of adversarial robustness",description: "Implement adversarial testing program to validate system resilience against adversarial inputs and prompt injection attempts in line with adversarial threat taxonomy
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b002"}) ON CREATE SET node += {id: "aiuc1-req-b002",name: "Detect adversarial input",description: "Implement monitoring capabilities to detect and respond to adversarial inputs and prompt injection attempts
+
+Application: Optional. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b003"}) ON CREATE SET node += {id: "aiuc1-req-b003",name: "Manage public release of technical details",description: "Implement controls to prevent over-disclosure of technical information about AI systems and organizational details that could enable adversarial targeting
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b004"}) ON CREATE SET node += {id: "aiuc1-req-b004",name: "Prevent AI endpoint scraping",description: "Implement safeguards to prevent probing or scraping of external AI endpoints
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b005"}) ON CREATE SET node += {id: "aiuc1-req-b005",name: "Implement real-time input filtering",description: "Implement real-time input filtering using automated moderation tools
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b006"}) ON CREATE SET node += {id: "aiuc1-req-b006",name: "Prevent unauthorized AI agent actions",description: "Implement safeguards to limit AI agent system access based on context and declared objectives
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b007"}) ON CREATE SET node += {id: "aiuc1-req-b007",name: "Enforce user access privileges to AI systems",description: "Establish and maintain user access controls and admin privileges for AI systems in line with policy
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b008"}) ON CREATE SET node += {id: "aiuc1-req-b008",name: "Protect model deployment environment",description: "Implement security measures for AI model deployment environments including encryption, access controls and authorization
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-b009"}) ON CREATE SET node += {id: "aiuc1-req-b009",name: "Limit output over-exposure",description: "Implement output limitations and obfuscation techniques to safeguard against information leakage
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-b",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c001"}) ON CREATE SET node += {id: "aiuc1-req-c001",name: "Define AI risk taxonomy",description: "Establish a risk taxonomy that categorizes risks within harmful, out-of-scope, and hallucinated outputs, tool calls, and other risks based on application-specific usage
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c002"}) ON CREATE SET node += {id: "aiuc1-req-c002",name: "Conduct pre-deployment testing",description: "Conduct internal testing of AI systems prior to deployment across risk categories for system changes requiring formal review or approval
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c003"}) ON CREATE SET node += {id: "aiuc1-req-c003",name: "Prevent harmful outputs",description: "Implement safeguards or technical controls to prevent harmful outputs including distressed outputs, angry responses, high-risk advice, offensive content, bias, and deception
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c004"}) ON CREATE SET node += {id: "aiuc1-req-c004",name: "Prevent out-of-scope outputs",description: "Implement safeguards or technical controls to prevent out-of-scope outputs (e.g. political discussion, healthcare advice)
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c005"}) ON CREATE SET node += {id: "aiuc1-req-c005",name: "Prevent customer-defined high risk outputs",description: "Implement safeguards or technical controls to prevent additional high risk outputs as defined in risk taxonomy
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c006"}) ON CREATE SET node += {id: "aiuc1-req-c006",name: "Prevent output vulnerabilities",description: "Implement safeguards to prevent security vulnerabilities in outputs from impacting users
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c007"}) ON CREATE SET node += {id: "aiuc1-req-c007",name: "Flag high risk outputs",description: "Implement an alerting system that flags high-risk outputs for human review
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c008"}) ON CREATE SET node += {id: "aiuc1-req-c008",name: "Monitor AI risk categories",description: "Implement monitoring of AI systems across risk categories
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c009"}) ON CREATE SET node += {id: "aiuc1-req-c009",name: "Enable real-time feedback and intervention",description: "Implement mechanisms to enable real-time user feedback collection and intervention mechanisms
+
+Application: Optional. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c010"}) ON CREATE SET node += {id: "aiuc1-req-c010",name: "Third-party testing for harmful outputs",description: "Appoint expert third parties to evaluate system robustness to harmful outputs including distressed outputs, angry responses, high-risk advice, offensive content, bias, and deception at least every 3 months
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c011"}) ON CREATE SET node += {id: "aiuc1-req-c011",name: "Third-party testing for out-of-scope outputs",description: "Appoint expert third parties to evaluate system robustness to out-of-scope outputs at least every 3 months (e.g. political discussion, healthcare advice)
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-c012"}) ON CREATE SET node += {id: "aiuc1-req-c012",name: "Third-party testing for customer-defined risk",description: "Appoint expert third-parties to evaluate system robustness to additional high-risk outputs as defined in risk taxonomy at least every 3 months
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-c",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-d001"}) ON CREATE SET node += {id: "aiuc1-req-d001",name: "Prevent hallucinated outputs",description: "Implement safeguards or technical controls to prevent hallucinated outputs
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-d",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-d002"}) ON CREATE SET node += {id: "aiuc1-req-d002",name: "Third-party testing for hallucinations",description: "Appoint expert third-parties to evaluate hallucinated outputs at least every 3 months
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-d",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-d003"}) ON CREATE SET node += {id: "aiuc1-req-d003",name: "Restrict unsafe tool calls",description: "Implement safeguards or technical controls to prevent tool calls in AI systems from executing unauthorized actions, accessing restricted information, or making decisions beyond their intended scope
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-d",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-d004"}) ON CREATE SET node += {id: "aiuc1-req-d004",name: "Third-party testing of tool calls",description: "Appoint expert third-parties to evaluate tool calls in AI systems, including executing unauthorized actions, accessing restricted information, or making decisions beyond their intended scope at least every 3 months
+
+Application: Mandatory. Review Frequency: Every 3 months.",isPartOf: "aiuc1-principle-d",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e001"}) ON CREATE SET node += {id: "aiuc1-req-e001",name: "AI failure plan for security breaches",description: "Document AI failure plan for AI privacy and security breaches assigning accountable owners and establishing notification and remediation with third-party support as needed (e.g. legal, PR, insurers)
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e002"}) ON CREATE SET node += {id: "aiuc1-req-e002",name: "AI failure plan for harmful outputs",description: "Document AI failure plan for harmful AI outputs that cause significant customer harm assigning accountable owners and establishing remediation with third-party support as needed (e.g. legal, PR, insurers)
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e003"}) ON CREATE SET node += {id: "aiuc1-req-e003",name: "AI failure plan for hallucinations",description: "Document AI failure plan for hallucinated AI outputs that cause substantial customer financial loss assigning accountable owners and establishing remediation with third-party support as needed (e.g. legal, PR, insurers)
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e004"}) ON CREATE SET node += {id: "aiuc1-req-e004",name: "Assign accountability",description: "Document which AI system changes across the development & deployment lifecycle require formal review or approval, assign a lead accountable for each, and document their approval with supporting evidence
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e005"}) ON CREATE SET node += {id: "aiuc1-req-e005",name: "Assess cloud vs on-prem processing",description: "Establish criteria for selecting cloud provider, and circumstances for on-premises processing considering data sensitivity, regulatory requirements, security controls, and operational needs
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e006"}) ON CREATE SET node += {id: "aiuc1-req-e006",name: "Conduct vendor due diligence",description: "Establish AI vendor due diligence processes for foundation and upstream model providers covering data handling, PII controls, security and compliance
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e007"}) ON CREATE SET node += {id: "aiuc1-req-e007",name: "[Retired] Document system change approvals",description: "Merged with E004 - see changelog (Q1 2026 update)
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e008"}) ON CREATE SET node += {id: "aiuc1-req-e008",name: "Review internal processes",description: "Establish regular internal reviews of key processes and document review records and approvals
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e009"}) ON CREATE SET node += {id: "aiuc1-req-e009",name: "Monitor third-party access",description: "Implement systems to monitor third party access
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e010"}) ON CREATE SET node += {id: "aiuc1-req-e010",name: "Establish AI acceptable use policy",description: "Establish and implement an AI acceptable use policy
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e011"}) ON CREATE SET node += {id: "aiuc1-req-e011",name: "Record processing locations",description: "Document AI data processing locations
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e012"}) ON CREATE SET node += {id: "aiuc1-req-e012",name: "Document regulatory compliance",description: "Document applicable AI laws and standards, required data protections, and strategies for compliance
+
+Application: Mandatory. Review Frequency: Every 6 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e013"}) ON CREATE SET node += {id: "aiuc1-req-e013",name: "Implement quality management system",description: "Establish a quality management system for AI systems proportionate to the size of the organization
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e014"}) ON CREATE SET node += {id: "aiuc1-req-e014",name: "Share transparency reports",description: "Merged with E017 - see changelog (Q1 2026 update)
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e015"}) ON CREATE SET node += {id: "aiuc1-req-e015",name: "Log model activity",description: "Maintain logs of AI system processes, actions, and model outputs where permitted to support incident investigation, auditing, and explanation of AI system behavior
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e016"}) ON CREATE SET node += {id: "aiuc1-req-e016",name: "Implement AI disclosure mechanisms",description: "Implement clear disclosure mechanisms to inform users when they are interacting with AI systems rather than humans
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-e017"}) ON CREATE SET node += {id: "aiuc1-req-e017",name: "Document system transparency policy",description: "Establish a system transparency policy and maintain a repository of model cards, datasheets, and interpretability reports for major systems
+
+Application: Optional. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-e",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-f001"}) ON CREATE SET node += {id: "aiuc1-req-f001",name: "Prevent AI cyber misuse",description: "Implement or document guardrails to prevent AI-enabled misuse for cyber attacks and exploitation
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-f",type: "Risk",descriptor: "[]"};
+MERGE (node:Entry {id: "aiuc1-req-f002"}) ON CREATE SET node += {id: "aiuc1-req-f002",name: "Prevent catastrophic misuse",description: "Implement or document guardrails to prevent AI-enabled catastrophic system misuse (chemical / bio / radio / nuclear)
+
+Application: Mandatory. Review Frequency: Every 12 months.",isPartOf: "aiuc1-principle-f",type: "Risk",descriptor: "[]"};
 MERGE (node:Capability {id: "ibm-cap-reading-comprehension"}) ON CREATE SET node += {id: "ibm-cap-reading-comprehension",name: "Reading Comprehension",description: "The ability to understand written text, extract key information, and answer questions about the content. This is a foundational capability for question-answering, summarization, and information retrieval tasks. Sources: Aligned with BIG-bench \"Reading Comprehension\" keyword (36 tasks), OECD \"Knowledge access through language\" subdomain, and HELM question-answering scenarios.",dateCreated: "2025-11-26",dateModified: "2025-12-02",type: "Capability"};
 MERGE (node:Capability {id: "ibm-cap-contextual-understanding"}) ON CREATE SET node += {id: "ibm-cap-contextual-understanding",name: "Contextual Understanding",description: "The ability to understand context, resolve coreferences, and interpret implicit information in text. Essential for multi-turn conversations, document understanding, and tasks requiring maintaining context across long passages. Sources: Related to BIG-bench \"Contextual Question-Answering\" tasks and OECD \"Learning through language\" subdomain.",dateCreated: "2025-11-26",dateModified: "2025-12-02",type: "Capability"};
 MERGE (node:Capability {id: "ibm-cap-text-generation"}) ON CREATE SET node += {id: "ibm-cap-text-generation",name: "Text Generation",description: "The ability to generate coherent, fluent, and contextually appropriate text. This includes completing prompts, writing essays, creating stories, and producing natural language output. Sources: Related to BIG-bench \"Free Response\" format tasks, OECD \"Communication\" capability, and HELM text generation scenarios.",dateCreated: "2025-11-26",dateModified: "2025-12-02",type: "Capability"};
@@ -843,6 +998,12 @@ MERGE (node:RiskGroup {id: "mit-ai-risk-domain-7"}) ON CREATE SET node += {id: "
 MERGE (node:RiskGroup {id: "mit-ai-risk-repository-causal-entity"}) ON CREATE SET node += {id: "mit-ai-risk-repository-causal-entity",name: "Entity",type: "RiskGroup"};
 MERGE (node:RiskGroup {id: "mit-ai-risk-repository-causal-intent"}) ON CREATE SET node += {id: "mit-ai-risk-repository-causal-intent",name: "Intent",type: "RiskGroup"};
 MERGE (node:RiskGroup {id: "mit-ai-risk-repository-causal-timing"}) ON CREATE SET node += {id: "mit-ai-risk-repository-causal-timing",name: "Timing",type: "RiskGroup"};
+MERGE (node:Group {id: "aiuc1-principle-a"}) ON CREATE SET node += {id: "aiuc1-principle-a",name: "Principle A: Data & Privacy",hasPart: "[]",type: "Group"};
+MERGE (node:Group {id: "aiuc1-principle-b"}) ON CREATE SET node += {id: "aiuc1-principle-b",name: "Principle B: Security",hasPart: "[]",type: "Group"};
+MERGE (node:Group {id: "aiuc1-principle-c"}) ON CREATE SET node += {id: "aiuc1-principle-c",name: "Principle C: Safety",hasPart: "[]",type: "Group"};
+MERGE (node:Group {id: "aiuc1-principle-d"}) ON CREATE SET node += {id: "aiuc1-principle-d",name: "Principle D: Reliability",hasPart: "[]",type: "Group"};
+MERGE (node:Group {id: "aiuc1-principle-e"}) ON CREATE SET node += {id: "aiuc1-principle-e",name: "Principle E: Accountability",hasPart: "[]",type: "Group"};
+MERGE (node:Group {id: "aiuc1-principle-f"}) ON CREATE SET node += {id: "aiuc1-principle-f",name: "Principle F: Society",hasPart: "[]",type: "Group"};
 MERGE (node:CapabilityGroup {id: "ibm-cap-domain-language"}) ON CREATE SET node += {id: "ibm-cap-domain-language",name: "Language Understanding and Generation",description: "Capabilities related to processing, understanding, and generating natural language. This includes comprehension of written text, semantic understanding, and fluent language production across multiple languages and contexts.",type: "CapabilityGroup"};
 MERGE (node:CapabilityDomain {id: "ibm-cap-domain-reasoning"}) ON CREATE SET node += {id: "ibm-cap-domain-reasoning",name: "Reasoning and Problem Solving",description: "Capabilities related to logical inference, mathematical reasoning, causal understanding, and multi-step problem solving. These abilities enable AI systems to draw conclusions, solve complex problems, and reason through chains of dependencies.",type: "CapabilityDomain"};
 MERGE (node:CapabilityDomain {id: "ibm-cap-domain-knowledge-and-learning"}) ON CREATE SET node += {id: "ibm-cap-domain-knowledge-and-learning",name: "Knowledge and Learning",description: "Capabilities related to acquiring, storing, retrieving, and applying knowledge across domains. This includes factual knowledge, domain expertise, common sense reasoning, and understanding of how the world works.",type: "CapabilityDomain"};
@@ -941,6 +1102,438 @@ MERGE (node:RiskGroup {id: "credo-rg-security"}) ON CREATE SET node += {id: "cre
 MERGE (node:RiskGroup {id: "credo-rg-societal-impact"}) ON CREATE SET node += {id: "credo-rg-societal-impact",name: "Societal Impact",type: "RiskGroup"};
 MERGE (node:RiskGroup {id: "credo-rg-third-party"}) ON CREATE SET node += {id: "credo-rg-third-party",name: "Third Party",type: "RiskGroup"};
 MERGE (node:Vocabulary {id: "ibm-factuality"}) ON CREATE SET node += {id: "ibm-factuality",name: "IBM Factuality",description: "Some of the factuality concerns of working with generative AI, foundation models, and machine learning models.",dateCreated: "2025-08-07",dateModified: "2025-08-07",type: "Vocabulary"};
+MERGE (node:Action {id: "aiuc1-ctrl-a001-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-a001-1",name: "A001 - Control 1",description: "[Core Control]
+- Defining and communicating input data usage policies. Including specifying how customer data is used for inference and model training, establishing data retention periods, and documenting customer data rights.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a001-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-a001-2",name: "A001 - Control 12",description: "[Core Control]
+
+- Implementing technical controls to enforce data retention and deletion policies. For example, automating data deletion based on retention schedules, using secure removal mechanisms, and managing data lifecycles.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a001-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-a001-3",name: "A001 - Control 3",description: "[Supplemental Control]
+
+- Documenting processes for handling end-user data subject rights. For example, handling requests for opt-in/opt-out rights, access, portability, or deletion of input data.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a002-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-a002-1",name: "A002 - Control 1",description: "[Core Control]
+
+- Establishing output ownership and usage rights policies. For example, specifying customer ownership of AI-generated outputs versus AI inputs, defining permitted uses of outputs (commercial use, redistribution, modification), documenting usage restrictions or limitations, and clarifying how ownership applies to different output types or use cases.
+- Disclosing opt-out and deletion procedures for AI outputs. For example, documenting how customers can opt out of output storage or reuse, explaining deletion request processes, specifying retention periods and data handling practices, and clarifying how customers can control or revoke permissions for their outputs.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a003-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-a003-1",name: "A003 - Control 1",description: "[Core Control]
+
+- Configuring data collection limits to reduce data and privacy exposure. For example, limiting data collection to task-relevant information based on context, implementing scoping based on user roles or workflow requirements, and avoiding persistent or out-of-scope data access.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a003-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-a003-2",name: "A003 - Control 2",description: "[Supplemental Control]
+
+- Deploying monitoring mechanisms. Including ensuring AI systems only perform necessary inference and logging deviations from defined operational scope.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a003-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-a003-3",name: "A003 - Control 3",description: "[Supplemental Control]
+
+- Integrating with existing authorization systems to align agent access permissions with organizational policies.
+",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a004-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-a004-1",name: "A004 - Control 1",description: "[Core Control]
+
+- Providing user guidance on protecting confidential information. For example, instructing employees not to input trade secrets, proprietary code, or confidential business information into AI systems, communicating data handling policies for AI tool usage, or establishing clear guidelines on what information can and cannot be shared with AI agents.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a004-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-a004-2",name: "A004 - Control 2",description: "[Supplemental Control]
+
+- Leveraging foundation model provider protections. For example, using providers with zero data retention policies, requiring contractual commitments that inputs are not used for training, selecting models with enhanced privacy guarantees for sensitive use cases.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a004-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-a004-3",name: "A004 - Control 3",description: "[Supplemental Control]
+
+- Implementing technical controls to detect proprietary information in outputs.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a004-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-a004-4",name: "A004 - Control 4",description: "[Supplemental Control]
+
+- Establishing output monitoring for high-risk IP scenarios. For example, logging AI responses that accessed confidential data sources, implementing human review workflows for outputs flagged as potentially containing sensitive information.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a005-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-a005-1",name: "A005 - Control 1",description: "[Core Control]
+
+- Establishing explicit consent and disclosure for combined data usage. For example, informing customers when their data will be combined with competitor data, disclosing data anonymization and abstraction policies, providing opt-out mechanisms.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a005-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-a005-2",name: "A005 - Control 2",description: "[Core Control]
+
+- Implementing customer data isolation controls. For example, enforcing strict logical and physical separation of customer data, applying tenant-specific encryption, validating data flow boundaries in shared infrastructure, establishing technical barriers between customer datasets during training.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a005-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-a005-3",name: "A005 - Control 3",description: "[Supplemental Control]
+
+- Implementing specific privacy-enhancing technologies (PETs) to reduce competitive exposure.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a006-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-a006-1",name: "A006 - Control 1",description: "[Core Control]
+
+- Implementing safeguards to prevent personal data leakage through AI system outputs and logs. For example, filtering prompts and outputs for personal identifiers before storage or display, implementing automated PII detection and redaction in system logs, preventing retention of outputs containing sensitive personal information, or blocking responses that would expose personal identifiers.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a006-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-a006-2",name: "A006 - Control 2",description: "[Core Control]
+
+- Requiring authentication and authorization for PII access. For example, role-based access controls for PII-containing systems, multi-factor authentication for sensitive data access, or approval-gated access to customer information.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a006-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-a006-3",name: "A006 - Control 3",description: "[Supplemental Control]
+
+- Integrating with existing data loss prevention (DLP) systems to monitor and block outputs containing personal data in violation of policy.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a007-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-a007-1",name: "A007 - Control 1",description: "[Core Control]
+
+- Documenting foundation model provider IP protections which may serve as primary infringement safeguards. For example, indemnification clauses or copyright/trademark guardrails.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a007-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-a007-2",name: "A007 - Control 2",description: "[Supplemental Control]
+
+- Establishing supplementary content filtering mechanisms where provider protections have gaps or limitations. For example, detecting copyrighted material in outputs, implementing trademark screening.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-a007-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-a007-3",name: "A007 - Control 3",description: "[Supplemental Control]
+
+- Implementing user guidance and guardrails to reduce IP risk. For example, usage policies that explain prohibited content types, user warnings in product, restricting output generation in known infringement domains.
+- Implementing restrictions in AI acceptable use policy.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b001-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b001-1",name: "B001 - Control 1",description: "[Core Control]
+
+- Establishing a taxonomy for adversarial risks. For example, drawing on NIST's AI 100-2e2023 attack classifications and aligning these to system architecture and use cases.
+- Conducting comprehensive adversarial testing at least quarterly. For example, performing structured red-teaming, prompt injection assessments, jailbreaking attempts, adversarial perturbation testing, semantic manipulation, and simulated malicious tool invocations.
+- Maintaining secure testing documentation. For example, recording test cases, methods, outcomes, and system behaviors with restricted access controls, implementing secure storage for sensitive testing materials.
+- Establishing improvement processes based on findings. For example, assigning owners and remediation timelines based on test severity, tracking fixes through risk registers or issue management systems, documenting updates to safeguards and procedures.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b001-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b001-2",name: "B001 - Control 2",description: "[Supplemental Control]
+
+- Aligning adversarial testing with broader security testing programs. For example, integrating AI-specific test cases into broader penetration testing, sharing threat models across red/blue teams, aligning test cycles with security audit and compliance calendars.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b002-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b002-1",name: "B002 - Control 1",description: "[Core Control]
+
+- Establishing detection and alerting. For example, implementing monitoring for prompt injection patterns, jailbreak techniques, adversarial input attempts, and exceeding rate limits, configuring alerts and threat notifications for suspicious activities.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b002-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b002-2",name: "B002 - Control 2",description: "[Core Control]
+
+- Implementing incident logging and response procedures. For example, logging suspected adversarial attacks with relevant context, escalating to designated personnel based on severity, and documenting response actions in a centralized system.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b002-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-b002-3",name: "B002 - Control 3",description: "[Core Control]
+
+- Maintaining detection effectiveness through quarterly reviews. For example, updating detection rules based on emerging adversarial techniques, analyzing incident patterns and documenting system improvements.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b002-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-b002-4",name: "B002 - Control 4",description: "[Supplemental Control]
+
+- Implementing adversarial input detection prior to AI model processing where feasible. For example, using pre-processing filters to flag likely threats before model processing.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b002-5"}) ON CREATE SET node += {id: "aiuc1-ctrl-b002-5",name: "B002 - Control 5",description: "[Supplemental Control]
+
+- Integrating adversarial input detection into existing security operations tooling. For example, forwarding flagged inputs to SIEM platforms, correlating detection with authentication and network logs, enabling SOC teams to triage AI-related security events.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b003-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b003-1",name: "B003 - Control 1",description: "[Core Control]
+
+- Documenting limitations on technical information release. For example, limiting public disclosure of model architectures, algorithms, training data details, system configurations, and performance metrics, requiring approval before sharing technical specifications or implementation details.
+- Controlling organizational information to balance transparency with security. For example, limiting disclosure of AI team details, development timelines, and other information that could reveal technical capabilities, reviewing public communications for sensitive information.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b003-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b003-2",name: "B003 - Control 2",description: "[Supplemental Control]
+
+- Establishing approval processes. For example, requiring designated review for public content referencing AI capabilities in e.g. publications, presentations, and marketing materials, and documenting approved disclosures with business justification.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b004-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b004-1",name: "B004 - Control 1",description: "[Core Control]
+
+- Implementing systems distinguishing between high-volume legitimate usage and adversarial behavior. For example, using behavioral analytics and user profiling to calibrate detection thresholds and prevent false positives against trusted users.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b004-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b004-2",name: "B004 - Control 2",description: "[Core Control]
+
+- Implementing rate limiting and query restrictions. For example, establishing per-user quotas to prevent model extraction, blocking excessive query patterns, implementing progressive restrictions for suspicious behavior, or using economic disincentives for high-volume usage.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b004-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-b004-3",name: "B004 - Control 3",description: "[Core Control]
+
+- Conducting simulated external attack testing of AI endpoints. For example, performing automated attack simulations, testing endpoint protection effectiveness against high-volume and distributed attacks, and documenting methodologies appropriate to organizational threat profile.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b004-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-b004-4",name: "B004 - Control 4",description: "[Core Control]
+
+- Maintaining endpoint security through remediation. For example, tracking identified vulnerabilities, implementing protective measures based on testing outcomes, and regularly updating endpoint defenses and detection thresholds.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b005-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b005-1",name: "B005 - Control 1",description: "[Core Control]
+
+- Integrating automated moderation tools to filter inputs before they reach the foundation model. For example, integrating third-party moderation APIs, implementing custom filtering rules, configuring blocking or warning actions for flagged content, and establishing confidence thresholds based on risk category and severity",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b005-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b005-2",name: "B005 - Control 2",description: "[Supplemental Control]
+
+- Documenting the moderation logic and rationale. For example, explaining chosen moderation tools, threshold justifications, and decision criteria for different risk categories.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b005-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-b005-3",name: "B005 - Control 3",description: "[Supplemental Control]
+
+Providing feedback to users when inputs are blocked.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b005-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-b005-4",name: "B005 - Control 4",description: "[Supplemental Control]
+
+- Logging flagged prompts for analysis and refinement of filters, while ensuring compliance with privacy obligations.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b005-5"}) ON CREATE SET node += {id: "aiuc1-ctrl-b005-5",name: "B005 - Control 5",description: "[Supplemental Control]
+
+- Periodically evaluating filter performance and adjusting thresholds accordingly. For example, accuracy, latency, false positives/negatives.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b006-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b006-1",name: "B006 - Control 1",description: "[Core Control]
+
+- Implementing technical restrictions that limit agent capabilities to authorized scope. For example, restricting agent access to approved backend services and APIs, enforcing network segmentation or API gateway rules, or implementing service-level authorization preventing access to sensitive systems.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b006-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b006-2",name: "B006 - Control 2",description: "[Core Control]
+
+- Deploying monitoring and alerting for agent actions that exceed security boundaries. For example, logging all agent service interactions, alerting on access attempts to unauthorized systems or APIs, or anomaly detection flagging unusual connection patterns.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b007-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b007-1",name: "B007 - Control 1",description: "[Core Control]
+
+- Implementing system-level access controls tailored to AI systems. For example, using role-based or attribute-based access to restrict access to model configuration, training datasets, tool-calling capabilities, or prompt logs, based on job function and system sensitivity.
+- Restricting administrative and configuration privileges to authorized personnel. For example, limiting ability to alter system behavior, tools, or models.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b007-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b007-2",name: "B007 - Control 2",description: "[Core Control]
+
+- Conducting access reviews and updates at least quarterly. For example, validating access assignments, updating based on policy or role changes,  documenting access changes with AI-specific context (e.g. model access justification, changes to agent capability boundaries, or access to sensitive prompt/response history).",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b008-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b008-1",name: "B008 - Control 1",description: "[Core Control]
+
+- Implementing model access protection. For example, restricting access to production AI models based on job function and operational need, implementing MFA for model system access, maintaining user access reviews appropriate to organizational size.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b008-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b008-2",name: "B008 - Control 2",description: "[Core Control]
+
+- Establishing deployment security controls. For example, applying scoped API tokens or signed requests, using TLS for all endpoint traffic, implementing schema validation to protect model APIs from malformed or adversarial input.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b008-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-b008-3",name: "B008 - Control 3",description: "[Supplemental Control]
+
+- Securing model hosting environments. For example, using up-to-date and minimal container images, scanning for known vulnerabilities in dependencies and base images, and applying infrastructure-level isolation techniques based on risk level (e.g. container namespaces, VM separation, or dedicated GPU access).",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b008-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-b008-4",name: "B008 - Control 4",description: "[Supplemental Control]
+
+- Verifying model integrity before and during deployment. For example, using cryptographic checksums or signed artifacts to detect tampering, scanning model files for malicious payloads.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b009-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-b009-1",name: "B009 - Control 1",description: "[Core Control]
+
+- Reducing or limiting the number of results shown in outputs to relevant only to balance security and utility. For example, character limits, limits on inference time.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b009-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-b009-2",name: "B009 - Control 2",description: "[Supplemental Control]
+
+- Providing user-facing notices or documentation about output limitations.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-b009-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-b009-3",name: "B009 - Control 3",description: "[Supplemental Control]
+
+- Limiting the fidelity of model outputs in certain use cases. For example, applying output rounding, threshold bands, or obfuscation techniques to reduce the risk of model inversion.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c001-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c001-1",name: "C001 - Control 1",description: "[Core Control]
+
+- Defining risk categories with severity levels and examples based on industry and deployment context. For example, classifying harmful outputs such as distressed outputs, angry responses, high-risk advice, offensive content, bias, and deception, identifying other high-risk use cases such as safety-critical instructions, legal recommendations, financial advice.
+- Aligning risk taxonomy with external frameworks and standards.
+- Establishing severity grading appropriate to organizational context and risk tolerance. For example, implementing consistent scoring methodology across risk categories, defining thresholds for flagging and human review.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c001-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c001-2",name: "C001 - Control 2",description: "[Core Control]
+
+- Maintaining taxonomy currency with documented change management. For example, updating based on emerging threats or incidents.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c002-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c002-1",name: "C002 - Control 1",description: "[Core Control]
+
+- Conducting pre-deployment testing with documented results and identified issues. For example, structured hallucination testing, adversarial prompting, safety unit tests, and scenario-based walkthroughs.
+- Completing risk assessments of identified issues before system deployment. For example, potential impact analysis, mitigation strategies, and residual risk evaluation.
+- Obtaining approval sign-offs from designated accountable. For example, documented rationale for approval decisions and maintained records for review purposes.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c002-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c002-2",name: "C002 - Control 2",description: "[Supplemental Control]
+
+- Integrating AI system testing into established software development lifecycle (SDLC) gates. For example, including threat modelling and risk evaluation during design phases, requiring risk evaluation and sign-off at staging or pre-production milestones, aligning with CI/CD or MLOps pipelines, and documenting test artefacts in shared repositories."",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c002-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-c002-3",name: "C002 - Control 3",description: "[Supplemental Control]
+
+- Implementing pre-deployment vulnerability scanning of AI artifacts and dependencies. For example, scanning AI models and ML libraries for security vulnerabilities, validating runtime behavior for unsafe operations, and analyzing outputs for harmful content before deployment.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c003-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c003-1",name: "C003 - Control 1",description: "[Core Control]
+
+- Implementing content filtering for harmful output types. For example, detecting and blocking distressed responses, angry language, offensive content, biased statements, and deceptive information.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c003-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c003-2",name: "C003 - Control 2",description: "[Core Control]
+
+- Implementing guardrails for advice generation. For example, restricting high-risk recommendations in sensitive domains, requiring disclaimers for guidance.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c003-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-c003-3",name: "C003 - Control 3",description: "[Supplemental Control]
+
+- Implementing bias detection and mitigation controls. For example, monitoring for discriminatory patterns, implementing fairness checks in outputs.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c003-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-c003-4",name: "C003 - Control 4",description: "[Supplemental Control]
+
+- Evaluating harm mitigation controls using performance metrics.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c004-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c004-1",name: "C004 - Control 1",description: "[Core Control]
+
+- Detecting and blocking out-of-scope requests. For example, detecting conversations outside intended use cases, blocking prohibited topics, providing redirection messages when users hit boundaries, and escalating or restricting access for repeated violations.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c004-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c004-2",name: "C004 - Control 2",description: "[Core Control]
+
+- Tracking out-of-scope violations and updating boundaries. For example, logging boundary violations, adjusting restrictions based on misuse patterns.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c004-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-c004-3",name: "C004 - Control 3",description: "[Supplemental Control]
+
+- Providing user guidance on system capabilities and limitations. For example, communicating what the AI system can and cannot do, intended use cases, and topics or requests outside the system's scope.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c005-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c005-1",name: "C005 - Control 1",description: "[Core Control]
+
+- Implementing detection and blocking mechanisms aligned with organizational risk taxonomy. For example, deploying filtering based on defined risk categories and severity thresholds.
+- Implementing response actions for detected risks. For example, blocking high-severity outputs, flagging medium-risk content for review, logging violations for monitoring and analysis.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c005-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c005-2",name: "C005 - Control 2",description: "[Supplemental Control]
+
+- Establishing escalation procedures for flagged high-risk content. For example, defining when human review is required and establishing approval workflows for edge cases.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c005-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-c005-3",name: "C005 - Control 3",description: "[Supplemental Control]
+
+- Implementing automated real-time interventions. For example, blocking or modifying outputs based on severity.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c006-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c006-1",name: "C006 - Control 1",description: "[Core Control]
+
+- Establishing output sanitization and validation procedures before presenting content to users. For example, encoding or stripping potentially malicious content, validating structured outputs against safe schemas, blocking unsafe URLs, and enforcing secure rendering modes.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c006-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c006-2",name: "C006 - Control 2",description: "[Core Control]
+
+- Implementing security labeling and content handling based on trust level. For example, marking untrusted or third-party content, distinguishing external data from system-generated content, and applying differentiated security controls based on content source.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c006-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-c006-3",name: "C006 - Control 3",description: "[Supplemental Control]
+
+- Detecting advanced output-based attack patterns. For example, identifying prompt injection attempts, model subversion techniques, payloads targeting downstream systems, or obfuscated exploits designed to bypass filters.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c007-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c007-1",name: "C007 - Control 1",description: "[Core Control]
+
+- Defining high-risk output criteria drawing on risk taxonomy.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c007-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c007-2",name: "C007 - Control 2",description: "[Core Control]
+
+- Implementing automated detection mechanisms for high-risk outputs. For example, using content filtering, risk scoring, or classification models to identify outputs requiring review or flagging.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c007-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-c007-3",name: "C007 - Control 3",description: "[Supplemental Control]
+
+- Establishing human review workflows for flagged high-risk outputs. For example, assigning reviewers, defining escalation procedures for complex cases, managing review queues with response time tracking, and documenting review decisions.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c008-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c008-1",name: "C008 - Control 1",description: "[Core Control]
+
+- Establishing ongoing monitoring of AI outputs across risk categories. For example, conducting regular evaluations prioritized by risk severity, sampling outputs for review, and tracking system behavior patterns.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c008-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c008-2",name: "C008 - Control 2",description: "[Supplemental Control]
+
+- Maintaining documentation. For example, recording identified scenarios with clear examples, updating risk taxonomy based on monitoring findings and incidents.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c008-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-c008-3",name: "C008 - Control 3",description: "[Supplemental Control]
+
+- Integrating AI output monitoring with existing security tools. For example, forwarding alerts and flagged outputs to SIEM platforms, applying standard logging formats (e.g. JSON, syslog) to support automated threat detection workflows.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c009-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c009-1",name: "C009 - Control 1",description: "[Core Control]
+
+- Enabling user intervention capabilities. For example, providing mechanisms for users to pause, stop, or redirect system behavior, implementing feedback collection tools for users to report issues or concerns, ensuring technical controls persist across devices and interaction contexts.
+- Ensuring accessibility of feedback and intervention mechanisms. For example, adhering to WCAG 2.1 standards for color contrast, screen reader compatibility, keyboard navigation, and clear messaging for users with disabilities.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c009-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-c009-2",name: "C009 - Control 2",description: "[Supplemental Control]
+
+- Reviewing user feedback and intervention logs regularly. For example, evaluating patterns in interventions, adapting communication methods based on user needs and emerging risk considerations.
+- Analyzing collected feedback using structured methodologies. For example, categorizing by risk domain, prioritizing based on frequency and severity,  routing high-impact or repeat issues into product backlog or compliance workflows.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c010-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c010-1",name: "C010 - Control 1",description: "[Core Control]
+
+- Appointing qualified third-party assessors. Including selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence.
+- Conducting regular testing. Including performing assessments of harmful outputs at least every quarter, defining testing scope and methodologies based on risk classifications and industry benchmarks like ToxiGen, coordinating with internal security and testing teams.
+- Maintaining documentation. Including testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c011-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c011-1",name: "C011 - Control 1",description: "[Core Control]
+
+- Appointing qualified third-party assessors. Including selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence.
+- Conducting regular testing. Including defining testing scope and methodologies based on risk taxonomy and performing assessments of out-of-scope outputs at least every quarter.
+- Maintaining documentation. Including testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-c012-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-c012-1",name: "C012 - Control 1",description: "[Core Control]
+
+- Appointing qualified third-party assessors. Including selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence.
+- Conducting regular testing. Including defining testing scope and methodologies based on risk taxonomy and performing assessments of high-risk areas at least every quarter.
+- Maintaining documentation. Including testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d001-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-d001-1",name: "D001 - Control 1",description: "[Core Control]
+
+- Implementing factual accuracy controls. For example, deploying available fact-checking mechanisms, flagging uncertain or low-confidence responses.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d001-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-d001-2",name: "D001 - Control 2",description: "[Core Control]
+
+- Establishing information source validation. For example, requiring citations for factual claims, implementing source reliability checks.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d001-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-d001-3",name: "D001 - Control 3",description: "[Supplemental Control]
+
+- Maintaining uncertainty communication. For example, displaying confidence levels, providing appropriate disclaimers for generated information.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d002-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-d002-1",name: "D002 - Control 1",description: "[Core Control]
+
+- Appointing qualified third-party assessors. Including selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence.
+- Conducting regular testing. Including defining testing scope and methodologies based on risk taxonomy and performing assessments at least every quarter.
+- Maintaining documentation. Including testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d003-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-d003-1",name: "D003 - Control 1",description: "[Core Control]
+
+- Implementing function call validation and authorization. For example, restricting tool access to approved functions, validating parameters before execution.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d003-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-d003-2",name: "D003 - Control 2",description: "[Core Control]
+
+- Enforcing rate limits and transaction caps for autonomous tool use.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d003-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-d003-3",name: "D003 - Control 3",description: "[Core Control]
+
+- Establishing execution monitoring and logging. For example, tracking all tool calls, monitoring for unauthorized access attempts or scope violations.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d003-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-d003-4",name: "D003 - Control 4",description: "[Supplemental Control]
+
+- Requiring human approval for sensitive tool operations. For example, requiring human confirmation before executing high-risk actions, implementing approval workflows for operations beyond autonomous boundaries.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d003-5"}) ON CREATE SET node += {id: "aiuc1-ctrl-d003-5",name: "D003 - Control 5",description: "[Supplemental Control]
+
+- Reviewing patterns of AI tool usage. For example, identifying anomalies, updating tool permissions, and retiring unused or high-risk functions during scheduled evaluations.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-d004-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-d004-1",name: "D004 - Control 1",description: "[Core Control]
+
+- Appointing qualified third-party assessors. Including selecting assessors with relevant technical capabilities for identified risk areas, maintaining records of assessor qualifications and independence.
+- Conducting regular testing. Including defining testing scope and methodologies based on risk taxonomy and performing assessments of tool calls at least every quarter.
+- Maintaining documentation. Including testing scope, results, and remediation actions taken, tracking follow-up activities and resolution timelines.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e001-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e001-1",name: "E001 - Control 1",description: "[Core Control]
+
+- Assigning a breach response lead from existing staff. For example, IT manager, security officer, or designated executive with authority to engage external counsel and specialists as needed.
+- Defining breach notification procedures. For example, customer communications, regulatory reporting requirements, and vendor notifications based on applicable privacy laws.
+- Implementing security remediation measures. For example, system freeze capabilities, vulnerability fixes, access control updates, and coordination with external security consultants when internal expertise is insufficient.
+- Establishing evidence collection requirements with guidance on preserving evidence for potential legal review. For example, system logs, user activity records, and basic documentation.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e002-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e002-1",name: "E002 - Control 1",description: "[Core Control]
+
+- Implementing customer communication protocols. For example, disclosure procedures, explanation of corrective actions, and follow-up commitments with executive approval for significant incidents.
+- Establishing immediate mitigation steps with designated staff responsibilities. For example, system freeze capabilities, output suppression, customer notification, and system adjustments.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e002-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e002-2",name: "E002 - Control 2",description: "[Supplemental Control]
+
+- Defining harmful output categories with reference to risk taxonomy. For example, discriminatory content, offensive material, inappropriate recommendations, ideally with concrete examples.
+- Coordinating external support engagement. For example,  legal counsel consultation, PR support, and insurance claim procedures.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e003-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e003-1",name: "E003 - Control 1",description: "[Core Control]
+
+- Establishing compensation assessment procedures. For example, loss evaluation methods, settlement approaches, and payment authorization levels with appropriate approval requirements.
+- Implementing remediation measures. For example, system freeze capabilities, model adjustments, output validation improvements, customer notification, and enhanced monitoring.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e003-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e003-2",name: "E003 - Control 2",description: "[Supplemental Control]
+
+- Defining hallucination incident types.
+- Coordinating potential external support. For example, legal consultation for significant claims, financial review when needed, and insurance coverage activation.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e004-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e004-1",name: "E004 - Control 1",description: "[Core Control]
+
+- Defining AI system changes requiring approval including model selection, material changes to the meta prompt, adding / removing guardrails, changes to end-user workflow, other changes that drive material. For example, +/-10% performance on evals.
+- Assigning an accountable lead as approver for each of these changes. Can follow a RACI structure to formalize roles of those consulted and informed.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e004-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e004-2",name: "E004 - Control 2",description: "[Supplemental Control]
+
+- Implementing code signing and verification processes for AI models, libraries, and deployment artefacts to ensure only digitally signed components are approved for production use.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e005-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e005-1",name: "E005 - Control 1",description: "[Core Control]
+
+- Conducting deployment risk assessments. For example, evaluating data sensitivity, regulatory compliance requirements, IP protection needs, and security controls for cloud vs. on-premises AI processing.
+- Documenting decision criteria and rationale. For example, establishing clear selection factors, maintaining records of deployment choices with business justification.
+- Reviewing deployment decisions when requirements change. For example, reassessing choices when data sensitivity, regulations, or threat landscape evolves.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e006-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e006-1",name: "E006 - Control 1",description: "[Core Control]
+
+- Defining assessment criteria for foundational or upstream AI models. For example, data handling and ownership practices, PII controls, security measures, compliance status, open-source.
+- Conducting documented assessments. For example, scoring results, verification activities such as certifications reviewed and references contacted, and approval decisions.
+- Maintaining assessment records with sufficient detail for audit purposes and retaining due diligence evidence before vendor approval.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e007-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e007-1",name: "E007 - Control 1",description: "[Core Control]
+
+- Documenting formal review and approval decisions for changes defined in E004: Assign accountability.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e008-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e008-1",name: "E008 - Control 1",description: "[Core Control]
+
+- Reviewing decision processes every quarter including AI system changes, foundational model selection, security assessment.
+- Maintaining a centralized repository of decision records and internal review of these record. For example, supporting evidence reviewed, remediation plans.
+- Documenting and tracking remediation of any risks identified.int",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e008-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e008-2",name: "E008 - Control 2",description: "[Supplemental Control]
+
+- Collecting and implementing external feedback on AI systems. For example, system risks, new threat patterns, new mitigation strategies.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e009-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e009-1",name: "E009 - Control 1",description: "[Core Control]
+
+- Configuring logging for third-party interactions. For example, capturing API connections, user access sessions, data exchanges, and service integrations.
+- Capturing access metadata. For example, user identification, authentication timestamps, accessed resources, session duration, origin IP addresses, and resource usage patterns.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e010-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e010-1",name: "E010 - Control 1",description: "[Core Control]
+
+- Defining prohibited AI usage for end-users. For example, jailbreak attempts, malicious prompt injection, unauthorized data extraction, generation of harmful content, and misuse of customer data.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e010-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e010-2",name: "E010 - Control 2",description: "[Core Control]
+
+- Implementing detection and monitoring tools. For example, prompt analysis, output filtering, usage pattern anomalies, and suspicious access attempts.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e010-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-e010-3",name: "E010 - Control 3",description: "[Core Control]
+
+- Implementing user feedback when policy is breached. For example, showing alerts or error messages when inputs violate acceptable use.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e010-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-e010-4",name: "E010 - Control 4",description: "[Supplemental Control]
+
+- Real-time monitoring, blocking, or alerting capabilities.
+- Maintaining logging and tracking systems. For example, incident creation, violation tracking with case assignment and resolution documentation.
+- Conducting regular effectiveness reviews. For example, quarterly analysis of violation trends, tool performance assessment, policy updates based on emerging threats, and user training adjustments.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e011-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e011-1",name: "E011 - Control 1",description: "[Core Control]
+
+- Maintaining AI infrastructure location documentation. For example, geographic locations of foundation model processing locations and inference endpoint regions, documenting third-party AI service provider data handling locations.
+- Reviewing and updating documentation regularly.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e011-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e011-2",name: "E011 - Control 2",description: "[Supplemental Control]
+
+- Implementing transfer compliance procedures. For example, assessing data transfer requirements for AI training data and inference processing, maintaining approved transfer mechanisms for foundation model providers and AI infrastructure, mitigating transfer risk for cross-border AI model training.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e012-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e012-1",name: "E012 - Control 1",description: "[Core Control]
+
+- Identifying relevant regulations. For example, data protection laws. For example, GDPR, CCPA, sector-specific requirements, emerging AI standards. For example, EU AI Act.
+- Documenting compliance procedures and strategies appropriate for company size and operations.
+- Reviewing the repository every 6 months and when additional requirements may be triggered. For example, regulations change or business operations expand into new jurisdictions.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e013-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e013-1",name: "E013 - Control 1",description: "[Core Control]
+
+- Defining quality objectives, metrics, and risk management approach for AI systems. For example, establishing performance targets, safety thresholds, risk assessment methodologies, and measurement processes appropriate to system risk level.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e013-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e013-2",name: "E013 - Control 2",description: "[Core Control]
+
+- Establishing change management, approval processes, and documentation standards. For example, defining review and approval requirements for AI system changes, assigning accountability for quality decisions, documenting design and development procedures.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e013-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-e013-3",name: "E013 - Control 3",description: "[Core Control]
+
+- Implementing defect tracking, continuous improvement, and post-market monitoring. For example, maintaining issue tracking systems, conducting root cause analysis, documenting corrective actions, establishing post-market monitoring processes.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e013-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-e013-4",name: "E013 - Control 4",description: "[Supplemental Control]
+
+- Establishing data management and record-keeping systems. For example, documenting data governance procedures, maintaining technical documentation, implementing record retention policies for model training data and system outputs.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e013-5"}) ON CREATE SET node += {id: "aiuc1-ctrl-e013-5",name: "E013 - Control 5",description: "[Supplemental Control]
+
+- Documenting communication procedures with regulatory authorities and stakeholders. For example, establishing protocols for regulatory reporting, stakeholder notifications for incidents, and procedures for authority interactions.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e014-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e014-1",name: "E014 - Control 1",description: "[Supplemental Control]
+
+This requirement was merged into E017 at the Q1, 2026 standard update. See aiuc-1.com/changelog for more information",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e015-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e015-1",name: "E015 - Control 1",description: "[Core Control]
+
+- Capturing system activity details to support incident investigation and behavior explanation. For example, logging inputs, processing steps, outputs, and metadata for AI systems.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e015-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e015-2",name: "E015 - Control 2",description: "[Core Control]
+
+- Implementing log storage with appropriate retention periods, access controls, and data sanitation to support auditing and incident response.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e015-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-e015-3",name: "E015 - Control 3",description: "[Supplemental Control]
+
+- Implementing technical controls to ensure logs are tamper-evident and independently verifiable. For example, ensuring that captured records cannot be modified or deleted after creation, ensuring sequence integrity so that gaps, omissions, and reordering are detectable during incident investigation or audit.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e016-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e016-1",name: "E016 - Control 1",description: "[Core Control]
+
+- Implementing AI disclosure for text-based interactions. For example, displaying clear notices when users interact with AI chatbots, virtual assistants, or automated messaging systems.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e016-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e016-2",name: "E016 - Control 2",description: "[Core Control]
+
+- Implementing AI disclosure for voice-based interactions. For example, providing audio notifications at the beginning of voice calls or interactions.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e016-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-e016-3",name: "E016 - Control 3",description: "[Core Control]
+
+- Labelling AI-generated media and documents in a machine-readable and detectable format. For example, marking AI-generated images, videos, audio, or documents with metadata, watermarks, or labels indicating artificial generation.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e016-4"}) ON CREATE SET node += {id: "aiuc1-ctrl-e016-4",name: "E016 - Control 4",description: "[Core Control]
+
+- Disclosing when autonomous AI agents or automated workflows are performing actions. For example, notifying users when AI systems are making decisions, processing requests, or executing tasks without human oversight.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e016-5"}) ON CREATE SET node += {id: "aiuc1-ctrl-e016-5",name: "E016 - Control 5",description: "[Core Control]
+
+- Establishing reactive disclosure capabilities when users ask if they are interacting with AI.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e017-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-e017-1",name: "E017 - Control 1",description: "[Core Control]
+
+- Establishing a transparency policy defining documentation requirements for major AI systems. For example, specifying required documentation elements, establishing documentation standards.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e017-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-e017-2",name: "E017 - Control 2",description: "[Core Control]
+
+- Creating transparency documentation for major AI systems. For example, documenting system characteristics, data provenance, and model behavior for systems meeting documentation criteria.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-e017-3"}) ON CREATE SET node += {id: "aiuc1-ctrl-e017-3",name: "E017 - Control 3",description: "[Supplemental Control]
+
+- Defining policies for sharing transparency documentation with external stakeholders. For example, establishing when reports are shared, specifying recipient categories, determining what information is disclosed to each stakeholder type.
+- Documenting sharing procedures including approval workflows, version control, and distribution tracking. For example, establishing approval requirements before external sharing, maintaining version control of shared documents, tracking which stakeholders received which versions.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-f001-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-f001-1",name: "F001 - Control 1",description: "[Core Control]
+
+- Results of testing from foundation model developer on offensive cyber capabilities and mitigations.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-f001-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-f001-2",name: "F001 - Control 2",description: "[Supplemental Control]
+
+- Implementing malicious use detection and blocking. For example, deploying available content filtering to detect requests for malicious code generation, attack planning, and vulnerability exploitation guidance, configuring automated blocking of cyber attack assistance requests, maintaining databases of prohibited use patterns.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-f002-1"}) ON CREATE SET node += {id: "aiuc1-ctrl-f002-1",name: "F002 - Control 1",description: "[Core Control]
+
+- Results of testing from foundation model developer on CBRN capabilities and mitigations.",type: "Action",hasAiActorTask: "[]"};
+MERGE (node:Action {id: "aiuc1-ctrl-f002-2"}) ON CREATE SET node += {id: "aiuc1-ctrl-f002-2",name: "F002 - Control 2",description: "[Supplemental Control]
+
+- Establishing catastrophic misuse monitoring. For example, monitoring AI system interactions for patterns indicating weapons development or mass harm intent, implementing real-time alerting for detected catastrophic misuse attempts, documenting suspicious queries and system responses.",type: "Action",hasAiActorTask: "[]"};
 MERGE (node:RiskControl {id: "shieldgemma-sexually-explicit-detection"}) ON CREATE SET node += {id: "shieldgemma-sexually-explicit-detection",name: "Sexually Explicit Content Detection",type: "RiskControl"};
 MERGE (node:RiskControl {id: "shieldgemma-dangerous-content-detection"}) ON CREATE SET node += {id: "shieldgemma-dangerous-content-detection",name: "Dangerous Content Detection",type: "RiskControl"};
 MERGE (node:RiskControl {id: "shieldgemma-hate-speech-detection"}) ON CREATE SET node += {id: "shieldgemma-hate-speech-detection",name: "Hate Speech Detection",type: "RiskControl"};
@@ -1313,11 +1906,11 @@ MERGE (node:LargeLanguageModel {id: "granite-3.2-8b-instruct"}) ON CREATE SET no
 MATCH (src: AiTask {id: "any-to-any"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "audio-text-to-text"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
-MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-factual-accuracy"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "document-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "visual-document-retrieval"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "image-text-to-text"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "image-text-to-image"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -1326,46 +1919,46 @@ MATCH (src: AiTask {id: "video-text-to-text"}) MATCH (dst: Taxonomy {id: "hf-ml-
 MATCH (src: AiTask {id: "visual-question-answering"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "feature extraction"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "fill-mask"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: AiTask {id: "fill-mask"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "fill-mask"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "fill-mask"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "fill-mask"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
-MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Capability {id: "ibm-cap-factual-accuracy"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "question-answering"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "sentence-similarity"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "sentence-similarity"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "sentence-similarity"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "summarization"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: AiTask {id: "summarization"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "summarization"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "summarization"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "summarization"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "table-question-answering"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: AiTask {id: "table-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-factual-accuracy"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "table-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "table-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "table-question-answering"}) MATCH (dst: Capability {id: "ibm-cap-factual-accuracy"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "text-classification"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "text-classification"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "text-classification"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "text-generation"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: AiTask {id: "text-generation"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "text-generation"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "text-generation"}) MATCH (dst: Capability {id: "ibm-cap-common-sense-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "text-generation"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "text-ranking"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "token-classification"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "token-classification"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "token-classification"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "token-classification"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "token-classification"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "translation"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: AiTask {id: "translation"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "translation"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "translation"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "translation"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "zero-shot-classification"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "zero-shot-classification"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "zero-shot-classification"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "zero-shot-classification"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "zero-shot-classification"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "depth-estimation"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "image-classification"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "image-feature-extraction"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -1390,25 +1983,25 @@ MATCH (src: AiTask {id: "audio-to-audio"}) MATCH (dst: Taxonomy {id: "hf-ml-task
 MATCH (src: AiTask {id: "automatic-speech-recognition"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "text-to-speech"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "tabular-classification"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: AiTask {id: "tabular-classification"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "tabular-classification"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "tabular-classification"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "tabular-classification"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "tabular-regression"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: AiTask {id: "tabular-regression"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "tabular-regression"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "tabular-regression"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "tabular-regression"}) MATCH (dst: Capability {id: "ibm-cap-mathematical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "tabular-regression"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "reinforcement-learning"}) MATCH (dst: Taxonomy {id: "hf-ml-tasks"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: AiTask {id: "code-generation"}) MATCH (dst: Capability {id: "ibm-cap-code-generation"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "code-generation"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "code-generation"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "code-generation"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "code-generation"}) MATCH (dst: Capability {id: "ibm-cap-domain-knowledge"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "code-generation"}) MATCH (dst: Capability {id: "ibm-cap-code-generation"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "code-explanation"}) MATCH (dst: Capability {id: "ibm-cap-code-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "code-explanation"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "code-explanation"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "code-explanation"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "code-explanation"}) MATCH (dst: Capability {id: "ibm-cap-code-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
+MATCH (src: AiTask {id: "code-editing"}) MATCH (dst: Capability {id: "ibm-cap-code-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "code-editing"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: AiTask {id: "code-editing"}) MATCH (dst: Capability {id: "ibm-cap-code-understanding"}) MERGE (src)-[: requiresCapability]->(dst);
-MATCH (src: AiTask {id: "code-editing"}) MATCH (dst: Capability {id: "ibm-cap-code-generation"}) MERGE (src)-[: requiresCapability]->(dst);
 MATCH (src: Documentation {id: "arxiv.org/2504.11704"}) MATCH (dst: License {id: "license-cc-by-4.0"}) MERGE (src)-[: hasLicense]->(dst);
 MATCH (src: Documentation {id: "arxiv.org/2504.12397"}) MATCH (dst: License {id: "license-cc-by-4.0"}) MERGE (src)-[: hasLicense]->(dst);
 MATCH (src: Documentation {id: "arxiv.org/2409.15398"}) MATCH (dst: License {id: "license-cc-by-4.0"}) MERGE (src)-[: hasLicense]->(dst);
@@ -1547,38 +2140,38 @@ MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-qu
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MATCH (dst: Documentation {id: "arxiv.org/2504.11704"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MATCH (dst: AdapterType {id: "LORA"}) MERGE (src)-[: hasAdapterType]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MATCH (dst: LargeLanguageModel {id: "granite-guardian-3.3-8b-instruct"}) MERGE (src)-[: adaptsModel]->(dst);
+MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: implementsCapability]->(dst);
-MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: Vocabulary {id: "ibm-factuality"}) MERGE (src)-[: isDefinedByVocabulary]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: Documentation {id: "arxiv.org/2504.11704"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: AdapterType {id: "LORA"}) MERGE (src)-[: hasAdapterType]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: LargeLanguageModel {id: "granite-guardian-3.3-8b-instruct"}) MERGE (src)-[: adaptsModel]->(dst);
-MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: Capability {id: "ibm-cap-text-generation"}) MERGE (src)-[: implementsCapability]->(dst);
+MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MATCH (dst: Capability {id: "ibm-cap-causal-reasoning"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: Vocabulary {id: "ibm-factuality"}) MERGE (src)-[: isDefinedByVocabulary]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: Documentation {id: "arxiv.org/2504.11704"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: AdapterType {id: "LORA"}) MERGE (src)-[: hasAdapterType]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: LargeLanguageModel {id: "granite-guardian-3.3-8b-instruct"}) MERGE (src)-[: adaptsModel]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: implementsCapability]->(dst);
-MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: implementsCapability]->(dst);
+MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Vocabulary {id: "ibm-factuality"}) MERGE (src)-[: isDefinedByVocabulary]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Documentation {id: "arxiv.org/2504.11704"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: AdapterType {id: "LORA"}) MERGE (src)-[: hasAdapterType]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: LargeLanguageModel {id: "granite-guardian-3.3-8b-instruct"}) MERGE (src)-[: adaptsModel]->(dst);
-MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: implementsCapability]->(dst);
-MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Capability {id: "ibm-cap-factual-accuracy"}) MERGE (src)-[: implementsCapability]->(dst);
+MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: implementsCapability]->(dst);
+MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: Vocabulary {id: "ibm-factuality"}) MERGE (src)-[: isDefinedByVocabulary]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: Documentation {id: "arxiv.org/2504.11704"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: AdapterType {id: "LORA"}) MERGE (src)-[: hasAdapterType]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: LargeLanguageModel {id: "granite-guardian-3.3-8b-instruct"}) MERGE (src)-[: adaptsModel]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: Capability {id: "ibm-cap-contextual-understanding"}) MERGE (src)-[: implementsCapability]->(dst);
-MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: Capability {id: "ibm-cap-logical-reasoning"}) MERGE (src)-[: implementsCapability]->(dst);
+MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MATCH (dst: Capability {id: "ibm-cap-reading-comprehension"}) MERGE (src)-[: implementsCapability]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-uncertainty-quantification"}) MATCH (dst: Vocabulary {id: "ibm-factuality"}) MERGE (src)-[: isDefinedByVocabulary]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-uncertainty-quantification"}) MATCH (dst: Documentation {id: "arxiv.org/2504.11704"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-uncertainty-quantification"}) MATCH (dst: AdapterType {id: "LORA"}) MERGE (src)-[: hasAdapterType]->(dst);
@@ -1644,13 +2237,14 @@ MATCH (src: RiskTaxonomy {id: "nist-ai-rmf"}) MATCH (dst: Documentation {id: "NI
 MATCH (src: RiskTaxonomy {id: "ailuminate-v1.0"}) MATCH (dst: Documentation {id: "AILuminate-doc"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: RiskTaxonomy {id: "mit-ai-risk-repository"}) MATCH (dst: Documentation {id: "arxiv.org/2408.12622"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: RiskTaxonomy {id: "mit-ai-risk-repository-causal"}) MATCH (dst: Documentation {id: "arxiv.org/2408.12622"}) MERGE (src)-[: hasDocumentation]->(dst);
+MATCH (src: Taxonomy {id: "aiuc1"}) MATCH (dst: Documentation {id: "AIUC-1-Jan-2026"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: RiskTaxonomy {id: "csiro-responsible-ai-patterns"}) MATCH (dst: Documentation {id: "CSIRO-responsible-ai-pattern-catalogue-doc"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: RiskTaxonomy {id: "ai-risk-taxonomy"}) MATCH (dst: Documentation {id: "arxiv.org/pdf/2406.17864"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: RiskTaxonomy {id: "shieldgemma-taxonomy"}) MATCH (dst: Documentation {id: "shieldgemma-paper"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: RiskTaxonomy {id: "ibm-granite-guardian"}) MATCH (dst: Documentation {id: "granite-guardian-paper"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: RiskTaxonomy {id: "credo-ucf"}) MATCH (dst: Documentation {id: "credo-doc"}) MERGE (src)-[: hasDocumentation]->(dst);
-MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
@@ -1659,56 +2253,56 @@ MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: Taxonomy {id: "ibm-ri
 MATCH (src: Risk {id: "atlas-evasion-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-model-behavior-manipulation"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Risk {id: "nist-environmental-impacts"}) MERGE (src)-[: exact_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.6"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Risk {id: "credo-risk-004"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.6"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-the-environment"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-incorrect-risk-testing"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "credo-risk-016"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "llm052025-improper-output-handling"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "llm062025-excessive-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-over-or-under-reliance"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-value-alignment"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-membership-inference-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-data-in-prompt"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-intellectual-property"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: narrow_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-leaking"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-data-privacy-rights"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
@@ -1717,36 +2311,36 @@ MATCH (src: Risk {id: "atlas-data-privacy-rights"}) MATCH (dst: Taxonomy {id: "i
 MATCH (src: Risk {id: "atlas-data-privacy-rights"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-discriminatory-actions-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-discriminatory-actions-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-fairness"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-ip-information-in-prompt"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-intellectual-property"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "credo-risk-046"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "credo-risk-046"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-legal-accountability"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-legal-compliance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "nist-confabulation"}) MERGE (src)-[: exact_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-3.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "granite-function-call"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "granite-answer-relevance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-3.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "granite-groundedness"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "granite-relevance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "granite-groundedness"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "granite-function-call"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-hallucination"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness"}) MERGE (src)-[: isPartOf]->(dst);
@@ -1755,35 +2349,35 @@ MATCH (src: Risk {id: "atlas-social-hacking-attack"}) MATCH (dst: Risk {id: "atl
 MATCH (src: Risk {id: "atlas-social-hacking-attack"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-social-hacking-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-evasiveness"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "shieldgemma-dangerous-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "shieldgemma-sexually-explicit"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "nist-cbrn-information-or-capabilities"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "nist-cbrn-information-or-capabilities"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-evasiveness"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "shieldgemma-dangerous-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "shieldgemma-sexually-explicit"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-output"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-value-alignment"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-indirect-instructions-attack"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: narrow_mappings]->(dst);
@@ -1796,29 +2390,29 @@ MATCH (src: Risk {id: "atlas-ai-agent-compliance-agentic"}) MATCH (dst: Taxonomy
 MATCH (src: Risk {id: "atlas-ai-agent-compliance-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-function-calling-hallucination-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-function-calling-hallucination-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-confidential-information-in-data"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-intellectual-property"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-model-transparency"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-exploit-trust-mismatch-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-exploit-trust-mismatch-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -1826,72 +2420,72 @@ MATCH (src: Risk {id: "atlas-unrepresentative-data"}) MATCH (dst: RiskGroup {id:
 MATCH (src: Risk {id: "atlas-impact-human-agency-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-human-agency-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-prompt"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Risk {id: "credo-risk-044"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Risk {id: "credo-risk-019"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-human-agency"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-sharing-info-user-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-sharing-info-user-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-testing-diversity"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "shieldgemma-sexually-explicit"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "shieldgemma-sexually-explicit"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-nonconsensual-use"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-misuse"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "shieldgemma-hate-speech"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "credo-risk-022"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "shieldgemma-hate-speech"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-decision-bias"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-fairness"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-exposing-personal-information"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-impact-jobs-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-jobs-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-curation"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -1901,10 +2495,10 @@ MATCH (src: Risk {id: "atlas-over-or-under-reliance-on-ai-agents-agentic"}) MATC
 MATCH (src: Risk {id: "atlas-external-resources-attack-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-external-resources-attack-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: broad_mappings]->(dst);
@@ -1912,41 +2506,41 @@ MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: T
 MATCH (src: Risk {id: "atlas-revealing-confidential-information"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-intellectual-property"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "credo-risk-021"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-disinformation"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-misuse"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-provenance"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-transparency"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-unrepresentative-risk-testing"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "shieldgemma-hate-speech"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-bias"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-fairness"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage-rights"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-intellectual-property"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-unauthorized-use-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -1957,48 +2551,48 @@ MATCH (src: Risk {id: "atlas-impact-environment-agentic"}) MATCH (dst: Taxonomy 
 MATCH (src: Risk {id: "atlas-impact-environment-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-misaligned-actions-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-misaligned-actions-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-value-alignment"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-contamination"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-accuracy"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "shieldgemma-dangerous-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "shieldgemma-dangerous-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-harmful-code-generation"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-value-alignment"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-usage-definition"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "credo-risk-006"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-data-transparency"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "credo-risk-039"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "credo-risk-039"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-copyright-infringement"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-intellectual-property"}) MERGE (src)-[: isPartOf]->(dst);
@@ -2006,28 +2600,28 @@ MATCH (src: Risk {id: "atlas-context-overload-attack"}) MATCH (dst: Risk {id: "a
 MATCH (src: Risk {id: "atlas-context-overload-attack"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-context-overload-attack"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-context-overload-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-affected-communities"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-improper-retraining"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-value-alignment"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "shieldgemma-hate-speech"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-spreading-toxicity"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-misuse"}) MERGE (src)-[: isPartOf]->(dst);
@@ -2037,50 +2631,50 @@ MATCH (src: Risk {id: "atlas-accountability-agentic"}) MATCH (dst: Taxonomy {id:
 MATCH (src: Risk {id: "atlas-accountability-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-ai-agent-evaluation-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-ai-agent-evaluation-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-inaccessible-training-data"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-explainability"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-bypassing-learning"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-untraceable-attribution"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-explainability"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-non-disclosure"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-misuse"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "credo-risk-005"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "credo-risk-006"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-transparency"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-transparency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-model-usage-rights"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-legal-compliance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-reproducibility-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -2089,74 +2683,74 @@ MATCH (src: Risk {id: "atlas-specialized-tokens-attack"}) MATCH (dst: Risk {id: 
 MATCH (src: Risk {id: "atlas-specialized-tokens-attack"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-specialized-tokens-attack"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-specialized-tokens-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-incomplete-advice"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-value-alignment"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "llm01-prompt-injection"}) MERGE (src)-[: exact_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-social-hacking-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-encoded-interactions-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: narrow_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-direct-instructions-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-specialized-tokens-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-indirect-instructions-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-context-overload-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-social-hacking-attack"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-encoded-interactions-attack"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-specialized-tokens-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-encoded-interactions-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-social-hacking-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: narrow_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-indirect-instructions-attack"}) MERGE (src)-[: narrow_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-direct-instructions-attack"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-specialized-tokens-attack"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-indirect-instructions-attack"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-context-overload-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-specialized-tokens-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-encoded-interactions-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-social-hacking-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Risk {id: "atlas-indirect-instructions-attack"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-injection"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-lack-of-system-transparency"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-governance"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-usage"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-data-laws"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "credo-risk-044"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-cultural-diversity"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-plagiarism"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-personal-information-in-data"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -2165,93 +2759,93 @@ MATCH (src: Risk {id: "atlas-direct-instructions-attack"}) MATCH (dst: Risk {id:
 MATCH (src: Risk {id: "atlas-direct-instructions-attack"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-direct-instructions-attack"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-direct-instructions-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-improper-usage"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-misuse"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: Risk {id: "credo-risk-042"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-on-jobs"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-extraction-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-model-behavior-manipulation"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "granite-jailbreak"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "granite-jailbreak"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "llm01-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-jailbreaking"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-model-behavior-manipulation"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-acquisition"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-data-laws"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-sharing-info-tools-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-sharing-info-tools-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "llm01-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-prompt-priming"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-reidentification"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-attribute-inference-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-privacy"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-poor-model-accuracy"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-accuracy"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-transfer"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-data-laws"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-generated-content-ownership"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-legal-compliance"}) MERGE (src)-[: isPartOf]->(dst);
@@ -2263,76 +2857,76 @@ MATCH (src: Risk {id: "atlas-encoded-interactions-attack"}) MATCH (dst: Taxonomy
 MATCH (src: Risk {id: "atlas-encoded-interactions-attack"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness-Prompt-attacks"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-impact-human-dignity-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-impact-human-dignity-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "granite-social-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "shieldgemma-hate-speech"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "credo-risk-022"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "shieldgemma-hate-speech"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-output-bias"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-fairness"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "shieldgemma-dangerous-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Risk {id: "nist-cbrn-information-or-capabilities"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-dangerous-use"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-misuse"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-output"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-explainability"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-human-exploitation"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "granite-profanity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "shieldgemma-sexually-explicit"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-other"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "shieldgemma-hate-speech"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "shieldgemma-harassment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-toxic-output"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-value-alignment"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-untraceable-actions-agentic"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-unexplainable-untraceable-actions-agentic"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-explainability"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-human"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "llm042025-data-and-model-poisoning"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-data-poisoning"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-robustness"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Risk {id: "mit-ai-causal-risk-entity-ai"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "atlas-unreliable-source-attribution"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -2346,8 +2940,8 @@ MATCH (src: Risk {id: "atlas-exclusion"}) MATCH (dst: RiskGroup {id: "ibm-risk-a
 MATCH (src: Risk {id: "atlas-overfitting"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "atlas-overfitting"}) MATCH (dst: RiskGroup {id: "ibm-risk-atlas-accuracy"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "nist-cbrn-information-or-capabilities"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "nist-cbrn-information-or-capabilities"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-cbrn-information-or-capabilities"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-cbrn-information-or-capabilities"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-cbrn-information-or-capabilities"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-cbrn-information-or-capabilities"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-cbrn-information-or-capabilities"}) MATCH (dst: Action {id: "GV-1.2-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2398,17 +2992,17 @@ MATCH (src: Risk {id: "nist-confabulation"}) MATCH (dst: Action {id: "MG-3.2-009
 MATCH (src: Risk {id: "nist-confabulation"}) MATCH (dst: Action {id: "MG-4.1-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-confabulation"}) MATCH (dst: Action {id: "MG-4.1-004"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-confabulation"}) MATCH (dst: Action {id: "MG-4.3-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: close_mappings]->(dst);
+MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Action {id: "GV-1.3-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2441,26 +3035,26 @@ MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: 
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Action {id: "MG-2.2-005"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Action {id: "MG-3.2-005"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MATCH (dst: Action {id: "MG-4.2-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-data-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-data-privacy-rights"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-data-privacy-rights"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Action {id: "GV-1.1-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-data-privacy"}) MATCH (dst: Action {id: "GV-1.2-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2496,32 +3090,32 @@ MATCH (src: Risk {id: "nist-environmental-impacts"}) MATCH (dst: Risk {id: "cred
 MATCH (src: Risk {id: "nist-environmental-impacts"}) MATCH (dst: Risk {id: "credo-risk-004"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-environmental-impacts"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "credo-risk-022"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Risk {id: "atlas-impact-on-affected-communities"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-harmful-bias-or-homogenization"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-016"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-016"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-020"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Action {id: "GV-1.5-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Action {id: "GV-1.6-003"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2576,24 +3170,24 @@ MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Action {id: "M
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Action {id: "MG-4.1-005"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Action {id: "MG-4.2-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-human-ai-configuration"}) MATCH (dst: Action {id: "MG-4.2-003"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "credo-risk-022"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "credo-risk-022"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-impact-on-human-agency"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-impact-on-human-agency"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Action {id: "GV-1.2-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Action {id: "GV-1.3-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2667,21 +3261,21 @@ MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Action {id: "MG
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Action {id: "MG-4.1-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Action {id: "MG-4.1-006"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-information-integrity"}) MATCH (dst: Action {id: "MG-4.3-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Action {id: "GV-1.2-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Action {id: "GV-1.3-003"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2735,19 +3329,19 @@ MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Action {id: "MG-
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Action {id: "MG-4.3-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-information-security"}) MATCH (dst: Action {id: "MG-4.3-003"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: close_mappings]->(dst);
+MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-039"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-data-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-generated-content-ownership"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Action {id: "GV-1.1-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Action {id: "GV-1.2-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2777,15 +3371,15 @@ MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Action {id: "MG
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Action {id: "MG-3.1-004"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-intellectual-property"}) MATCH (dst: Action {id: "MG-3.2-003"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Action {id: "GV-1.3-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2802,30 +3396,30 @@ MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (d
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Action {id: "MG-2.2-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Action {id: "MG-2.2-005"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MATCH (dst: Action {id: "MG-3.2-005"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "credo-risk-047"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "credo-risk-030"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "credo-risk-031"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "credo-risk-030"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "credo-risk-047"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "credo-risk-049"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "credo-risk-048"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-acquisition"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Taxonomy {id: "nist-ai-rmf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Action {id: "GV-1.3-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "nist-value-chain-and-component-integration"}) MATCH (dst: Action {id: "GV-1.6-002"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -2871,198 +3465,198 @@ MATCH (src: Principle {id: "principle-au-reliability-and-safety"}) MATCH (dst: D
 MATCH (src: Principle {id: "principle-au-transparency-and-explainability"}) MATCH (dst: Documentation {id: "doc-australia-ai-ethics-principles"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Principle {id: "principle-au-contestability"}) MATCH (dst: Documentation {id: "doc-australia-ai-ethics-principles"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Principle {id: "principle-au-accountability"}) MATCH (dst: Documentation {id: "doc-australia-ai-ethics-principles"}) MERGE (src)-[: hasDocumentation]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "nist-cbrn-information-or-capabilities"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "granite-groundedness"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-violent-crimes"}) MATCH (dst: RiskGroup {id: "ail-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-sex-related-crimes"}) MATCH (dst: RiskGroup {id: "ail-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-child-sexual-exploitation"}) MATCH (dst: RiskGroup {id: "ail-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-groundedness"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-answer-relevance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-groundedness"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-answer-relevance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-suicide-and-self-harm"}) MATCH (dst: RiskGroup {id: "ail-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "nist-cbrn-information-or-capabilities"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MATCH (dst: RiskGroup {id: "ail-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-005"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "llm052025-improper-output-handling"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-impact-on-human-agency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-data-privacy-rights"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-039"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-005"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-025"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "credo-risk-039"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Risk {id: "atlas-data-privacy-rights"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-intellectual-property"}) MATCH (dst: RiskGroup {id: "ail-non-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-3.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-defamation"}) MATCH (dst: RiskGroup {id: "ail-non-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.6"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "credo-risk-026"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.6"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Risk {id: "credo-risk-026"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-nonviolent-crimes"}) MATCH (dst: RiskGroup {id: "ail-non-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-hate"}) MATCH (dst: RiskGroup {id: "ail-non-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "llm052025-improper-output-handling"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "llm052025-improper-output-handling"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-privacy"}) MATCH (dst: RiskGroup {id: "ail-non-physical-hazards"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-relevance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-005"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-evasiveness"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-groundedness"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-social-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-answer-relevance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-groundedness"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-relevance"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-005"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-evasiveness"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-answer-relevance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-social-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-specialized-advice"}) MATCH (dst: RiskGroup {id: "ail-contextual-hazards"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "granite-profanity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: Taxonomy {id: "ailuminate-v1.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "ail-sexual-content"}) MATCH (dst: RiskGroup {id: "ail-contextual-hazards"}) MERGE (src)-[: isPartOf]->(dst);
@@ -3076,25 +3670,25 @@ MATCH (src: Principle {id: "principle-un-human-autonomy-and-oversight"}) MATCH (
 MATCH (src: Principle {id: "principle-un-transparency-and-explainability"}) MATCH (dst: Documentation {id: "doc-un-ethical-use-of-ai-principles"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Principle {id: "principle-un-responsibility-and-accountability"}) MATCH (dst: Documentation {id: "doc-un-ethical-use-of-ai-principles"}) MERGE (src)-[: hasDocumentation]->(dst);
 MATCH (src: Principle {id: "principle-un-inclusion-and-participation"}) MATCH (dst: Documentation {id: "doc-un-ethical-use-of-ai-principles"}) MERGE (src)-[: hasDocumentation]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.1"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-1"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.2"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-1"}) MERGE (src)-[: isPartOf]->(dst);
@@ -3103,81 +3697,81 @@ MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.3"}) MATCH (dst: Risk {id: "atlas
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.3"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-1.3"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-1"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.1"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-2"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-026"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-031"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-031"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Risk {id: "credo-risk-026"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-2.2"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-2"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: Risk {id: "credo-risk-021"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.1"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-3"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.2"}) MATCH (dst: Risk {id: "credo-risk-022"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.2"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-3.2"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-3"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.1"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-4"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.2"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-4"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "credo-risk-026"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "atlas-plagiarism"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "atlas-bypassing-learning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-4.3"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-4"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "credo-risk-016"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "credo-risk-020"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "credo-risk-020"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.1"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-5"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-5.2"}) MATCH (dst: Risk {id: "credo-risk-019"}) MERGE (src)-[: close_mappings]->(dst);
@@ -3188,47 +3782,47 @@ MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.1"}) MATCH (dst: Risk {id: "credo
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.1"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.1"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-6"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.2"}) MATCH (dst: Risk {id: "credo-risk-042"}) MERGE (src)-[: close_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.2"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.2"}) MATCH (dst: Risk {id: "credo-risk-044"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.2"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.2"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.2"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.2"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-6"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Risk {id: "credo-risk-043"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Risk {id: "credo-risk-044"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Risk {id: "atlas-generated-content-ownership"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.3"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-6"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.4"}) MATCH (dst: Risk {id: "credo-risk-045"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.4"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.4"}) MATCH (dst: Risk {id: "credo-risk-049"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.4"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.4"}) MATCH (dst: Risk {id: "credo-risk-030"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.4"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.4"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-6"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-046"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-045"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-045"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-049"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-044"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-049"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-025"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.5"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-6"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.6"}) MATCH (dst: Risk {id: "credo-risk-004"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.6"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.6"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.6"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.6"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-6.6"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-6"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.1"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: close_mappings]->(dst);
@@ -3236,51 +3830,51 @@ MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.1"}) MATCH (dst: Risk {id: "ail-n
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.1"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.1"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-7"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-019"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-019"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-027"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.2"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-7"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-035"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-046"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-049"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-031"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-030"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-acquisition"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-usage"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-032"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-048"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-031"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-046"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-030"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-acquisition"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "credo-risk-049"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.3"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-7"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-005"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-006"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-007"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-006"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-005"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.4"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-7"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.5"}) MATCH (dst: Risk {id: "credo-risk-001"}) MERGE (src)-[: close_mappings]->(dst);
@@ -3288,272 +3882,452 @@ MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.5"}) MATCH (dst: Taxonomy {id: "m
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.5"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-7"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.6"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-risk-subdomain-7.6"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-domain-7"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-ai"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-entity"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-bypassing-learning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-impact-on-affected-communities"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-plagiarism"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-usage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-acquisition"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-usage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-plagiarism"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-bypassing-learning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-impact-on-affected-communities"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-human"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-entity"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-generated-content-ownership"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-generated-content-ownership"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-entity-other"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-entity"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-bypassing-learning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-intentional"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-intent"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-impact-on-affected-communities"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-usage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-acquisition"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-usage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-impact-on-affected-communities"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-unintentional"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-intent"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-plagiarism"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-generated-content-ownership"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-plagiarism"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-intent-other"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-intent"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-usage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-acquisition"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-lack-of-testing-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-unrepresentative-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-incomplete-usage-definition"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-usage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-transfer"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-pre-deployment"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-timing"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-bypassing-learning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-impact-on-affected-communities"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-plagiarism"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-extraction-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-unexplainable-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-jailbreaking"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-plagiarism"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-improper-usage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-bypassing-learning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-non-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-prompt-injection"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-impact-on-affected-communities"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-post-deployment"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-timing"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Risk {id: "atlas-lack-of-model-transparency"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Risk {id: "atlas-lack-of-system-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Risk {id: "atlas-generated-content-ownership"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "mit-ai-causal-risk-timing-other"}) MATCH (dst: RiskGroup {id: "mit-ai-risk-repository-causal-timing"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a001"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a001"}) MATCH (dst: Action {id: "aiuc1-ctrl-a001-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a001"}) MATCH (dst: Action {id: "aiuc1-ctrl-a001-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a001"}) MATCH (dst: Action {id: "aiuc1-ctrl-a001-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a002"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a002"}) MATCH (dst: Action {id: "aiuc1-ctrl-a002-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a003"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a003"}) MATCH (dst: Action {id: "aiuc1-ctrl-a003-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a003"}) MATCH (dst: Action {id: "aiuc1-ctrl-a003-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a003"}) MATCH (dst: Action {id: "aiuc1-ctrl-a003-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a004"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a004"}) MATCH (dst: Action {id: "aiuc1-ctrl-a004-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a004"}) MATCH (dst: Action {id: "aiuc1-ctrl-a004-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a004"}) MATCH (dst: Action {id: "aiuc1-ctrl-a004-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a004"}) MATCH (dst: Action {id: "aiuc1-ctrl-a004-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a005"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a005"}) MATCH (dst: Action {id: "aiuc1-ctrl-a005-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a005"}) MATCH (dst: Action {id: "aiuc1-ctrl-a005-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a005"}) MATCH (dst: Action {id: "aiuc1-ctrl-a005-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a006"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a006"}) MATCH (dst: Action {id: "aiuc1-ctrl-a006-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a006"}) MATCH (dst: Action {id: "aiuc1-ctrl-a006-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a006"}) MATCH (dst: Action {id: "aiuc1-ctrl-a006-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a007"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a007"}) MATCH (dst: Action {id: "aiuc1-ctrl-a007-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a007"}) MATCH (dst: Action {id: "aiuc1-ctrl-a007-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-a007"}) MATCH (dst: Action {id: "aiuc1-ctrl-a007-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b001"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b001"}) MATCH (dst: Action {id: "aiuc1-ctrl-b001-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b001"}) MATCH (dst: Action {id: "aiuc1-ctrl-b001-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b002"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b002"}) MATCH (dst: Action {id: "aiuc1-ctrl-b002-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b002"}) MATCH (dst: Action {id: "aiuc1-ctrl-b002-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b002"}) MATCH (dst: Action {id: "aiuc1-ctrl-b002-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b002"}) MATCH (dst: Action {id: "aiuc1-ctrl-b002-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b002"}) MATCH (dst: Action {id: "aiuc1-ctrl-b002-5"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b003"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b003"}) MATCH (dst: Action {id: "aiuc1-ctrl-b003-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b003"}) MATCH (dst: Action {id: "aiuc1-ctrl-b003-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b004"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b004"}) MATCH (dst: Action {id: "aiuc1-ctrl-b004-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b004"}) MATCH (dst: Action {id: "aiuc1-ctrl-b004-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b004"}) MATCH (dst: Action {id: "aiuc1-ctrl-b004-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b004"}) MATCH (dst: Action {id: "aiuc1-ctrl-b004-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b005"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b005"}) MATCH (dst: Action {id: "aiuc1-ctrl-b005-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b005"}) MATCH (dst: Action {id: "aiuc1-ctrl-b005-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b005"}) MATCH (dst: Action {id: "aiuc1-ctrl-b005-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b005"}) MATCH (dst: Action {id: "aiuc1-ctrl-b005-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b005"}) MATCH (dst: Action {id: "aiuc1-ctrl-b005-5"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b006"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b006"}) MATCH (dst: Action {id: "aiuc1-ctrl-b006-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b006"}) MATCH (dst: Action {id: "aiuc1-ctrl-b006-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b007"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b007"}) MATCH (dst: Action {id: "aiuc1-ctrl-b007-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b007"}) MATCH (dst: Action {id: "aiuc1-ctrl-b007-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b008"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b008"}) MATCH (dst: Action {id: "aiuc1-ctrl-b008-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b008"}) MATCH (dst: Action {id: "aiuc1-ctrl-b008-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b008"}) MATCH (dst: Action {id: "aiuc1-ctrl-b008-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b008"}) MATCH (dst: Action {id: "aiuc1-ctrl-b008-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b009"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b009"}) MATCH (dst: Action {id: "aiuc1-ctrl-b009-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b009"}) MATCH (dst: Action {id: "aiuc1-ctrl-b009-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-b009"}) MATCH (dst: Action {id: "aiuc1-ctrl-b009-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c001"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c001"}) MATCH (dst: Action {id: "aiuc1-ctrl-c001-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c001"}) MATCH (dst: Action {id: "aiuc1-ctrl-c001-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c002"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c002"}) MATCH (dst: Action {id: "aiuc1-ctrl-c002-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c002"}) MATCH (dst: Action {id: "aiuc1-ctrl-c002-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c002"}) MATCH (dst: Action {id: "aiuc1-ctrl-c002-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c003"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c003"}) MATCH (dst: Action {id: "aiuc1-ctrl-c003-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c003"}) MATCH (dst: Action {id: "aiuc1-ctrl-c003-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c003"}) MATCH (dst: Action {id: "aiuc1-ctrl-c003-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c003"}) MATCH (dst: Action {id: "aiuc1-ctrl-c003-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c004"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c004"}) MATCH (dst: Action {id: "aiuc1-ctrl-c004-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c004"}) MATCH (dst: Action {id: "aiuc1-ctrl-c004-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c004"}) MATCH (dst: Action {id: "aiuc1-ctrl-c004-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c005"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c005"}) MATCH (dst: Action {id: "aiuc1-ctrl-c005-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c005"}) MATCH (dst: Action {id: "aiuc1-ctrl-c005-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c005"}) MATCH (dst: Action {id: "aiuc1-ctrl-c005-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c006"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c006"}) MATCH (dst: Action {id: "aiuc1-ctrl-c006-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c006"}) MATCH (dst: Action {id: "aiuc1-ctrl-c006-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c006"}) MATCH (dst: Action {id: "aiuc1-ctrl-c006-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c007"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c007"}) MATCH (dst: Action {id: "aiuc1-ctrl-c007-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c007"}) MATCH (dst: Action {id: "aiuc1-ctrl-c007-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c007"}) MATCH (dst: Action {id: "aiuc1-ctrl-c007-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c008"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c008"}) MATCH (dst: Action {id: "aiuc1-ctrl-c008-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c008"}) MATCH (dst: Action {id: "aiuc1-ctrl-c008-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c008"}) MATCH (dst: Action {id: "aiuc1-ctrl-c008-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c009"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c009"}) MATCH (dst: Action {id: "aiuc1-ctrl-c009-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c009"}) MATCH (dst: Action {id: "aiuc1-ctrl-c009-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c010"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c010"}) MATCH (dst: Action {id: "aiuc1-ctrl-c010-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c011"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c011"}) MATCH (dst: Action {id: "aiuc1-ctrl-c011-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c012"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-c012"}) MATCH (dst: Action {id: "aiuc1-ctrl-c012-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d001"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d001"}) MATCH (dst: Action {id: "aiuc1-ctrl-d001-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d001"}) MATCH (dst: Action {id: "aiuc1-ctrl-d001-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d001"}) MATCH (dst: Action {id: "aiuc1-ctrl-d001-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d002"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d002"}) MATCH (dst: Action {id: "aiuc1-ctrl-d002-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d003"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d003"}) MATCH (dst: Action {id: "aiuc1-ctrl-d003-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d003"}) MATCH (dst: Action {id: "aiuc1-ctrl-d003-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d003"}) MATCH (dst: Action {id: "aiuc1-ctrl-d003-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d003"}) MATCH (dst: Action {id: "aiuc1-ctrl-d003-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d003"}) MATCH (dst: Action {id: "aiuc1-ctrl-d003-5"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d004"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-d004"}) MATCH (dst: Action {id: "aiuc1-ctrl-d004-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e001"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e001"}) MATCH (dst: Action {id: "aiuc1-ctrl-e001-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e002"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e002"}) MATCH (dst: Action {id: "aiuc1-ctrl-e002-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e002"}) MATCH (dst: Action {id: "aiuc1-ctrl-e002-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e003"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e003"}) MATCH (dst: Action {id: "aiuc1-ctrl-e003-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e003"}) MATCH (dst: Action {id: "aiuc1-ctrl-e003-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e004"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e004"}) MATCH (dst: Action {id: "aiuc1-ctrl-e004-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e004"}) MATCH (dst: Action {id: "aiuc1-ctrl-e004-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e005"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e005"}) MATCH (dst: Action {id: "aiuc1-ctrl-e005-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e006"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e006"}) MATCH (dst: Action {id: "aiuc1-ctrl-e006-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e007"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e007"}) MATCH (dst: Action {id: "aiuc1-ctrl-e007-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e008"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e008"}) MATCH (dst: Action {id: "aiuc1-ctrl-e008-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e008"}) MATCH (dst: Action {id: "aiuc1-ctrl-e008-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e009"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e009"}) MATCH (dst: Action {id: "aiuc1-ctrl-e009-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e010"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e010"}) MATCH (dst: Action {id: "aiuc1-ctrl-e010-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e010"}) MATCH (dst: Action {id: "aiuc1-ctrl-e010-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e010"}) MATCH (dst: Action {id: "aiuc1-ctrl-e010-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e010"}) MATCH (dst: Action {id: "aiuc1-ctrl-e010-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e011"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e011"}) MATCH (dst: Action {id: "aiuc1-ctrl-e011-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e011"}) MATCH (dst: Action {id: "aiuc1-ctrl-e011-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e012"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e012"}) MATCH (dst: Action {id: "aiuc1-ctrl-e012-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e013"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e013"}) MATCH (dst: Action {id: "aiuc1-ctrl-e013-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e013"}) MATCH (dst: Action {id: "aiuc1-ctrl-e013-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e013"}) MATCH (dst: Action {id: "aiuc1-ctrl-e013-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e013"}) MATCH (dst: Action {id: "aiuc1-ctrl-e013-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e013"}) MATCH (dst: Action {id: "aiuc1-ctrl-e013-5"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e014"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e014"}) MATCH (dst: Action {id: "aiuc1-ctrl-e014-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e015"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e015"}) MATCH (dst: Action {id: "aiuc1-ctrl-e015-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e015"}) MATCH (dst: Action {id: "aiuc1-ctrl-e015-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e015"}) MATCH (dst: Action {id: "aiuc1-ctrl-e015-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e016"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e016"}) MATCH (dst: Action {id: "aiuc1-ctrl-e016-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e016"}) MATCH (dst: Action {id: "aiuc1-ctrl-e016-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e016"}) MATCH (dst: Action {id: "aiuc1-ctrl-e016-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e016"}) MATCH (dst: Action {id: "aiuc1-ctrl-e016-4"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e016"}) MATCH (dst: Action {id: "aiuc1-ctrl-e016-5"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e017"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e017"}) MATCH (dst: Action {id: "aiuc1-ctrl-e017-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e017"}) MATCH (dst: Action {id: "aiuc1-ctrl-e017-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-e017"}) MATCH (dst: Action {id: "aiuc1-ctrl-e017-3"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-f001"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-f001"}) MATCH (dst: Action {id: "aiuc1-ctrl-f001-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-f001"}) MATCH (dst: Action {id: "aiuc1-ctrl-f001-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-f002"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-f002"}) MATCH (dst: Action {id: "aiuc1-ctrl-f002-1"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Entry {id: "aiuc1-req-f002"}) MATCH (dst: Action {id: "aiuc1-ctrl-f002-2"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-comprehension"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "zero-shot-classification"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "fill-mask"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "table-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "tabular-classification"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "text-classification"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "summarization"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "sentence-similarity"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "translation"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "tabular-regression"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "token-classification"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "code-explanation"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "code-generation"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MERGE (src)-[: implementedByAdapter]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "code-explanation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "zero-shot-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "token-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "sentence-similarity"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "summarization"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "translation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "table-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "text-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "tabular-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "fill-mask"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: AiTask {id: "tabular-regression"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MERGE (src)-[: implementedByAdapter]->(dst);
-MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MERGE (src)-[: implementedByAdapter]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MERGE (src)-[: implementedByAdapter]->(dst);
+MATCH (src: Capability {id: "ibm-cap-reading-comprehension"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-comprehension"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "fill-mask"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "text-generation"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "text-classification"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "summarization"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "sentence-similarity"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "translation"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "token-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "text-generation"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "zero-shot-classification"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MERGE (src)-[: implementedByAdapter]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "token-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "sentence-similarity"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "summarization"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "translation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "text-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "fill-mask"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MERGE (src)-[: implementedByAdapter]->(dst);
-MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MERGE (src)-[: implementedByAdapter]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MERGE (src)-[: implementedByAdapter]->(dst);
+MATCH (src: Capability {id: "ibm-cap-contextual-understanding"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-generation"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: AiTask {id: "fill-mask"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: AiTask {id: "text-generation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: AiTask {id: "code-explanation"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: AiTask {id: "summarization"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: AiTask {id: "translation"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: AiTask {id: "code-explanation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: AiTask {id: "fill-mask"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-text-generation"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-logical"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "code-editing"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "code-generation"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "zero-shot-classification"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "code-editing"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "table-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "tabular-classification"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "tabular-regression"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: AiTask {id: "code-generation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-context-relevance"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MERGE (src)-[: implementedByAdapter]->(dst);
-MATCH (src: Capability {id: "ibm-cap-logical-reasoning"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-causal-reasoning"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-causal-reasoning"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-logical"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Capability {id: "ibm-cap-causal-reasoning"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion"}) MERGE (src)-[: implementedByAdapter]->(dst);
@@ -3562,25 +4336,25 @@ MATCH (src: Capability {id: "ibm-cap-mathematical-reasoning"}) MATCH (dst: Capab
 MATCH (src: Capability {id: "ibm-cap-mathematical-reasoning"}) MATCH (dst: AiTask {id: "tabular-regression"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-domain-knowledge-and-learning"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "code-generation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "token-classification"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "tabular-classification"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "tabular-regression"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "token-classification"}) MERGE (src)-[: requiredByTask]->(dst);
-MATCH (src: Capability {id: "ibm-cap-domain-knowledge"}) MATCH (dst: AiTask {id: "code-generation"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-common-sense-reasoning"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-common-sense-reasoning"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-domain-knowledge"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Capability {id: "ibm-cap-common-sense-reasoning"}) MATCH (dst: AiTask {id: "text-generation"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-factual-accuracy"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-factual-accuracy"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-factuality"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Capability {id: "ibm-cap-factual-accuracy"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-factual-accuracy"}) MATCH (dst: AiTask {id: "question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-factual-accuracy"}) MATCH (dst: AiTask {id: "document-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-factual-accuracy"}) MATCH (dst: AiTask {id: "table-question-answering"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-factual-accuracy"}) MATCH (dst: Adapter {id: "ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination"}) MERGE (src)-[: implementedByAdapter]->(dst);
 MATCH (src: Capability {id: "ibm-cap-code-generation"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-code-generation"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-code"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Capability {id: "ibm-cap-code-generation"}) MATCH (dst: AiTask {id: "code-editing"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-code-generation"}) MATCH (dst: AiTask {id: "code-generation"}) MERGE (src)-[: requiredByTask]->(dst);
+MATCH (src: Capability {id: "ibm-cap-code-generation"}) MATCH (dst: AiTask {id: "code-editing"}) MERGE (src)-[: requiredByTask]->(dst);
 MATCH (src: Capability {id: "ibm-cap-code-understanding"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Capability {id: "ibm-cap-code-understanding"}) MATCH (dst: CapabilityGroup {id: "ibm-cap-group-code"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Capability {id: "ibm-cap-code-understanding"}) MATCH (dst: AiTask {id: "code-explanation"}) MERGE (src)-[: requiredByTask]->(dst);
@@ -4230,62 +5004,62 @@ MATCH (src: Risk {id: "shieldgemma-dangerous-content"}) MATCH (dst: Risk {id: "a
 MATCH (src: Risk {id: "shieldgemma-dangerous-content"}) MATCH (dst: Taxonomy {id: "shieldgemma-taxonomy"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "shieldgemma-dangerous-content"}) MATCH (dst: RiskGroup {id: "shieldgemma-content-safety-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "shieldgemma-dangerous-content"}) MATCH (dst: RiskControl {id: "shieldgemma-dangerous-content-detection"}) MERGE (src)-[: isDetectedBy]->(dst);
-MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-data-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: Taxonomy {id: "shieldgemma-taxonomy"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: RiskGroup {id: "shieldgemma-content-safety-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "shieldgemma-hate-speech"}) MATCH (dst: RiskControl {id: "shieldgemma-hate-speech-detection"}) MERGE (src)-[: isDetectedBy]->(dst);
-MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: Taxonomy {id: "shieldgemma-taxonomy"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: RiskGroup {id: "shieldgemma-content-safety-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "shieldgemma-harassment"}) MATCH (dst: RiskControl {id: "shieldgemma-harassment-detection"}) MERGE (src)-[: isDetectedBy]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-023"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-021"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-004"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-043"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-025"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-004"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-026"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-008"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-024"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-034"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-012"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-016"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-021"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-028"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-043"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-025"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-009"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-029"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-015"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-016"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-003"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "credo-risk-026"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "granite-social-bias"}) MERGE (src)-[: narrow_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "granite-profanity"}) MERGE (src)-[: narrow_mappings]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: narrow_mappings]->(dst);
@@ -4297,9 +5071,9 @@ MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Risk {id: "granite-e
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-guardian-harm"}) MATCH (dst: RiskGroup {id: "granite-guardian-harm-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: Risk {id: "credo-risk-011"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: Risk {id: "credo-risk-010"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-social-bias"}) MATCH (dst: RiskGroup {id: "granite-guardian-harm-group"}) MERGE (src)-[: isPartOf]->(dst);
@@ -4309,29 +5083,29 @@ MATCH (src: Risk {id: "granite-profanity"}) MATCH (dst: Risk {id: "atlas-toxic-o
 MATCH (src: Risk {id: "granite-profanity"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-profanity"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-profanity"}) MATCH (dst: RiskGroup {id: "granite-guardian-harm-group"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "credo-risk-014"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-sexual-content"}) MATCH (dst: RiskGroup {id: "granite-guardian-harm-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "credo-risk-042"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-unethical-behavior"}) MATCH (dst: RiskGroup {id: "granite-guardian-harm-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: Risk {id: "credo-risk-013"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-violence"}) MATCH (dst: RiskGroup {id: "granite-guardian-harm-group"}) MERGE (src)-[: isPartOf]->(dst);
@@ -4340,14 +5114,14 @@ MATCH (src: Risk {id: "granite-jailbreak"}) MATCH (dst: Risk {id: "credo-risk-04
 MATCH (src: Risk {id: "granite-jailbreak"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-jailbreak"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-jailbreak"}) MATCH (dst: RiskGroup {id: "granite-guardian-harm-group"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-harm-engagement"}) MATCH (dst: RiskGroup {id: "granite-guardian-conversational-egregiousness"}) MERGE (src)-[: isPartOf]->(dst);
@@ -4356,19 +5130,19 @@ MATCH (src: Risk {id: "granite-evasiveness"}) MATCH (dst: Risk {id: "atlas-harmf
 MATCH (src: Risk {id: "granite-evasiveness"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "granite-evasiveness"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-evasiveness"}) MATCH (dst: RiskGroup {id: "granite-guardian-conversational-egregiousness"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-groundedness"}) MATCH (dst: RiskGroup {id: "granite-guardian-rag-safety-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "granite-relevance"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-relevance"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-relevance"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-relevance"}) MATCH (dst: RiskGroup {id: "granite-guardian-rag-safety-group"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "granite-answer-relevance"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-answer-relevance"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-answer-relevance"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "granite-answer-relevance"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "granite-answer-relevance"}) MATCH (dst: Taxonomy {id: "ibm-granite-guardian"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "granite-answer-relevance"}) MATCH (dst: RiskGroup {id: "granite-guardian-rag-safety-group"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "granite-function-call"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
@@ -4380,69 +5154,69 @@ MATCH (src: Risk {id: "llm01-prompt-injection"}) MATCH (dst: Risk {id: "atlas-ja
 MATCH (src: Risk {id: "llm01-prompt-injection"}) MATCH (dst: Risk {id: "atlas-prompt-priming"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm01-prompt-injection"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-attribute-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-reidentification"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-personal-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-confidential-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-ip-information-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-membership-inference-attack"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-confidential-data-in-prompt"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-prompt-leaking"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm022025-sensitive-information-disclosure"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "credo-risk-047"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-inaccessible-training-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-improper-retraining"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "credo-risk-048"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: broad_mappings]->(dst);
-MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-acquisition"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-untraceable-attribution"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-curation"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-contamination"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-data-provenance"}) MERGE (src)-[: broad_mappings]->(dst);
+MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Risk {id: "atlas-model-usage-rights"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm032025-supply-chain"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
-MATCH (src: Risk {id: "llm042025-data-and-model-poisoning"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm042025-data-and-model-poisoning"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm042025-data-and-model-poisoning"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm042025-data-and-model-poisoning"}) MATCH (dst: Risk {id: "atlas-data-poisoning"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm042025-data-and-model-poisoning"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "llm052025-improper-output-handling"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm052025-improper-output-handling"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm052025-improper-output-handling"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm052025-improper-output-handling"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm052025-improper-output-handling"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm052025-improper-output-handling"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "credo-risk-019"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "credo-risk-002"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "credo-risk-019"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Risk {id: "credo-risk-018"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm062025-excessive-agency"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
-MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-037"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-041"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-038"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Risk {id: "credo-risk-036"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm072025-system-prompt-leakage"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
-MATCH (src: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MATCH (dst: Risk {id: "credo-risk-035"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MATCH (dst: Risk {id: "credo-risk-033"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MATCH (dst: Risk {id: "credo-risk-040"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MATCH (dst: Risk {id: "credo-risk-035"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "credo-risk-017"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "atlas-hallucination"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "atlas-harmful-code-generation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "credo-risk-021"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "atlas-incomplete-advice"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: broad_mappings]->(dst);
 MATCH (src: Risk {id: "llm092025-misinformation"}) MATCH (dst: Taxonomy {id: "owasp-llm-2.0"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -4455,14 +5229,14 @@ MATCH (src: Risk {id: "credo-risk-001"}) MATCH (dst: Risk {id: "mit-ai-risk-subd
 MATCH (src: Risk {id: "credo-risk-001"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-001"}) MATCH (dst: RiskGroup {id: "credo-rg-ai-agency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.1"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "llm062025-excessive-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "atlas-impact-on-human-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "llm062025-excessive-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Risk {id: "granite-harm-engagement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: RiskGroup {id: "credo-rg-ai-agency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Action {id: "credo-act-control-017"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4470,18 +5244,18 @@ MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Action {id: "credo-act-cont
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Action {id: "credo-act-control-022"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-002"}) MATCH (dst: Action {id: "credo-act-control-037"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: RiskGroup {id: "credo-rg-ai-agency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Action {id: "credo-act-control-021"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Action {id: "credo-act-control-022"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-003"}) MATCH (dst: Action {id: "credo-act-control-037"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Risk {id: "nist-environmental-impacts"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.6"}) MERGE (src)-[: close_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Risk {id: "nist-environmental-impacts"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Risk {id: "nist-environmental-impacts"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Risk {id: "atlas-impact-on-the-environment"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
@@ -4490,71 +5264,71 @@ MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: RiskGroup {id: "credo-rg-en
 MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Action {id: "credo-act-control-032"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-004"}) MATCH (dst: Action {id: "credo-act-control-036"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: RiskGroup {id: "credo-rg-explainability-&-transparency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-005"}) MATCH (dst: Action {id: "credo-act-control-009"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: Risk {id: "atlas-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: RiskGroup {id: "credo-rg-explainability-&-transparency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: Action {id: "credo-act-control-010"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-006"}) MATCH (dst: Action {id: "credo-act-control-011"}) MERGE (src)-[: hasRelatedAction]->(dst);
+MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Risk {id: "atlas-unreliable-source-attribution"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: RiskGroup {id: "credo-rg-explainability-&-transparency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-007"}) MATCH (dst: Action {id: "credo-act-control-010"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-008"}) MATCH (dst: Risk {id: "atlas-lack-of-data-transparency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-008"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-008"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-008"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-008"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-008"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-008"}) MATCH (dst: RiskGroup {id: "credo-rg-explainability-&-transparency"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: RiskGroup {id: "credo-rg-explainability-&-transparency"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Action {id: "credo-act-control-011"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-009"}) MATCH (dst: Action {id: "credo-act-control-037"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "granite-social-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "atlas-unrepresentative-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: RiskGroup {id: "credo-rg-fairness-&-bias"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Action {id: "credo-act-control-014"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Action {id: "credo-act-control-015"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Action {id: "credo-act-control-016"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-010"}) MATCH (dst: Action {id: "credo-act-control-028"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "granite-social-bias"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "granite-social-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "atlas-output-bias"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-011"}) MATCH (dst: RiskGroup {id: "credo-rg-fairness-&-bias"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Risk {id: "nist-harmful-bias-or-homogenization"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: RiskGroup {id: "credo-rg-fairness-&-bias"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Action {id: "credo-act-control-014"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4562,29 +5336,29 @@ MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Action {id: "credo-act-cont
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Action {id: "credo-act-control-016"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-012"}) MATCH (dst: Action {id: "credo-act-control-028"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: close_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "granite-profanity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "granite-profanity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "granite-violence"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Risk {id: "atlas-human-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: RiskGroup {id: "credo-rg-harmful-content"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Action {id: "credo-act-control-017"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Action {id: "credo-act-control-018"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-013"}) MATCH (dst: Action {id: "credo-act-control-019"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "atlas-spreading-toxicity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "ail-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "nist-obscene-degrading-and-or-abusive-content"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "ail-child-sexual-exploitation"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "granite-sexual-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "ail-sex-related-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: RiskGroup {id: "credo-rg-harmful-content"}) MERGE (src)-[: isPartOf]->(dst);
@@ -4592,22 +5366,22 @@ MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Action {id: "credo-act-cont
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Action {id: "credo-act-control-018"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-014"}) MATCH (dst: Action {id: "credo-act-control-019"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "atlas-toxic-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "nist-dangerous-violent-or-hateful-content"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-1.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Risk {id: "ail-hate"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: RiskGroup {id: "credo-rg-harmful-content"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Action {id: "credo-act-control-017"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Action {id: "credo-act-control-018"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-015"}) MATCH (dst: Action {id: "credo-act-control-019"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.1"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Risk {id: "atlas-over-or-under-reliance"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: RiskGroup {id: "credo-rg-human-ai-interaction"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Action {id: "credo-act-control-009"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4615,28 +5389,28 @@ MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Action {id: "credo-act-cont
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Action {id: "credo-act-control-028"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Action {id: "credo-act-control-029"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-016"}) MATCH (dst: Action {id: "credo-act-control-029"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-3.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "llm062025-excessive-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-3.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: RiskGroup {id: "credo-rg-human-ai-interaction"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Action {id: "credo-act-control-009"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-017"}) MATCH (dst: Action {id: "credo-act-control-025"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Risk {id: "llm062025-excessive-agency"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Risk {id: "llm062025-excessive-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: RiskGroup {id: "credo-rg-human-ai-interaction"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Action {id: "credo-act-control-010"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-018"}) MATCH (dst: Action {id: "credo-act-control-025"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-019"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.2"}) MERGE (src)-[: close_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-019"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-019"}) MATCH (dst: Risk {id: "atlas-impact-on-human-agency"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-019"}) MATCH (dst: Risk {id: "llm062025-excessive-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-019"}) MATCH (dst: Risk {id: "atlas-impact-on-human-agency"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-019"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-019"}) MATCH (dst: RiskGroup {id: "credo-rg-human-ai-interaction"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-020"}) MATCH (dst: Risk {id: "nist-human-ai-configuration"}) MERGE (src)-[: related_mappings]->(dst);
@@ -4644,9 +5418,9 @@ MATCH (src: Risk {id: "credo-risk-020"}) MATCH (dst: Risk {id: "mit-ai-risk-subd
 MATCH (src: Risk {id: "credo-risk-020"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-020"}) MATCH (dst: RiskGroup {id: "credo-rg-human-ai-interaction"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-021"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-3.1"}) MERGE (src)-[: close_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-021"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-021"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-021"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-021"}) MATCH (dst: Risk {id: "llm092025-misinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-021"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-021"}) MATCH (dst: RiskGroup {id: "credo-rg-information-integrity"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-022"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-3.2"}) MERGE (src)-[: close_mappings]->(dst);
@@ -4656,20 +5430,20 @@ MATCH (src: Risk {id: "credo-risk-022"}) MATCH (dst: Risk {id: "nist-harmful-bia
 MATCH (src: Risk {id: "credo-risk-022"}) MATCH (dst: Risk {id: "atlas-decision-bias"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-022"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-022"}) MATCH (dst: RiskGroup {id: "credo-rg-information-integrity"}) MERGE (src)-[: isPartOf]->(dst);
+MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-023"}) MATCH (dst: RiskGroup {id: "credo-rg-legal"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "ail-defamation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Risk {id: "atlas-harmful-output"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-024"}) MATCH (dst: RiskGroup {id: "credo-rg-legal"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-025"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
@@ -4678,9 +5452,9 @@ MATCH (src: Risk {id: "credo-risk-025"}) MATCH (dst: Risk {id: "granite-guardian
 MATCH (src: Risk {id: "credo-risk-025"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-025"}) MATCH (dst: RiskGroup {id: "credo-rg-legal"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.3"}) MERGE (src)-[: close_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Risk {id: "ail-nonviolent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: RiskGroup {id: "credo-rg-malicious-use"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Action {id: "credo-act-control-017"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4689,12 +5463,12 @@ MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Action {id: "credo-act-cont
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Action {id: "credo-act-control-022"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-026"}) MATCH (dst: Action {id: "credo-act-control-023"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.2"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "ail-violent-crimes"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "atlas-dangerous-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "ail-indiscriminate-weapons-cbrne"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: RiskGroup {id: "credo-rg-malicious-use"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Action {id: "credo-act-control-017"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4703,59 +5477,59 @@ MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Action {id: "credo-act-cont
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Action {id: "credo-act-control-021"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Action {id: "credo-act-control-022"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-027"}) MATCH (dst: Action {id: "credo-act-control-023"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Risk {id: "atlas-spreading-disinformation"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: RiskGroup {id: "credo-rg-malicious-use"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Action {id: "credo-act-control-021"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Action {id: "credo-act-control-022"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-028"}) MATCH (dst: Action {id: "credo-act-control-023"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: RiskGroup {id: "credo-rg-malicious-use"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Action {id: "credo-act-control-021"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Action {id: "credo-act-control-022"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-029"}) MATCH (dst: Action {id: "credo-act-control-023"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-030"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-030"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-030"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.4"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-030"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-030"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-030"}) MATCH (dst: RiskGroup {id: "credo-rg-operational"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-031"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-031"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-031"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-031"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-031"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-031"}) MATCH (dst: RiskGroup {id: "credo-rg-operational"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "llm102025-unbounded-consumption"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "nist-information-integrity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "llm102025-unbounded-consumption"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "atlas-incorrect-risk-testing"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Risk {id: "atlas-poor-model-accuracy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-032"}) MATCH (dst: RiskGroup {id: "credo-rg-operational"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.4"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: RiskGroup {id: "credo-rg-performance-&-robustness"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Action {id: "credo-act-control-012"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-033"}) MATCH (dst: Action {id: "credo-act-control-016"}) MERGE (src)-[: hasRelatedAction]->(dst);
-MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-5.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "atlas-nonconsensual-use"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Risk {id: "atlas-legal-accountability"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: RiskGroup {id: "credo-rg-performance-&-robustness"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-034"}) MATCH (dst: Action {id: "credo-act-control-010"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4767,15 +5541,15 @@ MATCH (src: Risk {id: "credo-risk-035"}) MATCH (dst: RiskGroup {id: "credo-rg-pe
 MATCH (src: Risk {id: "credo-risk-035"}) MATCH (dst: Action {id: "credo-act-control-022"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-035"}) MATCH (dst: Action {id: "credo-act-control-028"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "llm052025-improper-output-handling"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "llm052025-improper-output-handling"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Risk {id: "ail-specialized-advice"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: RiskGroup {id: "credo-rg-privacy"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Action {id: "credo-act-control-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4783,58 +5557,58 @@ MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Action {id: "credo-act-cont
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Action {id: "credo-act-control-026"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-036"}) MATCH (dst: Action {id: "credo-act-control-026"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "ail-suicide-and-self-harm"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "nist-data-privacy"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Risk {id: "atlas-personal-information-in-data"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: RiskGroup {id: "credo-rg-privacy"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Action {id: "credo-act-control-001"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Action {id: "credo-act-control-026"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-037"}) MATCH (dst: Action {id: "credo-act-control-026"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "atlas-revealing-confidential-information"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "ail-privacy"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "llm022025-sensitive-information-disclosure"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-038"}) MATCH (dst: RiskGroup {id: "credo-rg-security"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-039"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-039"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-039"}) MATCH (dst: Risk {id: "nist-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-039"}) MATCH (dst: Risk {id: "atlas-copyright-infringement"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-039"}) MATCH (dst: Risk {id: "ail-intellectual-property"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-039"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-039"}) MATCH (dst: RiskGroup {id: "credo-rg-security"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "llm042025-data-and-model-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "llm042025-data-and-model-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.1"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "atlas-exposing-personal-information"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "llm082025-vector-and-embedding-weaknesses"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-4.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-040"}) MATCH (dst: RiskGroup {id: "credo-rg-security"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "llm042025-data-and-model-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "atlas-evasion-attack"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-2.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "granite-jailbreak"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "granite-guardian-harm"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "llm042025-data-and-model-poisoning"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "llm072025-system-prompt-leakage"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "granite-jailbreak"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Risk {id: "nist-information-security"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-041"}) MATCH (dst: RiskGroup {id: "credo-rg-security"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-042"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.2"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-042"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-042"}) MATCH (dst: Risk {id: "atlas-impact-on-jobs"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-042"}) MATCH (dst: Risk {id: "granite-unethical-behavior"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-042"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-042"}) MATCH (dst: RiskGroup {id: "credo-rg-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-042"}) MATCH (dst: Action {id: "credo-act-control-035"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4844,11 +5618,11 @@ MATCH (src: Risk {id: "credo-risk-043"}) MATCH (dst: Taxonomy {id: "credo-ucf"})
 MATCH (src: Risk {id: "credo-risk-043"}) MATCH (dst: RiskGroup {id: "credo-rg-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-043"}) MATCH (dst: Action {id: "credo-act-control-035"}) MERGE (src)-[: hasRelatedAction]->(dst);
 MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.1"}) MERGE (src)-[: close_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.2"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "atlas-impact-on-human-agency"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "atlas-impact-on-cultural-diversity"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.2"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.3"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: RiskGroup {id: "credo-rg-societal-impact"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-044"}) MATCH (dst: Action {id: "credo-act-control-035"}) MERGE (src)-[: hasRelatedAction]->(dst);
@@ -4872,15 +5646,15 @@ MATCH (src: Risk {id: "credo-risk-047"}) MATCH (dst: Risk {id: "llm032025-supply
 MATCH (src: Risk {id: "credo-risk-047"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-047"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-047"}) MATCH (dst: RiskGroup {id: "credo-rg-third-party"}) MERGE (src)-[: isPartOf]->(dst);
-MATCH (src: Risk {id: "credo-risk-048"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-048"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-048"}) MATCH (dst: Risk {id: "llm032025-supply-chain"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-048"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-048"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-048"}) MATCH (dst: RiskGroup {id: "credo-rg-third-party"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-7.3"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
-MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.4"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: Risk {id: "nist-value-chain-and-component-integration"}) MERGE (src)-[: related_mappings]->(dst);
+MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: Risk {id: "mit-ai-risk-subdomain-6.5"}) MERGE (src)-[: related_mappings]->(dst);
 MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: Risk {id: "credo-risk-049"}) MATCH (dst: RiskGroup {id: "credo-rg-third-party"}) MERGE (src)-[: isPartOf]->(dst);
 MATCH (src: RiskGroup {id: "ibm-risk-atlas-accuracy"}) MATCH (dst: Taxonomy {id: "ibm-risk-atlas"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -4924,6 +5698,12 @@ MATCH (src: RiskGroup {id: "mit-ai-risk-domain-7"}) MATCH (dst: Taxonomy {id: "m
 MATCH (src: RiskGroup {id: "mit-ai-risk-repository-causal-entity"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: RiskGroup {id: "mit-ai-risk-repository-causal-intent"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: RiskGroup {id: "mit-ai-risk-repository-causal-timing"}) MATCH (dst: Taxonomy {id: "mit-ai-risk-repository-causal"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Group {id: "aiuc1-principle-a"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Group {id: "aiuc1-principle-b"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Group {id: "aiuc1-principle-c"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Group {id: "aiuc1-principle-d"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Group {id: "aiuc1-principle-e"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Group {id: "aiuc1-principle-f"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: CapabilityGroup {id: "ibm-cap-domain-language"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: CapabilityDomain {id: "ibm-cap-domain-reasoning"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: CapabilityDomain {id: "ibm-cap-domain-knowledge-and-learning"}) MATCH (dst: Taxonomy {id: "ibm-ai-capabilities"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
@@ -5114,6 +5894,264 @@ MATCH (src: RiskGroup {id: "credo-rg-privacy"}) MATCH (dst: Taxonomy {id: "credo
 MATCH (src: RiskGroup {id: "credo-rg-security"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: RiskGroup {id: "credo-rg-societal-impact"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: RiskGroup {id: "credo-rg-third-party"}) MATCH (dst: Taxonomy {id: "credo-ucf"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a001-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a001-1"}) MATCH (dst: Risk {id: "aiuc1-req-a001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a001-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a001-2"}) MATCH (dst: Risk {id: "aiuc1-req-a001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a001-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a001-3"}) MATCH (dst: Risk {id: "aiuc1-req-a001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a002-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a002-1"}) MATCH (dst: Risk {id: "aiuc1-req-a002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a003-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a003-1"}) MATCH (dst: Risk {id: "aiuc1-req-a003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a003-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a003-2"}) MATCH (dst: Risk {id: "aiuc1-req-a003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a003-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a003-3"}) MATCH (dst: Risk {id: "aiuc1-req-a003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-1"}) MATCH (dst: Risk {id: "aiuc1-req-a004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-2"}) MATCH (dst: Risk {id: "aiuc1-req-a004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-3"}) MATCH (dst: Risk {id: "aiuc1-req-a004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a004-4"}) MATCH (dst: Risk {id: "aiuc1-req-a004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a005-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a005-1"}) MATCH (dst: Risk {id: "aiuc1-req-a005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a005-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a005-2"}) MATCH (dst: Risk {id: "aiuc1-req-a005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a005-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a005-3"}) MATCH (dst: Risk {id: "aiuc1-req-a005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a006-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a006-1"}) MATCH (dst: Risk {id: "aiuc1-req-a006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a006-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a006-2"}) MATCH (dst: Risk {id: "aiuc1-req-a006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a006-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a006-3"}) MATCH (dst: Risk {id: "aiuc1-req-a006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a007-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a007-1"}) MATCH (dst: Risk {id: "aiuc1-req-a007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a007-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a007-2"}) MATCH (dst: Risk {id: "aiuc1-req-a007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a007-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-a007-3"}) MATCH (dst: Risk {id: "aiuc1-req-a007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b001-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b001-1"}) MATCH (dst: Risk {id: "aiuc1-req-b001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b001-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b001-2"}) MATCH (dst: Risk {id: "aiuc1-req-b001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-1"}) MATCH (dst: Risk {id: "aiuc1-req-b002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-2"}) MATCH (dst: Risk {id: "aiuc1-req-b002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-3"}) MATCH (dst: Risk {id: "aiuc1-req-b002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-4"}) MATCH (dst: Risk {id: "aiuc1-req-b002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-5"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b002-5"}) MATCH (dst: Risk {id: "aiuc1-req-b002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b003-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b003-1"}) MATCH (dst: Risk {id: "aiuc1-req-b003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b003-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b003-2"}) MATCH (dst: Risk {id: "aiuc1-req-b003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-1"}) MATCH (dst: Risk {id: "aiuc1-req-b004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-2"}) MATCH (dst: Risk {id: "aiuc1-req-b004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-3"}) MATCH (dst: Risk {id: "aiuc1-req-b004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b004-4"}) MATCH (dst: Risk {id: "aiuc1-req-b004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-1"}) MATCH (dst: Risk {id: "aiuc1-req-b005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-2"}) MATCH (dst: Risk {id: "aiuc1-req-b005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-3"}) MATCH (dst: Risk {id: "aiuc1-req-b005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-4"}) MATCH (dst: Risk {id: "aiuc1-req-b005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-5"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b005-5"}) MATCH (dst: Risk {id: "aiuc1-req-b005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b006-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b006-1"}) MATCH (dst: Risk {id: "aiuc1-req-b006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b006-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b006-2"}) MATCH (dst: Risk {id: "aiuc1-req-b006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b007-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b007-1"}) MATCH (dst: Risk {id: "aiuc1-req-b007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b007-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b007-2"}) MATCH (dst: Risk {id: "aiuc1-req-b007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-1"}) MATCH (dst: Risk {id: "aiuc1-req-b008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-2"}) MATCH (dst: Risk {id: "aiuc1-req-b008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-3"}) MATCH (dst: Risk {id: "aiuc1-req-b008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b008-4"}) MATCH (dst: Risk {id: "aiuc1-req-b008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b009-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b009-1"}) MATCH (dst: Risk {id: "aiuc1-req-b009"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b009-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b009-2"}) MATCH (dst: Risk {id: "aiuc1-req-b009"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b009-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-b009-3"}) MATCH (dst: Risk {id: "aiuc1-req-b009"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c001-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c001-1"}) MATCH (dst: Risk {id: "aiuc1-req-c001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c001-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c001-2"}) MATCH (dst: Risk {id: "aiuc1-req-c001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c002-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c002-1"}) MATCH (dst: Risk {id: "aiuc1-req-c002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c002-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c002-2"}) MATCH (dst: Risk {id: "aiuc1-req-c002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c002-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c002-3"}) MATCH (dst: Risk {id: "aiuc1-req-c002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-1"}) MATCH (dst: Risk {id: "aiuc1-req-c003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-2"}) MATCH (dst: Risk {id: "aiuc1-req-c003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-3"}) MATCH (dst: Risk {id: "aiuc1-req-c003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c003-4"}) MATCH (dst: Risk {id: "aiuc1-req-c003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c004-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c004-1"}) MATCH (dst: Risk {id: "aiuc1-req-c004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c004-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c004-2"}) MATCH (dst: Risk {id: "aiuc1-req-c004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c004-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c004-3"}) MATCH (dst: Risk {id: "aiuc1-req-c004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c005-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c005-1"}) MATCH (dst: Risk {id: "aiuc1-req-c005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c005-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c005-2"}) MATCH (dst: Risk {id: "aiuc1-req-c005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c005-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c005-3"}) MATCH (dst: Risk {id: "aiuc1-req-c005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c006-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c006-1"}) MATCH (dst: Risk {id: "aiuc1-req-c006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c006-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c006-2"}) MATCH (dst: Risk {id: "aiuc1-req-c006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c006-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c006-3"}) MATCH (dst: Risk {id: "aiuc1-req-c006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c007-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c007-1"}) MATCH (dst: Risk {id: "aiuc1-req-c007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c007-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c007-2"}) MATCH (dst: Risk {id: "aiuc1-req-c007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c007-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c007-3"}) MATCH (dst: Risk {id: "aiuc1-req-c007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c008-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c008-1"}) MATCH (dst: Risk {id: "aiuc1-req-c008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c008-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c008-2"}) MATCH (dst: Risk {id: "aiuc1-req-c008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c008-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c008-3"}) MATCH (dst: Risk {id: "aiuc1-req-c008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c009-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c009-1"}) MATCH (dst: Risk {id: "aiuc1-req-c009"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c009-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c009-2"}) MATCH (dst: Risk {id: "aiuc1-req-c009"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c010-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c010-1"}) MATCH (dst: Risk {id: "aiuc1-req-c010"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c011-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c011-1"}) MATCH (dst: Risk {id: "aiuc1-req-c011"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c012-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-c012-1"}) MATCH (dst: Risk {id: "aiuc1-req-c012"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d001-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d001-1"}) MATCH (dst: Risk {id: "aiuc1-req-d001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d001-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d001-2"}) MATCH (dst: Risk {id: "aiuc1-req-d001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d001-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d001-3"}) MATCH (dst: Risk {id: "aiuc1-req-d001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d002-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d002-1"}) MATCH (dst: Risk {id: "aiuc1-req-d002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-1"}) MATCH (dst: Risk {id: "aiuc1-req-d003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-2"}) MATCH (dst: Risk {id: "aiuc1-req-d003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-3"}) MATCH (dst: Risk {id: "aiuc1-req-d003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-4"}) MATCH (dst: Risk {id: "aiuc1-req-d003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-5"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d003-5"}) MATCH (dst: Risk {id: "aiuc1-req-d003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d004-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-d004-1"}) MATCH (dst: Risk {id: "aiuc1-req-d004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e001-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e001-1"}) MATCH (dst: Risk {id: "aiuc1-req-e001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e002-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e002-1"}) MATCH (dst: Risk {id: "aiuc1-req-e002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e002-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e002-2"}) MATCH (dst: Risk {id: "aiuc1-req-e002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e003-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e003-1"}) MATCH (dst: Risk {id: "aiuc1-req-e003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e003-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e003-2"}) MATCH (dst: Risk {id: "aiuc1-req-e003"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e004-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e004-1"}) MATCH (dst: Risk {id: "aiuc1-req-e004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e004-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e004-2"}) MATCH (dst: Risk {id: "aiuc1-req-e004"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e005-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e005-1"}) MATCH (dst: Risk {id: "aiuc1-req-e005"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e006-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e006-1"}) MATCH (dst: Risk {id: "aiuc1-req-e006"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e007-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e007-1"}) MATCH (dst: Risk {id: "aiuc1-req-e007"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e008-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e008-1"}) MATCH (dst: Risk {id: "aiuc1-req-e008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e008-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e008-2"}) MATCH (dst: Risk {id: "aiuc1-req-e008"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e009-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e009-1"}) MATCH (dst: Risk {id: "aiuc1-req-e009"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-1"}) MATCH (dst: Risk {id: "aiuc1-req-e010"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-2"}) MATCH (dst: Risk {id: "aiuc1-req-e010"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-3"}) MATCH (dst: Risk {id: "aiuc1-req-e010"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e010-4"}) MATCH (dst: Risk {id: "aiuc1-req-e010"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e011-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e011-1"}) MATCH (dst: Risk {id: "aiuc1-req-e011"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e011-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e011-2"}) MATCH (dst: Risk {id: "aiuc1-req-e011"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e012-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e012-1"}) MATCH (dst: Risk {id: "aiuc1-req-e012"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-1"}) MATCH (dst: Risk {id: "aiuc1-req-e013"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-2"}) MATCH (dst: Risk {id: "aiuc1-req-e013"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-3"}) MATCH (dst: Risk {id: "aiuc1-req-e013"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-4"}) MATCH (dst: Risk {id: "aiuc1-req-e013"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-5"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e013-5"}) MATCH (dst: Risk {id: "aiuc1-req-e013"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e014-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e014-1"}) MATCH (dst: Risk {id: "aiuc1-req-e014"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e015-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e015-1"}) MATCH (dst: Risk {id: "aiuc1-req-e015"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e015-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e015-2"}) MATCH (dst: Risk {id: "aiuc1-req-e015"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e015-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e015-3"}) MATCH (dst: Risk {id: "aiuc1-req-e015"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-1"}) MATCH (dst: Risk {id: "aiuc1-req-e016"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-2"}) MATCH (dst: Risk {id: "aiuc1-req-e016"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-3"}) MATCH (dst: Risk {id: "aiuc1-req-e016"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-4"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-4"}) MATCH (dst: Risk {id: "aiuc1-req-e016"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-5"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e016-5"}) MATCH (dst: Risk {id: "aiuc1-req-e016"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e017-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e017-1"}) MATCH (dst: Risk {id: "aiuc1-req-e017"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e017-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e017-2"}) MATCH (dst: Risk {id: "aiuc1-req-e017"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e017-3"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-e017-3"}) MATCH (dst: Risk {id: "aiuc1-req-e017"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f001-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f001-1"}) MATCH (dst: Risk {id: "aiuc1-req-f001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f001-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f001-2"}) MATCH (dst: Risk {id: "aiuc1-req-f001"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f002-1"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f002-1"}) MATCH (dst: Risk {id: "aiuc1-req-f002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f002-2"}) MATCH (dst: Taxonomy {id: "aiuc1"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
+MATCH (src: Action {id: "aiuc1-ctrl-f002-2"}) MATCH (dst: Risk {id: "aiuc1-req-f002"}) MERGE (src)-[: hasRelatedRisk]->(dst);
 MATCH (src: RiskControl {id: "shieldgemma-sexually-explicit-detection"}) MATCH (dst: Taxonomy {id: "shieldgemma-taxonomy"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);
 MATCH (src: RiskControl {id: "shieldgemma-sexually-explicit-detection"}) MATCH (dst: RiskConcept {id: "shieldgemma-sexually-explicit"}) MERGE (src)-[: detectsRiskConcept]->(dst);
 MATCH (src: RiskControl {id: "shieldgemma-dangerous-content-detection"}) MATCH (dst: Taxonomy {id: "shieldgemma-taxonomy"}) MERGE (src)-[: isDefinedByTaxonomy]->(dst);

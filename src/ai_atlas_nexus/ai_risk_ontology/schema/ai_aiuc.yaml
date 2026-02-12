@@ -1,0 +1,196 @@
+id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc
+name: ai_aiuc
+description: AIUC-1 classes as used by AI Atlas Nexus
+license: license-apache-2.0
+version: "1.0.0"
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+  - common
+  - ai_system
+  - ai_eval
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  dpv: https://w3id.org/dpv#
+  airo: https://w3id.org/airo#
+default_range: string
+default_prefix: nexus
+
+enums:
+  AIUC1ApplicationCategory:
+    permissible_values:
+      MANDATORY: Mandatory
+      OPTIONAL: Optional
+
+  AIUC1ControlApplicationCategory:
+    permissible_values:
+      CORE: Core Control
+      SUPPLEMENTAL: Supplemental Control
+
+  AIUC1EvidenceCategory:
+    permissible_values:
+      TECHNICAL_IMPLEMENTATION: Technical Implementation
+      LEGAL_POLICIES: Legal Policies
+      OPERATIONAL_PRACTICES: Operational Practices
+      THIRD_PARTY_EVALS: Third-party Evals
+
+  AIUC1Frequency:
+    permissible_values:
+      MONTHS_3: Every 3 months
+      MONTHS_6: Every 6 months
+      MONTHS_12: Every 12 months
+
+  AIUC1RequirementType:
+    permissible_values:
+      DETECTIVE: Detective
+      PREVENTATIVE: Preventative
+
+classes:
+  ControlActivity:
+    is_a: Rule
+    description: >-
+      An obligation, permission, or prohibition for AI system assurance.
+    mixin: true
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    slots:
+      - hasControlApplication
+      - hasEvidenceCategory
+      - hasTypicalLocation
+      - appliesToCapability
+      - hasRequirement
+      - hasRequirementType
+      - hasTypicalEvidence
+
+  ControlActivityPermission:
+    is_a: Permission
+    mixins:
+      - ControlActivity
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    description: A control activity (rule) describing a permission to perform an activity
+    class_uri: nexus:ControlActivityPermission
+
+  ControlActivityProhibition:
+    is_a: Prohibition
+    mixins:
+      - ControlActivity
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    description: A control activity (rule) describing a prohibition to perform an activity
+    class_uri: nexus:ControlActivityProhibition
+
+  ControlActivityObligation:
+    is_a: Obligation
+    mixins:
+      - ControlActivity
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    description: A control activity (rule) describing an obligation for performing an activity
+    class_uri: nexus:ControlActivityObligation
+
+  ControlActivityRecommendation:
+    is_a: Recommendation
+    mixins:
+      - ControlActivity
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    description: A control activity (rule) describing a recommendation for performing an activity
+    class_uri: nexus:ControlActivityRecommendation
+
+  Requirement:
+    is_a: Rule
+    description: >-
+      A requirement representing a combination of obligation, permission, or prohibition for AI system assurance.
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    slot_usage:
+      hasRule:
+        description: Relationship indicating the control activities (rules) of which the requirement is composed.
+        inlined: false
+    slots:
+      - hasApplication
+      - hasFrequency
+      - hasKeywords
+      - hasPrinciple
+      - appliesToCapability
+      - hasRequirementType
+      - isDefinedByTaxonomy
+      - hasRule
+
+slots:
+  hasApplication:
+    slot_uri: nexus:hasApplication
+    range: AIUC1ApplicationCategory
+    multivalued: true
+    inlined: false
+    description: The application category, Optional or Mandatory.
+  hasFrequency:
+    slot_uri: nexus:hasFrequency
+    range: AIUC1Frequency
+    description: The frequency
+  hasKeywords:
+    slot_uri: nexus:hasKeywords
+    range: string
+    multivalued: true
+    inlined: false
+    description: A collection of keywords
+  hasPrinciple:
+    slot_uri: dpv:isPartOf
+    range: Principle
+    multivalued: true
+    inlined: false
+    description: Which of the AIUC-1 principles this requirement belongs to
+  hasRequirementType:
+    slot_uri: nexus:hasRequirementType
+    range: AIUC1RequirementType
+    description: The requirement type of whether this is preventive, detective, etc.
+  hasControlApplication:
+    slot_uri: nexus:hasControlApplication
+    range: AIUC1ControlApplicationCategory
+    description: Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to
+  hasEvidenceCategory:
+    slot_uri: nexus:hasEvidenceCategory
+    range: AIUC1EvidenceCategory
+    description: The evidence category, ie Technical Implementation, Operational Practices, etc.
+    multivalued: true
+    inlined: false
+  hasTypicalLocation:
+    slot_uri: nexus:hasTypicalLocation
+    range: string
+    multivalued: true
+    inlined: false
+    description: The evidence is usually found here
+  hasTypicalEvidence:
+    slot_uri: nexus:hasTypicalEvidence
+    range: string
+    multivalued: false
+    inlined: false
+    description: The evidence is usually found here
+  appliesToCapability:
+    slot_uri: nexus:appliesToCapability
+    range: AiTask
+    multivalued: true
+    inlined: false
+    description: This evidence only applies to AI systems with this capability
+  hasRequirement:
+    slot_uri: nexus:hasRequirement
+    range: Requirement
+    multivalued: false
+    inlined: false
+    description: This requirement this rule belongs to

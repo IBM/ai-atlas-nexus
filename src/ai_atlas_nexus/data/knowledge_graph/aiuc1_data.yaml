@@ -1,0 +1,911 @@
+documents:
+  - id: AIUC-1-Jan-2026
+    name: AIUC-1 Framework - January 2026 Version
+    description: >-
+      AIUC-1 is a compliance certification framework positioned as "SOC 2 for AI" provided by Artificial
+      Intelligence Underwriting Company and a consortium including Microsoft, JPMorgan
+      Chase, Google Cloud, Meta, Cisco, Anthropic, Stanford, and MITRE.
+    url: https://www.aiuc1.com
+    dateCreated: 2026-01-15
+
+taxonomies:
+  - id: aiuc1
+    name: AIUC-1 Framework
+    description: >-
+      AIUC-1 is a compliance certification framework for AI agents. It covers data
+      and privacy, security, safety, reliability, accountability and societal risks for enterprise AI system
+      governance.
+    dateCreated: 2026-01-15
+    dateModified: 2026-02-10
+    url: https://www.aiuc1.com
+    hasDocumentation:
+      - AIUC-1-Jan-2026
+    type: RiskTaxonomy
+
+entries:
+  - id: aiuc1-principle-a
+    name: "Principle A: Data and Privacy"
+    description: >-
+      Protect against data leakage, IP leakage, and training on user data without consent
+    isDefinedByTaxonomy: aiuc1
+    type: Principle
+    hasDocumentation:
+      - AIUC-1-Jan-2026
+  - id: aiuc1-principle-b
+    name: "Principle B: Security"
+    description: >-
+      Protect against adversarial attacks like jailbreaks and prompt injections as well as unauthorized tool calls
+    isDefinedByTaxonomy: aiuc1
+    type: Principle
+    hasDocumentation:
+      - AIUC-1-Jan-2026
+  - id: aiuc1-principle-c
+    name: "Principle C: Safety"
+    description: >-
+      Prevent harmful AI outputs and brand risk through testing, monitoring and safeguards
+    isDefinedByTaxonomy: aiuc1
+    type: Principle
+    hasDocumentation:
+      - AIUC-1-Jan-2026
+  - id: aiuc1-principle-d
+    name: "Principle D: Reliability"
+    description: >-
+      Prevent hallucinations and unreliable tool calls to business systems
+    isDefinedByTaxonomy: aiuc1
+    type: Principle
+    hasDocumentation:
+      - AIUC-1-Jan-2026
+  - id: aiuc1-principle-e
+    name: "Principle E: Accountability"
+    description: >-
+      Assign accountability, enforce oversight, create emergency responses and vet suppliers
+    isDefinedByTaxonomy: aiuc1
+    type: Principle
+    hasDocumentation:
+      - AIUC-1-Jan-2026
+  - id: aiuc1-principle-f
+    name: "Principle F: Society"
+    description: >-
+      Prevent AI from enabling societal harm through cyberattacks or national security risks
+    isDefinedByTaxonomy: aiuc1
+    type: Principle
+    hasDocumentation:
+      - AIUC-1-Jan-2026
+
+aitasks:
+  - id: universal-capability
+    name: Universal
+    description: >-
+      Universal (all capabilities)
+    isDefinedByTaxonomy: aiuc1
+  - id: external-facing-capability
+    name: External Facing
+    description: >-
+      External Facing
+    isDefinedByTaxonomy: aiuc1
+
+rules:
+  - id: aiuc1-req-a001
+    name: Establish input data policy
+    description: >-
+      Establish and communicate AI input data policies covering how customer
+      data is used for model training, inference processing, data retention periods,
+      and customer data rights
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    hasKeywords:
+      - Data Retention
+      - Model Training Data
+      - Opt-Out
+    hasPrinciple:
+      - aiuc1-principle-a
+    appliesToCapability:
+      - universal-capability
+    hasRequirementType: PREVENTATIVE
+    isDefinedByTaxonomy: aiuc1
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-a001-1
+      - aiuc1-ctrl-a001-2
+      - aiuc1-ctrl-a001-3
+  - id: aiuc1-req-a002
+    name: Establish output data policy
+    description: >-
+      Establish AI output ownership, usage, opt-out and deletion policies
+      to customers and communicate these policies
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    hasKeywords:
+      - Data Ownership
+      - Usage
+      - Deletion
+      - Consent
+      - Opt-Out
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-a
+    appliesToCapability:
+      - universal-capability
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-a002-1
+  - id: aiuc1-req-a003
+    name: Limit AI agent data collection
+    description: >-
+      Implement safeguards to limit AI agent data access to task-relevant
+      information based on user roles and context
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-a
+    appliesToCapability:
+      - universal-capability
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-a003-1
+      - aiuc1-ctrl-a003-2
+      - aiuc1-ctrl-a003-3
+  - id: aiuc1-req-a004
+    name: Protect IP and trade secrets
+    description: >-
+      Implement safeguards or technical controls to prevent AI systems from
+      leaking company intellectual property or confidential information
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-a
+    appliesToCapability:
+      - universal-capability
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-a004-1
+      - aiuc1-ctrl-a004-2
+      - aiuc1-ctrl-a004-3
+      - aiuc1-ctrl-a004-4
+  - id: aiuc1-req-a005
+    name: Prevent cross-customer data exposure
+    description: >-
+      Implement safeguards to prevent cross-customer data exposure when
+      combining customer data from multiple sources
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-a
+    appliesToCapability:
+      - universal-capability
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-a005-1
+      - aiuc1-ctrl-a005-2
+      - aiuc1-ctrl-a005-3
+  - id: aiuc1-req-a006
+    name: Prevent PII leakage
+    description: >-
+      Establish safeguards to prevent personal data leakage through AI outputs
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-a
+    appliesToCapability:
+      - universal-capability
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-a006-1
+      - aiuc1-ctrl-a006-2
+      - aiuc1-ctrl-a006-3
+  - id: aiuc1-req-a007
+    name: Prevent IP violations
+    description: >-
+      Implement safeguards and technical controls to prevent AI outputs
+      from violating copyrights, trademarks, or other third-party intellectual property
+      rights
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-a
+    appliesToCapability:
+      - universal-capability
+      - external-facing-capability
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-a007-1
+      - aiuc1-ctrl-a007-2
+      - aiuc1-ctrl-a007-3
+  - id: aiuc1-req-b001
+    name: Third-party testing of adversarial robustness
+    description: >-
+      Implement adversarial testing program to validate system resilience
+      against adversarial inputs and prompt injection attempts in line with adversarial
+      threat taxonomy
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b001-1
+      - aiuc1-ctrl-b001-2
+  - id: aiuc1-req-b002
+    name: Detect adversarial input
+    description: >-
+      Implement monitoring capabilities to detect and respond to adversarial
+      inputs and prompt injection attempts
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b002-1
+      - aiuc1-ctrl-b002-2
+      - aiuc1-ctrl-b002-3
+      - aiuc1-ctrl-b002-4
+      - aiuc1-ctrl-b002-5
+  - id: aiuc1-req-b003
+    name: Manage public release of technical details
+    description: >-
+      Implement controls to prevent over-disclosure of technical information
+      about AI systems and organizational details that could enable adversarial targeting
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b003-1
+      - aiuc1-ctrl-b003-2
+  - id: aiuc1-req-b004
+    name: Prevent AI endpoint scraping
+    description: >-
+      Implement safeguards to prevent probing or scraping of external AI
+      endpoints
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b004-1
+      - aiuc1-ctrl-b004-2
+      - aiuc1-ctrl-b004-3
+      - aiuc1-ctrl-b004-4
+  - id: aiuc1-req-b005
+    name: Implement real-time input filtering
+    description: >-
+      Implement real-time input filtering using automated moderation tools
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b005-1
+      - aiuc1-ctrl-b005-2
+      - aiuc1-ctrl-b005-3
+      - aiuc1-ctrl-b005-4
+      - aiuc1-ctrl-b005-5
+  - id: aiuc1-req-b006
+    name: Prevent unauthorized AI agent actions
+    description: >-
+      Implement safeguards to limit AI agent system access based on context
+      and declared objectives
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b006-1
+      - aiuc1-ctrl-b006-2
+  - id: aiuc1-req-b007
+    name: Enforce user access privileges to AI systems
+    description: >-
+      Establish and maintain user access controls and admin privileges for
+      AI systems in line with policy
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b007-1
+      - aiuc1-ctrl-b007-2
+  - id: aiuc1-req-b008
+    name: Protect model deployment environment
+    description: >-
+      Implement security measures for AI model deployment environments including
+      encryption, access controls and authorization
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b008-1
+      - aiuc1-ctrl-b008-2
+      - aiuc1-ctrl-b008-3
+      - aiuc1-ctrl-b008-4
+  - id: aiuc1-req-b009
+    name: Limit output over-exposure
+    description: >-
+      Implement output limitations and obfuscation techniques to safeguard
+      against information leakage
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-b
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-b009-1
+      - aiuc1-ctrl-b009-2
+      - aiuc1-ctrl-b009-3
+  - id: aiuc1-req-c001
+    name: Define AI risk taxonomy
+    description: >-
+      Establish a risk taxonomy that categorizes risks within harmful, out-of-scope,
+      and hallucinated outputs, tool calls, and other risks based on application-specific
+      usage
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c001-1
+      - aiuc1-ctrl-c001-2
+  - id: aiuc1-req-c002
+    name: Conduct pre-deployment testing
+    description: >-
+      Conduct internal testing of AI systems prior to deployment across
+      risk categories for system changes requiring formal review or approval
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c002-1
+      - aiuc1-ctrl-c002-2
+      - aiuc1-ctrl-c002-3
+  - id: aiuc1-req-c003
+    name: Prevent harmful outputs
+    description: >-
+      Implement safeguards or technical controls to prevent harmful outputs
+      including distressed outputs, angry responses, high-risk advice, offensive content,
+      bias, and deception
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c003-1
+      - aiuc1-ctrl-c003-2
+      - aiuc1-ctrl-c003-3
+      - aiuc1-ctrl-c003-4
+  - id: aiuc1-req-c004
+    name: Prevent out-of-scope outputs
+    description: >-
+      Implement safeguards or technical controls to prevent out-of-scope
+      outputs (e.g. political discussion, healthcare advice)
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c004-1
+      - aiuc1-ctrl-c004-2
+      - aiuc1-ctrl-c004-3
+  - id: aiuc1-req-c005
+    name: Prevent customer-defined high risk outputs
+    description: >-
+      Implement safeguards or technical controls to prevent additional high
+      risk outputs as defined in risk taxonomy
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c005-1
+      - aiuc1-ctrl-c005-2
+      - aiuc1-ctrl-c005-3
+  - id: aiuc1-req-c006
+    name: Prevent output vulnerabilities
+    description: >-
+      Implement safeguards to prevent security vulnerabilities in outputs
+      from impacting users
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c006-1
+      - aiuc1-ctrl-c006-2
+      - aiuc1-ctrl-c006-3
+  - id: aiuc1-req-c007
+    name: Flag high risk outputs
+    description: >-
+      Implement an alerting system that flags high-risk outputs for human
+      review
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c007-1
+      - aiuc1-ctrl-c007-2
+      - aiuc1-ctrl-c007-3
+  - id: aiuc1-req-c008
+    name: Monitor AI risk categories
+    description: >-
+      Implement monitoring of AI systems across risk categories
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c008-1
+      - aiuc1-ctrl-c008-2
+      - aiuc1-ctrl-c008-3
+  - id: aiuc1-req-c009
+    name: Enable real-time feedback and intervention
+    description: >-
+      Implement mechanisms to enable real-time user feedback collection
+      and intervention mechanisms
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c009-1
+      - aiuc1-ctrl-c009-2
+  - id: aiuc1-req-c010
+    name: Third-party testing for harmful outputs
+    description: >-
+      Appoint expert third parties to evaluate system robustness to harmful
+      outputs including distressed outputs, angry responses, high-risk advice, offensive
+      content, bias, and deception at least every 3 months
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c010-1
+  - id: aiuc1-req-c011
+    name: Third-party testing for out-of-scope outputs
+    description: >-
+      Appoint expert third parties to evaluate system robustness to out-of-scope
+      outputs at least every 3 months (e.g. political discussion, healthcare advice)
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c011-1
+  - id: aiuc1-req-c012
+    name: Third-party testing for customer-defined risk
+    description: >-
+      Appoint expert third-parties to evaluate system robustness to additional
+      high-risk outputs as defined in risk taxonomy at least every 3 months
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-c
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-c012-1
+  - id: aiuc1-req-d001
+    name: Prevent hallucinated outputs
+    description: >-
+      Implement safeguards or technical controls to prevent hallucinated
+      outputs
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-d
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-d001-1
+      - aiuc1-ctrl-d001-2
+      - aiuc1-ctrl-d001-3
+  - id: aiuc1-req-d002
+    name: Third-party testing for hallucinations
+    description: >-
+      Appoint expert third-parties to evaluate hallucinated outputs at least
+      every 3 months
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-d
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-d002-1
+  - id: aiuc1-req-d003
+    name: Restrict unsafe tool calls
+    description: >-
+      Implement safeguards or technical controls to prevent tool calls in
+      AI systems from executing unauthorized actions, accessing restricted information,
+      or making decisions beyond their intended scope
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-d
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-d003-1
+      - aiuc1-ctrl-d003-2
+      - aiuc1-ctrl-d003-3
+      - aiuc1-ctrl-d003-4
+      - aiuc1-ctrl-d003-5
+  - id: aiuc1-req-d004
+    name: Third-party testing of tool calls
+    description: >-
+      Appoint expert third-parties to evaluate tool calls in AI systems,
+      including executing unauthorized actions, accessing restricted information, or
+      making decisions beyond their intended scope at least every 3 months
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_3
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-d
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-d004-1
+  - id: aiuc1-req-e001
+    name: AI failure plan for security breaches
+    description: >-
+      Document AI failure plan for AI privacy and security breaches assigning
+      accountable owners and establishing notification and remediation with third-party
+      support as needed (e.g. legal, PR, insurers)
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e001-1
+  - id: aiuc1-req-e002
+    name: AI failure plan for harmful outputs
+    description: >-
+      Document AI failure plan for harmful AI outputs that cause significant
+      customer harm assigning accountable owners and establishing remediation with third-party
+      support as needed (e.g. legal, PR, insurers)
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e002-1
+      - aiuc1-ctrl-e002-2
+  - id: aiuc1-req-e003
+    name: AI failure plan for hallucinations
+    description: >-
+      Document AI failure plan for hallucinated AI outputs that cause substantial
+      customer financial loss assigning accountable owners and establishing remediation
+      with third-party support as needed (e.g. legal, PR, insurers)
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e003-1
+      - aiuc1-ctrl-e003-2
+  - id: aiuc1-req-e004
+    name: Assign accountability
+    description: >-
+      Document which AI system changes across the development & deployment
+      lifecycle require formal review or approval, assign a lead accountable for each,
+      and document their approval with supporting evidence
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e004-1
+      - aiuc1-ctrl-e004-2
+  - id: aiuc1-req-e005
+    name: Assess cloud vs on-prem processing
+    description: >-
+      Establish criteria for selecting cloud provider, and circumstances
+      for on-premises processing considering data sensitivity, regulatory requirements,
+      security controls, and operational needs
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e005-1
+  - id: aiuc1-req-e006
+    name: Conduct vendor due diligence
+    description: >-
+      Establish AI vendor due diligence processes for foundation and upstream
+      model providers covering data handling, PII controls, security and compliance
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e006-1
+  - id: aiuc1-req-e007
+    name: "[Retired] Document system change approvals"
+    description: >-
+      Merged with E004 - see changelog (Q1 2026 update)
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e007-1
+  - id: aiuc1-req-e008
+    name: Review internal processes
+    description: >-
+      Establish regular internal reviews of key processes and document review
+      records and approvals
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e008-1
+      - aiuc1-ctrl-e008-2
+  - id: aiuc1-req-e009
+    name: Monitor third-party access
+    description: >-
+      Implement systems to monitor third party access
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e009-1
+  - id: aiuc1-req-e010
+    name: Establish AI acceptable use policy
+    description: >-
+      Establish and implement an AI acceptable use policy
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e010-1
+      - aiuc1-ctrl-e010-2
+      - aiuc1-ctrl-e010-3
+      - aiuc1-ctrl-e010-4
+  - id: aiuc1-req-e011
+    name: Record processing locations
+    description: >-
+      Document AI data processing locations
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e011-1
+      - aiuc1-ctrl-e011-2
+  - id: aiuc1-req-e012
+    name: Document regulatory compliance
+    description: >-
+      Document applicable AI laws and standards, required data protections,
+      and strategies for compliance
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_6
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e012-1
+  - id: aiuc1-req-e013
+    name: Implement quality management system
+    description: >-
+      Establish a quality management system for AI systems proportionate
+      to the size of the organization
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e013-1
+      - aiuc1-ctrl-e013-2
+      - aiuc1-ctrl-e013-3
+      - aiuc1-ctrl-e013-4
+      - aiuc1-ctrl-e013-5
+  - id: aiuc1-req-e014
+    name: Share transparency reports
+    description: >-
+      Merged with E017 - see changelog (Q1 2026 update)
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e014-1
+  - id: aiuc1-req-e015
+    name: Log model activity
+    description: >-
+      Maintain logs of AI system processes, actions, and model outputs where
+      permitted to support incident investigation, auditing, and explanation of AI system
+      behavior
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e015-1
+      - aiuc1-ctrl-e015-2
+      - aiuc1-ctrl-e015-3
+  - id: aiuc1-req-e016
+    name: Implement AI disclosure mechanisms
+    description: >-
+      Implement clear disclosure mechanisms to inform users when they are
+      interacting with AI systems rather than humans
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e016-1
+      - aiuc1-ctrl-e016-2
+      - aiuc1-ctrl-e016-3
+      - aiuc1-ctrl-e016-4
+      - aiuc1-ctrl-e016-5
+  - id: aiuc1-req-e017
+    name: Document system transparency policy
+    description: >-
+      Establish a system transparency policy and maintain a repository of
+      model cards, datasheets, and interpretability reports for major systems
+    hasApplication:
+      - OPTIONAL
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-e
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-e017-1
+      - aiuc1-ctrl-e017-2
+      - aiuc1-ctrl-e017-3
+  - id: aiuc1-req-f001
+    name: Prevent AI cyber misuse
+    description: >-
+      Implement or document guardrails to prevent AI-enabled misuse for
+      cyber attacks and exploitation
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-f
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-f001-1
+      - aiuc1-ctrl-f001-2
+  - id: aiuc1-req-f002
+    name: Prevent catastrophic misuse
+    description: >-
+      Implement or document guardrails to prevent AI-enabled catastrophic
+      system misuse (chemical / bio / radio / nuclear)
+    hasApplication:
+      - MANDATORY
+    hasFrequency: MONTHS_12
+    isDefinedByTaxonomy: aiuc1
+    hasPrinciple:
+      - aiuc1-principle-f
+    type: Requirement
+    hasRule:
+      - aiuc1-ctrl-f002-1
+      - aiuc1-ctrl-f002-2
