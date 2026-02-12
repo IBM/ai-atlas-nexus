@@ -2,7 +2,7 @@ documents:
   - id: AIUC-1-Jan-2026
     name: AIUC-1 Framework - January 2026 Version
     description: >-
-      AIUC-1 is a compliance certification framework positioned as "SOC 2 for AI" provided by Artificial
+      AIUC-1 is a compliance certification framework positioned as 'SOC 2 for AI' provided by Artificial
       Intelligence Underwriting Company and a consortium including Microsoft, JPMorgan
       Chase, Google Cloud, Meta, Cisco, Anthropic, Stanford, and MITRE.
     url: https://www.aiuc1.com
@@ -1600,14 +1600,13 @@ rules:
       and severity
     hasRequirement: aiuc1-req-b005
     hasTypicalEvidence: >-
-      "Screenshot of moderation tool integration showing API configuration,
+      Screenshot of moderation tool integration showing API configuration,
       filtering rules, action settings (block/warn/modify), and confidence thresholds
       for different violation categories - this could be screenshots of configuration
       files, admin dashboard settings, or API integration code.
 
-
       Example moderation tools: OpenAI Moderation API, Claude content filtering, VirtueAI/Hive/Spectrum
-      Labs"
+      Labs
     hasEvidenceCategory:
       - TECHNICAL_IMPLEMENTATION
     hasTypicalLocation:
@@ -1985,11 +1984,11 @@ rules:
     hasControlApplication: SUPPLEMENTAL
     type: ControlActivityRecommendation
     description: >-
-      '- Integrating AI system testing into established software development
+      - Integrating AI system testing into established software development
       lifecycle (SDLC) gates. For example, including threat modelling and risk evaluation
       during design phases, requiring risk evaluation and sign-off at staging or pre-production
       milestones, aligning with CI/CD or MLOps pipelines, and documenting test artefacts
-      in shared repositories."'
+      in shared repositories.
     hasRequirement: aiuc1-req-c002
     hasTypicalEvidence: >-
       CI/CD pipeline configuration or workflow showing AI testing
@@ -3161,11 +3160,11 @@ rules:
       development procedures.
     hasRequirement: aiuc1-req-e013
     hasTypicalEvidence: >-
-      "Documentation showing change management and approval processes
+      Documentation showing change management and approval processes
       - may include change approval workflows or procedures, RACI matrix assigning accountability
       for quality decisions, design and development procedure documents, or documentation
       standards and templates for AI systems. May be fulfilled by evidence submitted
-      to E004: Assign accountability."
+      to E004: Assign accountability.
     hasEvidenceCategory:
       - OPERATIONAL_PRACTICES
     hasTypicalLocation:
@@ -3315,7 +3314,7 @@ rules:
     hasRequirement: aiuc1-req-e016
     hasTypicalEvidence: >-
       Screenshot of text-based AI disclosure - may include chatbot
-      interface with "You're chatting with AI" notice, messaging system showing AI agent
+      interface with 'You're chatting with AI' notice, messaging system showing AI agent
       identifier, website chat widget with AI disclosure banner, or automated email/SMS
       with AI generation notice.
     hasEvidenceCategory:
@@ -3368,10 +3367,10 @@ rules:
     hasRequirement: aiuc1-req-e016
     hasTypicalEvidence: >-
       Screenshot showing AI automation disclosure in product - may
-      include "Powered by AI" or "AI Agent" labels in interface, workflow dashboard
-      displaying AI-automated tasks, status indicators showing "AI is handling this"
-      or "Automated by AI," or notification messages stating "AI agent completed your
-      request."
+      include 'Powered by AI' or 'AI Agent' labels in interface, workflow dashboard
+      displaying AI-automated tasks, status indicators showing 'AI is handling this'
+      or 'Automated by AI', or notification messages stating AI agent completed your
+      request.
     hasEvidenceCategory:
       - TECHNICAL_IMPLEMENTATION
     hasTypicalLocation:
@@ -3387,7 +3386,7 @@ rules:
     hasRequirement: aiuc1-req-e016
     hasTypicalEvidence: >-
       Screenshot of chatbot or voice agent transcript responding to
-      "Are you AI?"
+      'Are you AI?'
     hasEvidenceCategory:
       - TECHNICAL_IMPLEMENTATION
     hasTypicalLocation:
