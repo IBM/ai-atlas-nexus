@@ -210,24 +210,57 @@ classes:
 
   Rule:
     is_a: Entity
+    abstract: true
+    attributes:
+      type:
+        range: string
+        designates_type: true
     class_uri: dpv:Rule
     description: >-
       A rule describing a process or control that directs or determines if and how an activity should be conducted.
+    slots:
+      - isDefinedByTaxonomy
+      - hasRule
 
   Permission:
     is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        range: string
+        designates_type: true
     description: A rule describing a permission to perform an activity
     class_uri: dpv:Permission
 
   Prohibition:
     is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        range: string
+        designates_type: true
     description: A rule describing a prohibition to perform an activity
     class_uri: dpv:Prohibition
 
   Obligation:
     is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        range: string
+        designates_type: true
     description: A rule describing an obligation for performing an activity
     class_uri: dpv:Obligation
+
+  Recommendation:
+    is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    description: A rule describing a recommendation for performing an activity
+    class_uri: dpv:Recommendation
 
 slots:
   id:
