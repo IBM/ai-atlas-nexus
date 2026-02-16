@@ -432,6 +432,7 @@ class Vocabulary(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -502,6 +503,7 @@ class Taxonomy(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -576,6 +578,7 @@ class Concept(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -633,6 +636,7 @@ class Control(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -710,6 +714,7 @@ class Group(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -800,6 +805,7 @@ class Entry(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -898,6 +904,7 @@ class Term(Entry):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -986,6 +993,7 @@ class Principle(Entry):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1042,6 +1050,7 @@ class Policy(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1110,6 +1119,7 @@ class LLMQuestionPolicy(Policy):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1168,6 +1178,7 @@ class Rule(Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1208,6 +1219,7 @@ class Permission(Rule):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1266,6 +1278,7 @@ class Prohibition(Rule):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1324,6 +1337,7 @@ class Obligation(Rule):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1382,6 +1396,7 @@ class Recommendation(Rule):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1406,6 +1421,96 @@ class Recommendation(Rule):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class Certification(Entry):
+    """
+    Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'dpv:Certification',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
+
+    type: Literal["Certification"] = Field(default="Certification", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'RiskTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
+                       'Risk',
+                       'LargeLanguageModel',
+                       'CapabilityGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    requiredByTask: Optional[list[str]] = Field(default=[], description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
+    requiresCapability: Optional[list[str]] = Field(default=[], description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+         'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
+         'inverse': 'requiredByTask'} })
+    implementedByAdapter: Optional[list[str]] = Field(default=[], description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
+""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+         'domain_of': ['Entry', 'Capability'],
+         'inverse': 'implementsCapability'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1467,6 +1572,7 @@ class RiskTaxonomy(Taxonomy):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1543,6 +1649,7 @@ class RiskConcept(Concept):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1625,6 +1732,7 @@ class RiskGroup(RiskConcept, Group):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1732,6 +1840,7 @@ class Risk(RiskConcept, Entry):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1796,6 +1905,7 @@ class RiskControl(RiskConcept, Control):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1901,6 +2011,7 @@ class Action(RiskControl):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2004,6 +2115,7 @@ class RiskIncident(RiskConcept, Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2077,6 +2189,7 @@ class Impact(RiskConcept, Entity):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2655,6 +2768,7 @@ class AiTask(Entry):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2843,6 +2957,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2916,6 +3031,7 @@ class CapabilityConcept(Concept):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2996,6 +3112,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3092,6 +3209,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3216,6 +3334,7 @@ class Capability(CapabilityConcept, Entry):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3641,6 +3760,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3756,6 +3876,7 @@ class LLMIntrinsic(Entry):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3830,6 +3951,7 @@ class StakeholderGroup(Group):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3946,6 +4068,7 @@ class ControlActivity(Rule):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4004,6 +4127,7 @@ class ControlActivityPermission(ControlActivity, Permission):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4071,6 +4195,7 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4138,6 +4263,7 @@ class ControlActivityObligation(ControlActivity, Obligation):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4205,6 +4331,7 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4301,6 +4428,7 @@ class Requirement(Rule):
                        'Prohibition',
                        'Obligation',
                        'Recommendation',
+                       'Certification',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4337,7 +4465,7 @@ class Container(ConfiguredBaseModel):
     adapters: Optional[list[Adapter]] = Field(default=[], description="""A list of Adapters""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     taxonomies: Optional[list[Union[Taxonomy,RiskTaxonomy,CapabilityTaxonomy]]] = Field(default=[], description="""A list of taxonomies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     concepts: Optional[list[Union[Concept,RiskConcept,CapabilityConcept,CapabilityDomain,CapabilityGroup,Capability,RiskGroup,Risk,RiskControl,RiskIncident,Impact,Action]]] = Field(default=[], description="""A list of concepts""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    entries: Optional[list[Union[Entry,Term,Principle,Risk,AiTask,Capability,Adapter,LLMIntrinsic]]] = Field(default=[], description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    entries: Optional[list[Union[Entry,Term,Principle,Certification,Risk,AiTask,Capability,Adapter,LLMIntrinsic]]] = Field(default=[], description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     groups: Optional[list[Union[Group,RiskGroup,CapabilityDomain,CapabilityGroup,StakeholderGroup]]] = Field(default=[], description="""A list of groups""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     vocabularies: Optional[list[Vocabulary]] = Field(default=[], description="""A list of vocabularies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     controls: Optional[list[Union[Control,RiskControl,Action]]] = Field(default=[], description="""A list of AI controls""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
@@ -4380,6 +4508,7 @@ Permission.model_rebuild()
 Prohibition.model_rebuild()
 Obligation.model_rebuild()
 Recommendation.model_rebuild()
+Certification.model_rebuild()
 RiskTaxonomy.model_rebuild()
 RiskConcept.model_rebuild()
 RiskGroup.model_rebuild()

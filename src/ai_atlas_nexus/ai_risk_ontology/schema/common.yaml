@@ -262,6 +262,16 @@ classes:
     description: A rule describing a recommendation for performing an activity
     class_uri: dpv:Recommendation
 
+  Certification:
+    is_a: Entry
+    abstract: true
+    attributes:
+      type:
+        range: string
+        designates_type: true
+    description: Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
+    class_uri: dpv:Certification
+
 slots:
   id:
     identifier: true

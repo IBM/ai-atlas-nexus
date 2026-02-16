@@ -154,7 +154,7 @@ def prepare_container(output_entities):
     for attr_name in fields:
         attr = getattr(aan._ontology, attr_name) or None
         if isinstance(attr, list):
-             object.__setattr__(c, attr_name, [x for x in output_entities if type(x).__name__ == view.get_slot(attr_name).range or (attr_name == 'entries' and type(x).__name__ in view.class_descendants(view.get_slot(attr_name).range))
+             object.__setattr__(c, attr_name, [x for x in output_entities if type(x).__name__ == view.get_slot(attr_name).range or (attr_name == 'entries' and type(x).__name__ in view.class_descendants(view.get_slot(attr_name).range) ) or (attr_name == 'rules' and type(x).__name__ in view.class_descendants(view.get_slot(attr_name).range) )
                                                ])
     return c
 

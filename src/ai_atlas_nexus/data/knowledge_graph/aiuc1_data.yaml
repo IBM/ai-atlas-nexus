@@ -23,6 +23,16 @@ taxonomies:
     type: RiskTaxonomy
 
 entries:
+  - id: aiuc-1-certification
+    name: AIUC-1
+    description: >-
+      AIUC-1 is the world's first standard for AI agents. It covers data and privacy, security, safety, reliability, accountability and societal risks.
+      Certified organizations demonstrate they conduct leading technical, operational, and legal activities. Auditors assess compliance through upfront technical testing and review of operational controls (conducted annually), and ongoing technical testing (conducted at least quarterly to keep up with ongoing changes to AI risk & mitigation techniques).
+      Like ISO 27001, FedRAMP, and CSA STAR, AIUC-1 requires ongoing technical testing and compliance. It must be renewed annually to remain current.
+    isDefinedByTaxonomy: aiuc1
+    type: Certification
+    hasDocumentation:
+      - AIUC-1-Jan-2026
   - id: aiuc1-principle-a
     name: "Principle A: Data and Privacy"
     description: >-
