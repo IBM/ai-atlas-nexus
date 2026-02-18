@@ -44,6 +44,134 @@ classes:
     slots:
       - isResultOf
 
+  SourceMetadata:
+    is_a: Entity
+    class_uri: nexus:sourcemetadata
+    description: Metadata about the source of an evaluation
+    attributes:
+      source_name:
+        description: Name of the evaluation source
+        range: string
+      source_type:
+        description: Type of source (e.g., evaluation_run)
+        range: string
+      source_organization_name:
+        description: Organization that provided the evaluation
+        range: string
+      source_organization_url:
+        description: URL of the source organization
+        range: uri
+      evaluator_relationship:
+        description: Relationship of evaluator (e.g., first_party, third_party)
+        range: string
+
+  ModelInfo:
+    is_a: Entity
+    class_uri: nexus:modelinfo
+    description: Information about the AI model being evaluated
+    attributes:
+      model_name:
+        description: Name of the AI model
+        range: string
+      model_id:
+        description: Identifier of the AI model
+        range: string
+
+  SourceData:
+    is_a: Entity
+    class_uri: nexus:sourcedata
+    description: Information about the data source used in evaluation
+    attributes:
+      dataset_name:
+        description: Name of the dataset
+        range: string
+      source_type:
+        description: Type of data source (e.g., hf_dataset)
+        range: string
+      hf_repo:
+        description: HuggingFace repository
+        range: string
+      hf_split:
+        description: HuggingFace dataset split
+        range: string
+
+  MetricConfig:
+    is_a: Entity
+    class_uri: nexus:metricconfig
+    description: Configuration for evaluation metrics
+    attributes:
+      lower_is_better:
+        description: Whether lower scores are better
+        range: boolean
+      score_type:
+        description: Type of score (e.g., continuous)
+        range: string
+      min_score:
+        description: Minimum possible score
+        range: float
+      max_score:
+        description: Maximum possible score
+        range: float
+
+  ScoreDetails:
+    is_a: Entity
+    class_uri: nexus:scoredetails
+    description: Details about evaluation scores
+    attributes:
+      score:
+        description: The evaluation score
+        range: float
+
+  EvaluationResultRecord:
+    is_a: Entity
+    class_uri: nexus:evaluationresultrecord
+    description: A single evaluation result record
+    attributes:
+      evaluation_name:
+        description: Name of the evaluation benchmark
+        range: string
+    slots:
+      - hasSourceData
+      - hasMetricConfig
+      - hasScoreDetails
+
+  EveryEvalAIResult:
+    is_a: AiEvalResult
+    class_uri: nexus:everyevalairesult
+    description: An evaluation result from the Every Eval Ever dataset, capturing evaluation metadata and results from the EEE_datastore.
+    attributes:
+      schema_version:
+        description: Version of the evaluation schema
+        range: string
+      evaluation_id:
+        description: Unique identifier for this evaluation
+        range: string
+      evaluation_timestamp:
+        description: ISO 8601 timestamp when evaluation was performed
+        range: datetime
+      retrieved_timestamp:
+        description: Unix timestamp when the data was retrieved
+        range: string
+    slots:
+      - hasSourceMetadata
+      - hasModelInfo
+      - hasEvaluationResults
+      - hasDataType
+      - hasDomains
+      - hasLanguages
+      - hasTasks
+      - hasDataSource
+      - hasDataSize
+      - hasDataFormat
+      - hasMethods
+      - hasMetrics
+      - hasLimitations
+      - hasGoal
+      - hasAudience
+      - hasResources
+      - hasDocumentation
+      - hasRelatedRisk
+
   BenchmarkMetadataCard:
     is_a: Entity
     class_uri: nexus:benchmarkmetadatacard
@@ -120,7 +248,7 @@ slots:
     inverse: describesAiEval
   describesAiEval:
     description: >-
-      A relationship where a BenchmarkMetadataCard describes and AI evaluation (benchmark).
+      A relationship where a BenchmarkMetadataCard describes an AI evaluation (benchmark).
     domain: BenchmarkMetadataCard
     range: AiEval
     multivalued: true
@@ -175,8 +303,10 @@ slots:
     description: The size of the dataset, including the number of data points or examples.
   hasDataFormat:
     description: The structure and modality of the data (e.g., sentence pairs, question-answer format, tabular data).
+    multivalued: true
   hasAnnotation:
     description: The process used to annotate or label the dataset, including who or what performed the annotations (e.g., human annotators, automated processes).
+    multivalued: true
   hasMethods:
     description: The evaluation techniques applied within the benchmark.
     multivalued: true
@@ -191,14 +321,50 @@ slots:
     multivalued: true
   hasBaselineResults:
     description: The results of well-known or widely used models to give context to new performance scores.
+    multivalued: true
   hasValidation:
     description: Measures taken to ensure that the benchmark provides valid and reliable evaluations.
     multivalued: true
   hasDemographicAnalysis:
     description: How the benchmark evaluates performance across different demographic groups (e.g., gender, race).
+    multivalued: true
   hasConsiderationPrivacyAndAnonymity:
     description: How any personal or sensitive data is handled and whether any anonymization techniques are applied.
+    multivalued: true
   hasConsiderationConsentProcedures:
     description: Information on how consent was obtained (if applicable), especially for datasets involving personal data.
+    multivalued: true
   hasConsiderationComplianceWithRegulations:
     description: Compliance with relevant legal or ethical regulations (if applicable).
+    multivalued: true
+  hasSourceMetadata:
+    description: Source metadata for the evaluation
+    domain: EveryEvalAIResult
+    range: SourceMetadata
+    inlined: true
+  hasModelInfo:
+    description: Model information for the evaluation
+    domain: EveryEvalAIResult
+    range: ModelInfo
+    inlined: true
+  hasSourceData:
+    description: Source data information
+    domain: EvaluationResultRecord
+    range: SourceData
+    inlined: true
+  hasMetricConfig:
+    description: Metric configuration
+    domain: EvaluationResultRecord
+    range: MetricConfig
+    inlined: true
+  hasScoreDetails:
+    description: Score details
+    domain: EvaluationResultRecord
+    range: ScoreDetails
+    inlined: true
+  hasEvaluationResults:
+    description: Array of evaluation results
+    domain: EveryEvalAIResult
+    range: EvaluationResultRecord
+    multivalued: true
+    inlined: true
