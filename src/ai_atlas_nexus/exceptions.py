@@ -21,6 +21,8 @@ def handle_exception(
                 if isinstance(e, tuple(exceptions)):
                     LOGGER.error(f"{e.name}: {e.message}")
                     return None
+                else:
+                    raise e
 
             return event
 
