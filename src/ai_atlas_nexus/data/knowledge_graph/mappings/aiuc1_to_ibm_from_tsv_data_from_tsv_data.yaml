@@ -131,6 +131,10 @@ entries:
     related_mappings:
       - aiuc1-req-a007
     type: Risk
+  - id: atlas-encoded-interactions-attack
+    close_mappings:
+      - aiuc1-req-b001
+    type: Risk
   - id: atlas-evasion-attack
     close_mappings:
       - aiuc1-req-b001
@@ -140,6 +144,10 @@ entries:
       - aiuc1-req-b001
     type: Risk
   - id: atlas-prompt-injection
+    close_mappings:
+      - aiuc1-req-b001
+    type: Risk
+  - id: atlas-specialized-tokens-attack
     close_mappings:
       - aiuc1-req-b001
     type: Risk
@@ -151,6 +159,10 @@ entries:
     related_mappings:
       - aiuc1-req-b001
     type: Risk
+  - id: atlas-encoded-interactions-attack
+    close_mappings:
+      - aiuc1-req-b002
+    type: Risk
   - id: atlas-evasion-attack
     close_mappings:
       - aiuc1-req-b002
@@ -160,6 +172,10 @@ entries:
       - aiuc1-req-b002
     type: Risk
   - id: atlas-prompt-injection
+    close_mappings:
+      - aiuc1-req-b002
+    type: Risk
+  - id: atlas-specialized-tokens-attack
     close_mappings:
       - aiuc1-req-b002
     type: Risk
@@ -172,6 +188,10 @@ entries:
       - aiuc1-req-b002
     type: Risk
   - id: atlas-jailbreaking
+    related_mappings:
+      - aiuc1-req-b002
+    type: Risk
+  - id: atlas-prompt-priming
     related_mappings:
       - aiuc1-req-b002
     type: Risk
@@ -287,7 +307,15 @@ entries:
     close_mappings:
       - aiuc1-req-c003
     type: Risk
+  - id: atlas-data-bias
+    related_mappings:
+      - aiuc1-req-c003
+    type: Risk
   - id: atlas-decision-bias
+    related_mappings:
+      - aiuc1-req-c003
+    type: Risk
+  - id: atlas-introduce-data-bias-agentic
     related_mappings:
       - aiuc1-req-c003
     type: Risk
@@ -315,14 +343,6 @@ entries:
     close_mappings:
       - aiuc1-req-c006
     type: Risk
-  - id: atlas-harmful-output
-    related_mappings:
-      - aiuc1-req-c006
-    type: Risk
-  - id: atlas-harmful-output
-    related_mappings:
-      - aiuc1-req-c007
-    type: Risk
   - id: atlas-over-or-under-reliance
     related_mappings:
       - aiuc1-req-c007
@@ -332,10 +352,6 @@ entries:
       - aiuc1-req-c007
     type: Risk
   - id: atlas-incorrect-risk-testing
-    related_mappings:
-      - aiuc1-req-c008
-    type: Risk
-  - id: atlas-mitigation-maintenance-agentic
     related_mappings:
       - aiuc1-req-c008
     type: Risk
@@ -407,6 +423,10 @@ entries:
     related_mappings:
       - aiuc1-req-d001
     type: Risk
+  - id: atlas-untraceable-attribution
+    related_mappings:
+      - aiuc1-req-d001
+    type: Risk
   - id: atlas-hallucination
     close_mappings:
       - aiuc1-req-d002
@@ -535,11 +555,11 @@ entries:
     related_mappings:
       - aiuc1-req-e009
     type: Risk
-  - id: atlas-incomplete-usage-definition
+  - id: atlas-improper-usage
     related_mappings:
       - aiuc1-req-e010
     type: Risk
-  - id: atlas-improper-usage
+  - id: atlas-incomplete-usage-definition
     related_mappings:
       - aiuc1-req-e010
     type: Risk
@@ -599,6 +619,10 @@ entries:
     related_mappings:
       - aiuc1-req-e015
     type: Risk
+  - id: atlas-unexplainable-output
+    related_mappings:
+      - aiuc1-req-e015
+    type: Risk
   - id: atlas-non-disclosure
     close_mappings:
       - aiuc1-req-e016
@@ -640,6 +664,10 @@ entries:
       - aiuc1-req-f001
     type: Risk
   - id: atlas-dangerous-use
+    related_mappings:
+      - aiuc1-req-f001
+    type: Risk
+  - id: atlas-human-exploitation
     related_mappings:
       - aiuc1-req-f001
     type: Risk
@@ -688,24 +716,24 @@ entries:
       - aiuc1-req-b004
     type: Risk
   - id: atlas-confidential-data-in-prompt
-    related_mappings:
-      - aiuc1-req-a006
-    type: Risk
-  - id: atlas-confidential-data-in-prompt
     close_mappings:
       - aiuc1-req-a004
     type: Risk
   - id: atlas-confidential-data-in-prompt
     related_mappings:
+      - aiuc1-req-a004
+    type: Risk
+  - id: atlas-confidential-data-in-prompt
+    related_mappings:
+      - aiuc1-req-a006
+    type: Risk
+  - id: atlas-confidential-information-in-data
+    close_mappings:
       - aiuc1-req-a004
     type: Risk
   - id: atlas-confidential-information-in-data
     related_mappings:
       - aiuc1-req-a005
-    type: Risk
-  - id: atlas-confidential-information-in-data
-    close_mappings:
-      - aiuc1-req-a004
     type: Risk
   - id: atlas-context-overload-attack
     related_mappings:
@@ -720,12 +748,12 @@ entries:
       - aiuc1-req-f001
     type: Risk
   - id: atlas-dangerous-use
-    related_mappings:
-      - aiuc1-req-f001
-    type: Risk
-  - id: atlas-dangerous-use
     close_mappings:
       - aiuc1-req-f002
+    type: Risk
+  - id: atlas-dangerous-use
+    related_mappings:
+      - aiuc1-req-f001
     type: Risk
   - id: atlas-dangerous-use
     related_mappings:
@@ -743,13 +771,13 @@ entries:
     related_mappings:
       - aiuc1-req-e011
     type: Risk
+  - id: atlas-data-bias
+    related_mappings:
+      - aiuc1-req-c003
+    type: Risk
   - id: atlas-data-poisoning
     related_mappings:
       - aiuc1-req-b008
-    type: Risk
-  - id: atlas-data-privacy-rights
-    related_mappings:
-      - aiuc1-req-e012
     type: Risk
   - id: atlas-data-privacy-rights
     related_mappings:
@@ -758,6 +786,10 @@ entries:
   - id: atlas-data-privacy-rights
     related_mappings:
       - aiuc1-req-a002
+    type: Risk
+  - id: atlas-data-privacy-rights
+    related_mappings:
+      - aiuc1-req-e012
     type: Risk
   - id: atlas-data-provenance
     related_mappings:
@@ -773,23 +805,23 @@ entries:
     type: Risk
   - id: atlas-data-usage
     related_mappings:
+      - aiuc1-req-a001
+    type: Risk
+  - id: atlas-data-usage
+    related_mappings:
       - aiuc1-req-e005
     type: Risk
   - id: atlas-data-usage
     related_mappings:
       - aiuc1-req-e012
     type: Risk
-  - id: atlas-data-usage
+  - id: atlas-data-usage-rights
     related_mappings:
-      - aiuc1-req-a001
+      - aiuc1-req-a007
     type: Risk
   - id: atlas-data-usage-rights
     related_mappings:
       - aiuc1-req-e006
-    type: Risk
-  - id: atlas-data-usage-rights
-    related_mappings:
-      - aiuc1-req-a007
     type: Risk
   - id: atlas-decision-bias
     related_mappings:
@@ -801,27 +833,35 @@ entries:
     type: Risk
   - id: atlas-direct-instructions-attack
     related_mappings:
-      - aiuc1-req-b005
+      - aiuc1-req-b001
     type: Risk
   - id: atlas-direct-instructions-attack
     related_mappings:
+      - aiuc1-req-b005
+    type: Risk
+  - id: atlas-encoded-interactions-attack
+    related_mappings:
       - aiuc1-req-b001
     type: Risk
-  - id: atlas-evasion-attack
-    close_mappings:
+  - id: atlas-encoded-interactions-attack
+    related_mappings:
       - aiuc1-req-b002
     type: Risk
   - id: atlas-evasion-attack
     close_mappings:
       - aiuc1-req-b001
     type: Risk
-  - id: atlas-exploit-trust-mismatch-agentic
-    related_mappings:
-      - aiuc1-req-b007
+  - id: atlas-evasion-attack
+    close_mappings:
+      - aiuc1-req-b002
     type: Risk
   - id: atlas-exploit-trust-mismatch-agentic
     related_mappings:
       - aiuc1-req-b006
+    type: Risk
+  - id: atlas-exploit-trust-mismatch-agentic
+    related_mappings:
+      - aiuc1-req-b007
     type: Risk
   - id: atlas-exposing-personal-information
     close_mappings:
@@ -829,15 +869,11 @@ entries:
     type: Risk
   - id: atlas-exposing-personal-information
     related_mappings:
-      - aiuc1-req-a006
+      - aiuc1-req-a005
     type: Risk
   - id: atlas-exposing-personal-information
     related_mappings:
-      - aiuc1-req-a005
-    type: Risk
-  - id: atlas-external-resources-attack-agentic
-    related_mappings:
-      - aiuc1-req-e009
+      - aiuc1-req-a006
     type: Risk
   - id: atlas-external-resources-attack-agentic
     related_mappings:
@@ -847,45 +883,45 @@ entries:
     related_mappings:
       - aiuc1-req-d003
     type: Risk
-  - id: atlas-extraction-attack
+  - id: atlas-external-resources-attack-agentic
     related_mappings:
-      - aiuc1-req-b003
+      - aiuc1-req-e009
     type: Risk
   - id: atlas-extraction-attack
     close_mappings:
       - aiuc1-req-b004
     type: Risk
+  - id: atlas-extraction-attack
+    related_mappings:
+      - aiuc1-req-b003
+    type: Risk
+  - id: atlas-function-calling-hallucination-agentic
+    close_mappings:
+      - aiuc1-req-d003
+    type: Risk
+  - id: atlas-function-calling-hallucination-agentic
+    close_mappings:
+      - aiuc1-req-d004
+    type: Risk
+  - id: atlas-function-calling-hallucination-agentic
+    related_mappings:
+      - aiuc1-req-d003
+    type: Risk
+  - id: atlas-function-calling-hallucination-agentic
+    related_mappings:
+      - aiuc1-req-d004
+    type: Risk
   - id: atlas-function-calling-hallucination-agentic
     related_mappings:
       - aiuc1-req-e003
-    type: Risk
-  - id: atlas-function-calling-hallucination-agentic
-    close_mappings:
-      - aiuc1-req-d003
-    type: Risk
-  - id: atlas-function-calling-hallucination-agentic
-    related_mappings:
-      - aiuc1-req-d003
-    type: Risk
-  - id: atlas-function-calling-hallucination-agentic
-    close_mappings:
-      - aiuc1-req-d004
-    type: Risk
-  - id: atlas-function-calling-hallucination-agentic
-    related_mappings:
-      - aiuc1-req-d004
-    type: Risk
-  - id: atlas-generated-content-ownership
-    related_mappings:
-      - aiuc1-req-a002
     type: Risk
   - id: atlas-generated-content-ownership
     close_mappings:
       - aiuc1-req-a007
     type: Risk
-  - id: atlas-hallucination
-    close_mappings:
-      - aiuc1-req-e003
+  - id: atlas-generated-content-ownership
+    related_mappings:
+      - aiuc1-req-a002
     type: Risk
   - id: atlas-hallucination
     close_mappings:
@@ -895,6 +931,14 @@ entries:
     close_mappings:
       - aiuc1-req-d002
     type: Risk
+  - id: atlas-hallucination
+    close_mappings:
+      - aiuc1-req-e003
+    type: Risk
+  - id: atlas-harmful-code-generation
+    close_mappings:
+      - aiuc1-req-c006
+    type: Risk
   - id: atlas-harmful-code-generation
     close_mappings:
       - aiuc1-req-f001
@@ -903,21 +947,9 @@ entries:
     related_mappings:
       - aiuc1-req-c005
     type: Risk
-  - id: atlas-harmful-code-generation
+  - id: atlas-harmful-output
     close_mappings:
-      - aiuc1-req-c006
-    type: Risk
-  - id: atlas-harmful-output
-    related_mappings:
-      - aiuc1-req-e002
-    type: Risk
-  - id: atlas-harmful-output
-    related_mappings:
-      - aiuc1-req-c007
-    type: Risk
-  - id: atlas-harmful-output
-    related_mappings:
-      - aiuc1-req-f002
+      - aiuc1-req-c003
     type: Risk
   - id: atlas-harmful-output
     close_mappings:
@@ -925,23 +957,23 @@ entries:
     type: Risk
   - id: atlas-harmful-output
     close_mappings:
-      - aiuc1-req-c003
+      - aiuc1-req-c010
     type: Risk
   - id: atlas-harmful-output
     related_mappings:
-      - aiuc1-req-c006
+      - aiuc1-req-e002
     type: Risk
   - id: atlas-harmful-output
-    close_mappings:
-      - aiuc1-req-c010
+    related_mappings:
+      - aiuc1-req-f002
+    type: Risk
+  - id: atlas-human-exploitation
+    related_mappings:
+      - aiuc1-req-f001
     type: Risk
   - id: atlas-impact-human-agency-agentic
     related_mappings:
       - aiuc1-req-c009
-    type: Risk
-  - id: atlas-improper-usage
-    related_mappings:
-      - aiuc1-req-e010
     type: Risk
   - id: atlas-improper-usage
     related_mappings:
@@ -950,6 +982,10 @@ entries:
   - id: atlas-improper-usage
     related_mappings:
       - aiuc1-req-c011
+    type: Risk
+  - id: atlas-improper-usage
+    related_mappings:
+      - aiuc1-req-e010
     type: Risk
   - id: atlas-incomplete-advice
     related_mappings:
@@ -965,19 +1001,15 @@ entries:
     type: Risk
   - id: atlas-incomplete-usage-definition
     related_mappings:
-      - aiuc1-req-e010
-    type: Risk
-  - id: atlas-incomplete-usage-definition
-    related_mappings:
-      - aiuc1-req-e010
-    type: Risk
-  - id: atlas-incomplete-usage-definition
-    related_mappings:
       - aiuc1-req-c011
     type: Risk
-  - id: atlas-incorrect-risk-testing
+  - id: atlas-incomplete-usage-definition
     related_mappings:
-      - aiuc1-req-c002
+      - aiuc1-req-e010
+    type: Risk
+  - id: atlas-incomplete-usage-definition
+    related_mappings:
+      - aiuc1-req-e010
     type: Risk
   - id: atlas-incorrect-risk-testing
     related_mappings:
@@ -985,7 +1017,7 @@ entries:
     type: Risk
   - id: atlas-incorrect-risk-testing
     related_mappings:
-      - aiuc1-req-e013
+      - aiuc1-req-c002
     type: Risk
   - id: atlas-incorrect-risk-testing
     related_mappings:
@@ -993,53 +1025,57 @@ entries:
     type: Risk
   - id: atlas-incorrect-risk-testing
     related_mappings:
+      - aiuc1-req-c012
+    type: Risk
+  - id: atlas-incorrect-risk-testing
+    related_mappings:
       - aiuc1-req-e008
     type: Risk
   - id: atlas-incorrect-risk-testing
     related_mappings:
-      - aiuc1-req-c012
-    type: Risk
-  - id: atlas-indirect-instructions-attack
-    related_mappings:
-      - aiuc1-req-b002
+      - aiuc1-req-e013
     type: Risk
   - id: atlas-indirect-instructions-attack
     related_mappings:
       - aiuc1-req-b001
     type: Risk
-  - id: atlas-ip-information-in-prompt
+  - id: atlas-indirect-instructions-attack
     related_mappings:
-      - aiuc1-req-a007
+      - aiuc1-req-b002
+    type: Risk
+  - id: atlas-introduce-data-bias-agentic
+    related_mappings:
+      - aiuc1-req-c003
     type: Risk
   - id: atlas-ip-information-in-prompt
     related_mappings:
       - aiuc1-req-a004
     type: Risk
-  - id: atlas-jailbreaking
-    close_mappings:
-      - aiuc1-req-b002
-    type: Risk
-  - id: atlas-jailbreaking
+  - id: atlas-ip-information-in-prompt
     related_mappings:
-      - aiuc1-req-b002
+      - aiuc1-req-a007
     type: Risk
   - id: atlas-jailbreaking
     close_mappings:
       - aiuc1-req-b001
     type: Risk
-  - id: atlas-lack-of-ai-agent-transparency-agentic
+  - id: atlas-jailbreaking
     close_mappings:
-      - aiuc1-req-e017
+      - aiuc1-req-b002
     type: Risk
-  - id: atlas-lack-of-ai-agent-transparency-agentic
+  - id: atlas-jailbreaking
     related_mappings:
-      - aiuc1-req-e017
+      - aiuc1-req-b002
     type: Risk
   - id: atlas-lack-of-ai-agent-transparency-agentic
     close_mappings:
       - aiuc1-req-e015
     type: Risk
-  - id: atlas-lack-of-data-transparency
+  - id: atlas-lack-of-ai-agent-transparency-agentic
+    close_mappings:
+      - aiuc1-req-e017
+    type: Risk
+  - id: atlas-lack-of-ai-agent-transparency-agentic
     related_mappings:
       - aiuc1-req-e017
     type: Risk
@@ -1047,6 +1083,10 @@ entries:
     related_mappings:
       - aiuc1-req-a001
     type: Risk
+  - id: atlas-lack-of-data-transparency
+    related_mappings:
+      - aiuc1-req-e017
+    type: Risk
   - id: atlas-lack-of-model-transparency
     close_mappings:
       - aiuc1-req-e017
@@ -1062,10 +1102,6 @@ entries:
   - id: atlas-lack-of-system-transparency
     related_mappings:
       - aiuc1-req-e017
-    type: Risk
-  - id: atlas-lack-of-testing-diversity
-    related_mappings:
-      - aiuc1-req-c002
     type: Risk
   - id: atlas-lack-of-testing-diversity
     related_mappings:
@@ -1073,19 +1109,11 @@ entries:
     type: Risk
   - id: atlas-lack-of-testing-diversity
     related_mappings:
+      - aiuc1-req-c002
+    type: Risk
+  - id: atlas-lack-of-testing-diversity
+    related_mappings:
       - aiuc1-req-c012
-    type: Risk
-  - id: atlas-legal-accountability
-    related_mappings:
-      - aiuc1-req-e003
-    type: Risk
-  - id: atlas-legal-accountability
-    related_mappings:
-      - aiuc1-req-e002
-    type: Risk
-  - id: atlas-legal-accountability
-    related_mappings:
-      - aiuc1-req-e001
     type: Risk
   - id: atlas-legal-accountability
     close_mappings:
@@ -1093,15 +1121,27 @@ entries:
     type: Risk
   - id: atlas-legal-accountability
     related_mappings:
+      - aiuc1-req-e001
+    type: Risk
+  - id: atlas-legal-accountability
+    related_mappings:
+      - aiuc1-req-e002
+    type: Risk
+  - id: atlas-legal-accountability
+    related_mappings:
+      - aiuc1-req-e003
+    type: Risk
+  - id: atlas-legal-accountability
+    related_mappings:
       - aiuc1-req-e012
     type: Risk
   - id: atlas-membership-inference-attack
     related_mappings:
-      - aiuc1-req-b004
+      - aiuc1-req-a005
     type: Risk
   - id: atlas-membership-inference-attack
     related_mappings:
-      - aiuc1-req-a005
+      - aiuc1-req-b004
     type: Risk
   - id: atlas-misaligned-actions-agentic
     close_mappings:
@@ -1117,27 +1157,23 @@ entries:
     type: Risk
   - id: atlas-mitigation-maintenance-agentic
     related_mappings:
-      - aiuc1-req-e002
+      - aiuc1-req-e001
     type: Risk
   - id: atlas-mitigation-maintenance-agentic
     related_mappings:
-      - aiuc1-req-e001
+      - aiuc1-req-e002
     type: Risk
   - id: atlas-mitigation-maintenance-agentic
     related_mappings:
       - aiuc1-req-e013
     type: Risk
-  - id: atlas-mitigation-maintenance-agentic
+  - id: atlas-model-usage-rights
     related_mappings:
-      - aiuc1-req-c008
+      - aiuc1-req-a007
     type: Risk
   - id: atlas-model-usage-rights
     related_mappings:
       - aiuc1-req-e006
-    type: Risk
-  - id: atlas-model-usage-rights
-    related_mappings:
-      - aiuc1-req-a007
     type: Risk
   - id: atlas-non-disclosure
     close_mappings:
@@ -1161,39 +1197,39 @@ entries:
     type: Risk
   - id: atlas-over-or-under-reliance
     related_mappings:
-      - aiuc1-req-c009
+      - aiuc1-req-c007
     type: Risk
   - id: atlas-over-or-under-reliance
     related_mappings:
-      - aiuc1-req-c007
-    type: Risk
-  - id: atlas-over-or-under-reliance-on-ai-agents-agentic
-    related_mappings:
       - aiuc1-req-c009
     type: Risk
   - id: atlas-over-or-under-reliance-on-ai-agents-agentic
     related_mappings:
       - aiuc1-req-c007
     type: Risk
-  - id: atlas-personal-information-in-data
-    close_mappings:
-      - aiuc1-req-a006
+  - id: atlas-over-or-under-reliance-on-ai-agents-agentic
+    related_mappings:
+      - aiuc1-req-c009
     type: Risk
   - id: atlas-personal-information-in-data
-    related_mappings:
+    close_mappings:
       - aiuc1-req-a006
     type: Risk
   - id: atlas-personal-information-in-data
     related_mappings:
       - aiuc1-req-a005
     type: Risk
-  - id: atlas-personal-information-in-prompt
+  - id: atlas-personal-information-in-data
     related_mappings:
-      - aiuc1-req-a003
+      - aiuc1-req-a006
     type: Risk
   - id: atlas-personal-information-in-prompt
     close_mappings:
       - aiuc1-req-a006
+    type: Risk
+  - id: atlas-personal-information-in-prompt
+    related_mappings:
+      - aiuc1-req-a003
     type: Risk
   - id: atlas-poor-model-accuracy
     related_mappings:
@@ -1205,15 +1241,15 @@ entries:
     type: Risk
   - id: atlas-prompt-injection
     close_mappings:
-      - aiuc1-req-b002
+      - aiuc1-req-b001
     type: Risk
   - id: atlas-prompt-injection
     close_mappings:
-      - aiuc1-req-b001
+      - aiuc1-req-b002
     type: Risk
   - id: atlas-prompt-leaking
     related_mappings:
-      - aiuc1-req-b009
+      - aiuc1-req-a004
     type: Risk
   - id: atlas-prompt-leaking
     related_mappings:
@@ -1225,7 +1261,11 @@ entries:
     type: Risk
   - id: atlas-prompt-leaking
     related_mappings:
-      - aiuc1-req-a004
+      - aiuc1-req-b009
+    type: Risk
+  - id: atlas-prompt-priming
+    related_mappings:
+      - aiuc1-req-b002
     type: Risk
   - id: atlas-redundant-actions-agentic
     related_mappings:
@@ -1240,12 +1280,12 @@ entries:
       - aiuc1-req-e015
     type: Risk
   - id: atlas-revealing-confidential-information
-    related_mappings:
-      - aiuc1-req-b009
-    type: Risk
-  - id: atlas-revealing-confidential-information
     close_mappings:
       - aiuc1-req-a005
+    type: Risk
+  - id: atlas-revealing-confidential-information
+    related_mappings:
+      - aiuc1-req-b009
     type: Risk
   - id: atlas-sharing-info-tools-agentic
     related_mappings:
@@ -1253,11 +1293,11 @@ entries:
     type: Risk
   - id: atlas-sharing-info-tools-agentic
     related_mappings:
-      - aiuc1-req-e009
+      - aiuc1-req-a004
     type: Risk
   - id: atlas-sharing-info-tools-agentic
     related_mappings:
-      - aiuc1-req-a004
+      - aiuc1-req-e009
     type: Risk
   - id: atlas-sharing-info-user-agentic
     related_mappings:
@@ -1275,13 +1315,21 @@ entries:
     related_mappings:
       - aiuc1-req-f001
     type: Risk
-  - id: atlas-spreading-disinformation
+  - id: atlas-specialized-tokens-attack
     related_mappings:
-      - aiuc1-req-f001
+      - aiuc1-req-b001
+    type: Risk
+  - id: atlas-specialized-tokens-attack
+    related_mappings:
+      - aiuc1-req-b002
     type: Risk
   - id: atlas-spreading-disinformation
     related_mappings:
       - aiuc1-req-c003
+    type: Risk
+  - id: atlas-spreading-disinformation
+    related_mappings:
+      - aiuc1-req-f001
     type: Risk
   - id: atlas-toxic-output
     close_mappings:
@@ -1292,16 +1340,12 @@ entries:
       - aiuc1-req-c010
     type: Risk
   - id: atlas-unauthorized-use-agentic
-    related_mappings:
-      - aiuc1-req-b007
-    type: Risk
-  - id: atlas-unauthorized-use-agentic
-    related_mappings:
-      - aiuc1-req-e009
-    type: Risk
-  - id: atlas-unauthorized-use-agentic
     close_mappings:
       - aiuc1-req-b006
+    type: Risk
+  - id: atlas-unauthorized-use-agentic
+    related_mappings:
+      - aiuc1-req-b007
     type: Risk
   - id: atlas-unauthorized-use-agentic
     related_mappings:
@@ -1310,6 +1354,14 @@ entries:
   - id: atlas-unauthorized-use-agentic
     related_mappings:
       - aiuc1-req-d003
+    type: Risk
+  - id: atlas-unauthorized-use-agentic
+    related_mappings:
+      - aiuc1-req-e009
+    type: Risk
+  - id: atlas-unexplainable-output
+    related_mappings:
+      - aiuc1-req-e015
     type: Risk
   - id: atlas-unexplainable-untraceable-actions-agentic
     close_mappings:
@@ -1321,19 +1373,23 @@ entries:
     type: Risk
   - id: atlas-unrepresentative-risk-testing
     related_mappings:
+      - aiuc1-req-c001
+    type: Risk
+  - id: atlas-unrepresentative-risk-testing
+    related_mappings:
       - aiuc1-req-c002
     type: Risk
   - id: atlas-unrepresentative-risk-testing
     related_mappings:
-      - aiuc1-req-c001
+      - aiuc1-req-c010
     type: Risk
   - id: atlas-unrepresentative-risk-testing
     related_mappings:
       - aiuc1-req-c012
     type: Risk
-  - id: atlas-unrepresentative-risk-testing
+  - id: atlas-untraceable-attribution
     related_mappings:
-      - aiuc1-req-c010
+      - aiuc1-req-d001
     type: Risk
 rules:
   - id: aiuc1-req-a001
@@ -1470,6 +1526,10 @@ rules:
     type: Requirement
   - id: aiuc1-req-b001
     close_mappings:
+      - atlas-encoded-interactions-attack
+    type: Requirement
+  - id: aiuc1-req-b001
+    close_mappings:
       - atlas-evasion-attack
     type: Requirement
   - id: aiuc1-req-b001
@@ -1479,6 +1539,10 @@ rules:
   - id: aiuc1-req-b001
     close_mappings:
       - atlas-prompt-injection
+    type: Requirement
+  - id: aiuc1-req-b001
+    close_mappings:
+      - atlas-specialized-tokens-attack
     type: Requirement
   - id: aiuc1-req-b001
     related_mappings:
@@ -1490,6 +1554,10 @@ rules:
     type: Requirement
   - id: aiuc1-req-b002
     close_mappings:
+      - atlas-encoded-interactions-attack
+    type: Requirement
+  - id: aiuc1-req-b002
+    close_mappings:
       - atlas-evasion-attack
     type: Requirement
   - id: aiuc1-req-b002
@@ -1499,6 +1567,10 @@ rules:
   - id: aiuc1-req-b002
     close_mappings:
       - atlas-prompt-injection
+    type: Requirement
+  - id: aiuc1-req-b002
+    close_mappings:
+      - atlas-specialized-tokens-attack
     type: Requirement
   - id: aiuc1-req-b002
     related_mappings:
@@ -1511,6 +1583,10 @@ rules:
   - id: aiuc1-req-b002
     related_mappings:
       - atlas-jailbreaking
+    type: Requirement
+  - id: aiuc1-req-b002
+    related_mappings:
+      - atlas-prompt-priming
     type: Requirement
   - id: aiuc1-req-b002
     related_mappings:
@@ -1626,7 +1702,15 @@ rules:
     type: Requirement
   - id: aiuc1-req-c003
     related_mappings:
+      - atlas-data-bias
+    type: Requirement
+  - id: aiuc1-req-c003
+    related_mappings:
       - atlas-decision-bias
+    type: Requirement
+  - id: aiuc1-req-c003
+    related_mappings:
+      - atlas-introduce-data-bias-agentic
     type: Requirement
   - id: aiuc1-req-c003
     related_mappings:
@@ -1652,14 +1736,6 @@ rules:
     close_mappings:
       - atlas-harmful-code-generation
     type: Requirement
-  - id: aiuc1-req-c006
-    related_mappings:
-      - atlas-harmful-output
-    type: Requirement
-  - id: aiuc1-req-c007
-    related_mappings:
-      - atlas-harmful-output
-    type: Requirement
   - id: aiuc1-req-c007
     related_mappings:
       - atlas-over-or-under-reliance
@@ -1671,10 +1747,6 @@ rules:
   - id: aiuc1-req-c008
     related_mappings:
       - atlas-incorrect-risk-testing
-    type: Requirement
-  - id: aiuc1-req-c008
-    related_mappings:
-      - atlas-mitigation-maintenance-agentic
     type: Requirement
   - id: aiuc1-req-c009
     related_mappings:
@@ -1744,6 +1816,10 @@ rules:
     related_mappings:
       - atlas-unreliable-source-attribution
     type: Requirement
+  - id: aiuc1-req-d001
+    related_mappings:
+      - atlas-untraceable-attribution
+    type: Requirement
   - id: aiuc1-req-d002
     close_mappings:
       - atlas-hallucination
@@ -1874,11 +1950,11 @@ rules:
     type: Requirement
   - id: aiuc1-req-e010
     related_mappings:
-      - atlas-incomplete-usage-definition
+      - atlas-improper-usage
     type: Requirement
   - id: aiuc1-req-e010
     related_mappings:
-      - atlas-improper-usage
+      - atlas-incomplete-usage-definition
     type: Requirement
   - id: aiuc1-req-e010
     related_mappings:
@@ -1936,6 +2012,10 @@ rules:
     related_mappings:
       - atlas-reproducibility-agentic
     type: Requirement
+  - id: aiuc1-req-e015
+    related_mappings:
+      - atlas-unexplainable-output
+    type: Requirement
   - id: aiuc1-req-e016
     close_mappings:
       - atlas-non-disclosure
@@ -1979,6 +2059,10 @@ rules:
   - id: aiuc1-req-f001
     related_mappings:
       - atlas-dangerous-use
+    type: Requirement
+  - id: aiuc1-req-f001
+    related_mappings:
+      - atlas-human-exploitation
     type: Requirement
   - id: aiuc1-req-f001
     related_mappings:
@@ -2024,24 +2108,24 @@ rules:
     related_mappings:
       - atlas-attribute-inference-attack
     type: Requirement
+  - id: aiuc1-req-a004
+    close_mappings:
+      - atlas-confidential-data-in-prompt
+    type: Requirement
+  - id: aiuc1-req-a004
+    related_mappings:
+      - atlas-confidential-data-in-prompt
+    type: Requirement
   - id: aiuc1-req-a006
     related_mappings:
       - atlas-confidential-data-in-prompt
     type: Requirement
   - id: aiuc1-req-a004
     close_mappings:
-      - atlas-confidential-data-in-prompt
-    type: Requirement
-  - id: aiuc1-req-a004
-    related_mappings:
-      - atlas-confidential-data-in-prompt
+      - atlas-confidential-information-in-data
     type: Requirement
   - id: aiuc1-req-a005
     related_mappings:
-      - atlas-confidential-information-in-data
-    type: Requirement
-  - id: aiuc1-req-a004
-    close_mappings:
       - atlas-confidential-information-in-data
     type: Requirement
   - id: aiuc1-req-b002
@@ -2056,12 +2140,12 @@ rules:
     close_mappings:
       - atlas-dangerous-use
     type: Requirement
-  - id: aiuc1-req-f001
-    related_mappings:
-      - atlas-dangerous-use
-    type: Requirement
   - id: aiuc1-req-f002
     close_mappings:
+      - atlas-dangerous-use
+    type: Requirement
+  - id: aiuc1-req-f001
+    related_mappings:
       - atlas-dangerous-use
     type: Requirement
   - id: aiuc1-req-f002
@@ -2080,19 +2164,23 @@ rules:
     related_mappings:
       - atlas-data-acquisition
     type: Requirement
+  - id: aiuc1-req-c003
+    related_mappings:
+      - atlas-data-bias
+    type: Requirement
   - id: aiuc1-req-b008
     related_mappings:
       - atlas-data-poisoning
-    type: Requirement
-  - id: aiuc1-req-e012
-    related_mappings:
-      - atlas-data-privacy-rights
     type: Requirement
   - id: aiuc1-req-a001
     related_mappings:
       - atlas-data-privacy-rights
     type: Requirement
   - id: aiuc1-req-a002
+    related_mappings:
+      - atlas-data-privacy-rights
+    type: Requirement
+  - id: aiuc1-req-e012
     related_mappings:
       - atlas-data-privacy-rights
     type: Requirement
@@ -2108,6 +2196,10 @@ rules:
     related_mappings:
       - atlas-data-transfer
     type: Requirement
+  - id: aiuc1-req-a001
+    related_mappings:
+      - atlas-data-usage
+    type: Requirement
   - id: aiuc1-req-e005
     related_mappings:
       - atlas-data-usage
@@ -2116,15 +2208,11 @@ rules:
     related_mappings:
       - atlas-data-usage
     type: Requirement
-  - id: aiuc1-req-a001
-    related_mappings:
-      - atlas-data-usage
-    type: Requirement
-  - id: aiuc1-req-e006
+  - id: aiuc1-req-a007
     related_mappings:
       - atlas-data-usage-rights
     type: Requirement
-  - id: aiuc1-req-a007
+  - id: aiuc1-req-e006
     related_mappings:
       - atlas-data-usage-rights
     type: Requirement
@@ -2136,45 +2224,49 @@ rules:
     related_mappings:
       - atlas-decision-bias
     type: Requirement
+  - id: aiuc1-req-b001
+    related_mappings:
+      - atlas-direct-instructions-attack
+    type: Requirement
   - id: aiuc1-req-b005
     related_mappings:
       - atlas-direct-instructions-attack
     type: Requirement
   - id: aiuc1-req-b001
     related_mappings:
-      - atlas-direct-instructions-attack
+      - atlas-encoded-interactions-attack
     type: Requirement
   - id: aiuc1-req-b002
-    close_mappings:
-      - atlas-evasion-attack
+    related_mappings:
+      - atlas-encoded-interactions-attack
     type: Requirement
   - id: aiuc1-req-b001
     close_mappings:
       - atlas-evasion-attack
     type: Requirement
-  - id: aiuc1-req-b007
-    related_mappings:
-      - atlas-exploit-trust-mismatch-agentic
+  - id: aiuc1-req-b002
+    close_mappings:
+      - atlas-evasion-attack
     type: Requirement
   - id: aiuc1-req-b006
     related_mappings:
       - atlas-exploit-trust-mismatch-agentic
     type: Requirement
-  - id: aiuc1-req-a006
-    close_mappings:
-      - atlas-exposing-personal-information
+  - id: aiuc1-req-b007
+    related_mappings:
+      - atlas-exploit-trust-mismatch-agentic
     type: Requirement
   - id: aiuc1-req-a006
-    related_mappings:
+    close_mappings:
       - atlas-exposing-personal-information
     type: Requirement
   - id: aiuc1-req-a005
     related_mappings:
       - atlas-exposing-personal-information
     type: Requirement
-  - id: aiuc1-req-e009
+  - id: aiuc1-req-a006
     related_mappings:
-      - atlas-external-resources-attack-agentic
+      - atlas-exposing-personal-information
     type: Requirement
   - id: aiuc1-req-b008
     related_mappings:
@@ -2184,45 +2276,45 @@ rules:
     related_mappings:
       - atlas-external-resources-attack-agentic
     type: Requirement
-  - id: aiuc1-req-b003
+  - id: aiuc1-req-e009
     related_mappings:
-      - atlas-extraction-attack
+      - atlas-external-resources-attack-agentic
     type: Requirement
   - id: aiuc1-req-b004
     close_mappings:
       - atlas-extraction-attack
     type: Requirement
+  - id: aiuc1-req-b003
+    related_mappings:
+      - atlas-extraction-attack
+    type: Requirement
+  - id: aiuc1-req-d003
+    close_mappings:
+      - atlas-function-calling-hallucination-agentic
+    type: Requirement
+  - id: aiuc1-req-d004
+    close_mappings:
+      - atlas-function-calling-hallucination-agentic
+    type: Requirement
+  - id: aiuc1-req-d003
+    related_mappings:
+      - atlas-function-calling-hallucination-agentic
+    type: Requirement
+  - id: aiuc1-req-d004
+    related_mappings:
+      - atlas-function-calling-hallucination-agentic
+    type: Requirement
   - id: aiuc1-req-e003
     related_mappings:
       - atlas-function-calling-hallucination-agentic
-    type: Requirement
-  - id: aiuc1-req-d003
-    close_mappings:
-      - atlas-function-calling-hallucination-agentic
-    type: Requirement
-  - id: aiuc1-req-d003
-    related_mappings:
-      - atlas-function-calling-hallucination-agentic
-    type: Requirement
-  - id: aiuc1-req-d004
-    close_mappings:
-      - atlas-function-calling-hallucination-agentic
-    type: Requirement
-  - id: aiuc1-req-d004
-    related_mappings:
-      - atlas-function-calling-hallucination-agentic
-    type: Requirement
-  - id: aiuc1-req-a002
-    related_mappings:
-      - atlas-generated-content-ownership
     type: Requirement
   - id: aiuc1-req-a007
     close_mappings:
       - atlas-generated-content-ownership
     type: Requirement
-  - id: aiuc1-req-e003
-    close_mappings:
-      - atlas-hallucination
+  - id: aiuc1-req-a002
+    related_mappings:
+      - atlas-generated-content-ownership
     type: Requirement
   - id: aiuc1-req-d001
     close_mappings:
@@ -2232,6 +2324,14 @@ rules:
     close_mappings:
       - atlas-hallucination
     type: Requirement
+  - id: aiuc1-req-e003
+    close_mappings:
+      - atlas-hallucination
+    type: Requirement
+  - id: aiuc1-req-c006
+    close_mappings:
+      - atlas-harmful-code-generation
+    type: Requirement
   - id: aiuc1-req-f001
     close_mappings:
       - atlas-harmful-code-generation
@@ -2240,15 +2340,19 @@ rules:
     related_mappings:
       - atlas-harmful-code-generation
     type: Requirement
-  - id: aiuc1-req-c006
+  - id: aiuc1-req-c003
     close_mappings:
-      - atlas-harmful-code-generation
-    type: Requirement
-  - id: aiuc1-req-e002
-    related_mappings:
       - atlas-harmful-output
     type: Requirement
-  - id: aiuc1-req-c007
+  - id: aiuc1-req-c005
+    close_mappings:
+      - atlas-harmful-output
+    type: Requirement
+  - id: aiuc1-req-c010
+    close_mappings:
+      - atlas-harmful-output
+    type: Requirement
+  - id: aiuc1-req-e002
     related_mappings:
       - atlas-harmful-output
     type: Requirement
@@ -2256,35 +2360,23 @@ rules:
     related_mappings:
       - atlas-harmful-output
     type: Requirement
-  - id: aiuc1-req-c005
-    close_mappings:
-      - atlas-harmful-output
-    type: Requirement
-  - id: aiuc1-req-c003
-    close_mappings:
-      - atlas-harmful-output
-    type: Requirement
-  - id: aiuc1-req-c006
+  - id: aiuc1-req-f001
     related_mappings:
-      - atlas-harmful-output
-    type: Requirement
-  - id: aiuc1-req-c010
-    close_mappings:
-      - atlas-harmful-output
+      - atlas-human-exploitation
     type: Requirement
   - id: aiuc1-req-c009
     related_mappings:
       - atlas-impact-human-agency-agentic
-    type: Requirement
-  - id: aiuc1-req-e010
-    related_mappings:
-      - atlas-improper-usage
     type: Requirement
   - id: aiuc1-req-c004
     related_mappings:
       - atlas-improper-usage
     type: Requirement
   - id: aiuc1-req-c011
+    related_mappings:
+      - atlas-improper-usage
+    type: Requirement
+  - id: aiuc1-req-e010
     related_mappings:
       - atlas-improper-usage
     type: Requirement
@@ -2300,27 +2392,23 @@ rules:
     related_mappings:
       - atlas-incomplete-ai-agent-evaluation-agentic
     type: Requirement
-  - id: aiuc1-req-e010
-    related_mappings:
-      - atlas-incomplete-usage-definition
-    type: Requirement
-  - id: aiuc1-req-e010
-    related_mappings:
-      - atlas-incomplete-usage-definition
-    type: Requirement
   - id: aiuc1-req-c011
     related_mappings:
       - atlas-incomplete-usage-definition
     type: Requirement
-  - id: aiuc1-req-c002
+  - id: aiuc1-req-e010
     related_mappings:
-      - atlas-incorrect-risk-testing
+      - atlas-incomplete-usage-definition
+    type: Requirement
+  - id: aiuc1-req-e010
+    related_mappings:
+      - atlas-incomplete-usage-definition
     type: Requirement
   - id: aiuc1-req-c001
     related_mappings:
       - atlas-incorrect-risk-testing
     type: Requirement
-  - id: aiuc1-req-e013
+  - id: aiuc1-req-c002
     related_mappings:
       - atlas-incorrect-risk-testing
     type: Requirement
@@ -2328,63 +2416,71 @@ rules:
     related_mappings:
       - atlas-incorrect-risk-testing
     type: Requirement
-  - id: aiuc1-req-e008
-    related_mappings:
-      - atlas-incorrect-risk-testing
-    type: Requirement
   - id: aiuc1-req-c012
     related_mappings:
       - atlas-incorrect-risk-testing
     type: Requirement
-  - id: aiuc1-req-b002
+  - id: aiuc1-req-e008
     related_mappings:
-      - atlas-indirect-instructions-attack
+      - atlas-incorrect-risk-testing
+    type: Requirement
+  - id: aiuc1-req-e013
+    related_mappings:
+      - atlas-incorrect-risk-testing
     type: Requirement
   - id: aiuc1-req-b001
     related_mappings:
       - atlas-indirect-instructions-attack
     type: Requirement
-  - id: aiuc1-req-a007
+  - id: aiuc1-req-b002
     related_mappings:
-      - atlas-ip-information-in-prompt
+      - atlas-indirect-instructions-attack
+    type: Requirement
+  - id: aiuc1-req-c003
+    related_mappings:
+      - atlas-introduce-data-bias-agentic
     type: Requirement
   - id: aiuc1-req-a004
     related_mappings:
       - atlas-ip-information-in-prompt
     type: Requirement
-  - id: aiuc1-req-b002
-    close_mappings:
-      - atlas-jailbreaking
-    type: Requirement
-  - id: aiuc1-req-b002
+  - id: aiuc1-req-a007
     related_mappings:
-      - atlas-jailbreaking
+      - atlas-ip-information-in-prompt
     type: Requirement
   - id: aiuc1-req-b001
     close_mappings:
       - atlas-jailbreaking
     type: Requirement
-  - id: aiuc1-req-e017
+  - id: aiuc1-req-b002
     close_mappings:
-      - atlas-lack-of-ai-agent-transparency-agentic
+      - atlas-jailbreaking
     type: Requirement
-  - id: aiuc1-req-e017
+  - id: aiuc1-req-b002
     related_mappings:
-      - atlas-lack-of-ai-agent-transparency-agentic
+      - atlas-jailbreaking
     type: Requirement
   - id: aiuc1-req-e015
     close_mappings:
       - atlas-lack-of-ai-agent-transparency-agentic
     type: Requirement
   - id: aiuc1-req-e017
+    close_mappings:
+      - atlas-lack-of-ai-agent-transparency-agentic
+    type: Requirement
+  - id: aiuc1-req-e017
     related_mappings:
-      - atlas-lack-of-data-transparency
+      - atlas-lack-of-ai-agent-transparency-agentic
     type: Requirement
   - id: aiuc1-req-a001
     related_mappings:
       - atlas-lack-of-data-transparency
     type: Requirement
   - id: aiuc1-req-e017
+    related_mappings:
+      - atlas-lack-of-data-transparency
+    type: Requirement
+  - id: aiuc1-req-e017
     close_mappings:
       - atlas-lack-of-model-transparency
     type: Requirement
@@ -2400,11 +2496,11 @@ rules:
     related_mappings:
       - atlas-lack-of-system-transparency
     type: Requirement
-  - id: aiuc1-req-c002
+  - id: aiuc1-req-c001
     related_mappings:
       - atlas-lack-of-testing-diversity
     type: Requirement
-  - id: aiuc1-req-c001
+  - id: aiuc1-req-c002
     related_mappings:
       - atlas-lack-of-testing-diversity
     type: Requirement
@@ -2412,7 +2508,11 @@ rules:
     related_mappings:
       - atlas-lack-of-testing-diversity
     type: Requirement
-  - id: aiuc1-req-e003
+  - id: aiuc1-req-e004
+    close_mappings:
+      - atlas-legal-accountability
+    type: Requirement
+  - id: aiuc1-req-e001
     related_mappings:
       - atlas-legal-accountability
     type: Requirement
@@ -2420,23 +2520,19 @@ rules:
     related_mappings:
       - atlas-legal-accountability
     type: Requirement
-  - id: aiuc1-req-e001
+  - id: aiuc1-req-e003
     related_mappings:
-      - atlas-legal-accountability
-    type: Requirement
-  - id: aiuc1-req-e004
-    close_mappings:
       - atlas-legal-accountability
     type: Requirement
   - id: aiuc1-req-e012
     related_mappings:
       - atlas-legal-accountability
     type: Requirement
-  - id: aiuc1-req-b004
+  - id: aiuc1-req-a005
     related_mappings:
       - atlas-membership-inference-attack
     type: Requirement
-  - id: aiuc1-req-a005
+  - id: aiuc1-req-b004
     related_mappings:
       - atlas-membership-inference-attack
     type: Requirement
@@ -2452,11 +2548,11 @@ rules:
     related_mappings:
       - atlas-misaligned-actions-agentic
     type: Requirement
-  - id: aiuc1-req-e002
+  - id: aiuc1-req-e001
     related_mappings:
       - atlas-mitigation-maintenance-agentic
     type: Requirement
-  - id: aiuc1-req-e001
+  - id: aiuc1-req-e002
     related_mappings:
       - atlas-mitigation-maintenance-agentic
     type: Requirement
@@ -2464,15 +2560,11 @@ rules:
     related_mappings:
       - atlas-mitigation-maintenance-agentic
     type: Requirement
-  - id: aiuc1-req-c008
-    related_mappings:
-      - atlas-mitigation-maintenance-agentic
-    type: Requirement
-  - id: aiuc1-req-e006
+  - id: aiuc1-req-a007
     related_mappings:
       - atlas-model-usage-rights
     type: Requirement
-  - id: aiuc1-req-a007
+  - id: aiuc1-req-e006
     related_mappings:
       - atlas-model-usage-rights
     type: Requirement
@@ -2496,40 +2588,40 @@ rules:
     related_mappings:
       - atlas-output-bias
     type: Requirement
-  - id: aiuc1-req-c009
-    related_mappings:
-      - atlas-over-or-under-reliance
-    type: Requirement
   - id: aiuc1-req-c007
     related_mappings:
       - atlas-over-or-under-reliance
     type: Requirement
   - id: aiuc1-req-c009
+    related_mappings:
+      - atlas-over-or-under-reliance
+    type: Requirement
+  - id: aiuc1-req-c007
     related_mappings:
       - atlas-over-or-under-reliance-on-ai-agents-agentic
     type: Requirement
-  - id: aiuc1-req-c007
+  - id: aiuc1-req-c009
     related_mappings:
       - atlas-over-or-under-reliance-on-ai-agents-agentic
     type: Requirement
   - id: aiuc1-req-a006
     close_mappings:
-      - atlas-personal-information-in-data
-    type: Requirement
-  - id: aiuc1-req-a006
-    related_mappings:
       - atlas-personal-information-in-data
     type: Requirement
   - id: aiuc1-req-a005
     related_mappings:
       - atlas-personal-information-in-data
     type: Requirement
-  - id: aiuc1-req-a003
+  - id: aiuc1-req-a006
     related_mappings:
-      - atlas-personal-information-in-prompt
+      - atlas-personal-information-in-data
     type: Requirement
   - id: aiuc1-req-a006
     close_mappings:
+      - atlas-personal-information-in-prompt
+    type: Requirement
+  - id: aiuc1-req-a003
+    related_mappings:
       - atlas-personal-information-in-prompt
     type: Requirement
   - id: aiuc1-req-d001
@@ -2540,15 +2632,15 @@ rules:
     related_mappings:
       - atlas-poor-model-accuracy
     type: Requirement
-  - id: aiuc1-req-b002
-    close_mappings:
-      - atlas-prompt-injection
-    type: Requirement
   - id: aiuc1-req-b001
     close_mappings:
       - atlas-prompt-injection
     type: Requirement
-  - id: aiuc1-req-b009
+  - id: aiuc1-req-b002
+    close_mappings:
+      - atlas-prompt-injection
+    type: Requirement
+  - id: aiuc1-req-a004
     related_mappings:
       - atlas-prompt-leaking
     type: Requirement
@@ -2560,9 +2652,13 @@ rules:
     related_mappings:
       - atlas-prompt-leaking
     type: Requirement
-  - id: aiuc1-req-a004
+  - id: aiuc1-req-b009
     related_mappings:
       - atlas-prompt-leaking
+    type: Requirement
+  - id: aiuc1-req-b002
+    related_mappings:
+      - atlas-prompt-priming
     type: Requirement
   - id: aiuc1-req-d003
     related_mappings:
@@ -2576,23 +2672,23 @@ rules:
     related_mappings:
       - atlas-reproducibility-agentic
     type: Requirement
-  - id: aiuc1-req-b009
-    related_mappings:
-      - atlas-revealing-confidential-information
-    type: Requirement
   - id: aiuc1-req-a005
     close_mappings:
+      - atlas-revealing-confidential-information
+    type: Requirement
+  - id: aiuc1-req-b009
+    related_mappings:
       - atlas-revealing-confidential-information
     type: Requirement
   - id: aiuc1-req-a003
     related_mappings:
       - atlas-sharing-info-tools-agentic
     type: Requirement
-  - id: aiuc1-req-e009
+  - id: aiuc1-req-a004
     related_mappings:
       - atlas-sharing-info-tools-agentic
     type: Requirement
-  - id: aiuc1-req-a004
+  - id: aiuc1-req-e009
     related_mappings:
       - atlas-sharing-info-tools-agentic
     type: Requirement
@@ -2612,11 +2708,19 @@ rules:
     related_mappings:
       - atlas-social-hacking-attack
     type: Requirement
-  - id: aiuc1-req-f001
+  - id: aiuc1-req-b001
+    related_mappings:
+      - atlas-specialized-tokens-attack
+    type: Requirement
+  - id: aiuc1-req-b002
+    related_mappings:
+      - atlas-specialized-tokens-attack
+    type: Requirement
+  - id: aiuc1-req-c003
     related_mappings:
       - atlas-spreading-disinformation
     type: Requirement
-  - id: aiuc1-req-c003
+  - id: aiuc1-req-f001
     related_mappings:
       - atlas-spreading-disinformation
     type: Requirement
@@ -2628,16 +2732,12 @@ rules:
     close_mappings:
       - atlas-toxic-output
     type: Requirement
-  - id: aiuc1-req-b007
-    related_mappings:
-      - atlas-unauthorized-use-agentic
-    type: Requirement
-  - id: aiuc1-req-e009
-    related_mappings:
-      - atlas-unauthorized-use-agentic
-    type: Requirement
   - id: aiuc1-req-b006
     close_mappings:
+      - atlas-unauthorized-use-agentic
+    type: Requirement
+  - id: aiuc1-req-b007
+    related_mappings:
       - atlas-unauthorized-use-agentic
     type: Requirement
   - id: aiuc1-req-b008
@@ -2648,6 +2748,14 @@ rules:
     related_mappings:
       - atlas-unauthorized-use-agentic
     type: Requirement
+  - id: aiuc1-req-e009
+    related_mappings:
+      - atlas-unauthorized-use-agentic
+    type: Requirement
+  - id: aiuc1-req-e015
+    related_mappings:
+      - atlas-unexplainable-output
+    type: Requirement
   - id: aiuc1-req-e015
     close_mappings:
       - atlas-unexplainable-untraceable-actions-agentic
@@ -2656,11 +2764,15 @@ rules:
     related_mappings:
       - atlas-unreliable-source-attribution
     type: Requirement
+  - id: aiuc1-req-c001
+    related_mappings:
+      - atlas-unrepresentative-risk-testing
+    type: Requirement
   - id: aiuc1-req-c002
     related_mappings:
       - atlas-unrepresentative-risk-testing
     type: Requirement
-  - id: aiuc1-req-c001
+  - id: aiuc1-req-c010
     related_mappings:
       - atlas-unrepresentative-risk-testing
     type: Requirement
@@ -2668,7 +2780,7 @@ rules:
     related_mappings:
       - atlas-unrepresentative-risk-testing
     type: Requirement
-  - id: aiuc1-req-c010
+  - id: aiuc1-req-d001
     related_mappings:
-      - atlas-unrepresentative-risk-testing
+      - atlas-untraceable-attribution
     type: Requirement
