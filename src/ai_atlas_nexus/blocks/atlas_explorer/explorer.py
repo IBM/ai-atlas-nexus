@@ -2,7 +2,7 @@ from typing import Any, Dict, List
 
 import inflect
 
-from ai_atlas_nexus.blocks.risk_explorer.base import ExplorerBase
+from ai_atlas_nexus.blocks.atlas_explorer.base import ExplorerBase
 from ai_atlas_nexus.data.knowledge_graph import *
 
 
