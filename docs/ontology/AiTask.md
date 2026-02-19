@@ -183,23 +183,30 @@ URI: [airo:AiCapability](https://w3id.org/airo#AiCapability)
 
 ## Usages
 
-| used by                                     | used in                             | type  | used                |
-| ------------------------------------------- | ----------------------------------- | ----- | ------------------- |
-| [Container](Container.md)                   | [aitasks](aitasks.md)               | range | [AiTask](AiTask.md) |
-| [Entry](Entry.md)                           | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Term](Term.md)                             | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Principle](Principle.md)                   | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Risk](Risk.md)                             | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [BaseAi](BaseAi.md)                         | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
-| [AiSystem](AiSystem.md)                     | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
-| [AiAgent](AiAgent.md)                       | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
-| [AiModel](AiModel.md)                       | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
-| [AiTask](AiTask.md)                         | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Capability](Capability.md)                 | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Adapter](Adapter.md)                       | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
-| [Adapter](Adapter.md)                       | [performsTask](performsTask.md)     | range | [AiTask](AiTask.md) |
-| [LLMIntrinsic](LLMIntrinsic.md)             | [requiredByTask](requiredByTask.md) | range | [AiTask](AiTask.md) |
+| used by                                                           | used in                                       | type  | used                |
+| ----------------------------------------------------------------- | --------------------------------------------- | ----- | ------------------- |
+| [Container](Container.md)                                         | [aitasks](aitasks.md)                         | range | [AiTask](AiTask.md) |
+| [Entry](Entry.md)                                                 | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [Term](Term.md)                                                   | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [Principle](Principle.md)                                         | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [Certification](Certification.md)                                 | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [Risk](Risk.md)                                                   | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [BaseAi](BaseAi.md)                                               | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [AiSystem](AiSystem.md)                                           | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [AiAgent](AiAgent.md)                                             | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [AiModel](AiModel.md)                                             | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [LargeLanguageModel](LargeLanguageModel.md)                       | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [AiTask](AiTask.md)                                               | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [Capability](Capability.md)                                       | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [Adapter](Adapter.md)                                             | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [Adapter](Adapter.md)                                             | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                                   | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
+| [ControlActivity](ControlActivity.md)                             | [appliesToCapability](appliesToCapability.md) | range | [AiTask](AiTask.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [appliesToCapability](appliesToCapability.md) | range | [AiTask](AiTask.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [appliesToCapability](appliesToCapability.md) | range | [AiTask](AiTask.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [appliesToCapability](appliesToCapability.md) | range | [AiTask](AiTask.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [appliesToCapability](appliesToCapability.md) | range | [AiTask](AiTask.md) |
+| [Requirement](Requirement.md)                                     | [appliesToCapability](appliesToCapability.md) | range | [AiTask](AiTask.md) |
 
 ## Identifier and Mapping Information
 
@@ -274,6 +281,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -282,6 +290,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
     name: isDefinedByVocabulary
@@ -387,6 +396,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   id:
     name: id

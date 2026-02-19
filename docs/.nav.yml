@@ -39,6 +39,7 @@ nav:
       - 🔀  Mapping:
           - "Preparing mappings": examples/notebooks/Prepare_taxonomy_mappings.ipynb
           - "Generate crosswalks": examples/notebooks/generate_crosswalk.ipynb
+          - "AIUC-1 crosswalk": examples/notebooks/Crosswalk_with_AIUC-1.ipynb
       - Extensions:
           - "Risk to ARES Evaluation": examples/notebooks/risk_to_ares_evaluation.ipynb
   - Ontology:

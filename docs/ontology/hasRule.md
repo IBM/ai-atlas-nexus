@@ -9,9 +9,20 @@ Alias: hasRule
 
 ## Applicable Classes
 
-| Name                                      | Description                                                                      | Modifies Slot |
-| ----------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md) | The policy guides how the language model should answer a diverse set of sensi... | no            |
+| Name                                                              | Description                                                                      | Modifies Slot |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [ControlActivityPermission](ControlActivityPermission.md)         | A control activity (rule) describing a permission to perform an activity         | no            |
+| [Requirement](Requirement.md)                                     | A requirement representing a combination of obligation, permission, or prohib... | yes           |
+| [ControlActivity](ControlActivity.md)                             | An obligation, permission, or prohibition for AI system assurance                | no            |
+| [Obligation](Obligation.md)                                       | A rule describing an obligation for performing an activity                       | no            |
+| [ControlActivityObligation](ControlActivityObligation.md)         | A control activity (rule) describing an obligation for performing an activity    | no            |
+| [Rule](Rule.md)                                                   | A rule describing a process or control that directs or determines if and how ... | no            |
+| [Recommendation](Recommendation.md)                               | A rule describing a recommendation for performing an activity                    | no            |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | A control activity (rule) describing a prohibition to perform an activity        | no            |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | A control activity (rule) describing a recommendation for performing an activ... | no            |
+| [Prohibition](Prohibition.md)                                     | A rule describing a prohibition to perform an activity                           | no            |
+| [Permission](Permission.md)                                       | A rule describing a permission to perform an activity                            | no            |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md)                         | The policy guides how the language model should answer a diverse set of sensi... | no            |
 
 ## Properties
 
@@ -44,6 +55,8 @@ slot_uri: dpv:hasRule
 alias: hasRule
 domain_of:
 - LLMQuestionPolicy
+- Rule
+- Requirement
 range: Rule
 multivalued: true
 inlined: false

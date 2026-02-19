@@ -130,6 +130,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [Entry](Entry.md)                                       | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Term](Term.md)                                         | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Principle](Principle.md)                               | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [Certification](Certification.md)                       | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [RiskTaxonomy](RiskTaxonomy.md)                         | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [RiskGroup](RiskGroup.md)                               | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Risk](Risk.md)                                         | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |

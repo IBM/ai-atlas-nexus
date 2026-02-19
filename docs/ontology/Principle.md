@@ -181,6 +181,12 @@ URI: [dpv:Principle](https://w3id.org/dpv#Principle)
 | [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
+## Usages
+
+| used by                       | used in                         | type  | used                      |
+| ----------------------------- | ------------------------------- | ----- | ------------------------- |
+| [Requirement](Requirement.md) | [hasPrinciple](hasPrinciple.md) | range | [Principle](Principle.md) |
+
 ## Identifier and Mapping Information
 
 ### Schema Source
@@ -267,6 +273,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -275,6 +282,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
     name: isDefinedByVocabulary
@@ -369,6 +377,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   id:
     name: id

@@ -2,6 +2,8 @@
 
 _A rule describing an obligation for performing an activity_
 
+- **NOTE**: this is an abstract class and should not be instantiated directly
+
 URI: [dpv:Obligation](https://w3id.org/dpv#Obligation)
 
 ```mermaid
@@ -10,6 +12,11 @@ URI: [dpv:Obligation](https://w3id.org/dpv#Obligation)
     click Obligation href "../Obligation/"
       Rule <|-- Obligation
         click Rule href "../Rule/"
+
+
+      Obligation <|-- ControlActivityObligation
+        click ControlActivityObligation href "../ControlActivityObligation/"
+
 
       Obligation : broad_mappings
 
@@ -50,7 +57,29 @@ URI: [dpv:Obligation](https://w3id.org/dpv#Obligation)
 
 
 
+      Obligation : hasRule
+
+
+
+
+
+        Obligation --> "*" Rule : hasRule
+        click Rule href "../Rule/"
+
+
+
       Obligation : id
+
+      Obligation : isDefinedByTaxonomy
+
+
+
+
+
+        Obligation --> "0..1" Taxonomy : isDefinedByTaxonomy
+        click Taxonomy href "../Taxonomy/"
+
+
 
       Obligation : name
 
@@ -76,6 +105,8 @@ URI: [dpv:Obligation](https://w3id.org/dpv#Obligation)
 
 
 
+      Obligation : type
+
       Obligation : url
 
 
@@ -86,22 +117,26 @@ URI: [dpv:Obligation](https://w3id.org/dpv#Obligation)
 - [Entity](Entity.md)
   - [Rule](Rule.md)
     - **Obligation**
+      - [ControlActivityObligation](ControlActivityObligation.md) [ [ControlActivity](ControlActivity.md)]
 
 ## Slots
 
-| Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |
-| --------------------------------------- | ------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
-| [id](id.md)                             | 1 <br/> [String](String.md)    | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
-| [name](name.md)                         | 0..1 <br/> [String](String.md) | A text name of this instance                                                     | [Entity](Entity.md) |
-| [description](description.md)           | 0..1 <br/> [String](String.md) | The description of an entity                                                     | [Entity](Entity.md) |
-| [url](url.md)                           | 0..1 <br/> [Uri](Uri.md)       | An optional URL associated with this instance                                    | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md)           | 0..1 <br/> [Date](Date.md)     | The date on which the entity was created                                         | [Entity](Entity.md) |
-| [dateModified](dateModified.md)         | 0..1 <br/> [Date](Date.md)     | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)         | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |
+| --------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------- | ------------------- |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)     |                                                                                  | direct              |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md) | A relationship where a concept or a concept group is defined by a taxonomy       | [Rule](Rule.md)     |
+| [hasRule](hasRule.md)                         | \* <br/> [Rule](Rule.md)           | Specifying applicability or inclusion of a rule within specified context         | [Rule](Rule.md)     |
+| [id](id.md)                                   | 1 <br/> [String](String.md)        | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                               | 0..1 <br/> [String](String.md)     | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)                 | 0..1 <br/> [String](String.md)     | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)           | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)         | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)         | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)             | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)             | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)             | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 
 ## Usages
 
@@ -134,6 +169,33 @@ name: Obligation
 description: A rule describing an obligation for performing an activity
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Rule
+abstract: true
+attributes:
+  type:
+    name: type
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    designates_type: true
+    domain_of:
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Control
+    - Group
+    - Entry
+    - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
+    range: string
 class_uri: dpv:Obligation
 
 ````
@@ -147,7 +209,77 @@ name: Obligation
 description: A rule describing an obligation for performing an activity
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Rule
+abstract: true
 attributes:
+  type:
+    name: type
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    designates_type: true
+    alias: type
+    owner: Obligation
+    domain_of:
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Control
+    - Group
+    - Entry
+    - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
+    range: string
+  isDefinedByTaxonomy:
+    name: isDefinedByTaxonomy
+    description: A relationship where a concept or a concept group is defined by a
+      taxonomy
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:isPartOf
+    alias: isDefinedByTaxonomy
+    owner: Obligation
+    domain_of:
+    - Concept
+    - Control
+    - Group
+    - Entry
+    - Policy
+    - Rule
+    - RiskGroup
+    - Risk
+    - RiskControl
+    - Action
+    - RiskIncident
+    - CapabilityGroup
+    - StakeholderGroup
+    - Stakeholder
+    - Requirement
+    range: Taxonomy
+  hasRule:
+    name: hasRule
+    description: Specifying applicability or inclusion of a rule within specified
+      context.
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: dpv:hasRule
+    alias: hasRule
+    owner: Obligation
+    domain_of:
+    - LLMQuestionPolicy
+    - Rule
+    - Requirement
+    range: Rule
+    multivalued: true
+    inlined: false
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example

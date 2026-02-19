@@ -11,11 +11,11 @@ Alias: belongsToDomain
 
 | Name                                    | Description                                                                      | Modifies Slot |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
 | [Group](Group.md)                       | Labelled groups of concepts                                                      | no            |
-| [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        | no            |
 | [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
+| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
 | [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | no            |
+| [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        | no            |
 
 ## Properties
 

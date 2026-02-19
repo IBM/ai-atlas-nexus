@@ -150,33 +150,45 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 
 ## Usages
 
-| used by                                   | used in                                       | type  | used                    |
-| ----------------------------------------- | --------------------------------------------- | ----- | ----------------------- |
-| [Container](Container.md)                 | [taxonomies](taxonomies.md)                   | range | [Taxonomy](Taxonomy.md) |
-| [Concept](Concept.md)                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Control](Control.md)                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Group](Group.md)                         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Entry](Entry.md)                         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Term](Term.md)                           | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Principle](Principle.md)                 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Policy](Policy.md)                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md) | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [RiskGroup](RiskGroup.md)                 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Risk](Risk.md)                           | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [RiskConcept](RiskConcept.md)             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [RiskControl](RiskControl.md)             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Action](Action.md)                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [RiskIncident](RiskIncident.md)           | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Impact](Impact.md)                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [AiTask](AiTask.md)                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [CapabilityConcept](CapabilityConcept.md) | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [CapabilityDomain](CapabilityDomain.md)   | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [CapabilityGroup](CapabilityGroup.md)     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Capability](Capability.md)               | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Adapter](Adapter.md)                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [LLMIntrinsic](LLMIntrinsic.md)           | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [StakeholderGroup](StakeholderGroup.md)   | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
-| [Stakeholder](Stakeholder.md)             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| used by                                                           | used in                                       | type  | used                    |
+| ----------------------------------------------------------------- | --------------------------------------------- | ----- | ----------------------- |
+| [Container](Container.md)                                         | [taxonomies](taxonomies.md)                   | range | [Taxonomy](Taxonomy.md) |
+| [Concept](Concept.md)                                             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Control](Control.md)                                             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Group](Group.md)                                                 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Entry](Entry.md)                                                 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Term](Term.md)                                                   | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Principle](Principle.md)                                         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Policy](Policy.md)                                               | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md)                         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Rule](Rule.md)                                                   | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Permission](Permission.md)                                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Prohibition](Prohibition.md)                                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Obligation](Obligation.md)                                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Recommendation](Recommendation.md)                               | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Certification](Certification.md)                                 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [RiskGroup](RiskGroup.md)                                         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Risk](Risk.md)                                                   | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [RiskConcept](RiskConcept.md)                                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [RiskControl](RiskControl.md)                                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Action](Action.md)                                               | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [RiskIncident](RiskIncident.md)                                   | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Impact](Impact.md)                                               | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [AiTask](AiTask.md)                                               | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [CapabilityConcept](CapabilityConcept.md)                         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [CapabilityDomain](CapabilityDomain.md)                           | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [CapabilityGroup](CapabilityGroup.md)                             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Capability](Capability.md)                                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Adapter](Adapter.md)                                             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                                   | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [StakeholderGroup](StakeholderGroup.md)                           | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Stakeholder](Stakeholder.md)                                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [ControlActivity](ControlActivity.md)                             | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [Requirement](Requirement.md)                                     | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
 
 ## Identifier and Mapping Information
 
@@ -222,6 +234,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
 class_uri: skos:ConceptScheme
 
@@ -253,6 +277,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   version:
     name: version
