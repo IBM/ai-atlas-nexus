@@ -71,7 +71,7 @@ def find_by_id(identifier):
     Search for any object with matching id in the container
     it will check all collections in the container
      """
-    fields = aan._ontology.model_fields
+    fields = Container.model_fields
     for attr_name in fields:
         attr = getattr(aan._ontology, attr_name) or None
         if isinstance(attr, list):
@@ -149,7 +149,7 @@ def prepare_container(output_entities):
     Returns:
         Container
     """
-    fields = aan._ontology.model_fields
+    fields = Container.model_fields
     c = Container()
     for attr_name in fields:
         attr = getattr(aan._ontology, attr_name) or None
