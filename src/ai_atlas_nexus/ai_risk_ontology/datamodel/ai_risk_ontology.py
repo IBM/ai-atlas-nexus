@@ -80,7 +80,8 @@ linkml_meta = LinkMLMeta({'default_curi_maps': ['semweb_context'],
                  'ai_system',
                  'ai_eval',
                  'ai_intrinsic',
-                 'ai_csiro_rai'],
+                 'ai_csiro_rai',
+                 'ai_aiuc'],
      'license': 'https://www.apache.org/licenses/LICENSE-2.0.html',
      'name': 'ai-risk-ontology',
      'prefixes': {'airo': {'prefix_prefix': 'airo',
@@ -154,6 +155,73 @@ class AiSystemType(str, Enum):
     HIGH_RISK = "HIGH_RISK"
     """
     AI systems pursuant to Article 6(1)(2) Classification Rules for High-Risk AI Systems
+    """
+
+
+class AIUC1ApplicationCategory(str, Enum):
+    MANDATORY = "MANDATORY"
+    """
+    Mandatory
+    """
+    OPTIONAL = "OPTIONAL"
+    """
+    Optional
+    """
+
+
+class AIUC1ControlApplicationCategory(str, Enum):
+    CORE = "CORE"
+    """
+    Core Control
+    """
+    SUPPLEMENTAL = "SUPPLEMENTAL"
+    """
+    Supplemental Control
+    """
+
+
+class AIUC1EvidenceCategory(str, Enum):
+    TECHNICAL_IMPLEMENTATION = "TECHNICAL_IMPLEMENTATION"
+    """
+    Technical Implementation
+    """
+    LEGAL_POLICIES = "LEGAL_POLICIES"
+    """
+    Legal Policies
+    """
+    OPERATIONAL_PRACTICES = "OPERATIONAL_PRACTICES"
+    """
+    Operational Practices
+    """
+    THIRD_PARTY_EVALS = "THIRD_PARTY_EVALS"
+    """
+    Third-party Evals
+    """
+
+
+class AIUC1Frequency(str, Enum):
+    MONTHS_3 = "MONTHS_3"
+    """
+    Every 3 months
+    """
+    MONTHS_6 = "MONTHS_6"
+    """
+    Every 6 months
+    """
+    MONTHS_12 = "MONTHS_12"
+    """
+    Every 12 months
+    """
+
+
+class AIUC1RequirementType(str, Enum):
+    DETECTIVE = "DETECTIVE"
+    """
+    Detective
+    """
+    PREVENTATIVE = "PREVENTATIVE"
+    """
+    Preventative
     """
 
 
@@ -358,7 +426,19 @@ class Vocabulary(Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -417,7 +497,19 @@ class Taxonomy(Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -445,6 +537,7 @@ class Concept(Entity):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -452,7 +545,8 @@ class Concept(Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -478,7 +572,19 @@ class Concept(Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -506,6 +612,7 @@ class Control(Entity):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -513,7 +620,8 @@ class Control(Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     type: Literal["Control"] = Field(default="Control", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -522,7 +630,19 @@ class Control(Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -550,6 +670,7 @@ class Group(Entity):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -557,7 +678,8 @@ class Group(Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -586,7 +708,19 @@ class Group(Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy'],
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement'],
          'ifabsent': 'string(Group)'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -614,6 +748,7 @@ class Entry(Entity):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -621,7 +756,8 @@ class Entry(Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
@@ -663,7 +799,19 @@ class Entry(Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -718,6 +866,7 @@ class Term(Entry):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -725,7 +874,8 @@ class Term(Entry):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -748,7 +898,19 @@ class Term(Entry):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -791,6 +953,7 @@ class Principle(Entry):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -798,7 +961,8 @@ class Principle(Entry):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
@@ -823,7 +987,19 @@ class Principle(Entry):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -850,6 +1026,7 @@ class Policy(Entity):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -857,7 +1034,8 @@ class Policy(Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     type: Literal["Policy"] = Field(default="Policy", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -866,7 +1044,19 @@ class Policy(Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -895,7 +1085,8 @@ class LLMQuestionPolicy(Policy):
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
-    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy'], 'slot_uri': 'dpv:hasRule'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
     hasReasonDenial: Optional[str] = Field(default=None, description="""Reason for denial""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy'], 'slot_uri': 'nexus:hasReasonDenial'} })
     hasShortReplyType: Optional[str] = Field(default=None, description="""Short reply type""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy'], 'slot_uri': 'nexus:hasShortReplyType'} })
     hasException: Optional[str] = Field(default=None, description="""Exception type""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy'], 'slot_uri': 'nexus:hasException'} })
@@ -904,6 +1095,7 @@ class LLMQuestionPolicy(Policy):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -911,7 +1103,8 @@ class LLMQuestionPolicy(Policy):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     type: Literal["LLMQuestionPolicy"] = Field(default="LLMQuestionPolicy", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -920,7 +1113,19 @@ class LLMQuestionPolicy(Policy):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -938,9 +1143,48 @@ class Rule(Entity):
     """
     A rule describing a process or control that directs or determines if and how an activity should be conducted.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Rule',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'dpv:Rule',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    type: Literal["Rule"] = Field(default="Rule", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -958,9 +1202,48 @@ class Permission(Rule):
     """
     A rule describing a permission to perform an activity
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Permission',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'dpv:Permission',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
+    type: Literal["Permission"] = Field(default="Permission", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -978,9 +1261,48 @@ class Prohibition(Rule):
     """
     A rule describing a prohibition to perform an activity
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Prohibition',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'dpv:Prohibition',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
+    type: Literal["Prohibition"] = Field(default="Prohibition", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -998,9 +1320,197 @@ class Obligation(Rule):
     """
     A rule describing an obligation for performing an activity
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Obligation',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'dpv:Obligation',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
+    type: Literal["Obligation"] = Field(default="Obligation", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class Recommendation(Rule):
+    """
+    A rule describing a recommendation for performing an activity
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'dpv:Recommendation',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
+
+    type: Literal["Recommendation"] = Field(default="Recommendation", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class Certification(Entry):
+    """
+    Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'class_uri': 'dpv:Certification',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
+
+    type: Literal["Certification"] = Field(default="Certification", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'RiskTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
+                       'Risk',
+                       'LargeLanguageModel',
+                       'CapabilityGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    requiredByTask: Optional[list[str]] = Field(default=[], description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
+    requiresCapability: Optional[list[str]] = Field(default=[], description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+         'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
+         'inverse': 'requiredByTask'} })
+    implementedByAdapter: Optional[list[str]] = Field(default=[], description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
+""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+         'domain_of': ['Entry', 'Capability'],
+         'inverse': 'implementsCapability'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1056,7 +1566,19 @@ class RiskTaxonomy(Taxonomy):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1086,6 +1608,7 @@ class RiskConcept(Concept):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -1093,7 +1616,8 @@ class RiskConcept(Concept):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -1119,7 +1643,19 @@ class RiskConcept(Concept):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1149,6 +1685,7 @@ class RiskGroup(RiskConcept, Group):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -1156,7 +1693,8 @@ class RiskGroup(RiskConcept, Group):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasPart: Optional[list[str]] = Field(default=[], description="""A relationship where a riskgroup has a risk""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'RiskGroup', 'CapabilityGroup'],
          'slot_uri': 'skos:member'} })
@@ -1188,7 +1726,19 @@ class RiskGroup(RiskConcept, Group):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy'],
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement'],
          'ifabsent': 'string(Group)'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -1221,6 +1771,7 @@ class Risk(RiskConcept, Entry):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -1228,7 +1779,8 @@ class Risk(RiskConcept, Entry):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where a risk is part of a risk group""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -1282,7 +1834,19 @@ class Risk(RiskConcept, Entry):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1314,6 +1878,7 @@ class RiskControl(RiskConcept, Control):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -1321,7 +1886,8 @@ class RiskControl(RiskConcept, Control):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isDetectedBy: Optional[list[str]] = Field(default=[], description="""A relationship where a risk, risk source, consequence, or impact is detected by a risk control.""", json_schema_extra = { "linkml_meta": {'domain': 'RiskConcept',
          'domain_of': ['RiskConcept'],
@@ -1333,7 +1899,19 @@ class RiskControl(RiskConcept, Control):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1401,6 +1979,7 @@ class Action(RiskControl):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -1408,7 +1987,8 @@ class Action(RiskControl):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasAiActorTask: Optional[list[str]] = Field(default=[], description="""Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action in the subcategory (i.e., some apply to AI development and others apply to AI deployment).""", json_schema_extra = { "linkml_meta": {'domain_of': ['Action']} })
     detectsRiskConcept: Optional[list[str]] = Field(default=[], description="""The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources, consequences, and impacts.""", json_schema_extra = { "linkml_meta": {'domain': 'RiskControl',
@@ -1425,7 +2005,19 @@ class Action(RiskControl):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1455,6 +2047,7 @@ class RiskIncident(RiskConcept, Entity):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -1462,7 +2055,8 @@ class RiskIncident(RiskConcept, Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasStatus: Optional[str] = Field(default=None, description="""Indicates the status of specified concept""", json_schema_extra = { "linkml_meta": {'domain': 'RiskConcept', 'domain_of': ['RiskIncident']} })
     hasSeverity: Optional[str] = Field(default=None, description="""Indicates the severity associated with a concept""", json_schema_extra = { "linkml_meta": {'domain': 'RiskConcept', 'domain_of': ['RiskIncident']} })
@@ -1515,7 +2109,19 @@ class RiskIncident(RiskConcept, Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
 
 
 class Impact(RiskConcept, Entity):
@@ -1542,6 +2148,7 @@ class Impact(RiskConcept, Entity):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -1549,7 +2156,8 @@ class Impact(RiskConcept, Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -1575,7 +2183,19 @@ class Impact(RiskConcept, Entity):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
 
 
 class IncidentStatus(Entity):
@@ -2094,6 +2714,7 @@ class AiTask(Entry):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -2101,7 +2722,8 @@ class AiTask(Entry):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
@@ -2140,7 +2762,19 @@ class AiTask(Entry):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -2215,7 +2849,7 @@ class AiModelValidation(AiLifecyclePhase):
 
 class AiProvider(Organization):
     """
-    A provider under the AI Act is defined by Article 3(3) as a natural or legal person or body that develops an AI system or general-purpose AI model or has an AI system or general-purpose AI model developed; and places that system or model on the market, or puts that system into service, under the provider's own name or trademark, whether for payment or free for charge.
+    A provider under the AI Act is defined by Article 3(3) as a natural or legal person or body that develops an AI system or general-purpose AI model or has an AI system or general-purpose AI model developed; and places that ystem or model on the market, or puts that system into service, under the provider's own name or trademark, whether for payment or free for charge.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AIProvider',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
@@ -2317,7 +2951,19 @@ class CapabilityTaxonomy(Taxonomy):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -2333,7 +2979,7 @@ class CapabilityTaxonomy(Taxonomy):
 
 class CapabilityConcept(Concept):
     """
-    An umbrella term for referring to capability domains, groups, and individual capabilities..
+    An umbrella term for referring to capability domains, groups, and individual capabilities.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:CapabilityConcept',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability',
@@ -2344,6 +2990,7 @@ class CapabilityConcept(Concept):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -2351,7 +2998,8 @@ class CapabilityConcept(Concept):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -2377,7 +3025,19 @@ class CapabilityConcept(Concept):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -2408,6 +3068,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -2415,7 +3076,8 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -2444,7 +3106,19 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy'],
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement'],
          'ifabsent': 'string(Group)'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2485,6 +3159,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -2492,7 +3167,8 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where a capability group belongs to a capability domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -2527,7 +3203,19 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy'],
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement'],
          'ifabsent': 'string(Group)'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2544,7 +3232,8 @@ class CapabilityGroup(CapabilityConcept, Group):
 
 class Capability(CapabilityConcept, Entry):
     """
-    A specific AI capability or ability, such as reading comprehension, logical reasoning, or code generation. Aligned with the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of achieving or providing. Capabilities are distinct from: (1) the intended purpose for which the technology is designed, (2) the actual tasks performed in a specific deployment context, and (3) the technical implementation mechanisms (intrinsics, adapters) that enable the capability.
+    A specific AI capability or ability, such as reading comprehension, logical reasoning, or code generation. Aligned with the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of achieving or providing.
+    Capabilities are distinct from: (1) the intended purpose for which the technology is designed, (2) the actual tasks performed in a specific deployment context, and (3) the technical implementation mechanisms (intrinsics, adapters) that enable the capability.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'broad_mappings': ['tech:Capability'],
          'class_uri': 'ai:Capability',
@@ -2593,6 +3282,7 @@ class Capability(CapabilityConcept, Entry):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -2600,7 +3290,8 @@ class Capability(CapabilityConcept, Entry):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
@@ -2637,7 +3328,19 @@ class Capability(CapabilityConcept, Entry):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -3028,6 +3731,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -3035,7 +3739,8 @@ class Adapter(LargeLanguageModel, Entry):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     requiredByTask: Optional[list[str]] = Field(default=[], description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
     implementedByAdapter: Optional[list[str]] = Field(default=[], description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
@@ -3049,7 +3754,19 @@ class Adapter(LargeLanguageModel, Entry):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -3121,6 +3838,7 @@ class LLMIntrinsic(Entry):
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -3128,7 +3846,8 @@ class LLMIntrinsic(Entry):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -3151,7 +3870,141 @@ class LLMIntrinsic(Entry):
                        'Control',
                        'Group',
                        'Entry',
-                       'Policy']} })
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class StakeholderGroup(Group):
+    """
+    An AI system stakeholder grouping.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_csiro_rai'})
+
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'RiskTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    hasPart: Optional[list[str]] = Field(default=[], description="""A relationship where an entity has another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'RiskGroup', 'CapabilityGroup'],
+         'slot_uri': 'skos:member'} })
+    belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
+    type: Literal["StakeholderGroup"] = Field(default="StakeholderGroup", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement'],
+         'ifabsent': 'string(Group)'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class Stakeholder(Entity):
+    """
+    An AI system stakeholder for Responsible AI governance (e.g., AI governors, users, consumers).
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_csiro_rai',
+         'slot_usage': {'isPartOf': {'description': 'A relationship where a '
+                                                    'stakeholder is part of a '
+                                                    'stakeholder group',
+                                     'name': 'isPartOf',
+                                     'range': 'StakeholderGroup'}}})
+
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    isPartOf: Optional[str] = Field(default=None, description="""A relationship where a stakeholder is part of a stakeholder group""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
+                       'Risk',
+                       'LargeLanguageModel',
+                       'CapabilityGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -3186,17 +4039,48 @@ class AiOffice(Organization):
     broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
 
 
-class StakeholderGroup(Group):
+class ControlActivity(Rule):
     """
-    An AI system stakeholder grouping.
+    An obligation, permission, or prohibition for AI system assurance.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_csiro_rai'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
+         'mixin': True})
 
+    hasControlApplication: Optional[AIUC1ControlApplicationCategory] = Field(default=None, description="""Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasControlApplication'} })
+    hasEvidenceCategory: Optional[list[AIUC1EvidenceCategory]] = Field(default=[], description="""The evidence category, ie Technical Implementation, Operational Practices, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasEvidenceCategory'} })
+    hasTypicalLocation: Optional[list[str]] = Field(default=[], description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalLocation'} })
+    appliesToCapability: Optional[list[str]] = Field(default=[], description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:appliesToCapability'} })
+    hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasRequirement'} })
+    hasRequirementType: Optional[AIUC1RequirementType] = Field(default=None, description="""The requirement type of whether this is preventive, detective, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:hasRequirementType'} })
+    hasTypicalEvidence: Optional[str] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalEvidence'} })
+    type: Literal["ControlActivity"] = Field(default="ControlActivity", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -3204,37 +4088,11 @@ class StakeholderGroup(Group):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
-    hasDocumentation: Optional[list[str]] = Field(default=[], description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
-                       'Vocabulary',
-                       'Taxonomy',
-                       'Concept',
-                       'Group',
-                       'Entry',
-                       'Term',
-                       'Principle',
-                       'RiskTaxonomy',
-                       'Action',
-                       'BaseAi',
-                       'LargeLanguageModelFamily',
-                       'AiEval',
-                       'BenchmarkMetadataCard',
-                       'Adapter',
-                       'LLMIntrinsic'],
-         'slot_uri': 'airo:hasDocumentation'} })
-    hasPart: Optional[list[str]] = Field(default=[], description="""A relationship where an entity has another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'RiskGroup', 'CapabilityGroup'],
-         'slot_uri': 'skos:member'} })
-    belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
-    type: Literal["StakeholderGroup"] = Field(default="StakeholderGroup", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
-                       'Taxonomy',
-                       'Concept',
-                       'Control',
-                       'Group',
-                       'Entry',
-                       'Policy'],
-         'ifabsent': 'string(Group)'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -3248,22 +4106,49 @@ class StakeholderGroup(Group):
     broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
 
 
-class Stakeholder(Entity):
+class ControlActivityPermission(ControlActivity, Permission):
     """
-    An AI system stakeholder for Responsible AI governance (e.g., AI governors, users, consumers).
+    A control activity (rule) describing a permission to perform an activity
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_csiro_rai',
-         'slot_usage': {'isPartOf': {'description': 'A relationship where a '
-                                                    'stakeholder is part of a '
-                                                    'stakeholder group',
-                                     'name': 'isPartOf',
-                                     'range': 'StakeholderGroup'}}})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityPermission',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
+         'mixins': ['ControlActivity']})
 
+    type: Literal["ControlActivityPermission"] = Field(default="ControlActivityPermission", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    hasControlApplication: Optional[AIUC1ControlApplicationCategory] = Field(default=None, description="""Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasControlApplication'} })
+    hasEvidenceCategory: Optional[list[AIUC1EvidenceCategory]] = Field(default=[], description="""The evidence category, ie Technical Implementation, Operational Practices, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasEvidenceCategory'} })
+    hasTypicalLocation: Optional[list[str]] = Field(default=[], description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalLocation'} })
+    appliesToCapability: Optional[list[str]] = Field(default=[], description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:appliesToCapability'} })
+    hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasRequirement'} })
+    hasRequirementType: Optional[AIUC1RequirementType] = Field(default=None, description="""The requirement type of whether this is preventive, detective, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:hasRequirementType'} })
+    hasTypicalEvidence: Optional[str] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalEvidence'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
                        'Entry',
                        'Policy',
+                       'Rule',
                        'RiskGroup',
                        'Risk',
                        'RiskControl',
@@ -3271,14 +4156,285 @@ class Stakeholder(Entity):
                        'RiskIncident',
                        'CapabilityGroup',
                        'StakeholderGroup',
-                       'Stakeholder'],
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
-    isPartOf: Optional[str] = Field(default=None, description="""A relationship where a stakeholder is part of a stakeholder group""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class ControlActivityProhibition(ControlActivity, Prohibition):
+    """
+    A control activity (rule) describing a prohibition to perform an activity
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityProhibition',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
+         'mixins': ['ControlActivity']})
+
+    type: Literal["ControlActivityProhibition"] = Field(default="ControlActivityProhibition", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    hasControlApplication: Optional[AIUC1ControlApplicationCategory] = Field(default=None, description="""Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasControlApplication'} })
+    hasEvidenceCategory: Optional[list[AIUC1EvidenceCategory]] = Field(default=[], description="""The evidence category, ie Technical Implementation, Operational Practices, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasEvidenceCategory'} })
+    hasTypicalLocation: Optional[list[str]] = Field(default=[], description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalLocation'} })
+    appliesToCapability: Optional[list[str]] = Field(default=[], description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:appliesToCapability'} })
+    hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasRequirement'} })
+    hasRequirementType: Optional[AIUC1RequirementType] = Field(default=None, description="""The requirement type of whether this is preventive, detective, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:hasRequirementType'} })
+    hasTypicalEvidence: Optional[str] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalEvidence'} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
                        'Risk',
-                       'LargeLanguageModel',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
                        'CapabilityGroup',
-                       'Stakeholder'],
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class ControlActivityObligation(ControlActivity, Obligation):
+    """
+    A control activity (rule) describing an obligation for performing an activity
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityObligation',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
+         'mixins': ['ControlActivity']})
+
+    type: Literal["ControlActivityObligation"] = Field(default="ControlActivityObligation", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    hasControlApplication: Optional[AIUC1ControlApplicationCategory] = Field(default=None, description="""Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasControlApplication'} })
+    hasEvidenceCategory: Optional[list[AIUC1EvidenceCategory]] = Field(default=[], description="""The evidence category, ie Technical Implementation, Operational Practices, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasEvidenceCategory'} })
+    hasTypicalLocation: Optional[list[str]] = Field(default=[], description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalLocation'} })
+    appliesToCapability: Optional[list[str]] = Field(default=[], description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:appliesToCapability'} })
+    hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasRequirement'} })
+    hasRequirementType: Optional[AIUC1RequirementType] = Field(default=None, description="""The requirement type of whether this is preventive, detective, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:hasRequirementType'} })
+    hasTypicalEvidence: Optional[str] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalEvidence'} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class ControlActivityRecommendation(ControlActivity, Recommendation):
+    """
+    A control activity (rule) describing a recommendation for performing an activity
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityRecommendation',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
+         'mixins': ['ControlActivity']})
+
+    type: Literal["ControlActivityRecommendation"] = Field(default="ControlActivityRecommendation", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    hasControlApplication: Optional[AIUC1ControlApplicationCategory] = Field(default=None, description="""Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasControlApplication'} })
+    hasEvidenceCategory: Optional[list[AIUC1EvidenceCategory]] = Field(default=[], description="""The evidence category, ie Technical Implementation, Operational Practices, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasEvidenceCategory'} })
+    hasTypicalLocation: Optional[list[str]] = Field(default=[], description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalLocation'} })
+    appliesToCapability: Optional[list[str]] = Field(default=[], description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:appliesToCapability'} })
+    hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasRequirement'} })
+    hasRequirementType: Optional[AIUC1RequirementType] = Field(default=None, description="""The requirement type of whether this is preventive, detective, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:hasRequirementType'} })
+    hasTypicalEvidence: Optional[str] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity'], 'slot_uri': 'nexus:hasTypicalEvidence'} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=[], description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=[], description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+
+
+class Requirement(Rule):
+    """
+    A requirement representing a combination of obligation, permission, or prohibition for AI system assurance.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
+         'slot_usage': {'hasRule': {'description': 'Relationship indicating the '
+                                                   'control activities (rules) of '
+                                                   'which the requirement is composed.',
+                                    'inlined': False,
+                                    'name': 'hasRule'}}})
+
+    hasApplication: Optional[list[AIUC1ApplicationCategory]] = Field(default=[], description="""The application category, Optional or Mandatory.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Requirement'], 'slot_uri': 'nexus:hasApplication'} })
+    hasFrequency: Optional[AIUC1Frequency] = Field(default=None, description="""The frequency""", json_schema_extra = { "linkml_meta": {'domain_of': ['Requirement'], 'slot_uri': 'nexus:hasFrequency'} })
+    hasKeywords: Optional[list[str]] = Field(default=[], description="""A collection of keywords""", json_schema_extra = { "linkml_meta": {'domain_of': ['Requirement'], 'slot_uri': 'nexus:hasKeywords'} })
+    hasPrinciple: Optional[list[str]] = Field(default=[], description="""Which of the AIUC-1 principles this requirement belongs to""", json_schema_extra = { "linkml_meta": {'domain_of': ['Requirement'], 'slot_uri': 'dpv:isPartOf'} })
+    appliesToCapability: Optional[list[str]] = Field(default=[], description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:appliesToCapability'} })
+    hasRequirementType: Optional[AIUC1RequirementType] = Field(default=None, description="""The requirement type of whether this is preventive, detective, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ControlActivity', 'Requirement'],
+         'slot_uri': 'nexus:hasRequirementType'} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'StakeholderGroup',
+                       'Stakeholder',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasRule: Optional[list[str]] = Field(default=[], description="""Relationship indicating the control activities (rules) of which the requirement is composed.""", json_schema_extra = { "linkml_meta": {'domain_of': ['LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    type: Literal["Requirement"] = Field(default="Requirement", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -3309,7 +4465,7 @@ class Container(ConfiguredBaseModel):
     adapters: Optional[list[Adapter]] = Field(default=[], description="""A list of Adapters""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     taxonomies: Optional[list[Union[Taxonomy,RiskTaxonomy,CapabilityTaxonomy]]] = Field(default=[], description="""A list of taxonomies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     concepts: Optional[list[Union[Concept,RiskConcept,CapabilityConcept,CapabilityDomain,CapabilityGroup,Capability,RiskGroup,Risk,RiskControl,RiskIncident,Impact,Action]]] = Field(default=[], description="""A list of concepts""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    entries: Optional[list[Union[Entry,Term,Principle,Risk,AiTask,Capability,Adapter,LLMIntrinsic]]] = Field(default=[], description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    entries: Optional[list[Union[Entry,Term,Principle,Certification,Risk,AiTask,Capability,Adapter,LLMIntrinsic]]] = Field(default=[], description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     groups: Optional[list[Union[Group,RiskGroup,CapabilityDomain,CapabilityGroup,StakeholderGroup]]] = Field(default=[], description="""A list of groups""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     vocabularies: Optional[list[Vocabulary]] = Field(default=[], description="""A list of vocabularies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     controls: Optional[list[Union[Control,RiskControl,Action]]] = Field(default=[], description="""A list of AI controls""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
@@ -3323,10 +4479,10 @@ class Container(ConfiguredBaseModel):
     aimodelfamilies: Optional[list[LargeLanguageModelFamily]] = Field(default=[], description="""A list of AI model families""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     aimodels: Optional[list[LargeLanguageModel]] = Field(default=[], description="""A list of AI models""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     policies: Optional[list[Union[Policy,LLMQuestionPolicy]]] = Field(default=[], description="""A list of policies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    rules: Optional[list[Rule]] = Field(default=[], description="""A list of rules""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    prohibitions: Optional[list[Prohibition]] = Field(default=[], description="""A list of prohibitions""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    permissions: Optional[list[Permission]] = Field(default=[], description="""A list of Permissions""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    obligations: Optional[list[Obligation]] = Field(default=[], description="""A list of Obligations""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    rules: Optional[list[Union[Rule,Permission,Prohibition,Obligation,Recommendation,ControlActivity,Requirement,ControlActivityPermission,ControlActivityProhibition,ControlActivityObligation,ControlActivityRecommendation]]] = Field(default=[], description="""A list of rules""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    prohibitions: Optional[list[Union[Prohibition,ControlActivityProhibition]]] = Field(default=[], description="""A list of prohibitions""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    permissions: Optional[list[Union[Permission,ControlActivityPermission]]] = Field(default=[], description="""A list of Permissions""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    obligations: Optional[list[Union[Obligation,ControlActivityObligation]]] = Field(default=[], description="""A list of Obligations""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
 
 
 # Model rebuild
@@ -3351,6 +4507,8 @@ Rule.model_rebuild()
 Permission.model_rebuild()
 Prohibition.model_rebuild()
 Obligation.model_rebuild()
+Recommendation.model_rebuild()
+Certification.model_rebuild()
 RiskTaxonomy.model_rebuild()
 RiskConcept.model_rebuild()
 RiskGroup.model_rebuild()
@@ -3393,7 +4551,13 @@ Question.model_rebuild()
 Questionnaire.model_rebuild()
 Adapter.model_rebuild()
 LLMIntrinsic.model_rebuild()
-AiOffice.model_rebuild()
 StakeholderGroup.model_rebuild()
 Stakeholder.model_rebuild()
+AiOffice.model_rebuild()
+ControlActivity.model_rebuild()
+ControlActivityPermission.model_rebuild()
+ControlActivityProhibition.model_rebuild()
+ControlActivityObligation.model_rebuild()
+ControlActivityRecommendation.model_rebuild()
+Requirement.model_rebuild()
 Container.model_rebuild()

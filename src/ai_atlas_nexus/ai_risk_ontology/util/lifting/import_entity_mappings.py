@@ -71,7 +71,7 @@ def find_by_id(identifier):
     Search for any object with matching id in the container
     it will check all collections in the container
      """
-    fields = aan._ontology.model_fields
+    fields = Container.model_fields
     for attr_name in fields:
         attr = getattr(aan._ontology, attr_name) or None
         if isinstance(attr, list):
@@ -149,12 +149,12 @@ def prepare_container(output_entities):
     Returns:
         Container
     """
-    fields = aan._ontology.model_fields
+    fields = Container.model_fields
     c = Container()
     for attr_name in fields:
         attr = getattr(aan._ontology, attr_name) or None
         if isinstance(attr, list):
-             object.__setattr__(c, attr_name, [x for x in output_entities if type(x).__name__ == view.get_slot(attr_name).range or (attr_name == 'entries' and type(x).__name__ in view.class_descendants(view.get_slot(attr_name).range))
+             object.__setattr__(c, attr_name, [x for x in output_entities if type(x).__name__ == view.get_slot(attr_name).range or (attr_name == 'entries' and type(x).__name__ in view.class_descendants(view.get_slot(attr_name).range) ) or (attr_name == 'rules' and type(x).__name__ in view.class_descendants(view.get_slot(attr_name).range) )
                                                ])
     return c
 

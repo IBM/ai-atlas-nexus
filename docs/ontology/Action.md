@@ -157,7 +157,7 @@ URI: [nexus:Action](https://ibm.github.io/ai-atlas-nexus/ontology/Action)
 | [hasAiActorTask](hasAiActorTask.md)           | \* <br/> [String](String.md)                                                                                 | Pertinent AI Actor Tasks for each subcategory                                    | direct                                       |
 | [detectsRiskConcept](detectsRiskConcept.md)   | \* <br/> [RiskConcept](RiskConcept.md)                                                                       | The property airo:detectsRiskConcept indicates the control used for detecting... | [RiskControl](RiskControl.md)                |
 | [isDetectedBy](isDetectedBy.md)               | \* <br/> [RiskControl](RiskControl.md)                                                                       | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)                |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)                                                                               |                                                                                  | [Concept](Concept.md), [Control](Control.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                                                                               |                                                                                  | [Control](Control.md), [Concept](Concept.md) |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                                                                                  | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                          |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                                                                               | A text name of this instance                                                     | [Entity](Entity.md)                          |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)                                                                               | The description of an entity                                                     | [Entity](Entity.md)                          |
@@ -285,6 +285,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -293,6 +294,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   hasAiActorTask:
     name: hasAiActorTask
@@ -354,6 +356,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   id:
     name: id

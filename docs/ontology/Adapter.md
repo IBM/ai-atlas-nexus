@@ -392,18 +392,19 @@ URI: [nexus:Adapter](https://ibm.github.io/ai-atlas-nexus/ontology/Adapter)
 
 ## Usages
 
-| used by                         | used in                                         | type  | used                  |
-| ------------------------------- | ----------------------------------------------- | ----- | --------------------- |
-| [Container](Container.md)       | [adapters](adapters.md)                         | range | [Adapter](Adapter.md) |
-| [Entry](Entry.md)               | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
-| [Term](Term.md)                 | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
-| [Principle](Principle.md)       | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
-| [Risk](Risk.md)                 | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
-| [AiTask](AiTask.md)             | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
-| [Capability](Capability.md)     | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
-| [Adapter](Adapter.md)           | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [hasAdapter](hasAdapter.md)                     | range | [Adapter](Adapter.md) |
-| [LLMIntrinsic](LLMIntrinsic.md) | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| used by                           | used in                                         | type  | used                  |
+| --------------------------------- | ----------------------------------------------- | ----- | --------------------- |
+| [Container](Container.md)         | [adapters](adapters.md)                         | range | [Adapter](Adapter.md) |
+| [Entry](Entry.md)                 | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [Term](Term.md)                   | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [Principle](Principle.md)         | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [Certification](Certification.md) | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [Risk](Risk.md)                   | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [AiTask](AiTask.md)               | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [Capability](Capability.md)       | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [Adapter](Adapter.md)             | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)   | [hasAdapter](hasAdapter.md)                     | range | [Adapter](Adapter.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)   | [implementedByAdapter](implementedByAdapter.md) | range | [Adapter](Adapter.md) |
 
 ## Identifier and Mapping Information
 
@@ -742,6 +743,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -750,6 +752,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   requiredByTask:
     name: requiredByTask
@@ -798,6 +801,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   id:
     name: id

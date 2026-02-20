@@ -173,6 +173,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
 class_uri: dpv:Policy
 
@@ -204,6 +216,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   isDefinedByTaxonomy:
     name: isDefinedByTaxonomy
@@ -220,6 +244,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -228,6 +253,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   id:
     name: id

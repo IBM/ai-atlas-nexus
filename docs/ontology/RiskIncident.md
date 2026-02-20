@@ -373,6 +373,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -381,6 +382,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   hasStatus:
     name: hasStatus
@@ -669,6 +671,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
 class_uri: https://w3id.org/dpv/risk#Incident
 

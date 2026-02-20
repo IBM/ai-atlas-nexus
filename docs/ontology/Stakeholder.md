@@ -200,6 +200,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -208,6 +209,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   isPartOf:
     name: isPartOf

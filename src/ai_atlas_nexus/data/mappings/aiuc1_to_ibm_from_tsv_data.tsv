@@ -1,0 +1,361 @@
+#curie_map:
+#   aiuc1: https://www.aiuc1.com/framework/
+#   ibm-risk-atlas: https://www.ibm.com/docs/en/watsonx/saas?topic=
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aiuc1_to_ibm_from_tsv_data.tsv
+#mapping_set_description: Mapping from AIUC-1 Framework to IBM Risk Atlas
+#license: https://www.apache.org/licenses/LICENSE-2.0.html
+#mapping_date: '2026-02-12'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_id	comment
+aiuc1:aiuc1-req-a001	Establish input data policy	skos:relatedMatch	ibm-risk-atlas:atlas-data-acquisition	Data acquisition restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a001	Establish input data policy	skos:relatedMatch	ibm-risk-atlas:atlas-data-privacy-rights	Data privacy rights alignment	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a001	Establish input data policy	skos:relatedMatch	ibm-risk-atlas:atlas-data-usage	Data usage restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a001	Establish input data policy	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-data-transparency	Lack of data transparency	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a006	Prevent PII leakage	skos:relatedMatch	ibm-risk-atlas:atlas-personal-information-in-data	Personal information in data	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a002	Establish output data policy	skos:relatedMatch	ibm-risk-atlas:atlas-data-privacy-rights	Data privacy rights alignment	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a002	Establish output data policy	skos:relatedMatch	ibm-risk-atlas:atlas-generated-content-ownership	Generated content ownership and IP	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a003	Limit AI agent data collection	skos:relatedMatch	ibm-risk-atlas:atlas-data-acquisition	Data acquisition restrictions	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a006	Prevent PII leakage	skos:relatedMatch	ibm-risk-atlas:atlas-confidential-data-in-prompt	Confidential data in prompt	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a004	Protect IP and trade secrets	skos:relatedMatch	ibm-risk-atlas:atlas-confidential-data-in-prompt	Confidential data in prompt	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a007	Prevent IP violations	skos:relatedMatch	ibm-risk-atlas:atlas-ip-information-in-prompt	IP information in prompt	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a003	Limit AI agent data collection	skos:relatedMatch	ibm-risk-atlas:atlas-personal-information-in-prompt	Personal information in prompt	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a003	Limit AI agent data collection	skos:relatedMatch	ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a003	Limit AI agent data collection	skos:relatedMatch	ibm-risk-atlas:atlas-sharing-info-user-agentic	Sharing IP/PI/confidential information with user	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a004	Protect IP and trade secrets	skos:closeMatch	ibm-risk-atlas:atlas-confidential-data-in-prompt	Confidential data in prompt	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a004	Protect IP and trade secrets	skos:closeMatch	ibm-risk-atlas:atlas-confidential-information-in-data	Confidential information in data	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	skos:closeMatch	ibm-risk-atlas:atlas-revealing-confidential-information	Revealing confidential information	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a004	Protect IP and trade secrets	skos:relatedMatch	ibm-risk-atlas:atlas-ip-information-in-prompt	IP information in prompt	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a004	Protect IP and trade secrets	skos:relatedMatch	ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a004	Protect IP and trade secrets	skos:relatedMatch	ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	skos:relatedMatch	ibm-risk-atlas:atlas-confidential-information-in-data	Confidential information in data	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	skos:relatedMatch	ibm-risk-atlas:atlas-exposing-personal-information	Exposing personal information	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	skos:relatedMatch	ibm-risk-atlas:atlas-membership-inference-attack	Membership inference attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	skos:relatedMatch	ibm-risk-atlas:atlas-reidentification	Reidentification	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	skos:relatedMatch	ibm-risk-atlas:atlas-personal-information-in-data	Personal information in data	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a006	Prevent PII leakage	skos:closeMatch	ibm-risk-atlas:atlas-exposing-personal-information	Exposing personal information	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a006	Prevent PII leakage	skos:closeMatch	ibm-risk-atlas:atlas-personal-information-in-data	Personal information in data	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a006	Prevent PII leakage	skos:closeMatch	ibm-risk-atlas:atlas-personal-information-in-prompt	Personal information in prompt	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a007	Prevent IP violations	skos:closeMatch	ibm-risk-atlas:atlas-copyright-infringement	Copyright infringement	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a007	Prevent IP violations	skos:relatedMatch	ibm-risk-atlas:atlas-data-usage-rights	Data usage rights restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a007	Prevent IP violations	skos:relatedMatch	ibm-risk-atlas:atlas-model-usage-rights	Model usage rights restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a007	Prevent IP violations	skos:closeMatch	ibm-risk-atlas:atlas-generated-content-ownership	Generated content ownership and IP	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:closeMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:closeMatch	ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:closeMatch	ibm-risk-atlas:atlas-evasion-attack	Evasion attack	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:relatedMatch	ibm-risk-atlas:atlas-direct-instructions-attack	Direct instructions attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:relatedMatch	ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:closeMatch	ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:closeMatch	ibm-risk-atlas:atlas-evasion-attack	Evasion attack	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:relatedMatch	ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:relatedMatch	ibm-risk-atlas:atlas-context-overload-attack	Context overload attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:relatedMatch	ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b003	Manage public release of technical details	skos:relatedMatch	ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b003	Manage public release of technical details	skos:relatedMatch	ibm-risk-atlas:atlas-extraction-attack	Extraction attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b004	Prevent AI endpoint scraping	skos:closeMatch	ibm-risk-atlas:atlas-extraction-attack	Extraction attack	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b004	Prevent AI endpoint scraping	skos:relatedMatch	ibm-risk-atlas:atlas-membership-inference-attack	Membership inference attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b004	Prevent AI endpoint scraping	skos:relatedMatch	ibm-risk-atlas:atlas-attribute-inference-attack	Attribute inference attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b004	Prevent AI endpoint scraping	skos:relatedMatch	ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:closeMatch	ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b005	Implement real-time input filtering	skos:relatedMatch	ibm-risk-atlas:atlas-direct-instructions-attack	Direct instructions attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b005	Implement real-time input filtering	skos:relatedMatch	ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:relatedMatch	ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b006	Prevent unauthorized AI agent actions	skos:closeMatch	ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	semapv:SemanticSimilarityThresholdMatching	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b006	Prevent unauthorized AI agent actions	skos:closeMatch	ibm-risk-atlas:atlas-misaligned-actions-agentic	Misaligned actions	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b006	Prevent unauthorized AI agent actions	skos:relatedMatch	ibm-risk-atlas:atlas-exploit-trust-mismatch-agentic	Exploit trust mismatch	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	skos:relatedMatch	ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents’ external resources	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b007	Enforce user access privileges to AI systems	skos:relatedMatch	ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b007	Enforce user access privileges to AI systems	skos:relatedMatch	ibm-risk-atlas:atlas-exploit-trust-mismatch-agentic	Exploit trust mismatch	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b008	Protect model deployment environment	skos:relatedMatch	ibm-risk-atlas:atlas-data-poisoning	Data poisoning	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b008	Protect model deployment environment	skos:relatedMatch	ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b008	Protect model deployment environment	skos:relatedMatch	ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents’ external resources	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b009	Limit output over-exposure	skos:relatedMatch	ibm-risk-atlas:atlas-revealing-confidential-information	Revealing confidential information	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-a006	Prevent PII leakage	skos:relatedMatch	ibm-risk-atlas:atlas-exposing-personal-information	Exposing personal information	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b009	Limit output over-exposure	skos:relatedMatch	ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c001	Define AI risk taxonomy	skos:relatedMatch	ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c001	Define AI risk taxonomy	skos:relatedMatch	ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c001	Define AI risk taxonomy	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-testing-diversity	Lack of testing diversity	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e010	Define AI risk taxonomy	skos:relatedMatch	ibm-risk-atlas:atlas-incomplete-usage-definition	Incomplete usage definition	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c002	Conduct pre-deployment testing	skos:relatedMatch	ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c002	Conduct pre-deployment testing	skos:relatedMatch	ibm-risk-atlas:atlas-incomplete-ai-agent-evaluation-agentic	Incomplete AI agent evaluation	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c002	Conduct pre-deployment testing	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-testing-diversity	Lack of testing diversity	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c002	Conduct pre-deployment testing	skos:relatedMatch	ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c003	Prevent harmful outputs	skos:closeMatch	ibm-risk-atlas:atlas-harmful-output	Harmful output	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c003	Prevent harmful outputs	skos:closeMatch	ibm-risk-atlas:atlas-toxic-output	Toxic output	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c003	Prevent harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-decision-bias	Decision bias	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c003	Prevent harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-output-bias	Output bias	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c003	Prevent harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-spreading-disinformation	Spreading disinformation	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:relatedMatch	ibm-risk-atlas:atlas-dangerous-use	Dangerous use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f002	Prevent catastrophic misuse	skos:relatedMatch	ibm-risk-atlas:atlas-dangerous-use	Dangerous use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c004	Prevent out-of-scope outputs	skos:relatedMatch	ibm-risk-atlas:atlas-improper-usage	Improper usage	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e010	Define AI risk taxonomy	skos:relatedMatch	ibm-risk-atlas:atlas-incomplete-usage-definition	Incomplete usage definition	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	skos:relatedMatch	ibm-risk-atlas:atlas-incomplete-advice	Incomplete advice	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c005	Prevent customer-defined high risk outputs	skos:closeMatch	ibm-risk-atlas:atlas-harmful-output	Harmful output	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:closeMatch	ibm-risk-atlas:atlas-dangerous-use	Dangerous use	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f002	Prevent catastrophic misuse	skos:closeMatch	ibm-risk-atlas:atlas-dangerous-use	Dangerous use	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c005	Prevent customer-defined high risk outputs	skos:relatedMatch	ibm-risk-atlas:atlas-harmful-code-generation	Harmful code generation	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c006	Prevent output vulnerabilities	skos:closeMatch	ibm-risk-atlas:atlas-harmful-code-generation	Harmful code generation	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c007	Flag high risk outputs	skos:relatedMatch	ibm-risk-atlas:atlas-over-or-under-reliance	Over- or under-reliance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c007	Flag high risk outputs	skos:relatedMatch	ibm-risk-atlas:atlas-over-or-under-reliance-on-ai-agents-agentic	Over- or under-reliance on AI agents	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c008	Monitor AI risk categories	skos:relatedMatch	ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c009	Enable real-time feedback and intervention	skos:relatedMatch	ibm-risk-atlas:atlas-over-or-under-reliance	Over- or under-reliance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c009	Enable real-time feedback and intervention	skos:relatedMatch	ibm-risk-atlas:atlas-over-or-under-reliance-on-ai-agents-agentic	Over- or under-reliance on AI agents	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c009	Enable real-time feedback and intervention	skos:relatedMatch	ibm-risk-atlas:atlas-impact-human-agency-agentic	AI agents' impact on human agency	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c010	Third-party testing for harmful outputs	skos:closeMatch	ibm-risk-atlas:atlas-harmful-output	Harmful output	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c010	Third-party testing for harmful outputs	skos:closeMatch	ibm-risk-atlas:atlas-toxic-output	Toxic output	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c010	Third-party testing for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-decision-bias	Decision bias	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c010	Third-party testing for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-output-bias	Output bias	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c010	Third-party testing for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c011	Third-party testing for out-of-scope outputs	skos:relatedMatch	ibm-risk-atlas:atlas-improper-usage	Improper usage	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c011	Third-party testing for out-of-scope outputs	skos:relatedMatch	ibm-risk-atlas:atlas-incomplete-usage-definition	Incomplete usage definition	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c012	Third-party testing for customer-defined risk	skos:relatedMatch	ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c012	Third-party testing for customer-defined risk	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-testing-diversity	Lack of testing diversity	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c012	Third-party testing for customer-defined risk	skos:relatedMatch	ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	skos:closeMatch	ibm-risk-atlas:atlas-hallucination	Hallucination	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	skos:relatedMatch	ibm-risk-atlas:atlas-poor-model-accuracy	Poor model accuracy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	skos:relatedMatch	ibm-risk-atlas:atlas-unreliable-source-attribution	Unreliable source attribution	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	skos:relatedMatch	ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d004	Third-party testing of tool calls	skos:relatedMatch	ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d002	Third-party testing for hallucinations	skos:closeMatch	ibm-risk-atlas:atlas-hallucination	Hallucination	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d002	Third-party testing for hallucinations	skos:relatedMatch	ibm-risk-atlas:atlas-poor-model-accuracy	Poor model accuracy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	skos:closeMatch	ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	skos:closeMatch	ibm-risk-atlas:atlas-misaligned-actions-agentic	Misaligned actions	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	skos:relatedMatch	ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	skos:relatedMatch	ibm-risk-atlas:atlas-redundant-actions-agentic	Redundant actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d004	Third-party testing of tool calls	skos:closeMatch	ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d004	Third-party testing of tool calls	skos:relatedMatch	ibm-risk-atlas:atlas-incomplete-ai-agent-evaluation-agentic	Incomplete AI agent evaluation	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d004	Third-party testing of tool calls	skos:relatedMatch	ibm-risk-atlas:atlas-misaligned-actions-agentic	Misaligned actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e001	AI failure plan for security breaches	skos:relatedMatch	ibm-risk-atlas:atlas-mitigation-maintenance-agentic	Mitigation and maintenance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e001	AI failure plan for security breaches	skos:relatedMatch	ibm-risk-atlas:atlas-legal-accountability	Legal accountability	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e002	AI failure plan for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-harmful-output	Harmful output	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e002	AI failure plan for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-legal-accountability	Legal accountability	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e002	AI failure plan for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-mitigation-maintenance-agentic	Mitigation and maintenance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e003	AI failure plan for hallucinations	skos:closeMatch	ibm-risk-atlas:atlas-hallucination	Hallucination	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e003	AI failure plan for hallucinations	skos:relatedMatch	ibm-risk-atlas:atlas-legal-accountability	Legal accountability	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e003	AI failure plan for hallucinations	skos:relatedMatch	ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e004	Assign accountability	skos:closeMatch	ibm-risk-atlas:atlas-legal-accountability	Legal accountability	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e004	Assign accountability	skos:closeMatch	ibm-risk-atlas:atlas-accountability-agentic	Accountability of AI agent actions	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e017	Document system transparency policy	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-model-transparency	Lack of model transparency	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e017	Document system transparency policy	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-ai-agent-transparency-agentic	Lack of AI agent transparency	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e005	Assess cloud vs on-prem processing	skos:relatedMatch	ibm-risk-atlas:atlas-data-transfer	Data transfer restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e005	Assess cloud vs on-prem processing	skos:relatedMatch	ibm-risk-atlas:atlas-data-usage	Data usage restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e006	Conduct vendor due diligence	skos:relatedMatch	ibm-risk-atlas:atlas-ai-agent-compliance-agentic	AI agent compliance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e006	Conduct vendor due diligence	skos:relatedMatch	ibm-risk-atlas:atlas-data-usage-rights	Data usage rights restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e006	Conduct vendor due diligence	skos:relatedMatch	ibm-risk-atlas:atlas-model-usage-rights	Model usage rights restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e006	Conduct vendor due diligence	skos:relatedMatch	ibm-risk-atlas:atlas-data-provenance	Uncertain data provenance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e008	Review internal processes	skos:relatedMatch	ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e009	Monitor third-party access	skos:relatedMatch	ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e009	Monitor third-party access	skos:relatedMatch	ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents’ external resources	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e009	Monitor third-party access	skos:relatedMatch	ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e010	Define AI risk taxonomy	skos:relatedMatch	ibm-risk-atlas:atlas-improper-usage	Improper usage	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e010	Define AI risk taxonomy	skos:relatedMatch	ibm-risk-atlas:atlas-nonconsensual-use	Nonconsensual use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e011	Record processing locations	skos:relatedMatch	ibm-risk-atlas:atlas-data-transfer	Data transfer restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e011	Record processing locations	skos:relatedMatch	ibm-risk-atlas:atlas-data-acquisition	Data acquisition restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e012	Document regulatory compliance	skos:relatedMatch	ibm-risk-atlas:atlas-ai-agent-compliance-agentic	AI agent compliance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e012	Document regulatory compliance	skos:relatedMatch	ibm-risk-atlas:atlas-legal-accountability	Legal accountability	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e012	Document regulatory compliance	skos:relatedMatch	ibm-risk-atlas:atlas-data-usage	Data usage restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e012	Document regulatory compliance	skos:relatedMatch	ibm-risk-atlas:atlas-data-privacy-rights	Data privacy rights alignment	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e013	Implement quality management system	skos:relatedMatch	ibm-risk-atlas:atlas-mitigation-maintenance-agentic	Mitigation and maintenance	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e013	Implement quality management system	skos:relatedMatch	ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e015	Log model activity	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-ai-agent-transparency-agentic	Lack of AI agent transparency	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e015	Log model activity	skos:closeMatch	ibm-risk-atlas:atlas-unexplainable-untraceable-actions-agentic	Unexplainable and untraceable actions	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e015	Log model activity	skos:relatedMatch	ibm-risk-atlas:atlas-reproducibility-agentic	Reproducibility	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e015	Log model activity	skos:relatedMatch	ibm-risk-atlas:atlas-accountability-agentic	Accountability of AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e016	Implement AI disclosure mechanisms	skos:closeMatch	ibm-risk-atlas:atlas-non-disclosure	Non-disclosure	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e017	Document system transparency policy	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-system-transparency	Lack of system transparency	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:relatedMatch	ibm-risk-atlas:atlas-nonconsensual-use	Nonconsensual use	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e017	Document system transparency policy	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-model-transparency	Lack of model transparency	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e017	Document system transparency policy	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-system-transparency	Lack of system transparency	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e017	Document system transparency policy	skos:relatedMatch	ibm-risk-atlas:atlas-lack-of-data-transparency	Lack of data transparency	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e017	Document system transparency policy	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-ai-agent-transparency-agentic	Lack of AI agent transparency	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:closeMatch	ibm-risk-atlas:atlas-harmful-code-generation	Harmful code generation	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:relatedMatch	ibm-risk-atlas:atlas-spreading-disinformation	Spreading disinformation	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:relatedMatch	ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f002	Prevent catastrophic misuse	skos:relatedMatch	ibm-risk-atlas:atlas-harmful-output	Harmful output	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-acquisition	Data acquisition restrictions	skos:relatedMatch	aiuc1:aiuc1-req-a001	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-privacy-rights	Data privacy rights alignment	skos:relatedMatch	aiuc1:aiuc1-req-a001	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-usage	Data usage restrictions	skos:relatedMatch	aiuc1:aiuc1-req-a001	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-data-transparency	Lack of data transparency	skos:relatedMatch	aiuc1:aiuc1-req-a001	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-personal-information-in-data	Personal information in data	skos:relatedMatch	aiuc1:aiuc1-req-a006	Prevent PII leakage	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-privacy-rights	Data privacy rights alignment	skos:relatedMatch	aiuc1:aiuc1-req-a002	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-generated-content-ownership	Generated content ownership and IP	skos:relatedMatch	aiuc1:aiuc1-req-a002	Establish output data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-acquisition	Data acquisition restrictions	skos:relatedMatch	aiuc1:aiuc1-req-a003	Establish input data policy	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-confidential-data-in-prompt	Confidential data in prompt	skos:relatedMatch	aiuc1:aiuc1-req-a006	Prevent PII leakage	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-confidential-data-in-prompt	Confidential data in prompt	skos:relatedMatch	aiuc1:aiuc1-req-a004	Prevent PII leakage	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-ip-information-in-prompt	IP information in prompt	skos:relatedMatch	aiuc1:aiuc1-req-a007	Prevent IP violations	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-personal-information-in-prompt	Personal information in prompt	skos:relatedMatch	aiuc1:aiuc1-req-a003	Limit AI agent data collection	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	skos:relatedMatch	aiuc1:aiuc1-req-a003	Limit AI agent data collection	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-sharing-info-user-agentic	Sharing IP/PI/confidential information with user	skos:relatedMatch	aiuc1:aiuc1-req-a003	Limit AI agent data collection	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-confidential-data-in-prompt	Confidential data in prompt	skos:closeMatch	aiuc1:aiuc1-req-a004	Prevent PII leakage	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-confidential-information-in-data	Confidential information in data	skos:closeMatch	aiuc1:aiuc1-req-a004	Protect IP and trade secrets	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-revealing-confidential-information	Revealing confidential information	skos:closeMatch	aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-ip-information-in-prompt	IP information in prompt	skos:relatedMatch	aiuc1:aiuc1-req-a004	Prevent IP violations	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	skos:relatedMatch	aiuc1:aiuc1-req-a004	Protect IP and trade secrets	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	skos:relatedMatch	aiuc1:aiuc1-req-a004	Limit AI agent data collection	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-confidential-information-in-data	Confidential information in data	skos:relatedMatch	aiuc1:aiuc1-req-a005	Protect IP and trade secrets	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-exposing-personal-information	Exposing personal information	skos:relatedMatch	aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-membership-inference-attack	Membership inference attack	skos:relatedMatch	aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-reidentification	Reidentification	skos:relatedMatch	aiuc1:aiuc1-req-a005	Prevent cross-customer data exposure	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-personal-information-in-data	Personal information in data	skos:relatedMatch	aiuc1:aiuc1-req-a005	Prevent PII leakage	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-exposing-personal-information	Exposing personal information	skos:closeMatch	aiuc1:aiuc1-req-a006	Prevent cross-customer data exposure	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-personal-information-in-data	Personal information in data	skos:closeMatch	aiuc1:aiuc1-req-a006	Prevent PII leakage	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-personal-information-in-prompt	Personal information in prompt	skos:closeMatch	aiuc1:aiuc1-req-a006	Limit AI agent data collection	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-copyright-infringement	Copyright infringement	skos:closeMatch	aiuc1:aiuc1-req-a007	Prevent IP violations	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-usage-rights	Data usage rights restrictions	skos:relatedMatch	aiuc1:aiuc1-req-a007	Prevent IP violations	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-model-usage-rights	Model usage rights restrictions	skos:relatedMatch	aiuc1:aiuc1-req-a007	Prevent IP violations	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-generated-content-ownership	Generated content ownership and IP	skos:closeMatch	aiuc1:aiuc1-req-a007	Establish output data policy	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:closeMatch	aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	skos:closeMatch	aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-evasion-attack	Evasion attack	skos:closeMatch	aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-direct-instructions-attack	Direct instructions attack	skos:relatedMatch	aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	skos:relatedMatch	aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:closeMatch	aiuc1:aiuc1-req-b002	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-evasion-attack	Evasion attack	skos:closeMatch	aiuc1:aiuc1-req-b002	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	skos:relatedMatch	aiuc1:aiuc1-req-b002	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-context-overload-attack	Context overload attack	skos:relatedMatch	aiuc1:aiuc1-req-b002	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	skos:relatedMatch	aiuc1:aiuc1-req-b002	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	skos:relatedMatch	aiuc1:aiuc1-req-b003	Protect IP and trade secrets	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-extraction-attack	Extraction attack	skos:relatedMatch	aiuc1:aiuc1-req-b003	Manage public release of technical details	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-extraction-attack	Extraction attack	skos:closeMatch	aiuc1:aiuc1-req-b004	Manage public release of technical details	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-membership-inference-attack	Membership inference attack	skos:relatedMatch	aiuc1:aiuc1-req-b004	Prevent cross-customer data exposure	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-attribute-inference-attack	Attribute inference attack	skos:relatedMatch	aiuc1:aiuc1-req-b004	Prevent AI endpoint scraping	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	skos:relatedMatch	aiuc1:aiuc1-req-b004	Protect IP and trade secrets	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-jailbreaking	Jailbreaking	skos:closeMatch	aiuc1:aiuc1-req-b002	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-direct-instructions-attack	Direct instructions attack	skos:relatedMatch	aiuc1:aiuc1-req-b005	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	skos:relatedMatch	aiuc1:aiuc1-req-b005	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	skos:relatedMatch	aiuc1:aiuc1-req-b002	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	skos:closeMatch	aiuc1:aiuc1-req-b006	Prevent unauthorized AI agent actions	semapv:SemanticSimilarityThresholdMatching	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-misaligned-actions-agentic	Misaligned actions	skos:closeMatch	aiuc1:aiuc1-req-b006	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-exploit-trust-mismatch-agentic	Exploit trust mismatch	skos:relatedMatch	aiuc1:aiuc1-req-b006	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents’ external resources	skos:relatedMatch	aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	skos:relatedMatch	aiuc1:aiuc1-req-b007	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-exploit-trust-mismatch-agentic	Exploit trust mismatch	skos:relatedMatch	aiuc1:aiuc1-req-b007	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-poisoning	Data poisoning	skos:relatedMatch	aiuc1:aiuc1-req-b008	Protect model deployment environment	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	skos:relatedMatch	aiuc1:aiuc1-req-b008	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents’ external resources	skos:relatedMatch	aiuc1:aiuc1-req-b008	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-revealing-confidential-information	Revealing confidential information	skos:relatedMatch	aiuc1:aiuc1-req-b009	Prevent cross-customer data exposure	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-exposing-personal-information	Exposing personal information	skos:relatedMatch	aiuc1:aiuc1-req-a006	Prevent cross-customer data exposure	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-prompt-leaking	Prompt leaking	skos:relatedMatch	aiuc1:aiuc1-req-b009	Protect IP and trade secrets	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c001	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c001	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-testing-diversity	Lack of testing diversity	skos:relatedMatch	aiuc1:aiuc1-req-c001	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incomplete-usage-definition	Incomplete usage definition	skos:relatedMatch	aiuc1:aiuc1-req-e010	Define AI risk taxonomy	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c002	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incomplete-ai-agent-evaluation-agentic	Incomplete AI agent evaluation	skos:relatedMatch	aiuc1:aiuc1-req-c002	Conduct pre-deployment testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-testing-diversity	Lack of testing diversity	skos:relatedMatch	aiuc1:aiuc1-req-c002	Define AI risk taxonomy	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c002	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-output	Harmful output	skos:closeMatch	aiuc1:aiuc1-req-c003	Prevent harmful outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-toxic-output	Toxic output	skos:closeMatch	aiuc1:aiuc1-req-c003	Prevent harmful outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-decision-bias	Decision bias	skos:relatedMatch	aiuc1:aiuc1-req-c003	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-output-bias	Output bias	skos:relatedMatch	aiuc1:aiuc1-req-c003	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-spreading-disinformation	Spreading disinformation	skos:relatedMatch	aiuc1:aiuc1-req-c003	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-dangerous-use	Dangerous use	skos:relatedMatch	aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-dangerous-use	Dangerous use	skos:relatedMatch	aiuc1:aiuc1-req-f002	Prevent AI cyber misuse	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-improper-usage	Improper usage	skos:relatedMatch	aiuc1:aiuc1-req-c004	Prevent out-of-scope outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incomplete-usage-definition	Incomplete usage definition	skos:relatedMatch	aiuc1:aiuc1-req-e010	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incomplete-advice	Incomplete advice	skos:relatedMatch	aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-output	Harmful output	skos:closeMatch	aiuc1:aiuc1-req-c005	Prevent harmful outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-dangerous-use	Dangerous use	skos:closeMatch	aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-dangerous-use	Dangerous use	skos:closeMatch	aiuc1:aiuc1-req-f002	Prevent AI cyber misuse	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-code-generation	Harmful code generation	skos:relatedMatch	aiuc1:aiuc1-req-c005	Prevent customer-defined high risk outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-code-generation	Harmful code generation	skos:closeMatch	aiuc1:aiuc1-req-c006	Prevent customer-defined high risk outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-over-or-under-reliance	Over- or under-reliance	skos:relatedMatch	aiuc1:aiuc1-req-c007	Flag high risk outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-over-or-under-reliance-on-ai-agents-agentic	Over- or under-reliance on AI agents	skos:relatedMatch	aiuc1:aiuc1-req-c007	Flag high risk outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c008	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-over-or-under-reliance	Over- or under-reliance	skos:relatedMatch	aiuc1:aiuc1-req-c009	Flag high risk outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-over-or-under-reliance-on-ai-agents-agentic	Over- or under-reliance on AI agents	skos:relatedMatch	aiuc1:aiuc1-req-c009	Flag high risk outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-impact-human-agency-agentic	AI agents' impact on human agency	skos:relatedMatch	aiuc1:aiuc1-req-c009	Enable real-time feedback and intervention	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-output	Harmful output	skos:closeMatch	aiuc1:aiuc1-req-c010	Prevent harmful outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-toxic-output	Toxic output	skos:closeMatch	aiuc1:aiuc1-req-c010	Prevent harmful outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-decision-bias	Decision bias	skos:relatedMatch	aiuc1:aiuc1-req-c010	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-output-bias	Output bias	skos:relatedMatch	aiuc1:aiuc1-req-c010	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c010	Define AI risk taxonomy	semapv:SemanticSimilarityThresholdMatching	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-improper-usage	Improper usage	skos:relatedMatch	aiuc1:aiuc1-req-c011	Prevent out-of-scope outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incomplete-usage-definition	Incomplete usage definition	skos:relatedMatch	aiuc1:aiuc1-req-c011	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c012	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-testing-diversity	Lack of testing diversity	skos:relatedMatch	aiuc1:aiuc1-req-c012	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unrepresentative-risk-testing	Unrepresentative risk testing	skos:relatedMatch	aiuc1:aiuc1-req-c012	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-hallucination	Hallucination	skos:closeMatch	aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-poor-model-accuracy	Poor model accuracy	skos:relatedMatch	aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unreliable-source-attribution	Unreliable source attribution	skos:relatedMatch	aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	skos:relatedMatch	aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	skos:relatedMatch	aiuc1:aiuc1-req-d004	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-hallucination	Hallucination	skos:closeMatch	aiuc1:aiuc1-req-d002	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-poor-model-accuracy	Poor model accuracy	skos:relatedMatch	aiuc1:aiuc1-req-d002	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	skos:closeMatch	aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-misaligned-actions-agentic	Misaligned actions	skos:closeMatch	aiuc1:aiuc1-req-d003	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	skos:relatedMatch	aiuc1:aiuc1-req-d003	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-redundant-actions-agentic	Redundant actions	skos:relatedMatch	aiuc1:aiuc1-req-d003	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	skos:closeMatch	aiuc1:aiuc1-req-d004	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incomplete-ai-agent-evaluation-agentic	Incomplete AI agent evaluation	skos:relatedMatch	aiuc1:aiuc1-req-d004	Conduct pre-deployment testing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-misaligned-actions-agentic	Misaligned actions	skos:relatedMatch	aiuc1:aiuc1-req-d004	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-mitigation-maintenance-agentic	Mitigation and maintenance	skos:relatedMatch	aiuc1:aiuc1-req-e001	AI failure plan for security breaches	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-legal-accountability	Legal accountability	skos:relatedMatch	aiuc1:aiuc1-req-e001	AI failure plan for security breaches	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-output	Harmful output	skos:relatedMatch	aiuc1:aiuc1-req-e002	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-legal-accountability	Legal accountability	skos:relatedMatch	aiuc1:aiuc1-req-e002	AI failure plan for security breaches	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-mitigation-maintenance-agentic	Mitigation and maintenance	skos:relatedMatch	aiuc1:aiuc1-req-e002	AI failure plan for security breaches	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-hallucination	Hallucination	skos:closeMatch	aiuc1:aiuc1-req-e003	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-legal-accountability	Legal accountability	skos:relatedMatch	aiuc1:aiuc1-req-e003	AI failure plan for security breaches	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-function-calling-hallucination-agentic	Function calling hallucination	skos:relatedMatch	aiuc1:aiuc1-req-e003	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-legal-accountability	Legal accountability	skos:closeMatch	aiuc1:aiuc1-req-e004	AI failure plan for security breaches	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-accountability-agentic	Accountability of AI agent actions	skos:closeMatch	aiuc1:aiuc1-req-e004	Assign accountability	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-model-transparency	Lack of model transparency	skos:relatedMatch	aiuc1:aiuc1-req-e017	Document system transparency policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-ai-agent-transparency-agentic	Lack of AI agent transparency	skos:relatedMatch	aiuc1:aiuc1-req-e017	Document system transparency policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-transfer	Data transfer restrictions	skos:relatedMatch	aiuc1:aiuc1-req-e005	Assess cloud vs on-prem processing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-usage	Data usage restrictions	skos:relatedMatch	aiuc1:aiuc1-req-e005	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-ai-agent-compliance-agentic	AI agent compliance	skos:relatedMatch	aiuc1:aiuc1-req-e006	Conduct vendor due diligence	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-usage-rights	Data usage rights restrictions	skos:relatedMatch	aiuc1:aiuc1-req-e006	Prevent IP violations	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-model-usage-rights	Model usage rights restrictions	skos:relatedMatch	aiuc1:aiuc1-req-e006	Prevent IP violations	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-provenance	Uncertain data provenance	skos:relatedMatch	aiuc1:aiuc1-req-e006	Conduct vendor due diligence	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	skos:relatedMatch	aiuc1:aiuc1-req-e008	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	skos:relatedMatch	aiuc1:aiuc1-req-e009	Prevent unauthorized AI agent actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents’ external resources	skos:relatedMatch	aiuc1:aiuc1-req-e009	Restrict unsafe tool calls	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	skos:relatedMatch	aiuc1:aiuc1-req-e009	Limit AI agent data collection	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-improper-usage	Improper usage	skos:relatedMatch	aiuc1:aiuc1-req-e010	Prevent out-of-scope outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-nonconsensual-use	Nonconsensual use	skos:relatedMatch	aiuc1:aiuc1-req-e010	Establish AI acceptable use policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-transfer	Data transfer restrictions	skos:relatedMatch	aiuc1:aiuc1-req-e011	Assess cloud vs on-prem processing	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-acquisition	Data acquisition restrictions	skos:relatedMatch	aiuc1:aiuc1-req-e011	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-ai-agent-compliance-agentic	AI agent compliance	skos:relatedMatch	aiuc1:aiuc1-req-e012	Conduct vendor due diligence	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-legal-accountability	Legal accountability	skos:relatedMatch	aiuc1:aiuc1-req-e012	AI failure plan for security breaches	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-usage	Data usage restrictions	skos:relatedMatch	aiuc1:aiuc1-req-e012	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-data-privacy-rights	Data privacy rights alignment	skos:relatedMatch	aiuc1:aiuc1-req-e012	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-mitigation-maintenance-agentic	Mitigation and maintenance	skos:relatedMatch	aiuc1:aiuc1-req-e013	AI failure plan for security breaches	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	skos:relatedMatch	aiuc1:aiuc1-req-e013	Define AI risk taxonomy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-ai-agent-transparency-agentic	Lack of AI agent transparency	skos:closeMatch	aiuc1:aiuc1-req-e015	Document system transparency policy	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unexplainable-untraceable-actions-agentic	Unexplainable and untraceable actions	skos:closeMatch	aiuc1:aiuc1-req-e015	Log model activity	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-reproducibility-agentic	Reproducibility	skos:relatedMatch	aiuc1:aiuc1-req-e015	Log model activity	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-accountability-agentic	Accountability of AI agent actions	skos:relatedMatch	aiuc1:aiuc1-req-e015	Assign accountability	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-non-disclosure	Non-disclosure	skos:closeMatch	aiuc1:aiuc1-req-e016	Implement AI disclosure mechanisms	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-system-transparency	Lack of system transparency	skos:relatedMatch	aiuc1:aiuc1-req-e017	Document system transparency policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-nonconsensual-use	Nonconsensual use	skos:relatedMatch	aiuc1:aiuc1-req-f001	Establish AI acceptable use policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-model-transparency	Lack of model transparency	skos:closeMatch	aiuc1:aiuc1-req-e017	Document system transparency policy	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-system-transparency	Lack of system transparency	skos:closeMatch	aiuc1:aiuc1-req-e017	Document system transparency policy	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-data-transparency	Lack of data transparency	skos:relatedMatch	aiuc1:aiuc1-req-e017	Establish input data policy	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-lack-of-ai-agent-transparency-agentic	Lack of AI agent transparency	skos:closeMatch	aiuc1:aiuc1-req-e017	Document system transparency policy	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-code-generation	Harmful code generation	skos:closeMatch	aiuc1:aiuc1-req-f001	Prevent customer-defined high risk outputs	semapv:ManualMappingCuration	0.9	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-spreading-disinformation	Spreading disinformation	skos:relatedMatch	aiuc1:aiuc1-req-f001	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	skos:relatedMatch	aiuc1:aiuc1-req-f001	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-harmful-output	Harmful output	skos:relatedMatch	aiuc1:aiuc1-req-f002	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-discriminatory-actions-agentic	Discriminatory actions	skos:relatedMatch	aiuc1:aiuc1-req-c010 C010	Third-party testing for harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c010 C010	Third-party testing for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-discriminatory-actions-agentic	 Discriminatory actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-human-exploitation	Human exploitation	skos:relatedMatch	aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:relatedMatch	ibm-risk-atlas:atlas-human-exploitation	Human exploitation	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-unexplainable-output	Unexplainable output	skos:relatedMatch	aiuc1:aiuc1-req-e015	Log model activity	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-e015	Log model activity	skos:relatedMatch	ibm-risk-atlas:atlas-unexplainable-output	Unexplainable output	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-encoded-interactions-attack	Encoded interactions attack	skos:relatedMatch	aiuc1:aiuc1-req-b002	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:closeMatch	ibm-risk-atlas:atlas-encoded-interactions-attack	Encoded interactions attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-encoded-interactions-attack	Encoded interactions attack	skos:relatedMatch	aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:closeMatch	ibm-risk-atlas:atlas-encoded-interactions-attack	Encoded interactions attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+
+ibm-risk-atlas:atlas-data-bias	Data bias	skos:relatedMatch	aiuc1:aiuc1-req-c003	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c003	Prevent harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-data-bias	Data bias	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-untraceable-attribution	Untraceable attribution	skos:relatedMatch	aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-d001	Prevent hallucinated outputs	skos:relatedMatch	ibm-risk-atlas:atlas-untraceable-attribution	Untraceable attribution	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-introduce-data-bias-agentic	Introduce data bias	skos:relatedMatch	aiuc1:aiuc1-req-c003	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c003	Prevent harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-introduce-data-bias-agentic	Introduce data bias	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-specialized-tokens-attack	Specialized tokens attack	skos:relatedMatch	aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:closeMatch	ibm-risk-atlas:atlas-specialized-tokens-attack	Specialized tokens attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-specialized-tokens-attack	Specialized tokens attack	skos:relatedMatch	aiuc1:aiuc1-req-b002	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:closeMatch	ibm-risk-atlas:atlas-specialized-tokens-attack	Specialized tokens attack	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-prompt-priming	Prompt priming	skos:relatedMatch	aiuc1:aiuc1-req-b002	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-b002	Detect adversarial input	skos:relatedMatch	ibm-risk-atlas:atlas-prompt-priming	Prompt priming	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com

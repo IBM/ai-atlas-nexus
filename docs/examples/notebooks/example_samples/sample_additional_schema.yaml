@@ -1,7 +1,6 @@
 id: https://ibm.github.io/ai-atlas-nexus/ontology/sample_additional_schema
 name: sample_additional_schema
-description:
-  A sample_additional_schema for an example notebook
+description: A sample_additional_schema for an example notebook
 default_curi_maps:
   - semweb_context
 imports:
@@ -17,10 +16,8 @@ default_range: string
 default_prefix: nexus
 
 classes:
-
   SampleItem:
-    description:
-      A sample_additional_schema item
+    description: A sample_additional_schema item
     abstract: true
     class_uri: schema:Thing
     slots:

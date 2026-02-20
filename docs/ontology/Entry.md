@@ -18,6 +18,8 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
         click Term href "../Term/"
       Entry <|-- Principle
         click Principle href "../Principle/"
+      Entry <|-- Certification
+        click Certification href "../Certification/"
       Entry <|-- Risk
         click Risk href "../Risk/"
       Entry <|-- AiTask
@@ -176,6 +178,7 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
   - **Entry**
     - [Term](Term.md)
     - [Principle](Principle.md)
+    - [Certification](Certification.md)
     - [Risk](Risk.md) [ [RiskConcept](RiskConcept.md)]
     - [AiTask](AiTask.md)
     - [Capability](Capability.md) [ [CapabilityConcept](CapabilityConcept.md)]
@@ -259,6 +262,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
 class_uri: nexus:Entry
 
@@ -289,6 +304,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   isDefinedByTaxonomy:
     name: isDefinedByTaxonomy
@@ -305,6 +332,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -313,6 +341,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
     name: isDefinedByVocabulary

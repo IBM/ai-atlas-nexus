@@ -230,6 +230,8 @@ attributes:
     owner: LLMQuestionPolicy
     domain_of:
     - LLMQuestionPolicy
+    - Rule
+    - Requirement
     range: Rule
     multivalued: true
     inlined: false
@@ -287,6 +289,7 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
     - RiskGroup
     - Risk
     - RiskControl
@@ -295,6 +298,7 @@ attributes:
     - CapabilityGroup
     - StakeholderGroup
     - Stakeholder
+    - Requirement
     range: Taxonomy
   type:
     name: type
@@ -310,6 +314,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   id:
     name: id

@@ -377,7 +377,11 @@ class AIAtlasNexus:
         risk.narrow_mappings or [],
         risk.related_mappings or []]
         related_risk_ids = [x for x_list in options for x in x_list]
-        related_risk_instances = [cls.get_risk(id=x) for x in related_risk_ids]
+        related_risk_instances = [
+            risk_instance
+            for risk_instance in [cls.get_risk(id=x) for x in related_risk_ids]
+            if risk_instance is not None
+        ]
         return related_risk_instances
 
     def get_related_actions(

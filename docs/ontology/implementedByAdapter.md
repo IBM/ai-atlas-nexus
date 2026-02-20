@@ -11,16 +11,17 @@ Alias: implementedByAdapter
 
 ## Applicable Classes
 
-| Name                            | Description                                                                      | Modifies Slot |
-| ------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Capability](Capability.md)     | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
-| [Term](Term.md)                 | A term and its definitions                                                       | no            |
-| [Principle](Principle.md)       | A representation of values or norms that must be taken into consideration whe... | no            |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [AiTask](AiTask.md)             | A task, such as summarization and classification, performed by an AI             | no            |
-| [Risk](Risk.md)                 | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [Entry](Entry.md)               | An entry and its definitions                                                     | no            |
-| [Adapter](Adapter.md)           | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| Name                              | Description                                                                      | Modifies Slot |
+| --------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Principle](Principle.md)         | A representation of values or norms that must be taken into consideration whe... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [Certification](Certification.md) | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [Entry](Entry.md)                 | An entry and its definitions                                                     | no            |
+| [AiTask](AiTask.md)               | A task, such as summarization and classification, performed by an AI             | no            |
+| [Term](Term.md)                   | A term and its definitions                                                       | no            |
+| [Risk](Risk.md)                   | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Adapter](Adapter.md)             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [Capability](Capability.md)       | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
 
 ## Properties
 
