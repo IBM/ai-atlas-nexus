@@ -35,6 +35,7 @@ classes:
       - related_mappings
       - narrow_mappings
       - broad_mappings
+      - isCategorizedAs
 
   Organization:
     is_a: Entity
@@ -46,7 +47,9 @@ classes:
   License:
     is_a: Entity
     class_uri: airo:License
-    description: The general notion of a license which defines terms and grants permissions to users of AI systems, datasets and software.
+    description:
+      The general notion of a license which defines terms and grants permissions to users of AI systems, datasets and
+      software.
     slots:
       - version
 
@@ -145,6 +148,12 @@ classes:
         range: string
         designates_type: true
         ifabsent: string(Group)
+      narrower:
+        multivalued: true
+        slot_uri: skos:narrower
+      broader:
+        multivalued: true
+        slot_uri: skos:narrower
     slots:
       - isDefinedByTaxonomy
       - hasDocumentation
@@ -277,7 +286,8 @@ slots:
     identifier: true
     required: true
     slot_uri: schema:identifier
-    description: A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
+    description: >-
+      A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
   isDefinedByVocabulary:
     slot_uri: schema:isPartOf
     description: A relationship where a term or a term group is defined by a vocabulary
@@ -338,7 +348,9 @@ slots:
     description: Some numeric or string value
     required: true
   evidence:
-    description: Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.
+    description: >-
+      Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it
+      was generated.
   isPartOf:
     slot_uri: schema:isPartOf
     description: A relationship where an entity is part of another entity
@@ -368,10 +380,9 @@ slots:
     inlined: false
     inverse: requiredByTask
   implementedByAdapter:
-    description: >
-      Indicates that this capability is implemented by a specific adapter.
-      This relationship distinguishes the abstract capability (what can be done) from
-      the technical implementation mechanism (how it is added/extended via adapters).
+    description: >-
+      Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
+      capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
     domain: Any
     range: Adapter
     multivalued: true
@@ -442,25 +453,33 @@ slots:
     range: Taxonomy
   close_mappings:
     slot_uri: skos:closeMatch
-    description: The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.
+    description:
+      The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in
+      some information retrieval applications.
     range: Any
     multivalued: true
     inlined: false
   exact_mappings:
     slot_uri: skos:exactMatch
-    description: The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications
+    description: >-
+      The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used
+      interchangeably across a wide range of information retrieval applications
     range: Any
     multivalued: true
     inlined: false
   broad_mappings:
     slot_uri: skos:broadMatch
-    description: The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.
+    description: >-
+      The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked
+      to, is a broader concept than the originating concept.
     range: Any
     multivalued: true
     inlined: false
   narrow_mappings:
     slot_uri: skos:narrowMatch
-    description: The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.
+    description: >-
+      The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked
+      to, is a narrower concept than the originating concept.
     range: Any
     multivalued: true
     inlined: false
@@ -477,3 +496,10 @@ slots:
     multivalued: false
     inlined: false
     slot_uri: schema:isPartOf
+  isCategorizedAs:
+    description: >-
+      A relationship where an entity has been deemed to be categorized
+    range: Any
+    multivalued: true
+    inlined: false
+    slot_uri: nexus:isCategorizedAs
