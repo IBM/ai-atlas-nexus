@@ -21,38 +21,26 @@ def combine_entities(total_instances, entities):
     for entity in entities:
         entity_id = entity["id"]
 
-        if entity_id not in [d['id'] for d in total_instances]:
-            total_instances.append(entity)
+        if entity_id not in total_instances:
+            total_instances[entity_id] = entity
             instances_for_class.append(entity)
         else:
-            combined_entity = [d for d in total_instances if d['id'] == entity_id][0]
+            combined_entity = total_instances[entity_id]
             for key, value in entity.items():
                 if key == "id":
-                    pass
-                elif key == "type":
-                    if key not in combined_entity:
-                        combined_entity[key] = value
+                    continue
+                elif key not in combined_entity:
+                    combined_entity[key] = value
+                elif isinstance(combined_entity[key], list) and combined_entity[key]:
+                    seen = set(combined_entity[key])
+                    for item in value:
+                          if item not in seen:
+                              combined_entity[key].append(item)
+                              seen.add(item)
                 else:
-                    if key not in combined_entity:
-                        combined_entity[key] = value
-                    else:
-                        if combined_entity[key] is not None:
-                            if type(combined_entity[key]) != list:
-                                pass
-                            else:
-                                combined_entity[key] = list(set([
-                                    *combined_entity[key],
-                                    *value,
-                                ]))
-                        else:
-                            combined_entity[key] = value
+                    combined_entity[key] = value
 
-            total_instances = [combined_entity if d['id'] == entity_id else d for d in total_instances]
-
-            if entity_id not in [d['id'] for d in instances_for_class]:
-                instances_for_class = [combined_entity if d['id'] == entity_id else d for d in instances_for_class]
-            else:
-                instances_for_class.append(combined_entity)
+            instances_for_class.append(combined_entity)
 
     return total_instances, instances_for_class
 
@@ -80,7 +68,7 @@ def load_yamls_to_container(base_dir):
             )
 
     yml_items_result = {}
-    total_instances = []
+    total_instances = {}
     for yaml_file in master_yaml_files:
         try:
             yml_items = yaml_loader.load_as_dict(source=yaml_file)
