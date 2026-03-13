@@ -8,6 +8,8 @@ URI: [nexus:AiModel](https://ibm.github.io/ai-atlas-nexus/ontology/AiModel)
  classDiagram
     class AiModel
     click AiModel href "../AiModel/"
+      AIComponent <|-- AiModel
+        click AIComponent href "../AIComponent/"
       BaseAi <|-- AiModel
         click BaseAi href "../BaseAi/"
 
@@ -177,7 +179,7 @@ URI: [nexus:AiModel](https://ibm.github.io/ai-atlas-nexus/ontology/AiModel)
 
 - [Entity](Entity.md)
   - [BaseAi](BaseAi.md)
-    - **AiModel**
+    - **AiModel** [ [AIComponent](AIComponent.md)]
       - [LargeLanguageModel](LargeLanguageModel.md)
 
 ## Slots
@@ -195,7 +197,7 @@ URI: [nexus:AiModel](https://ibm.github.io/ai-atlas-nexus/ontology/AiModel)
 | [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md) |
 | [hasLicense](hasLicense.md)                   | 0..1 <br/> [License](License.md)           | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md) |
 | [performsTask](performsTask.md)               | \* <br/> [AiTask](AiTask.md)               | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md) |
-| [isProvidedBy](isProvidedBy.md)               | 0..1 <br/> [AiProvider](AiProvider.md)     | A relationship indicating the AI model has been provided by an AI model provi... | [BaseAi](BaseAi.md) |
+| [isProvidedBy](isProvidedBy.md)               | 0..1 <br/> [AiProvider](AiProvider.md)     | Indicates provider of an AI system or component                                  | [BaseAi](BaseAi.md) |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
@@ -240,6 +242,8 @@ description: A base AI Model class. No assumption about the type (SVM, LLM, etc.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: BaseAi
 mixin: true
+mixins:
+- AIComponent
 slots:
 - hasEvaluation
 - architecture
@@ -261,6 +265,8 @@ description: A base AI Model class. No assumption about the type (SVM, LLM, etc.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: BaseAi
 mixin: true
+mixins:
+- AIComponent
 attributes:
   hasEvaluation:
     name: hasEvaluation
@@ -418,8 +424,7 @@ attributes:
     inlined: false
   isProvidedBy:
     name: isProvidedBy
-    description: A relationship indicating the AI model has been provided by an AI
-      model provider.
+    description: Indicates provider of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isProvidedBy

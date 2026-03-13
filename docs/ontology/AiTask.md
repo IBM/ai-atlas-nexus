@@ -168,7 +168,7 @@ URI: [airo:AiCapability](https://w3id.org/airo#AiCapability)
 | [isPartOf](isPartOf.md)                           | 0..1 <br/> [String](String.md)             | A relationship where an entity is part of another entity                         | [Entry](Entry.md)   |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)               | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)   |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)             | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)   |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)             |                                                                                  | [Entry](Entry.md)   |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)             | The entry type                                                                   | [Entry](Entry.md)   |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
@@ -193,7 +193,9 @@ URI: [airo:AiCapability](https://w3id.org/airo#AiCapability)
 | [Risk](Risk.md)                                                   | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
 | [BaseAi](BaseAi.md)                                               | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
 | [AiSystem](AiSystem.md)                                           | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [AiSystem](AiSystem.md)                                           | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
 | [AiAgent](AiAgent.md)                                             | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
+| [AiAgent](AiAgent.md)                                             | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
 | [AiModel](AiModel.md)                                             | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
 | [LargeLanguageModel](LargeLanguageModel.md)                       | [performsTask](performsTask.md)               | range | [AiTask](AiTask.md) |
 | [AiTask](AiTask.md)                                               | [requiredByTask](requiredByTask.md)           | range | [AiTask](AiTask.md) |
@@ -287,9 +289,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
@@ -346,8 +348,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: string
   requiredByTask:
     name: requiredByTask
@@ -384,6 +386,7 @@ attributes:
     inlined: false
   type:
     name: type
+    description: The entry type.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
     designates_type: true
     alias: type

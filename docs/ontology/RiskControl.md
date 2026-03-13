@@ -148,7 +148,7 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 | [detectsRiskConcept](detectsRiskConcept.md)   | \* <br/> [RiskConcept](RiskConcept.md)     | The property airo:detectsRiskConcept indicates the control used for detecting... | direct                                       |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | direct                                       |
 | [isDetectedBy](isDetectedBy.md)               | \* <br/> [RiskControl](RiskControl.md)     | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)                |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Control](Control.md), [Concept](Concept.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Concept](Concept.md), [Control](Control.md) |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                          |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md)                          |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md)                          |
@@ -272,9 +272,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isDetectedBy:

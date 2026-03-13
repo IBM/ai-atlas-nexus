@@ -300,9 +300,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
@@ -359,8 +359,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: string
   requiredByTask:
     name: requiredByTask

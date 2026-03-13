@@ -188,6 +188,8 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [RiskIncident](RiskIncident.md)                   | [hasImpact](hasImpact.md)                   | domain        | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md)                   | [isDetectedBy](isDetectedBy.md)             | domain        | [RiskConcept](RiskConcept.md) |
 | [Impact](Impact.md)                               | [isDetectedBy](isDetectedBy.md)             | domain        | [RiskConcept](RiskConcept.md) |
+| [AiSystem](AiSystem.md)                           | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [AiAgent](AiAgent.md)                             | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
@@ -277,9 +279,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   hasDocumentation:

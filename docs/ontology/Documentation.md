@@ -146,6 +146,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [LargeLanguageModel](LargeLanguageModel.md)             | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiTask](AiTask.md)                                     | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [StakeholderGroup](StakeholderGroup.md)                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [CapabilityTaxonomy](CapabilityTaxonomy.md)             | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [CapabilityConcept](CapabilityConcept.md)               | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [CapabilityDomain](CapabilityDomain.md)                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
@@ -157,7 +158,6 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [Questionnaire](Questionnaire.md)                       | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Adapter](Adapter.md)                                   | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [LLMIntrinsic](LLMIntrinsic.md)                         | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
-| [StakeholderGroup](StakeholderGroup.md)                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 
 ## Identifier and Mapping Information
 

@@ -226,11 +226,11 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | [concern](concern.md)                             | 0..1 <br/> [String](String.md)             | Some explanation about the concern related to an AI risk                         | direct                                   |
 | [isDetectedBy](isDetectedBy.md)                   | \* <br/> [RiskControl](RiskControl.md)     | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)            |
 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)     | A relationship where a term or a term group is defined by a vocabulary           | [Entry](Entry.md)                        |
-| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Entry](Entry.md), [Concept](Concept.md) |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Entry](Entry.md) |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)               | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)                        |
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)       | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)                        |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)             | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)                        |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)             |                                                                                  | [Entry](Entry.md), [Concept](Concept.md) |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)             | The entry type                                                                   | [Concept](Concept.md), [Entry](Entry.md) |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md)                      |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md)                      |
@@ -252,6 +252,8 @@ URI: [airo:Risk](https://w3id.org/airo#Risk)
 | [RiskGroup](RiskGroup.md)                         | [hasPart](hasPart.md)               | range | [Risk](Risk.md) |
 | [Action](Action.md)                               | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [RiskIncident](RiskIncident.md)                   | [refersToRisk](refersToRisk.md)     | range | [Risk](Risk.md) |
+| [AiSystem](AiSystem.md)                           | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
+| [AiAgent](AiAgent.md)                             | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
 | [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md) | range | [Risk](Risk.md) |
@@ -444,9 +446,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isPartOf:
@@ -461,8 +463,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: RiskGroup
   detectsRiskConcept:
     name: detectsRiskConcept
@@ -591,6 +593,7 @@ attributes:
     inlined: false
   type:
     name: type
+    description: The entry type.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
     designates_type: true
     alias: type

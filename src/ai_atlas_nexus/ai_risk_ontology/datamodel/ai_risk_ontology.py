@@ -791,7 +791,7 @@ class Entry(Entity):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["Entry"] = Field(default="Entry", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["Entry"] = Field(default="Entry", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -891,7 +891,7 @@ class Term(Entry):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["Term"] = Field(default="Term", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["Term"] = Field(default="Term", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -980,7 +980,7 @@ class Principle(Entry):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["Principle"] = Field(default="Principle", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["Principle"] = Field(default="Principle", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -1828,7 +1828,7 @@ class Risk(RiskConcept, Entry):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["Risk"] = Field(default="Risk", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["Risk"] = Field(default="Risk", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -2518,7 +2518,7 @@ class AiSystem(BaseAi, Entry):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["AiSystem"] = Field(default="AiSystem", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["AiSystem"] = Field(default="AiSystem", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -2661,7 +2661,7 @@ class AiAgent(AiSystem):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["AiAgent"] = Field(default="AiAgent", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["AiAgent"] = Field(default="AiAgent", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -2786,7 +2786,7 @@ class AiTask(Entry):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["AiTask"] = Field(default="AiTask", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["AiTask"] = Field(default="AiTask", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -3905,7 +3905,7 @@ class Capability(CapabilityConcept, Entry):
     requiresCapability: Optional[list[str]] = Field(default=[], description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    type: Literal["Capability"] = Field(default="Capability", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["Capability"] = Field(default="Capability", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -4336,7 +4336,7 @@ class Adapter(LargeLanguageModel, Entry):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["Adapter"] = Field(default="Adapter", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["Adapter"] = Field(default="Adapter", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',
@@ -4453,7 +4453,7 @@ class LLMIntrinsic(Entry):
 """, json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'Capability'],
          'inverse': 'implementsCapability'} })
-    type: Literal["LLMIntrinsic"] = Field(default="LLMIntrinsic", json_schema_extra = { "linkml_meta": {'designates_type': True,
+    type: Literal["LLMIntrinsic"] = Field(default="LLMIntrinsic", description="""The entry type""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
                        'Concept',

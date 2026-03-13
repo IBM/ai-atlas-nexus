@@ -1,15 +1,22 @@
 # Slot: isDeployedBy
 
-_A relationship indicating that an entity has been deployed by an organization._
+_Indicates the deployer of an AI system or component._
 
-URI: [nexus:isDeployedBy](https://ibm.github.io/ai-atlas-nexus/ontology/isDeployedBy)
+URI: [airo:isDeployedBy](https://w3id.org/airo#isDeployedBy)
 Alias: isDeployedBy
 
 <!-- no inheritance hierarchy -->
 
+## Applicable Classes
+
+| Name                    | Description                                                                      | Modifies Slot |
+| ----------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities                      | no            |
+
 ## Properties
 
-- Range: [Organization](Organization.md)
+- Range: [AIDeployer](AIDeployer.md)
 
 ## Identifier and Mapping Information
 
@@ -21,7 +28,7 @@ Alias: isDeployedBy
 
 | Mapping Type | Mapped Value       |
 | ------------ | ------------------ |
-| self         | nexus:isDeployedBy |
+| self         | airo:isDeployedBy  |
 | native       | nexus:isDeployedBy |
 
 ## LinkML Source
@@ -29,12 +36,15 @@ Alias: isDeployedBy
 <details>
 ```yaml
 name: isDeployedBy
-description: A relationship indicating that an entity has been deployed by an organization.
+description: Indicates the deployer of an AI system or component.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
+domain: '[''AISystem'', ''AIComponent'']'
+slot_uri: airo:isDeployedBy
 alias: isDeployedBy
-range: Organization
-inlined_as_list: true
+domain_of:
+- AiSystem
+range: AIDeployer
 
 ```
 </details>

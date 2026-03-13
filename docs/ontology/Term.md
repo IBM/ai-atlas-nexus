@@ -204,7 +204,7 @@ URI: [nexus:Term](https://ibm.github.io/ai-atlas-nexus/ontology/Term)
 | [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)                                                                                 | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)   |
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)                                                                         | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)   |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)                                                                               | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)   |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                                                               |                                                                                  | [Entry](Entry.md)   |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                                                               | The entry type                                                                   | [Entry](Entry.md)   |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                                                                                  | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)                                                                               | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)                                                                               | The description of an entity                                                     | [Entity](Entity.md) |
@@ -226,6 +226,8 @@ URI: [nexus:Term](https://ibm.github.io/ai-atlas-nexus/ontology/Term)
 | [Term](Term.md)                                   | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [LLMQuestionPolicy](LLMQuestionPolicy.md)         | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [Action](Action.md)                               | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [AiSystem](AiSystem.md)                           | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [AiAgent](AiAgent.md)                             | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
@@ -359,6 +361,7 @@ attributes:
     - Term
     - LLMQuestionPolicy
     - Action
+    - AiSystem
     - AiEval
     - BenchmarkMetadataCard
     - Adapter
@@ -390,9 +393,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isPartOf:
@@ -407,8 +410,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: string
   requiredByTask:
     name: requiredByTask
@@ -462,6 +465,7 @@ attributes:
     inlined: false
   type:
     name: type
+    description: The entry type.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
     designates_type: true
     alias: type

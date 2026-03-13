@@ -31,6 +31,7 @@ def combine_entities(total_instances, entities):
                     continue
                 elif key not in combined_entity:
                     combined_entity[key] = value
+
                 elif isinstance(combined_entity[key], list) and combined_entity[key]:
                     seen = set(combined_entity[key])
                     for item in value:
@@ -40,7 +41,7 @@ def combine_entities(total_instances, entities):
                 else:
                     combined_entity[key] = value
 
-            instances_for_class.append(combined_entity)
+            total_instances[entity_id] = combined_entity
 
     return total_instances, instances_for_class
 
