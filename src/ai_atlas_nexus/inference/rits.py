@@ -5,15 +5,15 @@ import httpx
 from dotenv import load_dotenv
 from openai import BadRequestError, NotFoundError
 
-from ai_atlas_nexus.blocks.inference.base import InferenceEngine
-from ai_atlas_nexus.blocks.inference.params import (
+from ai_atlas_nexus.exceptions import RiskInferenceError
+from ai_atlas_nexus.inference.base import InferenceEngine
+from ai_atlas_nexus.inference.params import (
     InferenceEngineCredentials,
     OpenAIChatCompletionMessageParam,
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
 )
-from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
-from ai_atlas_nexus.exceptions import RiskInferenceError
+from ai_atlas_nexus.inference.postprocessing import postprocess
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 
@@ -48,16 +48,16 @@ class RITSInferenceEngine(InferenceEngine):
 
         return InferenceEngineCredentials(api_key=api_key, api_url=api_url)
 
-    def create_client(self, credentials):
+    def create_client(self):
         from openai import OpenAI
 
         model_name_for_endpoint = (
             self.model_name_or_path.split("/")[-1].lower().replace(".", "-")
         )
         return OpenAI(
-            api_key=credentials["api_key"],
-            base_url=f"{credentials['api_url']}/{model_name_for_endpoint}/v1",
-            default_headers={"RITS_API_KEY": credentials["api_key"]},
+            api_key=self.credentials["api_key"],
+            base_url=f"{self.credentials['api_url']}/{model_name_for_endpoint}/v1",
+            default_headers={"RITS_API_KEY": self.credentials["api_key"]},
             timeout=httpx.Timeout(None, connect=1.0),
         )
 

@@ -4,15 +4,15 @@ from typing import Any, Dict, List, Union
 from dotenv import load_dotenv
 from openai import BadRequestError
 
-from ai_atlas_nexus.blocks.inference.base import InferenceEngine
-from ai_atlas_nexus.blocks.inference.params import (
+from ai_atlas_nexus.exceptions import RiskInferenceError
+from ai_atlas_nexus.inference.base import InferenceEngine
+from ai_atlas_nexus.inference.params import (
     InferenceEngineCredentials,
     OpenAIChatCompletionMessageParam,
     TextGenerationInferenceOutput,
     VLLMInferenceEngineParams,
 )
-from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
-from ai_atlas_nexus.exceptions import RiskInferenceError
+from ai_atlas_nexus.inference.postprocessing import postprocess
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 from ai_atlas_nexus.toolkit.logging import configure_logger
@@ -59,13 +59,15 @@ class VLLMInferenceEngine(InferenceEngine):
             )
             return None
 
-    def create_client(self, credentials):
-        if credentials:
+    def create_client(self):
+        if self.credentials:
             from openai import OpenAI
 
             return OpenAI(
-                api_key=credentials["api_key"] if credentials["api_key"] else "-",
-                base_url=f"{credentials['api_url']}/v1",
+                api_key=(
+                    self.credentials["api_key"] if self.credentials["api_key"] else "-"
+                ),
+                base_url=f"{self.credentials['api_url']}/v1",
             )
         else:
             from vllm import LLM

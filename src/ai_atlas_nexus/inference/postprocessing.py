@@ -2,7 +2,7 @@ import json
 import re
 from typing import Any, List, Union
 
-from ai_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
+from ai_atlas_nexus.inference.params import TextGenerationInferenceOutput
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
@@ -64,8 +64,10 @@ class ListOfStr:
                 list_of_text = re.findall(r'"(.*?)"', text)
 
         if isinstance(list_of_text, List):
-            list_of_text = [text.strip().encode('utf-8').decode('unicode-escape') for text in list_of_text]
-
+            list_of_text = [
+                text.strip().encode("utf-8").decode("unicode-escape")
+                for text in list_of_text
+            ]
 
         return list_of_text
 

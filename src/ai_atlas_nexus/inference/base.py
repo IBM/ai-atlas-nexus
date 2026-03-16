@@ -3,8 +3,10 @@ from typing import Any, Dict, List, Literal, Optional, Union
 
 import pydantic
 
-from ai_atlas_nexus.blocks.inference.params import (
+from ai_atlas_nexus.inference.backend import InferenceBackendFactory
+from ai_atlas_nexus.inference.params import (
     InferenceEngineCredentials,
+    MelleaInferenceParams,
     OllamaInferenceEngineParams,
     OpenAIChatCompletionMessageParam,
     RITSInferenceEngineParams,
@@ -12,6 +14,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     VLLMInferenceEngineParams,
     WMLInferenceEngineParams,
 )
+from ai_atlas_nexus.metadata_base import BackendType, InferenceEngineType
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
@@ -19,6 +22,8 @@ logger = configure_logger(__name__)
 
 
 class InferenceEngine(ABC):
+
+    _backend_type = BackendType.DEFAULT
 
     def __init__(
         self,
@@ -32,7 +37,7 @@ class InferenceEngine(ABC):
                 VLLMInferenceEngineParams,
             ]
         ] = None,
-        think: Optional[Union[bool, Literal["low", "medium", "high"]]] = None,
+        backend: Optional[Literal["default", "mellea", "dspy"]] = "default",
         concurrency_limit: int = 10,
     ):
         """Create an instance of the InferenceEngine using the `model_name_or_path` and chosen LLM service.
@@ -41,32 +46,45 @@ class InferenceEngine(ABC):
             model_name_or_path (str): model name or path as per the LLM model service
             credentials (Optional[Union[Dict, InferenceEngineCredentials]], optional): credentials for the inference engine instance. Defaults to None.
             parameters (Optional[ Union[ RITSInferenceEngineParams, WMLInferenceEngineParams, OllamaInferenceEngineParams, VLLMInferenceEngineParams, ] ], optional): parameters to use during request generation. Defaults to None.
-            think (Optional[bool], optional): enable or disable model thinking. Currently, only supported in Ollama. Defaults to None.
             concurrency_limit (int, optional): No of parallel calls to be made to the LLM service. Defaults to 10.
         """
 
         self.model_name_or_path = model_name_or_path
         self.credentials = self.prepare_credentials(credentials or {})
         self.parameters = self._check_if_parameters_are_valid(parameters or {})
-        self.think = think
         self.concurrency_limit = concurrency_limit
 
         # Create inference client
-        self.client = self.create_client(self.credentials)
+        self.client = self.create_client()
 
         # Health check
         try:
             self.ping()
         except Exception as e:
             raise Exception(
-                f"Failed to create `{self.__class__.__name__}`. Reason: {str(e)} Given API credentials: {self.credentials}"
+                f"Failed to create `{self.__class__.__name__}`. Reason: {str(e)}"
             )
 
-        # Verify whether the inference engine and the model type support `thinking`.
-        if think:
-            self.is_thinking_supported()
+        if backend == BackendType.DEFAULT:
+            self.backend = self
+        else:
+            assert self._inference_engine_type in [
+                InferenceEngineType.OLLAMA,
+                InferenceEngineType.WML,
+            ], f"[{backend}] backend is not currently supported for {self._inference_engine_type}. Supported inference engines: OLLAMA, WML"
 
-        logger.info(f"Created {self._inference_engine_type} inference engine for {model_name_or_path}")
+            # Create inference backend
+            self.backend = InferenceBackendFactory.create_backend(
+                BackendType(backend),
+                self._inference_engine_type,
+                self.model_name_or_path,
+                self.credentials,
+                self.parameters,
+            )
+
+        logger.info(
+            f"✓ Created {self._inference_engine_type} inference engine for model: {model_name_or_path}, backend - {backend.upper()}"
+        )
 
     def _check_if_parameters_are_valid(self, parameters):
         if parameters:
@@ -100,10 +118,13 @@ class InferenceEngine(ABC):
         # Implement inference engine specific ping in their respective class.
         pass
 
-    def is_thinking_supported(self):
-        raise Exception(
-            f"Currently, model thinking (think=True) is only supported in OllamaInferenceEngine."
-        )
+    def format(self, response_format: Union[Dict, pydantic.BaseModel]):
+        if isinstance(response_format, Dict):
+            return response_format
+        elif isinstance(response_format, type(pydantic.BaseModel)):
+            return response_format.model_json_schema()
+        else:
+            raise Exception(f"Invalid response format type: {response_format}")
 
     @abstractmethod
     def prepare_credentials(
@@ -119,7 +140,7 @@ class InferenceEngine(ABC):
     @abstractmethod
     def generate(
         self,
-        prompts: List[str],
+        prompts: Union[List[str], List[Dict[str, Any]]],
         response_format=None,
         postprocessors=None,
         verbose=True,
@@ -130,8 +151,7 @@ class InferenceEngine(ABC):
     def chat(
         self,
         messages: Union[
-            List[OpenAIChatCompletionMessageParam],
-            List[str],
+            OpenAIChatCompletionMessageParam, str, List[MelleaInferenceParams]
         ],
         tools=None,
         response_format=None,

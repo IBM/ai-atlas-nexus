@@ -2,9 +2,9 @@ import json
 from typing import List
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
-from ai_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
 from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 from ai_atlas_nexus.blocks.risk_detector import RiskDetector
+from ai_atlas_nexus.inference import TextGenerationInferenceOutput
 
 
 # Benchmark-specific risk identification template
@@ -33,7 +33,9 @@ class BenchmarkRiskDetector(RiskDetector):
 
     def detect(self, usecases: List[str]) -> List[List[Risk]]:
         prompts = [
-            self.prompt_builder(prompt_template=BENCHMARK_RISK_IDENTIFICATION_TEMPLATE).build(
+            self.prompt_builder(
+                prompt_template=BENCHMARK_RISK_IDENTIFICATION_TEMPLATE
+            ).build(
                 cot_examples=self._examples,
                 usecase=usecase,
                 risks=json.dumps(

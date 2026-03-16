@@ -1,7 +1,7 @@
 QUESTIONNAIRE_COT_TEMPLATE = """
         I want you to play the role of a compliance officer and answer the question based on the given Intent.
         Return the question, answer, confidence and explanation in a json format where question, answer, confidence and explanation are keys of the json exactly as shown in the examples.
-        you should answer the question followed by the confidence and explanation on how that answer was generated.
+        you should answer the question followed by the confidence and a brief explanation on how that answer was generated.
 {% if cot_examples is not none %}{% for example in cot_examples %}
         Intent: {{ example.intent }}
         Question: {{ question }}
@@ -13,7 +13,7 @@ QUESTIONNAIRE_COT_TEMPLATE = """
         Question: {{ question }}
 """
 
-RISK_IDENTIFICATION_TEMPLATE = """You are an expert at AI risk classification. Study the risks JSON below containing list of risk category and its description.
+RISK_IDENTIFICATION_BATCH_TEMPLATE = """You are an expert at AI risk classification. Study the risks JSON below containing list of risk category and its description.
 
 RISKS:
 {{ risks }}
@@ -30,6 +30,28 @@ Risks: {{ example.Risks }}{% endfor %}
 {% endif %}
 Usecase: {{ usecase }}
 Risks: """
+
+RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES = {
+    "meta-llama/llama-3-3-70b-instruct": "You are an expert at determining whether AI risk exists in the given intent. Understand the given AI Risk from its description.\n\nInstructions:\n1. Use AI `Risk Description` to determine if the given AI Risk is associated with the intent.\n2. If the given AI Risk exist in the usecase, classify it as True.\n3. If the intent doesn't fit into the AI Risk description, classify it as False.\n4. You should give the output as True or False and nothing else.\n\nIntent: {{ usecase }}\nRisk Description: {{ risk_description }}",
+    "ibm-granite/granite-3.3-8b-instruct": "You are an AI risk assessment expert.  \nGiven the two inputs below:\n\n```\nIntent: {{ usecase }}\nRisk Description: {{ risk_description }}\n```\n\nYour task is to decide whether the intent contains the risk described.  \nRespond **exactly** with one word, either `True` or `False`, and nothing else.  \n\nDo not provide any explanation or additional text.",
+    "meta-llama/Llama-3.1-8B-Instruct": "You are an expert at determining whether AI risk exists in the given intent. Understand the given AI Risk from its description.\n\nInstructions:\n1. Use AI `Risk Description` to determine if the given AI Risk is associated with the intent.\n2. If the given Risk exist in the usecase, classify it as True.\n3. If the intent doesn't fit into the AI Risk description, classify it as False.\n4. You should give the output as True or False and nothing else.\n\nIntent: {{ usecase }}\nRisk Description: {{ risk_description }}",
+    "Qwen/Qwen3-8B": "You are a seasoned AI safety analyst tasked with evaluating whether a specific AI risk is relevant to a given project intent.  \n**High‑stakes scenario:** The intent may involve handling clinically relevant data, influencing regulatory decisions, or affecting public safety. A mis‑classification could lead to patient harm, regulatory penalties, or loss of public trust.  \n\n**Instructions:**  \n1. Carefully read the **Intent** – the detailed description of the project or use‑case.  \n2. Carefully read the **Risk Description** – the formal definition of the AI risk to test.  \n3. Determine *whether the risk, as precisely defined, could plausibly occur in the context of the intent.* Consider factors such as data sensitivity, system automation level, audience, and potential impact.  \n4. If the risk is applicable, output **True**.  \n5. If the risk is not applicable, output **False**.  \n6. Provide **only** the boolean value `True` or `False`. Do not add any explanation or additional text.  \n\nAdhere strictly to these steps; accurate, unambiguous judgement is critical.\n\nIntent: {{ usecase }}\nRisk Description: {{ risk_description }}",
+    "openai/gpt-oss-20b": "You are an AI risk assessment expert.\n\nYou will be given two pieces of text:\n1. **Intent** – a detailed description of a system, application, or use case.\n2. **Risk Description** – a concise statement of a specific AI risk.\n\nYour task is to determine whether the risk described in (2) applies to the intent described in (1).  Output **exactly** `True` if the intent falls under that risk, otherwise output `False`.  Do not provide explanations or any other text.\n\nAnswer format: a single token on the line: `True` or `False`.\n\nIntent: {{ usecase }}\nRisk Description: {{ risk_description }}",
+}
+
+RISK_IDENTIFICATION_PER_RISK_TEMPLATE = """You are an expert at determining whether AI risk exists in the given use case. Understand the given AI Risk from its description.
+
+AI Risk: {{ risk_name }}
+Description: {{ risk_description }}
+
+Instructions:
+1. Use AI Risk `Description` to determine if the given AI Risk is associated with the Usecase.
+2. If the given AI Risk exist in the usecase, classify it as Yes.
+3. If the Usecase doesn't fit into the AI Risk description, classify it as No.
+4. You should give the output as Yes or No followed by the explanation on how that classification was inferred.
+
+Usecase: {{ usecase }}
+Risk: """
 
 AI_TASKS_TEMPLATE = """Study and understand the JSON below containing a list of LLM task and its description.
 
