@@ -10,6 +10,9 @@
             "Usecase": {
                 "type": "string"
             },
+            "Reasoning": {
+                "type": "string"
+            },
             "Risks": {
                 "type": "array",
                 "items": {
