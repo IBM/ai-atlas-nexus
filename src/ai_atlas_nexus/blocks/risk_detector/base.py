@@ -6,12 +6,12 @@ from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Risk,
     RiskTaxonomy,
 )
+from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.prompt_builder import (
     FewShotPromptBuilder,
     ZeroShotPromptBuilder,
 )
 from ai_atlas_nexus.data import load_resource
-from ai_atlas_nexus.inference.base import InferenceEngine
 from ai_atlas_nexus.toolkit.logging import configure_logger
 from ai_atlas_nexus.toolkit.validator import validate
 

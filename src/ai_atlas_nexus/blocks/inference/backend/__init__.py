@@ -1,5 +1,5 @@
-from ai_atlas_nexus.inference.backend.base import InferenceBackend
-from ai_atlas_nexus.inference.backend.mellea import MelleaInferenceBackend
+from ai_atlas_nexus.blocks.inference.backend.base import InferenceBackend
+from ai_atlas_nexus.blocks.inference.backend.mellea import MelleaInferenceBackend
 from ai_atlas_nexus.metadata_base import BackendType
 
 

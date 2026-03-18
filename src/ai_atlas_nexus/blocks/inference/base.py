@@ -3,8 +3,8 @@ from typing import Any, Dict, List, Literal, Optional, Union
 
 import pydantic
 
-from ai_atlas_nexus.inference.backend import InferenceBackendFactory
-from ai_atlas_nexus.inference.params import (
+from ai_atlas_nexus.blocks.inference.backend import InferenceBackendFactory
+from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
     MelleaInferenceParams,
     OllamaInferenceEngineParams,
@@ -37,7 +37,7 @@ class InferenceEngine(ABC):
                 VLLMInferenceEngineParams,
             ]
         ] = None,
-        backend: Optional[Literal["default", "mellea", "dspy"]] = "default",
+        backend: Optional[Literal["default", "mellea"]] = "default",
         concurrency_limit: int = 10,
     ):
         """Create an instance of the InferenceEngine using the `model_name_or_path` and chosen LLM service.

@@ -5,9 +5,9 @@ from sssom_schema import EntityReference, Mapping
 from txtai import Embeddings
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
+from ai_atlas_nexus.blocks.inference import InferenceEngine
 from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
 from ai_atlas_nexus.blocks.risk_mapping import RiskMappingBase
-from ai_atlas_nexus.inference import InferenceEngine
 from ai_atlas_nexus.metadata_base import MappingMethod
 
 

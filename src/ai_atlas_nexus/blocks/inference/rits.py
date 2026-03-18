@@ -5,15 +5,15 @@ import httpx
 from dotenv import load_dotenv
 from openai import BadRequestError, NotFoundError
 
-from ai_atlas_nexus.exceptions import RiskInferenceError
-from ai_atlas_nexus.inference.base import InferenceEngine
-from ai_atlas_nexus.inference.params import (
+from ai_atlas_nexus.blocks.inference.base import InferenceEngine
+from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
     OpenAIChatCompletionMessageParam,
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
 )
-from ai_atlas_nexus.inference.postprocessing import postprocess
+from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
+from ai_atlas_nexus.exceptions import RiskInferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 

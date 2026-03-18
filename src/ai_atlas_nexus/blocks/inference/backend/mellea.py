@@ -2,7 +2,7 @@ from typing import Any, Dict, List, Optional, TypedDict
 
 from pydantic import BaseModel
 
-from ai_atlas_nexus.inference.backend.base import InferenceBackend
+from ai_atlas_nexus.blocks.inference.backend.base import InferenceBackend
 from ai_atlas_nexus.metadata_base import BackendType
 
 
@@ -23,7 +23,7 @@ class MelleaWMLChatResponseWrapper(TypedDict):
     usage: Dict
 
 
-class DSPYInferenceBackend(InferenceBackend):
+class MelleaInferenceBackend(InferenceBackend):
     """Mellea backend implementation."""
 
     _backend_type = BackendType.MELLEA
@@ -78,7 +78,7 @@ class DSPYInferenceBackend(InferenceBackend):
                 **credentials,
             )
 
-            return DSPYInferenceBackend(session=session, model_options=llm_parameters)
+            return MelleaInferenceBackend(session=session, model_options=llm_parameters)
 
         except ImportError:
             raise ImportError(

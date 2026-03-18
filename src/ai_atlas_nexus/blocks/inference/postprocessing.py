@@ -2,7 +2,7 @@ import json
 import re
 from typing import Any, List, Union
 
-from ai_atlas_nexus.inference.params import TextGenerationInferenceOutput
+from ai_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 

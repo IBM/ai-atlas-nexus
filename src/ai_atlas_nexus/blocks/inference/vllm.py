@@ -4,15 +4,15 @@ from typing import Any, Dict, List, Union
 from dotenv import load_dotenv
 from openai import BadRequestError
 
-from ai_atlas_nexus.exceptions import RiskInferenceError
-from ai_atlas_nexus.inference.base import InferenceEngine
-from ai_atlas_nexus.inference.params import (
+from ai_atlas_nexus.blocks.exceptions import RiskInferenceError
+from ai_atlas_nexus.blocks.inference.base import InferenceEngine
+from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
     OpenAIChatCompletionMessageParam,
     TextGenerationInferenceOutput,
     VLLMInferenceEngineParams,
 )
-from ai_atlas_nexus.inference.postprocessing import postprocess
+from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 from ai_atlas_nexus.toolkit.logging import configure_logger

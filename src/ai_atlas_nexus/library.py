@@ -37,6 +37,7 @@ from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Rule,
     Stakeholder,
 )
+from ai_atlas_nexus.blocks.inference import InferenceEngine
 from ai_atlas_nexus.blocks.prompt_builder import (
     FewShotPromptBuilder,
     ZeroShotPromptBuilder,
@@ -57,7 +58,6 @@ from ai_atlas_nexus.blocks.risk_mapping import RiskMapper
 from ai_atlas_nexus.data import load_resource
 from ai_atlas_nexus.data.templates.defintions import AI_DOMAIN_DEFINITONS
 from ai_atlas_nexus.extension import Extension
-from ai_atlas_nexus.inference import InferenceEngine
 from ai_atlas_nexus.metadata_base import BackendType, MappingMethod
 from ai_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from ai_atlas_nexus.toolkit.error_utils import type_check, value_check

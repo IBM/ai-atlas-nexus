@@ -2,6 +2,7 @@ import json
 from typing import List
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
+from ai_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
 from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 from ai_atlas_nexus.blocks.prompt_templates import (
     RISK_IDENTIFICATION_BATCH_TEMPLATE,
@@ -9,7 +10,6 @@ from ai_atlas_nexus.blocks.prompt_templates import (
     RISK_IDENTIFICATION_PER_RISK_TEMPLATE,
 )
 from ai_atlas_nexus.blocks.risk_detector import RiskDetector
-from ai_atlas_nexus.inference import TextGenerationInferenceOutput
 
 
 class GenericRiskDetector(RiskDetector):

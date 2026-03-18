@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from sssom_schema import Mapping
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
-from ai_atlas_nexus.inference.base import InferenceEngine
+from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.metadata_base import MappingMethod
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
