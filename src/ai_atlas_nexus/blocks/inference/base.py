@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Literal, Optional, Union
 
-import pydantic
+from pydantic import BaseModel, TypeAdapter, ValidationError
 
 from ai_atlas_nexus.blocks.inference.backend import InferenceBackendFactory
 from ai_atlas_nexus.blocks.inference.params import (
@@ -103,26 +103,43 @@ class InferenceEngine(ABC):
 
         return parameters
 
-    def _to_openai_format(self, prompt: Union[OpenAIChatCompletionMessageParam, str]):
-        if isinstance(prompt, str):
-            return [{"role": "user", "content": prompt}]
-        elif pydantic.TypeAdapter(OpenAIChatCompletionMessageParam).validate_python(
-            prompt
-        ):
-            return prompt
-        else:
+    def _to_openai_format(self, messages: Union[OpenAIChatCompletionMessageParam, str]):
+        if isinstance(messages, str):
+            return [{"role": "user", "content": messages}]
+
+        try:
+            if TypeAdapter(OpenAIChatCompletionMessageParam).validate_python(messages):
+                return messages
+        except:
             raise Exception(
-                f"Invalid input format: {prompt}. Please use openai format or plain str."
+                f"Invalid input message format. Please use openai format or plain str."
             )
+
+    def _validate_chat_messages(self, messages):
+        try:
+            if isinstance(messages, str) or TypeAdapter(
+                OpenAIChatCompletionMessageParam
+            ).validate_python(messages):
+                return [messages]
+        except ValidationError:
+            try:
+                if isinstance(messages[0], str) or TypeAdapter(
+                    OpenAIChatCompletionMessageParam
+                ).validate_python(messages[0]):
+                    return messages
+            except ValidationError:
+                raise Exception(
+                    "Input should be of valid type: str, List[str], OpenAIChatCompletionMessageParam, List[OpenAIChatCompletionMessageParam]"
+                )
 
     def ping(self):
         # Implement inference engine specific ping in their respective class.
         pass
 
-    def format(self, response_format: Union[Dict, pydantic.BaseModel]):
+    def format(self, response_format: Union[Dict, BaseModel]):
         if isinstance(response_format, Dict):
             return response_format
-        elif isinstance(response_format, type(pydantic.BaseModel)):
+        elif isinstance(response_format, type(BaseModel)):
             return response_format.model_json_schema()
         else:
             raise Exception(f"Invalid response format type: {response_format}")
@@ -141,9 +158,9 @@ class InferenceEngine(ABC):
     @abstractmethod
     def generate(
         self,
-        prompts: Union[List[str], List[Dict[str, Any]]],
+        prompts: Union[List[str], List[MelleaInferenceParams]],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ) -> List[TextGenerationInferenceOutput]:
         raise NotImplementedError
@@ -152,11 +169,14 @@ class InferenceEngine(ABC):
     def chat(
         self,
         messages: Union[
-            OpenAIChatCompletionMessageParam, str, List[MelleaInferenceParams]
+            str,
+            List[str],
+            OpenAIChatCompletionMessageParam,
+            List[OpenAIChatCompletionMessageParam],
         ],
         tools=None,
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ) -> List[TextGenerationInferenceOutput]:
         raise NotImplementedError

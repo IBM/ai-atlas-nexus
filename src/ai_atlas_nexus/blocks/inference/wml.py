@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    MelleaInferenceParams,
     OpenAIChatCompletionMessageParam,
     TextGenerationInferenceOutput,
     WMLInferenceEngineParams,
@@ -108,9 +109,9 @@ class WMLInferenceEngine(InferenceEngine):
     @postprocess
     def generate(
         self,
-        prompts: List[str],
+        prompts: Union[List[str], List[MelleaInferenceParams]],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ) -> List[TextGenerationInferenceOutput]:
         responses = []
@@ -145,10 +146,15 @@ class WMLInferenceEngine(InferenceEngine):
     @postprocess
     def chat(
         self,
-        messages: Union[OpenAIChatCompletionMessageParam, str],
+        messages: Union[
+            str,
+            List[str],
+            OpenAIChatCompletionMessageParam,
+            List[OpenAIChatCompletionMessageParam],
+        ],
         tools=None,
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ) -> TextGenerationInferenceOutput:
         try:
@@ -161,7 +167,7 @@ class WMLInferenceEngine(InferenceEngine):
                             self.backend.generate_chat_response, response_format, tools
                         ),
                     ),
-                    items=[messages],
+                    items=self._validate_chat_messages(messages),
                     desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     concurrency_limit=self.concurrency_limit,
                     verbose=verbose,

@@ -7,6 +7,7 @@ from openai import BadRequestError
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    MelleaInferenceParams,
     OpenAIChatCompletionMessageParam,
     TextGenerationInferenceOutput,
     VLLMInferenceEngineParams,
@@ -89,9 +90,9 @@ class VLLMInferenceEngine(InferenceEngine):
     @postprocess
     def generate(
         self,
-        prompts: List[str],
+        prompts: Union[List[str], List[MelleaInferenceParams]],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ):
         from vllm import LLM, SamplingParams
@@ -112,7 +113,7 @@ class VLLMInferenceEngine(InferenceEngine):
             return responses
         else:
 
-            def chat_response(prompt):
+            def generate_text(prompt):
                 response = self.client.chat.completions.create(
                     model=self.model_name_or_path,
                     messages=self._to_openai_format(prompt),
@@ -125,9 +126,9 @@ class VLLMInferenceEngine(InferenceEngine):
 
             try:
                 return run_parallel(
-                    chat_response,
+                    generate_text,
                     prompts,
-                    f"Inferring with {self._inference_engine_type}",
+                    f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     self.concurrency_limit,
                     verbose=verbose,
                 )
@@ -145,11 +146,13 @@ class VLLMInferenceEngine(InferenceEngine):
     def chat(
         self,
         messages: Union[
-            List[OpenAIChatCompletionMessageParam],
+            str,
             List[str],
+            OpenAIChatCompletionMessageParam,
+            List[OpenAIChatCompletionMessageParam],
         ],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ):
         from vllm import LLM, SamplingParams
@@ -184,8 +187,8 @@ class VLLMInferenceEngine(InferenceEngine):
             try:
                 return run_parallel(
                     chat_response,
-                    messages,
-                    f"Inferring with {self._inference_engine_type}",
+                    self._validate_chat_messages(messages),
+                    f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     self.concurrency_limit,
                     verbose=verbose,
                 )

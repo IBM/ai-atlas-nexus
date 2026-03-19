@@ -83,7 +83,7 @@ class OllamaInferenceEngine(InferenceEngine):
         self,
         prompts: Union[List[str], List[MelleaInferenceParams]],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ) -> List[TextGenerationInferenceOutput]:
         try:
@@ -121,7 +121,12 @@ class OllamaInferenceEngine(InferenceEngine):
     @postprocess
     def chat(
         self,
-        messages: Union[OpenAIChatCompletionMessageParam, str],
+        messages: Union[
+            str,
+            List[str],
+            OpenAIChatCompletionMessageParam,
+            List[OpenAIChatCompletionMessageParam],
+        ],
         tools=None,
         response_format=None,
         postprocessors: List[str] = None,
@@ -137,7 +142,7 @@ class OllamaInferenceEngine(InferenceEngine):
                             self.backend.generate_chat_response, response_format, tools
                         ),
                     ),
-                    items=[messages],
+                    items=self._validate_chat_messages(messages),
                     desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     concurrency_limit=self.concurrency_limit,
                     verbose=verbose,

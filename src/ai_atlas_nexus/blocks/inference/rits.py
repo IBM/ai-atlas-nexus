@@ -3,6 +3,7 @@ from functools import partial
 from typing import Dict, List, Union
 
 import httpx
+import pydantic
 from dotenv import load_dotenv
 from openai import (
     APIConnectionError,
@@ -15,6 +16,7 @@ from openai import (
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    MelleaInferenceParams,
     OpenAIChatCompletionMessageParam,
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
@@ -82,9 +84,9 @@ class RITSInferenceEngine(InferenceEngine):
     @postprocess
     def generate(
         self,
-        prompts: List[str],
+        prompts: Union[List[str], List[MelleaInferenceParams]],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ) -> List[TextGenerationInferenceOutput]:
         try:
@@ -115,10 +117,15 @@ class RITSInferenceEngine(InferenceEngine):
     @postprocess
     def chat(
         self,
-        messages: Union[OpenAIChatCompletionMessageParam, str],
+        messages: Union[
+            str,
+            List[str],
+            OpenAIChatCompletionMessageParam,
+            List[OpenAIChatCompletionMessageParam],
+        ],
         tools=None,
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ) -> TextGenerationInferenceOutput:
 
@@ -132,7 +139,7 @@ class RITSInferenceEngine(InferenceEngine):
                             self.backend.generate_chat_response, response_format, tools
                         ),
                     ),
-                    items=[messages],
+                    items=self._validate_chat_messages(messages),
                     desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     concurrency_limit=self.concurrency_limit,
                     verbose=verbose,

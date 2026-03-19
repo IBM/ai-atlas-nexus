@@ -1,8 +1,7 @@
 import json
 import os
 from importlib.metadata import version
-from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional
+from typing import Any, Dict, List, Optional
 
 import yaml
 from jinja2 import Template
@@ -57,7 +56,6 @@ from ai_atlas_nexus.blocks.risk_categorization.severity import RiskSeverityCateg
 from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
 from ai_atlas_nexus.blocks.risk_mapping import RiskMapper
 from ai_atlas_nexus.data import load_resource
-from ai_atlas_nexus.data.templates.defintions import AI_DOMAIN_DEFINITONS
 from ai_atlas_nexus.extension import Extension
 from ai_atlas_nexus.metadata_base import BackendType, MappingMethod
 from ai_atlas_nexus.toolkit.data_utils import load_yamls_to_container
@@ -1784,6 +1782,9 @@ class AIAtlasNexus:
         # Retrieve domain question data
         domain_ques_data = risk_questionnaire[0]
 
+        # Load ai domain defintions from the template dir
+        AI_DOMAIN_DEFINITONS = load_resource("ai_domain_defintions.json")
+
         # Prepare few shots inference prompts from CoT Data
         prompts = [
             (
@@ -1806,7 +1807,9 @@ class AIAtlasNexus:
                     ],
                     "grounding_context": {
                         "Use case": usecase,
-                        "AI Domain Definitions": AI_DOMAIN_DEFINITONS,
+                        "AI Domain Definitions": json.dumps(
+                            AI_DOMAIN_DEFINITONS, indent=2
+                        ),
                     },
                 }
             )
