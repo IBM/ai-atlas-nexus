@@ -137,7 +137,9 @@ class InferenceEngine(ABC):
         pass
 
     def format(self, response_format: Union[Dict, BaseModel]):
-        if isinstance(response_format, Dict):
+        if response_format is None:
+            return None
+        elif isinstance(response_format, Dict):
             return response_format
         elif isinstance(response_format, type(BaseModel)):
             return response_format.model_json_schema()
