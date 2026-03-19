@@ -51,6 +51,7 @@ from ai_atlas_nexus.blocks.prompt_response_schema import (
 from ai_atlas_nexus.blocks.prompt_templates import (
     AI_TASKS_TEMPLATE,
     QUESTIONNAIRE_COT_TEMPLATE,
+    RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES,
 )
 from ai_atlas_nexus.blocks.risk_categorization.severity import RiskSeverityCategorizer
 from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
@@ -647,7 +648,7 @@ class AIAtlasNexus:
                 The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.
             zero_shot_only (bool): If enabled, this flag allows the system to perform Zero Shot Risk identification, and the field `cot_examples` will be ignored.
             batch_inference (bool): Whether to run risk inference service in batch mode or at each risk level. Defaults to True.
-            use_dspy_prompt (bool): Use DSPy-optmized prompt instructions for risk assessment.
+            use_dspy_prompt (bool): Use per-risk DSPy optmized prompt instructions for risk identification. When enabled, `batch_inference` flag is ignored.
         Returns:
             List[List[Risk]]:
                 Result containing a list of risks
@@ -693,7 +694,7 @@ class AIAtlasNexus:
         processed_examples = None
         if zero_shot_only:
             logger.debug(
-                f"The `zero_shot_only` flag is enabled. The system will use the Zero shot method. Any provided `cot_examples` will be disregarded.",
+                f"The `zero_shot_only` flag is enabled. The API will use the Zero shot method. Any provided `cot_examples` will be disregarded.",
             )
         else:
             # For the given taxonomy type, check if the user has provided 'cot_examples'. If not,
@@ -706,6 +707,16 @@ class AIAtlasNexus:
                 logger.warning(
                     f"<RAN47275F12W> Chain of Thought (CoT) examples were not provided, or do not exist in the master for this taxonomy. The API will use the Zero shot method. To improve the accuracy of risk identification, please provide CoT examples in `cot_examples` when calling this API. You may also consider raising an issue to permanently add these examples to the AI Atlas Nexus master."
                 )
+
+        if (
+            use_dspy_prompt
+            and inference_engine.model_name_or_path
+            not in RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES
+        ):
+            logger.warning(
+                f"`use_dspy_prompt` flag is enabled but no DSPy prompt is available for {inference_engine.model_name_or_path}. The API will use the generic batch risk identification prompt. Supported LLMs for DSPy prompt-based risk identification - {list(RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES.keys())}"
+            )
+            use_dspy_prompt = False
 
         if set_taxonomy == "ibm-attack-risk-atlas":
             risks = [
@@ -978,8 +989,8 @@ class AIAtlasNexus:
         ]
 
         # Invoke inference service
-        return inference_engine.chat(
-            messages=prompts,
+        return inference_engine.generate(
+            prompts=prompts,
             response_format=AITaskList,
             postprocessors=["json_object"],
             verbose=verbose,

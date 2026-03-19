@@ -1,9 +1,16 @@
 import os
+from functools import partial
 from typing import Dict, List, Union
 
 import httpx
 from dotenv import load_dotenv
-from openai import BadRequestError, NotFoundError
+from openai import (
+    APIConnectionError,
+    AuthenticationError,
+    NotFoundError,
+    OpenAI,
+    PermissionDeniedError,
+)
 
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
@@ -15,7 +22,10 @@ from ai_atlas_nexus.blocks.inference.params import (
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
 from ai_atlas_nexus.exceptions import RiskInferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
-from ai_atlas_nexus.toolkit.job_utils import run_parallel
+from ai_atlas_nexus.toolkit.job_utils import (
+    run_parallel,
+    unwrap_arguments_and_call_func,
+)
 
 
 # load .env file to environment
@@ -49,8 +59,6 @@ class RITSInferenceEngine(InferenceEngine):
         return InferenceEngineCredentials(api_key=api_key, api_url=api_url)
 
     def create_client(self):
-        from openai import OpenAI
-
         model_name_for_endpoint = (
             self.model_name_or_path.split("/")[-1].lower().replace(".", "-")
         )
@@ -64,6 +72,10 @@ class RITSInferenceEngine(InferenceEngine):
     def ping(self):
         try:
             self.client.models.list()
+        except APIConnectionError:
+            raise Exception("Connection error. Please check RITS API URL.")
+        except PermissionDeniedError:
+            raise Exception("RITS authentication failed. Invalid RITS API KEY.")
         except NotFoundError:
             raise Exception(f"Model `{self.model_name_or_path}` not available.")
 
@@ -75,56 +87,92 @@ class RITSInferenceEngine(InferenceEngine):
         postprocessors=None,
         verbose=True,
     ) -> List[TextGenerationInferenceOutput]:
-        return self.chat(prompts, response_format, postprocessors, verbose)
+        try:
+            return [
+                self._prepare_chat_output(response)
+                for response in run_parallel(
+                    func=partial(
+                        unwrap_arguments_and_call_func,
+                        partial(self.backend.generate_text, response_format),
+                    ),
+                    items=prompts,
+                    desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
+                    concurrency_limit=self.concurrency_limit,
+                    verbose=verbose,
+                )
+            ]
+        except Exception as e:
+            raise RiskInferenceError(str(e))
+
+    def generate_text(self, response_format, prompt):
+        return self.client.chat.completions.create(
+            messages=self._to_openai_format(prompt),
+            model=self.model_name_or_path,
+            response_format=self._create_schema_format(self.format(response_format)),
+            **self.parameters,
+        )
 
     @postprocess
     def chat(
         self,
-        messages: Union[
-            List[OpenAIChatCompletionMessageParam],
-            List[str],
-        ],
+        messages: Union[OpenAIChatCompletionMessageParam, str],
+        tools=None,
         response_format=None,
         postprocessors=None,
         verbose=True,
     ) -> TextGenerationInferenceOutput:
 
-        def chat_response(messages):
-            response = self.client.chat.completions.create(
-                messages=self._to_openai_format(messages),
-                model=self.model_name_or_path,
-                response_format=self._create_schema_format(response_format),
-                **self.parameters,
-            )
-            return self._prepare_chat_output(response)
-
         try:
-            return run_parallel(
-                chat_response,
-                messages,
-                f"Inferring with {self._inference_engine_type}",
-                self.concurrency_limit,
-                verbose=verbose,
-            )
-        except BadRequestError as e:
-            raise RiskInferenceError(e.body["message"])
+            return [
+                self._prepare_chat_output(response)
+                for response in run_parallel(
+                    func=partial(
+                        unwrap_arguments_and_call_func,
+                        partial(
+                            self.backend.generate_chat_response, response_format, tools
+                        ),
+                    ),
+                    items=[messages],
+                    desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
+                    concurrency_limit=self.concurrency_limit,
+                    verbose=verbose,
+                )
+            ]
+        except Exception as e:
+            raise RiskInferenceError(str(e))
+
+    def generate_chat_response(self, response_format, tools, messages):
+        return self.client.chat.completions.create(
+            messages=self._to_openai_format(messages),
+            model=self.model_name_or_path,
+            tools=tools,
+            response_format=self._create_schema_format(self.format(response_format)),
+            **self.parameters,
+        )
 
     def _prepare_chat_output(self, response):
+        if isinstance(response, str):
+            prediction_data = {"prediction": response}
+        else:
+            prediction_data = {
+                "prediction": response.choices[0].message.content,
+                "input_tokens": response.usage.total_tokens,
+                "output_tokens": response.usage.completion_tokens,
+                "stop_reason": response.choices[0].finish_reason,
+                "logprobs": (
+                    {
+                        output.token: output.logprob
+                        for output in response.choices[0].logprobs.content
+                    }
+                    if response.choices[0].logprobs
+                    else None
+                ),
+            }
+
         return TextGenerationInferenceOutput(
-            prediction=response.choices[0].message.content,
-            input_tokens=response.usage.total_tokens,
-            output_tokens=response.usage.completion_tokens,
-            stop_reason=response.choices[0].finish_reason,
             model_name_or_path=self.model_name_or_path,
-            logprobs=(
-                {
-                    output.token: output.logprob
-                    for output in response.choices[0].logprobs.content
-                }
-                if response.choices[0].logprobs
-                else None
-            ),
             inference_engine=str(self._inference_engine_type),
+            **prediction_data,
         )
 
     def _create_schema_format(self, response_format):

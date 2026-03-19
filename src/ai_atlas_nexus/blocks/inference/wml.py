@@ -181,21 +181,24 @@ class WMLInferenceEngine(InferenceEngine):
     def _prepare_prediction_output(
         self, response
     ) -> List[TextGenerationInferenceOutput]:
-        _CHAT_API = True if "choices" in response else False
-        if _CHAT_API:
-            prediction_data = {
-                "prediction": response["choices"][0]["message"]["content"],
-                "input_tokens": response["usage"]["prompt_tokens"],
-                "output_tokens": response["usage"]["completion_tokens"],
-                "stop_reason": response["choices"][0]["finish_reason"],
-            }
+        if isinstance(response, str):
+            prediction_data = {"prediction": response}
         else:
-            prediction_data = {
-                "prediction": response["results"][0]["generated_text"],
-                "input_tokens": response["results"][0]["input_token_count"],
-                "output_tokens": response["results"][0]["generated_token_count"],
-                "stop_reason": response["results"][0]["stop_reason"],
-            }
+            _CHAT_API = True if "choices" in response else False
+            if _CHAT_API:
+                prediction_data = {
+                    "prediction": response["choices"][0]["message"]["content"],
+                    "input_tokens": response["usage"]["prompt_tokens"],
+                    "output_tokens": response["usage"]["completion_tokens"],
+                    "stop_reason": response["choices"][0]["finish_reason"],
+                }
+            else:
+                prediction_data = {
+                    "prediction": response["results"][0]["generated_text"],
+                    "input_tokens": response["results"][0]["input_token_count"],
+                    "output_tokens": response["results"][0]["generated_token_count"],
+                    "stop_reason": response["results"][0]["stop_reason"],
+                }
 
         return TextGenerationInferenceOutput(
             model_name_or_path=self.model_name_or_path,

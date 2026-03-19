@@ -21,15 +21,22 @@ QUESTIONNAIRE_OUTPUT_SCHEMA = {
 }
 
 
+class AIRiskPresence(BaseModel):
+    """AI Risk Response Schema"""
+
+    answer: Literal["Yes", "No"]
+    explanation: str = Field(description="Explanation for having the given ai risk.")
+
+
 class AITask(BaseModel):
-    """Domain Response Schema"""
+    """AI Task Response Schema"""
 
     ai_task: str
-    explanation: str
+    explanation: str = Field(description="Explanation for having the given ai task.")
 
 
 class AITaskList(BaseModel):
-    """Domain Response Schema"""
+    """AITaskList Response Schema"""
 
     ai_tasks: List[AITask]
 

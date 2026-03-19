@@ -3,7 +3,6 @@ from functools import partial
 from typing import Any, Dict, List, Literal, Union
 
 from dotenv import load_dotenv
-from pydantic import BaseModel
 
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
@@ -15,7 +14,7 @@ from ai_atlas_nexus.blocks.inference.params import (
 )
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
 from ai_atlas_nexus.exceptions import RiskInferenceError
-from ai_atlas_nexus.metadata_base import BackendType, InferenceEngineType
+from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import (
     run_parallel,
     unwrap_arguments_and_call_func,
@@ -127,7 +126,7 @@ class OllamaInferenceEngine(InferenceEngine):
         response_format=None,
         postprocessors: List[str] = None,
         verbose: bool = True,
-    ) -> List[TextGenerationInferenceOutput]:
+    ) -> TextGenerationInferenceOutput:
         try:
             return [
                 self._prepare_prediction_output(response)
@@ -166,25 +165,31 @@ class OllamaInferenceEngine(InferenceEngine):
         )
 
     def _prepare_prediction_output(self, response):
+        if isinstance(response, str):
+            prediction_data = {"prediction": response}
+        else:
+            prediction_data = {
+                "prediction": getattr(
+                    response,
+                    "response",
+                    getattr(getattr(response, "message", response), "content", None),
+                ),
+                "input_tokens": getattr(response, "prompt_eval_count", None),
+                "output_tokens": getattr(response, "eval_count", None),
+                "stop_reason": getattr(response, "done_reason", None),
+                "thinking": getattr(
+                    response,
+                    "thinking",
+                    getattr(getattr(response, "message", response), "thinking", None),
+                ),
+                "logprobs": (
+                    {output.token: output.logprob for output in response.logprobs}
+                    if hasattr(response, "logprobs") and response.logprobs
+                    else None
+                ),
+            }
         return TextGenerationInferenceOutput(
-            prediction=getattr(
-                response,
-                "response",
-                getattr(getattr(response, "message", response), "content", None),
-            ),
-            input_tokens=getattr(response, "prompt_eval_count", None),
-            output_tokens=getattr(response, "eval_count", None),
-            stop_reason=getattr(response, "done_reason", None),
-            thinking=getattr(
-                response,
-                "thinking",
-                getattr(getattr(response, "message", response), "thinking", None),
-            ),
             model_name_or_path=self.model_name_or_path,
-            logprobs=(
-                {output.token: output.logprob for output in response.logprobs}
-                if hasattr(response, "logprobs") and response.logprobs
-                else None
-            ),
             inference_engine=str(self._inference_engine_type),
+            **prediction_data,
         )

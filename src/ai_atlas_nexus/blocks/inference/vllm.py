@@ -1,10 +1,9 @@
 import os
-from typing import Any, Dict, List, Union
+from typing import Dict, List, Union
 
 from dotenv import load_dotenv
 from openai import BadRequestError
 
-from ai_atlas_nexus.blocks.exceptions import RiskInferenceError
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
@@ -13,6 +12,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     VLLMInferenceEngineParams,
 )
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
+from ai_atlas_nexus.exceptions import RiskInferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 from ai_atlas_nexus.toolkit.logging import configure_logger
@@ -116,7 +116,9 @@ class VLLMInferenceEngine(InferenceEngine):
                 response = self.client.chat.completions.create(
                     model=self.model_name_or_path,
                     messages=self._to_openai_format(prompt),
-                    response_format=self._create_schema_format(response_format),
+                    response_format=self._create_schema_format(
+                        self.format(response_format)
+                    ),
                     **self.parameters,
                 )
                 return self._prepare_chat_output(response, offline=False)
@@ -172,7 +174,9 @@ class VLLMInferenceEngine(InferenceEngine):
                 response = self.client.chat.completions.create(
                     model=self.model_name_or_path,
                     messages=self._to_openai_format(messages),
-                    response_format=self._create_schema_format(response_format),
+                    response_format=self._create_schema_format(
+                        self.format(response_format)
+                    ),
                     **self.parameters,
                 )
                 return self._prepare_chat_output(response, offline=False)

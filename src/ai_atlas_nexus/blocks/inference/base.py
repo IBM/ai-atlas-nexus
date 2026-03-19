@@ -71,7 +71,8 @@ class InferenceEngine(ABC):
             assert self._inference_engine_type in [
                 InferenceEngineType.OLLAMA,
                 InferenceEngineType.WML,
-            ], f"[{backend}] backend is not currently supported for {self._inference_engine_type}. Supported inference engines: OLLAMA, WML"
+                InferenceEngineType.RITS,
+            ], f"[{backend}] backend is not currently supported for {self._inference_engine_type}. Supported inference engines: OLLAMA, WML, RITS"
 
             # Create inference backend
             self.backend = InferenceBackendFactory.create_backend(

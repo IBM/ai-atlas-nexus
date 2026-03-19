@@ -1,20 +1,15 @@
 from typing import Any, Dict, List, Optional, TypedDict
 
+from openai.types.chat import ChatCompletion
 from pydantic import BaseModel
 
 from ai_atlas_nexus.blocks.inference.backend.base import InferenceBackend
-from ai_atlas_nexus.metadata_base import BackendType
+from ai_atlas_nexus.metadata_base import BackendType, InferenceEngineType
 
 
 # Mellea operational defaults
 LOOP_BUDGET = 3  # Repair loop budget for m.instruct() with RepairTemplateStrategy
 AGENT_PREFIX = None
-
-
-class MelleaOllamaChatResponseWrapper:
-
-    def __init__(self, response):
-        self.message = response
 
 
 class MelleaWMLChatResponseWrapper(TypedDict):
@@ -71,6 +66,16 @@ class MelleaInferenceBackend(InferenceBackend):
             # fix to replace `api_url` with `base_url` as it is widely used across the Mellea backends.
             credentials["base_url"] = credentials.pop("api_url")
 
+            # Using openai api for IBM RITS
+            if inference_service == InferenceEngineType.RITS:
+                inference_service = "openai"
+                credentials.update(
+                    {
+                        "base_url": f"{credentials["base_url"]}/{model_name_or_path.split("/")[-1].lower().replace(".", "-")}/v1",
+                        "default_headers": {"RITS_API_KEY": credentials["api_key"]},
+                    }
+                )
+
             # create and start mellea session
             session = start_session(
                 backend_name=inference_service,
@@ -108,6 +113,7 @@ class MelleaInferenceBackend(InferenceBackend):
         Returns:
             str: a str response
         """
+        from mellea.backends.openai import OpenAIBackend
         from mellea.backends.watsonx import WatsonxAIBackend
         from mellea.stdlib.sampling import RepairTemplateStrategy
 
@@ -126,12 +132,13 @@ class MelleaInferenceBackend(InferenceBackend):
                 strategy=RepairTemplateStrategy(loop_budget=LOOP_BUDGET),
                 model_options=self.model_options,
             )
-
             if isinstance(self.session.backend, WatsonxAIBackend):
                 return MelleaWMLChatResponseWrapper(
                     choices=[response_thunk._meta["oai_chat_response"]],
                     usage={"prompt_tokens": None, "completion_tokens": None},
                 )
+            elif isinstance(self.session.backend, OpenAIBackend):
+                return ChatCompletion(**response_thunk._meta["oai_chat_response"])
             return response_thunk._meta["chat_response"]
 
         except Exception as e:
@@ -149,34 +156,19 @@ class MelleaInferenceBackend(InferenceBackend):
         Returns:
             str: a str chat response
         """
-        from mellea.backends.watsonx import WatsonxAIBackend
-
         if not hasattr(self, "session"):
             raise RuntimeError(
                 "Mellea backend not initialized. Call create_client() first."
             )
-        if not isinstance(description, str):
-            raise RuntimeError("Mellea chat backend only supports str as a prompt.")
 
         try:
             response_thunk = self.session.chat(
-                content=description,
+                content=description[0],
                 format=format,
                 model_options=self.model_options,
                 tool_calls=bool(tools),
             )
 
-            if isinstance(self.session.backend, WatsonxAIBackend):
-                return MelleaWMLChatResponseWrapper(
-                    choices=[
-                        {
-                            "message": {"content": response_thunk.content},
-                            "finish_reason": None,
-                        }
-                    ],
-                    usage={"prompt_tokens": None, "completion_tokens": None},
-                )
-            return MelleaOllamaChatResponseWrapper(message=response_thunk)
-
+            return response_thunk.content
         except Exception as e:
             raise RuntimeError(f"Mellea generation failed: {str(e)}")
