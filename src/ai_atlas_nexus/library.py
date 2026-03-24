@@ -1,3 +1,4 @@
+import itertools
 import json
 import os
 from importlib.metadata import version
@@ -443,7 +444,7 @@ class AIAtlasNexus:
         related_action_ids = risk.hasRelatedAction
         if related_action_ids:
             return [
-                cls._atlas_explorer.get_by_id("actions", identifier=x)
+                cls._atlas_explorer.get_by_id(class_name="actions", identifier=x)
                 for x in related_action_ids
             ]
         else:
@@ -499,7 +500,7 @@ class AIAtlasNexus:
             taxonomy=taxonomy,
         )
 
-        action: Action | None = cls._atlas_explorer.get_by_id("actions", identifier=id)
+        action: Action | None = cls._atlas_explorer.get_by_id(class_name="actions", identifier=id)
         return action
 
     def get_related_risk_controls(
@@ -557,7 +558,7 @@ class AIAtlasNexus:
             risk = cls.get_risk(name=name)
 
         risk_controls = [
-            cls._atlas_explorer.get_by_id("riskcontrols", identifier=x)
+            cls._atlas_explorer.get_by_id(class_name="riskcontrols", identifier=x)
             for x in risk.isDetectedBy or []
         ]
         return risk_controls
@@ -612,7 +613,7 @@ class AIAtlasNexus:
         )
 
         risk_control: RiskControl | None = cls._atlas_explorer.get_by_id(
-            "riskcontrols", identifier=id
+            class_name="riskcontrols", identifier=id
         )
         return risk_control
 
@@ -721,6 +722,109 @@ class AIAtlasNexus:
 
         return risk_detector.detect(usecases)
 
+    @handle_exception(exceptions=[RiskInferenceError])
+    def identify_risks_and_actions_from_usecases(
+        cls,
+        usecases: List[str],
+        inference_engine: InferenceEngine,
+        taxonomy: Optional[str] = None,
+        cot_examples: Optional[Dict[str, List]] = None,
+        max_risk: Optional[int] = None,
+        zero_shot_only: bool = False,
+    ):
+        """Identify potential risks from a usecase description
+
+        Args:
+            usecases (List[str]):
+                A List of strings describing AI usecases
+            inference_engine (InferenceEngine):
+                An LLM inference engine to infer risks from the usecases.
+            taxonomy (str, optional):
+                The string label for a taxonomy. If not specified, the system will use "ibm-risk-atlas" as the default taxonomy.
+            cot_examples (Dict[str, List], optional):
+                If the user wants to improve risk identification via a Few-shot approach, `cot_examples` can be
+                provided with the desired taxonomy as key. Please follow the example template at src/ai_atlas_nexus/data/templates/risk_generation_cot.json.
+                If the `cot_examples` is omitted, the API default to a Zero-Shot approach.
+            max_risk (int, optional):
+                The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.
+            zero_shot_only (bool): If enabled, this flag allows the system to perform Zero Shot Risk identification, and the field `cot_examples` will be ignored.
+        Returns:
+            List[List[Risk]]:
+                Result containing a list of risks
+        """
+        type_check(
+            "<RANE053314BE>",
+            List,
+            allow_none=False,
+            usecases=usecases,
+        )
+        type_check(
+            "<RANE023614CE>",
+            InferenceEngine,
+            allow_none=False,
+            inference_engine=inference_engine,
+        )
+        type_check(
+            "<RANB72CPE6BE>",
+            str,
+            allow_none=True,
+            taxonomy=taxonomy,
+        )
+        type_check(
+            "<RAND098498E>",
+            int,
+            allow_none=True,
+            max_risk=max_risk,
+        )
+        value_check(
+            "<RAN6717CP18E>",
+            all([isinstance(usecase, str) for usecase in usecases]),
+            "Usecases must be a list of string.",
+        )
+
+        risks = cls.identify_risks_from_usecases(usecases, inference_engine, taxonomy, cot_examples, max_risk, zero_shot_only)[0]
+        control_ids = []
+        actions = []
+        detectors = []
+
+        for risk in risks:
+            if risk.hasRelatedAction:
+                risk_actions = risk.hasRelatedAction if isinstance(risk.hasRelatedAction, list) else [risk.hasRelatedAction]
+                actions.extend(risk_actions)
+
+            if risk.isDetectedBy:
+                risk_detections = risk.isDetectedBy if isinstance(risk.isDetectedBy, list) else [risk.isDetectedBy]
+                detectors.extend(risk_detections)
+
+            mappings = itertools.chain(
+                risk.related_mappings or [],
+                risk.broad_mappings or [],
+                risk.close_mappings or [],
+                risk.exact_mappings or []
+            )
+
+            control_ids.extend(cls._atlas_explorer.filter_ids_by_type(ids=mappings, disallowed_types=["Risk"]))
+            control_ids = list(set(control_ids))
+
+        summary_1 = {
+            "risk_ids": [risk.id for risk in risks],
+            "action_ids": actions,
+            "detector_ids": detectors,
+        }
+        summary_2  = cls._atlas_explorer.arrange_ids_by_type(control_ids)
+        summary = summary_1 | summary_2
+
+        result = {
+            "usecases": usecases,
+            "model": inference_engine.model_name_or_path,
+            "taxonomy": taxonomy,
+            "summary": summary,
+            "risks": risks,
+            "mixed_control_items": [cls._atlas_explorer.get_by_id(None, identifier=item) for item in control_ids]
+        }
+        return result
+
+
     def get_all_taxonomies(cls):
         """Get all taxonomy definitions from the LinkML
 
@@ -752,7 +856,7 @@ class AIAtlasNexus:
         )
 
         taxonomy: RiskTaxonomy | None = cls._atlas_explorer.get_by_id(
-            "taxonomies", identifier=id
+            class_name="taxonomies", identifier=id
         )
         return taxonomy
 
@@ -956,6 +1060,7 @@ class AIAtlasNexus:
             verbose=verbose,
         )
 
+
     def generate_proposed_mappings(
         cls,
         new_risks: List[Risk],
@@ -1060,7 +1165,7 @@ class AIAtlasNexus:
         )
 
         risk_incident: RiskIncident | None = cls._atlas_explorer.get_by_id(
-            "riskincidents", identifier=id
+            class_name="riskincidents", identifier=id
         )
         return risk_incident
 
@@ -1120,7 +1225,7 @@ class AIAtlasNexus:
                 (Optional) The string label for a taxonomy
 
         Returns:
-            list[RiskControl]
+            list[AiEval]
                 Result containing a list of AiEval
         """
         type_check("<RAN18094995E>", str, allow_none=True, taxonomy=taxonomy)
@@ -1147,7 +1252,7 @@ class AIAtlasNexus:
         type_check("<RAN29906222E>", str, allow_none=True, taxonomy=taxonomy)
 
         evaluation: AiEval | None = cls._atlas_explorer.get_by_id(
-            "evaluations", identifier=id
+            class_name="evaluations", identifier=id
         )
         return evaluation
 
@@ -1233,7 +1338,7 @@ class AIAtlasNexus:
         )
 
         benchmark_metadata_card: BenchmarkMetadataCard | None = (
-            cls._atlas_explorer.get_by_id("benchmarkmetadatacards", identifier=id)
+            cls._atlas_explorer.get_by_id(class_name="benchmarkmetadatacards", identifier=id)
         )
         return benchmark_metadata_card
 

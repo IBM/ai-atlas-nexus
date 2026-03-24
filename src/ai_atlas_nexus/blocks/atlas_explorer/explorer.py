@@ -1,3 +1,4 @@
+from collections import defaultdict
 from typing import Any, Dict, List
 
 import inflect
@@ -288,9 +289,9 @@ class AtlasExplorer(ExplorerBase):
 
         return matches
 
-    def filter_ids_by_type(self, ids, allowed_types):
+    def filter_ids_by_type(self, ids, disallowed_types):
         """
-        Filter a list of IDs by their type
+        Filter a list of IDs to remove ones of type
 
         Args:
             ids: List[str]
@@ -304,8 +305,31 @@ class AtlasExplorer(ExplorerBase):
         """
         return [
             id_ for id_ in ids
-            if id_ in self._id_cache and type(self._id_cache[id_]).__name__ in allowed_types
+            if id_ in self._id_cache and type(self._id_cache[id_]).__name__ not in disallowed_types
         ]
+
+    def arrange_ids_by_type(self, ids):
+        """
+        Arrange a list of IDs to organise by type
+
+        Args:
+            ids: List[str]
+                List of ids to filter
+
+        Returns:
+            dict
+
+        """
+        result = defaultdict(list)
+        for id_ in ids:
+            if id_ in self._id_cache:
+                r_type = type(self._id_cache[id_]).__name__
+                if result.get(r_type):
+                    result[r_type].append(id_)
+                else:
+                    result[r_type] =  [id_]
+
+        return result
 
     def clear_cache(self):
           """
