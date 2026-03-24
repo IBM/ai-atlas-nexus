@@ -1,8 +1,8 @@
 # Class: Stakeholder
 
-_An AI system stakeholder for Responsible AI governance (e.g., AI governors, users, consumers)._
+_Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity._
 
-URI: [nexus:Stakeholder](https://ibm.github.io/ai-atlas-nexus/ontology/Stakeholder)
+URI: [airo:Stakeholder](https://w3id.org/airo#Stakeholder)
 
 ```mermaid
  classDiagram
@@ -10,6 +10,17 @@ URI: [nexus:Stakeholder](https://ibm.github.io/ai-atlas-nexus/ontology/Stakehold
     click Stakeholder href "../Stakeholder/"
       Entity <|-- Stakeholder
         click Entity href "../Entity/"
+
+
+      Stakeholder <|-- AISubject
+        click AISubject href "../AISubject/"
+      Stakeholder <|-- AIOperator
+        click AIOperator href "../AIOperator/"
+      Stakeholder <|-- AIDeveloper
+        click AIDeveloper href "../AIDeveloper/"
+      Stakeholder <|-- AIUser
+        click AIUser href "../AIUser/"
+
 
       Stakeholder : broad_mappings
 
@@ -107,6 +118,10 @@ URI: [nexus:Stakeholder](https://ibm.github.io/ai-atlas-nexus/ontology/Stakehold
 
 - [Entity](Entity.md)
   - **Stakeholder**
+    - [AISubject](AISubject.md)
+    - [AIOperator](AIOperator.md)
+    - [AIDeveloper](AIDeveloper.md)
+    - [AIUser](AIUser.md)
 
 ## Slots
 
@@ -128,9 +143,11 @@ URI: [nexus:Stakeholder](https://ibm.github.io/ai-atlas-nexus/ontology/Stakehold
 
 ## Usages
 
-| used by                   | used in                         | type  | used                          |
-| ------------------------- | ------------------------------- | ----- | ----------------------------- |
-| [Container](Container.md) | [stakeholders](stakeholders.md) | range | [Stakeholder](Stakeholder.md) |
+| used by                   | used in                             | type  | used                          |
+| ------------------------- | ----------------------------------- | ----- | ----------------------------- |
+| [Container](Container.md) | [stakeholders](stakeholders.md)     | range | [Stakeholder](Stakeholder.md) |
+| [AiSystem](AiSystem.md)   | [hasStakeholder](hasStakeholder.md) | range | [Stakeholder](Stakeholder.md) |
+| [AiAgent](AiAgent.md)     | [hasStakeholder](hasStakeholder.md) | range | [Stakeholder](Stakeholder.md) |
 
 ## Identifier and Mapping Information
 
@@ -142,7 +159,7 @@ URI: [nexus:Stakeholder](https://ibm.github.io/ai-atlas-nexus/ontology/Stakehold
 
 | Mapping Type | Mapped Value      |
 | ------------ | ----------------- |
-| self         | nexus:Stakeholder |
+| self         | airo:Stakeholder  |
 | native       | nexus:Stakeholder |
 
 ## LinkML Source
@@ -154,8 +171,8 @@ URI: [nexus:Stakeholder](https://ibm.github.io/ai-atlas-nexus/ontology/Stakehold
 <details>
 ```yaml
 name: Stakeholder
-description: An AI system stakeholder for Responsible AI governance (e.g., AI governors,
-  users, consumers).
+description: Represents any individual, group or organization that can affect, be
+  affected by or perceive itself to be affected by a decision or activity.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 slots:
@@ -166,6 +183,7 @@ slot_usage:
     name: isPartOf
     description: A relationship where a stakeholder is part of a stakeholder group
     range: StakeholderGroup
+class_uri: airo:Stakeholder
 
 ````
 </details>
@@ -175,8 +193,8 @@ slot_usage:
 <details>
 ```yaml
 name: Stakeholder
-description: An AI system stakeholder for Responsible AI governance (e.g., AI governors,
-  users, consumers).
+description: Represents any individual, group or organization that can affect, be
+  affected by or perceive itself to be affected by a decision or activity.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 is_a: Entity
 slot_usage:
@@ -206,9 +224,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isPartOf:
@@ -223,8 +241,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: StakeholderGroup
   id:
     name: id
@@ -371,6 +389,7 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+class_uri: airo:Stakeholder
 
 ````
 

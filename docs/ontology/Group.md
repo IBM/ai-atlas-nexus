@@ -16,12 +16,12 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
 
       Group <|-- RiskGroup
         click RiskGroup href "../RiskGroup/"
+      Group <|-- StakeholderGroup
+        click StakeholderGroup href "../StakeholderGroup/"
       Group <|-- CapabilityDomain
         click CapabilityDomain href "../CapabilityDomain/"
       Group <|-- CapabilityGroup
         click CapabilityGroup href "../CapabilityGroup/"
-      Group <|-- StakeholderGroup
-        click StakeholderGroup href "../StakeholderGroup/"
 
 
       Group : belongsToDomain
@@ -136,9 +136,9 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
 - [Entity](Entity.md)
   - **Group**
     - [RiskGroup](RiskGroup.md) [ [RiskConcept](RiskConcept.md)]
+    - [StakeholderGroup](StakeholderGroup.md)
     - [CapabilityDomain](CapabilityDomain.md) [ [CapabilityConcept](CapabilityConcept.md)]
     - [CapabilityGroup](CapabilityGroup.md) [ [CapabilityConcept](CapabilityConcept.md)]
-    - [StakeholderGroup](StakeholderGroup.md)
 
 ## Slots
 
@@ -296,9 +296,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   hasDocumentation:

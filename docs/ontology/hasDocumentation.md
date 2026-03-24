@@ -11,41 +11,41 @@ Alias: hasDocumentation
 
 | Name                                                    | Description                                                                      | Modifies Slot |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Question](Question.md)                                 | An evaluation where a question has to be answered                                | no            |
-| [RiskControl](RiskControl.md)                           | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
-| [Entry](Entry.md)                                       | An entry and its definitions                                                     | no            |
-| [Term](Term.md)                                         | A term and its definitions                                                       | no            |
-| [LargeLanguageModel](LargeLanguageModel.md)             | A large language model (LLM) is an AI model which supports a range of languag... | no            |
-| [Impact](Impact.md)                                     |                                                                                  | no            |
-| [AiEval](AiEval.md)                                     | An AI Evaluation, e                                                              | no            |
-| [RiskIncident](RiskIncident.md)                         | An event occuring or occured which is a realised or materialised risk            | no            |
-| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
-| [Principle](Principle.md)                               | A representation of values or norms that must be taken into consideration whe... | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)                         | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [Dataset](Dataset.md)                                   | A body of structured information describing some topic(s) of interest            | no            |
-| [Adapter](Adapter.md)                                   | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [CapabilityConcept](CapabilityConcept.md)               | An umbrella term for referring to capability domains, groups, and individual ... | no            |
-| [AiSystem](AiSystem.md)                                 | A compound AI System composed of one or more AI capablities                      | no            |
-| [Group](Group.md)                                       | Labelled groups of concepts                                                      | no            |
-| [Questionnaire](Questionnaire.md)                       | A questionnaire groups questions                                                 | no            |
-| [Action](Action.md)                                     | Action to remediate a risk                                                       | no            |
-| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
-| [CapabilityGroup](CapabilityGroup.md)                   | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
-| [Certification](Certification.md)                       | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
-| [AiTask](AiTask.md)                                     | A task, such as summarization and classification, performed by an AI             | no            |
-| [StakeholderGroup](StakeholderGroup.md)                 | An AI system stakeholder grouping                                                | no            |
-| [Risk](Risk.md)                                         | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [Capability](Capability.md)                             | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
-| [CapabilityDomain](CapabilityDomain.md)                 | A high-level domain of AI capabilities (e                                        | no            |
-| [AiAgent](AiAgent.md)                                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [RiskConcept](RiskConcept.md)                           | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
-| [BaseAi](BaseAi.md)                                     | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
-| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... | no            |
-| [Concept](Concept.md)                                   | A concept                                                                        | no            |
-| [AiModel](AiModel.md)                                   | A base AI Model class                                                            | no            |
 | [RiskGroup](RiskGroup.md)                               | A group of AI system related risks that are part of a risk taxonomy              | no            |
+| [StakeholderGroup](StakeholderGroup.md)                 | An AI system stakeholder grouping                                                | no            |
+| [CapabilityGroup](CapabilityGroup.md)                   | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
+| [Dataset](Dataset.md)                                   | A body of structured information describing some topic(s) of interest            | no            |
+| [AiEval](AiEval.md)                                     | An AI Evaluation, e                                                              | no            |
+| [Certification](Certification.md)                       | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [RiskIncident](RiskIncident.md)                         | An event occuring or occured which is a realised or materialised risk            | no            |
+| [Entry](Entry.md)                                       | An entry and its definitions                                                     | no            |
+| [Risk](Risk.md)                                         | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)                         | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... | no            |
+| [Adapter](Adapter.md)                                   | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [RiskConcept](RiskConcept.md)                           | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
+| [CapabilityDomain](CapabilityDomain.md)                 | A high-level domain of AI capabilities (e                                        | no            |
+| [Action](Action.md)                                     | Action to remediate a risk                                                       | no            |
+| [AiModel](AiModel.md)                                   | A base AI Model class                                                            | no            |
+| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
+| [Questionnaire](Questionnaire.md)                       | A questionnaire groups questions                                                 | no            |
+| [Principle](Principle.md)                               | A representation of values or norms that must be taken into consideration whe... | no            |
+| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [AiSystem](AiSystem.md)                                 | A compound AI System composed of one or more AI capablities                      | no            |
+| [Impact](Impact.md)                                     |                                                                                  | no            |
+| [Concept](Concept.md)                                   | A concept                                                                        | no            |
+| [LargeLanguageModel](LargeLanguageModel.md)             | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiAgent](AiAgent.md)                                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiTask](AiTask.md)                                     | A task, such as summarization and classification, performed by an AI             | no            |
 | [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
+| [Question](Question.md)                                 | An evaluation where a question has to be answered                                | no            |
+| [BaseAi](BaseAi.md)                                     | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
+| [Group](Group.md)                                       | Labelled groups of concepts                                                      | no            |
+| [Capability](Capability.md)                             | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
+| [Term](Term.md)                                         | A term and its definitions                                                       | no            |
+| [RiskControl](RiskControl.md)                           | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
+| [CapabilityConcept](CapabilityConcept.md)               | An umbrella term for referring to capability domains, groups, and individual ... | no            |
 | [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
 
 ## Properties

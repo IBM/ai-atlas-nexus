@@ -13,15 +13,17 @@ Alias: implementedByAdapter
 
 | Name                              | Description                                                                      | Modifies Slot |
 | --------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Principle](Principle.md)         | A representation of values or norms that must be taken into consideration whe... | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AiSystem](AiSystem.md)           | A compound AI System composed of one or more AI capablities                      | no            |
+| [Capability](Capability.md)       | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
+| [Adapter](Adapter.md)             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [Term](Term.md)                   | A term and its definitions                                                       | no            |
+| [AiAgent](AiAgent.md)             | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiTask](AiTask.md)               | A task, such as summarization and classification, performed by an AI             | no            |
 | [Certification](Certification.md) | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
 | [Entry](Entry.md)                 | An entry and its definitions                                                     | no            |
-| [AiTask](AiTask.md)               | A task, such as summarization and classification, performed by an AI             | no            |
-| [Term](Term.md)                   | A term and its definitions                                                       | no            |
 | [Risk](Risk.md)                   | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [Adapter](Adapter.md)             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [Capability](Capability.md)       | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
+| [LLMIntrinsic](LLMIntrinsic.md)   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [Principle](Principle.md)         | A representation of values or norms that must be taken into consideration whe... | no            |
 
 ## Properties
 

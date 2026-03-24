@@ -56,7 +56,7 @@ regenerate_owl_schema:
 regenerate_risk_atlas_as_tex:
 	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py
 
-regenerate_cypher_code: lift_mappings_from_tsv
+regenerate_cypher_code:
 	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_cypher.py
 
 regenerate_graph_as_sigma_js_json:

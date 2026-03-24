@@ -209,6 +209,7 @@ attributes:
     - Term
     - LLMQuestionPolicy
     - Action
+    - AiSystem
     - AiEval
     - BenchmarkMetadataCard
     - Adapter
@@ -295,9 +296,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   type:

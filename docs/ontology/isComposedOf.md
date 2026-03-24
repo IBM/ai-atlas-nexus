@@ -7,6 +7,13 @@ Alias: isComposedOf
 
 <!-- no inheritance hierarchy -->
 
+## Applicable Classes
+
+| Name                    | Description                                                                      | Modifies Slot |
+| ----------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities                      | yes           |
+
 ## Properties
 
 - Range: [String](String.md)
@@ -36,6 +43,8 @@ description: Relationship indicating the some entity is composed of other entiti
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: isComposedOf
+domain_of:
+- AiSystem
 range: string
 multivalued: true
 inlined: false

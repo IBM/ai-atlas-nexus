@@ -150,6 +150,11 @@ URI: [nexus:StakeholderGroup](https://ibm.github.io/ai-atlas-nexus/ontology/Stak
 | used by                       | used in                                   | type  | used                                    |
 | ----------------------------- | ----------------------------------------- | ----- | --------------------------------------- |
 | [Container](Container.md)     | [stakeholdergroups](stakeholdergroups.md) | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AISubject](AISubject.md)     | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIOperator](AIOperator.md)   | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIDeveloper](AIDeveloper.md) | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIDeployer](AIDeployer.md)   | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIUser](AIUser.md)           | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
 | [Stakeholder](Stakeholder.md) | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
 
 ## Identifier and Mapping Information
@@ -213,9 +218,9 @@ attributes:
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   hasDocumentation:

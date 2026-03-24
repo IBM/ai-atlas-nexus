@@ -56,14 +56,22 @@ URI: [schema:Thing](http://schema.org/Thing)
         click Modality href "../Modality/"
       Entity <|-- Input
         click Input href "../Input/"
+      Entity <|-- Purpose
+        click Purpose href "../Purpose/"
+      Entity <|-- Domain
+        click Domain href "../Domain/"
+      Entity <|-- LocalityOfUse
+        click LocalityOfUse href "../LocalityOfUse/"
+      Entity <|-- AIComponent
+        click AIComponent href "../AIComponent/"
+      Entity <|-- Stakeholder
+        click Stakeholder href "../Stakeholder/"
       Entity <|-- AiEval
         click AiEval href "../AiEval/"
       Entity <|-- AiEvalResult
         click AiEvalResult href "../AiEvalResult/"
       Entity <|-- BenchmarkMetadataCard
         click BenchmarkMetadataCard href "../BenchmarkMetadataCard/"
-      Entity <|-- Stakeholder
-        click Stakeholder href "../Stakeholder/"
 
       Entity : broad_mappings
 
@@ -161,10 +169,14 @@ URI: [schema:Thing](http://schema.org/Thing)
   - [AiLifecyclePhase](AiLifecyclePhase.md)
   - [Modality](Modality.md)
   - [Input](Input.md)
+  - [Purpose](Purpose.md)
+  - [Domain](Domain.md)
+  - [LocalityOfUse](LocalityOfUse.md)
+  - [AIComponent](AIComponent.md)
+  - [Stakeholder](Stakeholder.md)
   - [AiEval](AiEval.md)
   - [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
   - [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
-  - [Stakeholder](Stakeholder.md)
 
 ## Slots
 
