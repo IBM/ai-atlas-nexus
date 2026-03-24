@@ -15,6 +15,19 @@ class AtlasExplorer(ExplorerBase):
 
         # load the data into the graph
         self._data = data
+        self._combined_cache = {}
+        self._id_cache = {}
+        self._build_id_cache_index()
+
+    def _build_id_cache_index(self):
+        """
+        A dict which is mapping ID to LinkML obj
+        """
+        for class_name in self._data.model_fields_set:
+            items = getattr(self._data, class_name) or []
+            for item in items:
+                if hasattr(item, 'id') and item.id:
+                    self._id_cache[item.id] = item
 
     def get_all_classes(self):
         """
@@ -63,6 +76,11 @@ class AtlasExplorer(ExplorerBase):
             list[Dict[str, Any]]
                 List of instances
         """
+        cache_key = (class_name, taxonomy, vocabulary, document)
+
+        if cache_key in self._combined_cache:
+            return self._combined_cache[cache_key]
+
         class_names = []
 
         if class_name is None:
@@ -75,9 +93,6 @@ class AtlasExplorer(ExplorerBase):
         result = []
         seen_ids = set()
 
-        def items_process():
-
-            return result
         for key in class_names:
             if key not in self._data:
                 for k in self._data.model_fields_set:
@@ -135,6 +150,8 @@ class AtlasExplorer(ExplorerBase):
         if result is None:
             result = []
 
+        self._combined_cache[cache_key] = result
+
         return result if isinstance(result, list) else [result]
 
     def get_by_id(self, class_name, identifier):
@@ -142,7 +159,7 @@ class AtlasExplorer(ExplorerBase):
         Get a single instance by its identifier.
 
         Args:
-            class_name: str
+            class_name: str | None
                 Name of the class (the collection key in data)
             identifier: str
                 Value of the identifier field
@@ -151,14 +168,18 @@ class AtlasExplorer(ExplorerBase):
             Optional[Dict[str, Any]]
                 The matching instance or None
         """
-        instances = self.get_all(class_name)
+        if identifier in self._id_cache:
+            return self._id_cache[identifier]
 
-        # Hmm assuming here all entities have id perhaps should check as it is not enforced
-        id_slot = "id"
+        if class_name:
+            instances = self.get_all(class_name)
 
-        for instance in instances:
-            if getattr(instance, id_slot) == identifier:
-                return instance
+            # Hmm assuming here all entities have id perhaps should check as it is not enforced
+            id_slot = "id"
+
+            for instance in instances:
+                if getattr(instance, id_slot) == identifier:
+                    return instance
 
         return None
 
@@ -266,3 +287,29 @@ class AtlasExplorer(ExplorerBase):
                 matches.append(instance)
 
         return matches
+
+    def filter_ids_by_type(self, ids, allowed_types):
+        """
+        Filter a list of IDs by their type
+
+        Args:
+            ids: List[str]
+                List of ids to filter
+            allowed_types: List[str]
+                The types to allow
+
+        Returns:
+            List[str]
+
+        """
+        return [
+            id_ for id_ in ids
+            if id_ in self._id_cache and type(self._id_cache[id_]).__name__ in allowed_types
+        ]
+
+    def clear_cache(self):
+          """
+          Manually clear caches
+          """
+          self._combined_cache.clear()
+          self._id_cache.clear()

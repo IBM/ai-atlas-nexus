@@ -244,7 +244,7 @@ class TestLibrary(TestCaseBase):
     def test_get_all_evaluations(self):
         """Get all evaluation definitions from the LinkML"""
         ran_lib = self.ran_lib
-        ran_lib._atlas_explorer.evaluations = [AiEval(id="test-eval1")]
+        ran_lib._atlas_explorer.evaluations = [AiEval(id="test-eval22")]
         evaluations = ran_lib.get_all_evaluations()
         self.assertGreater(len(evaluations), 0)
 
@@ -252,12 +252,16 @@ class TestLibrary(TestCaseBase):
         """Get evaluation definition from the LinkML filtered by evaluation id"""
         ran_lib = self.ran_lib
         object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [AiEval(id="test-eval1")])
+        ran_lib._atlas_explorer.clear_cache()
+        ran_lib._atlas_explorer._build_id_cache_index()
         evaluation = ran_lib.get_evaluation(id="test-eval1")
         assert evaluation.id == "test-eval1"
 
     def test_get_related_evaluations(self):
         ran_lib = self.ran_lib
         object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [AiEval(id="test-eval1", hasRelatedRisk=["atlas-data-bias"])])
+        ran_lib._atlas_explorer.clear_cache()
+        ran_lib._atlas_explorer._build_id_cache_index()
         ev1 = ran_lib.get_evaluation(id="test-eval1")
         assert isinstance(ev1, AiEval)
         evs = ran_lib.get_related_evaluations(risk_id="atlas-data-bias")
@@ -336,12 +340,16 @@ class TestLibrary(TestCaseBase):
         """Get intrinsic definition from the LinkML filtered by intrinsic id"""
         ran_lib = self.ran_lib
         object.__setattr__(ran_lib._atlas_explorer._data, 'llmintrinsics', [LLMIntrinsic(id="test-intrinsic1")])
+        ran_lib._atlas_explorer.clear_cache()
+        ran_lib._atlas_explorer._build_id_cache_index()
         intrinsic = ran_lib.get_intrinsic(id="test-intrinsic1")
         assert intrinsic.id == "test-intrinsic1"
 
     def test_get_related_intrinsics(self):
         ran_lib = self.ran_lib
         object.__setattr__(ran_lib._atlas_explorer._data, 'llmintrinsics', [LLMIntrinsic(id="test-intrinsic1", hasRelatedRisk=["atlas-data-bias"])])
+        ran_lib._atlas_explorer.clear_cache()
+        ran_lib._atlas_explorer._build_id_cache_index()
         ev1 = ran_lib.get_intrinsic(id="test-intrinsic1")
         assert isinstance(ev1, LLMIntrinsic)
         evs = ran_lib.get_related_intrinsics(risk_id="atlas-data-bias")
@@ -358,5 +366,50 @@ class TestLibrary(TestCaseBase):
         """Get principle definition from the LinkML filtered by principle id"""
         ran_lib = self.ran_lib
         object.__setattr__(ran_lib._atlas_explorer._data, 'principles', [Principle(id="test-principle1")])
+        ran_lib._atlas_explorer.clear_cache()
+        ran_lib._atlas_explorer._build_id_cache_index()
         principle = ran_lib.get_principle(id="test-principle1")
         assert principle.id == "test-principle1"
+
+    def test_id_cache_uses_cache_on_second_call(self):
+        """Verify that get_by_id uses cached results on second call"""
+        ran_lib = self.ran_lib
+        test_eval = AiEval(id="test-eval-cache1")
+        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [test_eval])
+        ran_lib._atlas_explorer.clear_cache()
+        ran_lib._atlas_explorer._build_id_cache_index()
+        result1 = ran_lib.get_evaluation(id="test-eval-cache1")
+        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [AiEval(id="test-eval-cache1", description="modified")])
+        result2 = ran_lib.get_evaluation(id="test-eval-cache1")
+
+        self.assertIs(result1, result2, "Should return same cached object")
+
+    def test_get_all_cache_different_parameters(self):
+        """Verify that get_all uses different cache keys for different parameters"""
+        ran_lib = self.ran_lib
+        ran_lib._atlas_explorer.clear_cache()
+        all_evals = ran_lib.get_all("evaluations")
+        taxonomy_evals = ran_lib.get_all("evaluations", taxonomy="test-taxonomy")
+
+        # Cache should have two entries for these different queries
+        self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 2)
+
+    def test_clear_cache_invalidates_all_caches(self):
+        """Verify that clear_cache() invalidates both caches"""
+        ran_lib = self.ran_lib
+        test_eval = AiEval(id="test-eval-clear1")
+        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [test_eval])
+        ran_lib._atlas_explorer.clear_cache()
+        ran_lib._atlas_explorer._build_id_cache_index()
+
+        # Populate caches
+        _ = ran_lib.get_evaluation(id="test-eval-clear1")
+        _ = ran_lib.get_all("evaluations")
+
+        self.assertGreater(len(ran_lib._atlas_explorer._combined_cache), 0)
+        self.assertGreater(len(ran_lib._atlas_explorer._id_cache), 0)
+
+        ran_lib._atlas_explorer.clear_cache()
+
+        self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 0)
+        self.assertEqual(len(ran_lib._atlas_explorer._id_cache), 0)
