@@ -2167,6 +2167,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3555,6 +3565,34 @@
     
   
     Slot: broad_mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../broader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: broader
   
 
     
@@ -7838,6 +7876,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../isCategorizedAs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: isCategorizedAs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../isComposedOf/" class="md-nav__link">
         
   
@@ -8658,6 +8724,34 @@
     
   
     Slot: narrow_mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../narrower/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: narrower
   
 
     
@@ -9750,6 +9844,62 @@
     
   
     Class: RiskControl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RiskControlGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class: RiskControlGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RiskControlGroupTaxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class: RiskControlGroupTaxonomy
   
 
     
@@ -10997,7 +11147,6 @@
 
 <h1 id="slot-implementedbyadapter">Slot: implementedByAdapter</h1>
 <p><em>Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).</em></p>
-<p>__</p>
 <p>URI: <a href="https://ibm.github.io/ai-atlas-nexus/ontology/implementedByAdapter">nexus:implementedByAdapter</a>
 Alias: implementedByAdapter</p>
 <!-- no inheritance hierarchy -->
@@ -11013,28 +11162,8 @@ Alias: implementedByAdapter</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../AiSystem/">AiSystem</a></td>
-<td>A compound AI System composed of one or more AI capablities</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Capability/">Capability</a></td>
-<td>A specific AI capability or ability, such as reading comprehension, logical r...</td>
-<td>yes</td>
-</tr>
-<tr>
 <td><a href="../Adapter/">Adapter</a></td>
 <td>Adapter-based methods add extra trainable parameters after the attention and ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Term/">Term</a></td>
-<td>A term and its definitions</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AiAgent/">AiAgent</a></td>
-<td>An artificial intelligence (AI) agent refers to a system or program that is c...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11043,8 +11172,18 @@ Alias: implementedByAdapter</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Certification/">Certification</a></td>
-<td>Certification mechanisms, seals, and marks for the purpose of demonstrating c...</td>
+<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
+<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Capability/">Capability</a></td>
+<td>A specific AI capability or ability, such as reading comprehension, logical r...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../Term/">Term</a></td>
+<td>A term and its definitions</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11058,13 +11197,23 @@ Alias: implementedByAdapter</p>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
-<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
+<td><a href="../Certification/">Certification</a></td>
+<td>Certification mechanisms, seals, and marks for the purpose of demonstrating c...</td>
 <td>no</td>
 </tr>
 <tr>
 <td><a href="../Principle/">Principle</a></td>
 <td>A representation of values or norms that must be taken into consideration whe...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AiSystem/">AiSystem</a></td>
+<td>A compound AI System composed of one or more AI capablities</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AiAgent/">AiAgent</a></td>
+<td>An artificial intelligence (AI) agent refers to a system or program that is c...</td>
 <td>no</td>
 </tr>
 </tbody>
@@ -11105,23 +11254,20 @@ Alias: implementedByAdapter</p>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">implementedByAdapter</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Indicates</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">capability</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">implemented</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">specific</span><span class="nv"> </span><span class="s">adapter.</span>
-<span class="w">  </span><span class="s">This</span><span class="nv"> </span><span class="s">relationship</span><span class="nv"> </span><span class="s">distinguishes</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">abstract</span><span class="nv"> </span><span class="s">capability</span><span class="nv"> </span><span class="s">(what</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">be</span><span class="nv"> </span><span class="s">done)</span><span class="nv"> </span><span class="s">from</span>
-<span class="w">  </span><span class="s">the</span><span class="nv"> </span><span class="s">technical</span><span class="nv"> </span><span class="s">implementation</span><span class="nv"> </span><span class="s">mechanism</span><span class="nv"> </span><span class="s">(how</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">is</span><span class="nv"> </span><span class="s">added/extended</span><span class="nv"> </span><span class="s">via</span><span class="nv"> </span><span class="s">adapters).</span>
-
-<span class="s">&#39;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates that this capability is implemented by a specific adapter.</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">This relationship distinguishes the abstract capability (what can be done) from</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">the technical implementation mechanism (how it is added/extended via adapters).</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any</span>
 <span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">implementedByAdapter</span>
 <span class="nt">domain_of</span><span class="p">:</span>
-
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entry</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">inverse</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">implementsCapability</span>
-<span class="w">  </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
-<span class="w">  </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">implementsCapability</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
+<span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
 </details>
 <p>```</p>

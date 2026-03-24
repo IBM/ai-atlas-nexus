@@ -14,7 +14,7 @@
         <link rel="prev" href="../RiskConcept/">
       
       
-        <link rel="next" href="../riskcontrols/">
+        <link rel="next" href="../RiskControlGroup/">
       
       
         
@@ -2167,6 +2167,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3555,6 +3565,34 @@
     
   
     Slot: broad_mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../broader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: broader
   
 
     
@@ -7719,6 +7757,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../isCategorizedAs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: isCategorizedAs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../isComposedOf/" class="md-nav__link">
         
   
@@ -8539,6 +8605,34 @@
     
   
     Slot: narrow_mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../narrower/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: narrower
   
 
     
@@ -9808,6 +9902,62 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RiskControlGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class: RiskControlGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RiskControlGroupTaxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class: RiskControlGroupTaxonomy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -11174,6 +11324,17 @@
 
       RiskControl : id
 
+      RiskControl : isCategorizedAs
+
+
+
+
+
+        RiskControl --&gt; "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       RiskControl : isDefinedByTaxonomy
 
 
@@ -11267,7 +11428,7 @@
 <td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
-<td><a href="../Concept/">Concept</a>, <a href="../Control/">Control</a></td>
+<td><a href="../Control/">Control</a>, <a href="../Concept/">Concept</a></td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
@@ -11336,6 +11497,12 @@
 <td><a href="../Entity/">Entity</a></td>
 </tr>
 <tr>
+<td><a href="../isCategorizedAs/">isCategorizedAs</a></td>
+<td>* <br/> <a href="../Any/">Any</a></td>
+<td>A relationship where an entity has been deemed to be categorized</td>
+<td><a href="../Entity/">Entity</a></td>
+</tr>
+<tr>
 <td><a href="../hasDocumentation/">hasDocumentation</a></td>
 <td>* <br/> <a href="../Documentation/">Documentation</a></td>
 <td>Indicates documentation associated with an entity</td>
@@ -11369,6 +11536,18 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="../RiskControlGroup/">RiskControlGroup</a></td>
+<td><a href="../hasPart/">hasPart</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../RiskControlGroup/">RiskControlGroup</a></td>
+<td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
 <tr>
 <td><a href="../RiskGroup/">RiskGroup</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
@@ -11539,6 +11718,7 @@ attributes:
     - Entry
     - Policy
     - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
@@ -11736,6 +11916,19 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
+    owner: RiskControl
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
@@ -11754,6 +11947,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -11823,13 +12017,13 @@ class_uri: airo:RiskControl
         
         
           
-          <a href="../riskcontrols/" class="md-footer__link md-footer__link--next" aria-label="Next: Slot: riskcontrols">
+          <a href="../RiskControlGroup/" class="md-footer__link md-footer__link--next" aria-label="Next: Class: RiskControlGroup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Slot: riskcontrols
+                Class: RiskControlGroup
               </div>
             </div>
             <div class="md-footer__button md-icon">

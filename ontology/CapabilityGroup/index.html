@@ -2167,6 +2167,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -3555,6 +3565,34 @@
     
   
     Slot: broad_mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../broader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: broader
   
 
     
@@ -7877,6 +7915,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../isCategorizedAs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: isCategorizedAs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../isComposedOf/" class="md-nav__link">
         
   
@@ -8697,6 +8763,34 @@
     
   
     Slot: narrow_mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../narrower/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot: narrower
   
 
     
@@ -9789,6 +9883,62 @@
     
   
     Class: RiskControl
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RiskControlGroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class: RiskControlGroup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RiskControlGroupTaxonomy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Class: RiskControlGroupTaxonomy
   
 
     
@@ -11106,6 +11256,8 @@
 
 
 
+      CapabilityGroup : broader
+
       CapabilityGroup : close_mappings
 
 
@@ -11158,6 +11310,17 @@
 
       CapabilityGroup : id
 
+      CapabilityGroup : isCategorizedAs
+
+
+
+
+
+        CapabilityGroup --&gt; "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       CapabilityGroup : isDefinedByTaxonomy
 
 
@@ -11192,6 +11355,8 @@
         click Any href "../Any/"
 
 
+
+      CapabilityGroup : narrower
 
       CapabilityGroup : related_mappings
 
@@ -11265,6 +11430,18 @@
 <td><a href="../Concept/">Concept</a>, <a href="../Group/">Group</a></td>
 </tr>
 <tr>
+<td><a href="../narrower/">narrower</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td></td>
+<td><a href="../Group/">Group</a></td>
+</tr>
+<tr>
+<td><a href="../broader/">broader</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td></td>
+<td><a href="../Group/">Group</a></td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
 <td>A unique identifier to this instance of the model element</td>
@@ -11328,6 +11505,12 @@
 <td><a href="../broad_mappings/">broad_mappings</a></td>
 <td>* <br/> <a href="../Any/">Any</a></td>
 <td>The property is used to state a hierarchical mapping link between two concept...</td>
+<td><a href="../Entity/">Entity</a></td>
+</tr>
+<tr>
+<td><a href="../isCategorizedAs/">isCategorizedAs</a></td>
+<td>* <br/> <a href="../Any/">Any</a></td>
+<td>A relationship where an entity has been deemed to be categorized</td>
 <td><a href="../Entity/">Entity</a></td>
 </tr>
 </tbody>
@@ -11456,6 +11639,7 @@ attributes:
     - Entry
     - Policy
     - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
@@ -11491,6 +11675,7 @@ attributes:
     owner: CapabilityGroup
     domain_of:
     - Group
+    - RiskControlGroup
     - RiskGroup
     - CapabilityGroup
     range: Capability
@@ -11527,6 +11712,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -11565,6 +11751,28 @@ attributes:
     - ControlActivityRecommendation
     - Requirement
     range: string
+  narrower:
+    name: narrower
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: narrower
+    owner: CapabilityGroup
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
+  broader:
+    name: broader
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: broader
+    owner: CapabilityGroup
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -11704,6 +11912,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: CapabilityGroup
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: CapabilityGroup
     domain_of:
     - Entity
