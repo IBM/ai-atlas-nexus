@@ -11,6 +11,11 @@ from linkml_runtime.dumpers import YAMLDumper
 from sssom_schema import Mapping
 
 # Internal
+from ai_atlas_nexus.blocks.inference import OllamaInferenceEngine
+from ai_atlas_nexus.blocks.inference.params import (
+    InferenceEngineCredentials,
+    OllamaInferenceEngineParams,
+)
 from src.ai_atlas_nexus import AIAtlasNexus, LLMIntrinsic
 
 # Unit Test Infrastructure
@@ -149,13 +154,25 @@ class TestLibrary(TestCaseBase):
             4000,
         )
 
+    def test_identify_risks_from_usecase_taxonomy_empty_list(self):
+        """Identify potential risks from a usecase description - taxonomy type is wrong"""
+        ran_lib = self.ran_lib
+        self.assertRaises(
+            TypeError,
+            ran_lib.identify_risks_from_usecases,
+            "my usecase",
+            "my inference_engine",
+            [],
+        )
+
+
     def test_identify_risks_from_usecase_wrong_taxonomy(self):
         """Identify potential risks from a usecase description - taxonomy not found"""
         ran_lib = self.ran_lib
         self.assertRaises(
             Exception,
             ran_lib.identify_risks_from_usecases,
-            "my usecase",
+            ["my usecase"],
             "my inference_engine",
             "non-existing-taxonomy",
         )

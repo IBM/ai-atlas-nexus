@@ -66,7 +66,7 @@ class AtlasExplorer(ExplorerBase):
         Args:
             class_name: Union[str | list | None]:
                 Name of the class (the collection key in data)
-            taxonomy: str
+            taxonomy: Union[str | list | None]
                 (Optional) The string id for a taxonomy
             vocabulary:
                 (Optional) The string id for a vocabulary
@@ -77,11 +77,6 @@ class AtlasExplorer(ExplorerBase):
             list[Dict[str, Any]]
                 List of instances
         """
-        cache_key = (class_name, taxonomy, vocabulary, document)
-
-        if cache_key in self._combined_cache:
-            return self._combined_cache[cache_key]
-
         class_names = []
 
         if class_name is None:
@@ -90,6 +85,20 @@ class AtlasExplorer(ExplorerBase):
             class_names.append(class_name)
         else:
             class_names = class_name
+
+        taxonomies = []
+
+        if taxonomy is None:
+            taxonomies = ["ibm-risk-atlas"]
+        elif isinstance(taxonomy, str):
+            taxonomies.append(taxonomy)
+        else:
+            taxonomies = taxonomy
+
+        cache_key = (tuple(class_names) if isinstance(class_names, list) else class_name, tuple(taxonomies), vocabulary, document)
+
+        if cache_key in self._combined_cache:
+            return self._combined_cache[cache_key]
 
         result = []
         seen_ids = set()
@@ -127,7 +136,7 @@ class AtlasExplorer(ExplorerBase):
             result = list(
                 filter(
                     lambda instance: hasattr(instance, "isDefinedByTaxonomy")
-                    and instance.isDefinedByTaxonomy == taxonomy,
+                    and instance.isDefinedByTaxonomy in taxonomies,
                     result,
                 )
             )
