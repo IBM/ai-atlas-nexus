@@ -1,7 +1,6 @@
 import json
 import os
 from importlib.metadata import version
-from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import yaml
@@ -43,20 +42,22 @@ from ai_atlas_nexus.blocks.prompt_builder import (
     ZeroShotPromptBuilder,
 )
 from ai_atlas_nexus.blocks.prompt_response_schema import (
-    DOMAIN_TYPE_SCHEMA,
     LIST_OF_STR_SCHEMA,
     QUESTIONNAIRE_OUTPUT_SCHEMA,
+    AITaskList,
+    DomainType,
 )
 from ai_atlas_nexus.blocks.prompt_templates import (
     AI_TASKS_TEMPLATE,
     QUESTIONNAIRE_COT_TEMPLATE,
+    RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES,
 )
 from ai_atlas_nexus.blocks.risk_categorization.severity import RiskSeverityCategorizer
 from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
 from ai_atlas_nexus.blocks.risk_mapping import RiskMapper
 from ai_atlas_nexus.data import load_resource
 from ai_atlas_nexus.extension import Extension
-from ai_atlas_nexus.metadata_base import MappingMethod
+from ai_atlas_nexus.metadata_base import BackendType, MappingMethod
 from ai_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from ai_atlas_nexus.toolkit.error_utils import type_check, value_check
 from ai_atlas_nexus.toolkit.logging import configure_logger
@@ -625,6 +626,8 @@ class AIAtlasNexus:
         cot_examples: Optional[Dict[str, List]] = None,
         max_risk: Optional[int] = None,
         zero_shot_only: bool = False,
+        batch_inference: bool = True,
+        use_dspy_prompt: bool = False,
     ) -> List[List[Risk]]:
         """Identify potential risks from a usecase description
 
@@ -642,6 +645,8 @@ class AIAtlasNexus:
             max_risk (int, optional):
                 The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.
             zero_shot_only (bool): If enabled, this flag allows the system to perform Zero Shot Risk identification, and the field `cot_examples` will be ignored.
+            batch_inference (bool): Whether to run risk inference service in batch mode or at each risk level. Defaults to True.
+            use_dspy_prompt (bool): Use per-risk DSPy optmized prompt instructions for risk identification. When enabled, `batch_inference` flag is ignored.
         Returns:
             List[List[Risk]]:
                 Result containing a list of risks
@@ -687,7 +692,7 @@ class AIAtlasNexus:
         processed_examples = None
         if zero_shot_only:
             logger.debug(
-                f"The `zero_shot_only` flag is enabled. The system will use the Zero shot method. Any provided `cot_examples` will be disregarded.",
+                f"The `zero_shot_only` flag is enabled. The API will use the Zero shot method. Any provided `cot_examples` will be disregarded.",
             )
         else:
             # For the given taxonomy type, check if the user has provided 'cot_examples'. If not,
@@ -700,6 +705,16 @@ class AIAtlasNexus:
                 logger.warning(
                     f"<RAN47275F12W> Chain of Thought (CoT) examples were not provided, or do not exist in the master for this taxonomy. The API will use the Zero shot method. To improve the accuracy of risk identification, please provide CoT examples in `cot_examples` when calling this API. You may also consider raising an issue to permanently add these examples to the AI Atlas Nexus master."
                 )
+
+        if (
+            use_dspy_prompt
+            and inference_engine.model_name_or_path
+            not in RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES
+        ):
+            logger.warning(
+                f"`use_dspy_prompt` flag is enabled but no DSPy prompt is available for {inference_engine.model_name_or_path}. The API will use the generic batch risk identification prompt. Supported LLMs for DSPy prompt-based risk identification - {list(RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES.keys())}"
+            )
+            use_dspy_prompt = False
 
         if set_taxonomy == "ibm-attack-risk-atlas":
             risks = [
@@ -717,9 +732,14 @@ class AIAtlasNexus:
             inference_engine=inference_engine,
             cot_examples=processed_examples,
             max_risk=max_risk,
+            use_dspy_prompt=use_dspy_prompt,
         )
 
-        return risk_detector.detect(usecases)
+        return (
+            risk_detector.detect_one(usecases)
+            if not batch_inference or use_dspy_prompt
+            else risk_detector.detect(usecases)
+        )
 
     def get_all_taxonomies(cls):
         """Get all taxonomy definitions from the LinkML
@@ -915,6 +935,7 @@ class AIAtlasNexus:
                 A List of strings describing AI usecases
             inference_engine (InferenceEngine):
                 An LLM inference engine to identify AI tasks from usecases.
+            verbose (bool, optional): prints detailed output during the inference process. Defaults to True.
 
         Returns:
             List[List[str]]:
@@ -939,20 +960,37 @@ class AIAtlasNexus:
             for task in cls.get_all(class_name="aitasks", taxonomy="hf-ml-tasks")
         ]
 
-        # Populate schema items
-        json_schema = dict(LIST_OF_STR_SCHEMA)
-        json_schema["items"]["enum"] = [task["task_label"] for task in hf_ai_tasks]
+        prompts = [
+            (
+                Template(AI_TASKS_TEMPLATE).render(
+                    usecase=usecase,
+                    hf_ai_tasks=hf_ai_tasks,
+                    limit=len(hf_ai_tasks),
+                )
+                if inference_engine.backend._backend_type == BackendType.DEFAULT
+                else {
+                    "description": "Classify the given use case into one or more AI Tasks that describes it best. Use the AI tasks definitions to make your decision. Provide a brief explanation for choosing a particular AI Task.",
+                    "prefix": "You are an AI Task Classifier. You are clear and deterministic in your response. You always give classification label based on a plausible explanation. Study and understand the JSON below containing a list of AI task and its description.",
+                    "requirements": [
+                        "Give one or more AI tasks that best describes the use case",
+                        "Provide a brief, plausible explanation for your choice",
+                        "Be clear and deterministic in your classification",
+                        "The AI task should only be from the AI Task Definitions. Do not include any other task type.",
+                    ],
+                    "grounding_context": {
+                        "Use case": usecase,
+                        "AI Task Definitions": json.dumps(hf_ai_tasks, indent=2),
+                    },
+                }
+            )
+            for usecase in usecases
+        ]
 
         # Invoke inference service
         return inference_engine.generate(
-            prompts=[
-                Template(AI_TASKS_TEMPLATE).render(
-                    usecase=usecase, hf_ai_tasks=hf_ai_tasks, limit=len(hf_ai_tasks)
-                )
-                for usecase in usecases
-            ],
-            response_format=json_schema,
-            postprocessors=["list_of_str"],
+            prompts=prompts,
+            response_format=AITaskList,
+            postprocessors=["json_object"],
             verbose=verbose,
         )
 
@@ -1702,7 +1740,10 @@ class AIAtlasNexus:
         return instances
 
     def identify_domain_from_usecases(
-        cls, usecases: List[str], inference_engine: InferenceEngine, verbose=True
+        cls,
+        usecases: List[str],
+        inference_engine: InferenceEngine,
+        verbose=True,
     ) -> List[List[str]]:
         """Identify potential risks from a usecase description
 
@@ -1711,6 +1752,7 @@ class AIAtlasNexus:
                 A List of strings describing AI usecases
             inference_engine (InferenceEngine):
                 An LLM inference engine to identify AI tasks from usecases.
+            verbose (bool, optional): prints detailed output during the inference process. Defaults to True.
 
         Returns:
             List[List[str]]:
@@ -1740,22 +1782,44 @@ class AIAtlasNexus:
         # Retrieve domain question data
         domain_ques_data = risk_questionnaire[0]
 
+        # Load ai domain defintions from the template dir
+        AI_DOMAIN_DEFINITONS = load_resource("ai_domain_defintions.json")
+
         # Prepare few shots inference prompts from CoT Data
         prompts = [
-            FewShotPromptBuilder(
-                prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
-            ).build(
-                cot_examples=domain_ques_data["cot_examples"],
-                usecase=usecase,
-                question=domain_ques_data["question"],
+            (
+                FewShotPromptBuilder(
+                    prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
+                ).build(
+                    cot_examples=domain_ques_data["cot_examples"],
+                    usecase=usecase,
+                    question=domain_ques_data["question"],
+                )
+                if inference_engine.backend._backend_type == BackendType.DEFAULT
+                else {
+                    "description": "Classify the given use case into one of the AI Domains that describes it best. Use the AI domain definitions to make your decision. Provide a brief explanation for choosing a particular AI Domain. If no suitable domain exists, classify it as 'Other'",
+                    "prefix": "You are an AI Domain Classifier. You are clear and deterministic in your response. You always give classification label based on a plausible explanation.",
+                    "requirements": [
+                        "Give the AI domain that best describes the use case",
+                        "Provide a brief, plausible explanation for your choice",
+                        "Be clear and deterministic in your classification",
+                        "The AI domain should only be from the AI Domain Definitions. Do not include any other domain type.",
+                    ],
+                    "grounding_context": {
+                        "Use case": usecase,
+                        "AI Domain Definitions": json.dumps(
+                            AI_DOMAIN_DEFINITONS, indent=2
+                        ),
+                    },
+                }
             )
             for usecase in usecases
         ]
 
         # Invoke inference service
-        return inference_engine.chat(
-            messages=prompts,
-            response_format=DOMAIN_TYPE_SCHEMA,
+        return inference_engine.generate(
+            prompts=prompts,
+            response_format=DomainType,
             postprocessors=["json_object"],
             verbose=verbose,
         )

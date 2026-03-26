@@ -31,10 +31,12 @@ class RiskDetector(ABC):
         inference_engine: InferenceEngine,
         cot_examples: Optional[Dict[str, List]] = None,
         max_risk: Optional[int] = None,
+        use_dspy_prompt: bool = False,
     ):
         self.inference_engine = inference_engine
         self._risks = risks
         self._examples = cot_examples
+        self.use_dspy_prompt = use_dspy_prompt
 
         # Validate format of user-provided `cot_examples` if available
         if cot_examples is not None and (

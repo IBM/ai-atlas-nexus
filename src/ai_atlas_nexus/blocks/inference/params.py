@@ -2,6 +2,7 @@ import dataclasses
 from typing import Any, Dict, List, Literal, Optional, TypeAlias, TypedDict, Union
 
 from openai.types.chat import ChatCompletionMessageParam
+from pydantic import BaseModel
 
 
 class InferenceEngineCredentials(TypedDict):
@@ -112,6 +113,9 @@ class OllamaInferenceEngineParams(TypedDict):
     logprobs: Optional[bool] = None
     top_logprobs: Optional[int] = None
 
+    # enable or disable model thinking
+    think: Optional[Union[bool, Literal["low", "medium", "high"]]] = (None,)
+
 
 class VLLMInferenceEngineParams(TypedDict):
 
@@ -174,3 +178,13 @@ class TextGenerationInferenceOutput:
 
 
 OpenAIChatCompletionMessageParam: TypeAlias = List[ChatCompletionMessageParam]
+
+
+class MelleaInferenceParams(TypedDict, total=False):
+
+    description: str
+    format: type[BaseModel]
+    tools: Optional[Any] = None
+    prefix: Optional[str] = None
+    grounding_context: Optional[dict[str, str]] = None
+    requirements: Optional[list[str]] = None

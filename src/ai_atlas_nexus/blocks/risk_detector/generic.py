@@ -1,18 +1,30 @@
 import json
-from typing import List
+from typing import List, Literal
+
+from pydantic import create_model
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 from ai_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
-from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
-from ai_atlas_nexus.blocks.prompt_templates import RISK_IDENTIFICATION_TEMPLATE
+from ai_atlas_nexus.blocks.prompt_response_schema import AIRiskPresence
+from ai_atlas_nexus.blocks.prompt_templates import (
+    RISK_IDENTIFICATION_BATCH_TEMPLATE,
+    RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES,
+    RISK_IDENTIFICATION_PER_RISK_TEMPLATE,
+)
 from ai_atlas_nexus.blocks.risk_detector import RiskDetector
+from ai_atlas_nexus.toolkit.logging import configure_logger
+
+
+logger = configure_logger(__name__)
 
 
 class GenericRiskDetector(RiskDetector):
 
     def detect(self, usecases: List[str]) -> List[List[Risk]]:
         prompts = [
-            self.prompt_builder(prompt_template=RISK_IDENTIFICATION_TEMPLATE).build(
+            self.prompt_builder(
+                prompt_template=RISK_IDENTIFICATION_BATCH_TEMPLATE
+            ).build(
                 cot_examples=self._examples,
                 usecase=usecase,
                 risks=json.dumps(
@@ -27,15 +39,14 @@ class GenericRiskDetector(RiskDetector):
             for usecase in usecases
         ]
 
-        # Populate schema items
-        json_schema = dict(LIST_OF_STR_SCHEMA)
-        json_schema["items"]["enum"] = [risk.name for risk in self._risks]
-
         # Invoke inference service
         inference_responses: List[TextGenerationInferenceOutput] = (
             self.inference_engine.generate(
                 prompts,
-                response_format=json_schema,
+                response_format=create_model(
+                    "AIRisk",
+                    risks=(List[Literal[tuple([risk.name for risk in self._risks])]]),
+                ),
                 postprocessors=["list_of_str"],
             )
         )
@@ -53,3 +64,45 @@ class GenericRiskDetector(RiskDetector):
             )
             for inference_response in inference_responses
         ]
+
+    def detect_one(self, usecases: List[str]) -> List[List[Risk]]:
+        all_risks = []
+
+        for usecase in usecases:
+            prompts = [
+                self.prompt_builder(
+                    prompt_template=(
+                        RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES.get(
+                            self.inference_engine.model_name_or_path,
+                            RISK_IDENTIFICATION_PER_RISK_TEMPLATE,
+                        )
+                        if self.use_dspy_prompt
+                        else RISK_IDENTIFICATION_PER_RISK_TEMPLATE
+                    )
+                ).build(
+                    cot_examples=self._examples,
+                    usecase=usecase,
+                    risk_name=risk.name,
+                    risk_description=risk.description,
+                )
+                for risk in self._risks
+            ]
+
+            # Invoke inference service
+            inference_responses: List[TextGenerationInferenceOutput] = (
+                self.inference_engine.generate(
+                    prompts,
+                    response_format=AIRiskPresence,
+                    postprocessors=["json_object"],
+                )
+            )
+
+            all_risks.append(
+                [
+                    self._risks[index]
+                    for index, response in enumerate(inference_responses)
+                    if response.prediction["answer"] == "Yes"
+                ]
+            )
+
+        return all_risks

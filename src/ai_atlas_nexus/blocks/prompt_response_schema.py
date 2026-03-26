@@ -1,3 +1,7 @@
+from typing import List, Literal
+
+from pydantic import BaseModel, Field
+
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import EuAiRiskCategory
 
 
@@ -13,47 +17,58 @@ QUESTIONNAIRE_OUTPUT_SCHEMA = {
         "explanation": {"type": "string"},
         "confidence": {"type": "string"},
     },
-    "required": [
-        "answer",
-        "explanation",
-        "confidence"
-    ],
+    "required": ["answer", "explanation", "confidence"],
 }
 
-DOMAIN_TYPE_SCHEMA = {
-    "type": "object",
-    "properties": {
-        "answer": {
-            "type": "string",
-            "enum": [
-                "Customer service/support",
-                "Technical",
-                "Information retrieval",
-                "Strategy",
-                "Code/software engineering",
-                "Communications",
-                "IT/business automation",
-                "Writing assistant",
-                "Financial",
-                "Talent and Organization including HR",
-                "Product",
-                "Marketing",
-                "Cybersecurity",
-                "Healthcare",
-                "User Research",
-                "Sales",
-                "Risk and Compliance",
-                "Design",
-                "Other",
-            ],
-        },
-        "explanation": {"type": "string"},
-    },
-    "required": [
-        "answer",
-        "explanation",
-    ],
-}
+
+class AIRiskPresence(BaseModel):
+    """AI Risk Response Schema"""
+
+    answer: Literal["Yes", "No"]
+    explanation: str = Field(description="Explanation for having the given ai risk.")
+
+
+class AITask(BaseModel):
+    """AI Task Response Schema"""
+
+    ai_task: str
+    explanation: str = Field(description="Explanation for having the given ai task.")
+
+
+class AITaskList(BaseModel):
+    """AITaskList Response Schema"""
+
+    ai_tasks: List[AITask]
+
+
+class DomainType(BaseModel):
+    """Domain Response Schema"""
+
+    answer: Literal[
+        "Customer service/support",
+        "Technical",
+        "Information retrieval",
+        "Strategy",
+        "Code/software engineering",
+        "Communications",
+        "IT/business automation",
+        "Writing assistant",
+        "Financial",
+        "Talent and Organization including HR",
+        "Product",
+        "Marketing",
+        "Cybersecurity",
+        "Healthcare",
+        "User Research",
+        "Sales",
+        "Risk and Compliance",
+        "Design",
+        "Other",
+    ] = Field(description="Domain type of the usecase.")
+    explanation: str = Field(
+        description="Explanation for having the given domain type."
+    )
+
 
 RISK_CATEGORY_SCHEMA = {
     "type": "object",
