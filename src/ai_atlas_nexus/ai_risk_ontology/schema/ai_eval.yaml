@@ -181,6 +181,9 @@ classes:
         description: The official name of the benchmark.
       overview:
         description: A brief description of the benchmark's main goals and scope.
+      type:
+        range: string
+        designates_type: true
     slots:
       - describesAiEval
       - hasDataType
@@ -286,6 +289,7 @@ slots:
     description: The specific goal or primary use case the benchmark is designed for.
   hasAudience:
     description: The intended audience, such as researchers, developers, policymakers, etc.
+    multivalued: true
   hasTasks:
     description: The tasks or evaluations the benchmark is intended to assess.
     multivalued: true

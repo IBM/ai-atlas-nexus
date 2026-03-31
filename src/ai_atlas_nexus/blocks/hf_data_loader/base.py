@@ -104,8 +104,6 @@ class HFDataLoaderBase(ABC):
             try:
                 transformed = self.transform_record(record)
                 transformed_records.append(transformed)
-                if (idx + 1) % 100 == 0:
-                    logger.info(f"Processed {idx + 1} records")
             except Exception as e:
                 logger.warning(f"Failed to transform record {idx}: {e}")
                 continue
@@ -125,8 +123,6 @@ class HFDataLoaderBase(ABC):
         """
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
-
-        container_class = self.get_container_class_name()
 
         # Get the plural form of the class name (simple pluralization)
         # This assumes the LinkML model uses lowercase plurals
@@ -163,3 +159,24 @@ class HFDataLoaderBase(ABC):
         records = self.load_and_transform()
         self.save_to_yaml(records, output_path)
         logger.info(f"Load and save complete: {len(records)} records saved to {output_path}")
+
+
+    def _normalize_value(self, value: Any) -> list:
+        """
+        Normalize a value to a list format for LinkML fields.
+
+        Args:
+            value: The value to normalize
+
+        Returns:
+            A list representation of the value
+        """
+        if isinstance(value, str):
+            return [value]
+        elif isinstance(value, list):
+            return value
+        elif isinstance(value, dict):
+            # Convert dict values to list
+            return list(value.values()) if value.values() else [str(value)]
+        else:
+            return [str(value)]

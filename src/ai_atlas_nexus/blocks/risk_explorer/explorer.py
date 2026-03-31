@@ -611,7 +611,7 @@ class RiskExplorer(ExplorerBase):
         if aieval_id is not None:
             benchmark_metadata_card_instances = list(
                 filter(
-                    lambda benchmark_metadata_card: benchmark_metadata_card.describesAiEval
+                    lambda benchmark_metadata_card: benchmark_metadata_card.hasDataSource
                     == aieval_id,
                     benchmark_metadata_card_instances,
                 )

@@ -6,6 +6,9 @@ from datetime import datetime
 from typing import Any, Dict, Optional
 
 from ai_atlas_nexus import AIAtlasNexus
+from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
+    BenchmarkMetadataCard,
+)
 from ai_atlas_nexus.blocks.hf_data_loader.base import HFDataLoaderBase
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
@@ -64,7 +67,7 @@ class AutoBenchmarkCardLoader(HFDataLoaderBase):
 
         # Optional fields
         optional_mappings = [
-            ("describesAiEval", ["data", "source"]),
+            ("describesAiEval", ["benchmark_details", "name"]),
             ("hasDataType", ["benchmark_details", "data_type"]),
             ("hasDomains", ["benchmark_details", "domains"]),
             ("hasLanguages", ["benchmark_details", "languages"]),
@@ -96,16 +99,27 @@ class AutoBenchmarkCardLoader(HFDataLoaderBase):
             value = self._get_nested_field(benchmark_card, *possible_source_fields)
 
             if value:
-                metadata_card[linkml_field] = self._normalize_value(value)
+                # Check if field is multivalued
+                field_info = BenchmarkMetadataCard.model_fields.get(linkml_field)
+                is_multivalued = (
+                    field_info and
+                    hasattr(field_info, 'annotation') and
+                    'list' in str(field_info.annotation)
+                )
+
+                if is_multivalued:
+                    metadata_card[linkml_field] = self._normalize_value(value)
+                else:
+                    metadata_card[linkml_field] = value
 
         # related risks
         if benchmark_card["possible_risks"]:
             related_risks = [self._nexus.query("risk", name=risk["category"], isDefinedByTaxonomy="ibm-risk-atlas") for risk in benchmark_card["possible_risks"]]
-            metadata_card["hasRelatedRisks"] = [item.id for sublist in related_risks for item in sublist]
+            metadata_card["hasRelatedRisk"] = [item.id for sublist in related_risks for item in sublist]
 
 
         # Add metadata
-        metadata_card["dateCreated"] = datetime.now().isoformat()
+        metadata_card["dateCreated"] = datetime.now().date().isoformat()
 
         return metadata_card
 
@@ -146,26 +160,6 @@ class AutoBenchmarkCardLoader(HFDataLoaderBase):
         value = obj[field_names[0]][field_names[1]]
         return value
 
-
-    def _normalize_value(self, value: Any) -> list:
-        """
-        Normalize a value to a list format for LinkML fields.
-
-        Args:
-            value: The value to normalize
-
-        Returns:
-            A list representation of the value
-        """
-        if isinstance(value, str):
-            return [value]
-        elif isinstance(value, list):
-            return value
-        elif isinstance(value, dict):
-            # Convert dict values to list
-            return list(value.values()) if value.values() else [str(value)]
-        else:
-            return [str(value)]
 
     def get_container_class_name(self) -> str:
         """Get the LinkML container class name."""
