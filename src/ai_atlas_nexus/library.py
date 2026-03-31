@@ -371,13 +371,19 @@ class AIAtlasNexus:
             risk = cls.get_risk(tag=tag)
 
         # just get all the related risks from the risk, these should have been added during lifting
-        options = [risk.close_mappings or [],
-        risk.exact_mappings or [] ,
-        risk.broad_mappings or [] ,
-        risk.narrow_mappings or [],
-        risk.related_mappings or []]
+        options = [
+            risk.close_mappings or [],
+            risk.exact_mappings or [],
+            risk.broad_mappings or [],
+            risk.narrow_mappings or [],
+            risk.related_mappings or [],
+        ]
         related_risk_ids = [x for x_list in options for x in x_list]
-        related_risk_instances = [cls.get_risk(id=x) for x in related_risk_ids]
+        related_risk_instances = [
+            risk_instance
+            for risk_instance in [cls.get_risk(id=x) for x in related_risk_ids]
+            if risk_instance is not None
+        ]
         return related_risk_instances
 
     def get_related_actions(
@@ -619,7 +625,6 @@ class AIAtlasNexus:
         cot_examples: Optional[Dict[str, List]] = None,
         max_risk: Optional[int] = None,
         zero_shot_only: bool = False,
-        batch_inference: bool = True,
     ) -> List[List[Risk]]:
         """Identify potential risks from a usecase description
 
@@ -637,7 +642,6 @@ class AIAtlasNexus:
             max_risk (int, optional):
                 The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.
             zero_shot_only (bool): If enabled, this flag allows the system to perform Zero Shot Risk identification, and the field `cot_examples` will be ignored.
-            batch_inference (bool): Whether to run risk inference service in batch mode or at each risk level. Defaults to True.
         Returns:
             List[List[Risk]]:
                 Result containing a list of risks
@@ -682,13 +686,13 @@ class AIAtlasNexus:
 
         processed_examples = None
         if zero_shot_only:
-            logger.info(
+            logger.debug(
                 f"The `zero_shot_only` flag is enabled. The system will use the Zero shot method. Any provided `cot_examples` will be disregarded.",
             )
         else:
             # For the given taxonomy type, check if the user has provided 'cot_examples'. If not,
             # retrieve the default cot examples from the master. If no examples exist in the master,
-            # set it as None.
+            # set it as None. The CoT examples include risk-related questions that have been synthetically generated for this task.
             processed_examples = (
                 cot_examples and cot_examples.get(set_taxonomy, None)
             ) or RISK_IDENTIFICATION_COT.get(set_taxonomy, None)
@@ -715,11 +719,7 @@ class AIAtlasNexus:
             max_risk=max_risk,
         )
 
-        return (
-            risk_detector.detect(usecases)
-            if batch_inference
-            else risk_detector.detect_one(usecases)
-        )
+        return risk_detector.detect(usecases)
 
     def get_all_taxonomies(cls):
         """Get all taxonomy definitions from the LinkML
@@ -934,7 +934,10 @@ class AIAtlasNexus:
         )
 
         # Load HF tasks from the template dir
-        hf_ai_tasks = [{"task_label": task.name, "task_description": task.description} for task in cls.get_all(class_name="aitasks", taxonomy="hf-ml-tasks")]
+        hf_ai_tasks = [
+            {"task_label": task.name, "task_description": task.description}
+            for task in cls.get_all(class_name="aitasks", taxonomy="hf-ml-tasks")
+        ]
 
         # Populate schema items
         json_schema = dict(LIST_OF_STR_SCHEMA)
@@ -1492,9 +1495,18 @@ class AIAtlasNexus:
                 aitask = cls.get_by_id(class_name="aitasks", identifier=aitask_id)
 
             related_llmintrinsics = []
-            capability_ids = cls._atlas_explorer.get_attribute(class_name="aitasks", identifier=aitask.id, attribute="requiresCapability") or []
+            capability_ids = (
+                cls._atlas_explorer.get_attribute(
+                    class_name="aitasks",
+                    identifier=aitask.id,
+                    attribute="requiresCapability",
+                )
+                or []
+            )
             for cap in capability_ids:
-                related_llmintrinsics += cls._atlas_explorer.query("llmintrinsics", c=cap.id, taxonomy=taxonomy)
+                related_llmintrinsics += cls._atlas_explorer.query(
+                    "llmintrinsics", c=cap.id, taxonomy=taxonomy
+                )
         else:
             if risk_id:
                 risk = cls.get_risk(id=risk_id)
@@ -1503,7 +1515,9 @@ class AIAtlasNexus:
             elif name:
                 risk = cls.get_risk(name=name)
 
-            related_llmintrinsics = cls._atlas_explorer.query("llmintrinsics", hasRelatedRisk=risk.id, taxonomy=taxonomy)
+            related_llmintrinsics = cls._atlas_explorer.query(
+                "llmintrinsics", hasRelatedRisk=risk.id, taxonomy=taxonomy
+            )
 
         return related_llmintrinsics
 

@@ -81,6 +81,17 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 
       RiskControl : id
 
+      RiskControl : isCategorizedAs
+
+
+
+
+
+        RiskControl --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       RiskControl : isDefinedByTaxonomy
 
 
@@ -148,7 +159,7 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 | [detectsRiskConcept](detectsRiskConcept.md)   | \* <br/> [RiskConcept](RiskConcept.md)     | The property airo:detectsRiskConcept indicates the control used for detecting... | direct                                       |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | direct                                       |
 | [isDetectedBy](isDetectedBy.md)               | \* <br/> [RiskControl](RiskControl.md)     | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)                |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Concept](Concept.md), [Control](Control.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Control](Control.md), [Concept](Concept.md) |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                          |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md)                          |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md)                          |
@@ -160,6 +171,7 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 | [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                          |
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                          |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                          |
+| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                          |
 | [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Concept](Concept.md)                        |
 
 ## Mixin Usage
@@ -171,6 +183,8 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 
 | used by                                     | used in                                     | type   | used                          |
 | ------------------------------------------- | ------------------------------------------- | ------ | ----------------------------- |
+| [RiskControlGroup](RiskControlGroup.md)     | [hasPart](hasPart.md)                       | range  | [RiskControl](RiskControl.md) |
+| [RiskControlGroup](RiskControlGroup.md)     | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
 | [RiskGroup](RiskGroup.md)                   | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
 | [Risk](Risk.md)                             | [detectsRiskConcept](detectsRiskConcept.md) | domain | [RiskControl](RiskControl.md) |
 | [Risk](Risk.md)                             | [isDetectedBy](isDetectedBy.md)             | range  | [RiskControl](RiskControl.md) |
@@ -266,14 +280,17 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
+    - Requirement
     range: Taxonomy
   isDetectedBy:
     name: isDetectedBy
@@ -304,6 +321,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   id:
     name: id
@@ -450,6 +479,19 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
+    owner: RiskControl
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
   hasDocumentation:
     name: hasDocumentation
     description: Indicates documentation associated with an entity.
@@ -468,6 +510,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily

@@ -35,6 +35,8 @@ URI: [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/Capa
 
 
 
+      CapabilityDomain : broader
+
       CapabilityDomain : close_mappings
 
 
@@ -87,6 +89,17 @@ URI: [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/Capa
 
       CapabilityDomain : id
 
+      CapabilityDomain : isCategorizedAs
+
+
+
+
+
+        CapabilityDomain --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       CapabilityDomain : isDefinedByTaxonomy
 
 
@@ -110,6 +123,8 @@ URI: [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/Capa
         click Any href "../Any/"
 
 
+
+      CapabilityDomain : narrower
 
       CapabilityDomain : related_mappings
 
@@ -139,11 +154,13 @@ URI: [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/Capa
 
 | Name                                          | Cardinality and Range                          | Description                                                                      | Inheritance                              |
 | --------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------- |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)             | A relationship where a concept or a concept group is defined by a taxonomy       | [Group](Group.md), [Concept](Concept.md) |
-| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)     | Indicates documentation associated with an entity                                | [Group](Group.md), [Concept](Concept.md) |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)             | A relationship where a concept or a concept group is defined by a taxonomy       | [Concept](Concept.md), [Group](Group.md) |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)     | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Group](Group.md) |
 | [hasPart](hasPart.md)                         | \* <br/> [CapabilityGroup](CapabilityGroup.md) | A relationship where a capability domain has capability groups                   | [Group](Group.md)                        |
 | [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                       | A relationship where a group belongs to a domain                                 | [Group](Group.md)                        |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)                 |                                                                                  | [Group](Group.md), [Concept](Concept.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                 |                                                                                  | [Concept](Concept.md), [Group](Group.md) |
+| [narrower](narrower.md)                       | \* <br/> [String](String.md)                   |                                                                                  | [Group](Group.md)                        |
+| [broader](broader.md)                         | \* <br/> [String](String.md)                   |                                                                                  | [Group](Group.md)                        |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                    | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                 | A text name of this instance                                                     | [Entity](Entity.md)                      |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)                 | The description of an entity                                                     | [Entity](Entity.md)                      |
@@ -155,6 +172,7 @@ URI: [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/Capa
 | [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                         | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                      |
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
+| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                         | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                      |
 
 ## Usages
 
@@ -231,14 +249,17 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
+    - Requirement
     range: Taxonomy
   hasDocumentation:
     name: hasDocumentation
@@ -258,6 +279,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -278,6 +300,7 @@ attributes:
     owner: CapabilityDomain
     domain_of:
     - Group
+    - RiskControlGroup
     - RiskGroup
     - CapabilityGroup
     range: CapabilityGroup
@@ -311,7 +334,41 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
+  narrower:
+    name: narrower
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: narrower
+    owner: CapabilityDomain
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
+  broader:
+    name: broader
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: broader
+    owner: CapabilityDomain
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -451,6 +508,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: CapabilityDomain
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: CapabilityDomain
     domain_of:
     - Entity

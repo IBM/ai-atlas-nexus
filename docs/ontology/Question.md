@@ -115,6 +115,17 @@ URI: [nexus:Question](https://ibm.github.io/ai-atlas-nexus/ontology/Question)
 
       Question : id
 
+      Question : isCategorizedAs
+
+
+
+
+
+        Question --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       Question : name
 
       Question : narrow_mappings
@@ -177,6 +188,7 @@ URI: [nexus:Question](https://ibm.github.io/ai-atlas-nexus/ontology/Question)
 | [related_mappings](related_mappings.md)         | \* <br/> [Any](Any.md)                                                                                       | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)           | \* <br/> [Any](Any.md)                                                                                       | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)             | \* <br/> [Any](Any.md)                                                                                       | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)           | \* <br/> [Any](Any.md)                                                                                       | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 
 ## Identifier and Mapping Information
 
@@ -254,6 +266,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -329,6 +342,7 @@ attributes:
     - Vocabulary
     - Taxonomy
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
@@ -346,6 +360,7 @@ attributes:
     - Term
     - LLMQuestionPolicy
     - Action
+    - AiSystem
     - AiEval
     - BenchmarkMetadataCard
     - Adapter
@@ -520,6 +535,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: Question
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: Question
     domain_of:
     - Entity

@@ -15,6 +15,11 @@ repos:
     hooks:
       - id: prettier
         types_or: [yaml, markdown]
+        exclude: |
+          (?x)^(
+            docs/reference/ai_ontology_reference\.md|
+            docs/reference/library_reference\.md
+          )$
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.29.0
     hooks:

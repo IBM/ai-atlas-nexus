@@ -11,11 +11,12 @@ Alias: hasPart
 
 | Name                                    | Description                                                                      | Modifies Slot |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
+| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | yes           |
 | [Group](Group.md)                       | Labelled groups of concepts                                                      | no            |
+| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | yes           |
 | [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        | yes           |
 | [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
-| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | yes           |
+| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
 
 ## Properties
 
@@ -48,6 +49,7 @@ slot_uri: skos:member
 alias: hasPart
 domain_of:
 - Group
+- RiskControlGroup
 - RiskGroup
 - CapabilityGroup
 range: string

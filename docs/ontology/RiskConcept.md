@@ -12,6 +12,8 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
         click Concept href "../Concept/"
 
 
+      RiskConcept <|-- RiskControlGroup
+        click RiskControlGroup href "../RiskControlGroup/"
       RiskConcept <|-- RiskGroup
         click RiskGroup href "../RiskGroup/"
       RiskConcept <|-- Risk
@@ -75,6 +77,17 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 
 
       RiskConcept : id
+
+      RiskConcept : isCategorizedAs
+
+
+
+
+
+        RiskConcept --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
 
       RiskConcept : isDefinedByTaxonomy
 
@@ -154,16 +167,18 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)   |
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)   |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)   |
+| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)   |
 
 ## Mixin Usage
 
-| mixed into                      | description                                                                      |
-| ------------------------------- | -------------------------------------------------------------------------------- |
-| [RiskGroup](RiskGroup.md)       | A group of AI system related risks that are part of a risk taxonomy              |
-| [Risk](Risk.md)                 | The state of uncertainty associated with an AI system, that has the potential... |
-| [RiskControl](RiskControl.md)   | A measure that maintains and/or modifies risk (and risk concepts)                |
-| [RiskIncident](RiskIncident.md) | An event occuring or occured which is a realised or materialised risk            |
-| [Impact](Impact.md)             |                                                                                  |
+| mixed into                              | description                                                                      |
+| --------------------------------------- | -------------------------------------------------------------------------------- |
+| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       |
+| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              |
+| [Risk](Risk.md)                         | The state of uncertainty associated with an AI system, that has the potential... |
+| [RiskControl](RiskControl.md)           | A measure that maintains and/or modifies risk (and risk concepts)                |
+| [RiskIncident](RiskIncident.md)         | An event occuring or occured which is a realised or materialised risk            |
+| [Impact](Impact.md)                     |                                                                                  |
 
 ## Usages
 
@@ -171,6 +186,7 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | ------------------------------------------------- | ------------------------------------------- | ------------- | ----------------------------- |
 | [Term](Term.md)                                   | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [LLMQuestionPolicy](LLMQuestionPolicy.md)         | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [RiskControlGroup](RiskControlGroup.md)           | [isDetectedBy](isDetectedBy.md)             | domain        | [RiskConcept](RiskConcept.md) |
 | [RiskGroup](RiskGroup.md)                         | [isDetectedBy](isDetectedBy.md)             | domain        | [RiskConcept](RiskConcept.md) |
 | [Risk](Risk.md)                                   | [detectsRiskConcept](detectsRiskConcept.md) | range         | [RiskConcept](RiskConcept.md) |
 | [Risk](Risk.md)                                   | [isDetectedBy](isDetectedBy.md)             | domain        | [RiskConcept](RiskConcept.md) |
@@ -188,6 +204,8 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [RiskIncident](RiskIncident.md)                   | [hasImpact](hasImpact.md)                   | domain        | [RiskConcept](RiskConcept.md) |
 | [RiskIncident](RiskIncident.md)                   | [isDetectedBy](isDetectedBy.md)             | domain        | [RiskConcept](RiskConcept.md) |
 | [Impact](Impact.md)                               | [isDetectedBy](isDetectedBy.md)             | domain        | [RiskConcept](RiskConcept.md) |
+| [AiSystem](AiSystem.md)                           | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [AiAgent](AiAgent.md)                             | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
@@ -271,14 +289,17 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
+    - Requirement
     range: Taxonomy
   hasDocumentation:
     name: hasDocumentation
@@ -298,6 +319,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -322,6 +344,18 @@ attributes:
     - Group
     - Entry
     - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
     range: string
   id:
     name: id
@@ -462,6 +496,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: RiskConcept
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: RiskConcept
     domain_of:
     - Entity

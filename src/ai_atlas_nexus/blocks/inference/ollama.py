@@ -41,7 +41,7 @@ class OllamaInferenceEngine(InferenceEngine):
         )
 
         if api_url:
-            logger.info(
+            logger.debug(
                 f"{self._inference_engine_type} inference engine will execute requests on the server at {api_url}."
             )
 

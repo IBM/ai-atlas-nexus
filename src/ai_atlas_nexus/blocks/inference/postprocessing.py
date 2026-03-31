@@ -64,7 +64,8 @@ class ListOfStr:
                 list_of_text = re.findall(r'"(.*?)"', text)
 
         if isinstance(list_of_text, List):
-            list_of_text = [text.strip() for text in list_of_text]
+            list_of_text = [text.strip().encode('utf-8').decode('unicode-escape') for text in list_of_text]
+
 
         return list_of_text
 

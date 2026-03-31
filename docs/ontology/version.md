@@ -9,13 +9,14 @@ Alias: version
 
 ## Applicable Classes
 
-| Name                                        | Description                                                                      | Modifies Slot |
-| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Vocabulary](Vocabulary.md)                 | A collection of terms, with their definitions and relationships                  | no            |
-| [Taxonomy](Taxonomy.md)                     | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
-| [License](License.md)                       | The general notion of a license which defines terms and grants permissions to... | no            |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md) | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
-| [RiskTaxonomy](RiskTaxonomy.md)             | A taxonomy of AI system related risks                                            | no            |
+| Name                                                    | Description                                                                      | Modifies Slot |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
+| [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
+| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
+| [License](License.md)                                   | The general notion of a license which defines terms and grants permissions to... | no            |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
 
 ## Properties
 
@@ -49,6 +50,7 @@ domain_of:
 - Vocabulary
 - Taxonomy
 - RiskTaxonomy
+- RiskControlGroupTaxonomy
 range: string
 
 ```

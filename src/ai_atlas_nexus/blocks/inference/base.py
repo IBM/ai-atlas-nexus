@@ -66,7 +66,7 @@ class InferenceEngine(ABC):
         if think:
             self.is_thinking_supported()
 
-        logger.info(f"Created {self._inference_engine_type} inference engine.")
+        logger.info(f"Created {self._inference_engine_type} inference engine for {model_name_or_path}")
 
     def _check_if_parameters_are_valid(self, parameters):
         if parameters:

@@ -56,14 +56,22 @@ URI: [schema:Thing](http://schema.org/Thing)
         click Modality href "../Modality/"
       Entity <|-- Input
         click Input href "../Input/"
+      Entity <|-- Purpose
+        click Purpose href "../Purpose/"
+      Entity <|-- Domain
+        click Domain href "../Domain/"
+      Entity <|-- LocalityOfUse
+        click LocalityOfUse href "../LocalityOfUse/"
+      Entity <|-- AIComponent
+        click AIComponent href "../AIComponent/"
+      Entity <|-- Stakeholder
+        click Stakeholder href "../Stakeholder/"
       Entity <|-- AiEval
         click AiEval href "../AiEval/"
       Entity <|-- AiEvalResult
         click AiEvalResult href "../AiEvalResult/"
       Entity <|-- BenchmarkMetadataCard
         click BenchmarkMetadataCard href "../BenchmarkMetadataCard/"
-      Entity <|-- Stakeholder
-        click Stakeholder href "../Stakeholder/"
 
       Entity : broad_mappings
 
@@ -105,6 +113,17 @@ URI: [schema:Thing](http://schema.org/Thing)
 
 
       Entity : id
+
+      Entity : isCategorizedAs
+
+
+
+
+
+        Entity --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
 
       Entity : name
 
@@ -161,10 +180,14 @@ URI: [schema:Thing](http://schema.org/Thing)
   - [AiLifecyclePhase](AiLifecyclePhase.md)
   - [Modality](Modality.md)
   - [Input](Input.md)
+  - [Purpose](Purpose.md)
+  - [Domain](Domain.md)
+  - [LocalityOfUse](LocalityOfUse.md)
+  - [AIComponent](AIComponent.md)
+  - [Stakeholder](Stakeholder.md)
   - [AiEval](AiEval.md)
   - [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
   - [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
-  - [Stakeholder](Stakeholder.md)
 
 ## Slots
 
@@ -181,6 +204,7 @@ URI: [schema:Thing](http://schema.org/Thing)
 | [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)         | The property skos:relatedMatch is used to state an associative mapping link b... | direct      |
 | [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | direct      |
 | [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | direct      |
+| [isCategorizedAs](isCategorizedAs.md)   | \* <br/> [Any](Any.md)         | A relationship where an entity has been deemed to be categorized                 | direct      |
 
 ## Mixin Usage
 
@@ -225,6 +249,7 @@ slots:
 - related_mappings
 - narrow_mappings
 - broad_mappings
+- isCategorizedAs
 class_uri: schema:Thing
 
 ````
@@ -379,6 +404,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: Entity
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: Entity
     domain_of:
     - Entity

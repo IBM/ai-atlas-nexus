@@ -12,7 +12,7 @@ imports:
   - ai_risk
 prefixes:
   linkml: https://w3id.org/linkml/
-  airo: https://delaramglp.github.io/airo/#
+  airo: https://w3id.org/airo#
   nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
 
 default_range: string
@@ -35,20 +35,32 @@ classes:
       - isProvidedBy
 
   AiSystem:
-    is_a: BaseAi
+    is_a: Entry
+    mixin: true
     class_uri: airo:AISystem
+    mixins:
+      - BaseAi
     description: >-
       A compound AI System composed of one or more AI capablities. ChatGPT is an example of an AI system which deploys
       multiple GPT AI models.
-    mixins:
     slot_usage:
       isComposedOf:
         range: BaseAi
         description: Relationship indicating the AI components from which a complete AI system is composed.
     slots:
+      - isComposedOf
       - hasEuAiSystemType
       - hasEuRiskCategory
       - hasCapability
+      - isAppliedWithinDomain
+      - isUsedWithinLocality
+      - hasPurpose
+      - hasStakeholder
+      - isDeployedBy
+      - isDevelopedBy
+      - hasAISubject
+      - hasAIUser
+      - hasRelatedRisk
 
   AiAgent:
     is_a: AiSystem
@@ -66,6 +78,8 @@ classes:
     description: >-
       A base AI Model class. No assumption about the type (SVM, LLM, etc.). Subclassed by model types (see
       LargeLanguageModel).
+    mixins:
+      - AIComponent
     slots:
       - hasEvaluation
       - architecture
@@ -153,6 +167,75 @@ classes:
     description: Input for which the system or component generates output.
     slots:
 
+  Purpose:
+    is_a: Entity
+    class_uri: airo:Purpose
+    description: The end goal for which an entity is used or an action is taken.
+
+  Domain:
+    is_a: Entity
+    class_uri: airo:Domain
+    description: An area, sector, or industry that is associated with economic activities.
+
+  LocalityOfUse:
+    is_a: Entity
+    class_uri: airo:LocalityOfUse
+    description: The area, e.g. facility or institution, in which an entity is used.
+
+  AIComponent:
+    is_a: Entity
+    class_uri: airo:AIComponent
+    description: Component (element) of an AI system
+
+  AISubject:
+    is_a: Stakeholder
+    class_uri: airo:AISubject
+    description: >-
+      An entity that is subject to or impacted by the use of AI.
+
+  AIOperator:
+    is_a: Stakeholder
+    class_uri: airo:AIOperator
+    description: >-
+      Refers to a provider, product manufacturer, deployer, authorised representative, importer or distributor.
+
+  AIDeveloper:
+    is_a: Stakeholder
+    class_uri: airo:AIDeveloper
+    description: >-
+      An organisation or entity that is concerned with the development of AI services and products.
+
+  AIDeployer:
+    is_a: AIOperator
+    class_uri: airo:AIDeployer
+    description: >-
+      Any natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity.
+
+  AIUser:
+    is_a: Stakeholder
+    class_uri: airo:AIUser
+    description: >-
+      Individual or group that interacts with a system.
+
+  Stakeholder:
+    is_a: Entity
+    class_uri: airo:Stakeholder
+    description: >-
+      Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity.
+    slot_usage:
+      isPartOf:
+        description: A relationship where a stakeholder is part of a stakeholder group
+        range: StakeholderGroup
+    slots:
+      - isDefinedByTaxonomy
+      - isPartOf
+
+  StakeholderGroup:
+    is_a: Group
+    description: An AI system stakeholder grouping.
+    slots:
+      - isDefinedByTaxonomy
+
 # ----------------
 # Slots
 # ----------------
@@ -184,12 +267,63 @@ slots:
     description: >-
       A relationship indicating the output modalities supported by an AI component. Examples include text, image, video.
     range: Modality
+  hasPurpose:
+    slot_uri: airo:hasPurpose
+    range: Purpose
+    description: >-
+      Indicates the purpose of an entity, e.g. AI system, components.
   hasTrainingData:
     slot_uri: airo:hasTrainingData
     multivalued: true
     inlined: false
     description: A relationship indicating the datasets an AI model was trained on.
     range: Dataset
+  isAppliedWithinDomain:
+    slot_uri: airo:isAppliedWithinDomain
+    multivalued: true
+    inlined: false
+    description: >-
+      Specifies the domain an AI system is used within.
+    domain:
+      - AISystem
+      - AIComponent
+    range: Domain
+  isDeployedBy:
+    slot_uri: airo:isDeployedBy
+    description: >-
+      Indicates the deployer of an AI system or component.
+    domain:
+      - AISystem
+      - AIComponent
+    range: AIDeployer
+  isDevelopedBy:
+    slot_uri: airo:isDevelopedBy
+    description: >-
+      Indicates the developer of an AI system or component.
+    domain:
+      - AISystem
+      - AIComponent
+    range: AIDeveloper
+  isProvidedBy:
+    slot_uri: airo:isProvidedBy
+    description: >-
+      Indicates provider of an AI system or component.
+    range: AiProvider
+  isUsedBy:
+    slot_uri: airo:isUsedBy
+    description: >-
+      Indicates user of an AI system.
+    range: AiProvider
+  isUsedWithinLocality:
+    slot_uri: airo:isUsedWithinLocality
+    multivalued: true
+    inlined: false
+    description: >-
+      Specifies the domain an AI system is used within.
+    domain:
+      - AISystem
+      - AIComponent
+    range: LocalityOfUse
   training_data_preprocessing:
     multivalued: true
     inlined: false
@@ -197,11 +331,6 @@ slots:
       relationship indicating data preprocessing steps performed on training data sets to ensure high quality training
       data.
     range: DataPreprocessing
-  isProvidedBy:
-    slot_uri: airo:isProvidedBy
-    description: >-
-      A relationship indicating the AI model has been provided by an AI model provider.
-    range: AiProvider
   validated_by:
     multivalued: true
     inlined_as_list: true
@@ -231,3 +360,23 @@ slots:
     description: Indicates the control measures associated with a system or component to modify risks.
     multivalued: true
     range: RiskControl
+  hasAIUser:
+    slot_uri: airo:hasAiUser
+    domain: AISystem
+    description: >-
+      Indicate the end-user of an AI system.
+  hasStakeholder:
+    slot_uri: airo:hasStakeholder
+    domain:
+      - airo:AISystem
+      - airo:AIComponent
+    range: Stakeholder
+    description: >-
+      Indicates stakeholders of an AI system or component.
+  hasAISubject:
+    slot_uri: airo:hasAISubject
+    domain:
+      - airo:AISystem
+    range: AISubject
+    description: >-
+      Indicates the subjects of an AI system
