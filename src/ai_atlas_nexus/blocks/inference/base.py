@@ -59,7 +59,7 @@ class InferenceEngine(ABC):
             self.ping()
         except Exception as e:
             raise Exception(
-                f"Failed to create `{self.__class__.__name__}`. Reason: {str(e)} Given API credentials: {self.credentials}"
+                f"Failed to create `{self._inference_engine_type}` inference engine. Reason: {str(e)}"
             )
 
         # Verify whether the inference engine and the model type support `thinking`.
