@@ -33,7 +33,9 @@ class BenchmarkRiskDetector(RiskDetector):
 
     def detect(self, usecases: List[str]) -> List[List[Risk]]:
         prompts = [
-            self.prompt_builder(prompt_template=BENCHMARK_RISK_IDENTIFICATION_TEMPLATE).build(
+            self.prompt_builder(
+                prompt_template=BENCHMARK_RISK_IDENTIFICATION_TEMPLATE
+            ).build(
                 cot_examples=self._examples,
                 usecase=usecase,
                 risks=json.dumps(

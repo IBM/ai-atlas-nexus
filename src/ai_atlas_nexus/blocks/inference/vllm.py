@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict, List, Union
+from typing import Dict, List, Union
 
 from dotenv import load_dotenv
 from openai import BadRequestError
@@ -7,6 +7,7 @@ from openai import BadRequestError
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    MelleaInferenceParams,
     OpenAIChatCompletionMessageParam,
     TextGenerationInferenceOutput,
     VLLMInferenceEngineParams,
@@ -59,13 +60,15 @@ class VLLMInferenceEngine(InferenceEngine):
             )
             return None
 
-    def create_client(self, credentials):
-        if credentials:
+    def create_client(self):
+        if self.credentials:
             from openai import OpenAI
 
             return OpenAI(
-                api_key=credentials["api_key"] if credentials["api_key"] else "-",
-                base_url=f"{credentials['api_url']}/v1",
+                api_key=(
+                    self.credentials["api_key"] if self.credentials["api_key"] else "-"
+                ),
+                base_url=f"{self.credentials['api_url']}/v1",
             )
         else:
             from vllm import LLM
@@ -87,9 +90,9 @@ class VLLMInferenceEngine(InferenceEngine):
     @postprocess
     def generate(
         self,
-        prompts: List[str],
+        prompts: Union[List[str], List[MelleaInferenceParams]],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ):
         from vllm import LLM, SamplingParams
@@ -110,20 +113,22 @@ class VLLMInferenceEngine(InferenceEngine):
             return responses
         else:
 
-            def chat_response(prompt):
+            def generate_text(prompt):
                 response = self.client.chat.completions.create(
                     model=self.model_name_or_path,
                     messages=self._to_openai_format(prompt),
-                    response_format=self._create_schema_format(response_format),
+                    response_format=self._create_schema_format(
+                        self.format(response_format)
+                    ),
                     **self.parameters,
                 )
                 return self._prepare_chat_output(response, offline=False)
 
             try:
                 return run_parallel(
-                    chat_response,
+                    generate_text,
                     prompts,
-                    f"Inferring with {self._inference_engine_type}",
+                    f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     self.concurrency_limit,
                     verbose=verbose,
                 )
@@ -141,11 +146,13 @@ class VLLMInferenceEngine(InferenceEngine):
     def chat(
         self,
         messages: Union[
-            List[OpenAIChatCompletionMessageParam],
+            str,
             List[str],
+            OpenAIChatCompletionMessageParam,
+            List[OpenAIChatCompletionMessageParam],
         ],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
     ):
         from vllm import LLM, SamplingParams
@@ -170,7 +177,9 @@ class VLLMInferenceEngine(InferenceEngine):
                 response = self.client.chat.completions.create(
                     model=self.model_name_or_path,
                     messages=self._to_openai_format(messages),
-                    response_format=self._create_schema_format(response_format),
+                    response_format=self._create_schema_format(
+                        self.format(response_format)
+                    ),
                     **self.parameters,
                 )
                 return self._prepare_chat_output(response, offline=False)
@@ -178,8 +187,8 @@ class VLLMInferenceEngine(InferenceEngine):
             try:
                 return run_parallel(
                     chat_response,
-                    messages,
-                    f"Inferring with {self._inference_engine_type}",
+                    self._validate_chat_messages(messages),
+                    f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     self.concurrency_limit,
                     verbose=verbose,
                 )
