@@ -10,15 +10,17 @@ LIST_OF_STR_SCHEMA = {
     "items": {"enum": None},
 }
 
-QUESTIONNAIRE_OUTPUT_SCHEMA = {
-    "type": "object",
-    "properties": {
-        "answer": {"type": "string"},
-        "explanation": {"type": "string"},
-        "confidence": {"type": "string"},
-    },
-    "required": ["answer", "explanation", "confidence"],
-}
+
+class QuestionnaireOutput(BaseModel):
+    """Questionnaire Response Schema"""
+
+    answer: str = Field(description="Answer to the question.")
+    explanation: str = Field(
+        description="A brief two-sentende explanation on how that answer was generated"
+    )
+    confidence: Literal[
+        "Likely answer from the intent", "Directly from the input text"
+    ] = Field(description="Confidence in answering the question.")
 
 
 class AIRiskPresence(BaseModel):

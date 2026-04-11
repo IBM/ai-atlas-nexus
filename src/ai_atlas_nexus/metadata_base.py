@@ -15,9 +15,6 @@ class InferenceEngineType(StrEnum):
     def list(cls):
         return list(map(lambda c: c.name, cls))
 
-    def __str__(self):
-        return self.name.upper()
-
 
 @unique
 class MappingMethod(str, Enum):
@@ -36,11 +33,7 @@ class MappingMethod(str, Enum):
 
 @unique
 class BackendType(StrEnum):
-    """Available backend types."""
+    """LLM Inference backend types."""
 
     DEFAULT = auto()
     MELLEA = auto()
-
-    @classmethod
-    def list(cls):
-        return [type for type in map(lambda c: c.value, cls) if type != "default"]

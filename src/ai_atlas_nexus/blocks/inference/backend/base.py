@@ -13,7 +13,7 @@ class InferenceBackend(ABC):
         credentials: Dict[str, str],
         llm_parameters: Dict,
     ) -> Any:
-        """Initialize Mellea backend with the provided inference service."""
+        """Initialize Inference backend with the provided inference engine."""
         pass
 
     @abstractmethod

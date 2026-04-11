@@ -42,10 +42,9 @@ from ai_atlas_nexus.blocks.prompt_builder import (
     ZeroShotPromptBuilder,
 )
 from ai_atlas_nexus.blocks.prompt_response_schema import (
-    LIST_OF_STR_SCHEMA,
-    QUESTIONNAIRE_OUTPUT_SCHEMA,
     AITaskList,
     DomainType,
+    QuestionnaireOutput,
 )
 from ai_atlas_nexus.blocks.prompt_templates import (
     AI_TASKS_TEMPLATE,
@@ -840,7 +839,7 @@ class AIAtlasNexus:
         # Invoke inference service
         return inference_engine.generate(
             prompts,
-            response_format=QUESTIONNAIRE_OUTPUT_SCHEMA,
+            response_format=QuestionnaireOutput,
             postprocessors=["json_object"],
             verbose=verbose,
         )
@@ -920,7 +919,7 @@ class AIAtlasNexus:
         # Invoke inference service
         return inference_engine.generate(
             prompts,
-            response_format=QUESTIONNAIRE_OUTPUT_SCHEMA,
+            response_format=QuestionnaireOutput,
             postprocessors=["json_object"],
             verbose=verbose,
         )
@@ -962,13 +961,7 @@ class AIAtlasNexus:
 
         prompts = [
             (
-                Template(AI_TASKS_TEMPLATE).render(
-                    usecase=usecase,
-                    hf_ai_tasks=hf_ai_tasks,
-                    limit=len(hf_ai_tasks),
-                )
-                if inference_engine.backend._backend_type == BackendType.DEFAULT
-                else {
+                {
                     "description": "Classify the given use case into one or more AI Tasks that describes it best. Use the AI tasks definitions to make your decision. Provide a brief explanation for choosing a particular AI Task.",
                     "prefix": "You are an AI Task Classifier. You are clear and deterministic in your response. You always give classification label based on a plausible explanation. Study and understand the JSON below containing a list of AI task and its description.",
                     "requirements": [
@@ -982,6 +975,12 @@ class AIAtlasNexus:
                         "AI Task Definitions": json.dumps(hf_ai_tasks, indent=2),
                     },
                 }
+                if inference_engine.backend._backend_type == BackendType.MELLEA
+                else Template(AI_TASKS_TEMPLATE).render(
+                    usecase=usecase,
+                    hf_ai_tasks=hf_ai_tasks,
+                    limit=len(hf_ai_tasks),
+                )
             )
             for usecase in usecases
         ]
@@ -1788,15 +1787,7 @@ class AIAtlasNexus:
         # Prepare few shots inference prompts from CoT Data
         prompts = [
             (
-                FewShotPromptBuilder(
-                    prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
-                ).build(
-                    cot_examples=domain_ques_data["cot_examples"],
-                    usecase=usecase,
-                    question=domain_ques_data["question"],
-                )
-                if inference_engine.backend._backend_type == BackendType.DEFAULT
-                else {
+                {
                     "description": "Classify the given use case into one of the AI Domains that describes it best. Use the AI domain definitions to make your decision. Provide a brief explanation for choosing a particular AI Domain. If no suitable domain exists, classify it as 'Other'",
                     "prefix": "You are an AI Domain Classifier. You are clear and deterministic in your response. You always give classification label based on a plausible explanation.",
                     "requirements": [
@@ -1812,6 +1803,14 @@ class AIAtlasNexus:
                         ),
                     },
                 }
+                if inference_engine.backend._backend_type == BackendType.MELLEA
+                else FewShotPromptBuilder(
+                    prompt_template=QUESTIONNAIRE_COT_TEMPLATE,
+                ).build(
+                    cot_examples=domain_ques_data["cot_examples"],
+                    usecase=usecase,
+                    question=domain_ques_data["question"],
+                )
             )
             for usecase in usecases
         ]

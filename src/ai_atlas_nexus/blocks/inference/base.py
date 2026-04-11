@@ -37,7 +37,7 @@ class InferenceEngine(ABC):
                 VLLMInferenceEngineParams,
             ]
         ] = None,
-        backend: Optional[Literal["default", "mellea"]] = "default",
+        backend: Literal["default", "mellea"] = BackendType.DEFAULT,
         concurrency_limit: int = 10,
     ):
         """Create an instance of the InferenceEngine using the `model_name_or_path` and chosen LLM service.
@@ -65,16 +65,10 @@ class InferenceEngine(ABC):
                 f"Failed to create `{self.__class__.__name__}`. Reason: {str(e)}"
             )
 
+        # Create inference backend
         if backend == BackendType.DEFAULT:
             self.backend = self
         else:
-            assert self._inference_engine_type in [
-                InferenceEngineType.OLLAMA,
-                InferenceEngineType.WML,
-                InferenceEngineType.RITS,
-            ], f"[{backend}] backend is not currently supported for {self._inference_engine_type}. Supported inference engines: OLLAMA, WML, RITS"
-
-            # Create inference backend
             self.backend = InferenceBackendFactory.create_backend(
                 BackendType(backend),
                 self._inference_engine_type,

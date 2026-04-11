@@ -185,7 +185,7 @@ class WMLInferenceEngine(InferenceEngine):
         )
 
     def _prepare_prediction_output(
-        self, response
+        self, response: Union[str, Dict]
     ) -> List[TextGenerationInferenceOutput]:
         if isinstance(response, str):
             prediction_data = {"prediction": response}
@@ -194,8 +194,12 @@ class WMLInferenceEngine(InferenceEngine):
             if _CHAT_API:
                 prediction_data = {
                     "prediction": response["choices"][0]["message"]["content"],
-                    "input_tokens": response["usage"]["prompt_tokens"],
-                    "output_tokens": response["usage"]["completion_tokens"],
+                    "input_tokens": response.get("usage", {}).get(
+                        "prompt_tokens", None
+                    ),
+                    "output_tokens": response.get("usage", {}).get(
+                        "completion_tokens", None
+                    ),
                     "stop_reason": response["choices"][0]["finish_reason"],
                 }
             else:

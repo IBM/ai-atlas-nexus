@@ -77,7 +77,7 @@ class RITSInferenceEngine(InferenceEngine):
         except APIConnectionError:
             raise Exception("Connection error. Please check RITS API URL.")
         except PermissionDeniedError:
-            raise Exception("RITS authentication failed. Invalid RITS API KEY.")
+            raise Exception("Authentication failed. Invalid RITS API KEY.")
         except NotFoundError:
             raise Exception(f"Model `{self.model_name_or_path}` not available.")
 

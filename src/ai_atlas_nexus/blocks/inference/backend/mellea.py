@@ -12,12 +12,6 @@ LOOP_BUDGET = 3  # Repair loop budget for m.instruct() with RepairTemplateStrate
 AGENT_PREFIX = None
 
 
-class MelleaWMLChatResponseWrapper(TypedDict):
-
-    choices: List[Dict]
-    usage: Dict
-
-
 class MelleaInferenceBackend(InferenceBackend):
     """Mellea backend implementation."""
 
@@ -40,7 +34,7 @@ class MelleaInferenceBackend(InferenceBackend):
     @classmethod
     def initialize(
         cls,
-        inference_service: str,
+        inference_engine_type: InferenceEngineType,
         model_name_or_path: str,
         credentials: Dict[str, str],
         llm_parameters: Dict,
@@ -61,24 +55,30 @@ class MelleaInferenceBackend(InferenceBackend):
             MelleaSession: A Mellea session object that can be used as a context manager
         """
         try:
-            from mellea import start_session
+            assert inference_engine_type in [
+                InferenceEngineType.OLLAMA,
+                InferenceEngineType.WML,
+                InferenceEngineType.RITS,
+            ], f"Mellea backend is not currently supported for {inference_engine_type.upper()} inference engine. Supported inference engines: OLLAMA, WML, RITS"
 
             # fix to replace `api_url` with `base_url` as it is widely used across the Mellea backends.
             credentials["base_url"] = credentials.pop("api_url")
 
-            # Using openai api for IBM RITS
-            if inference_service == InferenceEngineType.RITS:
-                inference_service = "openai"
+            # Using OpenAI API for IBM RITS
+            if inference_engine_type == InferenceEngineType.RITS:
+                inference_engine_type = "openai"
                 credentials.update(
                     {
                         "base_url": f"{credentials["base_url"]}/{model_name_or_path.split("/")[-1].lower().replace(".", "-")}/v1",
-                        "default_headers": {"RITS_API_KEY": credentials["api_key"]},
+                        "default_headers": {"RITS_API_KEY": credentials.get("api_key")},
                     }
                 )
 
+            from mellea import start_session
+
             # create and start mellea session
             session = start_session(
-                backend_name=inference_service,
+                backend_name=inference_engine_type,
                 model_id=model_name_or_path,
                 **credentials,
             )
@@ -114,7 +114,6 @@ class MelleaInferenceBackend(InferenceBackend):
             str: a str response
         """
         from mellea.backends.openai import OpenAIBackend
-        from mellea.backends.watsonx import WatsonxAIBackend
         from mellea.stdlib.sampling import RepairTemplateStrategy
 
         if not hasattr(self, "session"):
@@ -132,17 +131,16 @@ class MelleaInferenceBackend(InferenceBackend):
                 strategy=RepairTemplateStrategy(loop_budget=LOOP_BUDGET),
                 model_options=self.model_options,
             )
-            if isinstance(self.session.backend, WatsonxAIBackend):
-                return MelleaWMLChatResponseWrapper(
-                    choices=[response_thunk._meta["oai_chat_response"]],
-                    usage={"prompt_tokens": None, "completion_tokens": None},
-                )
-            elif isinstance(self.session.backend, OpenAIBackend):
+
+            if isinstance(self.session.backend, OpenAIBackend):
                 return ChatCompletion(**response_thunk._meta["oai_chat_response"])
-            return response_thunk._meta["chat_response"]
+            elif "oai_chat_response" in response_thunk._meta:
+                return {"choices": [response_thunk._meta["oai_chat_response"]]}
+            else:
+                return response_thunk._meta["chat_response"]
 
         except Exception as e:
-            raise RuntimeError(f"Mellea generation failed: {str(e)}")
+            raise RuntimeError(f"Mellea text generation failed: {str(e)}")
 
     def generate_chat_response(
         self, format: type[BaseModel], tools: Any, description: str
@@ -171,4 +169,4 @@ class MelleaInferenceBackend(InferenceBackend):
 
             return response_thunk.content
         except Exception as e:
-            raise RuntimeError(f"Mellea generation failed: {str(e)}")
+            raise RuntimeError(f"Mellea chat generation failed: {str(e)}")
