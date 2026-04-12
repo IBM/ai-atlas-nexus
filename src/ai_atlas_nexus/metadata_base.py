@@ -10,6 +10,7 @@ class InferenceEngineType(StrEnum):
     WML = "watsonx"
     VLLM = "vllm"
     OLLAMA = "ollama"
+    HF = "hf"
 
     @classmethod
     def list(cls):

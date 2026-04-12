@@ -5,6 +5,7 @@ from pydantic import BaseModel, TypeAdapter, ValidationError
 
 from ai_atlas_nexus.blocks.inference.backend import InferenceBackendFactory
 from ai_atlas_nexus.blocks.inference.params import (
+    HFInferenceEngineParams,
     InferenceEngineCredentials,
     MelleaInferenceParams,
     OllamaInferenceEngineParams,
@@ -37,6 +38,7 @@ class InferenceEngine(ABC):
                 WMLInferenceEngineParams,
                 OllamaInferenceEngineParams,
                 VLLMInferenceEngineParams,
+                HFInferenceEngineParams,
             ]
         ] = None,
         backend: Literal["default", "mellea"] = BackendType.DEFAULT,

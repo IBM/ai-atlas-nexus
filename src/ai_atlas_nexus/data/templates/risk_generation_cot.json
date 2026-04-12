@@ -60,6 +60,17 @@
                 "Uncertain data provenance",
                 "Unrepresentative data"
             ]
+        },
+        {
+            "Usecase": "MuSR (Multistep Soft Reasoning) is a benchmark of 756 instances across three scenario-based tasks: Murder Mystery, Object Placements, and Team Allocations. The data is synthetically generated using GPT-4 via a neurosymbolic pipeline. Models are evaluated in zero-shot and one-shot settings using accuracy. The benchmark is English-only and tests multi-step reasoning over natural language narratives.",
+            "Reasoning": "This benchmark uses GPT-4-generated synthetic data, which creates specific risks: models trained on GPT-4 outputs may have seen similar patterns, inflating scores (data contamination); the synthetic generation via a proprietary model cannot be exactly reproduced (reproducibility); the benchmark covers only 3 narrow scenario types in English, so scores cannot generalize to broader reasoning tasks (unrepresentative data, over- or under-reliance); good performance on narrative puzzles could give false confidence about general reasoning ability (improper usage).",
+            "Risks": [
+                "Data contamination",
+                "Reproducibility",
+                "Over- or under-reliance",
+                "Unrepresentative data",
+                "Improper usage"
+            ]
         }
     ],
     "mit-ai-risk-repository": [

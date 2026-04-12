@@ -22,6 +22,7 @@ class InferenceEngineCredentials(TypedDict):
     api_key: Optional[str] = None  # Optional for vLLM/Ollama server mode
     space_id: Optional[str] = None  # only used in WML engine
     project_id: Optional[str] = None  # only used in WML engine
+    org_id: Optional[str] = None  # used in HF engine for org billing
 
 
 class RITSInferenceEngineParams(TypedDict):
@@ -137,6 +138,20 @@ class VLLMInferenceEngineParams(TypedDict):
     min_tokens: int = 0
     logprobs: Optional[int] = None
     prompt_logprobs: Optional[int] = None
+
+
+class HFInferenceEngineParams(TypedDict):
+    frequency_penalty: Optional[float] = None
+    presence_penalty: Optional[float] = None
+    max_completion_tokens: Optional[int] = None
+    seed: Optional[int] = None
+    stop: Union[Optional[str], List[str]] = None
+    temperature: Optional[float] = None
+    top_p: Optional[float] = None
+    top_logprobs: Optional[int] = None
+    logit_bias: Optional[Dict[str, int]] = None
+    logprobs: Optional[bool] = True
+    n: Optional[int] = None
 
 
 @dataclasses.dataclass(kw_only=True)

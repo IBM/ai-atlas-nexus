@@ -37,7 +37,7 @@ class BaseException(Exception):
         self.name = name
         self.message = message
         self.resolution = resolution
-        super().__init__(*args, **kwargs)
+        super().__init__(message, *args, **kwargs)
 
 
 class RiskInferenceError(BaseException):
