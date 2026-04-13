@@ -26,7 +26,7 @@ keywords = [
 ]
 description = "AI Atlas Nexus provides tooling to help bring together disparate resources related to governance of foundation models. "
 readme = "README.md"
-requires-python = ">=3.11, <3.12.5"
+requires-python = ">=3.11, <3.12.14"
 classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
