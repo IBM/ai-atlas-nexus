@@ -1,15 +1,15 @@
 # Standard
-from enum import Enum, unique
+from enum import Enum, StrEnum, auto, unique
 
 
 @unique
-class InferenceEngineType(str, Enum):
+class InferenceEngineType(StrEnum):
     """Enum to contain possible values for inference engine types"""
 
-    RITS = "RITS"
-    WML = "WML"
-    VLLM = "VLLM"
-    OLLAMA = "OLLAMA"
+    RITS = "rits"
+    WML = "watsonx"
+    VLLM = "vllm"
+    OLLAMA = "ollama"
 
     @classmethod
     def list(cls):
@@ -32,3 +32,11 @@ class MappingMethod(str, Enum):
 
     def __str__(self):
         return self.name
+
+
+@unique
+class BackendType(StrEnum):
+    """LLM Inference backend types."""
+
+    DEFAULT = auto()
+    MELLEA = auto()

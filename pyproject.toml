@@ -57,7 +57,9 @@ dependencies = [
     "pre-commit",
     "typer",
     "inflect",
-    "cymple"
+    "cymple",
+    "chardet==5.2.0",
+    "mellea"
 ]
 
 

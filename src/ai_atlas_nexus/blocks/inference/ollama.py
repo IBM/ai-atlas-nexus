@@ -1,11 +1,13 @@
 import os
-from typing import Dict, List, Optional, Union
+from functools import partial
+from typing import Any, Dict, List, Literal, Union
 
 from dotenv import load_dotenv
 
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
+    MelleaInferenceParams,
     OllamaInferenceEngineParams,
     OpenAIChatCompletionMessageParam,
     TextGenerationInferenceOutput,
@@ -13,7 +15,10 @@ from ai_atlas_nexus.blocks.inference.params import (
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
 from ai_atlas_nexus.exceptions import RiskInferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
-from ai_atlas_nexus.toolkit.job_utils import run_parallel
+from ai_atlas_nexus.toolkit.job_utils import (
+    run_parallel,
+    unwrap_arguments_and_call_func,
+)
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
@@ -47,12 +52,19 @@ class OllamaInferenceEngine(InferenceEngine):
 
         return InferenceEngineCredentials(api_url=api_url)
 
-    def create_client(self, credentials):
+    def create_client(self):
         from ollama import Client
 
-        return Client(host=credentials["api_url"])
+        return Client(host=self.credentials["api_url"])
 
     def ping(self):
+        try:
+            self.client.ps()
+        except ConnectionError:
+            raise Exception(
+                f"Ollama server not running at {self.credentials["api_url"]}"
+            )
+
         if self.model_name_or_path not in [
             model.model for model in self.client.list().models
         ]:
@@ -60,107 +72,129 @@ class OllamaInferenceEngine(InferenceEngine):
                 f"Model `{self.model_name_or_path}` not found. Please download it first."
             )
 
-    def is_thinking_supported(self):
-        if "thinking" in self.client.show(self.model_name_or_path).capabilities:
-            return True
-        else:
-            raise Exception(
-                f"`Model {self.model_name_or_path}` does not support thinking. Please pass `think=False` or use another model."
-            )
+        if "think" in self.parameters and self.parameters["think"]:
+            if not "thinking" in self.client.show(self.model_name_or_path).capabilities:
+                raise Exception(
+                    f"`Model {self.model_name_or_path}` does not support thinking. Please pass `think=False` or pass a supported model."
+                )
 
     @postprocess
     def generate(
         self,
-        prompts: List[str],
+        prompts: Union[List[str], List[MelleaInferenceParams]],
         response_format=None,
-        postprocessors=None,
+        postprocessors: List[str] = None,
         verbose=True,
-        **kwargs,
     ) -> List[TextGenerationInferenceOutput]:
-        def generate_text(prompt: str):
-            response = self.client.generate(
-                model=self.model_name_or_path,
-                prompt=prompt,
-                format=response_format,
-                logprobs=self.parameters.get("logprobs", None),
-                top_logprobs=self.parameters.get("top_logprobs", None),
-                options={
-                    k: v
-                    for k, v in self.parameters.items()
-                    if (k != "logprobs" or k != "top_logprobs")
-                },  # https://github.com/ollama/ollama/blob/main/docs/modelfile.mdx#valid-parameters-and-values
-                think=self.think,
-                **kwargs,
-            )
-            return self._prepare_prediction_output(response)
-
         try:
-            return run_parallel(
-                generate_text,
-                prompts,
-                f"Inferring with {self._inference_engine_type}",
-                self.concurrency_limit,
-                verbose=verbose,
-            )
+            return [
+                self._prepare_prediction_output(response)
+                for response in run_parallel(
+                    func=partial(
+                        unwrap_arguments_and_call_func,
+                        partial(self.backend.generate_text, response_format),
+                    ),
+                    items=prompts,
+                    desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
+                    concurrency_limit=self.concurrency_limit,
+                    verbose=verbose,
+                )
+            ]
         except Exception as e:
             raise RiskInferenceError(str(e))
+
+    def generate_text(self, response_format, prompt):
+        return self.client.generate(
+            model=self.model_name_or_path,
+            prompt=prompt,
+            format=self.format(response_format),
+            logprobs=self.parameters.get("logprobs", None),
+            top_logprobs=self.parameters.get("top_logprobs", None),
+            think=self.parameters.get("think", None),
+            options={
+                k: v
+                for k, v in self.parameters.items()
+                if (k not in ["logprobs", "top_logprobs", "think"])
+            },  # https://github.com/ollama/ollama/blob/main/docs/modelfile.mdx#valid-parameters-and-values
+        )
 
     @postprocess
     def chat(
         self,
         messages: Union[
-            List[OpenAIChatCompletionMessageParam],
+            str,
             List[str],
+            OpenAIChatCompletionMessageParam,
+            List[OpenAIChatCompletionMessageParam],
         ],
         tools=None,
         response_format=None,
-        postprocessors=None,
-        verbose=True,
-        **kwargs,
-    ) -> List[TextGenerationInferenceOutput]:
-
-        def chat_response(messages):
-            response = self.client.chat(
-                model=self.model_name_or_path,
-                messages=self._to_openai_format(messages),
-                tools=tools,
-                format=response_format,
-                logprobs=self.parameters.get("logprobs", None),
-                top_logprobs=self.parameters.get("top_logprobs", None),
-                options={
-                    k: v
-                    for k, v in self.parameters.items()
-                    if (k != "logprobs" or k != "top_logprobs")
-                },  # https://github.com/ollama/ollama/blob/main/docs/modelfile.mdx#valid-parameters-and-values
-                think=self.think,
-                **kwargs,
-            )
-            return self._prepare_prediction_output(response)
-
+        postprocessors: List[str] = None,
+        verbose: bool = True,
+    ) -> TextGenerationInferenceOutput:
         try:
-            return run_parallel(
-                chat_response,
-                messages,
-                f"Inferring with {self._inference_engine_type}",
-                self.concurrency_limit,
-                verbose=verbose,
-            )
+            return [
+                self._prepare_prediction_output(response)
+                for response in run_parallel(
+                    func=partial(
+                        unwrap_arguments_and_call_func,
+                        partial(
+                            self.backend.generate_chat_response, response_format, tools
+                        ),
+                    ),
+                    items=self._validate_chat_messages(messages),
+                    desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
+                    concurrency_limit=self.concurrency_limit,
+                    verbose=verbose,
+                )
+            ]
         except Exception as e:
             raise RiskInferenceError(str(e))
 
+    def generate_chat_response(
+        self, response_format, tools, messages
+    ) -> List[TextGenerationInferenceOutput]:
+        return self.client.chat(
+            model=self.model_name_or_path,
+            messages=self._to_openai_format(messages),
+            tools=tools,
+            format=self.format(response_format),
+            logprobs=self.parameters.get("logprobs", None),
+            top_logprobs=self.parameters.get("top_logprobs", None),
+            think=self.parameters.get("think", None),
+            options={
+                k: v
+                for k, v in self.parameters.items()
+                if (k not in ["logprobs", "top_logprobs", "think"])
+            },  # https://github.com/ollama/ollama/blob/main/docs/modelfile.mdx#valid-parameters-and-values
+        )
+
     def _prepare_prediction_output(self, response):
-        _CHAT_API = True if hasattr(response, "message") else False
+        if isinstance(response, str):
+            prediction_data = {"prediction": response}
+        else:
+            prediction_data = {
+                "prediction": getattr(
+                    response,
+                    "response",
+                    getattr(getattr(response, "message", response), "content", None),
+                ),
+                "input_tokens": getattr(response, "prompt_eval_count", None),
+                "output_tokens": getattr(response, "eval_count", None),
+                "stop_reason": getattr(response, "done_reason", None),
+                "thinking": getattr(
+                    response,
+                    "thinking",
+                    getattr(getattr(response, "message", response), "thinking", None),
+                ),
+                "logprobs": (
+                    {output.token: output.logprob for output in response.logprobs}
+                    if hasattr(response, "logprobs") and response.logprobs
+                    else None
+                ),
+            }
         return TextGenerationInferenceOutput(
-            prediction=response.message.content if _CHAT_API else response.response,
-            input_tokens=response.prompt_eval_count,
-            output_tokens=response.eval_count,
-            stop_reason=response.done_reason,
-            thinking=response.message.thinking if _CHAT_API else response.thinking,
             model_name_or_path=self.model_name_or_path,
-            logprobs=(
-                {output.token: output.logprob for output in response.logprobs}
-                if response.logprobs
-                else None
-            ),
             inference_engine=str(self._inference_engine_type),
+            **prediction_data,
         )
