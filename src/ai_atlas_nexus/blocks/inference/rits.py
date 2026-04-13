@@ -22,7 +22,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     TextGenerationInferenceOutput,
 )
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
-from ai_atlas_nexus.exceptions import RiskInferenceError
+from ai_atlas_nexus.exceptions import InferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import (
     run_parallel,
@@ -104,7 +104,7 @@ class RITSInferenceEngine(InferenceEngine):
                 )
             ]
         except Exception as e:
-            raise RiskInferenceError(str(e))
+            raise InferenceError(str(e))
 
     def generate_text(self, response_format, prompt):
         return self.client.chat.completions.create(
@@ -146,7 +146,7 @@ class RITSInferenceEngine(InferenceEngine):
                 )
             ]
         except Exception as e:
-            raise RiskInferenceError(str(e))
+            raise InferenceError(str(e))
 
     def generate_chat_response(self, response_format, tools, messages):
         return self.client.chat.completions.create(

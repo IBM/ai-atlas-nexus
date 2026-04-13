@@ -16,7 +16,7 @@ class QuestionnaireOutput(BaseModel):
 
     answer: str = Field(description="Answer to the question.")
     explanation: str = Field(
-        description="A brief two-sentende explanation on how that answer was generated"
+        description="A brief two-sentence explanation on how that answer was generated"
     )
     confidence: Literal[
         "Likely answer from the intent", "Directly from the input text"

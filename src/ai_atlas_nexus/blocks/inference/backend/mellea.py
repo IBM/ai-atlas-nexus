@@ -62,7 +62,7 @@ class MelleaInferenceBackend(InferenceBackend):
             ], f"Mellea backend is not currently supported for {inference_engine_type.upper()} inference engine. Supported inference engines: OLLAMA, WML, RITS"
 
             # fix to replace `api_url` with `base_url` as it is widely used across the Mellea backends.
-            credentials["base_url"] = credentials.pop("api_url")
+            credentials["base_url"] = credentials.pop("api_url", None)
 
             # Using OpenAI API for IBM RITS
             if inference_engine_type == InferenceEngineType.RITS:
@@ -104,11 +104,11 @@ class MelleaInferenceBackend(InferenceBackend):
         """Generate a response using Mellea.
 
         Args:
+            format (type[BaseModel]): If set, the BaseModel to use for constrained decoding. Defaults to None.
             description (str): The description of the instruction.
             prefix (str, optional): A prefix string or ContentBlock to use when generating the instruction. Defaults to None.
             grounding_context (dict[str, str], optional): A list of grounding contexts that the instruction can use. They can bind as variables using a (key: str, value: str | ContentBlock) tuple. Defaults to None.
             requirements (list[str], optional): A list of requirements that the instruction can be validated against. Defaults to None.
-            format (type[BaseModel]): If set, the BaseModel to use for constrained decoding. Defaults to None.
 
         Returns:
             str: a str response
@@ -118,7 +118,7 @@ class MelleaInferenceBackend(InferenceBackend):
 
         if not hasattr(self, "session"):
             raise RuntimeError(
-                "Mellea backend not initialized. Call create_client() first."
+                "Mellea backend not initialized. Call initialize() first."
             )
 
         try:
@@ -143,25 +143,29 @@ class MelleaInferenceBackend(InferenceBackend):
             raise RuntimeError(f"Mellea text generation failed: {str(e)}")
 
     def generate_chat_response(
-        self, format: type[BaseModel], tools: Any, description: str
+        self, format: type[BaseModel], tools: bool, messages: str
     ) -> str:
-        """Generate a chat response using Mellea.
+        """Generate a Mellea chat response. It is a lighter-weight alternative that sends a plain message with no requirements and no sampling strategy
 
         Args:
-            messages (str): The description of the instruction.
             format (type[BaseModel]): If set, the BaseModel to use for constrained decoding. Defaults to None.
+            tools (bool): If true, tool calling is enabled in mellea. Default to False.
+            messages (str): The description of the instruction.
 
         Returns:
             str: a str chat response
         """
         if not hasattr(self, "session"):
             raise RuntimeError(
-                "Mellea backend not initialized. Call create_client() first."
+                "Mellea backend not initialized. Call initialize() first."
             )
 
         try:
+            if not isinstance(messages[0], str):
+                raise Exception("Chat input should always be a plain string.")
+
             response_thunk = self.session.chat(
-                content=description[0],
+                content=messages[0],
                 format=format,
                 model_options=self.model_options,
                 tool_calls=bool(tools),
@@ -169,4 +173,4 @@ class MelleaInferenceBackend(InferenceBackend):
 
             return response_thunk.content
         except Exception as e:
-            raise RuntimeError(f"Mellea chat generation failed: {str(e)}")
+            raise RuntimeError(f"Mellea chat response failed: {str(e)}")

@@ -16,7 +16,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     VLLMInferenceEngineParams,
     WMLInferenceEngineParams,
 )
-from ai_atlas_nexus.metadata_base import BackendType, InferenceEngineType
+from ai_atlas_nexus.metadata_base import BackendType
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 

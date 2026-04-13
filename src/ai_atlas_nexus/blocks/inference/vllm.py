@@ -13,7 +13,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     VLLMInferenceEngineParams,
 )
 from ai_atlas_nexus.blocks.inference.postprocessing import postprocess
-from ai_atlas_nexus.exceptions import RiskInferenceError
+from ai_atlas_nexus.exceptions import InferenceError
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 from ai_atlas_nexus.toolkit.job_utils import run_parallel
 from ai_atlas_nexus.toolkit.logging import configure_logger
@@ -133,7 +133,7 @@ class VLLMInferenceEngine(InferenceEngine):
                     verbose=verbose,
                 )
             except BadRequestError as e:
-                raise RiskInferenceError(e.body["message"])
+                raise InferenceError(e.body["message"])
 
     def _prepare_generate_output(self, response, offline=True):
         return TextGenerationInferenceOutput(
@@ -193,7 +193,7 @@ class VLLMInferenceEngine(InferenceEngine):
                     verbose=verbose,
                 )
             except BadRequestError as e:
-                raise RiskInferenceError(e.body["message"])
+                raise InferenceError(e.body["message"])
 
     def _prepare_chat_output(self, response, offline=True):
         return TextGenerationInferenceOutput(
