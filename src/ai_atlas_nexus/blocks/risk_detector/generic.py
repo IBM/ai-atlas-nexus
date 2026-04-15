@@ -13,7 +13,7 @@ from ai_atlas_nexus.blocks.prompt_templates import (
 )
 from ai_atlas_nexus.blocks.risk_detector import RiskDetector
 from ai_atlas_nexus.toolkit.logging import configure_logger
-
+from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 
 logger = configure_logger(__name__)
 
@@ -46,14 +46,15 @@ class GenericRiskDetector(RiskDetector):
             for usecase in usecases
         ]
 
+        # Populate schema items
+        json_schema = dict(LIST_OF_STR_SCHEMA)
+        json_schema["items"]["enum"] = [risk.name for risk in self._risks]
+
         # Invoke inference service
         inference_responses: List[TextGenerationInferenceOutput] = (
             self.inference_engine.generate(
                 prompts,
-                response_format=create_model(
-                    "AIRisk",
-                    risks=(List[Literal[tuple([risk.name for risk in self._risks])]]),
-                ),
+                response_format=json_schema,
                 postprocessors=["list_of_str"],
             )
         )
