@@ -23,6 +23,27 @@ classes:
       - hasDocumentation
       - hasLicense
 
+  RiskControlGroupTaxonomy:
+    is_a: Taxonomy
+    description: A taxonomy of AI system related risk controls groups
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  RiskControlGroup:
+    is_a: Group
+    description: A group of AI system related risk controls.
+    mixins:
+      - RiskConcept
+    slot_usage:
+      hasPart:
+        description: A relationship where a riskcontrolgroup has a risk control
+        range: RiskControl
+    slots:
+      - isDefinedByTaxonomy
+      - hasPart
+
   RiskGroup:
     is_a: Group
     description: A group of AI system related risks that are part of a risk taxonomy.
@@ -163,8 +184,8 @@ classes:
 slots:
   hasAiActorTask:
     description: >-
-      Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested
-      action in the subcategory (i.e., some apply to AI development and others apply to AI deployment).
+      Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action
+      in the subcategory (i.e., some apply to AI development and others apply to AI deployment).
     multivalued: true
   hasRelatedRisk:
     description: A relationship where an entity relates to a risk
@@ -184,8 +205,8 @@ slots:
     exact_mappings:
       - airo:detectsRiskConcept
     description: >-
-      The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources,
-      consequences, and impacts.
+      The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources, consequences,
+      and impacts.
     domain: RiskControl
     range: RiskConcept
     multivalued: true
@@ -235,7 +256,8 @@ slots:
       - dpv:hasConsequence
   hasVariant:
     description: >-
-      Indicates an incident that shares the same causative factors, produces similar harms, and involves the same intelligent systems as a known AI incident.
+      Indicates an incident that shares the same causative factors, produces similar harms, and involves the same
+      intelligent systems as a known AI incident.
     domain: RiskIncident
     range: RiskIncident
   refersToRisk:

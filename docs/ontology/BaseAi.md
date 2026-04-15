@@ -85,6 +85,17 @@ URI: [nexus:BaseAi](https://ibm.github.io/ai-atlas-nexus/ontology/BaseAi)
 
       BaseAi : id
 
+      BaseAi : isCategorizedAs
+
+
+
+
+
+        BaseAi --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       BaseAi : isProvidedBy
 
 
@@ -151,8 +162,7 @@ URI: [nexus:BaseAi](https://ibm.github.io/ai-atlas-nexus/ontology/BaseAi)
 
 - [Entity](Entity.md)
   - **BaseAi**
-    - [AiSystem](AiSystem.md)
-    - [AiModel](AiModel.md)
+    - [AiModel](AiModel.md) [ [AIComponent](AIComponent.md)]
 
 ## Slots
 
@@ -163,7 +173,7 @@ URI: [nexus:BaseAi](https://ibm.github.io/ai-atlas-nexus/ontology/BaseAi)
 | [hasDocumentation](hasDocumentation.md) | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | direct              |
 | [hasLicense](hasLicense.md)             | 0..1 <br/> [License](License.md)           | Indicates licenses associated with a resource                                    | direct              |
 | [performsTask](performsTask.md)         | \* <br/> [AiTask](AiTask.md)               | relationship indicating the AI tasks an AI model can perform                     | direct              |
-| [isProvidedBy](isProvidedBy.md)         | 0..1 <br/> [AiProvider](AiProvider.md)     | A relationship indicating the AI model has been provided by an AI model provi... | direct              |
+| [isProvidedBy](isProvidedBy.md)         | 0..1 <br/> [AiProvider](AiProvider.md)     | Indicates provider of an AI system or component                                  | direct              |
 | [id](id.md)                             | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                         | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)           | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
@@ -175,6 +185,14 @@ URI: [nexus:BaseAi](https://ibm.github.io/ai-atlas-nexus/ontology/BaseAi)
 | [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)   | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+
+## Usages
+
+| used by                 | used in                         | type  | used                |
+| ----------------------- | ------------------------------- | ----- | ------------------- |
+| [AiSystem](AiSystem.md) | [isComposedOf](isComposedOf.md) | range | [BaseAi](BaseAi.md) |
+| [AiAgent](AiAgent.md)   | [isComposedOf](isComposedOf.md) | range | [BaseAi](BaseAi.md) |
 
 ## Identifier and Mapping Information
 
@@ -264,6 +282,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -288,6 +307,7 @@ attributes:
     - Vocabulary
     - Taxonomy
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
@@ -307,8 +327,7 @@ attributes:
     inlined: false
   isProvidedBy:
     name: isProvidedBy
-    description: A relationship indicating the AI model has been provided by an AI
-      model provider.
+    description: Indicates provider of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isProvidedBy
@@ -456,6 +475,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: BaseAi
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: BaseAi
     domain_of:
     - Entity

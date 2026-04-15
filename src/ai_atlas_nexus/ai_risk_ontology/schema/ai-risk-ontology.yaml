@@ -13,7 +13,6 @@ imports:
   - ai_system
   - ai_eval
   - ai_intrinsic
-  - ai_csiro_rai
   - ai_aiuc
 
 prefixes:

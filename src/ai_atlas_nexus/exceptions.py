@@ -44,3 +44,9 @@ class RiskInferenceError(BaseException):
 
     def __init__(self, message, *args, **kwargs):
         super().__init__("RiskInferenceError", message, *args, **kwargs)
+
+
+class InferenceError(Exception):
+
+    def __init__(self, message, *args, **kwargs):
+        super(InferenceError, self).__init__(message, *args, **kwargs)

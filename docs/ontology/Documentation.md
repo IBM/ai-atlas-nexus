@@ -65,6 +65,17 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 
       Documentation : id
 
+      Documentation : isCategorizedAs
+
+
+
+
+
+        Documentation --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       Documentation : name
 
       Documentation : narrow_mappings
@@ -116,6 +127,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)   | \* <br/> [Any](Any.md)           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 
 ## Usages
 
@@ -132,6 +144,8 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [Principle](Principle.md)                               | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Certification](Certification.md)                       | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [RiskTaxonomy](RiskTaxonomy.md)                         | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [RiskControlGroup](RiskControlGroup.md)                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [RiskGroup](RiskGroup.md)                               | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Risk](Risk.md)                                         | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [RiskConcept](RiskConcept.md)                           | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
@@ -146,6 +160,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [LargeLanguageModel](LargeLanguageModel.md)             | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiTask](AiTask.md)                                     | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [StakeholderGroup](StakeholderGroup.md)                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [CapabilityTaxonomy](CapabilityTaxonomy.md)             | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [CapabilityConcept](CapabilityConcept.md)               | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [CapabilityDomain](CapabilityDomain.md)                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
@@ -157,7 +172,6 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [Questionnaire](Questionnaire.md)                       | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Adapter](Adapter.md)                                   | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [LLMIntrinsic](LLMIntrinsic.md)                         | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
-| [StakeholderGroup](StakeholderGroup.md)                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 
 ## Identifier and Mapping Information
 
@@ -234,6 +248,7 @@ attributes:
     - Vocabulary
     - Taxonomy
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - BaseAi
     - AiEval
     - BenchmarkMetadataCard
@@ -378,6 +393,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: Documentation
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: Documentation
     domain_of:
     - Entity

@@ -22,6 +22,8 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
         click Certification href "../Certification/"
       Entry <|-- Risk
         click Risk href "../Risk/"
+      Entry <|-- AiSystem
+        click AiSystem href "../AiSystem/"
       Entry <|-- AiTask
         click AiTask href "../AiTask/"
       Entry <|-- Capability
@@ -92,6 +94,17 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
 
         Entry --> "*" Adapter : implementedByAdapter
         click Adapter href "../Adapter/"
+
+
+
+      Entry : isCategorizedAs
+
+
+
+
+
+        Entry --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
 
 
 
@@ -180,6 +193,7 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
     - [Principle](Principle.md)
     - [Certification](Certification.md)
     - [Risk](Risk.md) [ [RiskConcept](RiskConcept.md)]
+    - [AiSystem](AiSystem.md) [ [BaseAi](BaseAi.md)]
     - [AiTask](AiTask.md)
     - [Capability](Capability.md) [ [CapabilityConcept](CapabilityConcept.md)]
     - [Adapter](Adapter.md) [ [LargeLanguageModel](LargeLanguageModel.md)]
@@ -196,7 +210,7 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
 | [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)               | Indicates that this entry is required to perform a specific AI task              | direct              |
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)       | Indicates that this entry requires a specific capability                         | direct              |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)             | Indicates that this capability is implemented by a specific adapter              | direct              |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)             |                                                                                  | direct              |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)             | The entry type                                                                   | direct              |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
@@ -208,6 +222,7 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
 | [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 
 ## Usages
 
@@ -252,6 +267,7 @@ slots:
 attributes:
   type:
     name: type
+    description: The entry type.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
     designates_type: true
     domain_of:
@@ -292,6 +308,7 @@ abstract: true
 attributes:
   type:
     name: type
+    description: The entry type.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
     designates_type: true
     alias: type
@@ -333,14 +350,15 @@ attributes:
     - Entry
     - Policy
     - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
@@ -375,6 +393,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -397,8 +416,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: string
   requiredByTask:
     name: requiredByTask
@@ -433,11 +452,9 @@ attributes:
     inlined: false
   implementedByAdapter:
     name: implementedByAdapter
-    description: 'Indicates that this capability is implemented by a specific adapter.
+    description: Indicates that this capability is implemented by a specific adapter.
       This relationship distinguishes the abstract capability (what can be done) from
       the technical implementation mechanism (how it is added/extended via adapters).
-
-      '
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: Any
@@ -589,6 +606,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: Entry
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: Entry
     domain_of:
     - Entity

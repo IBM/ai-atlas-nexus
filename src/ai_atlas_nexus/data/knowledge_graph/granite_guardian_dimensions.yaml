@@ -77,6 +77,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-social-bias-detection
     isPartOf: granite-guardian-harm-group
     tag: social_bias
     related_mappings:
@@ -93,6 +95,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-profanity-detection
     isPartOf: granite-guardian-harm-group
     tag: profanity
     related_mappings:
@@ -112,6 +116,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-sexual-content-detection
     isPartOf: granite-guardian-harm-group
     tag: sexual-content
     related_mappings:
@@ -129,6 +135,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-unethical-behavior-detection
     isPartOf: granite-guardian-harm-group
     tag: unethical-behavior
     related_mappings:
@@ -145,6 +153,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-violence-detection
     isPartOf: granite-guardian-harm-group
     tag: violence
     related_mappings:
@@ -161,6 +171,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-jailbreak-detection
     isPartOf: granite-guardian-harm-group
     tag: jailbreak
     related_mappings:
@@ -177,6 +189,8 @@ entries:
     dateModified: 2025-02-26
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-harm-engagement-detection
     isPartOf: granite-guardian-conversational-egregiousness
     tag: harm-engagement
     related_mappings:
@@ -194,6 +208,8 @@ entries:
     dateModified: 2025-02-26
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-evasiveness-detection
     isPartOf: granite-guardian-conversational-egregiousness
     tag: evasiveness
     related_mappings:
@@ -209,6 +225,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-groundedness-detection
     isPartOf: granite-guardian-rag-safety-group
     tag: groundedness
     related_mappings:
@@ -222,6 +240,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-relevance-detection
     isPartOf: granite-guardian-rag-safety-group
     tag: relevance
     related_mappings:
@@ -235,6 +255,8 @@ entries:
     dateModified: 2024-12-10
     type: Risk
     isDefinedByTaxonomy: ibm-granite-guardian
+    isDetectedBy:
+      - gg-answer-relevance-detection
     isPartOf: granite-guardian-rag-safety-group
     tag: answer-relevance
     related_mappings:

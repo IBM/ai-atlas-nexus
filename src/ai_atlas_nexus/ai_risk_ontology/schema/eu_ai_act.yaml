@@ -4,6 +4,7 @@ description: Vocabulary pertaining to the EU AI Act
 imports:
   - linkml:types
   - common
+  - ai_system
 default_curi_maps:
   - semweb_context
 prefixes:
@@ -45,10 +46,6 @@ enums:
         description: AI systems pursuant to Article 6(1)(2) Classification Rules for High-Risk AI Systems
 
 slots:
-  isDeployedBy:
-    description: A relationship indicating that an entity has been deployed by an organization.
-    range: Organization
-    inlined_as_list: true
   isImportedBy:
     description: A relationship indicating that an entity has been imported by an organization.
     range: Organization

@@ -52,6 +52,17 @@ URI: [airo:License](https://w3id.org/airo#License)
 
       License : id
 
+      License : isCategorizedAs
+
+
+
+
+
+        License --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       License : name
 
       License : narrow_mappings
@@ -104,31 +115,33 @@ URI: [airo:License](https://w3id.org/airo#License)
 | [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)         | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)         | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)   | \* <br/> [Any](Any.md)         | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 
 ## Usages
 
-| used by                                           | used in                             | type  | used                  |
-| ------------------------------------------------- | ----------------------------------- | ----- | --------------------- |
-| [Container](Container.md)                         | [licenses](licenses.md)             | range | [License](License.md) |
-| [Organization](Organization.md)                   | [grants_license](grants_license.md) | range | [License](License.md) |
-| [Dataset](Dataset.md)                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Documentation](Documentation.md)                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Vocabulary](Vocabulary.md)                       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Taxonomy](Taxonomy.md)                           | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [RiskTaxonomy](RiskTaxonomy.md)                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [BaseAi](BaseAi.md)                               | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiSystem](AiSystem.md)                           | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiAgent](AiAgent.md)                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiModel](AiModel.md)                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [LargeLanguageModel](LargeLanguageModel.md)       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiProvider](AiProvider.md)                       | [grants_license](grants_license.md) | range | [License](License.md) |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md)       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiEval](AiEval.md)                               | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Question](Question.md)                           | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Questionnaire](Questionnaire.md)                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Adapter](Adapter.md)                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiOffice](AiOffice.md)                           | [grants_license](grants_license.md) | range | [License](License.md) |
+| used by                                                 | used in                             | type  | used                  |
+| ------------------------------------------------------- | ----------------------------------- | ----- | --------------------- |
+| [Container](Container.md)                               | [licenses](licenses.md)             | range | [License](License.md) |
+| [Organization](Organization.md)                         | [grants_license](grants_license.md) | range | [License](License.md) |
+| [Dataset](Dataset.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Documentation](Documentation.md)                       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Vocabulary](Vocabulary.md)                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Taxonomy](Taxonomy.md)                                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [RiskTaxonomy](RiskTaxonomy.md)                         | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [BaseAi](BaseAi.md)                                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiSystem](AiSystem.md)                                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiAgent](AiAgent.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiModel](AiModel.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [LargeLanguageModel](LargeLanguageModel.md)             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiProvider](AiProvider.md)                             | [grants_license](grants_license.md) | range | [License](License.md) |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiEval](AiEval.md)                                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Question](Question.md)                                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Questionnaire](Questionnaire.md)                       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Adapter](Adapter.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiOffice](AiOffice.md)                                 | [grants_license](grants_license.md) | range | [License](License.md) |
 
 ## Identifier and Mapping Information
 
@@ -186,6 +199,7 @@ attributes:
     - Vocabulary
     - Taxonomy
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     range: string
   id:
     name: id
@@ -326,6 +340,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: License
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: License
     domain_of:
     - Entity

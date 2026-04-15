@@ -78,6 +78,17 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
 
 
+      Capability : isCategorizedAs
+
+
+
+
+
+        Capability --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       Capability : isDefinedByTaxonomy
 
 
@@ -181,7 +192,7 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Entry](Entry.md), [Concept](Concept.md) |
 | [isPartOf](isPartOf.md)                           | 0..1 <br/> [CapabilityGroup](CapabilityGroup.md) | A relationship where a capability is part of a capability group                  | [Entry](Entry.md)                        |
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)             | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)                        |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)                   |                                                                                  | [Entry](Entry.md), [Concept](Concept.md) |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)                   | The entry type                                                                   | [Entry](Entry.md), [Concept](Concept.md) |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md)                      |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md)                      |
@@ -193,6 +204,7 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                      |
 | [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 | [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
+| [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                      |
 
 ## Usages
 
@@ -204,7 +216,9 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | [Certification](Certification.md)           | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
 | [Risk](Risk.md)                             | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
 | [AiSystem](AiSystem.md)                     | [hasCapability](hasCapability.md)               | range  | [Capability](Capability.md) |
+| [AiSystem](AiSystem.md)                     | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
 | [AiAgent](AiAgent.md)                       | [hasCapability](hasCapability.md)               | range  | [Capability](Capability.md) |
+| [AiAgent](AiAgent.md)                       | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
 | [AiTask](AiTask.md)                         | [requiresCapability](requiresCapability.md)     | range  | [Capability](Capability.md) |
 | [CapabilityGroup](CapabilityGroup.md)       | [hasPart](hasPart.md)                           | range  | [Capability](Capability.md) |
@@ -370,14 +384,15 @@ attributes:
     - Entry
     - Policy
     - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
@@ -412,6 +427,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -434,8 +450,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: CapabilityGroup
   requiresCapability:
     name: requiresCapability
@@ -456,6 +472,7 @@ attributes:
     inlined: false
   type:
     name: type
+    description: The entry type.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
     designates_type: true
     alias: type
@@ -620,6 +637,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: Capability
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: Capability
     domain_of:
     - Entity

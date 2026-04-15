@@ -14,14 +14,16 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
         click Entity href "../Entity/"
 
 
+      Group <|-- RiskControlGroup
+        click RiskControlGroup href "../RiskControlGroup/"
       Group <|-- RiskGroup
         click RiskGroup href "../RiskGroup/"
+      Group <|-- StakeholderGroup
+        click StakeholderGroup href "../StakeholderGroup/"
       Group <|-- CapabilityDomain
         click CapabilityDomain href "../CapabilityDomain/"
       Group <|-- CapabilityGroup
         click CapabilityGroup href "../CapabilityGroup/"
-      Group <|-- StakeholderGroup
-        click StakeholderGroup href "../StakeholderGroup/"
 
 
       Group : belongsToDomain
@@ -45,6 +47,8 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
         click Any href "../Any/"
 
 
+
+      Group : broader
 
       Group : close_mappings
 
@@ -89,6 +93,17 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
 
       Group : id
 
+      Group : isCategorizedAs
+
+
+
+
+
+        Group --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       Group : isDefinedByTaxonomy
 
 
@@ -113,6 +128,8 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
 
 
 
+      Group : narrower
+
       Group : related_mappings
 
 
@@ -135,10 +152,11 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
 
 - [Entity](Entity.md)
   - **Group**
+    - [RiskControlGroup](RiskControlGroup.md) [ [RiskConcept](RiskConcept.md)]
     - [RiskGroup](RiskGroup.md) [ [RiskConcept](RiskConcept.md)]
+    - [StakeholderGroup](StakeholderGroup.md)
     - [CapabilityDomain](CapabilityDomain.md) [ [CapabilityConcept](CapabilityConcept.md)]
     - [CapabilityGroup](CapabilityGroup.md) [ [CapabilityConcept](CapabilityConcept.md)]
-    - [StakeholderGroup](StakeholderGroup.md)
 
 ## Slots
 
@@ -149,6 +167,8 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
 | [hasPart](hasPart.md)                         | \* <br/> [String](String.md)               | A relationship where an entity has another entity                                | direct              |
 | [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                   | A relationship where a group belongs to a domain                                 | direct              |
 | [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | direct              |
+| [narrower](narrower.md)                       | \* <br/> [String](String.md)               |                                                                                  | direct              |
+| [broader](broader.md)                         | \* <br/> [String](String.md)               |                                                                                  | direct              |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
@@ -160,6 +180,7 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
 | [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 
 ## Mixin Usage
 
@@ -231,6 +252,22 @@ attributes:
     - ControlActivityRecommendation
     - Requirement
     range: string
+  narrower:
+    name: narrower
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    domain_of:
+    - Group
+    multivalued: true
+  broader:
+    name: broader
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    domain_of:
+    - Group
+    multivalued: true
 class_uri: skos:Collection
 
 ````
@@ -275,6 +312,28 @@ attributes:
     - ControlActivityRecommendation
     - Requirement
     range: string
+  narrower:
+    name: narrower
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: narrower
+    owner: Group
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
+  broader:
+    name: broader
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: broader
+    owner: Group
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
   isDefinedByTaxonomy:
     name: isDefinedByTaxonomy
     description: A relationship where a concept or a concept group is defined by a
@@ -291,14 +350,15 @@ attributes:
     - Entry
     - Policy
     - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   hasDocumentation:
@@ -319,6 +379,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -339,6 +400,7 @@ attributes:
     owner: Group
     domain_of:
     - Group
+    - RiskControlGroup
     - RiskGroup
     - CapabilityGroup
     range: string
@@ -496,6 +558,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: Group
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: Group
     domain_of:
     - Entity

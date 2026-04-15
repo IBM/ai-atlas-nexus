@@ -33,6 +33,8 @@ URI: [nexus:StakeholderGroup](https://ibm.github.io/ai-atlas-nexus/ontology/Stak
 
 
 
+      StakeholderGroup : broader
+
       StakeholderGroup : close_mappings
 
 
@@ -76,6 +78,17 @@ URI: [nexus:StakeholderGroup](https://ibm.github.io/ai-atlas-nexus/ontology/Stak
 
       StakeholderGroup : id
 
+      StakeholderGroup : isCategorizedAs
+
+
+
+
+
+        StakeholderGroup --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       StakeholderGroup : isDefinedByTaxonomy
 
 
@@ -99,6 +112,8 @@ URI: [nexus:StakeholderGroup](https://ibm.github.io/ai-atlas-nexus/ontology/Stak
         click Any href "../Any/"
 
 
+
+      StakeholderGroup : narrower
 
       StakeholderGroup : related_mappings
 
@@ -133,6 +148,8 @@ URI: [nexus:StakeholderGroup](https://ibm.github.io/ai-atlas-nexus/ontology/Stak
 | [hasPart](hasPart.md)                         | \* <br/> [String](String.md)               | A relationship where an entity has another entity                                | [Group](Group.md)   |
 | [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                   | A relationship where a group belongs to a domain                                 | [Group](Group.md)   |
 | [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Group](Group.md)   |
+| [narrower](narrower.md)                       | \* <br/> [String](String.md)               |                                                                                  | [Group](Group.md)   |
+| [broader](broader.md)                         | \* <br/> [String](String.md)               |                                                                                  | [Group](Group.md)   |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
@@ -144,12 +161,18 @@ URI: [nexus:StakeholderGroup](https://ibm.github.io/ai-atlas-nexus/ontology/Stak
 | [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 
 ## Usages
 
 | used by                       | used in                                   | type  | used                                    |
 | ----------------------------- | ----------------------------------------- | ----- | --------------------------------------- |
 | [Container](Container.md)     | [stakeholdergroups](stakeholdergroups.md) | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AISubject](AISubject.md)     | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIOperator](AIOperator.md)   | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIDeveloper](AIDeveloper.md) | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIDeployer](AIDeployer.md)   | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
+| [AIUser](AIUser.md)           | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
 | [Stakeholder](Stakeholder.md) | [isPartOf](isPartOf.md)                   | range | [StakeholderGroup](StakeholderGroup.md) |
 
 ## Identifier and Mapping Information
@@ -208,14 +231,15 @@ attributes:
     - Entry
     - Policy
     - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   hasDocumentation:
@@ -236,6 +260,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -256,6 +281,7 @@ attributes:
     owner: StakeholderGroup
     domain_of:
     - Group
+    - RiskControlGroup
     - RiskGroup
     - CapabilityGroup
     range: string
@@ -302,6 +328,28 @@ attributes:
     - ControlActivityRecommendation
     - Requirement
     range: string
+  narrower:
+    name: narrower
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: narrower
+    owner: StakeholderGroup
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
+  broader:
+    name: broader
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/common
+    rank: 1000
+    slot_uri: skos:narrower
+    alias: broader
+    owner: StakeholderGroup
+    domain_of:
+    - Group
+    range: string
+    multivalued: true
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -441,6 +489,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: StakeholderGroup
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: StakeholderGroup
     domain_of:
     - Entity

@@ -1,0 +1,3281 @@
+actions:
+  - id: A0001_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0002_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0003_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0004_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0005_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0006_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0007_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0008_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0009_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0010_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0011_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0012_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0013_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0014_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0015_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0016_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0017_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0018_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0019_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0020_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0021_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0022_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0023_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0024_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A0025_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0026_Bengio2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0027_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0028_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0029_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0030_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0031_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0032_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0033_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0034_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0035_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0036_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0037_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0038_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0039_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0040_Casper2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0042_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0043_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0044_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0045_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0046_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0050_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0051_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0052_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0053_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0054_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0055_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0056_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0057_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0058_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0059_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0060_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0061_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0062_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0063_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0064_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0065_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0066_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0067_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0068_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0069_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0071_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0072_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0073_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0074_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0075_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0076_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0077_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0078_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A0079_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0080_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0081_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0082_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0083_Eisenberg2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0084_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0085_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0086_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0087_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0088_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0089_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0090_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0091_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0092_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0093_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0094_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0095_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0096_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0097_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0098_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0099_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0100_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0101_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0102_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0103_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0104_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0105_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0106_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0107_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0108_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0109_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0110_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0111_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0112_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0113_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0114_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0115_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0116_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0117_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0118_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0119_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0120_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0121_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0122_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0123_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0124_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0125_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0126_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0127_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0128_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0129_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0130_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0131_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0132_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0133_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0134_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0135_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0136_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0137_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0138_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0139_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0140_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0141_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0142_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0143_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0144_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0145_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0146_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0147_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0148_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0149_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0150_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0151_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0152_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0153_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0154_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0156_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0157_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0158_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0159_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0160_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0161_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0162_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0163_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0164_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0165_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0166_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0167_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0168_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0169_Future_of_Life_Institute2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0171_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A0172_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0173_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0175_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0176_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0177_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0178_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0179_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0180_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0181_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0182_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0183_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0184_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0185_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0186_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0187_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0188_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0189_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0190_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0191_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0192_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0193_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0194_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0195_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0196_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0197_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0198_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0199_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0200_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0201_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0202_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0203_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0204_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0205_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0206_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0207_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0208_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0209_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0210_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0211_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A0212_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0213_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0214_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0215_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0216_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A0217_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0218_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0219_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A0220_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0221_Schuett2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0250_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0251_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0252_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0253_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0254_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0255_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0256_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0257_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0258_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0259_Wiener2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0260_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0261_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0262_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0263_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0264_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0265_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0266_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0267_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0268_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0269_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0270_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0271_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0272_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0273_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0274_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0275_EU_AI_Office2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0276_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0277_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0278_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0279_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0280_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0281_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0282_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0283_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0284_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0285_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0286_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0332_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0333_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.3
+    type: Action
+  - id: A0334_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0335_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0336_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0338_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0339_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0340_Campos2025
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0388_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0389_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0390_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0391_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0392_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0393_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0394_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0395_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0396_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0397_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0398_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0399_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0400_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0401_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0402_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0403_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0404_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0405_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0406_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0407_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0408_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0409_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0410_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0411_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0412_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A0413_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0414_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0415_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0416_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0417_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0418_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0419_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0420_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0421_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0422_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0423_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0424_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0425_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0426_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0427_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0428_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0429_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0430_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0431_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0432_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0433_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0434_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0435_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0436_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0437_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0438_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0439_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0440_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0441_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0442_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0443_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0444_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0445_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0446_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0447_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0448_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0449_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0450_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0451_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0452_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0453_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0454_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0455_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0456_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0457_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0458_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0459_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0460_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0461_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0462_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0463_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0464_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0465_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0466_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0467_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0468_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0469_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0470_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0471_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0472_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0473_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0474_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0475_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0476_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0477_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0478_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0479_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0480_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0481_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0482_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0483_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0484_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0485_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0486_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0487_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0488_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0489_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0490_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0491_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0492_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0493_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0494_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0495_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0496_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0497_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0498_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0499_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0500_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0501_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0502_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0503_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0504_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0505_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0506_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0507_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0508_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0509_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0510_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0511_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0512_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0513_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0514_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0515_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0516_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0517_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0518_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0519_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0520_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0521_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0522_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0523_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0524_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0525_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0526_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0527_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0528_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0529_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0530_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0531_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0532_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0533_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0534_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0624_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0625_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0626_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0627_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0628_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0629_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0630_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3
+    type: Action
+  - id: A0631_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0632_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0633_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0634_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1
+    type: Action
+  - id: A0635_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0636_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0637_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0638_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0639_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0640_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0641_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0642_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0643_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0644_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0645_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1
+    type: Action
+  - id: A0646_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0647_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0648_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0649_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0650_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0651_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0652_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0654_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0655_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0656_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0657_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0658_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0659_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0660_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0661_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0662_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0663_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0664_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0665_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0666_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0667_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0668_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0669_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0670_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0671_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0672_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0673_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0674_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0675_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0676_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0677_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0678_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0679_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0680_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0681_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0682_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0683_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0684_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0685_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0686_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0687_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0688_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0689_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0690_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0691_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0692_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0693_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0694_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0695_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0696_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3
+    type: Action
+  - id: A0697_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0698_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0699_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0700_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0701_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0702_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0703_Barrett2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0707_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0708_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0709_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0710_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0711_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0712_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0713_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0714_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0715_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0716_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0717_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0718_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0719_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0720_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0721_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0722_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0723_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0724_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0725_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0726_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0727_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0728_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0729_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0730_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0731_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0732_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0733_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0734_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0735_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0736_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0737_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0738_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0739_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0740_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0741_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0742_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0743_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0744_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0745_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0746_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0747_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0748_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0749_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0750_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0751_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0752_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0753_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0754_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0755_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0756_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0757_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0758_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0759_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0760_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0761_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0762_NIST2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0764_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0765_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0766_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0767_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0768_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0769_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0770_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0771_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0772_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0773_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0774_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0775_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0776_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0777_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0778_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0779_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A0780_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0781_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0782_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0783_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0784_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0785_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0786_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0787_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0788_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0789_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0790_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0791_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0792_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0793_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0794_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0795_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0796_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0797_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0798_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0799_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0800_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0801_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0802_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0803_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0804_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0805_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0806_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0807_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0808_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0809_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0810_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0811_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0812_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0813_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0814_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0815_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0816_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0817_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0818_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0819_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0820_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0821_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0822_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0823_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0824_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0825_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0826_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0827_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0828_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0829_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0830_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0831_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0832_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0833_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0834_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0835_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0836_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0837_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0838_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0839_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0840_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0841_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0842_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0843_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0844_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0845_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0846_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0847_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0848_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0849_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0850_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0851_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0852_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0853_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0854_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0855_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0856_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0857_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0858_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0859_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0860_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0861_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0862_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0863_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0864_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0865_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0866_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0867_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0868_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0869_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0870_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A0871_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0872_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0873_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A0874_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0875_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0876_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0877_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0878_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0879_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0881_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A0882_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0883_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0884_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0885_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0886_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0887_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0888_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0889_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0890_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0891_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0892_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0893_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0894_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0895_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0896_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A0897_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0898_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0899_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0900_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0901_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0902_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0903_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0904_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0905_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: Action
+  - id: A0906_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A0907_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0908_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0909_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0910_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: Action
+  - id: A0911_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0912_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0913_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0914_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0915_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0916_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0917_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0918_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0919_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0920_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0921_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0922_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0923_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0924_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0925_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0926_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0927_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0928_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0929_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A0930_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0931_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0932_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0933_UK_Government2023
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A0934_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0935_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0936_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0937_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2
+    type: Action
+  - id: A0938_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.1
+    type: Action
+  - id: A0939_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0940_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0941_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0942_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0943_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0944_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A0945_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0946_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0947_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0948_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0949_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0950_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0951_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0952_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0953_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0954_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0955_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0956_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0957_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0958_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0959_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0960_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0961_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0962_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0963_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0964_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0965_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0966_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0967_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A0968_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A0969_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A0970_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0971_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0972_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A0973_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0974_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0975_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0976_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: Action
+  - id: A0977_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0978_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A0979_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0980_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A0981_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0982_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A0983_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0984_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0985_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action
+  - id: A0986_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A0987_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0988_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A0989_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0990_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0991_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A0992_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A0993_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0994_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0995_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0996_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.6
+    type: Action
+  - id: A0997_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0998_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A0999_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1000_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1001_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1002_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1003_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1004_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A1005_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: Action
+  - id: A1006_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A1007_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A1008_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1009_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1010_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1011_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A1012_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1013_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1014_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A1015_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1016_Gipiskis2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A1018_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A1019_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A1020_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1021_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A1022_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.2
+    type: Action
+  - id: A1023_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.4
+    type: Action
+  - id: A1024_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1025_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A1026_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.2
+    type: Action
+  - id: A1027_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A1028_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A1029_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A1030_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A1031_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.2
+    type: Action
+  - id: A1032_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.2
+    type: Action
+  - id: A1033_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.3
+    type: Action
+  - id: A1034_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.1
+    type: Action
+  - id: A1035_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.6
+    type: Action
+  - id: A1036_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A1037_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.3
+    type: Action
+  - id: A1038_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.5
+    type: Action
+  - id: A1039_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A1040_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-3.1
+    type: Action
+  - id: A1041_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.4
+    type: Action
+  - id: A1042_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.3
+    type: Action
+  - id: A1043_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-4.5
+    type: Action
+  - id: A1044_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-1.4
+    type: Action
+  - id: A1045_Uuk2024
+    isCategorizedAs:
+      - mit-draft-ai-risk-mitigation-group-2.1
+    type: Action

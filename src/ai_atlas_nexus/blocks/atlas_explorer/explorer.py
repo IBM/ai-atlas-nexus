@@ -1,3 +1,4 @@
+from collections import defaultdict
 from typing import Any, Dict, List
 
 import inflect
@@ -15,6 +16,19 @@ class AtlasExplorer(ExplorerBase):
 
         # load the data into the graph
         self._data = data
+        self._combined_cache = {}
+        self._id_cache = {}
+        self._build_id_cache_index()
+
+    def _build_id_cache_index(self):
+        """
+        A dict which is mapping ID to LinkML obj
+        """
+        for class_name in self._data.model_fields_set:
+            items = getattr(self._data, class_name) or []
+            for item in items:
+                if hasattr(item, 'id') and item.id:
+                    self._id_cache[item.id] = item
 
     def get_all_classes(self):
         """
@@ -52,7 +66,7 @@ class AtlasExplorer(ExplorerBase):
         Args:
             class_name: Union[str | list | None]:
                 Name of the class (the collection key in data)
-            taxonomy: str
+            taxonomy: Union[str | list | None]
                 (Optional) The string id for a taxonomy
             vocabulary:
                 (Optional) The string id for a vocabulary
@@ -72,12 +86,23 @@ class AtlasExplorer(ExplorerBase):
         else:
             class_names = class_name
 
+        taxonomies = []
+
+        if taxonomy is None:
+            taxonomies = ["ibm-risk-atlas"]
+        elif isinstance(taxonomy, str):
+            taxonomies.append(taxonomy)
+        else:
+            taxonomies = taxonomy
+
+        cache_key = (tuple(class_names) if isinstance(class_names, list) else class_name, tuple(taxonomies), vocabulary, document)
+
+        if cache_key in self._combined_cache:
+            return self._combined_cache[cache_key]
+
         result = []
         seen_ids = set()
 
-        def items_process():
-
-            return result
         for key in class_names:
             if key not in self._data:
                 for k in self._data.model_fields_set:
@@ -111,7 +136,7 @@ class AtlasExplorer(ExplorerBase):
             result = list(
                 filter(
                     lambda instance: hasattr(instance, "isDefinedByTaxonomy")
-                    and instance.isDefinedByTaxonomy == taxonomy,
+                    and instance.isDefinedByTaxonomy in taxonomies,
                     result,
                 )
             )
@@ -135,6 +160,8 @@ class AtlasExplorer(ExplorerBase):
         if result is None:
             result = []
 
+        self._combined_cache[cache_key] = result
+
         return result if isinstance(result, list) else [result]
 
     def get_by_id(self, class_name, identifier):
@@ -142,7 +169,7 @@ class AtlasExplorer(ExplorerBase):
         Get a single instance by its identifier.
 
         Args:
-            class_name: str
+            class_name: str | None
                 Name of the class (the collection key in data)
             identifier: str
                 Value of the identifier field
@@ -151,14 +178,18 @@ class AtlasExplorer(ExplorerBase):
             Optional[Dict[str, Any]]
                 The matching instance or None
         """
-        instances = self.get_all(class_name)
+        if identifier in self._id_cache:
+            return self._id_cache[identifier]
 
-        # Hmm assuming here all entities have id perhaps should check as it is not enforced
-        id_slot = "id"
+        if class_name:
+            instances = self.get_all(class_name)
 
-        for instance in instances:
-            if getattr(instance, id_slot) == identifier:
-                return instance
+            # Hmm assuming here all entities have id perhaps should check as it is not enforced
+            id_slot = "id"
+
+            for instance in instances:
+                if getattr(instance, id_slot) == identifier:
+                    return instance
 
         return None
 
@@ -266,3 +297,52 @@ class AtlasExplorer(ExplorerBase):
                 matches.append(instance)
 
         return matches
+
+    def filter_ids_by_type(self, ids, disallowed_types):
+        """
+        Filter a list of IDs to remove ones of type
+
+        Args:
+            ids: List[str]
+                List of ids to filter
+            allowed_types: List[str]
+                The types to allow
+
+        Returns:
+            List[str]
+
+        """
+        return [
+            id_ for id_ in ids
+            if id_ in self._id_cache and type(self._id_cache[id_]).__name__ not in disallowed_types
+        ]
+
+    def arrange_ids_by_type(self, ids):
+        """
+        Arrange a list of IDs to organise by type
+
+        Args:
+            ids: List[str]
+                List of ids to filter
+
+        Returns:
+            dict
+
+        """
+        result = defaultdict(list)
+        for id_ in ids:
+            if id_ in self._id_cache:
+                r_type = type(self._id_cache[id_]).__name__
+                if result.get(r_type):
+                    result[r_type].append(id_)
+                else:
+                    result[r_type] =  [id_]
+
+        return result
+
+    def clear_cache(self):
+          """
+          Manually clear caches
+          """
+          self._combined_cache.clear()
+          self._id_cache.clear()

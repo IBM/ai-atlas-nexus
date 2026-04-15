@@ -76,6 +76,17 @@ URI: [dpv:Certification](https://w3id.org/dpv#Certification)
 
 
 
+      Certification : isCategorizedAs
+
+
+
+
+
+        Certification --> "*" Any : isCategorizedAs
+        click Any href "../Any/"
+
+
+
       Certification : isDefinedByTaxonomy
 
 
@@ -182,6 +193,7 @@ URI: [dpv:Certification](https://w3id.org/dpv#Certification)
 | [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
 | [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 
 ## Identifier and Mapping Information
 
@@ -295,14 +307,15 @@ attributes:
     - Entry
     - Policy
     - Rule
+    - RiskControlGroup
     - RiskGroup
     - Risk
     - RiskControl
     - Action
     - RiskIncident
-    - CapabilityGroup
-    - StakeholderGroup
     - Stakeholder
+    - StakeholderGroup
+    - CapabilityGroup
     - Requirement
     range: Taxonomy
   isDefinedByVocabulary:
@@ -337,6 +350,7 @@ attributes:
     - Term
     - Principle
     - RiskTaxonomy
+    - RiskControlGroupTaxonomy
     - Action
     - BaseAi
     - LargeLanguageModelFamily
@@ -359,8 +373,8 @@ attributes:
     - Entry
     - Risk
     - LargeLanguageModel
-    - CapabilityGroup
     - Stakeholder
+    - CapabilityGroup
     range: string
   requiredByTask:
     name: requiredByTask
@@ -395,11 +409,9 @@ attributes:
     inlined: false
   implementedByAdapter:
     name: implementedByAdapter
-    description: 'Indicates that this capability is implemented by a specific adapter.
+    description: Indicates that this capability is implemented by a specific adapter.
       This relationship distinguishes the abstract capability (what can be done) from
       the technical implementation mechanism (how it is added/extended via adapters).
-
-      '
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
     domain: Any
@@ -551,6 +563,19 @@ attributes:
     rank: 1000
     slot_uri: skos:broadMatch
     alias: broad_mappings
+    owner: Certification
+    domain_of:
+    - Entity
+    range: Any
+    multivalued: true
+    inlined: false
+  isCategorizedAs:
+    name: isCategorizedAs
+    description: A relationship where an entity has been deemed to be categorized
+    from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+    rank: 1000
+    slot_uri: nexus:isCategorizedAs
+    alias: isCategorizedAs
     owner: Certification
     domain_of:
     - Entity

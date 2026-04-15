@@ -1,0 +1,573 @@
+documents:
+  - id: doc-mit-draft-ai-risk-repository
+    name: "Mapping AI Risk Mitigations: Evidence Scan & Draft Mitigation Taxonomy"
+    description: >-
+      "The AI Risk Mitigation Taxonomy has three parts: The AI Risk Mitigation Database captures 831 mitigations
+      extracted from 13 existing frameworks and classifications of AI risk mitigations The Draft AI Risk Mitigation
+      Taxonomy organizes mitigations into 4 main categories and 23 subcategories. The Taxonomy Categories include:
+      Governance & Oversight Controls, Technical & Security Controls, Operational Process Controls, and Transparency &
+      Accountability Controls"
+    author: Alexander K. Saeri, Sophia Lloyd George, Jess Graham, Clelia LaCarriere, Peter Slattery, Neil Thompson
+    url: https://cdn.prod.website-files.com/669550d38372f33552d2516e/6887e58496902e3bcad04a5a_1b0850b4406f7dc6a79365c4b56f0f51_Mapping%20AI%20Risk%20Mitigations.pdf
+    dateCreated: 2025-07-28
+    dateModified: 2025-07-28
+  - id: doc-Bengio2025
+    name: International AI Safety Report
+    description: >-
+      The first International AI Safety Report comprehensively synthesizes the current evidence on the capabilities,
+      risks, and safety of advanced AI systems. The report was mandated by the nations attending the AI Safety Summit in
+      Bletchley, UK. Thirty nations, the UN, the OECD, and the EU each nominated a representative to the report's Expert
+      Advisory Panel. A total of 100 AI experts contributed, representing diverse perspectives and disciplines. Led by
+      the report's Chair, these independent experts collectively had full discretion over the report's content.
+    author:
+      Yoshua Bengio, Sören Mindermann, Daniel Privitera, Tamay Besiroglu, Rishi Bommasani, Stephen Casper, Yejin Choi,
+      Philip Fox, Ben Garfinkel, Danielle Goldfarb, Hoda Heidari, Anson Ho, Sayash Kapoor, Leila Khalatbari, Shayne
+      Longpre, Sam Manning, Vasilios Mavroudis, Mantas Mazeika, Julian Michael, Jessica Newman, Kwan Yee Ng, Chinasa T.
+      Okolo, Deborah Raji, Girish Sastry, Elizabeth Seger, Theodora Skeadas, Tobin South, Emma Strubell, Florian Tramèr,
+      Lucia Velasco, Nicole Wheeler, Daron Acemoglu, Olubayo Adekanmbi, David Dalrymple, Thomas G. Dietterich, Edward W.
+      Felten, Pascale Fung, Pierre-Olivier Gourinchas, Fredrik Heintz, Geoffrey Hinton, Nick Jennings, Andreas Krause,
+      Susan Leavy, Percy Liang, Teresa Ludermir, Vidushi Marda, Helen Margetts, John McDermid, Jane Munga, Arvind
+      Narayanan, Alondra Nelson, Clara Neppel, Alice Oh, Gopal Ramchurn, Stuart Russell, Marietje Schaake, Bernhard
+      Schölkopf, Dawn Song, Alvaro Soto, Lee Tiedrich, Gaël Varoquaux, Andrew Yao, Ya-Qin Zhang, Fahad Albalawi, Marwan
+      Alserkal, Olubunmi Ajala, Guillaume Avrin, Christian Busch, André Carlos Ponce de Leon Ferreira de Carvalho,
+      Bronwyn Fox, Amandeep Singh Gill, Ahmet Halit Hatip, Juha Heikkilä, Gill Jolly, Ziv Katzir, Hiroaki Kitano,
+      Antonio Krüger, Chris Johnson, Saif M. Khan, Kyoung Mu Lee, Dominic Vincent Ligot, Oleksii Molchanovskyi, Andrea
+      Monti, Nusu Mwamanzi, Mona Nemer, Nuria Oliver, José Ramón López Portillo, Balaraman Ravindran, Raquel Pezoa
+      Rivera, Hammam Riza, Crystal Rugege, Ciarán Seoighe, Jerry Sheehan, Haroon Sheikh, Denise Wong, Yi Zeng
+    url: https://arxiv.org/abs/2501.17805
+    dateCreated: 2025-01-29
+    dateModified: 2025-01-29
+  - id: doc-Schuett2023
+    name: "Towards Best Practices in AGI Safety and Governance: A Survey of Expert Opinion"
+    description: >-
+      A number of leading AI companies, including OpenAI, Google DeepMind, and Anthropic, have the stated goal of
+      building artificial general intelligence (AGI) - AI systems that achieve or exceed human performance across a wide
+      range of cognitive tasks. In pursuing this goal, they may develop and deploy AI systems that pose particularly
+      significant risks. While they have already taken some measures to mitigate these risks, best practices have not
+      yet emerged. To support the identification of best practices, we sent a survey to 92 leading experts from AGI
+      labs, academia, and civil society and received 51 responses. Participants were asked how much they agreed with 50
+      statements about what AGI labs should do. Our main finding is that participants, on average, agreed with all of
+      them. Many statements received extremely high levels of agreement. For example, 98% of respondents somewhat or
+      strongly agreed that AGI labs should conduct pre-deployment risk assessments, dangerous capabilities evaluations,
+      third-party model audits, safety restrictions on model usage, and red teaming. Ultimately, our list of statements
+      may serve as a helpful foundation for efforts to develop best practices, standards, and regulations for AGI labs.
+    author: Jonas Schuett, Noemi Dreksler, Markus Anderljung, David McCaffary, Lennart Heim, Emma Bluemke, Ben Garfinkel
+    url: https://arxiv.org/abs/2305.07153
+    dateCreated: 2023-05-11
+    dateModified: 2023-05-11
+  - id: doc-Uuk2024
+    name: Effective Mitigations for Systemic Risks from General-Purpose AI
+    description: >-
+      The systemic risks posed by general-purpose AI models are a growing concern, yet the effectiveness of mitigations
+      remains underexplored. Previous research has proposed frameworks for risk mitigation, but has left gaps in our
+      understanding of the perceived effectiveness of measures for mitigating systemic risks. Our study addresses this
+      gap by evaluating how experts perceive different mitigations that aim to reduce the systemic risks of
+      general-purpose AI models. We surveyed 76 experts whose expertise spans AI safety; critical infrastructure;
+      democratic processes; chemical, biological, radiological, and nuclear risks (CBRN); and discrimination and bias.
+      Among 27 mitigations identified through a literature review, we find that a broad range of risk mitigation
+      measures are perceived as effective in reducing various systemic risks and technically feasible by domain experts.
+      In particular, three mitigation measures stand out: safety incident reports and security information sharing,
+      third-party pre-deployment model audits, and pre-deployment risk assessments. These measures show both the highest
+      expert agreement ratings (>60%) across all four risk areas and are most frequently selected in experts' preferred
+      combinations of measures (>40%). The surveyed experts highlighted that external scrutiny, proactive evaluation and
+      transparency are key principles for effective mitigation of systemic risks. We provide policy recommendations for
+      implementing the most promising measures, incorporating the qualitative contributions from experts. These insights
+      should inform regulatory frameworks and industry practices for mitigating the systemic risks associated with
+      general-purpose AI.
+    author: Risto Uuk, Annemieke Brouwer, Tim Schreier, Noemi Dreksler, Valeria Pulignano, Rishi Bommasani
+    url: https://doi.org/10.48550/arXiv.2412.02145
+    dateCreated: 2024-11-14
+    dateModified: 2024-11-14
+  - id: doc-Wiener2024
+    name: California State Senate Bill 1047
+    description: >-
+      Proposed legislation establishing safety requirements for organizations developing frontier AI models -
+      specifically, models which cost more than $100 million to train, with compute of >10^26 FLOP (or fine-tuned models
+      of similar size). Though ultimately vetoed by the Governor of California, SB 1047 set important precedents for AI
+      regulation.
+    author: "Senator Wiener, Coauthors: Senators Roth, Rubio, and Stern"
+    url: https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB1047
+    dateCreated: 2024-02-07
+    dateModified: 2024-02-07
+  - id: doc-FLI2024
+    name: FLI AI Safety Index 2024
+    description: >-
+      The 2024 FLI AI Safety Index conducted a comprehensive review of six prominent AI companies by an independent
+      panel of seven technical AI and governance specialists. Key findings include significant risk management
+      discrepancies across the companies, vulnerability to adversarial attacks, lack of control protocols, and the
+      insufficient external oversight. Mitigation strategies are recommended to counteract these AI risk deficiencies.
+    author: Future of Life Institute
+    url: https://futureoflife.org/document/fli-ai-safety-index-2024/
+    dateCreated: 2024-12-11
+    dateModified: 2024-12-11
+  - id: doc-Casper2025
+    name: Pitfalls of Evidence-Based AI Policy
+    description: >-
+      Nations across the world are working to govern AI. However, from a technical perspective, there is uncertainty and
+      disagreement on the best way to do this. Meanwhile, recent debates over AI regulation have led to calls for
+      "evidence-based AI policy" which emphasize holding regulatory action to a high evidentiary standard. Evidence is
+      of irreplaceable value to policymaking. However, holding regulatory action to too high an evidentiary standard can
+      lead to systematic neglect of certain risks. In historical policy debates (e.g., over tobacco ca. 1965 and fossil
+      fuels ca. 1985) "evidence-based policy" rhetoric is also a well-precedented strategy to downplay the urgency of
+      action, delay regulation, and protect industry interests. Here, we argue that if the goal is evidence-based AI
+      policy, the first regulatory objective must be to actively facilitate the process of identifying, studying, and
+      deliberating about AI risks. We discuss a set of 15 regulatory goals to facilitate this and show that Brazil,
+      Canada, China, the EU, South Korea, the UK, and the USA all have substantial opportunities to adopt further
+      evidence-seeking policies.
+    author: Stephen Casper, David Krueger, Dylan Hadfield-Menell
+    url: https://arxiv.org/abs/2502.09618
+    dateCreated: 2025-02-13
+    dateModified: 2025-02-13
+  - id: doc-Eisenberg2025
+    name:
+      "The Unified Control Framework: Establishing a Common Foundation for Enterprise AI Governance, Risk Management and
+      Regulatory Compliance"
+    description: >-
+      The rapid adoption of AI systems presents enterprises with a dual challenge: accelerating innovation while
+      ensuring responsible governance. Current AI governance approaches suffer from fragmentation, with risk management
+      frameworks that focus on isolated domains, regulations that vary across jurisdictions despite conceptual
+      alignment, and high-level standards lacking concrete implementation guidance. This fragmentation increases
+      governance costs and creates a false dichotomy between innovation and responsibility. We propose the Unified
+      Control Framework (UCF): a comprehensive governance approach that integrates risk management and regulatory
+      compliance through a unified set of controls. The UCF consists of three key components: (1) a comprehensive risk
+      taxonomy synthesizing organizational and societal risks, (2) structured policy requirements derived from
+      regulations, and (3) a parsimonious set of 42 controls that simultaneously address multiple risk scenarios and
+      compliance requirements. We validate the UCF by mapping it to the Colorado AI Act, demonstrating how our approach
+      enables efficient, adaptable governance that scales across regulations while providing concrete implementation
+      guidance. The UCF reduces duplication of effort, ensures comprehensive coverage, and provides a foundation for
+      automation, enabling organizations to achieve responsible AI governance without sacrificing innovation speed.
+    author: Ian W. Eisenberg, Lucía Gamboa, Eli Sherman
+    url: https://arxiv.org/abs/2503.05937
+    dateCreated: 2025-03-07
+    dateModified: 2025-03-07
+  - id: doc-EU AI Office2025
+    name: "EU AI Act: General Purpose AI Code of Practice (Draft 3)"
+    description: >-
+      The implementing guidance for the EU AI Act's requirements on general-purpose AI systems, detailing specific
+      measures for systemic risk assessment, mitigation, and governance.
+    author: EU AI Office
+    url: https://code-of-practice.ai/
+    dateCreated: 2025-07-10
+    dateModified: 2025-07-10
+  - id: doc-Gipiškis2024
+    name: Risk sources and risk management measures in support of standards for general-purpose AI systems
+    description: >-
+      There is an urgent need to identify both short and long-term risks from newly emerging types of Artificial
+      Intelligence (AI), as well as available risk management measures. In response, and to support global efforts in
+      regulating AI and writing safety standards, we compile an extensive catalog of risk sources and risk management
+      measures for general-purpose AI (GPAI) systems, complete with descriptions and supporting examples where relevant.
+      This work involves identifying technical, operational, and societal risks across model development, training, and
+      deployment stages, as well as surveying established and experimental methods for managing these risks. To the best
+      of our knowledge, this paper is the first of its kind to provide extensive documentation of both GPAI risk sources
+      and risk management measures that are descriptive, self-contained and neutral with respect to any existing
+      regulatory framework. This work intends to help AI providers, standards experts, researchers, policymakers, and
+      regulators in identifying and mitigating systemic risks from GPAI systems. For this reason, the catalog is
+      released under a public domain license for ease of direct use by stakeholders in AI governance and standards.
+    author: Rokas Gipiškis, Ayrton San Joaquin, Ze Shen Chin, Adrian Regenfuß, Ariel Gil, Koen Holtman
+    url: https://arxiv.org/abs/2410.23472
+    dateCreated: 2024-10-30
+    dateModified: 2024-10-30
+  - id: doc-UK Government2023
+    name: Emerging Processes for Frontier AI Safety
+    description: >-
+      The UK recognises the enormous opportunities that AI can unlock across our economy and our society. However,
+      without appropriate guardrails, such technologies can pose significant risks. The AI Safety Summit will focus on
+      how best to manage the risks from frontier AI such as misuse, loss of control and societal harms. Frontier AI
+      organisations play an important role in addressing these risks and promoting the safety of the development and
+      deployment of frontier AI. The UK has therefore encouraged frontier AI organisations to publish details on their
+      frontier AI safety policies ahead of the AI Safety Summit hosted by the UK on 1 to 2 November 2023. This will
+      provide transparency regarding how they are putting into practice voluntary AI safety commitments and enable the
+      sharing of safety practices within the AI ecosystem. Transparency of AI systems can increase public trust, which
+      can be a significant driver of AI adoption. This document complements these publications by providing a potential
+      list of frontier AI organisations' safety policies. These have been gathered after extensive research and will
+      need updating regularly given the emerging nature of this technology. The safety processes are not listed in order
+      of importance but are summarised in themes. The government is not suggesting or mandating any particular
+      combination of policies – merely detailing the current suite available so that others can understand, interpret
+      and compare frontier companies' safety policies. This document contains the world's first overview of emerging
+      safety processes focused on frontier AI and is intended to be a useful tool to boost transparency. This
+      conversation is for frontier AI and whilst it is important that safety is applied throughout the AI sector, it is
+      also important that innovation is not stifled, hence why policies must be proportionate and based on capabilities
+      which are the key driver of risk. This document contains processes and associated practices that some frontier AI
+      organisations are already implementing and others that are being considered within academia and broader civil
+      society. It is intended as a guide for readers of frontier AI companies' AI safety policies to better understand
+      what good policy might look like, though organisations themselves will be best placed to determine their
+      applicability. Through this exercise, the government intends to help inform dialogue on potential appropriate
+      measures for individual organisations to consider at the UK AI Safety Summit.
+    author: UK Government
+    url: https://www.gov.uk/government/publications/emerging-processes-for-frontier-ai-safety
+    dateCreated: 2023-10-27
+    dateModified: 2023-10-27
+  - id: doc-Campos2025
+    name:
+      "A Frontier AI Risk Management Framework: Bridging the Gap Between Current AI Practices and Established Risk
+      Management"
+    description: >-
+      The recent development of powerful AI systems has highlighted the need for robust risk management frameworks in
+      the AI industry. Although companies have begun to6 implement safety frameworks, current approaches often lack the
+      systematic rigor found in other high-risk industries. This paper presents a comprehensive risk management
+      framework for the development of frontier AI that bridges this gap by integrating established risk management
+      principles with emerging AI-specific practices. The framework consists of four key components: (1) risk
+      identification (through literature review, open-ended red-teaming, and risk modeling), (2) risk analysis and
+      evaluation using quantitative metrics and clearly defined thresholds, (3) risk treatment through mitigation
+      measures such as containment, deployment controls, and assurance processes, and (4) risk governance establishing
+      clear organizational structures and accountability. Drawing from best practices in mature industries such as
+      aviation or nuclear power, while accounting for AI's unique challenges, this framework provides AI developers with
+      actionable guidelines for implementing robust risk management. The paper details how each component should be
+      implemented throughout the life-cycle of the AI system - from planning through deployment - and emphasizes the
+      importance and feasibility of conducting risk management work prior to the final training run to minimize the
+      burden associated with it
+    author: Simeon Campos, Henry Papadatos, Fabien Roger, Chloé Touzet, Otter Quarks, Malcolm Murray
+    url: https://arxiv.org/pdf/2502.06656
+    dateCreated: 2025-02-19
+    dateModified: 2025-02-19
+  - id: doc-Barrett2024
+    name: AI Risk Management Standards Profile for GPAIS
+    description: >-
+      Increasingly multi-purpose AI systems, such as cutting-edge large language models or other "general-purpose AI"
+      systems (GPAI or GPAIS), "foundation models," generative AI, and "frontier models" (typically all referred to
+      hereafter with the umbrella term GPAIS except where greater specificity is needed), can provide many beneficial
+      capabilities but also risks of adverse events with profound consequences. This document provides risk-management
+      practices or controls for identifying, analyzing, and mitigating risks of GPAIS. We intend this document primarily
+      for developers of large-scale, state-of-the-art GPAIS; others that can benefit from this guidance include
+      downstream developers of end-use applications that build on a GPAIS platform. This document facilitates conformity
+      with or use of leading AI risk management-related standards, adapting and building on the generic voluntary
+      guidance in the NIST AI Risk Management Framework and ISO/IEC 23894, with a focus on the unique issues faced by
+      developers of GPAIS.
+    author: Barrett
+    url: https://cltc.berkeley.edu/wp-content/uploads/2023/11/Berkeley-GPAIS-Foundation-Model-Risk-Management-Standards-Profile-v1.0.pdf#page=83
+    dateCreated: 2024-11-01
+    dateModified: 2024-11-01
+taxonomies:
+  - id: mit-draft-ai-risk-mitigation
+    name: MIT Draft AI Risk Mitigation Taxonomy
+    type: RiskControlGroupTaxonomy
+    description: >-
+      "The Draft AI Risk Mitigation Taxonomy organizes mitigations into 4 main categories and 23 subcategories. The
+      Taxonomy Categories include: Governance & Oversight Controls, Technical & Security Controls, Operational Process
+      Controls, and Transparency & Accountability Controls"
+    url: https://airisk.mit.edu/blog/mapping-ai-risk-mitigations
+    dateCreated: 2025-07-28
+    version: "1"
+    hasDocumentation:
+      - doc-mit-draft-ai-risk-repository
+groups:
+  - id: mit-draft-ai-risk-mitigation-group-1
+    name: 1. Governance & Oversight Controls
+    description: >-
+      Formal organizational structures and policy frameworks that establish human oversight mechanisms and decision
+      protocols to ensure human accountability, ethical conduct, and risk management throughout AI development and
+      deployment.
+    narrower:
+      - mit-draft-ai-risk-mitigation-group-1.1
+      - mit-draft-ai-risk-mitigation-group-1.2
+      - mit-draft-ai-risk-mitigation-group-1.3
+      - mit-draft-ai-risk-mitigation-group-1.4
+      - mit-draft-ai-risk-mitigation-group-1.5
+      - mit-draft-ai-risk-mitigation-group-1.6
+      - mit-draft-ai-risk-mitigation-group-1.7
+    type: RiskControlGroup
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-2
+    name: 2. Technical & Security Controls
+    description: >-
+      Technical, physical, and engineering safeguards that secure AI systems and constrain model behaviors to ensure
+      security, safety, alignment with human values, and content integrity.
+    narrower:
+      - mit-draft-ai-risk-mitigation-group-2.1
+      - mit-draft-ai-risk-mitigation-group-2.2
+      - mit-draft-ai-risk-mitigation-group-2.3
+      - mit-draft-ai-risk-mitigation-group-2.4
+    type: RiskControlGroup
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-3
+    name: 3. Operational Process Controls
+    description: >-
+      Processes and management frameworks governing AI system deployment, usage, monitoring, incident handling, and
+      validation, which promote safety, security, and accountability throughout the system lifecycle.
+    narrower:
+      - mit-draft-ai-risk-mitigation-group-3.1
+      - mit-draft-ai-risk-mitigation-group-3.2
+      - mit-draft-ai-risk-mitigation-group-3.3
+      - mit-draft-ai-risk-mitigation-group-3.4
+      - mit-draft-ai-risk-mitigation-group-3.5
+    type: RiskControlGroup
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-4
+    name: 4. Transparency & Accountability Controls
+    description: >-
+      Formal disclosure practices and verification mechanisms that communicate AI system information and enable external
+      scrutiny to build trust, facilitate oversight, and ensure accountability to users, regulators, and the public.
+    narrower:
+      - mit-draft-ai-risk-mitigation-group-4.1
+      - mit-draft-ai-risk-mitigation-group-4.2
+      - mit-draft-ai-risk-mitigation-group-4.3
+      - mit-draft-ai-risk-mitigation-group-4.4
+      - mit-draft-ai-risk-mitigation-group-4.5
+      - mit-draft-ai-risk-mitigation-group-4.6
+    type: RiskControlGroup
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-1.1
+    name: 1.1 Board Structure & Oversight
+    description: >-
+      Governance structures and leadership roles that establish executive accountability for AI safety and risk
+      management.
+
+      Examples: Dedicated risk committees, safety teams, ethics boards, crisis simulation training, multi-party
+      authorization protocols, deployment veto powers.
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-1
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-1.2
+    name: 1.2 Risk Management
+    description: >-
+      Systematic methods that identify, evaluate, and manage AI risks for comprehensive risk governance.
+
+      Examples: Enterprise risk management frameworks, risk registers with capability thresholds, compliance programs,
+      pre-deployment risk assessments, independent risk assessments
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-1
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-1.3
+    name: 1.3 Conflict of Interest Protections
+    description: >-
+      Governance mechanisms that manage financial interests and organizational structures to ensure leadership can
+      prioritize safety over profit
+
+      Examples: Background checks for key personnel, windfall profit redistribution plans, stake limitation policies,
+      protections against shareholder pressure
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-1
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-1.4
+    name: 1.4 Whistleblower Reporting & Protection
+    description: >-
+      Policies and systems that enable confidential reporting of safety concerns or ethical violations to prevent
+      retaliation.
+
+      Examples: Anonymous reporting channels, non-retaliation guarantees, limitations on non-disparagement agreements,
+      external whistleblower handling services
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-1
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-1.5
+    name: 1.5 Safety Decision Frameworks
+    description: >-
+      Protocols and commitments that constrain decision-making about model development, deployment, and capability
+      scaling.
+
+      Examples: If-then safety protocols, capability ceilings, deployment pause triggers, safety-capability resource
+      ratios
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-1
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-1.6
+    name: 1.6 Environmental Impact Management
+    description: >-
+      Processes for measuring, reporting, and reducing the environmental footprint of AI systems.
+
+      Examples: Carbon footprint assessment, emission offset programs, energy efficiency optimization, resource
+      consumption tracking
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-1
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-1.7
+    name: 1.7 Societal Impact Assessment
+    description: >-
+      Processes that assess AI systems' effects on society, including impacts on employment, power dynamics, political
+      processes.
+
+      Examples: Fundamental rights impact assessments, expert consultations on risk domains, stakeholder engagement
+      processes, governance gap analyses
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-1
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-2.1
+    name: 2.1 Model & Infrastructure Security
+    description: >-
+      Technical and physical safeguards that secure AI models, weights, and infrastructure to prevent unauthorized
+      access, theft, tampering.
+
+      Examples: Model weight tracking systems, multi-factor authentication protocols, physical access controls,
+      background security checks, information security standard compliance
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-2
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-2.2
+    name: 2.2 Model Alignment
+    description: >-
+      Technical methods to ensure AI systems understand and adhere to human values and intentions
+
+      Examples: Reinforcement learning from human feedback (RLHF), direct preference optimization (DPO), constitutional
+      AI training, value alignment verification systems
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-2
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-2.3
+    name: 2.3 Model Safety Engineering
+    description: >-
+      Technical methods and safeguards that constrain model behaviors and protect against exploitation and
+      vulnerabilities.
+
+      Examples: Safety analysis protocols, capability restriction mechanisms, hazardous knowledge unlearning techniques,
+      input/output filtering systems, adversarial robustness training
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-2
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-2.4
+    name: 2.4 Content Safety Controls
+    description: >-
+      Technical systems and processes that detect, filter, and label AI-generated content to identify misuse.
+
+      Examples: Synthetic media watermarking, content filtering mechanisms, prohibited content detection, metadata
+      tagging protocols, deepfake creation restrictions
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-2
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-3.1
+    name: 3.1 Testing & Auditing
+    description: >-
+      Systematic internal and external evaluations that assess AI systems, infrastructure, and compliance processes.
+
+      Examples: Third-party audits, red teaming, penetration testing, dangerous capability evaluations, bug bounty
+      programs
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-3
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-3.2
+    name: 3.2 Data Governance
+    description: >-
+      Policies and procedures that govern responsible data acquisition, curation, and usage to ensure compliance,
+      quality, privacy.
+
+      Examples: Harmful content filtering protocols, compliance checks for data collection standards, user data privacy
+      controls, data curation processes
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-3
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-3.3
+    name: 3.3 Access Management
+    description: >-
+      Operational policies and verification systems that govern who can use AI systems and for what purposes.
+
+      Examples: KYC verification requirements, API-only access controls, fine-tuning restrictions, acceptable use
+      policies, high-stakes application prohibitions
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-3
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-3.4
+    name: 3.4 Staged Deployment
+    description: >-
+      Implementation protocols that deploy AI systems in stages, requiring safety validation before expanding access.
+
+      Examples: Limited API access programs, gradual user base expansion, capability threshold assessments,
+      pre-deployment validation checkpoints, treating model updates as new deployments
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-3
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-3.5
+    name: 3.5 Post-deployment Monitoring
+    description: >-
+      Ongoing monitoring processes that track AI behavior, user interactions, and societal impacts post-deployment.
+
+      Examples: User interaction tracking systems, capability evolution assessments, periodic impact reports, automated
+      misuse detection, usage pattern analysis tools
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-3
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-3.6
+    name: 3.6 Incident Response & Recovery
+    description: >-
+      Protocols and technical systems that respond to security incidents, safety failures, or capability misuse.
+
+      Examples: Incident response plans, emergency shutdown/rollback procedures, model containment mechanisms, safety
+      drills, critical infrastructure protection measures
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-3
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-4.1
+    name: 4.1 System Documentation
+    description: >-
+      Comprehensive documentation protocols that record technical specifications, intended uses, capabilities,
+      limitations.
+
+      Examples: Model cards, system architecture documentation, compute resource disclosures, safety test result
+      reports, system prompt, model specifications
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-4
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-4.2
+    name: 4.2 Risk Disclosure
+    description: >-
+      Formal reporting protocols and notification systems that communicate risk information, mitigation plans, safety
+      evaluations.
+
+      Examples: Publishing risk assessment summaries, pre-deployment notifications to government, reporting large
+      training runs, disclosing mitigation strategies, notifying affected parties
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-4
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-4.3
+    name: 4.3 Incident Reporting
+    description: >-
+      Formal processes that document and share AI safety incidents, security breaches, near-misses with appropriate
+      stakeholders.
+
+      Examples: Cyber threat intelligence sharing networks, mandatory breach notification procedures, incident database
+      contributions, cross-industry safety reporting mechanisms, standardized near-miss documentation
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-4
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-4.4
+    name: 4.4 Governance Disclosure
+    description: >-
+      Formal disclosure mechanisms that communicate governance structures, decision frameworks, safety commitments.
+
+      Examples: Published safety and/or alignment strategies, governance documentation, safety cases, model registration
+      protocols, public commitment disclosures
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-4
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-4.5
+    name: 4.5 Third-Party System Access
+    description: >-
+      Mechanisms granting controlled system access to vetted external parties to enable independent assessment.
+
+      Examples: Researcher access programs, third-party capability assessments, government access provisions, legal safe
+      harbors for public interest evaluations
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-4
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation
+  - id: mit-draft-ai-risk-mitigation-group-4.6
+    name: 4.6 User Rights & Recourse
+    description: >-
+      Frameworks and procedures that enable users to identify and understand AI system interactions and seek
+      remediation.
+
+      Examples: User reporting channels, appeal processes, explanation request systems, remediation protocols, content
+      verification
+    type: RiskControlGroup
+    broader:
+      - mit-draft-ai-risk-mitigation-group-4
+    isDefinedByTaxonomy: mit-draft-ai-risk-mitigation

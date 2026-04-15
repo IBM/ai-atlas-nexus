@@ -11,14 +11,16 @@ Alias: hasRelatedRisk
 
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiEval](AiEval.md)                               | An AI Evaluation, e                                                              | no            |
-| [Question](Question.md)                           | An evaluation where a question has to be answered                                | no            |
-| [Questionnaire](Questionnaire.md)                 | A questionnaire groups questions                                                 | no            |
 | [Action](Action.md)                               | Action to remediate a risk                                                       | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)                   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 | [LLMQuestionPolicy](LLMQuestionPolicy.md)         | The policy guides how the language model should answer a diverse set of sensi... | no            |
-| [Term](Term.md)                                   | A term and its definitions                                                       | no            |
 | [Adapter](Adapter.md)                             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)                   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [Term](Term.md)                                   | A term and its definitions                                                       | no            |
+| [Question](Question.md)                           | An evaluation where a question has to be answered                                | no            |
+| [AiSystem](AiSystem.md)                           | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiEval](AiEval.md)                               | An AI Evaluation, e                                                              | no            |
+| [Questionnaire](Questionnaire.md)                 | A questionnaire groups questions                                                 | no            |
+| [AiAgent](AiAgent.md)                             | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
@@ -54,6 +56,7 @@ domain_of:
 - Term
 - LLMQuestionPolicy
 - Action
+- AiSystem
 - AiEval
 - BenchmarkMetadataCard
 - Adapter
