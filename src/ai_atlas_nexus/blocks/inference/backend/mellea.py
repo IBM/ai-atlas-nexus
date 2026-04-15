@@ -69,7 +69,7 @@ class MelleaInferenceBackend(InferenceBackend):
                 inference_engine_type = "openai"
                 credentials.update(
                     {
-                        "base_url": f"{credentials["base_url"]}/{model_name_or_path.split("/")[-1].lower().replace(".", "-")}/v1",
+                        "base_url": f"{credentials['base_url']}/{model_name_or_path.split('/')[-1].lower().replace('.', '-')}/v1",
                         "default_headers": {"RITS_API_KEY": credentials.get("api_key")},
                     }
                 )

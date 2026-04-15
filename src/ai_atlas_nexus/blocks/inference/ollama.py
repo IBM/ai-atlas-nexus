@@ -62,7 +62,7 @@ class OllamaInferenceEngine(InferenceEngine):
             self.client.ps()
         except ConnectionError:
             raise Exception(
-                f"Ollama server not running at {self.credentials["api_url"]}"
+                f"Ollama server not running at {self.credentials['api_url']}"
             )
 
         if self.model_name_or_path not in [
