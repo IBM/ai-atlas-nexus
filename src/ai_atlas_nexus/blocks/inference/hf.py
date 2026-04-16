@@ -84,7 +84,15 @@ class HFInferenceEngine(InferenceEngine):
         )
 
     def ping(self):
-        available_models = [model.id for model in self.client.models.list().data]
+        from openai import APIConnectionError, AuthenticationError, PermissionDeniedError
+
+        try:
+            available_models = [model.id for model in self.client.models.list().data]
+        except APIConnectionError:
+            raise Exception("Connection error. Please check HF API URL.")
+        except (AuthenticationError, PermissionDeniedError):
+            raise Exception("Authentication failed. Invalid HF_TOKEN.")
+
         if self.model_name_or_path not in available_models:
             raise Exception(
                 f"Model `{self.model_name_or_path}` not found or not available for inference on HuggingFace."
