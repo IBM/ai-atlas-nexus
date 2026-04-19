@@ -4,6 +4,7 @@ from typing import Dict, List, Union
 
 import httpx
 from dotenv import load_dotenv
+from openai import APIConnectionError, AuthenticationError, PermissionDeniedError
 
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
 from ai_atlas_nexus.blocks.inference.params import (
