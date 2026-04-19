@@ -120,6 +120,8 @@ class HFInferenceEngine(InferenceEngine):
                     verbose=verbose,
                 )
             ]
+        except (AuthenticationError, PermissionDeniedError) as e:
+            raise InferenceError("Authentication failed. Invalid HF_TOKEN.")
         except Exception as e:
             raise InferenceError(str(e))
 
