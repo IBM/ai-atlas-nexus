@@ -84,7 +84,6 @@ class HFInferenceEngine(InferenceEngine):
         )
 
     def ping(self):
-        from openai import APIConnectionError, AuthenticationError, PermissionDeniedError
 
         try:
             available_models = [model.id for model in self.client.models.list().data]
