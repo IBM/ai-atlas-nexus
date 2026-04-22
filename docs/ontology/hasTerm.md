@@ -9,9 +9,18 @@ Alias: hasTerm
 
 ## Properties
 
-- Range: [Term](Term.md)
+### Type and Range
 
-- Multivalued: True
+| Property | Value                                                                  |
+| -------- | ---------------------------------------------------------------------- |
+| Range    | [Term](Term.md)                                                        |
+| Slot URI | [nexus:hasTerm](https://ibm.github.io/ai-atlas-nexus/ontology/hasTerm) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

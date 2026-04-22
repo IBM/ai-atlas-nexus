@@ -11,16 +11,27 @@ Alias: belongsToDomain
 
 | Name                                    | Description                                                                      | Modifies Slot |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | no            |
+| [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
 | [Group](Group.md)                       | Labelled groups of concepts                                                      | no            |
+| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | no            |
+| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
 | [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | no            |
 | [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        | no            |
-| [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
-| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
 
 ## Properties
 
-- Range: [Any](Any.md)
+### Type and Range
+
+| Property  | Value                                                    |
+| --------- | -------------------------------------------------------- |
+| Range     | [Any](Any.md)                                            |
+| Domain Of | [Group](Group.md), [CapabilityGroup](CapabilityGroup.md) |
+| Slot URI  | [schema:isPartOf](http://schema.org/isPartOf)            |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

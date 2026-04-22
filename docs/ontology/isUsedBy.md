@@ -9,7 +9,17 @@ Alias: isUsedBy
 
 ## Properties
 
-- Range: [AiProvider](AiProvider.md)
+### Type and Range
+
+| Property | Value                                           |
+| -------- | ----------------------------------------------- |
+| Range    | [AiProvider](AiProvider.md)                     |
+| Slot URI | [airo:isUsedBy](https://w3id.org/airo#isUsedBy) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

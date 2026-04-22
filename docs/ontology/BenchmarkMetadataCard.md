@@ -191,6 +191,12 @@ URI: [nexus:benchmarkmetadatacard](https://ibm.github.io/ai-atlas-nexus/ontology
 - [Entity](Entity.md)
   - **BenchmarkMetadataCard**
 
+## Class Properties
+
+| Property  | Value                                                                                              |
+| --------- | -------------------------------------------------------------------------------------------------- |
+| Class URI | [nexus:benchmarkmetadatacard](https://ibm.github.io/ai-atlas-nexus/ontology/benchmarkmetadatacard) |
+
 ## Slots
 
 | Name                                                                                      | Cardinality and Range                                                                                        | Description                                                                      | Inheritance         |
@@ -216,7 +222,7 @@ URI: [nexus:benchmarkmetadatacard](https://ibm.github.io/ai-atlas-nexus/ontology
 | [hasInterpretation](hasInterpretation.md)                                                 | \* <br/> [String](String.md)                                                                                 | How users should interpret the scores or results from the metrics                | direct              |
 | [hasBaselineResults](hasBaselineResults.md)                                               | 0..1 <br/> [String](String.md)                                                                               | The results of well-known or widely used models to give context to new perfor... | direct              |
 | [hasValidation](hasValidation.md)                                                         | \* <br/> [String](String.md)                                                                                 | Measures taken to ensure that the benchmark provides valid and reliable evalu... | direct              |
-| [hasRelatedRisk](hasRelatedRisk.md)                                                       | \* <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk                                 | direct              |
+| [hasRelatedRisk](hasRelatedRisk.md)                                                       | \* <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md) | A relationship where an entity relates to a risk                                 | direct              |
 | [hasDemographicAnalysis](hasDemographicAnalysis.md)                                       | 0..1 <br/> [String](String.md)                                                                               | How the benchmark evaluates performance across different demographic groups (... | direct              |
 | [hasConsiderationPrivacyAndAnonymity](hasConsiderationPrivacyAndAnonymity.md)             | 0..1 <br/> [String](String.md)                                                                               | How any personal or sensitive data is handled and whether any anonymization t... | direct              |
 | [hasLicense](hasLicense.md)                                                               | 0..1 <br/> [License](License.md)                                                                             | Indicates licenses associated with a resource                                    | direct              |

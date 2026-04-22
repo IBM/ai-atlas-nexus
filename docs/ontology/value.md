@@ -11,14 +11,23 @@ Alias: value
 
 | Name                            | Description                                                     | Modifies Slot |
 | ------------------------------- | --------------------------------------------------------------- | ------------- |
-| [Fact](Fact.md)                 | A fact about something, for example the result of a measurement | no            |
 | [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model             | no            |
+| [Fact](Fact.md)                 | A fact about something, for example the result of a measurement | no            |
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
 
-- Required: True
+| Property  | Value               |
+| --------- | ------------------- |
+| Range     | [String](String.md) |
+| Domain Of | [Fact](Fact.md)     |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
+| Required | Yes   |
 
 ## Identifier and Mapping Information
 

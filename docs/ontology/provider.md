@@ -15,7 +15,18 @@ Alias: provider
 
 ## Properties
 
-- Range: [Organization](Organization.md)
+### Type and Range
+
+| Property  | Value                                         |
+| --------- | --------------------------------------------- |
+| Range     | [Organization](Organization.md)               |
+| Domain Of | [Dataset](Dataset.md)                         |
+| Slot URI  | [schema:provider](http://schema.org/provider) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

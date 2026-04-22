@@ -126,6 +126,12 @@ URI: [airo:AIOperator](https://w3id.org/airo#AIOperator)
     - **AIOperator**
       - [AIDeployer](AIDeployer.md)
 
+## Class Properties
+
+| Property  | Value                                               |
+| --------- | --------------------------------------------------- |
+| Class URI | [airo:AIOperator](https://w3id.org/airo#AIOperator) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                              | Description                                                                      | Inheritance                   |

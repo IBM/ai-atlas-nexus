@@ -11,6 +11,12 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 
 <!-- no inheritance hierarchy -->
 
+## Class Properties
+
+| Property  | Value                                     |
+| --------- | ----------------------------------------- |
+| Class URI | [linkml:Any](https://w3id.org/linkml/Any) |
+
 ## Slots
 
 | Name | Cardinality and Range | Description | Inheritance |
@@ -522,36 +528,42 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 | [AiOffice](AiOffice.md)                                           | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [AiOffice](AiOffice.md)                                           | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
 | [AiOffice](AiOffice.md)                                           | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
+| [ControlActivity](ControlActivity.md)                             | [hasRequirementType](hasRequirementType.md)     | domain | [Any](Any.md) |
 | [ControlActivity](ControlActivity.md)                             | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivity](ControlActivity.md)                             | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivity](ControlActivity.md)                             | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |
 | [ControlActivity](ControlActivity.md)                             | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [ControlActivity](ControlActivity.md)                             | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivity](ControlActivity.md)                             | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [hasRequirementType](hasRequirementType.md)     | domain | [Any](Any.md) |
 | [ControlActivityPermission](ControlActivityPermission.md)         | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityPermission](ControlActivityPermission.md)         | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityPermission](ControlActivityPermission.md)         | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |
 | [ControlActivityPermission](ControlActivityPermission.md)         | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [ControlActivityPermission](ControlActivityPermission.md)         | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityPermission](ControlActivityPermission.md)         | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasRequirementType](hasRequirementType.md)     | domain | [Any](Any.md) |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [hasRequirementType](hasRequirementType.md)     | domain | [Any](Any.md) |
 | [ControlActivityObligation](ControlActivityObligation.md)         | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityObligation](ControlActivityObligation.md)         | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityObligation](ControlActivityObligation.md)         | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |
 | [ControlActivityObligation](ControlActivityObligation.md)         | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [ControlActivityObligation](ControlActivityObligation.md)         | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityObligation](ControlActivityObligation.md)         | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasRequirementType](hasRequirementType.md)     | domain | [Any](Any.md) |
 | [ControlActivityRecommendation](ControlActivityRecommendation.md) | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityRecommendation](ControlActivityRecommendation.md) | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityRecommendation](ControlActivityRecommendation.md) | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |
 | [ControlActivityRecommendation](ControlActivityRecommendation.md) | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [ControlActivityRecommendation](ControlActivityRecommendation.md) | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
 | [ControlActivityRecommendation](ControlActivityRecommendation.md) | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
+| [Requirement](Requirement.md)                                     | [hasRequirementType](hasRequirementType.md)     | domain | [Any](Any.md) |
 | [Requirement](Requirement.md)                                     | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
 | [Requirement](Requirement.md)                                     | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
 | [Requirement](Requirement.md)                                     | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |

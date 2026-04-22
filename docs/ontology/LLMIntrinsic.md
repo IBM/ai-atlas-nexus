@@ -212,12 +212,18 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
   - [Entry](Entry.md)
     - **LLMIntrinsic**
 
+## Class Properties
+
+| Property  | Value                                               |
+| --------- | --------------------------------------------------- |
+| Class URI | [ai:Capability](https://w3id.org/dpv/ai#Capability) |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                                                                                        | Description                                                                      | Inheritance         |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
-| [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk                                 | direct              |
-| [hasRelatedTerm](hasRelatedTerm.md)               | \* <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a term                                 | direct              |
+| [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md) | A relationship where an entity relates to a risk                                 | direct              |
+| [hasRelatedTerm](hasRelatedTerm.md)               | \* <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)                                    | A relationship where an entity relates to a term                                 | direct              |
 | [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)                                                                   | Indicates documentation associated with an entity                                | direct              |
 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)                                                                       | A relationship where a term or a term group is defined by a vocabulary           | direct              |
 | [hasAdapter](hasAdapter.md)                       | \* <br/> [Adapter](Adapter.md)                                                                               | The Adapter for the intrinsic                                                    | direct              |

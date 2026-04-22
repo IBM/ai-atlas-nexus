@@ -102,6 +102,12 @@ URI: [airo:AIComponent](https://w3id.org/airo#AIComponent)
 - [Entity](Entity.md)
   - **AIComponent**
 
+## Class Properties
+
+| Property  | Value                                                 |
+| --------- | ----------------------------------------------------- |
+| Class URI | [airo:AIComponent](https://w3id.org/airo#AIComponent) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

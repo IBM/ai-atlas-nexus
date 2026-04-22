@@ -96,6 +96,12 @@ URI: [dpv:IncidentOngoingclass](https://w3id.org/dpv#IncidentOngoingclass)
   - [IncidentStatus](IncidentStatus.md)
     - **IncidentOngoingclass**
 
+## Class Properties
+
+| Property  | Value                                                                 |
+| --------- | --------------------------------------------------------------------- |
+| Class URI | [dpv:IncidentOngoingclass](https://w3id.org/dpv#IncidentOngoingclass) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

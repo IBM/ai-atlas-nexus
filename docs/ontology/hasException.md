@@ -15,7 +15,18 @@ Alias: hasException
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
+
+| Property  | Value                                                                            |
+| --------- | -------------------------------------------------------------------------------- |
+| Range     | [String](String.md)                                                              |
+| Domain Of | [LLMQuestionPolicy](LLMQuestionPolicy.md)                                        |
+| Slot URI  | [nexus:hasException](https://ibm.github.io/ai-atlas-nexus/ontology/hasException) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

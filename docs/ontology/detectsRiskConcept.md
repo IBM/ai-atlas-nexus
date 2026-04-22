@@ -12,14 +12,33 @@ Alias: detectsRiskConcept
 | Name                          | Description                                                                      | Modifies Slot |
 | ----------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
-| [Action](Action.md)           | Action to remediate a risk                                                       | no            |
 | [Risk](Risk.md)               | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Action](Action.md)           | Action to remediate a risk                                                       | no            |
 
 ## Properties
 
-- Range: [RiskConcept](RiskConcept.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                          |
+| --------- | ---------------------------------------------- |
+| Range     | [RiskConcept](RiskConcept.md)                  |
+| Domain    | [RiskControl](RiskControl.md)                  |
+| Domain Of | [Risk](Risk.md), [RiskControl](RiskControl.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Relationship Properties</summary>
+
+| Property | Value                           |
+| -------- | ------------------------------- |
+| Inverse  | [isDetectedBy](isDetectedBy.md) |
+
+</details>
 
 ## Identifier and Mapping Information
 

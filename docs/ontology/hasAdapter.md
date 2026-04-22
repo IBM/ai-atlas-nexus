@@ -15,9 +15,19 @@ Alias: hasAdapter
 
 ## Properties
 
-- Range: [Adapter](Adapter.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                           |
+| --------- | ------------------------------- |
+| Range     | [Adapter](Adapter.md)           |
+| Domain    | [LLMIntrinsic](LLMIntrinsic.md) |
+| Domain Of | [LLMIntrinsic](LLMIntrinsic.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

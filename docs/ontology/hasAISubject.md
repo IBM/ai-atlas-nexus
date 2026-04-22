@@ -11,12 +11,23 @@ Alias: hasAISubject
 
 | Name                    | Description                                                                      | Modifies Slot |
 | ----------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 | [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 
 ## Properties
 
-- Range: [AISubject](AISubject.md)
+### Type and Range
+
+| Property  | Value                                                   |
+| --------- | ------------------------------------------------------- |
+| Range     | [AISubject](AISubject.md)                               |
+| Domain Of | [AiSystem](AiSystem.md)                                 |
+| Slot URI  | [airo:hasAISubject](https://w3id.org/airo#hasAISubject) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 
@@ -39,7 +50,6 @@ name: hasAISubject
 description: Indicates the subjects of an AI system
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
-domain: '[''airo:AISystem'']'
 slot_uri: airo:hasAISubject
 alias: hasAISubject
 domain_of:

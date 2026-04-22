@@ -96,6 +96,12 @@ URI: [dpv:IncidentHaltedclass](https://w3id.org/dpv#IncidentHaltedclass)
   - [IncidentStatus](IncidentStatus.md)
     - **IncidentHaltedclass**
 
+## Class Properties
+
+| Property  | Value                                                               |
+| --------- | ------------------------------------------------------------------- |
+| Class URI | [dpv:IncidentHaltedclass](https://w3id.org/dpv#IncidentHaltedclass) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

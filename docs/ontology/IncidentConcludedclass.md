@@ -96,6 +96,12 @@ URI: [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass)
   - [IncidentStatus](IncidentStatus.md)
     - **IncidentConcludedclass**
 
+## Class Properties
+
+| Property  | Value                                                                     |
+| --------- | ------------------------------------------------------------------------- |
+| Class URI | [dpv:IncidentConcludedclass](https://w3id.org/dpv#IncidentConcludedclass) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

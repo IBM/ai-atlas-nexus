@@ -124,6 +124,12 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
   - [Taxonomy](Taxonomy.md)
     - **CapabilityTaxonomy**
 
+## Class Properties
+
+| Property  | Value                                                                   |
+| --------- | ----------------------------------------------------------------------- |
+| Class URI | [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range                      | Description                                                                      | Inheritance             |

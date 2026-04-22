@@ -97,6 +97,12 @@ URI: [airo:Domain](https://w3id.org/airo#Domain)
 - [Entity](Entity.md)
   - **Domain**
 
+## Class Properties
+
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Class URI | [airo:Domain](https://w3id.org/airo#Domain) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

@@ -16,9 +16,19 @@ Alias: hasTrainingData
 
 ## Properties
 
-- Range: [Dataset](Dataset.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                         |
+| --------- | ------------------------------------------------------------- |
+| Range     | [Dataset](Dataset.md)                                         |
+| Domain Of | [LargeLanguageModel](LargeLanguageModel.md)                   |
+| Slot URI  | [airo:hasTrainingData](https://w3id.org/airo#hasTrainingData) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

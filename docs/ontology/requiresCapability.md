@@ -13,22 +13,41 @@ Alias: requiresCapability
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [AiTask](AiTask.md)                         | A task, such as summarization and classification, performed by an AI             | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)             | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [Term](Term.md)                             | A term and its definitions                                                       | no            |
-| [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
-| [Entry](Entry.md)                           | An entry and its definitions                                                     | no            |
-| [Risk](Risk.md)                             | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [Certification](Certification.md)           | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
-| [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
-| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
 | [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [Term](Term.md)                             | A term and its definitions                                                       | no            |
+| [Certification](Certification.md)           | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)             | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
+| [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
+| [Risk](Risk.md)                             | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Entry](Entry.md)                           | An entry and its definitions                                                     | no            |
 
 ## Properties
 
-- Range: [Capability](Capability.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                                                                      |
+| --------- | ---------------------------------------------------------------------------------------------------------- |
+| Range     | [Capability](Capability.md)                                                                                |
+| Domain    | [Any](Any.md)                                                                                              |
+| Domain Of | [Entry](Entry.md), [LargeLanguageModel](LargeLanguageModel.md), [AiTask](AiTask.md), [Adapter](Adapter.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Relationship Properties</summary>
+
+| Property | Value                               |
+| -------- | ----------------------------------- |
+| Inverse  | [requiredByTask](requiredByTask.md) |
+
+</details>
 
 ## Identifier and Mapping Information
 

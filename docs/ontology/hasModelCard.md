@@ -12,17 +12,26 @@ Alias: hasModelCard
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [BaseAi](BaseAi.md)                         | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
-| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
 | [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
-| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [BaseAi](BaseAi.md)                         | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value               |
+| --------- | ------------------- |
+| Range     | [String](String.md) |
+| Domain Of | [BaseAi](BaseAi.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

@@ -11,12 +11,23 @@ Alias: isDeployedBy
 
 | Name                    | Description                                                                      | Modifies Slot |
 | ----------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 | [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 
 ## Properties
 
-- Range: [AIDeployer](AIDeployer.md)
+### Type and Range
+
+| Property  | Value                                                   |
+| --------- | ------------------------------------------------------- |
+| Range     | [AIDeployer](AIDeployer.md)                             |
+| Domain Of | [AiSystem](AiSystem.md)                                 |
+| Slot URI  | [airo:isDeployedBy](https://w3id.org/airo#isDeployedBy) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 
@@ -39,7 +50,6 @@ name: isDeployedBy
 description: Indicates the deployer of an AI system or component.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
-domain: '[''AISystem'', ''AIComponent'']'
 slot_uri: airo:isDeployedBy
 alias: isDeployedBy
 domain_of:

@@ -17,9 +17,28 @@ Alias: hasBenchmarkMetadata
 
 ## Properties
 
-- Range: [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                             |
+| --------- | ------------------------------------------------- |
+| Range     | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) |
+| Domain    | [AiEval](AiEval.md)                               |
+| Domain Of | [AiEval](AiEval.md)                               |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Relationship Properties</summary>
+
+| Property | Value                                 |
+| -------- | ------------------------------------- |
+| Inverse  | [describesAiEval](describesAiEval.md) |
+
+</details>
 
 ## Identifier and Mapping Information
 

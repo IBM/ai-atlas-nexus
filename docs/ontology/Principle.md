@@ -168,6 +168,12 @@ URI: [dpv:Principle](https://w3id.org/dpv#Principle)
   - [Entry](Entry.md)
     - **Principle**
 
+## Class Properties
+
+| Property  | Value                                           |
+| --------- | ----------------------------------------------- |
+| Class URI | [dpv:Principle](https://w3id.org/dpv#Principle) |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                      | Description                                                                      | Inheritance         |

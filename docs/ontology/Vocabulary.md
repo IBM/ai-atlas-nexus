@@ -123,6 +123,13 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 - [Entity](Entity.md)
   - **Vocabulary**
 
+## Class Properties
+
+| Property  | Value                                                                   |
+| --------- | ----------------------------------------------------------------------- |
+| Class URI | [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme) |
+| Mixin     | Yes                                                                     |
+
 ## Slots
 
 | Name                                    | Cardinality and Range                      | Description                                                                      | Inheritance         |

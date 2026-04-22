@@ -16,7 +16,17 @@ Alias: fine_tuning
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
+
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Range     | [String](String.md)                         |
+| Domain Of | [LargeLanguageModel](LargeLanguageModel.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

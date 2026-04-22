@@ -5,7 +5,10 @@ from pydantic import create_model
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 from ai_atlas_nexus.blocks.inference import TextGenerationInferenceOutput
-from ai_atlas_nexus.blocks.prompt_response_schema import AIRiskPresence
+from ai_atlas_nexus.blocks.prompt_response_schema import (
+    LIST_OF_STR_SCHEMA,
+    AIRiskPresence,
+)
 from ai_atlas_nexus.blocks.prompt_templates import (
     RISK_IDENTIFICATION_BATCH_TEMPLATE,
     RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES,
@@ -13,7 +16,7 @@ from ai_atlas_nexus.blocks.prompt_templates import (
 )
 from ai_atlas_nexus.blocks.risk_detector import RiskDetector
 from ai_atlas_nexus.toolkit.logging import configure_logger
-from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
+
 
 logger = configure_logger(__name__)
 

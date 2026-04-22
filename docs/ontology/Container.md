@@ -321,6 +321,12 @@ URI: [nexus:Container](https://ibm.github.io/ai-atlas-nexus/ontology/Container)
 
 <!-- no inheritance hierarchy -->
 
+## Class Properties
+
+| Property  | Value |
+| --------- | ----- |
+| Tree Root | Yes   |
+
 ## Slots
 
 | Name                                                | Cardinality and Range                                            | Description                                      | Inheritance |

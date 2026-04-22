@@ -99,6 +99,12 @@ URI: [airo:License](https://w3id.org/airo#License)
 - [Entity](Entity.md)
   - **License**
 
+## Class Properties
+
+| Property  | Value                                         |
+| --------- | --------------------------------------------- |
+| Class URI | [airo:License](https://w3id.org/airo#License) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

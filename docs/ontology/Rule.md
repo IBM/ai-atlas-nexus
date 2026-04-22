@@ -144,6 +144,12 @@ URI: [dpv:Rule](https://w3id.org/dpv#Rule)
     - [ControlActivity](ControlActivity.md)
     - [Requirement](Requirement.md)
 
+## Class Properties
+
+| Property  | Value                                 |
+| --------- | ------------------------------------- |
+| Class URI | [dpv:Rule](https://w3id.org/dpv#Rule) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |

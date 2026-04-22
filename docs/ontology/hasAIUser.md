@@ -11,12 +11,24 @@ Alias: hasAIUser
 
 | Name                    | Description                                                                      | Modifies Slot |
 | ----------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 | [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
+
+| Property  | Value                                             |
+| --------- | ------------------------------------------------- |
+| Range     | [String](String.md)                               |
+| Domain    | [AiSystem](AiSystem.md)                           |
+| Domain Of | [AiSystem](AiSystem.md)                           |
+| Slot URI  | [airo:hasAiUser](https://w3id.org/airo#hasAiUser) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 
@@ -39,7 +51,7 @@ name: hasAIUser
 description: Indicate the end-user of an AI system.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
-domain: AISystem
+domain: AiSystem
 slot_uri: airo:hasAiUser
 alias: hasAIUser
 domain_of:

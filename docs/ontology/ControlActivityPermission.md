@@ -184,6 +184,12 @@ URI: [nexus:ControlActivityPermission](https://ibm.github.io/ai-atlas-nexus/onto
     - [Permission](Permission.md)
       - **ControlActivityPermission** [ [ControlActivity](ControlActivity.md)]
 
+## Class Properties
+
+| Property  | Value                                                                                                      |
+| --------- | ---------------------------------------------------------------------------------------------------------- |
+| Class URI | [nexus:ControlActivityPermission](https://ibm.github.io/ai-atlas-nexus/ontology/ControlActivityPermission) |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                                                            | Description                                                                      | Inheritance                           |
@@ -313,6 +319,7 @@ attributes:
       (rule) belongs to
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasControlApplication
     alias: hasControlApplication
     owner: ControlActivityPermission
@@ -325,6 +332,7 @@ attributes:
       etc.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasEvidenceCategory
     alias: hasEvidenceCategory
     owner: ControlActivityPermission
@@ -338,6 +346,7 @@ attributes:
     description: The evidence is usually found here
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasTypicalLocation
     alias: hasTypicalLocation
     owner: ControlActivityPermission
@@ -351,6 +360,7 @@ attributes:
     description: This evidence only applies to AI systems with this capability
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:appliesToCapability
     alias: appliesToCapability
     owner: ControlActivityPermission
@@ -365,6 +375,7 @@ attributes:
     description: This requirement this rule belongs to
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasRequirement
     alias: hasRequirement
     owner: ControlActivityPermission
@@ -378,6 +389,7 @@ attributes:
     description: The requirement type of whether this is preventive, detective, etc.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Any
     slot_uri: nexus:hasRequirementType
     alias: hasRequirementType
     owner: ControlActivityPermission
@@ -390,6 +402,7 @@ attributes:
     description: The evidence is usually found here
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasTypicalEvidence
     alias: hasTypicalEvidence
     owner: ControlActivityPermission

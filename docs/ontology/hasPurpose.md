@@ -11,12 +11,23 @@ Alias: hasPurpose
 
 | Name                    | Description                                                                      | Modifies Slot |
 | ----------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 | [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 
 ## Properties
 
-- Range: [Purpose](Purpose.md)
+### Type and Range
+
+| Property  | Value                                               |
+| --------- | --------------------------------------------------- |
+| Range     | [Purpose](Purpose.md)                               |
+| Domain Of | [AiSystem](AiSystem.md)                             |
+| Slot URI  | [airo:hasPurpose](https://w3id.org/airo#hasPurpose) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 
