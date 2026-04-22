@@ -136,60 +136,71 @@ classes:
 slots:
   hasApplication:
     slot_uri: nexus:hasApplication
+    domain: Requirement
     range: AIUC1ApplicationCategory
     multivalued: true
     inlined: false
     description: The application category, Optional or Mandatory.
   hasFrequency:
     slot_uri: nexus:hasFrequency
+    domain: Requirement
     range: AIUC1Frequency
     description: The frequency
   hasKeywords:
     slot_uri: nexus:hasKeywords
+    domain: Requirement
     range: string
     multivalued: true
     inlined: false
     description: A collection of keywords
   hasPrinciple:
     slot_uri: dpv:isPartOf
+    domain: Requirement
     range: Principle
     multivalued: true
     inlined: false
     description: Which of the AIUC-1 principles this requirement belongs to
   hasRequirementType:
     slot_uri: nexus:hasRequirementType
+    domain: Any
     range: AIUC1RequirementType
     description: The requirement type of whether this is preventive, detective, etc.
   hasControlApplication:
     slot_uri: nexus:hasControlApplication
+    domain: ControlActivity
     range: AIUC1ControlApplicationCategory
     description: Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to
   hasEvidenceCategory:
     slot_uri: nexus:hasEvidenceCategory
+    domain: ControlActivity
     range: AIUC1EvidenceCategory
     description: The evidence category, ie Technical Implementation, Operational Practices, etc.
     multivalued: true
     inlined: false
   hasTypicalLocation:
     slot_uri: nexus:hasTypicalLocation
+    domain: ControlActivity
     range: string
     multivalued: true
     inlined: false
     description: The evidence is usually found here
   hasTypicalEvidence:
     slot_uri: nexus:hasTypicalEvidence
+    domain: ControlActivity
     range: string
     multivalued: false
     inlined: false
     description: The evidence is usually found here
   appliesToCapability:
     slot_uri: nexus:appliesToCapability
+    domain: ControlActivity
     range: AiTask
     multivalued: true
     inlined: false
     description: This evidence only applies to AI systems with this capability
   hasRequirement:
     slot_uri: nexus:hasRequirement
+    domain: ControlActivity
     range: Requirement
     multivalued: false
     inlined: false
