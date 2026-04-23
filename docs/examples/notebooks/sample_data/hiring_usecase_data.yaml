@@ -1,0 +1,93 @@
+taxonomies:
+  - id: hiring-usecase-demo
+    type: RiskTaxonomy
+    name: Algorithmic Hiring Use Case Demo
+    description: >-
+      Demo taxonomy for the algorithmic hiring use case comparison example,
+      from "Assessing AI Certification Validity via Knowledge Graphs for Use Case Similarity".
+
+entries:
+  - id: hiring-usecase-ny
+    type: AiSystem
+    name: Algorithmic Hiring (New York, US)
+    description: >-
+      AI model for algorithmic hiring developed and verified in New York, US.
+      This use case is governed by NYC Local Law 144 of 2021, which mandates
+      bias audit requirements for automated employment decision tools.
+    isDefinedByTaxonomy: hiring-usecase-demo
+    hasRelatedRisk:
+      - hiring-risk-lack-of-transparency
+      - hiring-risk-over-under-reliance
+      - hiring-risk-discriminatory-actions
+      - hiring-risk-unexplainable-output
+      - hiring-risk-unrepresentative-data
+    hasCapability:
+      - hiring-control-audit-ai-ny
+  - id: hiring-usecase-eu
+    type: AiSystem
+    name: Algorithmic Hiring (EU)
+    description: >-
+      AI model for algorithmic hiring deployed in the European Union.
+      This use case is governed by GDPR (Article 22) and the EU AI Act,
+      which require transparency and the right to explanation for automated decisions.
+    isDefinedByTaxonomy: hiring-usecase-demo
+    hasRelatedRisk:
+      - hiring-risk-lack-of-transparency
+      - hiring-risk-over-under-reliance
+      - hiring-risk-discriminatory-actions
+      - hiring-risk-unexplainable-output
+      - hiring-risk-unrepresentative-data
+    hasCapability:
+      - hiring-control-gdpr-explanation-eu
+  - id: hiring-risk-lack-of-transparency
+    type: Risk
+    name: Lack of model transparency
+    description: >-
+      The AI model's decision-making process is not transparent to stakeholders,
+      making it difficult to understand why certain hiring decisions were made.
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-risk-over-under-reliance
+    type: Risk
+    name: Over- or under-reliance
+    description: >-
+      Hiring managers may over-rely on the AI model's recommendations without
+      critical evaluation, or under-rely leading to inconsistent decision-making.
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-risk-discriminatory-actions
+    type: Risk
+    name: Discriminatory actions
+    description: >-
+      The AI model may exhibit discriminatory behavior against protected groups
+      (based on race, gender, age, disability, or other protected characteristics),
+      violating employment discrimination laws.
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-risk-unexplainable-output
+    type: Risk
+    name: Unexplainable output
+    description: >-
+      The model's scoring and ranking cannot be explained to affected individuals
+      (job applicants), violating their right to explanation under various regulations.
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-risk-unrepresentative-data
+    type: Risk
+    name: Unrepresentative data
+    description: >-
+      The training data may not be representative of the actual hiring population
+      or job requirements, leading to biased predictions and unfair outcomes.
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-control-audit-ai-ny
+    type: AiTask
+    name: AuditAI requirements (NYC Local Law 144)
+    description: >-
+      NYC Local Law 144 of 2021 requires annual independent bias audits
+      of automated employment decision tools. This control addresses risks by
+      ensuring periodic external assessment of discriminatory impact.
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-control-gdpr-explanation-eu
+    type: AiTask
+    name: Provide explanation (GDPR Art. 22)
+    description: >-
+      GDPR Article 22 guarantees individuals the right to receive an explanation
+      for automated hiring decisions that produce legal or similarly significant effects.
+      This control addresses risks by ensuring transparency and accountability.
+    isDefinedByTaxonomy: hiring-usecase-demo
