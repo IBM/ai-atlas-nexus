@@ -1016,6 +1016,8 @@
       
         
       
+        
+      
     
     
     
@@ -1075,7 +1077,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1104,6 +1106,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -11580,6 +11610,30 @@
 <td>range</td>
 <td><a href="./">Requirement</a></td>
 </tr>
+<tr>
+<td><a href="./">Requirement</a></td>
+<td><a href="../hasApplication/">hasApplication</a></td>
+<td>domain</td>
+<td><a href="./">Requirement</a></td>
+</tr>
+<tr>
+<td><a href="./">Requirement</a></td>
+<td><a href="../hasFrequency/">hasFrequency</a></td>
+<td>domain</td>
+<td><a href="./">Requirement</a></td>
+</tr>
+<tr>
+<td><a href="./">Requirement</a></td>
+<td><a href="../hasKeywords/">hasKeywords</a></td>
+<td>domain</td>
+<td><a href="./">Requirement</a></td>
+</tr>
+<tr>
+<td><a href="./">Requirement</a></td>
+<td><a href="../hasPrinciple/">hasPrinciple</a></td>
+<td>domain</td>
+<td><a href="./">Requirement</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -11709,6 +11763,7 @@ attributes:
     description: The application category, Optional or Mandatory.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: nexus:hasApplication
     alias: hasApplication
     owner: Requirement
@@ -11722,6 +11777,7 @@ attributes:
     description: The frequency
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: nexus:hasFrequency
     alias: hasFrequency
     owner: Requirement
@@ -11733,6 +11789,7 @@ attributes:
     description: A collection of keywords
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: nexus:hasKeywords
     alias: hasKeywords
     owner: Requirement
@@ -11746,6 +11803,7 @@ attributes:
     description: Which of the AIUC-1 principles this requirement belongs to
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: dpv:isPartOf
     alias: hasPrinciple
     owner: Requirement
@@ -11759,6 +11817,7 @@ attributes:
     description: This evidence only applies to AI systems with this capability
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:appliesToCapability
     alias: appliesToCapability
     owner: Requirement
@@ -11773,6 +11832,7 @@ attributes:
     description: The requirement type of whether this is preventive, detective, etc.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Any
     slot_uri: nexus:hasRequirementType
     alias: hasRequirementType
     owner: Requirement

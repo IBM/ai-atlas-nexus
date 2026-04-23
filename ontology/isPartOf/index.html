@@ -1016,6 +1016,8 @@
       
         
       
+        
+      
     
     
     
@@ -1075,7 +1077,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1104,6 +1106,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -8116,6 +8146,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-and-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type and Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardinality and Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -11067,6 +11125,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-and-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type and Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardinality and Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -11162,28 +11248,18 @@ Alias: isPartOf</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
-<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Term/">Term</a></td>
-<td>A term and its definitions</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../AIUser/">AIUser</a></td>
 <td>Individual or group that interacts with a system</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Risk/">Risk</a></td>
-<td>The state of uncertainty associated with an AI system, that has the potential...</td>
+<td><a href="../Capability/">Capability</a></td>
+<td>A specific AI capability or ability, such as reading comprehension, logical r...</td>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../Principle/">Principle</a></td>
-<td>A representation of values or norms that must be taken into consideration whe...</td>
+<td><a href="../AiAgent/">AiAgent</a></td>
+<td>An artificial intelligence (AI) agent refers to a system or program that is c...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11192,23 +11268,33 @@ Alias: isPartOf</p>
 <td>yes</td>
 </tr>
 <tr>
-<td><a href="../AiTask/">AiTask</a></td>
-<td>A task, such as summarization and classification, performed by an AI</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../AIDeveloper/">AIDeveloper</a></td>
-<td>An organisation or entity that is concerned with the development of AI servic...</td>
-<td>no</td>
-</tr>
-<tr>
 <td><a href="../AIDeployer/">AIDeployer</a></td>
 <td>Any natural or legal person, public authority, agency or other body using an ...</td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Entry/">Entry</a></td>
-<td>An entry and its definitions</td>
+<td><a href="../Principle/">Principle</a></td>
+<td>A representation of values or norms that must be taken into consideration whe...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
+<td>The state of uncertainty associated with an AI system, that has the potential...</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../AISubject/">AISubject</a></td>
+<td>An entity that is subject to or impacted by the use of AI</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Term/">Term</a></td>
+<td>A term and its definitions</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
+<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11222,6 +11308,31 @@ Alias: isPartOf</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Adapter/">Adapter</a></td>
+<td>Adapter-based methods add extra trainable parameters after the attention and ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AiTask/">AiTask</a></td>
+<td>A task, such as summarization and classification, performed by an AI</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Entry/">Entry</a></td>
+<td>An entry and its definitions</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../AIDeveloper/">AIDeveloper</a></td>
+<td>An organisation or entity that is concerned with the development of AI servic...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Stakeholder/">Stakeholder</a></td>
+<td>Represents any individual, group or organization that can affect, be affected...</td>
+<td>yes</td>
+</tr>
+<tr>
 <td><a href="../Certification/">Certification</a></td>
 <td>Certification mechanisms, seals, and marks for the purpose of demonstrating c...</td>
 <td>no</td>
@@ -11231,37 +11342,47 @@ Alias: isPartOf</p>
 <td>A compound AI System composed of one or more AI capablities</td>
 <td>no</td>
 </tr>
-<tr>
-<td><a href="../AISubject/">AISubject</a></td>
-<td>An entity that is subject to or impacted by the use of AI</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Adapter/">Adapter</a></td>
-<td>Adapter-based methods add extra trainable parameters after the attention and ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Capability/">Capability</a></td>
-<td>A specific AI capability or ability, such as reading comprehension, logical r...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../Stakeholder/">Stakeholder</a></td>
-<td>Represents any individual, group or organization that can affect, be affected...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../AiAgent/">AiAgent</a></td>
-<td>An artificial intelligence (AI) agent refers to a system or program that is c...</td>
-<td>no</td>
-</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
+<h3 id="type-and-range">Type and Range</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Range</td>
+<td><a href="../String/">String</a></td>
+</tr>
+<tr>
+<td>Domain Of</td>
+<td><a href="../Entry/">Entry</a>, <a href="../Risk/">Risk</a>, <a href="../LargeLanguageModel/">LargeLanguageModel</a>, <a href="../Stakeholder/">Stakeholder</a>, <a href="../CapabilityGroup/">CapabilityGroup</a></td>
+</tr>
+<tr>
+<td>Slot URI</td>
+<td><a href="http://schema.org/isPartOf">schema:isPartOf</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cardinality-and-requirements">Cardinality and Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>

@@ -1016,6 +1016,8 @@
       
         
       
+        
+      
     
     
     
@@ -1075,7 +1077,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1104,6 +1106,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -11513,6 +11543,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ai_atlas_nexus.library.AIAtlasNexus.identify_risks_and_actions_from_usecases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;identify_risks_and_actions_from_usecases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ai_atlas_nexus.library.AIAtlasNexus.identify_risks_from_usecases" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12233,6 +12274,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ai_atlas_nexus.library.AIAtlasNexus.identify_risks_and_actions_from_usecases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;identify_risks_and_actions_from_usecases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ai_atlas_nexus.library.AIAtlasNexus.identify_risks_from_usecases" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -12435,7 +12487,7 @@
 
 
 </h3>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">AIAtlasNexus</span><span class="p">(</span><span class="n">base_dir</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">AIAtlasNexus</span><span class="p">(</span><span class="n">base_dir</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -12451,7 +12503,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>base_dir</code></b>
-              (<code><span title="str">str</span></code>, default:
+              (<code><span title="typing.Optional">Optional</span>[<span title="str">str</span>]</code>, default:
                   <code>None</code>
 )
           –
@@ -12816,6 +12868,13 @@
           </li>
           <li class="doc-section-item field-body">
             <b><code><a class="autorefs autorefs-internal" title="            identify_domain_from_usecases (ai_atlas_nexus.library.AIAtlasNexus.identify_domain_from_usecases)" href="#ai_atlas_nexus.library.AIAtlasNexus.identify_domain_from_usecases">identify_domain_from_usecases</a></code></b>
+            –
+            <div class="doc-md-description">
+              <p>Identify potential risks from a usecase description</p>
+            </div>
+          </li>
+          <li class="doc-section-item field-body">
+            <b><code><a class="autorefs autorefs-internal" title="            identify_risks_and_actions_from_usecases (ai_atlas_nexus.library.AIAtlasNexus.identify_risks_and_actions_from_usecases)" href="#ai_atlas_nexus.library.AIAtlasNexus.identify_risks_and_actions_from_usecases">identify_risks_and_actions_from_usecases</a></code></b>
             –
             <div class="doc-md-description">
               <p>Identify potential risks from a usecase description</p>
@@ -13286,7 +13345,7 @@ Check example below.
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_action_by_id</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_action_by_id</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -13306,10 +13365,13 @@ The string id identifying the action</p>
         </li>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -13392,7 +13454,7 @@ Result containing a adapter.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_adapters</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_adapters</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -13404,10 +13466,13 @@ Result containing a adapter.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -13459,8 +13524,8 @@ Name of the class (the collection key in data)</p>
             <b><code>taxonomy</code></b>
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string id for a taxonomy</p>
+            <p>Optional[Union[str, List[str]]]
+(Optional) The string id for a taxonomy or list of taxonomy ids</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -13497,7 +13562,7 @@ List of instances</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_all_actions</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_all_actions</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -13509,10 +13574,13 @@ List of instances</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -13574,7 +13642,7 @@ List of classes</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_all_evaluations</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_all_evaluations</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -13586,10 +13654,13 @@ List of classes</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -13600,7 +13671,7 @@ List of classes</p>
         <li class="doc-section-item field-body">
           –
           <div class="doc-md-description">
-            <p>list[RiskControl]
+            <p>list[AiEval]
 Result containing a list of AiEval</p>
           </div>
         </li>
@@ -13619,7 +13690,7 @@ Result containing a list of AiEval</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_all_risk_controls</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_all_risk_controls</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -13631,10 +13702,13 @@ Result containing a list of AiEval</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -13678,8 +13752,8 @@ Result containing a list of RiskControls</p>
             <b><code>taxonomy</code></b>
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>Optional[Union[str, List[str]]]
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -13794,7 +13868,7 @@ Result containing a benchmark_metadata_card.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_benchmark_metadata_cards</span><span class="p">(</span><span class="n">risk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">risk_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_benchmark_metadata_cards</span><span class="p">(</span><span class="n">risk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">risk_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -13806,10 +13880,13 @@ Result containing a benchmark_metadata_card.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14006,7 +14083,7 @@ Result containing a dataset.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_datasets</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_datasets</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14018,10 +14095,13 @@ Result containing a dataset.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14104,7 +14184,7 @@ Result containing a document.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_documents</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_documents</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14116,10 +14196,13 @@ Result containing a document.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14149,7 +14232,7 @@ Result containing a list of Documentation</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_evaluation</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_evaluation</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14169,10 +14252,13 @@ The string id identifying the evaluation</p>
         </li>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14202,7 +14288,7 @@ Result containing an evaluation.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_instances</span><span class="p">(</span><span class="n">target_class</span><span class="p">,</span> <span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_instances</span><span class="p">(</span><span class="n">target_class</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14222,10 +14308,13 @@ Result containing an evaluation.</p>
         </li>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14308,7 +14397,7 @@ Result containing a intrinsic.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_intrinsics</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_intrinsics</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14320,10 +14409,13 @@ Result containing a intrinsic.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14353,7 +14445,7 @@ Result containing a list of LLMIntrinsic entries</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_llm_question_policies</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_llm_question_policies</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14365,10 +14457,13 @@ Result containing a list of LLMIntrinsic entries</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14496,7 +14591,7 @@ Result containing a Principle.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_principles</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">document</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_principles</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">document</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14508,10 +14603,13 @@ Result containing a Principle.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
@@ -14626,7 +14724,7 @@ Result containing a list of AI actions</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_related_evaluations</span><span class="p">(</span><span class="n">risk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">risk_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_related_evaluations</span><span class="p">(</span><span class="n">risk</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">risk_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -14654,10 +14752,13 @@ The string ID identifying the risk</p>
         </li>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -14946,8 +15047,8 @@ The string name identifying the risk</p>
             <b><code>taxonomy</code></b>
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>Optional[Union[str, List[str]]]
+(Optional) The string label for a taxonomy or list of strings</p>
           </div>
         </li>
     </ul>
@@ -15006,8 +15107,8 @@ The string name identifying the risk</p>
             <b><code>taxonomy</code></b>
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>Optional[Union[str, List[str]]]
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -15037,7 +15138,7 @@ Result containing a list of AI risks</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_risk_control</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_risk_control</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -15057,10 +15158,13 @@ The string id identifying the risk control</p>
         </li>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -15090,7 +15194,7 @@ Result containing a risk control.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_risk_incident</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_risk_incident</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -15110,10 +15214,13 @@ The string id identifying the risk incident</p>
         </li>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -15143,12 +15250,28 @@ Result containing a risk incident.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_risk_incidents</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_risk_incidents</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Get risk incident instances, optionally filtered by taxonomy</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
+          </div>
+        </li>
+    </ul>
 
 
 <p><span class="doc-section-title">Returns:</span></p>
@@ -15263,7 +15386,7 @@ Result containing a stakeholder.</p>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_stakeholders</span><span class="p">(</span><span class="n">taxonomy</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">get_stakeholders</span><span class="p">(</span><span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Union">Union</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -15275,10 +15398,13 @@ Result containing a stakeholder.</p>
     <ul>
         <li class="doc-section-item field-body">
             <b><code>taxonomy</code></b>
+              (<code><span title="typing.Optional">Optional</span>[<span title="typing.Union">Union</span>[<span title="str">str</span>, <span title="typing.List">List</span>[<span title="str">str</span>]]]</code>, default:
+                  <code>None</code>
+)
           –
           <div class="doc-md-description">
-            <p>str
-(Optional) The string label for a taxonomy</p>
+            <p>str or list of str
+(Optional) The string label for a taxonomy or list of taxonomy labels</p>
           </div>
         </li>
     </ul>
@@ -15414,6 +15540,16 @@ An AI taxonomy</p>
             <p>An LLM inference engine to identify AI tasks from usecases.</p>
           </div>
         </li>
+        <li class="doc-section-item field-body">
+            <b><code>verbose</code></b>
+              (<code><span title="bool">bool</span></code>, default:
+                  <code>True</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>prints detailed output during the inference process. Defaults to True.</p>
+          </div>
+        </li>
     </ul>
 
 
@@ -15468,6 +15604,16 @@ Result containing a list of AI tasks</p>
             <p>An LLM inference engine to identify AI tasks from usecases.</p>
           </div>
         </li>
+        <li class="doc-section-item field-body">
+            <b><code>verbose</code></b>
+              (<code><span title="bool">bool</span></code>, default:
+                  <code>True</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>prints detailed output during the inference process. Defaults to True.</p>
+          </div>
+        </li>
     </ul>
 
 
@@ -15491,12 +15637,98 @@ Result containing a list of AI tasks</p>
 <div class="doc doc-object doc-function">
 
 
+<h4 id="ai_atlas_nexus.library.AIAtlasNexus.identify_risks_and_actions_from_usecases" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">identify_risks_and_actions_from_usecases</span>
+
+
+</h4>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">identify_risks_and_actions_from_usecases</span><span class="p">(</span><span class="n">usecases</span><span class="p">:</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">],</span> <span class="n">inference_engine</span><span class="p">:</span> <span class="n"><span title="ai_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cot_examples</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Dict">Dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_risk</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">zero_shot_only</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+        <p>Identify potential risks from a usecase description</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>usecases</code></b>
+              (<code><span title="typing.List">List</span>[<span title="str">str</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>A List of strings describing AI usecases</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>inference_engine</code></b>
+              (<code><span title="ai_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>An LLM inference engine to infer risks from the usecases.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>taxonomy</code></b>
+              (<code>str | list[str] | List[str] | None = None</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The string label for a taxonomy. If not specified, the system will use "ibm-risk-atlas" as the default taxonomy.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>cot_examples</code></b>
+              (<code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="typing.List">List</span>]</code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>If the user wants to improve risk identification via a Few-shot approach, <code>cot_examples</code> can be
+provided with the desired taxonomy as key. Please follow the example template at src/ai_atlas_nexus/data/templates/risk_generation_cot.json.
+If the <code>cot_examples</code> is omitted, the API default to a Zero-Shot approach.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>max_risk</code></b>
+              (<code><span title="int">int</span></code>, default:
+                  <code>None</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>zero_shot_only</code></b>
+              (<code><span title="bool">bool</span></code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>If enabled, this flag allows the system to perform Zero Shot Risk identification, and the field <code>cot_examples</code> will be ignored.</p>
+          </div>
+        </li>
+    </ul>
+        <p>Returns:
+    List[List[Risk]]:
+        Result containing a list of risks</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h4 id="ai_atlas_nexus.library.AIAtlasNexus.identify_risks_from_usecases" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">identify_risks_from_usecases</span>
 
 
 </h4>
-<div class="doc-signature highlight"><pre><span></span><code><span class="nf">identify_risks_from_usecases</span><span class="p">(</span><span class="n">usecases</span><span class="p">:</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">],</span> <span class="n">inference_engine</span><span class="p">:</span> <span class="n"><span title="ai_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cot_examples</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Dict">Dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_risk</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">zero_shot_only</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">batch_inference</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="            Risk (ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk)" href="../ai_ontology_reference/#ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk">Risk</a></span><span class="p">]]</span>
+<div class="doc-signature highlight"><pre><span></span><code><span class="nf">identify_risks_from_usecases</span><span class="p">(</span><span class="n">usecases</span><span class="p">:</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">],</span> <span class="n">inference_engine</span><span class="p">:</span> <span class="n"><span title="ai_atlas_nexus.blocks.inference.InferenceEngine">InferenceEngine</span></span><span class="p">,</span> <span class="n">taxonomy</span><span class="p">:</span> <span class="n"><span title="str">str</span></span> <span class="o">|</span> <span class="n"><span title="list">list</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">|</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">cot_examples</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="typing.Dict">Dict</span></span><span class="p">[</span><span class="n"><span title="str">str</span></span><span class="p">,</span> <span class="n"><span title="typing.List">List</span></span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_risk</span><span class="p">:</span> <span class="n"><span title="typing.Optional">Optional</span></span><span class="p">[</span><span class="n"><span title="int">int</span></span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">zero_shot_only</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">batch_inference</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">use_dspy_prompt</span><span class="p">:</span> <span class="n"><span title="bool">bool</span></span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><span title="typing.List">List</span></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="            Risk (ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk)" href="../ai_ontology_reference/#ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology.Risk">Risk</a></span><span class="p">]]</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -15572,6 +15804,16 @@ If the <code>cot_examples</code> is omitted, the API default to a Zero-Shot appr
           –
           <div class="doc-md-description">
             <p>Whether to run risk inference service in batch mode or at each risk level. Defaults to True.</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>use_dspy_prompt</code></b>
+              (<code><span title="bool">bool</span></code>, default:
+                  <code>False</code>
+)
+          –
+          <div class="doc-md-description">
+            <p>Use per-risk DSPy optmized prompt instructions for risk identification. When enabled, <code>batch_inference</code> flag is ignored.</p>
           </div>
         </li>
     </ul>

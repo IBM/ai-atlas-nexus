@@ -1016,6 +1016,8 @@
       
         
       
+        
+      
     
     
     
@@ -1075,7 +1077,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1104,6 +1106,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -7024,6 +7054,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-and-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type and Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardinality and Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -11067,6 +11125,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-and-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type and Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardinality and Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -11162,18 +11248,13 @@ Alias: hasRule</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../ControlActivityPermission/">ControlActivityPermission</a></td>
-<td>A control activity (rule) describing a permission to perform an activity</td>
-<td>no</td>
+<td><a href="../Requirement/">Requirement</a></td>
+<td>A requirement representing a combination of obligation, permission, or prohib...</td>
+<td>yes</td>
 </tr>
 <tr>
-<td><a href="../LLMQuestionPolicy/">LLMQuestionPolicy</a></td>
-<td>The policy guides how the language model should answer a diverse set of sensi...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Obligation/">Obligation</a></td>
-<td>A rule describing an obligation for performing an activity</td>
+<td><a href="../Recommendation/">Recommendation</a></td>
+<td>A rule describing a recommendation for performing an activity</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11182,18 +11263,18 @@ Alias: hasRule</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../ControlActivityRecommendation/">ControlActivityRecommendation</a></td>
+<td>A control activity (rule) describing a recommendation for performing an activ...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../ControlActivityPermission/">ControlActivityPermission</a></td>
+<td>A control activity (rule) describing a permission to perform an activity</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../Prohibition/">Prohibition</a></td>
 <td>A rule describing a prohibition to perform an activity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Permission/">Permission</a></td>
-<td>A rule describing a permission to perform an activity</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Recommendation/">Recommendation</a></td>
-<td>A rule describing a recommendation for performing an activity</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11202,8 +11283,23 @@ Alias: hasRule</p>
 <td>no</td>
 </tr>
 <tr>
+<td><a href="../Obligation/">Obligation</a></td>
+<td>A rule describing an obligation for performing an activity</td>
+<td>no</td>
+</tr>
+<tr>
 <td><a href="../ControlActivityObligation/">ControlActivityObligation</a></td>
 <td>A control activity (rule) describing an obligation for performing an activity</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../LLMQuestionPolicy/">LLMQuestionPolicy</a></td>
+<td>The policy guides how the language model should answer a diverse set of sensi...</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../Permission/">Permission</a></td>
+<td>A rule describing a permission to perform an activity</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11211,27 +11307,47 @@ Alias: hasRule</p>
 <td>A control activity (rule) describing a prohibition to perform an activity</td>
 <td>no</td>
 </tr>
-<tr>
-<td><a href="../ControlActivityRecommendation/">ControlActivityRecommendation</a></td>
-<td>A control activity (rule) describing a recommendation for performing an activ...</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Requirement/">Requirement</a></td>
-<td>A requirement representing a combination of obligation, permission, or prohib...</td>
-<td>yes</td>
-</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
-<ul>
-<li>
-<p>Range: <a href="../Rule/">Rule</a></p>
-</li>
-<li>
-<p>Multivalued: True</p>
-</li>
-</ul>
+<h3 id="type-and-range">Type and Range</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Range</td>
+<td><a href="../Rule/">Rule</a></td>
+</tr>
+<tr>
+<td>Domain Of</td>
+<td><a href="../LLMQuestionPolicy/">LLMQuestionPolicy</a>, <a href="../Rule/">Rule</a>, <a href="../Requirement/">Requirement</a></td>
+</tr>
+<tr>
+<td>Slot URI</td>
+<td><a href="https://w3id.org/dpv#hasRule">dpv:hasRule</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cardinality-and-requirements">Cardinality and Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multivalued</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>

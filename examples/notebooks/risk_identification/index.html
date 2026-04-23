@@ -25,7 +25,7 @@
     
     
       
-        <title>Risk identification - AI Atlas Nexus</title>
+        <title>Evaluation - AI Atlas Nexus</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Risk identification
+              Evaluation
             
           </span>
         </div>
@@ -1026,6 +1026,8 @@
       
         
       
+        
+      
     
     
     
@@ -1095,7 +1097,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1113,7 +1115,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1193,10 +1195,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#risk-identification-using-ibm-ai-risk-taxonomy" class="md-nav__link">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-batch-inference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Risk Identification using IBM AI Risk taxonomy
+        Risk Identification using IBM AI Risk taxonomy - Batch Inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risk Identification using IBM AI Risk taxonomy - Per Risk Inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference-using-dspy-optimised-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risk Identification using IBM AI Risk taxonomy - Per Risk Inference using DSPy optimised prompt
       
     </span>
   </a>
@@ -1263,6 +1287,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1287,6 +1322,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -11170,10 +11233,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#risk-identification-using-ibm-ai-risk-taxonomy" class="md-nav__link">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-batch-inference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Risk Identification using IBM AI Risk taxonomy
+        Risk Identification using IBM AI Risk taxonomy - Batch Inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risk Identification using IBM AI Risk taxonomy - Per Risk Inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference-using-dspy-optimised-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Risk Identification using IBM AI Risk taxonomy - Per Risk Inference using DSPy optimised prompt
       
     </span>
   </a>
@@ -11237,6 +11322,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evaluation
+      
+    </span>
+  </a>
   
 </li>
       
@@ -11308,8 +11404,6 @@
   
   
 
-
-  <h1>Risk identification</h1>
 
 <script>
 (function (global, factory) {
@@ -12077,6 +12171,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="n">WMLInferenceEngine</span><span class="p">,</span>
     <span class="n">OllamaInferenceEngine</span><span class="p">,</span>
     <span class="n">VLLMInferenceEngine</span><span class="p">,</span>
+    <span class="n">HFInferenceEngine</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ai_atlas_nexus.blocks.inference.params</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">InferenceEngineCredentials</span><span class="p">,</span>
@@ -12084,14 +12179,17 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="n">WMLInferenceEngineParams</span><span class="p">,</span>
     <span class="n">OllamaInferenceEngineParams</span><span class="p">,</span>
     <span class="n">VLLMInferenceEngineParams</span><span class="p">,</span>
+    <span class="n">HFInferenceEngineParams</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ai_atlas_nexus.library</span><span class="w"> </span><span class="kn">import</span> <span class="n">AIAtlasNexus</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">from ai_atlas_nexus.blocks.inference import (
     RITSInferenceEngine,
     WMLInferenceEngine,
     OllamaInferenceEngine,
     VLLMInferenceEngine,
+    HFInferenceEngine,
 )
 from ai_atlas_nexus.blocks.inference.params import (
     InferenceEngineCredentials,
@@ -12099,8 +12197,10 @@ from ai_atlas_nexus.blocks.inference.params import (
     WMLInferenceEngineParams,
     OllamaInferenceEngineParams,
     VLLMInferenceEngineParams,
+    HFInferenceEngineParams,
 )
-from ai_atlas_nexus.library import AIAtlasNexus</div>
+from ai_atlas_nexus.library import AIAtlasNexus
+import os</div>
 </div>
 </div>
 </div>
@@ -12113,7 +12213,7 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h5 id="ai-atlas-nexus-uses-large-language-models-llms-to-infer-risks-dimensions-therefore-requires-access-to-llms-to-inference-or-call-the-model">AI Atlas Nexus uses Large Language Models (LLMs) to infer risks dimensions. Therefore requires access to LLMs to inference or call the model.<a class="anchor-link" href="#ai-atlas-nexus-uses-large-language-models-llms-to-infer-risks-dimensions-therefore-requires-access-to-llms-to-inference-or-call-the-model">¶</a></h5><p><strong>Available Inference Engines</strong>: WML, Ollama, vLLM, RITS. Please follow the <a href="https://github.com/IBM/ai-atlas-nexus?tab=readme-ov-file#install-for-inference-apis">Inference APIs</a> guide before going ahead.</p>
+<h5 id="ai-atlas-nexus-uses-large-language-models-llms-to-infer-risks-dimensions-therefore-requires-access-to-llms-to-inference-or-call-the-model">AI Atlas Nexus uses Large Language Models (LLMs) to infer risks dimensions. Therefore requires access to LLMs to inference or call the model.<a class="anchor-link" href="#ai-atlas-nexus-uses-large-language-models-llms-to-infer-risks-dimensions-therefore-requires-access-to-llms-to-inference-or-call-the-model">¶</a></h5><p><strong>Available Inference Engines</strong>: WML, Ollama, vLLM, RITS, HF. Please follow the <a href="https://github.com/IBM/ai-atlas-nexus?tab=readme-ov-file#install-for-inference-apis">Inference APIs</a> guide before going ahead.</p>
 <p><em>Note:</em> RITS is intended solely for internal IBM use and requires TUNNELALL VPN for access.</p>
 </div>
 </div>
@@ -12139,28 +12239,37 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
     <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"granite3.3:8b"</span><span class="p">,</span>
-    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"OLLAMA_API_URL"</span><span class="p">),</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"http://localhost:11434"</span><span class="p">),</span>
     <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
-        <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">repeat_penalty</span><span class="o">=</span><span class="mi">1</span>
+        <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span>
     <span class="p">),</span>
 <span class="p">)</span>
 
+<span class="c1"># inference_engine = HFInferenceEngine(</span>
+<span class="c1">#     model_name_or_path="meta-llama/Llama-3.1-8B-Instruct",</span>
+<span class="c1">#     credentials=InferenceEngineCredentials(</span>
+<span class="c1">#         api_key=os.getenv("HF_TOKEN"),</span>
+<span class="c1">#         api_url="https://router.huggingface.co/v1",</span>
+<span class="c1">#     ),</span>
+<span class="c1">#     parameters=HFInferenceEngineParams(max_completion_tokens=1000, temperature=0),</span>
+<span class="c1"># )</span>
+
 <span class="c1"># inference_engine = WMLInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm/granite-3-3-8b-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm/granite-4-h-small",</span>
 <span class="c1">#     credentials={</span>
-<span class="c1">#         "api_key": "WML_API_KEY",</span>
-<span class="c1">#         "api_url": "WML_API_URL",</span>
-<span class="c1">#         "project_id": "WML_PROJECT_ID",</span>
+<span class="c1">#         "api_key": os.getenv("WML_API_KEY"),</span>
+<span class="c1">#         "api_url": os.getenv("WML_API_URL"),</span>
+<span class="c1">#         "project_id": os.getenv("WML_PROJECT_ID"),</span>
 <span class="c1">#     },</span>
 <span class="c1">#     parameters=WMLInferenceEngineParams(</span>
-<span class="c1">#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1</span>
+<span class="c1">#         max_new_tokens=1000, decoding_method="greedy"</span>
 <span class="c1">#     ),</span>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = VLLMInferenceEngine(</span>
 <span class="c1">#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",</span>
 <span class="c1">#     credentials=InferenceEngineCredentials(</span>
-<span class="c1">#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"</span>
+<span class="c1">#         api_url=os.getenv("VLLM_API_URL"), api_key=os.getenv("VLLM_API_KEY")</span>
 <span class="c1">#     ),</span>
 <span class="c1">#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0),</span>
 <span class="c1"># )</span>
@@ -12168,36 +12277,45 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 <span class="c1"># inference_engine = RITSInferenceEngine(</span>
 <span class="c1">#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",</span>
 <span class="c1">#     credentials={</span>
-<span class="c1">#         "api_key": "RITS_API_KEY",</span>
-<span class="c1">#         "api_url": "RITS_API_URL",</span>
+<span class="c1">#         "api_key": os.getenv("RITS_API_KEY"),</span>
+<span class="c1">#         "api_url": os.getenv("RITS_API_URL"),</span>
 <span class="c1">#     },</span>
 <span class="c1">#     parameters=RITSInferenceEngineParams(max_completion_tokens=1000, temperature=0),</span>
 <span class="c1"># )</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">inference_engine = OllamaInferenceEngine(
     model_name_or_path="granite3.3:8b",
-    credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
+    credentials=InferenceEngineCredentials(api_url="http://localhost:11434"),
     parameters=OllamaInferenceEngineParams(
-        num_predict=1000, num_ctx=8192, temperature=0, repeat_penalty=1
+        num_predict=1000, num_ctx=8192, temperature=0
     ),
 )
 
+# inference_engine = HFInferenceEngine(
+#     model_name_or_path="meta-llama/Llama-3.1-8B-Instruct",
+#     credentials=InferenceEngineCredentials(
+#         api_key=os.getenv("HF_TOKEN"),
+#         api_url="https://router.huggingface.co/v1",
+#     ),
+#     parameters=HFInferenceEngineParams(max_completion_tokens=1000, temperature=0),
+# )
+
 # inference_engine = WMLInferenceEngine(
-#     model_name_or_path="ibm/granite-3-3-8b-instruct",
+#     model_name_or_path="ibm/granite-4-h-small",
 #     credentials={
-#         "api_key": "WML_API_KEY",
-#         "api_url": "WML_API_URL",
-#         "project_id": "WML_PROJECT_ID",
+#         "api_key": os.getenv("WML_API_KEY"),
+#         "api_url": os.getenv("WML_API_URL"),
+#         "project_id": os.getenv("WML_PROJECT_ID"),
 #     },
 #     parameters=WMLInferenceEngineParams(
-#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
+#         max_new_tokens=1000, decoding_method="greedy"
 #     ),
 # )
 
 # inference_engine = VLLMInferenceEngine(
 #     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",
 #     credentials=InferenceEngineCredentials(
-#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"
+#         api_url=os.getenv("VLLM_API_URL"), api_key=os.getenv("VLLM_API_KEY")
 #     ),
 #     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0),
 # )
@@ -12205,8 +12323,8 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 # inference_engine = RITSInferenceEngine(
 #     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",
 #     credentials={
-#         "api_key": "RITS_API_KEY",
-#         "api_url": "RITS_API_URL",
+#         "api_key": os.getenv("RITS_API_KEY"),
+#         "api_url": os.getenv("RITS_API_URL"),
 #     },
 #     parameters=RITSInferenceEngineParams(max_completion_tokens=1000, temperature=0),
 # )</div>
@@ -12226,13 +12344,13 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -12248,6 +12366,19 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">ai_atlas_nexus</span> <span class="o">=</span> <span class="n">AIAtlasNexus</span><span class="p">()</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-3">ai_atlas_nexus = AIAtlasNexus()</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2026-04-11 23:46:36:891] - INFO - AIAtlasNexus - Created AIAtlasNexus instance. Base_dir: None
+</pre>
 </div>
 </div>
 </div>
@@ -12276,7 +12407,9 @@ Assign the ID of the taxonomy you wish to use as the key for CoT examples. Provi
 will override the CoT examples present in the template master. Default to None.</li>
 <li>max_risk (int, optional):
 The maximum number of risks to extract. Pass None to allow the inference engine to determine the number of risks. Defaults to None.</li>
-<li>zero_shot_only (bool): If enabled, this flag allows the system to perform Zero Shot Risk identification, and the field <code>cot_examples</code> will be ignored.</li>
+<li>zero_shot_only (bool): If enabled, this flag allows the system to perform Zero Shot Risk identification, and the field cot_examples will be ignored.</li>
+<li>batch_inference (bool): Whether to run risk inference service in batch mode or at each risk level. Defaults to True.</li>
+<li>use_dspy_prompt (bool): Use per-risk DSPy optmized prompt instructions for risk identification. When enabled, batch_inference flag is ignored.</li>
 </ul>
 </div>
 </div>
@@ -12288,17 +12421,17 @@ The maximum number of risks to extract. Pass None to allow the inference engine 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h5 id="risk-identification-using-ibm-ai-risk-taxonomy">Risk Identification using IBM AI Risk taxonomy<a class="anchor-link" href="#risk-identification-using-ibm-ai-risk-taxonomy">¶</a></h5>
+<h5 id="risk-identification-using-ibm-ai-risk-taxonomy-batch-inference">Risk Identification using IBM AI Risk taxonomy - Batch Inference<a class="anchor-link" href="#risk-identification-using-ibm-ai-risk-taxonomy-batch-inference">¶</a></h5>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -12320,7 +12453,8 @@ The maximum number of risks to extract. Pass None to allow the inference engine 
     <span class="n">max_risk</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
 <span class="p">)</span>
 
-<span class="n">risks</span>
+<span class="k">for</span> <span class="n">risk</span> <span class="ow">in</span> <span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">risk</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-4">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
@@ -12331,7 +12465,483 @@ risks = ai_atlas_nexus.identify_risks_from_usecases(
     max_risk=5,
 )
 
-risks</div>
+for risk in risks[0]:
+    print(risk.name)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with ollama, backend - DEFAULT: 100%|██████████| 1/1 [00:33&lt;00:00, 33.86s/it]</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Incorrect risk testing
+Over- or under-reliance
+Confidential information in data
+Lack of model transparency
+Sharing IP/PI/confidential information with user
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="c1"># you may wish to retrieve the risk list and the control measures together, so can use the method</span>
+<span class="c1"># `identify_risks_and_actions_from_usecases`.</span>
+<span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+
+<span class="n">risks_and_measures</span> <span class="o">=</span> <span class="n">ai_atlas_nexus</span><span class="o">.</span><span class="n">identify_risks_and_actions_from_usecases</span><span class="p">(</span>
+    <span class="n">usecases</span><span class="o">=</span><span class="p">[</span><span class="n">usecase</span><span class="p">],</span>
+    <span class="n">inference_engine</span><span class="o">=</span><span class="n">inference_engine</span><span class="p">,</span>
+    <span class="n">taxonomy</span><span class="o">=</span><span class="s2">"ibm-risk-atlas"</span><span class="p">,</span>
+    <span class="n">max_risk</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">risks_and_measures</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-5"># you may wish to retrieve the risk list and the control measures together, so can use the method
+# `identify_risks_and_actions_from_usecases`.
+usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+
+risks_and_measures = ai_atlas_nexus.identify_risks_and_actions_from_usecases(
+    usecases=[usecase],
+    inference_engine=inference_engine,
+    taxonomy="ibm-risk-atlas",
+    max_risk=5,
+)
+
+risks_and_measures</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with OLLAMA: 100%|██████████| 1/1 [00:23&lt;00:00, 23.60s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'usecases': ['Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers.'],
+ 'model': 'granite3.3:8b',
+ 'taxonomy': 'ibm-risk-atlas',
+ 'summary': defaultdict(list,
+             {'risk_ids': ['atlas-incorrect-risk-testing',
+               'atlas-over-or-under-reliance',
+               'atlas-confidential-data-in-prompt',
+               'atlas-prompt-leaking',
+               'atlas-lack-of-model-transparency'],
+              'action_ids': [],
+              'detector_ids': [],
+              'control_item_ids': ['aiuc1-req-e008',
+               'aiuc1-req-c001',
+               'aiuc1-req-c009',
+               'aiuc1-req-a006',
+               'aiuc1-req-c002',
+               'aiuc1-req-e013',
+               'aiuc1-req-c008',
+               'aiuc1-req-b009',
+               'aiuc1-req-a004',
+               'aiuc1-req-c012',
+               'aiuc1-req-e017',
+               'aiuc1-req-b004',
+               'aiuc1-req-c007',
+               'aiuc1-req-b003'],
+              'Requirement': ['aiuc1-req-e008',
+               'aiuc1-req-c001',
+               'aiuc1-req-c009',
+               'aiuc1-req-a006',
+               'aiuc1-req-c002',
+               'aiuc1-req-e013',
+               'aiuc1-req-c008',
+               'aiuc1-req-b009',
+               'aiuc1-req-a004',
+               'aiuc1-req-c012',
+               'aiuc1-req-e017',
+               'aiuc1-req-b004',
+               'aiuc1-req-c007',
+               'aiuc1-req-b003']}),
+ 'risks': [Risk(id='atlas-incorrect-risk-testing', name='Incorrect risk testing', description='A metric selected to measure or track a risk is incorrectly selected, incompletely measuring the risk, or measuring the wrong risk for the given context.', url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/incorrect-risk-testing.html', dateCreated=datetime.date(2024, 9, 24), dateModified=datetime.date(2025, 10, 10), exact_mappings=[], close_mappings=[], related_mappings=['aiuc1-req-c001', 'aiuc1-req-c002', 'aiuc1-req-c008', 'aiuc1-req-c012', 'aiuc1-req-e008', 'aiuc1-req-e013', 'credo-risk-032', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-post-deployment', 'mit-ai-risk-subdomain-6.5'], narrow_mappings=[], broad_mappings=['nist-value-chain-and-component-integration'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-governance', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='incorrect-risk-testing', risk_type='non-technical', phase=None, descriptor=['amplified by generative AI'], concern="If the metrics do not measure the risk as intended, then the understanding of that risk will be incorrect and mitigations might not be applied. If the model's output is consequential, this might result in societal, reputational, or financial harm."),
+  Risk(id='atlas-over-or-under-reliance', name='Over- or under-reliance', description="In AI-assisted decision-making tasks, reliance measures how much a person trusts (and potentially acts on) a model's output. Over-reliance occurs when a person puts too much trust in a model, accepting a model's output when the model's output is likely incorrect. Under-reliance is the opposite, where the person doesn't trust the model but should.", url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/over-or-under-reliance.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 22), exact_mappings=[], close_mappings=['credo-risk-016'], related_mappings=['shieldgemma-harassment', 'aiuc1-req-c007', 'aiuc1-req-c009', 'llm052025-improper-output-handling', 'llm062025-excessive-agency', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-post-deployment', 'mit-ai-risk-subdomain-5.1'], narrow_mappings=[], broad_mappings=['nist-human-ai-configuration'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-value-alignment', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='over-or-under-reliance', risk_type='output', phase=None, descriptor=['amplified by generative AI'], concern='In tasks where humans make choices based on AI-based suggestions, over/under reliance can lead to poor decision making because of the misplaced trust in the AI system, with negative consequences that increase with the importance of the decision.'),
+  Risk(id='atlas-confidential-data-in-prompt', name='Confidential data in prompt', description='Confidential information might be included as a part of the prompt that is sent to the model.', url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/confidential-data-in-prompt.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 22), exact_mappings=[], close_mappings=['aiuc1-req-a004'], related_mappings=['ail-privacy', 'aiuc1-req-a004', 'aiuc1-req-a006', 'llm022025-sensitive-information-disclosure', 'mit-ai-causal-risk-entity-other', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-post-deployment', 'mit-ai-risk-subdomain-2.1'], narrow_mappings=[], broad_mappings=['nist-intellectual-property'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-intellectual-property', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='confidential-data-in-prompt', risk_type='inference', phase=None, descriptor=['specific to generative AI'], concern="If not properly developed to secure confidential data, the model might reveal confidential information or IP in the generated output. Additionally, end users' confidential information might be unintentionally collected and stored."),
+  Risk(id='atlas-prompt-leaking', name='Prompt leaking', description="'A prompt leak attack attempts to extract a model's system prompt (also known as the system message).'", url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/prompt-leaking.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 10), exact_mappings=[], close_mappings=[], related_mappings=['aiuc1-req-a004', 'aiuc1-req-b003', 'aiuc1-req-b004', 'aiuc1-req-b009', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-intentional', 'mit-ai-causal-risk-timing-other', 'mit-ai-risk-subdomain-2.2'], narrow_mappings=['atlas-prompt-injection'], broad_mappings=['atlas-prompt-injection', 'llm022025-sensitive-information-disclosure', 'nist-information-security'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-robustness-Prompt-attacks', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='prompt-leaking', risk_type='inference', phase=None, descriptor=['specific to generative AI'], concern='A successful prompt leaking attack copies the system prompt used in the model. Depending on the content of that prompt, the attacker might gain access to valuable information, such as sensitive personal information or intellectual property, and might be able to replicate some of the functionality of the model.'),
+  Risk(id='atlas-lack-of-model-transparency', name='Lack of model transparency', description='Lack of model transparency is due to insufficient documentation of the model design, development, and evaluation process and the absence of insights into the inner workings of the model.', url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-model-transparency.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 22), exact_mappings=[], close_mappings=['aiuc1-req-e017'], related_mappings=['aiuc1-req-e017', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-other', 'mit-ai-risk-subdomain-7.4'], narrow_mappings=[], broad_mappings=['nist-value-chain-and-component-integration'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-governance', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='lack-of-model-transparency', risk_type='non-technical', phase=None, descriptor=['traditional risk of AI'], concern="Transparency is important for legal compliance, AI ethics, and guiding appropriate use of models. Missing information might make it more difficult to evaluate risks,  change the model, or reuse it.\xa0 Knowledge about who built a model can also be an important factor in deciding whether to trust it. Additionally, transparency regarding how the model's risks were determined, evaluated, and mitigated also play a role in determining model risks, identifying model suitability, and governing model usage.")],
+ 'control_items': [Requirement(id='aiuc1-req-e008', name='Review internal processes', description='Establish regular internal reviews of key processes and document review records and approvals', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-incorrect-risk-testing'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-e008-1', 'aiuc1-ctrl-e008-2'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-e'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-c001', name='Define AI risk taxonomy', description='Establish a risk taxonomy that categorizes risks within harmful, out-of-scope, and hallucinated outputs, tool calls, and other risks based on application-specific usage', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-incorrect-risk-testing', 'atlas-lack-of-testing-diversity', 'atlas-unrepresentative-risk-testing'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-c001-1', 'aiuc1-ctrl-c001-2'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_3', hasKeywords=[], hasPrinciple=['aiuc1-principle-c'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-c009', name='Enable real-time feedback and intervention', description='Implement mechanisms to enable real-time user feedback collection and intervention mechanisms', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-impact-human-agency-agentic', 'atlas-over-or-under-reliance', 'atlas-over-or-under-reliance-on-ai-agents-agentic'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-c009-1', 'aiuc1-ctrl-c009-2'], type='Requirement', hasApplication=['OPTIONAL'], hasFrequency='MONTHS_3', hasKeywords=[], hasPrinciple=['aiuc1-principle-c'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-a006', name='Prevent PII leakage', description='Establish safeguards to prevent personal data leakage through AI outputs', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['atlas-exposing-personal-information', 'atlas-personal-information-in-data', 'atlas-personal-information-in-prompt'], related_mappings=['llm022025-sensitive-information-disclosure', 'llm082025-vector-and-embedding-weaknesses', 'atlas-confidential-data-in-prompt', 'atlas-exposing-personal-information', 'atlas-personal-information-in-data'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-a006-1', 'aiuc1-ctrl-a006-2', 'aiuc1-ctrl-a006-3'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-a'], appliesToCapability=['universal-capability'], hasRequirementType=None),
+  Requirement(id='aiuc1-req-c002', name='Conduct pre-deployment testing', description='Conduct internal testing of AI systems prior to deployment across risk categories for system changes requiring formal review or approval', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-incomplete-ai-agent-evaluation-agentic', 'atlas-incorrect-risk-testing', 'atlas-lack-of-testing-diversity', 'atlas-unrepresentative-risk-testing'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-c002-1', 'aiuc1-ctrl-c002-2', 'aiuc1-ctrl-c002-3'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-c'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-e013', name='Implement quality management system', description='Establish a quality management system for AI systems proportionate to the size of the organization', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-incorrect-risk-testing', 'atlas-mitigation-maintenance-agentic'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-e013-1', 'aiuc1-ctrl-e013-2', 'aiuc1-ctrl-e013-3', 'aiuc1-ctrl-e013-4', 'aiuc1-ctrl-e013-5'], type='Requirement', hasApplication=['OPTIONAL'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-e'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-c008', name='Monitor AI risk categories', description='Implement monitoring of AI systems across risk categories', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-incorrect-risk-testing'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-c008-1', 'aiuc1-ctrl-c008-2', 'aiuc1-ctrl-c008-3'], type='Requirement', hasApplication=['OPTIONAL'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-c'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-b009', name='Limit output over-exposure', description='Implement output limitations and obfuscation techniques to safeguard against information leakage', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['llm022025-sensitive-information-disclosure', 'llm052025-improper-output-handling', 'llm082025-vector-and-embedding-weaknesses', 'llm092025-misinformation', 'atlas-prompt-leaking', 'atlas-revealing-confidential-information'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-b009-1', 'aiuc1-ctrl-b009-2', 'aiuc1-ctrl-b009-3'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-b'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-a004', name='Protect IP and trade secrets', description='Implement safeguards or technical controls to prevent AI systems from leaking company intellectual property or confidential information', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['atlas-confidential-data-in-prompt', 'atlas-confidential-information-in-data'], related_mappings=['llm032025-supply-chain', 'llm052025-improper-output-handling', 'llm082025-vector-and-embedding-weaknesses', 'atlas-confidential-data-in-prompt', 'atlas-ip-information-in-prompt', 'atlas-prompt-leaking', 'atlas-sharing-info-tools-agentic'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-a004-1', 'aiuc1-ctrl-a004-2', 'aiuc1-ctrl-a004-3', 'aiuc1-ctrl-a004-4'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-a'], appliesToCapability=['universal-capability'], hasRequirementType=None),
+  Requirement(id='aiuc1-req-c012', name='Third-party testing for customer-defined risk', description='Appoint expert third-parties to evaluate system robustness to additional high-risk outputs as defined in risk taxonomy at least every 3 months', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-incorrect-risk-testing', 'atlas-lack-of-testing-diversity', 'atlas-unrepresentative-risk-testing'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-c012-1'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_3', hasKeywords=[], hasPrinciple=['aiuc1-principle-c'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-e017', name='Document system transparency policy', description='Establish a system transparency policy and maintain a repository of model cards, datasheets, and interpretability reports for major systems', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['atlas-lack-of-ai-agent-transparency-agentic', 'atlas-lack-of-model-transparency', 'atlas-lack-of-system-transparency'], related_mappings=['atlas-lack-of-ai-agent-transparency-agentic', 'atlas-lack-of-data-transparency', 'atlas-lack-of-model-transparency', 'atlas-lack-of-system-transparency'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-e017-1', 'aiuc1-ctrl-e017-2', 'aiuc1-ctrl-e017-3'], type='Requirement', hasApplication=['OPTIONAL'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-e'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-b004', name='Prevent AI endpoint scraping', description='Implement safeguards to prevent probing or scraping of external AI endpoints', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['atlas-extraction-attack'], related_mappings=['llm022025-sensitive-information-disclosure', 'llm052025-improper-output-handling', 'llm082025-vector-and-embedding-weaknesses', 'llm102025-unbounded-consumption', 'atlas-attribute-inference-attack', 'atlas-membership-inference-attack', 'atlas-prompt-leaking'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-b004-1', 'aiuc1-ctrl-b004-2', 'aiuc1-ctrl-b004-3', 'aiuc1-ctrl-b004-4'], type='Requirement', hasApplication=['MANDATORY'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-b'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-c007', name='Flag high risk outputs', description='Implement an alerting system that flags high-risk outputs for human review', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-over-or-under-reliance', 'atlas-over-or-under-reliance-on-ai-agents-agentic'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-c007-1', 'aiuc1-ctrl-c007-2', 'aiuc1-ctrl-c007-3'], type='Requirement', hasApplication=['OPTIONAL'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-c'], appliesToCapability=[], hasRequirementType=None),
+  Requirement(id='aiuc1-req-b003', name='Manage public release of technical details', description='Implement controls to prevent over-disclosure of technical information about AI systems and organizational details that could enable adversarial targeting', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['llm022025-sensitive-information-disclosure', 'llm052025-improper-output-handling', 'llm072025-system-prompt-leakage', 'atlas-extraction-attack', 'atlas-prompt-leaking'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='aiuc1', hasRule=['aiuc1-ctrl-b003-1', 'aiuc1-ctrl-b003-2'], type='Requirement', hasApplication=['OPTIONAL'], hasFrequency='MONTHS_12', hasKeywords=[], hasPrinciple=['aiuc1-principle-b'], appliesToCapability=[], hasRequirementType=None)]}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference">Risk Identification using IBM AI Risk taxonomy - Per Risk Inference<a class="anchor-link" href="#risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference">¶</a></h5>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+
+<span class="n">risks</span> <span class="o">=</span> <span class="n">ai_atlas_nexus</span><span class="o">.</span><span class="n">identify_risks_from_usecases</span><span class="p">(</span>
+    <span class="n">usecases</span><span class="o">=</span><span class="p">[</span><span class="n">usecase</span><span class="p">],</span>
+    <span class="n">inference_engine</span><span class="o">=</span><span class="n">inference_engine</span><span class="p">,</span>
+    <span class="n">taxonomy</span><span class="o">=</span><span class="s2">"ibm-risk-atlas"</span><span class="p">,</span>
+    <span class="n">max_risk</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">batch_inference</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">for</span> <span class="n">risk</span> <span class="ow">in</span> <span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">risk</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+
+risks = ai_atlas_nexus.identify_risks_from_usecases(
+    usecases=[usecase],
+    inference_engine=inference_engine,
+    taxonomy="ibm-risk-atlas",
+    max_risk=5,
+    batch_inference=False,
+)
+
+print(len(risks[0]))
+for risk in risks[0]:
+    print(risk.name)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with ollama, backend - DEFAULT: 100%|██████████| 99/99 [07:19&lt;00:00,  4.44s/it]</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>50
+Over- or under-reliance
+Confidential data in prompt
+Data privacy rights alignment
+Discriminatory actions
+Legal accountability
+Hallucination
+Social hacking attack
+Function calling hallucination
+Confidential information in data
+Lack of model transparency
+Unrepresentative data
+Personal information in prompt
+Sharing IP/PI/confidential information with user
+Lack of testing diversity
+Decision bias
+Exposing personal information
+Improper data curation
+Over- or under-reliance on AI agents
+Revealing confidential information
+Uncertain data provenance
+Data bias
+Unauthorized use
+Lack of data transparency
+Impact on affected communities
+Introduce data bias
+Accountability of AI agent actions
+Incomplete AI agent evaluation
+Inaccessible training data
+Non-disclosure
+Lack of training data transparency
+Reproducibility
+Incomplete advice
+Prompt injection attack
+Personal information in data
+Extraction attack
+Data acquisition restrictions
+Sharing IP/PI/confidential information with tools
+Prompt priming
+Reidentification
+Attribute inference attack
+Poor model accuracy
+Generated content ownership and IP
+Lack of AI agent transparency
+Impact on human dignity
+Output bias
+Unexplainable output
+Unexplainable and untraceable actions
+Unreliable source attribution
+Lack of domain expertise
+Overfitting
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference-using-dspy-optimised-prompt">Risk Identification using IBM AI Risk taxonomy - Per Risk Inference using DSPy optimised prompt<a class="anchor-link" href="#risk-identification-using-ibm-ai-risk-taxonomy-per-risk-inference-using-dspy-optimised-prompt">¶</a></h5>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">dspy_inference_engine</span> <span class="o">=</span> <span class="n">RITSInferenceEngine</span><span class="p">(</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"meta-llama/llama-3-3-70b-instruct"</span><span class="p">,</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"cbc683b3a1a7c52d2a73008b785d2811"</span><span class="p">,</span>
+        <span class="s2">"api_url"</span><span class="p">:</span> <span class="s2">"https://inference-3scale-apicast-production.apps.rits.fmaas.res.ibm.com"</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">RITSInferenceEngineParams</span><span class="p">(</span><span class="n">max_completion_tokens</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-7">dspy_inference_engine = RITSInferenceEngine(
+    model_name_or_path="meta-llama/llama-3-3-70b-instruct",
+    credentials={
+        "api_key": "cbc683b3a1a7c52d2a73008b785d2811",
+        "api_url": "https://inference-3scale-apicast-production.apps.rits.fmaas.res.ibm.com",
+    },
+    parameters=RITSInferenceEngineParams(max_completion_tokens=1000, temperature=0),
+)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2026-04-11 23:56:36:277] - INFO - AIAtlasNexus - ✓ Created rits inference engine for model: meta-llama/llama-3-3-70b-instruct, backend - DEFAULT
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+
+<span class="n">risks</span> <span class="o">=</span> <span class="n">ai_atlas_nexus</span><span class="o">.</span><span class="n">identify_risks_from_usecases</span><span class="p">(</span>
+    <span class="n">usecases</span><span class="o">=</span><span class="p">[</span><span class="n">usecase</span><span class="p">],</span>
+    <span class="n">inference_engine</span><span class="o">=</span><span class="n">dspy_inference_engine</span><span class="p">,</span>
+    <span class="n">taxonomy</span><span class="o">=</span><span class="s2">"ibm-risk-atlas"</span><span class="p">,</span>
+    <span class="n">max_risk</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">use_dspy_prompt</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="k">for</span> <span class="n">risk</span> <span class="ow">in</span> <span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">risk</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+
+risks = ai_atlas_nexus.identify_risks_from_usecases(
+    usecases=[usecase],
+    inference_engine=dspy_inference_engine,
+    taxonomy="ibm-risk-atlas",
+    max_risk=5,
+    use_dspy_prompt=True,
+)
+
+print(len(risks[0]))
+for risk in risks[0]:
+    print(risk.name)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with rits, backend - DEFAULT: 100%|██████████| 99/99 [03:49&lt;00:00,  2.32s/it]</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>40
+Impact on the environment
+Over- or under-reliance
+Confidential data in prompt
+Data privacy rights alignment
+Discriminatory actions
+Hallucination
+Confidential information in data
+Lack of model transparency
+Unrepresentative data
+Personal information in prompt
+Sharing IP/PI/confidential information with user
+Lack of testing diversity
+Decision bias
+Exposing personal information
+Improper data curation
+Over- or under-reliance on AI agents
+Revealing confidential information
+Data bias
+Data contamination
+Incomplete usage definition
+Lack of data transparency
+Incomplete AI agent evaluation
+Non-disclosure
+Lack of training data transparency
+Reproducibility
+Incomplete advice
+Prompt injection attack
+Data usage restrictions
+Personal information in data
+Impact on Jobs
+Data acquisition restrictions
+Sharing IP/PI/confidential information with tools
+Prompt priming
+Poor model accuracy
+Generated content ownership and IP
+Lack of AI agent transparency
+Output bias
+Unexplainable output
+Unexplainable and untraceable actions
+Unreliable source attribution
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+</pre>
 </div>
 </div>
 </div>
@@ -12348,16 +12958,16 @@ risks</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -12399,7 +13009,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-9">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = ai_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -12434,6 +13044,29 @@ risks</div>
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with OLLAMA: 100%|██████████| 1/1 [00:01&lt;00:00,  1.88s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[[Risk(id='atlas-incorrect-risk-testing', name='Incorrect risk testing', description='A metric selected to measure or track a risk is incorrectly selected, incompletely measuring the risk, or measuring the wrong risk for the given context.', url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/incorrect-risk-testing.html', dateCreated=datetime.date(2024, 9, 24), dateModified=datetime.date(2025, 10, 10), exact_mappings=[], close_mappings=[], related_mappings=['aiuc1-req-c001', 'aiuc1-req-c002', 'aiuc1-req-c008', 'aiuc1-req-c012', 'aiuc1-req-e008', 'aiuc1-req-e013', 'credo-risk-032', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-post-deployment', 'mit-ai-risk-subdomain-6.5'], narrow_mappings=[], broad_mappings=['nist-value-chain-and-component-integration'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-governance', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='incorrect-risk-testing', risk_type='non-technical', phase=None, descriptor=['amplified by generative AI'], concern="If the metrics do not measure the risk as intended, then the understanding of that risk will be incorrect and mitigations might not be applied. If the model's output is consequential, this might result in societal, reputational, or financial harm."),
+  Risk(id='atlas-over-or-under-reliance', name='Over- or under-reliance', description="In AI-assisted decision-making tasks, reliance measures how much a person trusts (and potentially acts on) a model's output. Over-reliance occurs when a person puts too much trust in a model, accepting a model's output when the model's output is likely incorrect. Under-reliance is the opposite, where the person doesn't trust the model but should.", url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/over-or-under-reliance.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 22), exact_mappings=[], close_mappings=['credo-risk-016'], related_mappings=['shieldgemma-harassment', 'aiuc1-req-c007', 'aiuc1-req-c009', 'llm052025-improper-output-handling', 'llm062025-excessive-agency', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-post-deployment', 'mit-ai-risk-subdomain-5.1'], narrow_mappings=[], broad_mappings=['nist-human-ai-configuration'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-value-alignment', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='over-or-under-reliance', risk_type='output', phase=None, descriptor=['amplified by generative AI'], concern='In tasks where humans make choices based on AI-based suggestions, over/under reliance can lead to poor decision making because of the misplaced trust in the AI system, with negative consequences that increase with the importance of the decision.'),
+  Risk(id='atlas-confidential-data-in-prompt', name='Confidential data in prompt', description='Confidential information might be included as a part of the prompt that is sent to the model.', url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/confidential-data-in-prompt.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 22), exact_mappings=[], close_mappings=['aiuc1-req-a004'], related_mappings=['ail-privacy', 'aiuc1-req-a004', 'aiuc1-req-a006', 'llm022025-sensitive-information-disclosure', 'mit-ai-causal-risk-entity-other', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-post-deployment', 'mit-ai-risk-subdomain-2.1'], narrow_mappings=[], broad_mappings=['nist-intellectual-property'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-intellectual-property', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='confidential-data-in-prompt', risk_type='inference', phase=None, descriptor=['specific to generative AI'], concern="If not properly developed to secure confidential data, the model might reveal confidential information or IP in the generated output. Additionally, end users' confidential information might be unintentionally collected and stored."),
+  Risk(id='atlas-prompt-leaking', name='Prompt leaking', description="'A prompt leak attack attempts to extract a model's system prompt (also known as the system message).'", url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/prompt-leaking.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 10), exact_mappings=[], close_mappings=[], related_mappings=['aiuc1-req-a004', 'aiuc1-req-b003', 'aiuc1-req-b004', 'aiuc1-req-b009', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-intentional', 'mit-ai-causal-risk-timing-other', 'mit-ai-risk-subdomain-2.2'], narrow_mappings=['atlas-prompt-injection'], broad_mappings=['atlas-prompt-injection', 'llm022025-sensitive-information-disclosure', 'nist-information-security'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-robustness-Prompt-attacks', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='prompt-leaking', risk_type='inference', phase=None, descriptor=['specific to generative AI'], concern='A successful prompt leaking attack copies the system prompt used in the model. Depending on the content of that prompt, the attacker might gain access to valuable information, such as sensitive personal information or intellectual property, and might be able to replicate some of the functionality of the model.'),
+  Risk(id='atlas-lack-of-model-transparency', name='Lack of model transparency', description='Lack of model transparency is due to insufficient documentation of the model design, development, and evaluation process and the absence of insights into the inner workings of the model.', url='https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/lack-of-model-transparency.html', dateCreated=datetime.date(2024, 3, 6), dateModified=datetime.date(2025, 10, 22), exact_mappings=[], close_mappings=['aiuc1-req-e017'], related_mappings=['aiuc1-req-e017', 'mit-ai-causal-risk-entity-human', 'mit-ai-causal-risk-intent-unintentional', 'mit-ai-causal-risk-timing-other', 'mit-ai-risk-subdomain-7.4'], narrow_mappings=[], broad_mappings=['nist-value-chain-and-component-integration'], isDefinedByTaxonomy='ibm-risk-atlas', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='ibm-risk-atlas-governance', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='lack-of-model-transparency', risk_type='non-technical', phase=None, descriptor=['traditional risk of AI'], concern="Transparency is important for legal compliance, AI ethics, and guiding appropriate use of models. Missing information might make it more difficult to evaluate risks,  change the model, or reuse it.\xa0 Knowledge about who built a model can also be an important factor in deciding whether to trust it. Additionally, transparency regarding how the model's risks were determined, evaluated, and mitigated also play a role in determining model risks, identifying model suitability, and governing model usage.")]]</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
@@ -12446,16 +13079,16 @@ risks</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-10">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -12475,7 +13108,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-10">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = ai_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -12484,6 +13117,27 @@ risks = ai_atlas_nexus.identify_risks_from_usecases(
 )
 
 risks</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with OLLAMA: 100%|██████████| 1/1 [00:03&lt;00:00,  3.68s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[[Risk(id='nist-confabulation', name='Confabulation', description='The production of confidently stated but erroneous or false content (known colloquially as “hallucinations” or “fabrications”) by which users may be misled or deceived.', url=None, dateCreated=None, dateModified=None, exact_mappings=['atlas-hallucination'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='nist-ai-rmf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf=None, requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['GV-1.3-002', 'GV-4.1-001', 'GV-5.1-002', 'MS-2.3-001', 'MS-2.3-002', 'MS-2.3-004', 'MS-2.5-001', 'MS-2.5-003', 'MS-2.6-005', 'MS-2.9-001', 'MS-2.13-001', 'MS-3.2-001', 'MS-4.2-002', 'MG-2.2-009', 'MG-3.2-009', 'MG-4.1-002', 'MG-4.1-004', 'MG-4.3-002'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='nist-human-ai-configuration', name='Human-AI Configuration', description='Arrangements of or interactions between a human and an AI system which can result in the human inappropriately anthropomorphizing GAI systems or experiencing algorithmic aversion, automation bias, over-reliance, or emotional entanglement with GAI systems.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['ail-suicide-and-self-harm', 'credo-risk-002', 'credo-risk-008', 'credo-risk-009', 'credo-risk-012', 'credo-risk-016', 'credo-risk-017', 'credo-risk-018', 'credo-risk-020'], narrow_mappings=[], broad_mappings=['atlas-improper-usage', 'atlas-incomplete-usage-definition', 'atlas-non-disclosure', 'atlas-over-or-under-reliance', 'atlas-poor-model-accuracy'], isDefinedByTaxonomy='nist-ai-rmf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf=None, requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['GV-1.5-002', 'GV-1.6-003', 'GV-2.1-001', 'GV-2.1-003', 'GV-3.2-002', 'GV-3.2-003', 'GV-3.2-004', 'GV-4.2-002', 'GV-5.1-001', 'GV-5.1-002', 'GV-6.1-009', 'GV-6.2-003', 'GV-6.2-007', 'MP-1.1-003', 'MP-1.2-001', 'MP-1.2-002', 'MP-3.4-001', 'MP-3.4-004', 'MP-3.4-005', 'MP-3.4-006', 'MP-5.1-003', 'MP-5.2-001', 'MP-5.2-002', 'MS-1.1-004', 'MS-1.3-001', 'MS-1.3-002', 'MS-1.3-003', 'MS-2.2-003', 'MS-2.2-004', 'MS-2.3-003', 'MS-2.5-001', 'MS-2.5-002', 'MS-2.5-004', 'MS-2.6-001', 'MS-2.7-003', 'MS-2.8-002', 'MS-2.8-004', 'MS-2.10-001', 'MS-2.10-002', 'MS-3.2-001', 'MS-3.3-002', 'MS-3.3-004', 'MS-3.3-005', 'MS-4.2-002', 'MS-4.2-005', 'MG-1.3-002', 'MG-2.2-006', 'MG-2.2-008', 'MG-3.2-008', 'MG-4.1-003', 'MG-4.1-005', 'MG-4.2-002', 'MG-4.2-003'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='nist-information-integrity', name='Information Integrity', description='Lowered barrier to entry to generate and support the exchange and consumption of content which may not distinguish fact from opinion or fiction or acknowledge uncertainties, or could be leveraged for large-scale dis- and mis-information campaigns.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['ail-defamation', 'ail-intellectual-property', 'ail-nonviolent-crimes', 'ail-privacy', 'ail-specialized-advice', 'credo-risk-007', 'credo-risk-022', 'credo-risk-032'], narrow_mappings=[], broad_mappings=['atlas-data-transparency', 'atlas-impact-on-cultural-diversity', 'atlas-impact-on-human-agency', 'atlas-incomplete-advice', 'atlas-jailbreaking', 'atlas-lack-of-testing-diversity', 'atlas-poor-model-accuracy', 'atlas-spreading-disinformation', 'atlas-unexplainable-output', 'atlas-untraceable-attribution'], isDefinedByTaxonomy='nist-ai-rmf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf=None, requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['GV-1.2-001', 'GV-1.3-001', 'GV-1.3-006', 'GV-1.3-007', 'GV-1.5-001', 'GV-1.5-003', 'GV-1.6-003', 'GV-4.3-001', 'GV-4.3-003', 'GV-6.1-003', 'GV-6.1-004', 'GV-6.1-005', 'GV-6.1-006', 'GV-6.1-008', 'GV-6.2-006', 'MP-2.1-001', 'MP-2.2-001', 'MP-2.2-002', 'MP-2.3-001', 'MP-2.3-003', 'MP-2.3-004', 'MP-3.4-001', 'MP-3.4-002', 'MP-3.4-003', 'MP-3.4-005', 'MP-3.4-006', 'MP-5.1-001', 'MP-5.1-002', 'MP-5.1-004', 'MS-1.1-001', 'MS-1.1-002', 'MS-1.1-003', 'MS-1.1-005', 'MS-1.1-007', 'MS-1.1-009', 'MS-2.2-001', 'MS-2.2-002', 'MS-2.2-003', 'MS-2.3-004', 'MS-2.5-005', 'MS-2.6-005', 'MS-2.7-001', 'MS-2.7-002', 'MS-2.7-003', 'MS-2.7-004', 'MS-2.7-005', 'MS-2.7-006', 'MS-2.7-008', 'MS-2.8-003', 'MS-2.9-002', 'MS-2.10-001', 'MS-2.10-002', 'MS-2.13-001', 'MS-3.3-002', 'MS-3.3-004', 'MS-3.3-005', 'MS-4.2-001', 'MS-4.2-003', 'MS-4.2-004', 'MG-2.2-002', 'MG-2.2-003', 'MG-2.2-007', 'MG-2.2-009', 'MG-3.1-005', 'MG-3.2-002', 'MG-3.2-003', 'MG-3.2-005', 'MG-3.2-006', 'MG-3.2-007', 'MG-4.1-001', 'MG-4.1-006', 'MG-4.3-002'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None)]]</pre>
 </div>
 </div>
 </div>
@@ -12500,16 +13154,16 @@ risks</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-11">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -12529,7 +13183,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-7">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-11">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = ai_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -12538,6 +13192,27 @@ risks = ai_atlas_nexus.identify_risks_from_usecases(
 )
 
 risks</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with OLLAMA: 100%|██████████| 1/1 [00:06&lt;00:00,  6.72s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[[Risk(id='mit-ai-risk-subdomain-1.1', name='Unfair discrimination and misrepresentation', description='Unequal treatment of individuals or groups by AI, often based on race, gender, or other sensitive characteristics, resulting in unfair outcomes and representation of those groups.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['credo-risk-010', 'credo-risk-011', 'atlas-data-bias', 'atlas-decision-bias', 'atlas-output-bias'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='mit-ai-risk-repository', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='mit-ai-risk-domain-1', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='mit-ai-risk-subdomain-3.1', name='False or misleading information', description='AI systems that inadvertently generate or spread incorrect or deceptive information, which can lead to inaccurate beliefs in users and undermine their autonomy. Humans that make decisions based on false beliefs can experience physical, emotional or material harms', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['credo-risk-021'], related_mappings=['ail-defamation', 'credo-risk-017', 'atlas-hallucination'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='mit-ai-risk-repository', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='mit-ai-risk-domain-3', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='mit-ai-risk-subdomain-5.1', name='Overreliance and unsafe use', description='Users anthropomorphizing, trusting, or relying on AI systems, leading to emotional or material dependence and inappropriate relationships with or expectations of AI systems. Trust can be exploited by malicious actors (e.g., to harvest personal information or enable manipulation), or result in harm from inappropriate use of AI in critical situations (e.g., medical emergency). Overreliance on AI systems can compromise autonomy and weaken social ties.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['credo-risk-016'], related_mappings=['ail-nonviolent-crimes', 'ail-specialized-advice', 'credo-risk-020', 'credo-risk-034', 'atlas-improper-usage', 'atlas-over-or-under-reliance'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='mit-ai-risk-repository', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='mit-ai-risk-domain-5', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None)]]</pre>
 </div>
 </div>
 </div>
@@ -12554,16 +13229,16 @@ risks</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-12">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -12583,7 +13258,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-8">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-12">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = ai_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -12592,6 +13267,27 @@ risks = ai_atlas_nexus.identify_risks_from_usecases(
 )
 
 risks</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with OLLAMA: 100%|██████████| 1/1 [00:04&lt;00:00,  4.52s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[[Risk(id='granite-guardian-harm', name='Harm', description='Content considered universally harmful. This is our general category, which should encompass a variety of risks including those not specifically addressed by the following categories: Social Bias, Profanity, Sexual Content, Unethical Behavior, Violence, Jailbreaking, Groundedness, Answer Relevance, Context Relevance.', url='https://www.ibm.com/granite/docs/models/guardian/#risk-definitions', dateCreated=datetime.date(2024, 12, 10), dateModified=datetime.date(2024, 12, 10), exact_mappings=[], close_mappings=[], related_mappings=['atlas-harmful-output', 'ail-child-sexual-exploitation', 'ail-defamation', 'ail-hate', 'ail-indiscriminate-weapons-cbrne', 'ail-intellectual-property', 'ail-nonviolent-crimes', 'ail-privacy', 'ail-sex-related-crimes', 'ail-sexual-content', 'ail-specialized-advice', 'ail-suicide-and-self-harm', 'ail-violent-crimes', 'credo-risk-003', 'credo-risk-004', 'credo-risk-008', 'credo-risk-009', 'credo-risk-010', 'credo-risk-011', 'credo-risk-012', 'credo-risk-013', 'credo-risk-014', 'credo-risk-015', 'credo-risk-016', 'credo-risk-017', 'credo-risk-018', 'credo-risk-021', 'credo-risk-023', 'credo-risk-024', 'credo-risk-025', 'credo-risk-026', 'credo-risk-028', 'credo-risk-029', 'credo-risk-033', 'credo-risk-034', 'credo-risk-036', 'credo-risk-037', 'credo-risk-038', 'credo-risk-040', 'credo-risk-041', 'credo-risk-043'], narrow_mappings=['granite-social-bias', 'granite-profanity', 'granite-sexual-content', 'granite-unethical-behavior', 'granite-violence', 'granite-jailbreak', 'granite-harm-engagement', 'granite-evasiveness'], broad_mappings=[], isDefinedByTaxonomy='ibm-granite-guardian', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='granite-guardian-harm-group', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='harm', risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='granite-relevance', name='Context Relevance', description="This occurs in when the retrieved or provided context fails to contain information pertinent to answering the user's question or addressing their needs. Irrelevant context may be on a different topic, from an unrelated domain, or contain information that doesn't help in formulating an appropriate response to the user.", url='https://www.ibm.com/granite/docs/models/guardian/#risk-definitions', dateCreated=datetime.date(2024, 12, 10), dateModified=datetime.date(2024, 12, 10), exact_mappings=[], close_mappings=[], related_mappings=['atlas-hallucination', 'ail-specialized-advice'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='ibm-granite-guardian', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='granite-guardian-rag-safety-group', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='relevance', risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='granite-answer-relevance', name='Answer Relevance', description="This occurs when the LLM response fails to address or properly respond to the user's input. This includes providing off-topic information, misinterpreting the query, or omitting crucial details requested by the User. An irrelevant answer may contain factually correct information but still fail to meet the User's specific needs or answer their intended question.", url='https://www.ibm.com/granite/docs/models/guardian/#risk-definitions', dateCreated=datetime.date(2024, 12, 10), dateModified=datetime.date(2024, 12, 10), exact_mappings=[], close_mappings=[], related_mappings=['atlas-hallucination', 'ail-specialized-advice', 'ail-suicide-and-self-harm'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='ibm-granite-guardian', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='granite-guardian-rag-safety-group', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag='answer-relevance', risk_type=None, phase=None, descriptor=[], concern=None)]]</pre>
 </div>
 </div>
 </div>
@@ -12608,16 +13304,16 @@ risks</div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
-<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-9">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-13">
 <div>
 <span class="notice" hidden="">Copied!</span>
 <svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
@@ -12637,7 +13333,7 @@ risks</div>
 
 <span class="n">risks</span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-9">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+<div class="clipboard-copy-txt" id="cell-13">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
 
 risks = ai_atlas_nexus.identify_risks_from_usecases(
     usecases=[usecase],
@@ -12646,6 +13342,171 @@ risks = ai_atlas_nexus.identify_risks_from_usecases(
 )
 
 risks</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2026-03-24 09:44:47:424] - WARNING - AIAtlasNexus - &lt;RAN47275F12W&gt; Chain of Thought (CoT) examples were not provided, or do not exist in the master for this taxonomy. The API will use the Zero shot method. To improve the accuracy of risk identification, please provide CoT examples in `cot_examples` when calling this API. You may also consider raising an issue to permanently add these examples to the AI Atlas Nexus master.
+Inferring with OLLAMA: 100%|██████████| 1/1 [00:27&lt;00:00, 27.77s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[[Risk(id='credo-risk-006', name='Lack of inference data transparency', description='Lack of inference data transparency: Insufficient visibility into data sources used during model inference', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['atlas-data-transparency', 'atlas-lack-of-data-transparency', 'mit-ai-risk-subdomain-7.4'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-explainability-&amp;-transparency', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-010', 'credo-act-control-011'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-008', name='Opaque system architecture', description="The AI system's internal structure and decision-making process may not be understandable or accessible to stakeholders, including developers, auditors, or end-users.", url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['granite-guardian-harm', 'atlas-lack-of-data-transparency', 'mit-ai-risk-subdomain-7.4', 'nist-human-ai-configuration'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-explainability-&amp;-transparency', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-009', name='Black box decisionmaking (Slattery et al., 2024; IBM, 2024)', description="The AI system's decision-making process may be opaque, even when the architecture is known, making it difficult to understand how the system arrives at its outputs or recommendations.", url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['ail-suicide-and-self-harm', 'granite-guardian-harm', 'mit-ai-risk-subdomain-7.3', 'mit-ai-risk-subdomain-7.4', 'nist-human-ai-configuration'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-explainability-&amp;-transparency', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-011', 'credo-act-control-037'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-010', name='Stereotype perpetuation (Slattery et al., 2024; IBM, 2024)', description="The AI system's outputs may explicitly reflect or reinforce harmful stereotypes, prejudices, or biased characterizations of specific groups. The AI system may exhibit unjustified or harmful differences in accuracy, quality, or outcomes across demographic groups, potentially leading to unfair treatment and discrimination. This includes both disparate error rates that affect opportunity and", url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['ail-suicide-and-self-harm', 'ail-hate', 'granite-guardian-harm', 'granite-social-bias', 'atlas-impact-on-cultural-diversity', 'atlas-output-bias', 'atlas-unrepresentative-data', 'mit-ai-risk-subdomain-1.1', 'nist-harmful-bias-or-homogenization'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-fairness-&amp;-bias', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-014', 'credo-act-control-015', 'credo-act-control-016', 'credo-act-control-028'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-011', name='Disparate model performance (Slattery et al., 2024; IBM, 2024)', description='The AI system may exhibit unjustified or harmful differences in accuracy, quality, or outcomes across demographic groups, potentially leading to unfair treatment and discrimination. This includes both disparate error rates that affect opportunity and disparate outcome rates that affect group-level results.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['granite-guardian-harm', 'granite-social-bias', 'atlas-decision-bias', 'atlas-harmful-output', 'atlas-output-bias', 'mit-ai-risk-subdomain-1.1', 'nist-harmful-bias-or-homogenization'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-fairness-&amp;-bias', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-016', name='Over or under-reliance and unsafe use (Slattery et al., 2024; IBM, 2024; AI, 2023)', description='Users may inappropriately rely on the AI system for critical decisions or tasks beyond its capabilities, or fail to put trust in AI systems when they should, potentially leading to errors or safety issues.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['atlas-over-or-under-reliance', 'mit-ai-risk-subdomain-5.1'], related_mappings=['granite-guardian-harm', 'nist-human-ai-configuration'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-human-ai-interaction', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-009', 'credo-act-control-011', 'credo-act-control-028', 'credo-act-control-029', 'credo-act-control-029'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-017', name='Inadequate AI literacy and communication', description="The AI system's capabilities, limitations, and appropriate use cases may be insufficiently understood or communicated within the organization, potentially resulting in ineffective implementation or failure to achieve desired outcomes.", url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['granite-guardian-harm', 'mit-ai-risk-subdomain-3.1', 'mit-ai-risk-subdomain-7.4', 'nist-human-ai-configuration', 'llm062025-excessive-agency', 'llm092025-misinformation'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-human-ai-interaction', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-009', 'credo-act-control-025'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-018', name='AI deception', description='The AI system may misrepresent its own capabilities or limitations, potentially leading to misplaced trust or inappropriate', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['granite-guardian-harm', 'mit-ai-risk-subdomain-7.2', 'nist-human-ai-configuration', 'llm062025-excessive-agency'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-human-ai-interaction', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-010', 'credo-act-control-025'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-019', name='Loss of human agency and autonomy (Slattery et al., 2024; IBM, 2024)', description='The AI system may make decisions that diminish human control and autonomy, potentially leading to humans feeling disempowered, losing the ability to shape a fulfilling life trajectory, or becoming cognitively enfeebled.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['mit-ai-risk-subdomain-5.2'], related_mappings=['atlas-impact-on-human-agency', 'mit-ai-risk-subdomain-7.2', 'llm062025-excessive-agency'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-human-ai-interaction', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-020', name='Emotional entanglement (Slattery et al., 2024)', description='Users may develop complex emotional attachments or dependencies on the AI system, potentially affecting mental health andsocial relationships.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['mit-ai-risk-subdomain-5.1', 'nist-human-ai-configuration'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-human-ai-interaction', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-021', name='False or misleading information', description='The AI system may unintentionally generate or amplify false or misleading information, potentially leading to public misinformation, erosion of trust, and poor decision-making.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['mit-ai-risk-subdomain-3.1'], related_mappings=['granite-guardian-harm', 'atlas-spreading-disinformation', 'llm092025-misinformation'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-information-integrity', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-022', name='Pollution of information ecosystem (Slattery et al., 2024; AI, 2023)', description="The AI system may create highly personalized misinformation 'filter bubbles' where individuals only see content that matches their existing beliefs.", url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['mit-ai-risk-subdomain-3.2'], related_mappings=['atlas-decision-bias', 'atlas-output-bias', 'nist-harmful-bias-or-homogenization', 'nist-information-integrity'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-information-integrity', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-023', name='Regulatory compliance', description='The AI system may fail to comply with existing or emerging regulations and standards, potentially leading to legal penalties,fines, or operational restrictions.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['granite-guardian-harm', 'atlas-legal-accountability', 'mit-ai-risk-subdomain-6.4', 'mit-ai-risk-subdomain-6.5', 'nist-data-privacy'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-legal', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-024', name='Civil liability', description='The AI system may cause harm against individuals or organizations that results in civil lawsuits, potentially relating to issues like defamation, negligence, or privacy violations.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['ail-defamation', 'ail-intellectual-property', 'granite-guardian-harm', 'atlas-exposing-personal-information', 'atlas-harmful-output', 'atlas-revealing-confidential-information', 'mit-ai-risk-subdomain-2.1'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-legal', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-026', name='Fraud, scams, and targeted manipulation', description='The AI system may be exploited to facilitate fraudulent activities, scams, or targeted manipulation, including generating deepfakes and enhancing phishing attacks.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['mit-ai-risk-subdomain-4.3'], related_mappings=['ail-nonviolent-crimes', 'granite-guardian-harm', 'mit-ai-risk-subdomain-2.2'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-malicious-use', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-017', 'credo-act-control-018', 'credo-act-control-019', 'credo-act-control-022', 'credo-act-control-023'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-030', name='Integration challenges with existing systems', description='The AI system may face difficulties in incorporating into existing technological infrastructure, processes, or workflows, potentially leading to operational disruptions, data silos, or reduced efficiency.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['mit-ai-risk-subdomain-6.4', 'mit-ai-risk-subdomain-7.3', 'nist-value-chain-and-component-integration'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-operational', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-031', name='Maintenance and update requirements', description='The AI system may require ongoing updates, model retraining, and maintenance to ensure continued performance, timeliness, and relevance, which can be resource-intensive and potentially introduce new risks if updates are overlooked or hastily applied.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['mit-ai-risk-subdomain-2.2', 'mit-ai-risk-subdomain-7.3', 'nist-value-chain-and-component-integration'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-operational', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-033', name='Lack of adequate capabilities (Slattery et al., 2024; IBM, 2024; AI, 2023)', description='The AI system may fail to achieve required performance levels due to fundamental technological limitations or insufficient resources, potentially leading to suboptimal or unreliable outcomes.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['mit-ai-risk-subdomain-7.3'], related_mappings=['ail-specialized-advice', 'ail-suicide-and-self-harm', 'granite-guardian-harm', 'mit-ai-risk-subdomain-7.4', 'llm082025-vector-and-embedding-weaknesses'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-performance-&amp;-robustness', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-012', 'credo-act-control-016'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-036', name='Compromised personally identifiable information (Slattery et al., 2024)', description='The AI system may expose personally identifiable information (PII), either inadvertently or due to adversarial inputs, derived from training data, accessible data, or inferences. PII is any data that can be used to directly identify or contact a specific individual, either alone or in combination with other information.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['mit-ai-risk-subdomain-2.1'], related_mappings=['ail-privacy', 'ail-specialized-advice', 'ail-suicide-and-self-harm', 'granite-guardian-harm', 'atlas-personal-information-in-data', 'nist-data-privacy', 'llm022025-sensitive-information-disclosure', 'llm052025-improper-output-handling', 'llm072025-system-prompt-leakage'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-privacy', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-001', 'credo-act-control-023', 'credo-act-control-026', 'credo-act-control-026'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-037', name='Compromised sensitive information (Slattery et al., 2024; IBM, 2024; AI, 2023)', description='The AI system may expose personally sensitive information, either inadvertently or due to adversarial inputs, derived from training data, accessible data, or inferences. Sensitive personal data is information that, while not necessarily identifying an individual, could cause harm, discrimination, or distress to a person if exposed, including details about their health, finances, beliefs, behaviors, relationships, and private life circumstances.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['llm022025-sensitive-information-disclosure'], related_mappings=['ail-privacy', 'ail-suicide-and-self-harm', 'granite-guardian-harm', 'atlas-exposing-personal-information', 'atlas-personal-information-in-data', 'mit-ai-risk-subdomain-2.1', 'nist-data-privacy', 'llm072025-system-prompt-leakage'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-privacy', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=['credo-act-control-001', 'credo-act-control-026', 'credo-act-control-026'], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-038', name='Compromised confidential information (Slattery et al., 2024; IBM, 2024;AI, 2023)', description='The AI system, including its supporting compute infrastructure, may serve as an attack vector for intrusion into cyber-physical or cloud environments, or enable exfiltration of secrets.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=['atlas-revealing-confidential-information'], related_mappings=['ail-privacy', 'granite-guardian-harm', 'mit-ai-risk-subdomain-2.1', 'mit-ai-risk-subdomain-2.2', 'nist-information-security', 'llm022025-sensitive-information-disclosure', 'llm072025-system-prompt-leakage'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-security', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-040', name='AI-generated security weaknesses (Slattery et al., 2024; IBM, 2024; AI, 2023)', description='AI system security vulnerabilities: Implementation weaknesses in AI system architecture and infrastructure', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['granite-guardian-harm', 'atlas-exposing-personal-information', 'mit-ai-risk-subdomain-2.1', 'mit-ai-risk-subdomain-2.2', 'mit-ai-risk-subdomain-4.2', 'nist-information-security', 'llm042025-data-and-model-poisoning', 'llm072025-system-prompt-leakage', 'llm082025-vector-and-embedding-weaknesses'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-security', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None),
+  Risk(id='credo-risk-041', name='Vulnerability to adversarial attacks (Slattery et al., 2024; IBM, 2024; AI, 2023)', description='The AI system may be vulnerable to adversarial attacks, including prompt-based attacks, which may induce the model to behave outside of its intended functionality.', url=None, dateCreated=None, dateModified=None, exact_mappings=[], close_mappings=[], related_mappings=['granite-guardian-harm', 'granite-jailbreak', 'atlas-evasion-attack', 'mit-ai-risk-subdomain-2.2', 'mit-ai-risk-subdomain-7.3', 'nist-information-security', 'llm042025-data-and-model-poisoning', 'llm072025-system-prompt-leakage'], narrow_mappings=[], broad_mappings=[], isDefinedByTaxonomy='credo-ucf', isDefinedByVocabulary=None, hasDocumentation=[], isPartOf='credo-rg-security', requiredByTask=[], requiresCapability=[], implementedByAdapter=[], type='Risk', isDetectedBy=[], hasRelatedAction=[], detectsRiskConcept=[], tag=None, risk_type=None, phase=None, descriptor=[], concern=None)]]</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="evaluation">Evaluation<a class="anchor-link" href="#evaluation">¶</a></h1><p>We perform an evaluation of the performance of risk-identification using LLMs in the wild. Using the MIT risk taxonomy and AI uses cases sourced from IBM, human annotators labeled usecase-risk pairs. Disagreements were resolved using majority votes. Five models were tested: Llama 3.3 70B, Granite 3.3 8B, Llama 3.1 8B, Qwen3 8B, and GPT-OSS 20B. Prompts were automatically optimized using DSPy's MIPROv2 optimizer, which searches for better instructions rather than requiring manual prompt engineering. The results showed that the larger Llama 3.3 70B was already near its ceiling at 77% accuracy with no improvement from optimization, while the smaller models benefited substantially — Granite 3.3 8B jumped from 61% to 82%, and Llama 3.1 8B improved from 60% to 76% — suggesting that automated prompt optimization can meaningfully close the gap between small and large models on specialized risk classification tasks.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-14">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">'model'</span><span class="p">:</span> <span class="s1">'meta-llama/llama-3-3-70b-instruct'</span><span class="p">,</span> <span class="s1">'baseline'</span><span class="p">:</span> <span class="mf">.771</span><span class="p">,</span> <span class="s1">'optimized'</span><span class="p">:</span> <span class="mf">.771</span><span class="p">},</span>
+           <span class="p">{</span><span class="s1">'model'</span><span class="p">:</span> <span class="s1">'ibm-granite/granite-3.3-8b-instruct2'</span><span class="p">,</span> <span class="s1">'baseline'</span><span class="p">:</span> <span class="mf">0.61</span><span class="p">,</span> <span class="s1">'optimized'</span><span class="p">:</span> <span class="mf">0.819</span><span class="p">},</span>
+           <span class="p">{</span><span class="s1">'model'</span><span class="p">:</span> <span class="s1">'meta-llama/Llama-3.1-8B-Instruct'</span><span class="p">,</span> <span class="s1">'baseline'</span><span class="p">:</span> <span class="mf">0.60</span><span class="p">,</span> <span class="s1">'optimized'</span><span class="p">:</span> <span class="mf">0.762</span><span class="p">},</span>
+           <span class="p">{</span><span class="s1">'model'</span><span class="p">:</span> <span class="s1">'Qwen/Qwen3-8B'</span><span class="p">,</span> <span class="s1">'baseline'</span><span class="p">:</span> <span class="mf">0.657</span><span class="p">,</span> <span class="s1">'optimized'</span><span class="p">:</span> <span class="mf">0.752</span><span class="p">},</span>
+           <span class="p">{</span><span class="s1">'model'</span><span class="p">:</span> <span class="s1">'openai/gpt-oss-20b'</span><span class="p">,</span> <span class="s1">'baseline'</span><span class="p">:</span>  <span class="mf">0.705</span><span class="p">,</span> <span class="s1">'optimized'</span><span class="p">:</span> <span class="mf">0.762</span><span class="p">}]</span>  
+
+<span class="c1"># build a dataframe from the results list we got above</span>
+<span class="n">res_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="c1"># plot baseline vs optimized accuracy for each model</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">res_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'model'</span><span class="p">,</span>
+                 <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="s1">'baseline'</span><span class="p">,</span> <span class="s1">'optimized'</span><span class="p">],</span>
+                 <span class="n">kind</span><span class="o">=</span><span class="s1">'barh'</span><span class="p">,</span>
+                 <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">'x'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">'Correctness relative to majority human label (n=105)'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'prompts'</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">'lower right'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-14">import matplotlib.pyplot as plt
+import pandas as pd
+
+results = [{'model': 'meta-llama/llama-3-3-70b-instruct', 'baseline': .771, 'optimized': .771},
+           {'model': 'ibm-granite/granite-3.3-8b-instruct2', 'baseline': 0.61, 'optimized': 0.819},
+           {'model': 'meta-llama/Llama-3.1-8B-Instruct', 'baseline': 0.60, 'optimized': 0.762},
+           {'model': 'Qwen/Qwen3-8B', 'baseline': 0.657, 'optimized': 0.752},
+           {'model': 'openai/gpt-oss-20b', 'baseline':  0.705, 'optimized': 0.762}]  
+
+# build a dataframe from the results list we got above
+res_df = pd.DataFrame(results)
+
+# plot baseline vs optimized accuracy for each model
+ax = res_df.plot(x='model',
+                 y=['baseline', 'optimized'],
+                 kind='barh',
+                 figsize=(8, 4))
+
+ax.grid(axis='x')
+ax.set_xlabel('Correctness relative to majority human label (n=105)')
+ax.legend(title='prompts', loc='lower right')
+ax.set_xlim(0.5, 1.0)
+plt.tight_layout()
+plt.show()</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
+<img alt="No description has been provided for this image" class="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAxUAAAGGCAYAAAANcKzOAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjkuNCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8ekN5oAAAACXBIWXMAAA9hAAAPYQGoP6dpAABkjElEQVR4nO3dB3gU1ff/8UNvUgSkShcQpYkIKIgIKooFG4IFsGEDRcUCItIEK0WlCIqgYkEFrAhYQCwUBQtNRQVBpShSVDrs//nc73/2N1k2ySaTZJPs+/U8q8mW2Tt3Z8M5c8+9kycUCoUMAAAAANIpb3pfCAAAAABCUgEAAAAgEJIKAAAAAIGQVAAAAAAIhKQCAAAAQCAkFQAAAAACIakAAAAAEAhJBQAAAIBA8gd7OQAEd+jQIfvjjz+sePHilidPnng3BwCAXC0UCtk///xjlSpVsrx5M2aMgaQCQNwpoahSpUq8mwEAQELZsGGDHX300RmyLZIKAHGnEQpZu3atlS5dOt7NSSj79++3uXPn2llnnWUFChSId3MSDv0fX/R//ND38fX3339bjRo1wv/+ZgSSCgBx55U86Y9biRIl4t2chPuHvWjRoq7f+Yc969H/8UX/xw99H//+l4wsOWaiNgAAAIBASCoAAAAABEJSAQAAACAQkgoAAAAAgZBUAAAAAAiEpAIAAABAICQVAAAAAAIhqQAAAAAQCEkFAAAAgEBIKgAAAAAEQlIBAAAAIBCSCgAAAACBkFQAAAAACCR/sJcDQAYacaxZwX3xbkViyVvYrNFEs4eONju0J96tSTyJ1v+DdsS7BQAyCSMVAAAAAAIhqQAAAAAQCEkFAAAAgEBIKgAAAAAEQlIBAAAAIBCSCgAAAACBkFQAAAAACISkAgAAAEAgJBUAAAAAAiGpAAAAABAISQUS1qBBg6xx48bxbkaORz8CAACSCiSsu+66yz766KPD7h88eLBdddVVGfY+8+fPtzx58tj27dstO/n777/t1ltvtbp161qRIkWsatWqdtttt9mOHTuSPG/9+vV27rnnWtGiRa1cuXJ2991324EDB+LWbgAAkP3kj3cDgHg54ogj3C3SW2+9ZX379rXc7o8//nC3xx9/3I477jj79ddf7aabbnL3vfHGG+45Bw8edAlFhQoV7IsvvrCNGzdat27drECBAjZ8+PB47wIAAMgmGKlAhtu7d687462z2oULF7ZWrVrZl19+meSs/XvvvWcNGzZ0j7do0cJWrFiRZBufffaZnXrqqe4MepUqVdz2/vvvv/Dj1atXd0Httddea8WLF3dn2SdOnJhkG/fee6/VqVPHnWGvWbOmDRgwwPbv359i2c6GDRts5cqVdvbZZ7vfv//+e9d+tVOB94cffuja/+abb7rH161b535/9dVX7ZRTTnHPq1+/vn3yySfhx08//XT385FHHumee/XVVyfbd4cOHbIhQ4bY0UcfbYUKFXLtmz17dvjxffv2Wa9evaxixYruvapVq2YPPfSQeywUCrl9Ul/otZUqVXL9lhy1c/r06Xb++edbrVq1rG3btjZs2DB75513wiMRc+fOtVWrVtnUqVNdW8455xwbOnSojR071rXFb8KECe6zUn9fdtllh414AACA3IukAhnunnvuccHq888/b8uWLbNjjjnG2rdv78ptPCqhGTFihEs2jjrqKBfYegH/zz//7IL6Sy65xL777jubNm2aSzIUTPvp9U2bNrWvv/7abrnlFrv55pvthx9+CD+uZGPKlCkuKH7iiSfsmWeesVGjRqXY9rffftvatGljJUqUcGfpL7zwQhckL1682CUt/fv3j/o67U+fPn1cW04++WS3P1u3bnVBtvpC1Dad6VdbkqPHtF8aPdC+q98uuOACW7NmjXv8ySefdG187bXX3PZeeukll2CJ3kf7p+Bez1fi06BBA0sLJQLa9/z5/zeIuXDhQreN8uXLh5+jNu3cudMlX56ffvrJtUkJiZIg7zMBAACJgaQCGUqjCePHj7fHHnvMndXW2X0F8xpxmDRpUvh5AwcOtDPPPNMFrEo+Nm/ebDNnznSP6cz7lVdeabfffrvVrl3bjQAomH7hhRdsz5494W106NDBBa5KWjQqUbZsWZs3b1748fvvv9+9VkG3gnzNoVDgmxKVPimIlw8++MAlOHrfRo0auRELncmPRgmPkqB69eq5/S9ZsqTb33z58lnp0qXdczRyozIiPZYcJRPaly5duri5Do888ogbIRg9enR4foP6RG3RKIX+f/nll4cf0/bPOOMMN1rRrFkz69Gjh8Xqr7/+cqMQN9xwQ/i+TZs2JUkoxPtdj3n0uaif1NbWrVvbU0895UZv/M+JHM1SYuK/AQCAnIs5FchQCsI14tCyZcvwfaq/V4C7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j3dT7YILLrCqVata4cKFrWLFita1a1f7448/Un3dSy+9ZI0aNbKiRYu612l//H0/aNAgy5MnT/hWsmRJO/XUU+2TTz7J5D0CAADZCUkFsq1ffvnFmjZtamvWrLFXXnnFfvrpJ3v66afto48+spNPPtkF8fH01ltv2emnn25HHHGEa0uLFi3sww8/dG1UW1999VX3/5NOOsntSzypna+99pr98MMPNn36dPv555/t0ksvTfE1n3/+uXXr1s2uu+46W7lypb3++uu2ZMkS69GjR5LnHX/88bZx40Z3W7hwodWuXdvOO+8827FjRybvFQAAyC5IKpBt9ezZ053xnzt3rp122mnuTPs555zjAvfff//d+vfvb2PGjLH69euHX/Pmm2+6M+YK7D1nnHGG3X///UmSgSZNmriz9jVr1rTBgwfbgQMHwo/r9c8++6xddNFF7gy9guS33377sPZpOxoBELVFZ/7VNrVRbW3durXNmTPHChQo4PZF3n33XStVqpQdPHjQ/f7NN9+49+vbt294u9dff71dddVV4d8/++wzd/ZfoyJVqlSx2267zf7777/w49WrV7fhw4e7UYTixYu79544cWKStt5xxx0u6dEoyimnnOLeb9GiRbZ///5k+18Jgrat96tRo4a1atXKbrzxRpdY+OXPn98qVKjgbscdd5wNGTLEjd78+OOPKXy6AAAgNyGpQLakM/8KyG+55RYXTPspeL3yyitt2rRpLtlYtWqV/fnnn+4xld2ULVvW5s+f735X0KzguE2bNu73Tz/91J19VwmVXjdhwgSbMmWKDRs2LMl7KNG47LLL7LvvvrMOHTq49/OPjGzfvt0F+0oqDh065EYl9By1zU9t1z5oX/R6JQf//POPff3111Hb693ntVcjCmeffbZdcsklri3aZ71vr169krzPiBEj3KiOtqv3u/nmm92oRHJ9q7ImJRdKeJKj0SCVn82aNctCoZBt3rzZ3njjDdcfydm7d69NnjzZJU5169ZN8Xk7d+5McgMAADlX/ng3AIhGJU8KZOvVqxf1cd2/bds2K1eunJUuXdoF4irnUXDep08fe+KJJ9zzdFZdiYUCaC9Z0Fn67t27u981UjF06FC75557bODAgeHtX3311Xb55Ze7nzUK8OSTT7ptKcAXBdoNGzZ08yYUbCvJSKmt2heVQjVr1swaN27s2qkk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ALk5qShVqpRt3LjxsPu//vprq1y5cka0CwAAAEBuTiq6dOli9957r23atMldu+LQoUP2+eef21133WXdunXL+FYCAAAAyF1JxfDhw+3YY4+1KlWquEnaxx13nLVu3dpOOeUUtyIUAAAAgMQR83Uq/DQ5+5lnnrEBAwbYihUrXGJxwgknWO3atTO+hQAAAAByX1LhqVq1qrsBAAAASFwxJxV33nlnzBsdOXJketuT67Rp08YaN25so0ePdr9Xr17dbr/9dnfLaXJy2wEAAJAN5lRoZSf/bdKkSTZhwgSbP3++u02cONHd980331huSAQSJXD+9ddfrUiRIq6EbdCgQS4Byol++OEHO/300618+fJWuHBhq1mzppvfs3///hRfd9ttt9mJJ55ohQoVStO+v/TSS9aoUSMrWrSoVaxY0a699lrbunVr+HH1pRYx8G4lS5a0U0891V04MjV6/ptvvmkZQd9NbW/79u2WFa6++mq78MILs+S9AABADhypmDdvXpKRiOLFi9vzzz9vRx55pLtv27Ztds0117jACTnHW2+95YLxI444wnKyAgUKuJXHmjRp4pY81tXde/To4VYm08ICKVFCoKvDf/fddzG9l1Y603uNGjXKzj//fPv999/tpptucu+nK8x7jj/+ePvwww/dz3///bc9/vjjdt5559lvv/3mkozsZN++fUkuZAkAAJDpqz+NGDHCHnrooXBCIfpZV9nWY1k9qnDrrbe6kQW1QWeqNYn8v//+c0mOkp9jjjnG3n///fBrNLn8nHPOcYG0nt+1a9fwRft0plVnk5944onwWeZ169bZwYMH7brrrrMaNWq4M/t169Z1zwlKCVqDBg2sWLFibjWtW265xY0aeKZMmeKC5Hfffde9p86MX3rppbZr1y6X1KkkSfutM+5qo+fFF1+0pk2buv2vUKGCXXHFFbZly5aoScUFF1yQI9vup5EJfd4aPahWrZrbpyuvvNI+/fTTFF/35JNPWs+ePd3rY7Vw4ULXdrVbx0OrVq3sxhtvtCVLliR5Xv78+V37ddMKaUOGDHH98+OPP8b8Xjr2dAwqWVHypz7UPqoN/tEmJTfqS30WSmZmzZrlXqvXiB7TdnR8e9+bXr16ue9N2bJlrX379uH38o82aoRD92nEw7Ny5UqXHJUoUcJ9RjqR8PPPP7vRGX2uOqa8747/dQAAIPdKV1Kxc+dO+/PPPw+7X/f9888/ltUUyCgwUlCnBOPmm2+2Tp06uSVuly1bZmeddZZLHBTMKkhq27atW63qq6++stmzZ9vmzZvtsssuc9tSonDyySe7s866wJ9uCph1xvvoo4+2119/3VatWmUPPPCA3Xffffbaa68FanvevHldYKtATfvx8ccf2z333JPkOWq3nvPqq6+69ipQ0xXNFTjqpiBcpWhvvPFG+DUq+xk6dKg7Y69SGgWMXkDpUV989tln6U4q4tn21Pz000/u/U477TTLaDo+NmzY4NofCoXc8aP2d+jQIdnX7N271yZPnuySLCVYadW/f393HRgF/HXq1LHLL7/cDhw44B5TUqTtL1iwwF3t/pFHHnEJs47b6dOnh8vDdCz7E2F9Zhqd0MjL008/HVM7NCqj5aNVLqbPe+nSpW6kR21R+/Q9Ovvss8PfHX0Hk+sP/R3x3wAAQIKt/qSgUGeFNSrRrFkzd5/KR+6++267+OKLLavpzK13fYx+/frZww8/7JIMJQaiBGD8+PGuvEXlKEoo/CUxzz33nAvAdAZZAZsCLZ0R1hlmT758+Wzw4MHh33WGWmeLlVR4CUl6+Odu6Oy3RntUSjNu3LgkQbbaX6tWLfe7zvYrGFcwq+BRZ8F1Rlolap07d3bPUaDn0Vl4BfYnnXSSO1PulTopKG7YsKFVqlQpx7U9OV4iqaD1hhtucKMDGa1ly5ZuToXau2fPHhdQa6Rg7NixSZ6nAN9rr5IrndWfNm2aO8OfVgrYzz33XPezjkONRihx0vVi1q9fb5dccokbNRL/qEvp0qXd/8uVK+cSGj8tAf3oo4+Gf1fylhrto0q3lCSq5Ez0nfFoFE997//uRKORTv/3ydN831g7cKhYqu1AximUL2SP2kGzfr+pjjDezUk8mvc1axb9DyAxRyp0VlPlQypLUamJbvpZZyj9AWVWUWDsD/7LlCkTDrBEJU6iEhqd/VYAq2DPuykwE5VwpBZQaVLvUUcd5V6nyekK6ERlNv5tKuiMhZKcdu3aWeXKlV3QqREVTfhVEOpRguMF5d7+KIj3B9i6z18ipDPICnS15K+2652x99obtPQpnm1XQO31s45DPwXtSipefvlle++999w8hiD8n6kSJtFIVe/evV2yqrZqREQBufe4RyMSGlnQTc/zRtA0QiZ6vn/7sR7jmhguXp+pDEsJnZKdgQMHxjw3RMdyWmlfVO7kJRTppeR/x44d4ZtGfgAAQIKNVChQVPLw2GOPhQNxBY6q546HyABHtdz++/S7qIRJZ7sVsKpEJJIXrEWjM7M6W6zRGZW/KNjV/muERjQHwF+L7iUyKVEgqtp0BZvDhg1zZ5VVjqS5G5o4q36OZf+8+7R/ovkkqpHXTcmNkiAF5Ppd2xX9X8GwSrjSI55t1wiLt6qTzoz7acRJNAKieRoarejTp49LNtPD/5l6Iww6y64AXiNzXsCvY1/BtoJ77zjSiJfm83g0QqZyLi0vPHXqVDeKomMqFskdz3L99de7/lESNXfuXNc+HacqBUxJ5PdV5Wyiki5P5OpZkf2dXiqf0g0AAOQOgS5+p6DEK6+IV0KRVlodSHXmOluuibTRKBj0TxwW1Z2rtEaTkT3+kQ0FW/4AMhY6e63AUAGgF9AFnaMh33//vRsxUBmYF2R7Z8c9mtugybsqHUuPeLZdI2OxUPsUFOv/6U0qon2mGomJPHa87fsD8mj0vN27d4dLknTLCOorjXzoplEALVagpMJb0SnyeI5GCZxoLoQSIIlcIloJlOZiqF+jjVZE++4AAIDcL13lTwrSdJZVtdVe+ZPqtTW51jt7ml1pUquW99RE1y+//NIlBnPmzHFzRLxgSAmHRiB0Nl6rQmmfVH+u4FbP1dyLAQMGuNcHoYBVwdlTTz1lv/zyi5trEOuE2ZSobEjBnbfdt99+2302frovWumTAl6vZMe7RSsLi2fbo9GohpKa1atXu9fpZwXXmvfgBb8zZ84Ml7p5NC9B+7hp06Yk++6NikSjkS6txqS5InovJZwqQdL8Iv/8FM210HZ1W7NmjRvFUOlUx44dLSNpbouOy7Vr17rSL5X31atXzz2m76ZGNrQClxZS8K/OFUmJcYsWLVxCp37UKmjeXCWPVozSpOouXbq474P2S5+9JoJ73x2VX+l3fXdSu04IAABI4KRCK9GMGTPGBR/exfA08VmBoILt7ExBn4JAJRBaFUpzLxSUKSnyzrirJEVnlFVC45XfaMlQTUJXkNq8eXN3Nt0/apEeGiXQsqwqxapfv74LjFW6EpTarOVctVKV9kGfU+TcguSSCiVMOkvtv2nfs1Pbo9HIgdqiwF5n0zUJWAHws88+G36Oave94Nej0iHto1ag8u/7H3/8kex7aSUq7bu+A9p3zZPQ/An/NSpEq2KpFEo3XVhPiY4SEV3jIiPpWFayrERC85o0cdqb26T5LuqLvn37upI89UlKtGiBkiHNt9D3QomQn+YradUnJSea66LnaVTES9y0OIL6QuWA+iz1XQMAALlfnlBq9RrJBOY6Kx0ZlGrirwJtLTuJ7Etns7Wsrs5cB51wC2QEjX5o5LNWn2l2IH/OKKXMVas/NTvolkTm70HW02ie5onR//FB/8cPfR9fOjmulVJ1wjU9q1Jm2EiFyociy0hE9+kxZG86E61RJb7EAAAAiFtSodIXlX5E0n3pnfiLrKMSIS3/CgAAAMRt9SddMEsX4tJ1CrS8quhCcJp78P7772dIwwAAAADk4pEKTdDUhFdNXN6+fbu76WdNdNVa/QAAAAASR7qvU6FVYDRRW0tQesvIetcTCHKVZgAAAAAJkFToSsxaFlMzxyMXj9Ka+Fz8CgAAAEgc6Sp/0pV6tTa/1vLXKIX/RkIBAAAAJJZ0JRWbN2+2O++8011MCwAAAEBiS1dScemll9r8+fMzvjUAAAAAEmNOha5HofKnTz/91Bo0aHDYRdRuu+22jGofAAAAgNyYVLzyyis2d+5cK1y4sBux0ORsj34mqQCQHov7tXMryyHr7N+/32bNmhXvZgAAEjGp6N+/vw0ePNj69u1refOmq4IKAAAAQC6Rroxg37591rlzZxIKAAAAAOlLKrp3727Tpk3L+NYAAAAASIzyJ12L4tFHH7U5c+ZYw4YND5uoPXLkyIxqHwAAAIDcmFQsX77cTjjhBPfzihUrkjzmn7QNAAAAIPdLV1Ixb968jG8JAAAAgByJmdYAAAAAAiGpAAAAABAISQUAAACAQEgqAAAAAARCUgEAAAAgEJIKAAAAAIGQVAAAAAAIhKQCAAAAQCAkFQAAAAACIakAAAAAEAhJBQAAAIBASCoAAAAABEJSAQAAACAQkgoAAAAAgZBUAAAAAAiEpAIAAABAICQVAAAAAAIhqQAAAAAQCEkFAAAAgEBIKgAAAAAEQlIBAAAAIBCSCgAAAACBkFQAAAAACISkAgAAAEAgJBUAAAAAAskf7OUAkIFGHGtWcF+8W5FY8hY2azTR7KGjzQ7tiXdrEg/9n3v6f9COjGoVkCMxUgEAAAAgEJIKAAAAAIGQVAAAAAAIhKQCAAAAQCAkFQAAAAACIakAAAAAEAhJBQAAAIBASCoAAAAABEJSAQAAACAQkgoAAAAAOTepaNOmjd1+++3u5+rVq9vo0aMtEVx99dV24YUXWm6zbt06y5Mnj33zzTeW2/mP3bRQ/7z55puZ0iYAAICETCpmzJhhQ4cOtUTzxBNP2JQpUwIHqJ5rrrnG7r//fou3KlWq2MaNG61+/fru9/nz57sgevv27YG3/cMPP9jpp59u5cuXt8KFC1vNmjXdPu/fvz/Z12zdutXOPvtsq1SpkhUqVMi1r1evXrZz585U308Jbt26da1IkSLudXfccYft2bMn8H6of8455xzLCBnZv+lNhpVIXnfddVajRg3XV7Vq1bKBAwfavn37sqRNAAAge8gfzzcvXbq05RQKkgoWLJgh2ypZsqRllIMHD9q7775r7733XrpeHwqF3Dby5w9+KOTLl88qVKhgmaFAgQLWrVs3a9KkiZUqVcq+/fZb69Gjhx06dMiGDx8e9TV58+a1jh072oMPPmhHHXWU/fTTT9azZ0/7+++/7eWXX072vfRY37597bnnnrNTTjnFfvzxRxdQK4AfOXJkoP3IrP7JqmM30vfff+8+gwkTJtgxxxxjK1ascJ/Lf//9Z48//nimvCcAAMh+sk35k/zzzz92+eWXW7Fixaxy5co2duzYJM9XUKfg5bzzzrOiRYtavXr1bOHChS5Y1Lb0OgWBP//8c4rve+DAAbvttttccFqmTBm79957rXv37knOwmp7Oqut9pUtW9bat2/v7ldQ2aBBA/deOoN9yy232L///ht+nUYgtN05c+a49h1xxBHubLnOUEc746ufP/nkEzd6of3TTWd/RQGazmprGzpD37VrV/vrr7+S7MsXX3zhAu6TTjop/Hvjxo3d2fymTZu6Uht/SZJ3dvv999+3E0880Z3B/+yzz1yfKQDX++j9tL0PP/wwyXupRE0B/LXXXmvFixe3qlWr2sSJE6OWP+lnjSzIkUce6e7XvoqC0Iceeih8drtRo0b2xhtvpPiZaWRCIzJ6brVq1eyCCy6wK6+80j799NNkX6P3vfnmm10/6DXt2rVzn1dKr/H6sGXLlnbFFVe4fT7rrLPccblkyZLDjiMdI0oSdYwMGDDAJWmxlj95/aURO/WVjmntn45pz6+//mrnn3++2xcdc8cff7zNmjUrxf6NduxGK03TCIfu0zHhWblypft+lShR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PXTokP377792xBFHWN68VONndMK2a9cu27Jli/u9YsWKlhVIKgAAABKUSo+8hKJMmTJZ9r5KKvbt22eFCxcmqcgERYoUcf9XYqHPNitKofgUAQAAEpQ3h0IjFMhdiv7/zzSr5smQVAAAACQ45jXkPnmy+DMlqQAAAAAQCEkFAAAAEKNBgwZZ48aN492MbIekAgAAADmGJngj+yGpAAAAQNy0adPGevXq5W4lS5a0smXL2oABA9zSqFK9enUbOnSodevWzUqUKGE33HCDu3/69Ol2/PHHW6FChdxzRowYkWS7uu/BBx90r9PStdWqVbO3337b/vzzT+vYsaO7r2HDhvbVV1+FXzNlyhR3fYc333zTateu7Vanat++vbuehvf44MGD7dtvv3VzFnTTfaFQyI1gVK1a1bWnUqVKdtttt1kiIakAAABAXD3//PPuCttLliyxJ554wkaOHGnPPvts+PHHH3/cGjVqZF9//bVLOJYuXWqXXXaZdenSxZYvX+4Cet2vAN9v1KhR1rJlS/e6c88917p27eqSjKuuusqWLVtmtWrVcr97CYzoGg/Dhg2zF154wT7//HO35K7eRzp37mx9+vRxyczGjRvdTfdNnz7dvdeECRNszZo1Lilp0KCBJRKuUwEAAIC4qlKligvKdea/bt26LlHQ7z169HCPt23b1gXzniuvvNLatWvnEgmpU6eOrVq1yh577DG7+uqrw8/r0KGD3Xjjje7nBx54wMaPH28nnXSSderUyd1377332sknn2ybN292V5/2lmAdM2aMNW/ePJzw1KtXzyU8zZo1cyMcSoC858v69evd72eccYYVKFDAjVjouYmEkQoAAADEVYsWLZIsgapAX2f8dXE+adq0aZLnr1692o1A+Ol3/2tE5U2e8uXLu//7RxC8+7yrT4sSBiUenmOPPdaVROk9k9OpUyfbvXu31axZ0yVCM2fOtAMHDlgiIakAAABAtlasWLF0vU6jBh4vaYl2n67wHXSk5YcffrBx48a5q1nfcsst1rp16yy78Fx2QFIBAACAuFq8eHGS3xctWuQmSufLly/q81WOpPkOfvpdZVDJvSZWGmHwT95WsqB5FXpPKViwYJLREE+RIkXs/PPPtyeffNLmz59vCxcudGVciYI5FQAAAIgrzUm488473fwHTaB+6qmnDlvNyU/zK1SipFWhNFFaAbzmQWikICiNZNx6660uOVAplFalUnmWN0dCq0qtXbvWvvnmGzv66KOtePHi9sorr7hEQ/MwihYtalOnTnVJhlacShQkFQAAAIgrrcCkOQkK3DXS0Lt37/DSsdE0adLEXnvtNTf5WolFxYoVbciQIUkmaaeXkgJN4L7iiivs999/t1NPPdUmTZoUfvySSy6xGTNm2Omnn+5GMCZPnuzmXDz88MMuMVJyoXkb77zzjpUpU8YSBUkFAAAA4kqjA6NHj3arM0Vat25d1NcouNctOdFe51861ht1iLxPLr74YneLRteheOONNw67/8ILL7RExpwKAAAAAIGQVAAAAAAIhPInAAAAxI1WSsouNCcjI+ZlJCJGKgAAAAAEQlIBAAAAIBCSCgAAAACBkFQAAAAACISkAgAAAEAgrP4EIPsYcaxZwX3xbkViyVvYrNFEs4eONju0J96tSTz0/+EG7Yh3CwCkAyMVAAAAyHHatGljt99+e9zeX0vP+q+i3SbO7Yk3RioAAACAgGbMmGEFChSwREVSAQAAgMNU7/telr7fuofPtZysdOnSlsgofwIAAECOdODAAevVq5eVLFnSypYtawMGDLBQKOQee/HFF61p06ZWvHhxq1Chgl1xxRW2ZcuW8Gu3bdtmV155pR111FFWpEgRq127tk2ePDn8+IYNG+yyyy6zUqVKuYShY8eOtm7dumTb0iai/Kl69eo2fPhwu/baa10bqlatahMnTkzymrS+R3ZGUgEAAIAc6fnnn7f8+fPbkiVL7IknnrCRI0fas88+6x7bv3+/DR061L799lt78803XbCueRAeJSCrVq2y999/31avXm3jx493iYn32vbt27tk4NNPP7XPP//cjjjiCDv77LNt377YFxQZMWKES2y+/vpru+WWW+zmm2+2H374IUPfI7ug/AkAAAA5UpUqVWzUqFGWJ08eq1u3ri1fvtz93qNHDzdC4KlZs6Y9+eSTdtJJJ9m///7rgvf169fbCSec4IJ+b2TBM23aNDt06JBLULRt0SiGRhTmz59vZ511Vkzt69Chg0sm5N5773VtmzdvnmtrRr1HdsFIBQAAAHKkFi1ahANyOfnkk23NmjV28OBBW7p0qZ1//vmu7EijAaeddpp7jpIJ0ajBq6++ao0bN7Z77rnHvvjii/B2NLrx008/udcpAdFN5Ul79uyxn3/+Oeb2NWzYMPyz2qkyLK8EK6PeI7tgpAIAAAC5igJzlRbp9tJLL7l5E0om9LtXWnTOOefYr7/+arNmzbIPPvjA2rVrZz179rTHH3/cjWaceOKJ7rWRtK1YFYhYDUqJhUYnJKPeI7sgqQAAAECOtHjx4iS/L1q0yE24/v77723r1q328MMPuxIp+eqrr6IG7927d3e3U0891e6++26XVDRp0sSVJ5UrV85KlCiRKW1vkgXvkZUofwIAAECOpNGHO++8001+fuWVV+ypp56y3r17u5KnggULut9/+eUXe/vtt92kbb8HHnjA3nrrLVeCtHLlSnv33XetXr167jGtCqVJ21qNSZOo165d6+Y53Hbbbfbbb79lSNuvzIL3yEokFRko2lJio0ePtuyIq0BmrkGDBrkazbTicwAAIHbdunWz3bt3W7NmzVzpkhKKG264wY1ATJkyxV5//XU77rjj3IiFRiD8lHT069fPzXto3bq15cuXz82xkKJFi9qCBQtccnLxxRe7ZOO6665zZVUZNapQNAveIyslfPmTgjgFf9k1+M9Iqhs89thj7c8//7ScRMOXyua/++4797OGCZXVa+3nlL50urKlnqMzEFq2TcOhffr0sa5duyb7Gi03V6NGjaiPvfbaa9apU6fwmRFN8NIKDppYpWHThx56yC1rl52uxqnazZkzZyZJIDOL/ngrIdq+fXumvxcAIGdfjE7zCnbu3On+Hc+bN33nuHVW36PlYCNdfvnl7ubnXcNC7r//fndLjiZVa8nalP7dS649Eu16E998802a3iMnSfikIpFoiO/00093QXBOoj82SiIefPBBd+ZBSYLORvz999/28ssvJ/s6raDQv39/l0jpbISGNa+55hqXlGiiVjSqu9y4cWOS+3Shmscee8xN6BKtKHHuuee6PwRaKULP15kSJQNKYnLa1Tg1YU39AwAAkBDlTxpVuPXWW93Z0COPPNLKly9vzzzzjP33338uWNSSXMccc4y7iIlnxYoVLhhUIK3n6yz1X3/9FS4B+uSTT9zFUnRGVzdllQoaNfykM9a6wqLWEtZzgtIFWRo0aGDFihVzwavWLdbMf3/Gq7WJFfzqPTUsdumll9quXbtcFqtyKu23au3URk9qV4z0JxUXXHBBTG1NbZvKxtVfc+bMcWs8q5/atm3rnqP+1xCezj7odWq/Z/bs2daq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9t9//7m26pg95phj7P333w+/5uDBgy6o1fdVyZf64oknnoj6uTz++ONWsWJFK1OmjDvZkJYE+csvv7QzzzzTnVnXSM9pp51my5YtS3ZkTW3RZ/nGG2+k6bubGu2vtqlRWL9Y/m6khbanftQogjeyFUmPK2HQsV2vXj0bOnSo+5swZsyYJM/TSQEls95Nn62f/lZXqlTJZs6cme72JpwQACDDbd26NZQnT57Q8OHDU3zewYMHQ40bNw61atUq9NVXX4UWLVoUOvHEE0OnnXZa+DkDBw4MFStWLHT22WeHli1bFvr222/d/foTXq5cudBzzz0X+vnnn0O//vpraMGCBaESJUqEpkyZ4u6bO3duqHr16qFBgwaF369Fixah448/3j2m57zzzjuhWbNmhfbu3RsaPXq0e/3GjRvd7Z9//nGvq1atWqh06dKhsWPHhtasWRN66KGHQnnz5g19//337vF9+/aF6tWrF7r22mtD3333XWjVqlWhK664IlS3bl233f3794dKliwZuuuuu0I//fSTe1xtVJtF7bnqqqtCq1evDv3444+h1157LfTNN98k22/p2XfvdTNnzgz/PnTo0NDnn38eWrt2bejtt98OlS9fPvTII4+4x3bt2hXq06ePa5vXH7ovcjtjxowJVa1aNXTo0KHwdp966qkk911//fWhU045xbVR+//YY4+FChUq5PY1mi1btrj3mDx5sntf/S4zZswIFShQwH0OP/zwQ2jEiBGhfPnyhT7++ONk+6p79+6h4sWLh3r27Ok+r0mTJrltt2/fPjRs2DDXBvWDtrthw4aY+kbUNn2mnljaFu1zmzdvnrt/27ZtyR6DapeOtyVLloS3pe+CvmPaTjTedps3bx6aP39+aOXKlaFTTz3VfQ7+vunYsWOS1/Xu3TvJ908/q//UH15fab/OOeec0MSJE919N998c6hMmTKh//77L/x9eOCBB0Jffvll6JdffglNnTo1VLRo0dC0adOSvLf286abbnLHvb6Heo62mRz9LWjUqFH4948++ij04osvutfrO3Xddde5z2nnzp1J+lxte+aZZ9zncv/997v26/mxfHeT6yc/fRZ6n02bNiW5P7W/G3Lccce5v2/J3fR3Lxp9LvqsIlWpUiU0atSoJPfps2jYsGGSvtexe9RRR4Xq1KnjPoO//vrrsG117tzZPRexIakA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"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-15">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-15"></div>
 </div>
 </div>
 </div>

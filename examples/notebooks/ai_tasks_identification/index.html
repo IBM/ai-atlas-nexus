@@ -14,7 +14,7 @@
         <link rel="prev" href="../risk_identification/">
       
       
-        <link rel="next" href="../domain_identification/">
+        <link rel="next" href="../AI_Capabilities_Identification/">
       
       
         
@@ -1026,6 +1026,8 @@
       
         
       
+        
+      
     
     
     
@@ -1088,7 +1090,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1210,10 +1212,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ai-tasks-identification-api" class="md-nav__link">
+  <a href="#ai-tasks-identification-api-default-backend-using-ollama" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AI Tasks Identification API
+        AI Tasks Identification API - Default backend using OLLAMA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-tasks-identification-api-mellea-backend-using-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Tasks Identification API - Mellea backend using Ollama
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-tasks-identification-api-mellea-backend-using-wml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Tasks Identification API - Mellea backend using WML
       
     </span>
   </a>
@@ -1229,6 +1253,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -11093,10 +11145,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ai-tasks-identification-api" class="md-nav__link">
+  <a href="#ai-tasks-identification-api-default-backend-using-ollama" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AI Tasks Identification API
+        AI Tasks Identification API - Default backend using OLLAMA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-tasks-identification-api-mellea-backend-using-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Tasks Identification API - Mellea backend using Ollama
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-tasks-identification-api-mellea-backend-using-wml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI Tasks Identification API - Mellea backend using WML
       
     </span>
   </a>
@@ -11921,13 +11995,13 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-1">
@@ -11954,6 +12028,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     <span class="n">VLLMInferenceEngineParams</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">ai_atlas_nexus.library</span><span class="w"> </span><span class="kn">import</span> <span class="n">AIAtlasNexus</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-1">from ai_atlas_nexus.blocks.inference import (
     RITSInferenceEngine,
@@ -11968,21 +12043,8 @@ from ai_atlas_nexus.blocks.inference.params import (
     OllamaInferenceEngineParams,
     VLLMInferenceEngineParams,
 )
-from ai_atlas_nexus.library import AIAtlasNexus</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/Users/ingevejs/Documents/workspace/ingelise/risk-atlas-nexus/src/ai_atlas_nexus/toolkit/job_utils.py:4: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from tqdm.autonotebook import tqdm
-</pre>
+from ai_atlas_nexus.library import AIAtlasNexus
+import os</div>
 </div>
 </div>
 </div>
@@ -12020,77 +12082,77 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 </clipboard-copy>
 </div>
 <div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
-    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"llama3:latest"</span><span class="p">,</span>
-    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"OLLAMA_API_URL"</span><span class="p">),</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"granite3.3:8b"</span><span class="p">,</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"http://localhost:11434"</span><span class="p">),</span>
     <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
-        <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">repeat_penalty</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span>
+        <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span>
     <span class="p">),</span>
 <span class="p">)</span>
 
 <span class="c1"># inference_engine = WMLInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm/granite-20b-code-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm/granite-4-h-small",</span>
 <span class="c1">#     credentials={</span>
-<span class="c1">#         "api_key": "WML_API_KEY",</span>
-<span class="c1">#         "api_url": "WML_API_URL",</span>
-<span class="c1">#         "project_id": "WML_PROJECT_ID",</span>
+<span class="c1">#         "api_key": os.getenv("WML_API_KEY"),</span>
+<span class="c1">#         "api_url": os.getenv("WML_API_URL"),</span>
+<span class="c1">#         "project_id": os.getenv("WML_PROJECT_ID"),</span>
 <span class="c1">#     },</span>
 <span class="c1">#     parameters=WMLInferenceEngineParams(</span>
-<span class="c1">#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1</span>
+<span class="c1">#         max_new_tokens=1000, decoding_method="greedy"</span>
 <span class="c1">#     ),</span>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = VLLMInferenceEngine(</span>
-<span class="c1">#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",</span>
+<span class="c1">#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",</span>
 <span class="c1">#     credentials=InferenceEngineCredentials(</span>
-<span class="c1">#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"</span>
+<span class="c1">#         api_url=os.getenv("VLLM_API_URL"), api_key=os.getenv("VLLM_API_KEY")</span>
 <span class="c1">#     ),</span>
-<span class="c1">#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0.7),</span>
+<span class="c1">#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0),</span>
 <span class="c1"># )</span>
 
 <span class="c1"># inference_engine = RITSInferenceEngine(</span>
 <span class="c1">#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",</span>
 <span class="c1">#     credentials={</span>
-<span class="c1">#         "api_key": "RITS_API_KEY",</span>
-<span class="c1">#         "api_url": "RITS_API_URL",</span>
+<span class="c1">#         "api_key": os.getenv("RITS_API_KEY"),</span>
+<span class="c1">#         "api_url": os.getenv("RITS_API_URL"),</span>
 <span class="c1">#     },</span>
-<span class="c1">#     parameters=RITSInferenceEngineParams(max_completion_tokens=1000, temperature=0.7),</span>
+<span class="c1">#     parameters=RITSInferenceEngineParams(max_completion_tokens=1000, temperature=0),</span>
 <span class="c1"># )</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-2">inference_engine = OllamaInferenceEngine(
-    model_name_or_path="llama3:latest",
-    credentials=InferenceEngineCredentials(api_url="OLLAMA_API_URL"),
+    model_name_or_path="granite3.3:8b",
+    credentials=InferenceEngineCredentials(api_url="http://localhost:11434"),
     parameters=OllamaInferenceEngineParams(
-        num_predict=1000, temperature=0, repeat_penalty=1, num_ctx=8192
+        num_predict=1000, num_ctx=8192, temperature=0
     ),
 )
 
 # inference_engine = WMLInferenceEngine(
-#     model_name_or_path="ibm/granite-20b-code-instruct",
+#     model_name_or_path="ibm/granite-4-h-small",
 #     credentials={
-#         "api_key": "WML_API_KEY",
-#         "api_url": "WML_API_URL",
-#         "project_id": "WML_PROJECT_ID",
+#         "api_key": os.getenv("WML_API_KEY"),
+#         "api_url": os.getenv("WML_API_URL"),
+#         "project_id": os.getenv("WML_PROJECT_ID"),
 #     },
 #     parameters=WMLInferenceEngineParams(
-#         max_new_tokens=1000, decoding_method="greedy", repetition_penalty=1
+#         max_new_tokens=1000, decoding_method="greedy"
 #     ),
 # )
 
 # inference_engine = VLLMInferenceEngine(
-#     model_name_or_path="ibm-granite/granite-3.1-8b-instruct",
+#     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",
 #     credentials=InferenceEngineCredentials(
-#         api_url="VLLM_API_URL", api_key="VLLM_API_KEY"
+#         api_url=os.getenv("VLLM_API_URL"), api_key=os.getenv("VLLM_API_KEY")
 #     ),
-#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0.7),
+#     parameters=VLLMInferenceEngineParams(max_tokens=1000, temperature=0),
 # )
 
 # inference_engine = RITSInferenceEngine(
 #     model_name_or_path="ibm-granite/granite-3.3-8b-instruct",
 #     credentials={
-#         "api_key": "RITS_API_KEY",
-#         "api_url": "RITS_API_URL",
+#         "api_key": os.getenv("RITS_API_KEY"),
+#         "api_url": os.getenv("RITS_API_URL"),
 #     },
-#     parameters=RITSInferenceEngineParams(max_completion_tokens=1000, temperature=0.7),
+#     parameters=RITSInferenceEngineParams(max_completion_tokens=1000, temperature=0),
 # )</div>
 </div>
 </div>
@@ -12103,8 +12165,7 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-11-27 14:49:18:12] - INFO - AIAtlasNexus - OLLAMA inference engine will execute requests on the server at http://localhost:11434.
-[2025-11-27 14:49:18:43] - INFO - AIAtlasNexus - Created OLLAMA inference engine.
+<pre>[2026-03-18 22:30:16:754] - INFO - AIAtlasNexus - ✓ Created RITS inference engine for model: ibm-granite/granite-3.3-8b-instruct, backend - DEFAULT
 </pre>
 </div>
 </div>
@@ -12128,7 +12189,7 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-3">
@@ -12155,7 +12216,7 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>[2025-11-27 14:49:22:47] - INFO - AIAtlasNexus - Created AIAtlasNexus instance. Base_dir: None
+<pre>[2026-03-18 22:26:13:220] - INFO - AIAtlasNexus - Created AIAtlasNexus instance. Base_dir: None
 </pre>
 </div>
 </div>
@@ -12169,11 +12230,12 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h5 id="ai-tasks-identification-api">AI Tasks Identification API<a class="anchor-link" href="#ai-tasks-identification-api">¶</a></h5><p>AIAtlasNexus.identify_ai_tasks_from_usecases()</p>
+<h5 id="ai-tasks-identification-api-default-backend-using-ollama">AI Tasks Identification API - Default backend using OLLAMA<a class="anchor-link" href="#ai-tasks-identification-api-default-backend-using-ollama">¶</a></h5><p>AIAtlasNexus.identify_ai_tasks_from_usecases()</p>
 <p>Params:</p>
 <ul>
 <li>usecases (List[str]): A List of strings describing AI usecases</li>
 <li>inference_engine (InferenceEngine): An LLM inference engine to identify AI tasks from usecases.</li>
+<li>verbose (bool, optional): prints detailed output during the inference process. Defaults to True.</li>
 </ul>
 </div>
 </div>
@@ -12184,7 +12246,7 @@ from ai_atlas_nexus.library import AIAtlasNexus</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-4">
@@ -12225,18 +12287,331 @@ risks[0].prediction</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>Inferring with OLLAMA: 100%|██████████| 1/1 [00:08&lt;00:00,  8.04s/it]
+<pre>Inferring with OLLAMA, backend - DEFAULT: 100%|██████████| 1/1 [00:10&lt;00:00, 10.56s/it]
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>['Text Classification',
- 'Summarization',
- 'Question Answering',
- 'Text Generation',
- 'Translation']</pre>
+<pre>{'ai_tasks': [{'ai_task': 'Text-to-Text',
+   'explanation': 'The task involves generating text based on given input, which aligns with creating personalized responses and recommendations.'},
+  {'ai_task': 'Summarization',
+   'explanation': 'This task focuses on condensing information into a shorter form while preserving key details, useful for summarizing claims.'}]}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="ai-tasks-identification-api-mellea-backend-using-ollama">AI Tasks Identification API - Mellea backend using Ollama<a class="anchor-link" href="#ai-tasks-identification-api-mellea-backend-using-ollama">¶</a></h5><ul>
+<li>Inference is performed using the Mellea backend, which utilizes the specified inference engine.</li>
+<li>Mellea backend currently only supports Ollama, WML and RITS inference engines.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-5">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">OllamaInferenceEngine</span><span class="p">(</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"granite3.3:8b"</span><span class="p">,</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="n">InferenceEngineCredentials</span><span class="p">(</span><span class="n">api_url</span><span class="o">=</span><span class="s2">"http://localhost:11434"</span><span class="p">),</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">OllamaInferenceEngineParams</span><span class="p">(</span>
+        <span class="n">num_predict</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">num_ctx</span><span class="o">=</span><span class="mi">8192</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="mi">0</span>
+    <span class="p">),</span>
+    <span class="n">backend</span><span class="o">=</span><span class="s2">"mellea"</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-5">inference_engine = OllamaInferenceEngine(
+    model_name_or_path="granite3.3:8b",
+    credentials=InferenceEngineCredentials(api_url="http://localhost:11434"),
+    parameters=OllamaInferenceEngineParams(
+        num_predict=1000, num_ctx=8192, temperature=0
+    ),
+    backend="mellea",
+)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>=== 22:27:32-INFO ======
+Starting Mellea session: backend=OLLAMA, model=granite3.3:8b, context=SimpleContext
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2026-03-18 22:27:32:506] - INFO - AIAtlasNexus - ✓ Created OLLAMA inference engine for model: granite3.3:8b, backend - MELLEA
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-6">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+
+<span class="n">risks</span> <span class="o">=</span> <span class="n">ai_atlas_nexus</span><span class="o">.</span><span class="n">identify_ai_tasks_from_usecases</span><span class="p">(</span>
+    <span class="n">usecases</span><span class="o">=</span><span class="p">[</span><span class="n">usecase</span><span class="p">],</span>
+    <span class="n">inference_engine</span><span class="o">=</span><span class="n">inference_engine</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">prediction</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-6">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+
+risks = ai_atlas_nexus.identify_ai_tasks_from_usecases(
+    usecases=[usecase],
+    inference_engine=inference_engine,
+)
+
+risks[0].prediction</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with OLLAMA, backend - MELLEA:   0%|          | 0/1 [00:00&lt;?, ?it/s]</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>=== 22:27:53-INFO ======
+SUCCESS
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>  0%|          | 0/3 [00:13&lt;?, ?it/s]
+Inferring with OLLAMA, backend - MELLEA: 100%|██████████| 1/1 [00:13&lt;00:00, 13.70s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'ai_tasks': [{'ai_task': 'Any-to-Any',
+   'explanation': "The use case involves generating personalized, relevant responses and summaries of claims, which requires understanding various inputs (customer data, context, etc.) and producing diverse outputs (text, recommendations). This aligns with the 'Any-to-any' task description."},
+  {'ai_task': 'Text Generation',
+   'explanation': 'The use case specifically involves generating text for responses and summaries. Text generation models can produce new text based on given inputs, which fits this requirement.'}]}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h5 id="ai-tasks-identification-api-mellea-backend-using-wml">AI Tasks Identification API - Mellea backend using WML<a class="anchor-link" href="#ai-tasks-identification-api-mellea-backend-using-wml">¶</a></h5><ul>
+<li>Inference is performed using the Mellea backend, which utilizes the specified inference engine.</li>
+<li>Mellea backend currently supports only the Ollama and WML backends.</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-7">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">inference_engine</span> <span class="o">=</span> <span class="n">WMLInferenceEngine</span><span class="p">(</span>
+    <span class="n">model_name_or_path</span><span class="o">=</span><span class="s2">"ibm/granite-4-h-small"</span><span class="p">,</span>
+    <span class="n">credentials</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">"api_key"</span><span class="p">:</span> <span class="s2">"WML_API_KEY"</span><span class="p">,</span>
+        <span class="s2">"api_url"</span><span class="p">:</span> <span class="s2">"WML_API_URL"</span><span class="p">,</span>
+        <span class="s2">"project_id"</span><span class="p">:</span> <span class="s2">"WML_PROJECT_ID"</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="n">WMLInferenceEngineParams</span><span class="p">(</span><span class="n">decoding_method</span><span class="o">=</span><span class="s2">"greedy"</span><span class="p">,</span> <span class="n">repetition_penalty</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">backend</span><span class="o">=</span><span class="s2">"mellea"</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-7">inference_engine = WMLInferenceEngine(
+    model_name_or_path="ibm/granite-4-h-small",
+    credentials={
+        "api_key": "WML_API_KEY",
+        "api_url": "WML_API_URL",
+        "project_id": "WML_PROJECT_ID",
+    },
+    parameters=WMLInferenceEngineParams(decoding_method="greedy", repetition_penalty=1),
+    backend="mellea",
+)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>=== 22:28:21-INFO ======
+Starting Mellea session: backend=WML, model=ibm/granite-4-h-small, context=SimpleContext
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>[2026-03-18 22:28:21:220] - INFO - AIAtlasNexus - ✓ Created WML inference engine for model: ibm/granite-4-h-small, backend - MELLEA
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="CodeMirror cm-s-jupyter">
+<div class="zeroclipboard-container">
+<clipboard-copy ,="" aria-label="Copy to Clipboard" for="cell-8">
+<div>
+<span class="notice" hidden="">Copied!</span>
+<svg aria-hidden="true" class="clipboard-copy-icon" data-view-component="true" height="20" version="1.1" viewbox="0 0 16 16" width="20">
+<path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+<path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+</clipboard-copy>
+</div>
+<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">usecase</span> <span class="o">=</span> <span class="s2">"Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."</span>
+
+<span class="n">risks</span> <span class="o">=</span> <span class="n">ai_atlas_nexus</span><span class="o">.</span><span class="n">identify_ai_tasks_from_usecases</span><span class="p">(</span>
+    <span class="n">usecases</span><span class="o">=</span><span class="p">[</span><span class="n">usecase</span><span class="p">],</span>
+    <span class="n">inference_engine</span><span class="o">=</span><span class="n">inference_engine</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">risks</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">prediction</span>
+</pre></div>
+<div class="clipboard-copy-txt" id="cell-8">usecase = "Generate personalized, relevant responses, recommendations, and summaries of claims for customers to support agents to enhance their interactions with customers."
+
+risks = ai_atlas_nexus.identify_ai_tasks_from_usecases(
+    usecases=[usecase],
+    inference_engine=inference_engine,
+)
+
+risks[0].prediction</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Inferring with WML, backend - MELLEA:   0%|          | 0/1 [00:00&lt;?, ?it/s]</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>=== 22:28:29-INFO ======
+SUCCESS
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>  0%|          | 0/3 [00:06&lt;?, ?it/s]
+Inferring with WML, backend - MELLEA: 100%|██████████| 1/1 [00:06&lt;00:00,  6.10s/it]
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>{'ai_tasks': [{'ai_task': 'Text Classification',
+   'explanation': "The use case involves generating personalized, relevant responses, recommendations, and summaries of claims for customers. This requires analyzing and classifying the customer's inquiries or claims into specific categories to provide appropriate responses. Text Classification is suitable for this as it assigns labels or classes to the given text based on its content, enabling the model to understand the context and intent of the customer's input and generate relevant output."},
+  {'ai_task': 'Summarization',
+   'explanation': 'Generating summaries of claims for customers is another aspect of the use case. Summarization is the task of producing a concise version of a document while preserving its important information. In this context, the AI model would take the detailed claim text as input and generate a shorter, more manageable summary that captures the key points. This helps support agents quickly grasp the essence of the claim and respond efficiently, enhancing the overall customer interaction experience.'},
+  {'ai_task': 'Question Answering',
+   'explanation': "Providing personalized responses to customer inquiries may involve answering specific questions related to their issues or claims. Question Answering models are designed to retrieve answers to questions from a given text. They can search for the most relevant information within a document or knowledge base to provide accurate and targeted answers to the customer's queries. By leveraging Question Answering, the AI model can assist support agents in delivering precise and satisfactory responses, improving customer satisfaction."}]}</pre>
 </div>
 </div>
 </div>
@@ -12287,7 +12662,7 @@ risks[0].prediction</div>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../risk_identification/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Risk identification">
+          <a href="../risk_identification/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Evaluation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -12297,20 +12672,20 @@ risks[0].prediction</div>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Risk identification
+                Evaluation
               </div>
             </div>
           </a>
         
         
           
-          <a href="../domain_identification/" class="md-footer__link md-footer__link--next" aria-label="Next: Domain identification">
+          <a href="../AI_Capabilities_Identification/" class="md-footer__link md-footer__link--next" aria-label="Next: AI Capabilities Identification">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Domain identification
+                AI Capabilities Identification
               </div>
             </div>
             <div class="md-footer__button md-icon">

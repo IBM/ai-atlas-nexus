@@ -1016,6 +1016,8 @@
       
         
       
+        
+      
     
     
     
@@ -1075,7 +1077,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1104,6 +1106,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -3068,6 +3098,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#class-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#slots" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3083,6 +3124,17 @@
     <span class="md-ellipsis">
       
         Mixin Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usages
       
     </span>
   </a>
@@ -11098,6 +11150,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#class-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#slots" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -11113,6 +11176,17 @@
     <span class="md-ellipsis">
       
         Mixin Usage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usages
       
     </span>
   </a>
@@ -11577,6 +11651,25 @@
 </ul>
 </li>
 </ul>
+<h2 id="class-properties">Class Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Class URI</td>
+<td><a href="https://w3id.org/airo#AISystem">airo:AISystem</a></td>
+</tr>
+<tr>
+<td>Mixin</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -11662,7 +11755,7 @@
 </tr>
 <tr>
 <td><a href="../hasRelatedRisk/">hasRelatedRisk</a></td>
-<td>* <br/> <a href="../Risk/">Risk</a>&nbsp;or&nbsp;<br /><a href="../RiskConcept/">RiskConcept</a>&nbsp;or&nbsp;<br /><a href="../Term/">Term</a></td>
+<td>* <br/> <a href="../Term/">Term</a>&nbsp;or&nbsp;<br /><a href="../Risk/">Risk</a>&nbsp;or&nbsp;<br /><a href="../RiskConcept/">RiskConcept</a></td>
 <td>A relationship where an entity relates to a risk</td>
 <td>direct</td>
 </tr>
@@ -11833,6 +11926,31 @@
 </tr>
 </tbody>
 </table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./">AiSystem</a></td>
+<td><a href="../hasAIUser/">hasAIUser</a></td>
+<td>domain</td>
+<td><a href="./">AiSystem</a></td>
+</tr>
+<tr>
+<td><a href="../AiAgent/">AiAgent</a></td>
+<td><a href="../hasAIUser/">hasAIUser</a></td>
+<td>domain</td>
+<td><a href="./">AiSystem</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -11969,7 +12087,6 @@ attributes:
     description: Specifies the domain an AI system is used within.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isAppliedWithinDomain
     alias: isAppliedWithinDomain
     owner: AiSystem
@@ -11983,7 +12100,6 @@ attributes:
     description: Specifies the domain an AI system is used within.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isUsedWithinLocality
     alias: isUsedWithinLocality
     owner: AiSystem
@@ -12008,7 +12124,6 @@ attributes:
     description: Indicates stakeholders of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''airo:AISystem'', ''airo:AIComponent'']'
     slot_uri: airo:hasStakeholder
     alias: hasStakeholder
     owner: AiSystem
@@ -12020,7 +12135,6 @@ attributes:
     description: Indicates the deployer of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isDeployedBy
     alias: isDeployedBy
     owner: AiSystem
@@ -12032,7 +12146,6 @@ attributes:
     description: Indicates the developer of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isDevelopedBy
     alias: isDevelopedBy
     owner: AiSystem
@@ -12044,7 +12157,6 @@ attributes:
     description: Indicates the subjects of an AI system
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''airo:AISystem'']'
     slot_uri: airo:hasAISubject
     alias: hasAISubject
     owner: AiSystem
@@ -12056,7 +12168,7 @@ attributes:
     description: Indicate the end-user of an AI system.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: AISystem
+    domain: AiSystem
     slot_uri: airo:hasAiUser
     alias: hasAIUser
     owner: AiSystem

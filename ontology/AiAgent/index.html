@@ -1016,6 +1016,8 @@
       
         
       
+        
+      
     
     
     
@@ -1075,7 +1077,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1104,6 +1106,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -2613,6 +2643,17 @@
     <span class="md-ellipsis">
       
         Inheritance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Properties
       
     </span>
   </a>
@@ -11098,6 +11139,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#class-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#slots" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -11570,6 +11622,21 @@
 </ul>
 </li>
 </ul>
+<h2 id="class-properties">Class Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mixin</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -11655,7 +11722,7 @@
 </tr>
 <tr>
 <td><a href="../hasRelatedRisk/">hasRelatedRisk</a></td>
-<td>* <br/> <a href="../Risk/">Risk</a>&nbsp;or&nbsp;<br /><a href="../RiskConcept/">RiskConcept</a>&nbsp;or&nbsp;<br /><a href="../Term/">Term</a></td>
+<td>* <br/> <a href="../Term/">Term</a>&nbsp;or&nbsp;<br /><a href="../Risk/">Risk</a>&nbsp;or&nbsp;<br /><a href="../RiskConcept/">RiskConcept</a></td>
 <td>A relationship where an entity relates to a risk</td>
 <td><a href="../AiSystem/">AiSystem</a></td>
 </tr>
@@ -11943,7 +12010,6 @@ attributes:
     description: Specifies the domain an AI system is used within.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isAppliedWithinDomain
     alias: isAppliedWithinDomain
     owner: AiAgent
@@ -11957,7 +12023,6 @@ attributes:
     description: Specifies the domain an AI system is used within.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isUsedWithinLocality
     alias: isUsedWithinLocality
     owner: AiAgent
@@ -11982,7 +12047,6 @@ attributes:
     description: Indicates stakeholders of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''airo:AISystem'', ''airo:AIComponent'']'
     slot_uri: airo:hasStakeholder
     alias: hasStakeholder
     owner: AiAgent
@@ -11994,7 +12058,6 @@ attributes:
     description: Indicates the deployer of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isDeployedBy
     alias: isDeployedBy
     owner: AiAgent
@@ -12006,7 +12069,6 @@ attributes:
     description: Indicates the developer of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isDevelopedBy
     alias: isDevelopedBy
     owner: AiAgent
@@ -12018,7 +12080,6 @@ attributes:
     description: Indicates the subjects of an AI system
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''airo:AISystem'']'
     slot_uri: airo:hasAISubject
     alias: hasAISubject
     owner: AiAgent
@@ -12030,7 +12091,7 @@ attributes:
     description: Indicate the end-user of an AI system.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: AISystem
+    domain: AiSystem
     slot_uri: airo:hasAiUser
     alias: hasAIUser
     owner: AiAgent

@@ -1016,6 +1016,8 @@
       
         
       
+        
+      
     
     
     
@@ -1075,7 +1077,7 @@
   <span class="md-ellipsis">
     
   
-    Risk identification
+    Evaluation
   
 
     
@@ -1104,6 +1106,34 @@
     
   
     AI Tasks identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/notebooks/AI_Capabilities_Identification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Capabilities Identification
   
 
     
@@ -6688,6 +6718,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-and-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type and Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardinality and Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -11067,6 +11125,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-and-range" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Type and Range
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality-and-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cardinality and Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -11162,13 +11248,23 @@ Alias: hasPart</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="../RiskControlGroup/">RiskControlGroup</a></td>
-<td>A group of AI system related risk controls</td>
+<td><a href="../CapabilityGroup/">CapabilityGroup</a></td>
+<td>A group of AI capabilities that are part of a capability taxonomy, organized ...</td>
 <td>yes</td>
 </tr>
 <tr>
 <td><a href="../Group/">Group</a></td>
 <td>Labelled groups of concepts</td>
+<td>no</td>
+</tr>
+<tr>
+<td><a href="../RiskControlGroup/">RiskControlGroup</a></td>
+<td>A group of AI system related risk controls</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../StakeholderGroup/">StakeholderGroup</a></td>
+<td>An AI system stakeholder grouping</td>
 <td>no</td>
 </tr>
 <tr>
@@ -11181,27 +11277,47 @@ Alias: hasPart</p>
 <td>A high-level domain of AI capabilities (e</td>
 <td>yes</td>
 </tr>
-<tr>
-<td><a href="../CapabilityGroup/">CapabilityGroup</a></td>
-<td>A group of AI capabilities that are part of a capability taxonomy, organized ...</td>
-<td>yes</td>
-</tr>
-<tr>
-<td><a href="../StakeholderGroup/">StakeholderGroup</a></td>
-<td>An AI system stakeholder grouping</td>
-<td>no</td>
-</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
-<ul>
-<li>
-<p>Range: <a href="../String/">String</a></p>
-</li>
-<li>
-<p>Multivalued: True</p>
-</li>
-</ul>
+<h3 id="type-and-range">Type and Range</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Range</td>
+<td><a href="../String/">String</a></td>
+</tr>
+<tr>
+<td>Domain Of</td>
+<td><a href="../Group/">Group</a>, <a href="../RiskControlGroup/">RiskControlGroup</a>, <a href="../RiskGroup/">RiskGroup</a>, <a href="../CapabilityGroup/">CapabilityGroup</a></td>
+</tr>
+<tr>
+<td>Slot URI</td>
+<td><a href="http://www.w3.org/2004/02/skos/core#member">skos:member</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cardinality-and-requirements">Cardinality and Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multivalued</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
