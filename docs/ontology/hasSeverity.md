@@ -15,7 +15,18 @@ Alias: hasSeverity
 
 ## Properties
 
-- Range: [Severity](Severity.md)
+### Type and Range
+
+| Property  | Value                           |
+| --------- | ------------------------------- |
+| Range     | [Severity](Severity.md)         |
+| Domain    | [RiskConcept](RiskConcept.md)   |
+| Domain Of | [RiskIncident](RiskIncident.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

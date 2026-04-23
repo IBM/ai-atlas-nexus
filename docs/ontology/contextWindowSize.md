@@ -16,9 +16,23 @@ Alias: contextWindowSize
 
 ## Properties
 
-- Range: [Integer](Integer.md)
+### Type and Range
 
-- Minimum Value: 0
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Range     | [Integer](Integer.md)                       |
+| Domain Of | [LargeLanguageModel](LargeLanguageModel.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
+
+### Value Constraints
+
+| Property      | Value |
+| ------------- | ----- |
+| Minimum Value | 0     |
 
 ## Identifier and Mapping Information
 

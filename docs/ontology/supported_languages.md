@@ -16,9 +16,18 @@ Alias: supported_languages
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Range     | [String](String.md)                         |
+| Domain Of | [LargeLanguageModel](LargeLanguageModel.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

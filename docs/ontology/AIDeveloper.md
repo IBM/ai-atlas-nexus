@@ -120,6 +120,12 @@ URI: [airo:AIDeveloper](https://w3id.org/airo#AIDeveloper)
   - [Stakeholder](Stakeholder.md)
     - **AIDeveloper**
 
+## Class Properties
+
+| Property  | Value                                                 |
+| --------- | ----------------------------------------------------- |
+| Class URI | [airo:AIDeveloper](https://w3id.org/airo#AIDeveloper) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                              | Description                                                                      | Inheritance                   |

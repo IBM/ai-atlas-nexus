@@ -11,15 +11,25 @@ Alias: hasRiskControl
 
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
 | [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
 
 ## Properties
 
-- Range: [RiskControl](RiskControl.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                       |
+| --------- | ----------------------------------------------------------- |
+| Range     | [RiskControl](RiskControl.md)                               |
+| Domain Of | [AiModel](AiModel.md)                                       |
+| Slot URI  | [airo:hasRiskControl](https://w3id.org/airo#hasRiskControl) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

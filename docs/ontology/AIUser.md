@@ -120,6 +120,12 @@ URI: [airo:AIUser](https://w3id.org/airo#AIUser)
   - [Stakeholder](Stakeholder.md)
     - **AIUser**
 
+## Class Properties
+
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Class URI | [airo:AIUser](https://w3id.org/airo#AIUser) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                              | Description                                                                      | Inheritance                   |

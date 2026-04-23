@@ -114,6 +114,12 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
 - [Entity](Entity.md)
   - **AiEvalResult** [ [Fact](Fact.md)]
 
+## Class Properties
+
+| Property  | Value                                                                        |
+| --------- | ---------------------------------------------------------------------------- |
+| Class URI | [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

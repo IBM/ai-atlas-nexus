@@ -130,6 +130,12 @@ URI: [dpv:Obligation](https://w3id.org/dpv#Obligation)
     - **Obligation**
       - [ControlActivityObligation](ControlActivityObligation.md) [ [ControlActivity](ControlActivity.md)]
 
+## Class Properties
+
+| Property  | Value                                             |
+| --------- | ------------------------------------------------- |
+| Class URI | [dpv:Obligation](https://w3id.org/dpv#Obligation) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |

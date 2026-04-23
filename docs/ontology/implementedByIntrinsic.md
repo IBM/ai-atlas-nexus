@@ -9,9 +9,26 @@ Alias: implementedByIntrinsic
 
 ## Properties
 
-- Range: [LLMIntrinsic](LLMIntrinsic.md)
+### Type and Range
 
-- Multivalued: True
+| Property | Value                           |
+| -------- | ------------------------------- |
+| Range    | [LLMIntrinsic](LLMIntrinsic.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Relationship Properties</summary>
+
+| Property | Value                                           |
+| -------- | ----------------------------------------------- |
+| Inverse  | [implementsCapability](implementsCapability.md) |
+
+</details>
 
 ## Identifier and Mapping Information
 

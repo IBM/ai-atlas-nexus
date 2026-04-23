@@ -130,6 +130,12 @@ URI: [dpv:Prohibition](https://w3id.org/dpv#Prohibition)
     - **Prohibition**
       - [ControlActivityProhibition](ControlActivityProhibition.md) [ [ControlActivity](ControlActivity.md)]
 
+## Class Properties
+
+| Property  | Value                                               |
+| --------- | --------------------------------------------------- |
+| Class URI | [dpv:Prohibition](https://w3id.org/dpv#Prohibition) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |

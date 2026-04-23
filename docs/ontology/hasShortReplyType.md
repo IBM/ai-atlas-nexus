@@ -15,7 +15,18 @@ Alias: hasShortReplyType
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
+
+| Property  | Value                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------ |
+| Range     | [String](String.md)                                                                        |
+| Domain Of | [LLMQuestionPolicy](LLMQuestionPolicy.md)                                                  |
+| Slot URI  | [nexus:hasShortReplyType](https://ibm.github.io/ai-atlas-nexus/ontology/hasShortReplyType) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

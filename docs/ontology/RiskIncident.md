@@ -226,6 +226,12 @@ URI: [https://w3id.org/dpv/risk#Incident](https://w3id.org/dpv/risk#Incident)
 - [Entity](Entity.md)
   - **RiskIncident** [ [RiskConcept](RiskConcept.md)]
 
+## Class Properties
+
+| Property  | Value                                                                    |
+| --------- | ------------------------------------------------------------------------ |
+| Class URI | [https://w3id.org/dpv/risk#Incident](https://w3id.org/dpv/risk#Incident) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                          | Description                                                                      | Inheritance                   |

@@ -15,7 +15,17 @@ Alias: hasAdapterType
 
 ## Properties
 
-- Range: [AdapterType](AdapterType.md)
+### Type and Range
+
+| Property  | Value                         |
+| --------- | ----------------------------- |
+| Range     | [AdapterType](AdapterType.md) |
+| Domain Of | [Adapter](Adapter.md)         |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

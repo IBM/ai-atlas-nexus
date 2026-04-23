@@ -95,6 +95,12 @@ URI: [dpv:Severity](https://w3id.org/dpv#Severity)
 - [Entity](Entity.md)
   - **Severity**
 
+## Class Properties
+
+| Property  | Value                                         |
+| --------- | --------------------------------------------- |
+| Class URI | [dpv:Severity](https://w3id.org/dpv#Severity) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

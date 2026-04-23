@@ -132,6 +132,13 @@ URI: [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept)
     - [RiskConcept](RiskConcept.md)
     - [CapabilityConcept](CapabilityConcept.md)
 
+## Class Properties
+
+| Property  | Value                                                       |
+| --------- | ----------------------------------------------------------- |
+| Class URI | [skos:Concept](http://www.w3.org/2004/02/skos/core#Concept) |
+| Mixin     | Yes                                                         |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance         |

@@ -15,7 +15,18 @@ Alias: hasStatus
 
 ## Properties
 
-- Range: [IncidentStatus](IncidentStatus.md)
+### Type and Range
+
+| Property  | Value                               |
+| --------- | ----------------------------------- |
+| Range     | [IncidentStatus](IncidentStatus.md) |
+| Domain    | [RiskConcept](RiskConcept.md)       |
+| Domain Of | [RiskIncident](RiskIncident.md)     |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

@@ -169,6 +169,12 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
     - [Question](Question.md)
     - [Questionnaire](Questionnaire.md)
 
+## Class Properties
+
+| Property  | Value                                                |
+| --------- | ---------------------------------------------------- |
+| Class URI | [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric) |
+
 ## Slots
 
 | Name                                            | Cardinality and Range                                                                                        | Description                                                                      | Inheritance         |
@@ -179,7 +185,7 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 | [hasImplementation](hasImplementation.md)       | \* <br/> [Uri](Uri.md)                                                                                       | A relationship to a implementation defining the risk evaluation                  | direct              |
 | [hasUnitxtCard](hasUnitxtCard.md)               | \* <br/> [Uri](Uri.md)                                                                                       | A relationship to a Unitxt card defining the risk evaluation                     | direct              |
 | [hasLicense](hasLicense.md)                     | 0..1 <br/> [License](License.md)                                                                             | Indicates licenses associated with a resource                                    | direct              |
-| [hasRelatedRisk](hasRelatedRisk.md)             | \* <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk                                 | direct              |
+| [hasRelatedRisk](hasRelatedRisk.md)             | \* <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md) | A relationship where an entity relates to a risk                                 | direct              |
 | [bestValue](bestValue.md)                       | 0..1 <br/> [String](String.md)                                                                               | Annotation of the best possible result of the evaluation                         | direct              |
 | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | \* <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                                                   | A relationship to a Benchmark Metadata Card which contains metadata about the... | direct              |
 | [id](id.md)                                     | 1 <br/> [String](String.md)                                                                                  | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |

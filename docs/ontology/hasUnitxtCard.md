@@ -17,9 +17,19 @@ Alias: hasUnitxtCard
 
 ## Properties
 
-- Range: [Uri](Uri.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                               |
+| --------- | ----------------------------------- |
+| Range     | [Uri](Uri.md)                       |
+| Domain Of | [AiEval](AiEval.md)                 |
+| Slot URI  | [schema:url](http://schema.org/url) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

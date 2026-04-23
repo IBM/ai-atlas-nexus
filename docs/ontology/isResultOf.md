@@ -15,7 +15,18 @@ Alias: isResultOf
 
 ## Properties
 
-- Range: [AiEval](AiEval.md)
+### Type and Range
+
+| Property  | Value                                                                  |
+| --------- | ---------------------------------------------------------------------- |
+| Range     | [AiEval](AiEval.md)                                                    |
+| Domain Of | [AiEvalResult](AiEvalResult.md)                                        |
+| Slot URI  | [dqv:isMeasurementOf](https://www.w3.org/TR/vocab-dqv/isMeasurementOf) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

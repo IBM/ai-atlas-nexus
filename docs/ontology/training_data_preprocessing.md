@@ -9,9 +9,17 @@ Alias: training_data_preprocessing
 
 ## Properties
 
-- Range: [DataPreprocessing](DataPreprocessing.md)
+### Type and Range
 
-- Multivalued: True
+| Property | Value                                     |
+| -------- | ----------------------------------------- |
+| Range    | [DataPreprocessing](DataPreprocessing.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

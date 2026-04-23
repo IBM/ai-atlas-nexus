@@ -9,9 +9,28 @@ Alias: possessedByAi
 
 ## Properties
 
-- Range: [BaseAi](BaseAi.md)
+### Type and Range
 
-- Multivalued: True
+| Property | Value                                                         |
+| -------- | ------------------------------------------------------------- |
+| Range    | [BaseAi](BaseAi.md)                                           |
+| Domain   | [Capability](Capability.md)                                   |
+| Slot URI | [tech:hasCapability](https://w3id.org/dpv/tech#hasCapability) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Relationship Properties</summary>
+
+| Property | Value                             |
+| -------- | --------------------------------- |
+| Inverse  | [hasCapability](hasCapability.md) |
+
+</details>
 
 ## Identifier and Mapping Information
 

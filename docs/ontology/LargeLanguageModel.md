@@ -256,6 +256,12 @@ URI: [nexus:LargeLanguageModel](https://ibm.github.io/ai-atlas-nexus/ontology/La
     - [AiModel](AiModel.md) [ [AIComponent](AIComponent.md)]
       - **LargeLanguageModel**
 
+## Class Properties
+
+| Property | Value |
+| -------- | ----- |
+| Mixin    | Yes   |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                                              | Description                                                                      | Inheritance           |

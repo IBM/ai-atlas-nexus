@@ -2,11 +2,11 @@ documents:
   - id: doc-mit-draft-ai-risk-repository
     name: "Mapping AI Risk Mitigations: Evidence Scan & Draft Mitigation Taxonomy"
     description: >-
-      "The AI Risk Mitigation Taxonomy has three parts: The AI Risk Mitigation Database captures 831 mitigations
+      The AI Risk Mitigation Taxonomy has three parts: The AI Risk Mitigation Database captures 831 mitigations
       extracted from 13 existing frameworks and classifications of AI risk mitigations The Draft AI Risk Mitigation
       Taxonomy organizes mitigations into 4 main categories and 23 subcategories. The Taxonomy Categories include:
       Governance & Oversight Controls, Technical & Security Controls, Operational Process Controls, and Transparency &
-      Accountability Controls"
+      Accountability Controls
     author: Alexander K. Saeri, Sophia Lloyd George, Jess Graham, Clelia LaCarriere, Peter Slattery, Neil Thompson
     url: https://cdn.prod.website-files.com/669550d38372f33552d2516e/6887e58496902e3bcad04a5a_1b0850b4406f7dc6a79365c4b56f0f51_Mapping%20AI%20Risk%20Mitigations.pdf
     dateCreated: 2025-07-28
@@ -105,10 +105,10 @@ documents:
     description: >-
       Nations across the world are working to govern AI. However, from a technical perspective, there is uncertainty and
       disagreement on the best way to do this. Meanwhile, recent debates over AI regulation have led to calls for
-      "evidence-based AI policy" which emphasize holding regulatory action to a high evidentiary standard. Evidence is
+      'evidence-based AI policy' which emphasize holding regulatory action to a high evidentiary standard. Evidence is
       of irreplaceable value to policymaking. However, holding regulatory action to too high an evidentiary standard can
       lead to systematic neglect of certain risks. In historical policy debates (e.g., over tobacco ca. 1965 and fossil
-      fuels ca. 1985) "evidence-based policy" rhetoric is also a well-precedented strategy to downplay the urgency of
+      fuels ca. 1985) 'evidence-based policy' rhetoric is also a well-precedented strategy to downplay the urgency of
       action, delay regulation, and protect industry interests. Here, we argue that if the goal is evidence-based AI
       policy, the first regulatory objective must be to actively facilitate the process of identifying, studying, and
       deliberating about AI risks. We discuss a set of 15 regulatory goals to facilitate this and show that Brazil,
@@ -223,8 +223,8 @@ documents:
   - id: doc-Barrett2024
     name: AI Risk Management Standards Profile for GPAIS
     description: >-
-      Increasingly multi-purpose AI systems, such as cutting-edge large language models or other "general-purpose AI"
-      systems (GPAI or GPAIS), "foundation models," generative AI, and "frontier models" (typically all referred to
+      Increasingly multi-purpose AI systems, such as cutting-edge large language models or other 'general-purpose AI'
+      systems (GPAI or GPAIS), 'foundation models,' generative AI, and 'frontier models' (typically all referred to
       hereafter with the umbrella term GPAIS except where greater specificity is needed), can provide many beneficial
       capabilities but also risks of adverse events with profound consequences. This document provides risk-management
       practices or controls for identifying, analyzing, and mitigating risks of GPAIS. We intend this document primarily
@@ -242,9 +242,9 @@ taxonomies:
     name: MIT Draft AI Risk Mitigation Taxonomy
     type: RiskControlGroupTaxonomy
     description: >-
-      "The Draft AI Risk Mitigation Taxonomy organizes mitigations into 4 main categories and 23 subcategories. The
+      The Draft AI Risk Mitigation Taxonomy organizes mitigations into 4 main categories and 23 subcategories. The
       Taxonomy Categories include: Governance & Oversight Controls, Technical & Security Controls, Operational Process
-      Controls, and Transparency & Accountability Controls"
+      Controls, and Transparency & Accountability Controls
     url: https://airisk.mit.edu/blog/mapping-ai-risk-mitigations
     dateCreated: 2025-07-28
     version: "1"

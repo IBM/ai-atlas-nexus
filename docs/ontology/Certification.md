@@ -170,6 +170,12 @@ URI: [dpv:Certification](https://w3id.org/dpv#Certification)
   - [Entry](Entry.md)
     - **Certification**
 
+## Class Properties
+
+| Property  | Value                                                   |
+| --------- | ------------------------------------------------------- |
+| Class URI | [dpv:Certification](https://w3id.org/dpv#Certification) |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                      | Description                                                                      | Inheritance         |

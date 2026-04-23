@@ -16,9 +16,18 @@ Alias: hasInputModality
 
 ## Properties
 
-- Range: [Modality](Modality.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Range     | [Modality](Modality.md)                     |
+| Domain Of | [LargeLanguageModel](LargeLanguageModel.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

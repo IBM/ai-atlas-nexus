@@ -13,16 +13,26 @@ Alias: hasCapability
 
 | Name                            | Description                                                                      | Modifies Slot |
 | ------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiAgent](AiAgent.md)           | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [Adapter](Adapter.md)           | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [AiSystem](AiSystem.md)         | A compound AI System composed of one or more AI capablities                      | no            |
+| [Adapter](Adapter.md)           | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [AiAgent](AiAgent.md)           | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 | [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 
 ## Properties
 
-- Range: [Capability](Capability.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                                           |
+| --------- | ------------------------------------------------------------------------------- |
+| Range     | [Capability](Capability.md)                                                     |
+| Domain Of | [AiSystem](AiSystem.md), [Adapter](Adapter.md), [LLMIntrinsic](LLMIntrinsic.md) |
+| Slot URI  | [tech:hasCapability](https://w3id.org/dpv/tech#hasCapability)                   |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

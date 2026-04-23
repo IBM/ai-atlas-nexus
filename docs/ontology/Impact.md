@@ -132,6 +132,12 @@ URI: [dpv:Impact](https://w3id.org/dpv#Impact)
 - [Entity](Entity.md)
   - **Impact** [ [RiskConcept](RiskConcept.md)]
 
+## Class Properties
+
+| Property  | Value                                     |
+| --------- | ----------------------------------------- |
+| Class URI | [dpv:Impact](https://w3id.org/dpv#Impact) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance                   |

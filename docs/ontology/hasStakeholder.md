@@ -11,12 +11,23 @@ Alias: hasStakeholder
 
 | Name                    | Description                                                                      | Modifies Slot |
 | ----------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 | [AiSystem](AiSystem.md) | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 
 ## Properties
 
-- Range: [Stakeholder](Stakeholder.md)
+### Type and Range
+
+| Property  | Value                                                       |
+| --------- | ----------------------------------------------------------- |
+| Range     | [Stakeholder](Stakeholder.md)                               |
+| Domain Of | [AiSystem](AiSystem.md)                                     |
+| Slot URI  | [airo:hasStakeholder](https://w3id.org/airo#hasStakeholder) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 
@@ -39,7 +50,6 @@ name: hasStakeholder
 description: Indicates stakeholders of an AI system or component.
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
-domain: '[''airo:AISystem'', ''airo:AIComponent'']'
 slot_uri: airo:hasStakeholder
 alias: hasStakeholder
 domain_of:

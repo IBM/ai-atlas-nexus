@@ -15,9 +15,28 @@ Alias: implementsCapability
 
 ## Properties
 
-- Range: [Capability](Capability.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                       |
+| --------- | --------------------------- |
+| Range     | [Capability](Capability.md) |
+| Domain    | [Any](Any.md)               |
+| Domain Of | [Adapter](Adapter.md)       |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Relationship Properties</summary>
+
+| Property | Value                                           |
+| -------- | ----------------------------------------------- |
+| Inverse  | [implementedByAdapter](implementedByAdapter.md) |
+
+</details>
 
 ## Identifier and Mapping Information
 

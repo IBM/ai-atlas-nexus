@@ -15,9 +15,19 @@ Alias: hasParentDefinition
 
 ## Properties
 
-- Range: [Term](Term.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                                                          |
+| --------- | ---------------------------------------------------------------------------------------------- |
+| Range     | [Term](Term.md)                                                                                |
+| Domain Of | [Term](Term.md)                                                                                |
+| Slot URI  | [nexus:hasParentDefinition](https://ibm.github.io/ai-atlas-nexus/ontology/hasParentDefinition) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

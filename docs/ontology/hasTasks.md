@@ -12,15 +12,24 @@ Alias: hasTasks
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
-| [Questionnaire](Questionnaire.md)                 | A questionnaire groups questions                                                 | no            |
 | [Question](Question.md)                           | An evaluation where a question has to be answered                                | no            |
+| [Questionnaire](Questionnaire.md)                 | A questionnaire groups questions                                                 | no            |
 | [AiEval](AiEval.md)                               | An AI Evaluation, e                                                              | no            |
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                                  |
+| --------- | ---------------------------------------------------------------------- |
+| Range     | [String](String.md)                                                    |
+| Domain Of | [AiEval](AiEval.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

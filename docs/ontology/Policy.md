@@ -118,6 +118,12 @@ URI: [dpv:Policy](https://w3id.org/dpv#Policy)
   - **Policy**
     - [LLMQuestionPolicy](LLMQuestionPolicy.md)
 
+## Class Properties
+
+| Property  | Value                                     |
+| --------- | ----------------------------------------- |
+| Class URI | [dpv:Policy](https://w3id.org/dpv#Policy) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |

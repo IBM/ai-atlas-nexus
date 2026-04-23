@@ -118,6 +118,13 @@ URI: [nexus:Control](https://ibm.github.io/ai-atlas-nexus/ontology/Control)
   - **Control**
     - [RiskControl](RiskControl.md) [ [RiskConcept](RiskConcept.md)]
 
+## Class Properties
+
+| Property  | Value                                                                  |
+| --------- | ---------------------------------------------------------------------- |
+| Class URI | [nexus:Control](https://ibm.github.io/ai-atlas-nexus/ontology/Control) |
+| Mixin     | Yes                                                                    |
+
 ## Slots
 
 | Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |

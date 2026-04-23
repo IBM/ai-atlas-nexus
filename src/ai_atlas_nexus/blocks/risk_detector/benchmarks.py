@@ -7,6 +7,7 @@ from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 from ai_atlas_nexus.blocks.risk_detector import RiskDetector
 from ai_atlas_nexus.data import load_resource
 
+
 BENCHMARK_COT = load_resource("risk_generation_cot_benchmarks.json")
 
 

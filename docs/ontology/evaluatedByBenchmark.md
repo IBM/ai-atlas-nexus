@@ -9,9 +9,26 @@ Alias: evaluatedByBenchmark
 
 ## Properties
 
-- Range: [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
+### Type and Range
 
-- Multivalued: True
+| Property | Value                                             |
+| -------- | ------------------------------------------------- |
+| Range    | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Relationship Properties</summary>
+
+| Property | Value                                         |
+| -------- | --------------------------------------------- |
+| Inverse  | [evaluatesCapability](evaluatesCapability.md) |
+
+</details>
 
 ## Identifier and Mapping Information
 

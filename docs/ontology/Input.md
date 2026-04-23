@@ -97,6 +97,12 @@ URI: [airo:Input](https://w3id.org/airo#Input)
 - [Entity](Entity.md)
   - **Input**
 
+## Class Properties
+
+| Property  | Value                                     |
+| --------- | ----------------------------------------- |
+| Class URI | [airo:Input](https://w3id.org/airo#Input) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

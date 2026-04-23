@@ -131,6 +131,13 @@ URI: [nexus:CapabilityConcept](https://ibm.github.io/ai-atlas-nexus/ontology/Cap
   - [Concept](Concept.md)
     - **CapabilityConcept**
 
+## Class Properties
+
+| Property  | Value                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------ |
+| Class URI | [nexus:CapabilityConcept](https://ibm.github.io/ai-atlas-nexus/ontology/CapabilityConcept) |
+| Mixin     | Yes                                                                                        |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance           |

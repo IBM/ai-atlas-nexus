@@ -108,6 +108,12 @@ URI: [airo:AILifecyclePhase](https://w3id.org/airo#AILifecyclePhase)
     - [DataPreprocessing](DataPreprocessing.md)
     - [AiModelValidation](AiModelValidation.md)
 
+## Class Properties
+
+| Property  | Value                                                           |
+| --------- | --------------------------------------------------------------- |
+| Class URI | [airo:AILifecyclePhase](https://w3id.org/airo#AILifecyclePhase) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

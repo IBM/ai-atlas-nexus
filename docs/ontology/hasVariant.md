@@ -15,7 +15,18 @@ Alias: hasVariant
 
 ## Properties
 
-- Range: [RiskIncident](RiskIncident.md)
+### Type and Range
+
+| Property  | Value                           |
+| --------- | ------------------------------- |
+| Range     | [RiskIncident](RiskIncident.md) |
+| Domain    | [RiskIncident](RiskIncident.md) |
+| Domain Of | [RiskIncident](RiskIncident.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

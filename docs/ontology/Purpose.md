@@ -97,6 +97,12 @@ URI: [airo:Purpose](https://w3id.org/airo#Purpose)
 - [Entity](Entity.md)
   - **Purpose**
 
+## Class Properties
+
+| Property  | Value                                         |
+| --------- | --------------------------------------------- |
+| Class URI | [airo:Purpose](https://w3id.org/airo#Purpose) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

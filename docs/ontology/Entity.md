@@ -189,6 +189,13 @@ URI: [schema:Thing](http://schema.org/Thing)
   - [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
   - [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
 
+## Class Properties
+
+| Property  | Value                                   |
+| --------- | --------------------------------------- |
+| Class URI | [schema:Thing](http://schema.org/Thing) |
+| Mixin     | Yes                                     |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance |

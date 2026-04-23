@@ -110,6 +110,12 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 - [Entity](Entity.md)
   - **Documentation**
 
+## Class Properties
+
+| Property  | Value                                                     |
+| --------- | --------------------------------------------------------- |
+| Class URI | [airo:Documentation](https://w3id.org/airo#Documentation) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range            | Description                                                                      | Inheritance         |
