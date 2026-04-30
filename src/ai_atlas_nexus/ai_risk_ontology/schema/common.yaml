@@ -136,6 +136,7 @@ classes:
         designates_type: true
     slots:
       - isDefinedByTaxonomy
+      - isApplicableinLocality
 
   Group:
     is_a: Entity
@@ -178,6 +179,7 @@ classes:
       - requiredByTask
       - requiresCapability
       - implementedByAdapter
+      - hasRule
 
   Term:
     is_a: Entry
@@ -207,6 +209,7 @@ classes:
         designates_type: true
     slots:
       - isDefinedByTaxonomy
+      - isApplicableinLocality
 
   LLMQuestionPolicy:
     is_a: Policy
@@ -231,6 +234,30 @@ classes:
     slots:
       - isDefinedByTaxonomy
       - hasRule
+
+  AttributeConditionRule:
+    is_a: Rule
+    attributes:
+      preconditions:
+        range: AnonymousClassExpression
+        inlined: true
+      postconditions:
+        range: AnonymousClassExpression
+        inlined: true
+
+  AnonymousClassExpression:
+    attributes:
+      slot_conditions:
+        range: SlotCondition
+        multivalued: true
+        inlined_as_list: true
+
+  SlotCondition:
+    attributes:
+      slot_name:
+        range: string
+      equals_string:
+        range: string
 
   Permission:
     is_a: Rule
@@ -504,3 +531,10 @@ slots:
     multivalued: true
     inlined: false
     slot_uri: nexus:isCategorizedAs
+  isApplicableinLocality:
+    description: >-
+      A relationship where an entity has is applicable in these localities.
+    range: LocalityOfUse
+    multivalued: true
+    inlined: false
+    slot_uri: nexus:isApplicableinLocality

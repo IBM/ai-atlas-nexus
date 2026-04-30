@@ -11,6 +11,10 @@ from ai_atlas_nexus.blocks.atlas_explorer.base import (
     StarGraph,
     StarGraphComparison,
 )
+from ai_atlas_nexus.blocks.atlas_explorer.query_builder import (
+    NEXUS_URI,
+    SPARQLQueryBuilder,
+)
 
 
 try:
@@ -20,13 +24,6 @@ except ImportError:
 
 
 ie = inflect.engine()
-
-NEXUS_URI = "https://ibm.github.io/ai-atlas-nexus/ontology/"
-
-_SPARQL_PREFIXES = (
-    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
-    f"PREFIX nexus: <{NEXUS_URI}>\n"
-)
 
 
 class OxigraphExplorer(ExplorerBase):
@@ -44,6 +41,7 @@ class OxigraphExplorer(ExplorerBase):
         self._id_cache = {}
         self._collection_map = {}
         self._embeddings = None
+        self._qb = SPARQLQueryBuilder()
 
         self._build_id_cache_index()
         self._build_collection_map()
@@ -309,17 +307,9 @@ class OxigraphExplorer(ExplorerBase):
                         result.append(item)
                 continue
 
-            # SPARQL query to get all instances of this class
-            sparql = (
-                _SPARQL_PREFIXES
-                + f"""
-            SELECT ?s WHERE {{
-                ?s rdf:type nexus:{class_name_camel} .
-            }}
-            """
-            )
+            query = self._qb.get_all_instances_of_class(class_name_camel)
 
-            for solution in self._store.query(sparql):
+            for solution in self._store.query(query): # type: ignore
                 node = solution["s"]
                 if node:
                     obj = self._uri_to_pydantic(node)
@@ -374,7 +364,7 @@ class OxigraphExplorer(ExplorerBase):
 
         Args:
             class_name: str | None
-                Name of the class (unused but kept for API compatibility)
+                Name of the class
             identifier: str
                 The id value of the instance
 
@@ -417,19 +407,11 @@ class OxigraphExplorer(ExplorerBase):
         else:
             sparql_value = f'"{str(value)}"'
 
-        sparql = (
-            _SPARQL_PREFIXES
-            + f"""
-        SELECT ?s WHERE {{
-            ?s rdf:type nexus:{class_name_camel} .
-            ?s nexus:{attribute} {sparql_value} .
-        }}
-        """
-        )
+        query = self._qb.get_instances_by_attribute(class_name_camel, attribute, sparql_value)
 
         result = []
         try:
-            for solution in self._store.query(sparql):
+            for solution in self._store.query(query):
                 node = solution["s"]
                 if node:
                     obj = self._uri_to_pydantic(node)
@@ -697,16 +679,19 @@ class OxigraphExplorer(ExplorerBase):
         similarity = self.object_similarity(entry_a, entry_b, threshold, property_scores, max_depth, weight_dict)
         return similarity >= threshold
 
-    def get_star_graph(self, entity_id: str) -> StarGraph:
+    def get_star_graph(self, entity_id: str, max_depth: int = 1) -> StarGraph:
         """
-        Extract the 1-hop neighborhood (star graph) of an entity.
+        Extract the multi-hop neighborhood (star graph) of an entity via BFS.
 
         Args:
             entity_id: str
                 The ID of the entity to build a star graph around
+            max_depth: int
+                Maximum hop distance to traverse. Defaults to 1 for 1-hop neighborhood.
 
         Returns:
             StarGraph: A dataclass containing the center entity and its resolved neighbors
+                       from all hops up to max_depth, merged by field name.
 
         Raises:
             ValueError: If the entity_id is not found in the id cache
@@ -717,29 +702,46 @@ class OxigraphExplorer(ExplorerBase):
 
         NON_REFERENCE_FIELDS = {"id", "name", "description", "tag", "url",
                                 "concern", "dateCreated", "dateModified"}
-        neighbors: Dict[str, List[Any]] = {}
+        all_neighbors: Dict[str, List[Any]] = defaultdict(list)
+        seen_ids: Set[str] = {entity_id}
+        frontier = [entity_id]
 
-        for field_name in center.__class__.model_fields:
-            if field_name in NON_REFERENCE_FIELDS:
-                continue
-            value = getattr(center, field_name, None)
-            if value is None:
-                continue
+        for _ in range(max_depth):
+            next_frontier = []
+            for current_id in frontier:
+                node = self._id_cache.get(current_id)
+                if node is None:
+                    continue
+                for field_name in node.__class__.model_fields:
+                    if field_name in NON_REFERENCE_FIELDS:
+                        continue
+                    value = getattr(node, field_name, None)
+                    if value is None:
+                        continue
 
-            if isinstance(value, str):
-                candidates = [value]
-            elif isinstance(value, list) and all(isinstance(v, str) for v in value):
-                candidates = value
-            else:
-                continue
+                    if isinstance(value, str):
+                        candidates = [value]
+                    elif isinstance(value, list) and all(isinstance(v, str) for v in value):
+                        candidates = value
+                    else:
+                        continue
 
-            resolved = [self._id_cache[v] for v in candidates if v in self._id_cache]
-            if resolved:
-                neighbors[field_name] = resolved
+                    for v in candidates:
+                        if v in self._id_cache and v not in seen_ids:
+                            all_neighbors[field_name].append(self._id_cache[v])
+                            seen_ids.add(v)
+                            next_frontier.append(v)
+            frontier = next_frontier
+            if not frontier:
+                break
 
-        return StarGraph(center_id=entity_id, center=center, neighbors=neighbors)
+        return StarGraph(
+            center_id=entity_id,
+            center=center,
+            neighbors={k: v for k, v in all_neighbors.items() if v},
+        )
 
-    def compare_star_graphs(self, id_a: str, id_b: str) -> StarGraphComparison:
+    def compare_star_graphs(self, id_a: str, id_b: str, max_depth: int = 1) -> StarGraphComparison:
         """
         Compare the star graphs of two entities.
 
@@ -748,13 +750,15 @@ class OxigraphExplorer(ExplorerBase):
                 ID of the first entity
             id_b: str
                 ID of the second entity
+            max_depth: int
+                Maximum hop distance to traverse. Defaults to 1 for 1-hop neighborhood.
 
         Returns:
             StarGraphComparison: A dataclass with Jaccard similarity, shared/unique neighbors,
                                 and per-field breakdown
         """
-        graph_a = self.get_star_graph(id_a)
-        graph_b = self.get_star_graph(id_b)
+        graph_a = self.get_star_graph(id_a, max_depth=max_depth)
+        graph_b = self.get_star_graph(id_b, max_depth=max_depth)
 
         ids_a = graph_a.neighbor_ids
         ids_b = graph_b.neighbor_ids

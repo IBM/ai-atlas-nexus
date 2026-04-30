@@ -168,7 +168,7 @@ classes:
     slots:
 
   Purpose:
-    is_a: Entity
+    is_a: Entry
     class_uri: airo:Purpose
     description: The end goal for which an entity is used or an action is taken.
 
@@ -178,7 +178,7 @@ classes:
     description: An area, sector, or industry that is associated with economic activities.
 
   LocalityOfUse:
-    is_a: Entity
+    is_a: Entry
     class_uri: airo:LocalityOfUse
     description: The area, e.g. facility or institution, in which an entity is used.
 
@@ -268,6 +268,8 @@ slots:
       A relationship indicating the output modalities supported by an AI component. Examples include text, image, video.
     range: Modality
   hasPurpose:
+    multivalued: true
+    inlined: false
     slot_uri: airo:hasPurpose
     range: Purpose
     description: >-
@@ -350,7 +352,9 @@ slots:
     range: RiskControl
   hasAIUser:
     slot_uri: airo:hasAiUser
+    multivalued: true
     domain: AiSystem
+    range: AIUser
     description: >-
       Indicate the end-user of an AI system.
   hasStakeholder:
@@ -360,6 +364,7 @@ slots:
       Indicates stakeholders of an AI system or component.
   hasAISubject:
     slot_uri: airo:hasAISubject
+    multivalued: true
     range: AISubject
     description: >-
       Indicates the subjects of an AI system

@@ -647,6 +647,60 @@ class TestStarGraph:
             if not star_graph.neighbors:
                 break
 
+    def test_get_star_graph_default_depth_unchanged(self, ox_explorer, nexus):
+        """Test that default max_depth=1 behavior is unchanged."""
+        risks = nexus.get_all_risks()
+        if not risks:
+            pytest.skip("No risks found")
+
+        test_id = risks[0].id
+        graph_default = ox_explorer.get_star_graph(test_id)
+        graph_explicit_1 = ox_explorer.get_star_graph(test_id, max_depth=1)
+
+        assert graph_default.center_id == graph_explicit_1.center_id
+        assert graph_default.neighbor_ids == graph_explicit_1.neighbor_ids
+        assert graph_default.neighbors == graph_explicit_1.neighbors
+
+    def test_get_star_graph_depth_2_expands_neighbors(self, ox_explorer, nexus):
+        """Test that depth=2 includes all depth=1 neighbors and potentially more."""
+        risks = nexus.get_all_risks()
+        if not risks:
+            pytest.skip("No risks found")
+
+        test_id = risks[0].id
+        graph_1 = ox_explorer.get_star_graph(test_id, max_depth=1)
+        graph_2 = ox_explorer.get_star_graph(test_id, max_depth=2)
+
+        # depth=2 should have at least as many neighbors as depth=1
+        assert len(graph_2.neighbor_ids) >= len(graph_1.neighbor_ids)
+        # depth=1 neighbors should be subset of depth=2 neighbors
+        assert graph_1.neighbor_ids.issubset(graph_2.neighbor_ids)
+
+    def test_get_star_graph_no_cycles(self, ox_explorer, nexus):
+        """Test that visited set prevents center entity from appearing as neighbor."""
+        risks = nexus.get_all_risks()
+        if not risks:
+            pytest.skip("No risks found")
+
+        test_id = risks[0].id
+        graph = ox_explorer.get_star_graph(test_id, max_depth=2)
+
+        # Center entity should never be in neighbors (no self-loops)
+        assert test_id not in graph.neighbor_ids
+
+    def test_get_star_graph_depth_0_returns_only_center(self, ox_explorer, nexus):
+        """Test that max_depth=0 returns only center with no neighbors."""
+        risks = nexus.get_all_risks()
+        if not risks:
+            pytest.skip("No risks found")
+
+        test_id = risks[0].id
+        graph = ox_explorer.get_star_graph(test_id, max_depth=0)
+
+        assert graph.center_id == test_id
+        assert len(graph.neighbors) == 0
+        assert graph.neighbor_ids == set()
+
 
 class TestStarGraphComparison:
     """Test star graph comparison functionality."""
@@ -734,3 +788,23 @@ class TestStarGraphComparison:
 
         assert isinstance(comparison, StarGraphComparison)
         assert 0.0 <= comparison.jaccard_similarity <= 1.0
+
+    def test_compare_star_graphs_max_depth(self, ox_explorer, nexus):
+        """Test comparing star graphs with max_depth=2."""
+        risks = nexus.get_all_risks()
+        if len(risks) < 2:
+            pytest.skip("Need at least 2 risks")
+
+        id_a, id_b = risks[0].id, risks[1].id
+
+        # Compare with depth=1 and depth=2
+        cmp_1 = ox_explorer.compare_star_graphs(id_a, id_b, max_depth=1)
+        cmp_2 = ox_explorer.compare_star_graphs(id_a, id_b, max_depth=2)
+
+        # depth=2 comparison should have valid structure
+        assert isinstance(cmp_2, StarGraphComparison)
+        assert 0.0 <= cmp_2.jaccard_similarity <= 1.0
+
+        # depth=2 neighbor sets should be >= depth=1
+        assert len(cmp_2.graph_a.neighbor_ids) >= len(cmp_1.graph_a.neighbor_ids)
+        assert len(cmp_2.graph_b.neighbor_ids) >= len(cmp_1.graph_b.neighbor_ids)

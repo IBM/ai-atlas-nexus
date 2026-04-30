@@ -6,7 +6,84 @@ taxonomies:
       Demo taxonomy for the algorithmic hiring use case comparison example,
       from "Assessing AI Certification Validity via Knowledge Graphs for Use Case Similarity".
 
+stakeholders:
+  - id: hiring-usecase-stakeholder-ai-impacted-subjects
+    name: AI impacted subjects
+    description: >-
+      Those who are impacted by the AI-human dyad decisions (e.g., a job applicant or a taxpayer). AI impacted subjects
+      may contest the decision on dyad AI ground.
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-usecase-stakeholder-ai-users
+    name: Hiring company AI users
+    description: >-
+      Company employees who use an AI solution to make decisions that may impact a subject. AI users may exercise additional RAI oversight as the human in the loop.
+    isDefinedByTaxonomy: hiring-usecase-demo
+
+controls:
+  - id: hiring-control-audit-ai-ny
+    name: AuditAI requirements (NYC Local Law 144)
+    type: Action
+    description: >-
+      NYC Local Law 144 of 2021 requires annual independent bias audits
+      of automated employment decision tools. This control addresses risks by
+      ensuring periodic external assessment of discriminatory impact.
+    mitigatesRiskConcept:
+      - hiring-risk-lack-of-transparency
+      - hiring-risk-unexplainable-output
+    isDefinedByTaxonomy: hiring-usecase-demo
+    isApplicableinLocality:
+      - hiring-usecase-locality-ny-ny-usa
+  - id: hiring-control-gdpr-explanation-eu
+    type: Action
+    name: Provide explanation (GDPR Art. 22)
+    description: >-
+      GDPR Article 22 guarantees individuals the right to receive an explanation
+      for automated hiring decisions that produce legal or similarly significant effects.
+      This control addresses risks by ensuring transparency and accountability.
+    mitigatesRiskConcept:
+      - hiring-risk-lack-of-transparency
+      - hiring-risk-unexplainable-output
+    isApplicableinLocality:
+      - hiring-usecase-locality-dublin-ie-eu
+    isDefinedByTaxonomy: hiring-usecase-demo
+
+rules:
+  - id: hiring-usecase-locality-rule-dublin-ie-eu
+    name: Hiring usecase rule, for Dublin, Ireland, EU
+    type: AttributeConditionRule
+    preconditions:
+      slot_conditions:
+        - slot_name: isUsedWithinLocality
+          equals_string: hiring-usecase-locality-dublin-ie-eu
+    postconditions:
+      slot_conditions:
+        - slot_name: hasRelatedRisk.isUsedWithinLocality
+          equals_string: hiring-usecase-locality-dublin-ie-eu
+  - id: hiring-usecase-locality-rule-ny-ny-usa
+    name: Hiring usecase rule, for New York, New York, USA
+    type: AttributeConditionRule
+    preconditions:
+      slot_conditions:
+        - slot_name: isUsedWithinLocality
+          equals_string: hiring-usecase-locality-ny-ny-usa
+    postconditions:
+      slot_conditions:
+        - slot_name: hasRelatedRisk.isUsedWithinLocality
+          equals_string: hiring-usecase-locality-ny-ny-usa
 entries:
+  - id: hiring-usecase-locality-dublin-ie-eu
+    name: Dublin, Ireland, EU
+    type: LocalityOfUse
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-usecase-locality-ny-ny-usa
+    name: New York, New York, USA
+    type: LocalityOfUse
+    isDefinedByTaxonomy: hiring-usecase-demo
+  - id: hiring-usecase-resume-analysis
+    name: Resume analysis
+    description: Analyse resumes to make hiring decisions
+    type: Purpose
+    isDefinedByTaxonomy: hiring-usecase-demo
   - id: hiring-usecase-ny
     type: AiSystem
     name: Algorithmic Hiring (New York, US)
@@ -14,15 +91,30 @@ entries:
       AI model for algorithmic hiring developed and verified in New York, US.
       This use case is governed by NYC Local Law 144 of 2021, which mandates
       bias audit requirements for automated employment decision tools.
+    hasPurpose:
+      - hiring-usecase-resume-analysis
+    hasCapability:
+      - ibm-cap-group-comprehension
+      - ibm-cap-contextual-understanding
     isDefinedByTaxonomy: hiring-usecase-demo
+    hasAIUser:
+      - hiring-usecase-stakeholder-ai-users
+    hasAISubject:
+      - hiring-usecase-stakeholder-ai-impacted-subjects
+    isAppliedWithinDomain:
+      - Human Resources
+    isUsedWithinLocality:
+      - hiring-usecase-locality-ny-ny-usa
+    hasRule:
+      - hiring-usecase-locality-rule-ny-ny-usa
     hasRelatedRisk:
       - hiring-risk-lack-of-transparency
       - hiring-risk-over-under-reliance
       - hiring-risk-discriminatory-actions
       - hiring-risk-unexplainable-output
       - hiring-risk-unrepresentative-data
-    hasCapability:
-      - hiring-control-audit-ai-ny
+    dateCreated: "2026-04-24"
+    dateModified: "2026-04-24"
   - id: hiring-usecase-eu
     type: AiSystem
     name: Algorithmic Hiring (EU)
@@ -30,7 +122,19 @@ entries:
       AI model for algorithmic hiring deployed in the European Union.
       This use case is governed by GDPR (Article 22) and the EU AI Act,
       which require transparency and the right to explanation for automated decisions.
+    hasPurpose:
+      - hiring-usecase-resume-analysis
     isDefinedByTaxonomy: hiring-usecase-demo
+    hasAIUser:
+      - hiring-usecase-stakeholder-ai-users
+    hasAISubject:
+      - hiring-usecase-stakeholder-ai-impacted-subjects
+    isAppliedWithinDomain:
+      - Human Resources
+    isUsedWithinLocality:
+      - hiring-usecase-locality-dublin-ie-eu
+    hasRule:
+      - hiring-usecase-locality-rule-dublin-ie-eu
     hasRelatedRisk:
       - hiring-risk-lack-of-transparency
       - hiring-risk-over-under-reliance
@@ -38,7 +142,10 @@ entries:
       - hiring-risk-unexplainable-output
       - hiring-risk-unrepresentative-data
     hasCapability:
-      - hiring-control-gdpr-explanation-eu
+      - ibm-cap-group-comprehension
+      - ibm-cap-contextual-understanding
+    dateCreated: "2026-04-24"
+    dateModified: "2026-04-24"
   - id: hiring-risk-lack-of-transparency
     type: Risk
     name: Lack of model transparency
@@ -74,20 +181,4 @@ entries:
     description: >-
       The training data may not be representative of the actual hiring population
       or job requirements, leading to biased predictions and unfair outcomes.
-    isDefinedByTaxonomy: hiring-usecase-demo
-  - id: hiring-control-audit-ai-ny
-    type: AiTask
-    name: AuditAI requirements (NYC Local Law 144)
-    description: >-
-      NYC Local Law 144 of 2021 requires annual independent bias audits
-      of automated employment decision tools. This control addresses risks by
-      ensuring periodic external assessment of discriminatory impact.
-    isDefinedByTaxonomy: hiring-usecase-demo
-  - id: hiring-control-gdpr-explanation-eu
-    type: AiTask
-    name: Provide explanation (GDPR Art. 22)
-    description: >-
-      GDPR Article 22 guarantees individuals the right to receive an explanation
-      for automated hiring decisions that produce legal or similarly significant effects.
-      This control addresses risks by ensuring transparency and accountability.
     isDefinedByTaxonomy: hiring-usecase-demo
