@@ -1,3 +1,5 @@
+import logging
+import re
 from collections import defaultdict
 from typing import Any, Dict, List, Optional, Set
 from urllib.parse import quote
@@ -15,6 +17,8 @@ from ai_atlas_nexus.blocks.atlas_explorer.query_builder import (
     NEXUS_URI,
     SPARQLQueryBuilder,
 )
+from ai_atlas_nexus.blocks.prompt_builder import ZeroShotPromptBuilder
+from ai_atlas_nexus.blocks.prompt_templates import NL_TO_SPARQL_TEMPLATE
 
 
 try:
@@ -24,6 +28,7 @@ except ImportError:
 
 
 ie = inflect.engine()
+logger = logging.getLogger(__name__)
 
 
 class OxigraphExplorer(ExplorerBase):
@@ -42,27 +47,26 @@ class OxigraphExplorer(ExplorerBase):
         self._collection_map = {}
         self._embeddings = None
         self._qb = SPARQLQueryBuilder()
+        self._build_id_caches()
 
-        self._build_id_cache_index()
-        self._build_collection_map()
         self._store = self._load_data_to_store(data)
 
-    def _build_id_cache_index(self):
+    def _build_id_caches(self):
         """
-        A dict which is mapping ID to LinkML obj
+        A dict which is mapping ID to LinkML obj and a map for collection_key → ClassName for the SPARQL type filtering.
         """
         for class_name in self._data.model_fields_set:
             items = getattr(self._data, class_name) or []
+
+            # build collection map
+            if items:
+                self._collection_map[class_name] = type(items[0]).__name__
+
+            # cache index
             for item in items:
                 if hasattr(item, "id") and item.id:
                     self._id_cache[item.id] = item
 
-    def _build_collection_map(self):
-        """Map collection_key → ClassName for SPARQL type filtering."""
-        for field in self._data.model_fields_set:
-            items = getattr(self._data, field) or []
-            if items:
-                self._collection_map[field] = type(items[0]).__name__
 
     def _check_subclasses(self, result, class_name):
         """
@@ -106,7 +110,7 @@ class OxigraphExplorer(ExplorerBase):
                 if not item_id:
                     continue
 
-                # URI-encode the ID to handle special characters
+                # URI-encode the ID for special characters
                 encoded_id = quote(str(item_id), safe="")
                 item_uri = pyoxigraph.NamedNode(f"{NEXUS_URI}{encoded_id}")
 
@@ -575,6 +579,58 @@ class OxigraphExplorer(ExplorerBase):
         except Exception as e:
             return [{"error": str(e)}]
 
+    def natural_language_query(
+        self,
+        question: str,
+        inference_engine,
+    ) -> List[Dict[str, str]]:
+        """
+        Translate a natural language question to SPARQL and execute it on the store.
+
+        Args:
+            question: str
+                Natural language question about the knowledge graph
+            inference_engine: InferenceEngine
+                Any configured inference engine (Ollama, RITS, WML, vLLM, HF)
+
+        Returns:
+            list[dict]: Query results in the same format as sparql_query().
+                        Returns an empty list if the LLM or SPARQL execution fails.
+        """
+        classes = sorted(set(self._collection_map.values()))
+        prompt = ZeroShotPromptBuilder(NL_TO_SPARQL_TEMPLATE).build(
+            question=question,
+            classes=", ".join(classes),
+        )
+
+        try:
+            outputs = inference_engine.chat(
+                messages=[[{"role": "user", "content": prompt}]]
+            )
+            raw = outputs[0].prediction
+        except Exception as e:
+            logger.warning("NL-to-SPARQL: inference engine failed: %s", e)
+            return []
+
+        # Strip markdown code fences if present
+        raw = re.sub(r"```(?:sparql)?\s*", "", raw, flags=re.IGNORECASE).strip()
+
+        # Ensure standard prefixes are defined
+        if "PREFIX" not in raw.upper():
+            raw = SPARQLQueryBuilder.PREFIXES + raw
+
+        results = self.sparql_query(raw)
+
+        if results and "error" in results[0]:
+            logger.warning(
+                "NL-to-SPARQL: generated query failed.\nSPARQL:\n%s\nError: %s",
+                raw,
+                results[0]["error"],
+            )
+            return []
+
+        return results
+
     def object_similarity(
         self,
         entry_a: Any,
@@ -679,7 +735,7 @@ class OxigraphExplorer(ExplorerBase):
         similarity = self.object_similarity(entry_a, entry_b, threshold, property_scores, max_depth, weight_dict)
         return similarity >= threshold
 
-    def get_star_graph(self, entity_id: str, max_depth: int = 1) -> StarGraph:
+    def get_star_graph(self, entity_id: str, max_depth: int = 1, ruleDerivation=False) -> StarGraph:
         """
         Extract the multi-hop neighborhood (star graph) of an entity via BFS.
 
@@ -688,6 +744,8 @@ class OxigraphExplorer(ExplorerBase):
                 The ID of the entity to build a star graph around
             max_depth: int
                 Maximum hop distance to traverse. Defaults to 1 for 1-hop neighborhood.
+            rule_derivation: bool
+                Should the derived rules be included in the graph
 
         Returns:
             StarGraph: A dataclass containing the center entity and its resolved neighbors
