@@ -158,6 +158,13 @@ URI: [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection)
     - [CapabilityDomain](CapabilityDomain.md) [ [CapabilityConcept](CapabilityConcept.md)]
     - [CapabilityGroup](CapabilityGroup.md) [ [CapabilityConcept](CapabilityConcept.md)]
 
+## Class Properties
+
+| Property  | Value                                                             |
+| --------- | ----------------------------------------------------------------- |
+| Class URI | [skos:Collection](http://www.w3.org/2004/02/skos/core#Collection) |
+| Mixin     | Yes                                                               |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance         |

@@ -15,7 +15,17 @@ Alias: adaptsModel
 
 ## Properties
 
-- Range: [LargeLanguageModel](LargeLanguageModel.md)
+### Type and Range
+
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Range     | [LargeLanguageModel](LargeLanguageModel.md) |
+| Domain Of | [Adapter](Adapter.md)                       |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

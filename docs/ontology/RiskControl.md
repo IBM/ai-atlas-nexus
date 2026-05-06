@@ -152,6 +152,13 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
     - **RiskControl** [ [RiskConcept](RiskConcept.md)]
       - [Action](Action.md)
 
+## Class Properties
+
+| Property  | Value                                                 |
+| --------- | ----------------------------------------------------- |
+| Class URI | [airo:RiskControl](https://w3id.org/airo#RiskControl) |
+| Mixin     | Yes                                                   |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance                                  |

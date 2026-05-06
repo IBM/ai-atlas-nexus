@@ -193,6 +193,12 @@ URI: [nexus:AiModel](https://ibm.github.io/ai-atlas-nexus/ontology/AiModel)
     - **AiModel** [ [AIComponent](AIComponent.md)]
       - [LargeLanguageModel](LargeLanguageModel.md)
 
+## Class Properties
+
+| Property | Value |
+| -------- | ----- |
+| Mixin    | Yes   |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance         |

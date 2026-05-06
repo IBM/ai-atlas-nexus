@@ -96,6 +96,12 @@ URI: [dpv:IncidentMitigatedclass](https://w3id.org/dpv#IncidentMitigatedclass)
   - [IncidentStatus](IncidentStatus.md)
     - **IncidentMitigatedclass**
 
+## Class Properties
+
+| Property  | Value                                                                     |
+| --------- | ------------------------------------------------------------------------- |
+| Class URI | [dpv:IncidentMitigatedclass](https://w3id.org/dpv#IncidentMitigatedclass) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

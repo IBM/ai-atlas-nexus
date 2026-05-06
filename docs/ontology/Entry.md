@@ -199,6 +199,12 @@ URI: [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry)
     - [Adapter](Adapter.md) [ [LargeLanguageModel](LargeLanguageModel.md)]
     - [LLMIntrinsic](LLMIntrinsic.md)
 
+## Class Properties
+
+| Property  | Value                                                              |
+| --------- | ------------------------------------------------------------------ |
+| Class URI | [nexus:Entry](https://ibm.github.io/ai-atlas-nexus/ontology/Entry) |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                      | Description                                                                      | Inheritance         |

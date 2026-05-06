@@ -113,6 +113,12 @@ URI: [dpv:IncidentStatus](https://w3id.org/dpv#IncidentStatus)
     - [IncidentNearMissclass](IncidentNearMissclass.md)
     - [IncidentOngoingclass](IncidentOngoingclass.md)
 
+## Class Properties
+
+| Property  | Value                                                     |
+| --------- | --------------------------------------------------------- |
+| Class URI | [dpv:IncidentStatus](https://w3id.org/dpv#IncidentStatus) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

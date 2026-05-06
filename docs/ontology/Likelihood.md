@@ -95,6 +95,12 @@ URI: [dpv:Likelihood](https://w3id.org/dpv#Likelihood)
 - [Entity](Entity.md)
   - **Likelihood**
 
+## Class Properties
+
+| Property  | Value                                             |
+| --------- | ------------------------------------------------- |
+| Class URI | [dpv:Likelihood](https://w3id.org/dpv#Likelihood) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

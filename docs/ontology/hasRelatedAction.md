@@ -15,9 +15,18 @@ Alias: hasRelatedAction
 
 ## Properties
 
-- Range: [Action](Action.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value               |
+| --------- | ------------------- |
+| Range     | [Action](Action.md) |
+| Domain Of | [Risk](Risk.md)     |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

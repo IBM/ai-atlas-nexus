@@ -1723,7 +1723,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0957_Gipiskis2024
+  - id: A0957_Gipiškis2024
     name: Demonstrating a “margin of safety” for the worst plausible system failures
     description:
       "Model developers can demonstrate that there is an acceptable “margin of safety” between the current
@@ -1739,9 +1739,9 @@ controls:
       frequent inspections and additional process controls. A lower safety factor can also be managed by adopting
       conservative assumptions regarding worst-case conditions."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0959_Gipiskis2024
+  - id: A0959_Gipiškis2024
     name: Scenario analysis
     description:
       "Scenario analysis involves development of several plausible future scenarios, where these scenarios
@@ -1752,9 +1752,9 @@ controls:
       on factors such as AI capability, ownership, safety, usage, and geopolitical contexts, as well as its implications
       on key policy issues [203]."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0960_Gipiskis2024
+  - id: A0960_Gipiškis2024
     name: Fishbone diagram
     description:
       "The fishbone diagram, or a “cause-and-effect diagram” [107], can be used to show the potential causes
@@ -1770,9 +1770,9 @@ controls:
       the branches may include causal factors like “AI trained on data containing toxicity” and “successful jailbreaking
       of AI despite fine-tuning.”"
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0961_Gipiskis2024
+  - id: A0961_Gipiškis2024
     name: Causal mapping
     description:
       "Causal mapping is a technique used to explore and map complex interactions between cause and effect of
@@ -1786,9 +1786,9 @@ controls:
       where certain nodes may be found to be especially crucial if they have more outgoing arrows connecting them to
       other nodes."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0962_Gipiskis2024
+  - id: A0962_Gipiškis2024
     name: Delphi technique
     description:
       "The Delphi technique is a multi-round forecasting process based on a structured framework on
@@ -1804,9 +1804,9 @@ controls:
       from AI development, where crucial variables identified during each round of questionnaire can be further studied
       for the purpose of risk mitigation."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0963_Gipiskis2024
+  - id: A0963_Gipiškis2024
     name: Cross-impact analysis
     description:
       "Cross impact analysis is a forecasting methodology that analyzes the likelihood of a particular issue
@@ -1818,9 +1818,9 @@ controls:
       in hardware” or “advances in algorithms,” where the likelihood of occurrences of each event can be estimated via
       the Delphi technique while taking into account their interactions with other events."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0964_Gipiskis2024
+  - id: A0964_Gipiškis2024
     name: Bow-tie analysis
     description:
       "Bow-tie analysis is a method to assess the utility of implemented controls against a particular risk
@@ -1837,9 +1837,9 @@ controls:
       of training data and rigorous red teaming prior to model deployment as preventive barriers, as well as
       know-your-customer policies and model output censoring techniques as reactive barriers."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0965_Gipiskis2024
+  - id: A0965_Gipiškis2024
     name: System-theoretic process analysis (STPA)
     description:
       "STPA is a method to assess the utility of implemented controls against a partic- ular risk within a
@@ -1860,9 +1860,9 @@ controls:
       actions’ and neglecting current filter thresholds’ which are linked to specific hazards. Specific actions that
       counter or prevent such UCAs can reduce the associated losses."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0966_Gipiskis2024
+  - id: A0966_Gipiškis2024
     name: Risk matrices
     description:
       "A risk matrix is a method for risk evaluation. It is a heatmap that, for each cell, shows the severity
@@ -1877,9 +1877,9 @@ controls:
       million, etc.), such that particular focus can be given to mitigating risks with higher weighted scores (i.e.,
       likelihood multiplied by severity)."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0967_Gipiskis2024
+  - id: A0967_Gipiškis2024
     name: Pre-allocate sufficient resources for risk man- agement
     description:
       "The process of conducting thorough risk management is potentially time-con- suming. Pre-allocating
@@ -1889,7 +1889,7 @@ controls:
       For example, a red-teaming exercise requires creative approaches to identify weaknesses of the AI system against
       potential adversaries, which alone may require hundreds of hours from several experts."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1028_Uuk2024
     name: Intolerable risk thresholds
@@ -2286,7 +2286,7 @@ controls:
     name: Performance Threshold Standards
     description:
       Establish minimum thresholds for performance or assurance criteria and review as part of deployment approval
-      ("go/"no-go") policies, procedures, and processes, with reviewed processes and approval thresholds reflecting
+      ('go/no-go') policies, procedures, and processes, with reviewed processes and approval thresholds reflecting
       measurement of GAI capabilities and risks.
     hasDocumentation:
       - NIST.AI.600-1
@@ -2481,7 +2481,7 @@ controls:
     hasDocumentation:
       - NIST.AI.600-1
     type: Action
-  - id: A0994_Gipiskis2024
+  - id: A0994_Gipiškis2024
     name: More energy-efficient models or techniques
     description:
       Deploying more energy-efficient models can reduce their environmental impact. Different model architectural
@@ -2489,9 +2489,9 @@ controls:
       result in significant environmental savings, especially when implemented at scale. Consideration should be given
       to both training energy usage, and deployment (“inference”) usage for the expected model lifecycle.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0995_Gipiskis2024
+  - id: A0995_Gipiškis2024
     name: Disclosure of energy consumption by AI systems to authorities
     description:
       Disclosures can direct more necessary attention and scrutiny to projects that consume significant energy.
@@ -2499,16 +2499,16 @@ controls:
       including the compute resources used, the amount of power consumed, the measures to reduce excess energy
       consumption that were in place, and energy sources [133].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0996_Gipiskis2024
+  - id: A0996_Gipiškis2024
     name: Using low carbon intensity energy grids
     description:
       Moving model training to energy grids with low carbon intensity can reduce the negative environmental impact [30].
       The efficiency of energy grids can vary greatly depending on location. Models can be trained in different
       locations, as latency is not an issue.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A0006_Bengio2025
     name: Engagement with Relevant Experts and Communities
@@ -3115,7 +3115,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0984_Gipiskis2024
+  - id: A0984_Gipiškis2024
     name: Protect proprietary or unreleased AI model ar- chitecture and parameters
     description:
       "The developers of AI models can invest in cybersecurity to prevent compute re- sources, training
@@ -3127,9 +3127,9 @@ controls:
       gaps can block unauthorized remote access. In the case of necessary interaction with an external network, network
       bandwidth limitations can also be enforced to increase the detection window of potential breaches [108]."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0985_Gipiskis2024
+  - id: A0985_Gipiškis2024
     name: Hardware limitations on data center network connections
     description:
       "Hardware-enforced bandwidth limitations on data center network connections can protect AI model
@@ -3144,7 +3144,7 @@ controls:
       Such rate-limiting is only effective if it applies to all output connections for all storage locations on which
       the weights of the model are stored [139]."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1045_Uuk2024
     name: Advanced information security
@@ -3207,7 +3207,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0978_Gipiskis2024
+  - id: A0978_Gipiškis2024
     name: AI model-assisted oversight of AI systems
     description:
       "AI model-assisted oversight can help monitor and supervise the training of increasingly capable GPAI
@@ -3232,9 +3232,9 @@ controls:
       model. The least capable model at the base of the hierarchy is the only one directly overseen by human
       supervisors, as it is easier to oversee than the more capable models."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1011_Gipiskis2024
+  - id: A1011_Gipiškis2024
     name: GPAI models explaining model outputs in a zero-sum debate game
     description:
       "Debate is a technique that aims to produce reliable explanations of AI model outputs that are too
@@ -3256,7 +3256,7 @@ controls:
       models via reinforcement learning, where outputs that are more truthful and convincing arguments and explanations
       are positively reinforced, while misleading or false outputs are negatively reinforced."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1026_Uuk2024
     name: Harmlessness training
@@ -3456,16 +3456,16 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0935_Gipiskis2024
+  - id: A0935_Gipiškis2024
     name: Restrict web access during AI training
     description:
       Developers can restrict or disable AI systems’ internet access during training. For example, developers can
       restrict web access to read-only (e.g., by disabling write-access through HTTP POST requests and access to web
       forms) or limit the access of the AI system to a local network
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0936_Gipiskis2024
+  - id: A0936_Gipiškis2024
     name: Adversarial training
     description:
       "Adversarial training [83] is a technique for training AI models in which adver- sarial inputs are
@@ -3474,9 +3474,9 @@ controls:
       Adversarial training can involve adversarial examples generated by human experts, human users, or other AI
       systems."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0939_Gipiskis2024
+  - id: A0939_Gipiškis2024
     name: Incorporating the estimation of atypical input samples or classes for better model reliability
     description:
       Incorporating the estimation of rare atypical input samples or classes might improve a model’s reliability, both
@@ -3485,9 +3485,9 @@ controls:
       be used as an atypicality measure. For discriminative models, Gaussian Mixture Models can be employed to estimate
       conditional and marginal distributions, which are then used in atypicality measurement.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0947_Gipiskis2024
+  - id: A0947_Gipiškis2024
     name: Enforcing model output interpretability post-training
     description:
       "While a resulting trained model may be opaque with respect to its predictions, the final output in a
@@ -3497,17 +3497,17 @@ controls:
       navigation plans, then have a deterministic solver simulate executing valid plans [128]. The optimal plan found is
       executed in the real world and is interpretable."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0948_Gipiskis2024
+  - id: A0948_Gipiškis2024
     name: Paraphrasing to reduce hidden information
     description:
       Paraphrasing can mitigate steganography and encoded reasoning by reducing the physical size of the hidden
       information encoded in text [166].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0951_Gipiskis2024
+  - id: A0951_Gipiškis2024
     name: Modification of model internal representation
     description:
       "Model providers can modify the internal representation of the model [135, 237] up to the granular
@@ -3519,17 +3519,17 @@ controls:
       fact, and then modify that representation via modifying individual weights, or modify the en- tire representation
       itself by modifying entire layers."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0952_Gipiskis2024
+  - id: A0952_Gipiškis2024
     name: Incorporating goal uncertainty into AI systems to mitigate risky behaviors
     description:
       Incorporating uncertainty into AI system goals can prevent rushed decision- making and incentivize such systems to
       gather additional information or to refer to human oversight when faced with ambiguity [228].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0973_Gipiskis2024
+  - id: A0973_Gipiškis2024
     name: Pop-up interventions in LLMs
     description:
       "Supplementary information can be shown to the user in specific query topics where factual accuracy is
@@ -3541,9 +3541,9 @@ controls:
       Since pop-up interventions can be intrusive to workflows, they are best used in situations where the benefits of
       the information outweigh the cost of distraction."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0983_Gipiskis2024
+  - id: A0983_Gipiškis2024
     name: Least Privilege access
     description:
       "Deployers of an AI system can restrict its permissions to a whitelisted set of pre- determined
@@ -3557,9 +3557,9 @@ controls:
       bases, and the action space of the AI system. It can be implemented through running the AI system on an OS-level
       virtualization, on networks behind a firewall, and in extreme cases on air-gapped machines."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0990_Gipiskis2024
+  - id: A0990_Gipiškis2024
     name: Debiasing methods
     description:
       "Providers of AI models can apply techniques to reduce the biases of their models.
@@ -3585,18 +3585,18 @@ controls:
       • Post-training - Applying techniques to correct a trained but biased model, such as modifying the embedding
       space."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0991_Gipiskis2024
+  - id: A0991_Gipiškis2024
     name: Knowledge unlearning techniques
     description:
       Knowledge unlearning techniques allow specific information to be “forgotten” without the need for retraining the
       entire model, preserving its general capabil- ities. These techniques can be used to reduce privacy risks and
       protect against copyrighted or harmful content [96, 188].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1014_Gipiskis2024
+  - id: A1014_Gipiškis2024
     name: Tamper-resistant safeguards for open-weight models
     description:
       Training and implementing safeguards can improve the robustness of open- weight models against modifications from
@@ -3604,7 +3604,7 @@ controls:
       safety re- strictions. These safeguards can be resilient even after extensive fine-tuning, ensuring that the model
       retains its protective measures [199].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1019_Uuk2024
     name: Adversarial Robustness
@@ -3811,7 +3811,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0974_Gipiskis2024
+  - id: A0974_Gipiškis2024
     name: AI identification
     description:
       "AI identifiers can be used to indicate that an AI is involved in a process or an interaction [40].
@@ -3823,9 +3823,9 @@ controls:
       the underlying AI system, the specific instance of the AI agent, and other information relevant to the development
       of the agent, can be included."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0975_Gipiskis2024
+  - id: A0975_Gipiškis2024
     name: AI output watermaking
     description:
       Output produced by or with AI assistance can be marked to clearly identify its origin. Verification of the
@@ -3833,9 +3833,9 @@ controls:
       Ideally, the watermark does not significantly alter the utility of the output, and is robust against digital and
       physical manipulation that results in data degradation [216, 145].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0976_Gipiskis2024
+  - id: A0976_Gipiškis2024
     name: AI output metadata
     description:
       Output produced or whose production is aided by AI can contain metadata to record its origin and the
@@ -3845,15 +3845,15 @@ controls:
       the AI model that produced it. Subsequent versions can reference this information and, if they are intermediary
       versions, can include descriptions of any editing that has taken place.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0937_Gipiskis2024
+  - id: A0937_Gipiškis2024
     name: Cost-inducing training of AI models specifically for malicious use
     description:
       AI models can be designed to make further post-training modifications (e.g., fine-tuning) too costly for malicious
       uses while preserving normal adaptability for non-malicious uses
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A0001_Bengio2025
     name: Audits
@@ -4875,7 +4875,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0942_Gipiskis2024
+  - id: A0942_Gipiškis2024
     name: Scope red-teaming activities based on deploy- ment context
     description:
       "Red-teaming activities can be tailored and compared based on the specific deployment circumstances of
@@ -4892,53 +4892,53 @@ controls:
 
       • Known vulnerabilities or concerns specific to the model or similar systems"
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0943_Gipiskis2024
+  - id: A0943_Gipiškis2024
     name: Red teaming to test the resilience of open-weights models to fine-tuning
     description:
       Before the release of open-weights models, red teamers can test the resilience of safety training against
       fine-tuning. Safety training may be partially or fully overridden by fine-tuning intentionally (e.g., by malicious
       actors) or uninten- tionally (e.g., by fine tuning an AI model for a specific use case)
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0945_Gipiskis2024
+  - id: A0945_Gipiškis2024
     name: Audits with specific scoped goals
     description:
       Audits of AI systems will be easier to perform, and have clearer results if the scope and goals of the evaluation
       are formulated as precisely as possible [157], or have a connection to concrete existing policy.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0946_Gipiskis2024
+  - id: A0946_Gipiškis2024
     name: Evaluating explainability method sensitivity to data inputs and model parameters
     description:
       Model parameter and data randomization tests can be employed as sanity checks [2] to determine the relationship
       between a model, its inputs, and the explainability method. If an explanation is independent from or insensitive
       to the underlying model or the input data, it would indicate a lack of reliability of the explainability method.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0949_Gipiskis2024
+  - id: A0949_Gipiškis2024
     name: Testing for erroneous or irrelevant features through concept learning
     description:
       Interpretability techniques, particularly concept learning [77], can be used to test whether a model is learning
       erroneous features or relying on irrelevant features in its predictions. This can help identify and mitigate
       potential risks associated with incorrect or non-informative features influencing the model’s outputs.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0953_Gipiskis2024
+  - id: A0953_Gipiškis2024
     name: Evaluations for truthful outputs
     description:
       AI systems can be evaluated for truthfulness when answering questions, includ- ing in contexts where humans tend
       to give incorrect but widely-accepted answers (i.e., popular misconceptions). Evaluations detect incorrect facts
       learned about the world, inadequate capabilities of the AI system, and misleading outputs by the AI system [121].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0954_Gipiskis2024
+  - id: A0954_Gipiškis2024
     name: Interpretability techniques that target deception
     description:
       Interpretability techniques can be used for finding the root causes of outputs of an AI model that reliably lead
@@ -4950,9 +4950,9 @@ controls:
       mechanistic interpretability, such as identification of features involved in generating the outputs, or
       attribution of parts of the input most important in generating the output [129].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0955_Gipiskis2024
+  - id: A0955_Gipiškis2024
     name: Benchmarks for Situational Awareness
     description:
       A model is situationally aware if it internally represents that it is a machine learning model and if it can
@@ -4962,9 +4962,9 @@ controls:
       deployment as such, and whether the AI model can use this information correctly to take actions in the world [25,
       111].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0956_Gipiskis2024
+  - id: A0956_Gipiškis2024
     name: Evaluating AI systems’ performance on self-proliferation-related tasks
     description:
       "To prevent AI systems from self-proliferating, developers of AI systems can evaluate those systems for
@@ -4979,18 +4979,18 @@ controls:
       Self-proliferation evaluations can be conducted in a secure environment to pre- vent a self-replicating AI system
       from affecting other computers."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0958_Gipiskis2024
+  - id: A0958_Gipiškis2024
     name: Employing qualitative assessments in difficult- to-measure domains
     description:
       Qualitative evaluation can be used in cases when quantitative measurement is not feasible. This can give
       additional insights about the system which would not be available if no measurement was performed due to its
       difficulty [206].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0981_Gipiskis2024
+  - id: A0981_Gipiškis2024
     name: Encouraging downstream provider to evaluate models for deployment-specific failure modes
     description:
       In some cases, AI system deployers are better positioned to perform certain risk management measures on the AI
@@ -4998,9 +4998,9 @@ controls:
       better and are more easily able to predict foreseeable misuse or failure modes. These evaluations can inform
       upstream model providers, or inform supplementary mitigations by the deployer.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0987_Gipiskis2024
+  - id: A0987_Gipiškis2024
     name: Sandboxing of AI Systems
     description:
       AI systems can be developed and tested within a sandbox, (a secure and iso- lated environment used for separating
@@ -5008,9 +5008,9 @@ controls:
       ment, resources such as storage and memory space, and network access, would be disallowed or heavily restricted
       [15]. With sandboxing, dangerous or harmful outputs generated during testing will be contained.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0993_Gipiskis2024
+  - id: A0993_Gipiškis2024
     name: Quantifying privacy risks of AI models
     description:
       "Measuring privacy risks of an AI model allows the provider and user to calibrate their expectations on
@@ -5025,9 +5025,9 @@ controls:
       memorizes. Assuming full knowledge of the training data, it measures the percentage of items that, for a given
       incomplete data point, a model outputs the remaining (memorized) part."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0997_Gipiskis2024
+  - id: A0997_Gipiškis2024
     name: Red team access to the final version of a model pre-deployment
     description:
       "Granting red teams access to the final pre-release version of the model can help with identifying
@@ -5038,17 +5038,17 @@ controls:
       model’s release can be postponed or even prevented if previously unidentified flaws are detected during the
       testing [65]."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0998_Gipiskis2024
+  - id: A0998_Gipiškis2024
     name: Red teaming for GPAI system evaluation
     description:
       Red teaming refers to simulated adversarial attacks performed to identify and evaluate the model’s vulnerabilities
       as well as its in-domain and out-of-domain performance.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0999_Gipiskis2024
+  - id: A0999_Gipiškis2024
     name: Dynamic benchmarking
     description:
       "Dynamic benchmarks are benchmarks that can be continuously updated with new human-generated data. By
@@ -5060,9 +5060,9 @@ controls:
       Examples of such dynamic benchmarks include DynaSent [153] for sentiment analysis, LFTW [208] for hate speech, and
       Human-Adversarial VQA [182] for images."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1000_Gipiskis2024
+  - id: A1000_Gipiškis2024
     name: Benchmark dataset auditing
     description:
       Auditing benchmark datasets allows for verification of the utility and limitations of the datasets [158]. This
@@ -5070,9 +5070,9 @@ controls:
       of such datasets by independent third-party organizations and the release of benchmark dataset metadata to the
       auditors.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1001_Gipiskis2024
+  - id: A1001_Gipiškis2024
     name: Informative and powerful benchmarks
     description:
       "Developers of GPAI systems can select benchmarks that are difficult enough to be informative about the
@@ -5083,18 +5083,18 @@ controls:
       audited by independent domain experts if they contain domain-specific questions. For multimodal GPAI systems, good
       benchmarks cover every modality, especially the interaction of different modalities."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1002_Gipiskis2024
+  - id: A1002_Gipiškis2024
     name: Statistical data quality reports for benchmarks
     description:
       If a benchmark dataset is too large to allow for the identification and removal of all flawed instances,
       statistical reports on the data composition can be added. Random sampling of benchmark data points can be
       performed to evaluate and report the frequency and types of errors found [54].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1003_Gipiskis2024
+  - id: A1003_Gipiškis2024
     name:
       Avoiding benchmark data with publicly avail- able solutions and releasing contextual information for
       internet-derived data
@@ -5105,9 +5105,9 @@ controls:
       where contextual information (which may have been included in the training data) might inadvertently reveal
       details about the solution, en- suring that the data is suitable for accurate benchmarking.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1008_Gipiskis2024
+  - id: A1008_Gipiškis2024
     name: Frequent benchmarking to identify when red teaming is needed
     description:
       "Benchmarks, once created, are inexpensive to apply but may be less informative than red teaming. One
@@ -5121,9 +5121,9 @@ controls:
       Benchmarks can act as early warning signs of a larger issue, and red teaming can then be employed to investigate
       the severity and extent of such an issue."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1009_Gipiskis2024
+  - id: A1009_Gipiškis2024
     name: Test robustness of GPAI system on relevant benchmarks
     description:
       Various benchmarks [52, 236] have been developed to assess the robustness of GPAI systems when deployed in
@@ -5131,36 +5131,36 @@ controls:
       model’s ability to handle variations in inputs, unexpected data distributions, or adversarial examples, aiming to
       ensure reliable performance outside the original training domain.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1010_Gipiskis2024
+  - id: A1010_Gipiškis2024
     name: Benchmarking
     description:
       Benchmarking is an evaluation method where different models are compared against a standardized dataset or a
       predetermined task. It allows comparison both across different models and over time, providing a reference point
       for model assessment. Benchmarks are usually open, where their question-answer pairs are publicly available [235].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1012_Gipiskis2024
+  - id: A1012_Gipiškis2024
     name: Using an AI model to evaluate AI model outputs
     description:
       In cases where the outputs of AI models cannot be easily evaluated, AI mod- els can be used to evaluate their
       outputs or the outputs of other AI models [82, 16, 17, 91]. The evaluations can then provide a training signal to
       improve the original model’s performance or offer explanations of the output for human users.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1013_Gipiskis2024
+  - id: A1013_Gipiškis2024
     name: Frequent testing when scaling model or dataset
     description:
       Testing models after significant increases in compute, data, or model parame- ters. Even relatively small changes
       to model or dataset size can introduce new properties (“emergent abilities”) and failure modes. Identifying them
       early can prevent the models from being released prematurely
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1015_Gipiskis2024
+  - id: A1015_Gipiškis2024
     name: Robustness Certificates
     description:
       A model can be certified to withstand adversarial attacks given specific data- point constraints, model
@@ -5169,7 +5169,7 @@ controls:
       certification methods are limited to certifying against at- tacks via manipulation of pixels on specific lp norms,
       canonically the l2 (Eu- clidean) norm, up to a certain neighborhood radius.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1020_Uuk2024
     name: Bug bounty programs
@@ -5660,7 +5660,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0934_Gipiskis2024
+  - id: A0934_Gipiškis2024
     name: Use of Synthetic Data
     description:
       Synthetic data refers to data that is not collected from the real world. It is used to train AI models as an
@@ -5669,9 +5669,9 @@ controls:
       Synthetic data can help against dataset bias by having more samples from a particular distribution or minority
       group. It can also help in privacy by having more samples to mask sensitive data
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0940_Gipiskis2024
+  - id: A0940_Gipiškis2024
     name: Data cleaning
     description:
       Providers can filter out the training dataset via multiple layered techniques, ranging from rule-based filters to
@@ -5680,18 +5680,18 @@ controls:
       which then moves to flagging the most influential data samples from the dataset via influence functions for
       anomaly detection.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0989_Gipiskis2024
+  - id: A0989_Gipiškis2024
     name: Diverse data labeling and algorithm fairness audits
     description:
       To mitigate biases in AI models, model providers may want to prioritize di- versity among data labelers and
       conduct regular fairness audits on their algo- rithms. Data labeling teams that represent different backgrounds
       and demo- graphic groups can help create more balanced datasets.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0992_Gipiskis2024
+  - id: A0992_Gipiškis2024
     name: Differential privacy
     description:
       Differential privacy techniques [8] can be used to protect users’ privacy by ensuring that sensitive information
@@ -5700,18 +5700,18 @@ controls:
       particular data point within the dataset. This provides individuals with plausible deniability and prevents their
       information from being exposed.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1004_Gipiskis2024
+  - id: A1004_Gipiškis2024
     name: Reporting data decontamination efforts
     description:
       Decontamination analysis may involve comparing the training dataset with the benchmark data, and publishing a
       report with statistics such as data overlap [235]. Especially for already trained models, including contamination
       statistics can allow experts to reweigh the success of the model on affected benchmarks.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1006_Gipiskis2024
+  - id: A1006_Gipiškis2024
     name: Preventing or mitigating data contamination and leakage
     description:
       "Developers of GPAIS and creators of benchmarks can take actions to prevent AI models from being
@@ -5723,9 +5723,9 @@ controls:
       benchmark-creators include restricting access to benchmarks over an API, or continually updating benchmarks to
       focus on recent data."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1007_Gipiskis2024
+  - id: A1007_Gipiškis2024
     name: Contamination detection
     description:
       "Contamination detection refers to techniques for assessing whether and to what extent a given model
@@ -5737,9 +5737,9 @@ controls:
       clude excluding data with improper metadata from the training dataset and conducting overlap analyses between the
       training data and all known standard benchmark datasets."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1016_Gipiskis2024
+  - id: A1016_Gipiškis2024
     name: Documentation of data collection, annotation, maintenance practices
     description:
       Dataset collection, annotation, and maintenance processes can be documented in detail, including potential
@@ -5747,7 +5747,7 @@ controls:
       transparency, ensures that inherent dataset limitations are known in advance, and helps in selecting the right
       datasets for intended use cases.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1022_Uuk2024
     name: Data curation
@@ -5894,16 +5894,16 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0970_Gipiskis2024
+  - id: A0970_Gipiškis2024
     name: Limit deployment scope
     description:
       AI models can be restricted in terms of its use cases, where providers can require the deployers to limit its
       deployment to a predefined scope [81], such that models built for specific purposes and tested under specific
       environments are not used in environments or for purposes that are potentially unsafe.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0971_Gipiskis2024
+  - id: A0971_Gipiškis2024
     name: Restricted usage terms for open-source models
     description:
       "Developers of open-weights and open-source AI models can vet and restrict the users of their AI
@@ -5913,9 +5913,9 @@ controls:
       Such agreements have the advantage that users only need to be vetted once before getting model access, but are
       often limited in practice in preventing unauthorised use or distribution."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0986_Gipiskis2024
+  - id: A0986_Gipiškis2024
     name: Structured access to a model
     description:
       "Structured access refers to methods which limit users’ or deployers’ direct access to a model’s
@@ -5927,7 +5927,7 @@ controls:
       to ensure the model’s intended use is pre- served [36]. This filtering can sometimes be supplemented by human
       oversight, depending on desired robustness levels."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1025_Uuk2024
     name: Fine-tuning restrictions
@@ -5994,7 +5994,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0968_Gipiskis2024
+  - id: A0968_Gipiškis2024
     name: Staged release of model weights
     description:
       "When a model is developed by a provider for use in a certain AI system, it may also be useful to
@@ -6005,9 +6005,9 @@ controls:
       After a period of an initial closed release and potentially further safety-training, the developers of the AI
       model can then release the weights, if they are confident that the AI model poses minimal systemic risk."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0969_Gipiskis2024
+  - id: A0969_Gipiškis2024
     name: Gradual or incremental monitored release of model access
     description:
       AI systems can be released for access incrementally, starting with a small and selected deployer base before
@@ -6017,7 +6017,7 @@ controls:
       vulnerabilities and other problems. Even when such vulnerabilities are detected, the resulting harms may be more
       limited compared to a scenario in which a more capable version is released with the same vulnerabilities [195].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1023_Uuk2024
     name: Deploying powerful models in stages
@@ -6121,7 +6121,7 @@ controls:
     name: Continuous Monitoring of Risk Controls
     description:
       Developers must therefore implement continuous monitoring of both KRIs and KCIs to ensure that KCI thresholds are
-      met once KRI thresholds are crossed according to the predefined "if-then" statements established in the risk
+      met once KRI thresholds are crossed according to the predefined 'if-then' statements established in the risk
       analysis and evaluation phase.
     hasDocumentation:
       - doc-Campos2025
@@ -6502,7 +6502,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0950_Gipiskis2024
+  - id: A0950_Gipiškis2024
     name: Dashboard of model properties
     description:
       "A dashboard [41] displays all the relevant information about the model’s internal state and the
@@ -6515,9 +6515,9 @@ controls:
       strategies it is currently pursuing; while examples of the model’s physical properties include the model’s compute
       and energy consumption, physical storage occupied, and physical networks it is connected to."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0977_Gipiskis2024
+  - id: A0977_Gipiškis2024
     name: Monitoring of model capabilities
     description:
       "AI models are often trained to develop specific capabilities by using appropriate training data and
@@ -6528,9 +6528,9 @@ controls:
       These capabilities can be monitored, allowing models to be tested not only for their intended capabilities but
       also for capabilities that are not intended."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0979_Gipiskis2024
+  - id: A0979_Gipiškis2024
     name: Post-deployment ongoing monitoring for unexpected use cases
     description:
       "Ongoing monitoring of AI systems can uncover emergent or newly identified capabilities and
@@ -6542,9 +6542,9 @@ controls:
       being directly developed for that purpose, nor verified for accuracy. In that case, the potential risks of this
       newly found competence can be assessed."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0980_Gipiskis2024
+  - id: A0980_Gipiškis2024
     name: Monitoring protocols for po- tentially adversarial GPAI systems
     description:
       "Similar to cybersecurity protocols, AI providers can prepare in advance for po- tential adversarial
@@ -6574,15 +6574,15 @@ controls:
 
       • Restriction of access of the AI system to private information."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A1005_Gipiskis2024
+  - id: A1005_Gipiškis2024
     name: Tracking benchmark leakage
     description:
       Constant monitoring and documentation of benchmark leakage can help with the early detection of benchmark leaks
       [224, 95].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A0039_Casper2025
     name: Shutdown procedures
@@ -6883,7 +6883,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0941_Gipiskis2024
+  - id: A0941_Gipiškis2024
     name: Internal data poisoning diagnosis
     description:
       Providers can have an internal framework to identify what specific data poison- ing attack their model may be a
@@ -6891,9 +6891,9 @@ controls:
       and dimen- sion, victim model, and data type [39]. This framework includes known defenses against the diagnosed
       attack, which providers can then apply to the model.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
-  - id: A0988_Gipiskis2024
+  - id: A0988_Gipiškis2024
     name: Redundant systems not reliant on GPAI
     description:
       "Redundant systems provide continuation of a given system’s processes in case of failure of the given
@@ -6904,7 +6904,7 @@ controls:
       autonomous control of the aircraft, redundant systems in the form of mechanical or hydraulic mechanisms must be
       present to allow for deployment of the landing gear in case of AI system failure."
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1035_Uuk2024
     name: Safety Drills
@@ -7376,7 +7376,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0938_Gipiskis2024
+  - id: A0938_Gipiškis2024
     name: Calibrated confidence measures for model pre- dictions
     description:
       Incorporating calibrated confidence measures alongside a model’s predictions and standard performance metrics,
@@ -7384,7 +7384,7 @@ controls:
       underconfidence in correct ones [85]. These additional measures can provide users with more information to better
       interpret the model’s decisions and assess whether its predictions can be trusted.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A0034_Casper2025
     name: Model registration
@@ -8085,7 +8085,7 @@ controls:
       - doc-UK Government2023
     type: Action
   - id: A0861_UK_Government2023
-    name: Vulnerability Reports for Controllability Issues (i.e., "Misalignment")
+    name: Vulnerability Reports for Controllability Issues (i.e., 'Misalignment')
     description:
       "This process could have as wide a scope as is necessary and ensure that frontier AI organisations have the
       ability to respond appropriately to reports of vulnerabilities. The process could accept reports on any class of
@@ -8107,14 +8107,14 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0982_Gipiskis2024
+  - id: A0982_Gipiškis2024
     name: Encourage reporting of critical vulnerabilities to the upstream provider or other relevant stakeholders
     description:
       Downstream AI system deployers can report critical vulnerabilities or incidents to the upstream model provider and
       other relevant regulators. This can con- tribute to safe use, and allow other downstream deployers to be informed
       about any potential problems.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1036_Uuk2024
     name: Safety incident reports and security information sharing
@@ -8305,7 +8305,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0972_Gipiskis2024
+  - id: A0972_Gipiškis2024
     name: Release strategy disagreement between developers
     description:
       Developers of restricted-access models with similar capabilities may disagree about the strategy or precautions to
@@ -8313,7 +8313,7 @@ controls:
       such a case, if only a single developer releases an equally capable model unrestricted, malicious actors can use
       it instead of restricted-access alternatives [88].
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1039_Uuk2024
     name: Sharing safety cases
@@ -8479,7 +8479,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
     type: Action
-  - id: A0944_Gipiskis2024
+  - id: A0944_Gipiškis2024
     name: Pre-deployment access by third-party auditors
     description:
       Prior to full deployment of general-purpose AI models, a group of third-party auditors who are not selected by the
@@ -8488,7 +8488,7 @@ controls:
       auditors that are especially favorable to the developers, which could result in biased or incomplete evaluations,
       or contribute to an unjustified public perception of the capabilities and risks of the model.
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
     type: Action
   - id: A1018_Uuk2024
     name: Advanced model access for vetted external researchers

@@ -109,6 +109,12 @@ URI: [airo:AIProvider](https://w3id.org/airo#AIProvider)
   - [Organization](Organization.md)
     - **AiProvider**
 
+## Class Properties
+
+| Property  | Value                                               |
+| --------- | --------------------------------------------------- |
+| Class URI | [airo:AIProvider](https://w3id.org/airo#AIProvider) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range            | Description                                                                      | Inheritance                     |

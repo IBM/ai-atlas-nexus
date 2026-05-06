@@ -1452,12 +1452,12 @@ documents:
   - id: doc-mit-draft-ai-risk-repository
     name: "Mapping AI Risk Mitigations: Evidence Scan & Draft Mitigation Taxonomy"
     description:
-      '"The AI Risk Mitigation Taxonomy has three parts: The AI Risk Mitigation
+      "The AI Risk Mitigation Taxonomy has three parts: The AI Risk Mitigation
       Database captures 831 mitigations extracted from 13 existing frameworks and classifications
       of AI risk mitigations The Draft AI Risk Mitigation Taxonomy organizes mitigations
       into 4 main categories and 23 subcategories. The Taxonomy Categories include:
       Governance & Oversight Controls, Technical & Security Controls, Operational Process
-      Controls, and Transparency & Accountability Controls"'
+      Controls, and Transparency & Accountability Controls"
     url: https://cdn.prod.website-files.com/669550d38372f33552d2516e/6887e58496902e3bcad04a5a_1b0850b4406f7dc6a79365c4b56f0f51_Mapping%20AI%20Risk%20Mitigations.pdf
     dateCreated: 2025-07-28
     dateModified: 2025-07-28
@@ -1574,12 +1574,12 @@ documents:
     name: Pitfalls of Evidence-Based AI Policy
     description: Nations across the world are working to govern AI. However, from a
       technical perspective, there is uncertainty and disagreement on the best way to
-      do this. Meanwhile, recent debates over AI regulation have led to calls for "evidence-based
-      AI policy" which emphasize holding regulatory action to a high evidentiary standard.
+      do this. Meanwhile, recent debates over AI regulation have led to calls for 'evidence-based
+      AI policy' which emphasize holding regulatory action to a high evidentiary standard.
       Evidence is of irreplaceable value to policymaking. However, holding regulatory
       action to too high an evidentiary standard can lead to systematic neglect of certain
       risks. In historical policy debates (e.g., over tobacco ca. 1965 and fossil fuels
-      ca. 1985) "evidence-based policy" rhetoric is also a well-precedented strategy
+      ca. 1985) 'evidence-based policy' rhetoric is also a well-precedented strategy
       to downplay the urgency of action, delay regulation, and protect industry interests.
       Here, we argue that if the goal is evidence-based AI policy, the first regulatory
       objective must be to actively facilitate the process of identifying, studying,
@@ -1720,8 +1720,8 @@ documents:
     name: AI Risk Management Standards Profile for GPAIS
     description:
       Increasingly multi-purpose AI systems, such as cutting-edge large language
-      models or other "general-purpose AI" systems (GPAI or GPAIS), "foundation models,"
-      generative AI, and "frontier models" (typically all referred to hereafter with
+      models or other 'general-purpose AI' systems (GPAI or GPAIS), 'foundation models,'
+      generative AI, and 'frontier models' (typically all referred to hereafter with
       the umbrella term GPAIS except where greater specificity is needed), can provide
       many beneficial capabilities but also risks of adverse events with profound consequences.
       This document provides risk-management practices or controls for identifying,
@@ -2716,10 +2716,10 @@ taxonomies:
     type: RiskTaxonomy
   - id: mit-draft-ai-risk-mitigation
     name: MIT Draft AI Risk Mitigation Taxonomy
-    description: '"The Draft AI Risk Mitigation Taxonomy organizes mitigations into
-      4 main categories and 23 subcategories. The Taxonomy Categories include: Governance
+    description: "The Draft AI Risk Mitigation Taxonomy organizes mitigations into 4
+      main categories and 23 subcategories. The Taxonomy Categories include: Governance
       & Oversight Controls, Technical & Security Controls, Operational Process Controls,
-      and Transparency & Accountability Controls"'
+      and Transparency & Accountability Controls"
     url: https://airisk.mit.edu/blog/mapping-ai-risk-mitigations
     dateCreated: 2025-07-28
     version: "1"
@@ -10470,6 +10470,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-harm-group
     type: Risk
+    isDetectedBy:
+      - gg-social-bias-detection
     tag: social_bias
   - id: granite-profanity
     name: Profanity
@@ -10488,6 +10490,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-harm-group
     type: Risk
+    isDetectedBy:
+      - gg-profanity-detection
     tag: profanity
   - id: granite-sexual-content
     name: Sexual Content
@@ -10513,6 +10517,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-harm-group
     type: Risk
+    isDetectedBy:
+      - gg-sexual-content-detection
     tag: sexual-content
   - id: granite-unethical-behavior
     name: Unethical Behavior
@@ -10536,6 +10542,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-harm-group
     type: Risk
+    isDetectedBy:
+      - gg-unethical-behavior-detection
     tag: unethical-behavior
   - id: granite-violence
     name: Violence
@@ -10555,6 +10563,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-harm-group
     type: Risk
+    isDetectedBy:
+      - gg-violence-detection
     tag: violence
   - id: granite-jailbreak
     name: Jailbreaking
@@ -10572,6 +10582,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-harm-group
     type: Risk
+    isDetectedBy:
+      - gg-jailbreak-detection
     tag: jailbreak
   - id: granite-harm-engagement
     name: Harm Engagement
@@ -10598,6 +10610,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-conversational-egregiousness
     type: Risk
+    isDetectedBy:
+      - gg-harm-engagement-detection
     tag: harm-engagement
   - id: granite-evasiveness
     name: Evasiveness
@@ -10616,6 +10630,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-conversational-egregiousness
     type: Risk
+    isDetectedBy:
+      - gg-evasiveness-detection
     tag: evasiveness
   - id: granite-groundedness
     name: Groundedness
@@ -10635,6 +10651,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-rag-safety-group
     type: Risk
+    isDetectedBy:
+      - gg-groundedness-detection
     tag: groundedness
   - id: granite-relevance
     name: Context Relevance
@@ -10651,6 +10669,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-rag-safety-group
     type: Risk
+    isDetectedBy:
+      - gg-relevance-detection
     tag: relevance
   - id: granite-answer-relevance
     name: Answer Relevance
@@ -10669,6 +10689,8 @@ entries:
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-rag-safety-group
     type: Risk
+    isDetectedBy:
+      - gg-answer-relevance-detection
     tag: answer-relevance
   - id: granite-function-call
     name: Function Calling Hallucination
@@ -15056,7 +15078,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0957_Gipiskis2024
+  - id: A0957_Gipiškis2024
     name: Demonstrating a “margin of safety” for the worst plausible system failures
     description: "Model developers can demonstrate that there is an acceptable “margin
       of safety” between the current version of the model and a plausible version with
@@ -15078,8 +15100,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0959_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0959_Gipiškis2024
     name: Scenario analysis
     description: "Scenario analysis involves development of several plausible future
       scenarios, where these scenarios may be generated from varying the assumptions
@@ -15094,8 +15116,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0960_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0960_Gipiškis2024
     name: Fishbone diagram
     description: "The fishbone diagram, or a “cause-and-effect diagram” [107], can be
       used to show the potential causes of an undesirable event.
@@ -15116,8 +15138,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0961_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0961_Gipiškis2024
     name: Causal mapping
     description:
       "Causal mapping is a technique used to explore and map complex interactions
@@ -15137,8 +15159,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0962_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0962_Gipiškis2024
     name: Delphi technique
     description: "The Delphi technique is a multi-round forecasting process based on
       a structured framework on collecting and collating multiple expert judgments.
@@ -15159,8 +15181,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0963_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0963_Gipiškis2024
     name: Cross-impact analysis
     description: "Cross impact analysis is a forecasting methodology that analyzes the
       likelihood of a particular issue using expert analysis (i.e., Delphi technique)
@@ -15177,8 +15199,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0964_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0964_Gipiškis2024
     name: Bow-tie analysis
     description: "Bow-tie analysis is a method to assess the utility of implemented
       controls against a particular risk event. It involves centering the unwanted risk
@@ -15202,8 +15224,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0965_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0965_Gipiškis2024
     name: System-theoretic process analysis (STPA)
     description: "STPA is a method to assess the utility of implemented controls against
       a partic- ular risk within a complex system. Unlike bow-tie analysis, STPA factors
@@ -15232,8 +15254,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0966_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0966_Gipiškis2024
     name: Risk matrices
     description: "A risk matrix is a method for risk evaluation. It is a heatmap that,
       for each cell, shows the severity score weighted by the likelihood score of a
@@ -15253,8 +15275,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0967_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0967_Gipiškis2024
     name: Pre-allocate sufficient resources for risk man- agement
     description: "The process of conducting thorough risk management is potentially
       time-con- suming. Pre-allocating sufficient resources, in terms of personnel count
@@ -15268,7 +15290,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1028_Uuk2024
     name: Intolerable risk thresholds
     description: Assessing and monitoring AI models with regard to red-line risk or
@@ -15751,8 +15773,8 @@ controls:
   - id: A0392_NIST2024
     name: Performance Threshold Standards
     description: Establish minimum thresholds for performance or assurance criteria
-      and review as part of deployment approval ("go/"no-go") policies, procedures,
-      and processes, with reviewed processes and approval thresholds reflecting measurement
+      and review as part of deployment approval ('go/no-go') policies, procedures, and
+      processes, with reviewed processes and approval thresholds reflecting measurement
       of GAI capabilities and risks.
     isCategorizedAs:
       - mit-draft-ai-risk-mitigation-group-1.5
@@ -15987,7 +16009,7 @@ controls:
     type: Action
     hasDocumentation:
       - NIST.AI.600-1
-  - id: A0994_Gipiskis2024
+  - id: A0994_Gipiškis2024
     name: More energy-efficient models or techniques
     description: Deploying more energy-efficient models can reduce their environmental
       impact. Different model architectural choices result in varying environmental
@@ -15999,8 +16021,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.6
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0995_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0995_Gipiškis2024
     name: Disclosure of energy consumption by AI systems to authorities
     description:
       Disclosures can direct more necessary attention and scrutiny to projects
@@ -16012,8 +16034,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.6
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0996_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0996_Gipiškis2024
     name: Using low carbon intensity energy grids
     description: Moving model training to energy grids with low carbon intensity can
       reduce the negative environmental impact [30]. The efficiency of energy grids
@@ -16023,7 +16045,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.6
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A0006_Bengio2025
     name: Engagement with Relevant Experts and Communities
     description: "Domain experts, users, and impacted communities have unique insights
@@ -16769,7 +16791,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0984_Gipiskis2024
+  - id: A0984_Gipiškis2024
     name: Protect proprietary or unreleased AI model ar- chitecture and parameters
     description: "The developers of AI models can invest in cybersecurity to prevent
       compute re- sources, training source code, model weights, and other critical resources
@@ -16786,8 +16808,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0985_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0985_Gipiškis2024
     name: Hardware limitations on data center network connections
     description:
       "Hardware-enforced bandwidth limitations on data center network connections
@@ -16807,7 +16829,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1045_Uuk2024
     name: Advanced information security
     description:
@@ -16886,7 +16908,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0978_Gipiskis2024
+  - id: A0978_Gipiškis2024
     name: AI model-assisted oversight of AI systems
     description:
       "AI model-assisted oversight can help monitor and supervise the training
@@ -16920,8 +16942,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1011_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1011_Gipiškis2024
     name: GPAI models explaining model outputs in a zero-sum debate game
     description: "Debate is a technique that aims to produce reliable explanations of
       AI model outputs that are too complicated for humans to understand, by letting
@@ -16949,7 +16971,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1026_Uuk2024
     name: Harmlessness training
     description: State-of-the-art reinforcement learning and fine-tuning techniques,
@@ -17198,7 +17220,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0935_Gipiskis2024
+  - id: A0935_Gipiškis2024
     name: Restrict web access during AI training
     description: Developers can restrict or disable AI systems’ internet access during
       training. For example, developers can restrict web access to read-only (e.g.,
@@ -17208,8 +17230,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0936_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0936_Gipiškis2024
     name: Adversarial training
     description: "Adversarial training [83] is a technique for training AI models in
       which adver- sarial inputs are generated for a model, and the model is then trained
@@ -17221,8 +17243,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0939_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0939_Gipiškis2024
     name: Incorporating the estimation of atypical input samples or classes for better
       model reliability
     description: Incorporating the estimation of rare atypical input samples or classes
@@ -17236,8 +17258,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0947_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0947_Gipiškis2024
     name: Enforcing model output interpretability post-training
     description: "While a resulting trained model may be opaque with respect to its
       predictions, the final output in a system that involves the model can nonetheless
@@ -17251,8 +17273,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0948_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0948_Gipiškis2024
     name: Paraphrasing to reduce hidden information
     description:
       Paraphrasing can mitigate steganography and encoded reasoning by reducing
@@ -17261,8 +17283,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0951_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0951_Gipiškis2024
     name: Modification of model internal representation
     description: "Model providers can modify the internal representation of the model
       [135, 237] up to the granular level and in consultation with other tools that
@@ -17277,8 +17299,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0952_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0952_Gipiškis2024
     name: Incorporating goal uncertainty into AI systems to mitigate risky behaviors
     description:
       Incorporating uncertainty into AI system goals can prevent rushed decision-
@@ -17288,8 +17310,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0973_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0973_Gipiškis2024
     name: Pop-up interventions in LLMs
     description: "Supplementary information can be shown to the user in specific query
       topics where factual accuracy is critical. This intervention can effectively divert
@@ -17305,8 +17327,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0983_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0983_Gipiškis2024
     name: Least Privilege access
     description:
       "Deployers of an AI system can restrict its permissions to a whitelisted
@@ -17326,8 +17348,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0990_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0990_Gipiškis2024
     name: Debiasing methods
     description: "Providers of AI models can apply techniques to reduce the biases of
       their models.
@@ -17359,8 +17381,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0991_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0991_Gipiškis2024
     name: Knowledge unlearning techniques
     description:
       Knowledge unlearning techniques allow specific information to be “forgotten”
@@ -17371,8 +17393,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1014_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1014_Gipiškis2024
     name: Tamper-resistant safeguards for open-weight models
     description: Training and implementing safeguards can improve the robustness of
       open- weight models against modifications from fine-tuning or other methods to
@@ -17383,7 +17405,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1019_Uuk2024
     name: Adversarial Robustness
     description: State-of-the-art methods such as adversarial training to make models
@@ -17639,7 +17661,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0974_Gipiskis2024
+  - id: A0974_Gipiškis2024
     name: AI identification
     description: "AI identifiers can be used to indicate that an AI is involved in a
       process or an interaction [40].
@@ -17656,8 +17678,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.4
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0975_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0975_Gipiškis2024
     name: AI output watermaking
     description:
       Output produced by or with AI assistance can be marked to clearly identify
@@ -17669,8 +17691,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.4
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0976_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0976_Gipiškis2024
     name: AI output metadata
     description: Output produced or whose production is aided by AI can contain metadata
       to record its origin and the transformations it has undergone. Metadata is evidence
@@ -17684,8 +17706,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.4
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0937_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0937_Gipiškis2024
     name: Cost-inducing training of AI models specifically for malicious use
     description: AI models can be designed to make further post-training modifications
       (e.g., fine-tuning) too costly for malicious uses while preserving normal adaptability
@@ -17694,7 +17716,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A0001_Bengio2025
     name: Audits
     description:
@@ -18942,7 +18964,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0942_Gipiskis2024
+  - id: A0942_Gipiškis2024
     name: Scope red-teaming activities based on deploy- ment context
     description:
       "Red-teaming activities can be tailored and compared based on the specific
@@ -18963,8 +18985,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0943_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0943_Gipiškis2024
     name: Red teaming to test the resilience of open-weights models to fine-tuning
     description: Before the release of open-weights models, red teamers can test the
       resilience of safety training against fine-tuning. Safety training may be partially
@@ -18974,8 +18996,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0945_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0945_Gipiškis2024
     name: Audits with specific scoped goals
     description:
       Audits of AI systems will be easier to perform, and have clearer results
@@ -18985,8 +19007,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0946_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0946_Gipiškis2024
     name: Evaluating explainability method sensitivity to data inputs and model parameters
     description: Model parameter and data randomization tests can be employed as sanity
       checks [2] to determine the relationship between a model, its inputs, and the
@@ -18997,8 +19019,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0949_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0949_Gipiškis2024
     name: Testing for erroneous or irrelevant features through concept learning
     description: Interpretability techniques, particularly concept learning [77], can
       be used to test whether a model is learning erroneous features or relying on irrelevant
@@ -19009,8 +19031,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0953_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0953_Gipiškis2024
     name: Evaluations for truthful outputs
     description: AI systems can be evaluated for truthfulness when answering questions,
       includ- ing in contexts where humans tend to give incorrect but widely-accepted
@@ -19021,8 +19043,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0954_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0954_Gipiškis2024
     name: Interpretability techniques that target deception
     description: Interpretability techniques can be used for finding the root causes
       of outputs of an AI model that reliably lead to false beliefs for its users (e.g.,
@@ -19039,8 +19061,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0955_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0955_Gipiškis2024
     name: Benchmarks for Situational Awareness
     description: A model is situationally aware if it internally represents that it
       is a machine learning model and if it can accurately infer or act on model-relevant
@@ -19054,8 +19076,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0956_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0956_Gipiškis2024
     name: Evaluating AI systems’ performance on self-proliferation-related tasks
     description:
       "To prevent AI systems from self-proliferating, developers of AI systems
@@ -19075,8 +19097,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0958_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0958_Gipiškis2024
     name: Employing qualitative assessments in difficult- to-measure domains
     description:
       Qualitative evaluation can be used in cases when quantitative measurement
@@ -19086,8 +19108,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0981_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0981_Gipiškis2024
     name: Encouraging downstream provider to evaluate models for deployment-specific
       failure modes
     description: In some cases, AI system deployers are better positioned to perform
@@ -19100,8 +19122,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0987_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0987_Gipiškis2024
     name: Sandboxing of AI Systems
     description: AI systems can be developed and tested within a sandbox, (a secure
       and iso- lated environment used for separating running programs), such that outside
@@ -19113,8 +19135,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0993_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0993_Gipiškis2024
     name: Quantifying privacy risks of AI models
     description: "Measuring privacy risks of an AI model allows the provider and user
       to calibrate their expectations on where the model can be applied, and it allows
@@ -19134,8 +19156,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0997_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0997_Gipiškis2024
     name: Red team access to the final version of a model pre-deployment
     description: "Granting red teams access to the final pre-release version of the
       model can help with identifying potentially dangerous model properties. These
@@ -19149,8 +19171,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0998_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0998_Gipiškis2024
     name: Red teaming for GPAI system evaluation
     description:
       Red teaming refers to simulated adversarial attacks performed to identify
@@ -19160,8 +19182,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0999_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0999_Gipiškis2024
     name: Dynamic benchmarking
     description: "Dynamic benchmarks are benchmarks that can be continuously updated
       with new human-generated data. By having one or more target models “in the loop,”
@@ -19177,8 +19199,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1000_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1000_Gipiškis2024
     name: Benchmark dataset auditing
     description: Auditing benchmark datasets allows for verification of the utility
       and limitations of the datasets [158]. This allows the provider to more accurately
@@ -19189,8 +19211,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1001_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1001_Gipiškis2024
     name: Informative and powerful benchmarks
     description: "Developers of GPAI systems can select benchmarks that are difficult
       enough to be informative about the capabilities of their AI systems, and cover
@@ -19205,8 +19227,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1002_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1002_Gipiškis2024
     name: Statistical data quality reports for benchmarks
     description: If a benchmark dataset is too large to allow for the identification
       and removal of all flawed instances, statistical reports on the data composition
@@ -19216,8 +19238,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1003_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1003_Gipiškis2024
     name: Avoiding benchmark data with publicly avail- able solutions and releasing
       contextual information for internet-derived data
     description: Evaluators can improve the integrity of benchmarks by avoiding data
@@ -19231,8 +19253,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1008_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1008_Gipiškis2024
     name: Frequent benchmarking to identify when red teaming is needed
     description: "Benchmarks, once created, are inexpensive to apply but may be less
       informative than red teaming. One reason is that sensitive data (e.g., relating
@@ -19250,8 +19272,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1009_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1009_Gipiškis2024
     name: Test robustness of GPAI system on relevant benchmarks
     description:
       Various benchmarks [52, 236] have been developed to assess the robustness
@@ -19263,8 +19285,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1010_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1010_Gipiškis2024
     name: Benchmarking
     description:
       Benchmarking is an evaluation method where different models are compared
@@ -19276,8 +19298,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1012_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1012_Gipiškis2024
     name: Using an AI model to evaluate AI model outputs
     description: In cases where the outputs of AI models cannot be easily evaluated,
       AI mod- els can be used to evaluate their outputs or the outputs of other AI models
@@ -19288,8 +19310,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1013_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1013_Gipiškis2024
     name: Frequent testing when scaling model or dataset
     description: Testing models after significant increases in compute, data, or model
       parame- ters. Even relatively small changes to model or dataset size can introduce
@@ -19299,8 +19321,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1015_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1015_Gipiškis2024
     name: Robustness Certificates
     description:
       A model can be certified to withstand adversarial attacks given specific
@@ -19314,7 +19336,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1020_Uuk2024
     name: Bug bounty programs
     description: Clear and user-friendly bug bounty programs that acknowledge and reward
@@ -19916,7 +19938,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0934_Gipiskis2024
+  - id: A0934_Gipiškis2024
     name: Use of Synthetic Data
     description:
       Synthetic data refers to data that is not collected from the real world.
@@ -19930,8 +19952,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0940_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0940_Gipiškis2024
     name: Data cleaning
     description: Providers can filter out the training dataset via multiple layered
       techniques, ranging from rule-based filters to anomaly detection via data point
@@ -19943,8 +19965,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0989_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0989_Gipiškis2024
     name: Diverse data labeling and algorithm fairness audits
     description: To mitigate biases in AI models, model providers may want to prioritize
       di- versity among data labelers and conduct regular fairness audits on their algo-
@@ -19954,8 +19976,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0992_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0992_Gipiškis2024
     name: Differential privacy
     description:
       Differential privacy techniques [8] can be used to protect users’ privacy
@@ -19969,8 +19991,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1004_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1004_Gipiškis2024
     name: Reporting data decontamination efforts
     description: Decontamination analysis may involve comparing the training dataset
       with the benchmark data, and publishing a report with statistics such as data
@@ -19980,8 +20002,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1006_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1006_Gipiškis2024
     name: Preventing or mitigating data contamination and leakage
     description: "Developers of GPAIS and creators of benchmarks can take actions to
       prevent AI models from being trained on contaminated or leaked data, or mitigate
@@ -19997,8 +20019,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1007_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1007_Gipiškis2024
     name: Contamination detection
     description: "Contamination detection refers to techniques for assessing whether
       and to what extent a given model has benchmark data in its training dataset [161,
@@ -20014,8 +20036,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1016_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1016_Gipiškis2024
     name: Documentation of data collection, annotation, maintenance practices
     description:
       Dataset collection, annotation, and maintenance processes can be documented
@@ -20027,7 +20049,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1022_Uuk2024
     name: Data curation
     description:
@@ -20217,7 +20239,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0970_Gipiskis2024
+  - id: A0970_Gipiškis2024
     name: Limit deployment scope
     description: AI models can be restricted in terms of its use cases, where providers
       can require the deployers to limit its deployment to a predefined scope [81],
@@ -20227,8 +20249,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0971_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0971_Gipiškis2024
     name: Restricted usage terms for open-source models
     description:
       "Developers of open-weights and open-source AI models can vet and restrict
@@ -20243,8 +20265,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0986_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0986_Gipiškis2024
     name: Structured access to a model
     description: "Structured access refers to methods which limit users’ or deployers’
       direct access to a model’s parameters by constraining access to a model through
@@ -20260,7 +20282,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1025_Uuk2024
     name: Fine-tuning restrictions
     description:
@@ -20345,7 +20367,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0968_Gipiskis2024
+  - id: A0968_Gipiškis2024
     name: Staged release of model weights
     description:
       "When a model is developed by a provider for use in a certain AI system,
@@ -20361,8 +20383,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.4
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0969_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0969_Gipiškis2024
     name: Gradual or incremental monitored release of model access
     description: AI systems can be released for access incrementally, starting with
       a small and selected deployer base before progressively being released to a wider
@@ -20377,7 +20399,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.4
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1023_Uuk2024
     name: Deploying powerful models in stages
     description:
@@ -20503,7 +20525,7 @@ controls:
     name: Continuous Monitoring of Risk Controls
     description: Developers must therefore implement continuous monitoring of both KRIs
       and KCIs to ensure that KCI thresholds are met once KRI thresholds are crossed
-      according to the predefined "if-then" statements established in the risk analysis
+      according to the predefined 'if-then' statements established in the risk analysis
       and evaluation phase.
     isCategorizedAs:
       - mit-draft-ai-risk-mitigation-group-3.5
@@ -20956,7 +20978,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0950_Gipiskis2024
+  - id: A0950_Gipiškis2024
     name: Dashboard of model properties
     description:
       "A dashboard [41] displays all the relevant information about the model’s
@@ -20974,8 +20996,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0977_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0977_Gipiškis2024
     name: Monitoring of model capabilities
     description: "AI models are often trained to develop specific capabilities by using
       appropriate training data and training goals. However, models may develop capabilities
@@ -20989,8 +21011,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0979_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0979_Gipiškis2024
     name: Post-deployment ongoing monitoring for unexpected use cases
     description:
       "Ongoing monitoring of AI systems can uncover emergent or newly identified
@@ -21007,8 +21029,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0980_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0980_Gipiškis2024
     name: Monitoring protocols for po- tentially adversarial GPAI systems
     description:
       "Similar to cybersecurity protocols, AI providers can prepare in advance
@@ -21047,8 +21069,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A1005_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A1005_Gipiškis2024
     name: Tracking benchmark leakage
     description: Constant monitoring and documentation of benchmark leakage can help
       with the early detection of benchmark leaks [224, 95].
@@ -21056,7 +21078,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A0039_Casper2025
     name: Shutdown procedures
     description: Developers can be required to document if and which protocols exist
@@ -21419,7 +21441,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0941_Gipiskis2024
+  - id: A0941_Gipiškis2024
     name: Internal data poisoning diagnosis
     description: Providers can have an internal framework to identify what specific
       data poison- ing attack their model may be a victim of based on a set of symptoms,
@@ -21430,8 +21452,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.6
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
-  - id: A0988_Gipiskis2024
+      - doc-Gipiškis2024
+  - id: A0988_Gipiškis2024
     name: Redundant systems not reliant on GPAI
     description: "Redundant systems provide continuation of a given system’s processes
       in case of failure of the given system. Importantly, redundant systems should
@@ -21446,7 +21468,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.6
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1035_Uuk2024
     name: Safety Drills
     description: Regularly practicing the implementation of an emergency response plan
@@ -22000,7 +22022,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0938_Gipiskis2024
+  - id: A0938_Gipiškis2024
     name: Calibrated confidence measures for model pre- dictions
     description:
       Incorporating calibrated confidence measures alongside a model’s predictions
@@ -22013,7 +22035,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.1
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A0034_Casper2025
     name: Model registration
     description: Developers can be required to register (McKernon et al., 2024) frontier
@@ -22903,7 +22925,7 @@ controls:
     hasDocumentation:
       - doc-UK Government2023
   - id: A0861_UK_Government2023
-    name: Vulnerability Reports for Controllability Issues (i.e., "Misalignment")
+    name: Vulnerability Reports for Controllability Issues (i.e., 'Misalignment')
     description: "This process could have as wide a scope as is necessary and ensure
       that frontier AI organisations have the ability to respond appropriately to reports
       of vulnerabilities. The process could accept reports on any class of model vulnerabilities
@@ -22930,7 +22952,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0982_Gipiskis2024
+  - id: A0982_Gipiškis2024
     name: Encourage reporting of critical vulnerabilities to the upstream provider or
       other relevant stakeholders
     description: Downstream AI system deployers can report critical vulnerabilities
@@ -22941,7 +22963,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.3
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1036_Uuk2024
     name: Safety incident reports and security information sharing
     description: Disclosing reports about AI incidents, such as concrete harms and near
@@ -23183,7 +23205,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0972_Gipiskis2024
+  - id: A0972_Gipiškis2024
     name: Release strategy disagreement between developers
     description: Developers of restricted-access models with similar capabilities may
       disagree about the strategy or precautions to take for model release, especially
@@ -23194,7 +23216,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.4
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1039_Uuk2024
     name: Sharing safety cases
     description: Disclosing to a regulator how high-stakes decisions regarding model
@@ -23409,7 +23431,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0944_Gipiskis2024
+  - id: A0944_Gipiškis2024
     name: Pre-deployment access by third-party auditors
     description:
       Prior to full deployment of general-purpose AI models, a group of third-party
@@ -23423,7 +23445,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.5
     type: Action
     hasDocumentation:
-      - doc-Gipiskis2024
+      - doc-Gipiškis2024
   - id: A1018_Uuk2024
     name: Advanced model access for vetted external researchers
     description: "Examples of advanced access rights could include any of the following:

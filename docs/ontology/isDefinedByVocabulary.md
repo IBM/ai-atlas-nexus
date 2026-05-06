@@ -13,19 +13,30 @@ Alias: isDefinedByVocabulary
 | --------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [Adapter](Adapter.md)             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [AiTask](AiTask.md)               | A task, such as summarization and classification, performed by an AI             | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [Term](Term.md)                   | A term and its definitions                                                       | no            |
-| [Capability](Capability.md)       | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
-| [Entry](Entry.md)                 | An entry and its definitions                                                     | no            |
-| [Risk](Risk.md)                   | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [Certification](Certification.md) | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
-| [Principle](Principle.md)         | A representation of values or norms that must be taken into consideration whe... | no            |
-| [AiSystem](AiSystem.md)           | A compound AI System composed of one or more AI capablities                      | no            |
 | [AiAgent](AiAgent.md)             | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [Term](Term.md)                   | A term and its definitions                                                       | no            |
+| [Certification](Certification.md) | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AiSystem](AiSystem.md)           | A compound AI System composed of one or more AI capablities                      | no            |
+| [Capability](Capability.md)       | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
+| [Principle](Principle.md)         | A representation of values or norms that must be taken into consideration whe... | no            |
+| [Risk](Risk.md)                   | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Entry](Entry.md)                 | An entry and its definitions                                                     | no            |
 
 ## Properties
 
-- Range: [Vocabulary](Vocabulary.md)
+### Type and Range
+
+| Property  | Value                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------ |
+| Range     | [Vocabulary](Vocabulary.md)                                                                |
+| Domain Of | [Entry](Entry.md), [Term](Term.md), [Adapter](Adapter.md), [LLMIntrinsic](LLMIntrinsic.md) |
+| Slot URI  | [schema:isPartOf](http://schema.org/isPartOf)                                              |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

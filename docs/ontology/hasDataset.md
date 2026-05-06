@@ -17,9 +17,18 @@ Alias: hasDataset
 
 ## Properties
 
-- Range: [Dataset](Dataset.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                 |
+| --------- | --------------------- |
+| Range     | [Dataset](Dataset.md) |
+| Domain Of | [AiEval](AiEval.md)   |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

@@ -15,7 +15,18 @@ Alias: hasImpact
 
 ## Properties
 
-- Range: [Impact](Impact.md)
+### Type and Range
+
+| Property  | Value                           |
+| --------- | ------------------------------- |
+| Range     | [Impact](Impact.md)             |
+| Domain    | [RiskConcept](RiskConcept.md)   |
+| Domain Of | [RiskIncident](RiskIncident.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

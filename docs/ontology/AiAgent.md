@@ -349,6 +349,12 @@ URI: [nexus:AiAgent](https://ibm.github.io/ai-atlas-nexus/ontology/AiAgent)
     - [AiSystem](AiSystem.md) [ [BaseAi](BaseAi.md)]
       - **AiAgent**
 
+## Class Properties
+
+| Property | Value |
+| -------- | ----- |
+| Mixin    | Yes   |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                                                                                        | Description                                                                      | Inheritance                            |
@@ -365,7 +371,7 @@ URI: [nexus:AiAgent](https://ibm.github.io/ai-atlas-nexus/ontology/AiAgent)
 | [isDevelopedBy](isDevelopedBy.md)                 | 0..1 <br/> [AIDeveloper](AIDeveloper.md)                                                                     | Indicates the developer of an AI system or component                             | [AiSystem](AiSystem.md)                |
 | [hasAISubject](hasAISubject.md)                   | 0..1 <br/> [AISubject](AISubject.md)                                                                         | Indicates the subjects of an AI system                                           | [AiSystem](AiSystem.md)                |
 | [hasAIUser](hasAIUser.md)                         | 0..1 <br/> [String](String.md)                                                                               | Indicate the end-user of an AI system                                            | [AiSystem](AiSystem.md)                |
-| [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) | A relationship where an entity relates to a risk                                 | [AiSystem](AiSystem.md)                |
+| [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md) | A relationship where an entity relates to a risk                                 | [AiSystem](AiSystem.md)                |
 | [producer](producer.md)                           | 0..1 <br/> [Organization](Organization.md)                                                                   | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)                    |
 | [hasModelCard](hasModelCard.md)                   | \* <br/> [String](String.md)                                                                                 | A relationship to model card references                                          | [BaseAi](BaseAi.md)                    |
 | [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)                                                                   | Indicates documentation associated with an entity                                | [Entry](Entry.md), [BaseAi](BaseAi.md) |
@@ -506,7 +512,6 @@ attributes:
     description: Specifies the domain an AI system is used within.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isAppliedWithinDomain
     alias: isAppliedWithinDomain
     owner: AiAgent
@@ -520,7 +525,6 @@ attributes:
     description: Specifies the domain an AI system is used within.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isUsedWithinLocality
     alias: isUsedWithinLocality
     owner: AiAgent
@@ -545,7 +549,6 @@ attributes:
     description: Indicates stakeholders of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''airo:AISystem'', ''airo:AIComponent'']'
     slot_uri: airo:hasStakeholder
     alias: hasStakeholder
     owner: AiAgent
@@ -557,7 +560,6 @@ attributes:
     description: Indicates the deployer of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isDeployedBy
     alias: isDeployedBy
     owner: AiAgent
@@ -569,7 +571,6 @@ attributes:
     description: Indicates the developer of an AI system or component.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''AISystem'', ''AIComponent'']'
     slot_uri: airo:isDevelopedBy
     alias: isDevelopedBy
     owner: AiAgent
@@ -581,7 +582,6 @@ attributes:
     description: Indicates the subjects of an AI system
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: '[''airo:AISystem'']'
     slot_uri: airo:hasAISubject
     alias: hasAISubject
     owner: AiAgent
@@ -593,7 +593,7 @@ attributes:
     description: Indicate the end-user of an AI system.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
-    domain: AISystem
+    domain: AiSystem
     slot_uri: airo:hasAiUser
     alias: hasAIUser
     owner: AiAgent

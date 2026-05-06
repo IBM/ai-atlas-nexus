@@ -97,6 +97,12 @@ URI: [airo:Modality](https://w3id.org/airo#Modality)
 - [Entity](Entity.md)
   - **Modality**
 
+## Class Properties
+
+| Property  | Value                                           |
+| --------- | ----------------------------------------------- |
+| Class URI | [airo:Modality](https://w3id.org/airo#Modality) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

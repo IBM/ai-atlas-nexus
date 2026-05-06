@@ -192,6 +192,12 @@ URI: [nexus:ControlActivity](https://ibm.github.io/ai-atlas-nexus/ontology/Contr
   - [Rule](Rule.md)
     - **ControlActivity**
 
+## Class Properties
+
+| Property | Value |
+| -------- | ----- |
+| Mixin    | Yes   |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                                                            | Description                                                                      | Inheritance         |
@@ -227,6 +233,42 @@ URI: [nexus:ControlActivity](https://ibm.github.io/ai-atlas-nexus/ontology/Contr
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | A control activity (rule) describing a prohibition to perform an activity        |
 | [ControlActivityObligation](ControlActivityObligation.md)         | A control activity (rule) describing an obligation for performing an activity    |
 | [ControlActivityRecommendation](ControlActivityRecommendation.md) | A control activity (rule) describing a recommendation for performing an activ... |
+
+## Usages
+
+| used by                                                           | used in                                           | type   | used                                  |
+| ----------------------------------------------------------------- | ------------------------------------------------- | ------ | ------------------------------------- |
+| [ControlActivity](ControlActivity.md)                             | [hasControlApplication](hasControlApplication.md) | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivity](ControlActivity.md)                             | [hasEvidenceCategory](hasEvidenceCategory.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivity](ControlActivity.md)                             | [hasTypicalLocation](hasTypicalLocation.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivity](ControlActivity.md)                             | [appliesToCapability](appliesToCapability.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivity](ControlActivity.md)                             | [hasRequirement](hasRequirement.md)               | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivity](ControlActivity.md)                             | [hasTypicalEvidence](hasTypicalEvidence.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [hasControlApplication](hasControlApplication.md) | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [hasEvidenceCategory](hasEvidenceCategory.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [hasTypicalLocation](hasTypicalLocation.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [appliesToCapability](appliesToCapability.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [hasRequirement](hasRequirement.md)               | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [hasTypicalEvidence](hasTypicalEvidence.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasControlApplication](hasControlApplication.md) | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasEvidenceCategory](hasEvidenceCategory.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasTypicalLocation](hasTypicalLocation.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [appliesToCapability](appliesToCapability.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasRequirement](hasRequirement.md)               | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasTypicalEvidence](hasTypicalEvidence.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [hasControlApplication](hasControlApplication.md) | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [hasEvidenceCategory](hasEvidenceCategory.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [hasTypicalLocation](hasTypicalLocation.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [appliesToCapability](appliesToCapability.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [hasRequirement](hasRequirement.md)               | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [hasTypicalEvidence](hasTypicalEvidence.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasControlApplication](hasControlApplication.md) | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasEvidenceCategory](hasEvidenceCategory.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasTypicalLocation](hasTypicalLocation.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [appliesToCapability](appliesToCapability.md)     | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasRequirement](hasRequirement.md)               | domain | [ControlActivity](ControlActivity.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasTypicalEvidence](hasTypicalEvidence.md)       | domain | [ControlActivity](ControlActivity.md) |
+| [Requirement](Requirement.md)                                     | [appliesToCapability](appliesToCapability.md)     | domain | [ControlActivity](ControlActivity.md) |
 
 ## Identifier and Mapping Information
 
@@ -335,6 +377,7 @@ attributes:
       (rule) belongs to
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasControlApplication
     alias: hasControlApplication
     owner: ControlActivity
@@ -347,6 +390,7 @@ attributes:
       etc.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasEvidenceCategory
     alias: hasEvidenceCategory
     owner: ControlActivity
@@ -360,6 +404,7 @@ attributes:
     description: The evidence is usually found here
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasTypicalLocation
     alias: hasTypicalLocation
     owner: ControlActivity
@@ -373,6 +418,7 @@ attributes:
     description: This evidence only applies to AI systems with this capability
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:appliesToCapability
     alias: appliesToCapability
     owner: ControlActivity
@@ -387,6 +433,7 @@ attributes:
     description: This requirement this rule belongs to
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasRequirement
     alias: hasRequirement
     owner: ControlActivity
@@ -400,6 +447,7 @@ attributes:
     description: The requirement type of whether this is preventive, detective, etc.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Any
     slot_uri: nexus:hasRequirementType
     alias: hasRequirementType
     owner: ControlActivity
@@ -412,6 +460,7 @@ attributes:
     description: The evidence is usually found here
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:hasTypicalEvidence
     alias: hasTypicalEvidence
     owner: ControlActivity

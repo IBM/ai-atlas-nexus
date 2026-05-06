@@ -95,6 +95,12 @@ URI: [dpv:Consequence](https://w3id.org/dpv#Consequence)
 - [Entity](Entity.md)
   - **Consequence**
 
+## Class Properties
+
+| Property  | Value                                               |
+| --------- | --------------------------------------------------- |
+| Class URI | [dpv:Consequence](https://w3id.org/dpv#Consequence) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

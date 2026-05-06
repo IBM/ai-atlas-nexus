@@ -97,6 +97,12 @@ URI: [airo:LocalityOfUse](https://w3id.org/airo#LocalityOfUse)
 - [Entity](Entity.md)
   - **LocalityOfUse**
 
+## Class Properties
+
+| Property  | Value                                                     |
+| --------- | --------------------------------------------------------- |
+| Class URI | [airo:LocalityOfUse](https://w3id.org/airo#LocalityOfUse) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

@@ -1,5 +1,5 @@
 from multiprocessing.pool import ThreadPool
-from typing import Optional
+from typing import Dict, Optional, Union
 
 from tqdm import tqdm
 
@@ -18,3 +18,11 @@ def run_parallel(
             outputs.append(output)
 
     return outputs
+
+
+# A wrapper to unpack parameters and call the given function
+def unwrap_arguments_and_call_func(
+    func,
+    param: Union[Dict, str],
+):
+    return func(**param) if isinstance(param, Dict) else func(param)

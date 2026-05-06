@@ -120,6 +120,12 @@ URI: [airo:AISubject](https://w3id.org/airo#AISubject)
   - [Stakeholder](Stakeholder.md)
     - **AISubject**
 
+## Class Properties
+
+| Property  | Value                                             |
+| --------- | ------------------------------------------------- |
+| Class URI | [airo:AISubject](https://w3id.org/airo#AISubject) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                              | Description                                                                      | Inheritance                   |

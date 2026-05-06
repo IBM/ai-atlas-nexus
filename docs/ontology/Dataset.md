@@ -130,6 +130,12 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 - [Entity](Entity.md)
   - **Dataset**
 
+## Class Properties
+
+| Property  | Value                                       |
+| --------- | ------------------------------------------- |
+| Class URI | [schema:Dataset](http://schema.org/Dataset) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range                      | Description                                                                      | Inheritance         |

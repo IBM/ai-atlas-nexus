@@ -15,9 +15,30 @@ Alias: hasRelatedTerm
 
 ## Properties
 
-- Range: [Term](Term.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                            |
+| --------- | ---------------------------------------------------------------- |
+| Range     | [Term](Term.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md) |
+| Domain    | [Any](Any.md)                                                    |
+| Domain Of | [LLMIntrinsic](LLMIntrinsic.md)                                  |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
+
+<details>
+<summary>Expressions & Logic</summary>
+#### Any Of
+
+Value must satisfy at least one of:
+
+- AnonymousSlotExpression({'range': 'RiskConcept'})
+- AnonymousSlotExpression({'range': 'Term'})
+
+</details>
 
 ## Identifier and Mapping Information
 

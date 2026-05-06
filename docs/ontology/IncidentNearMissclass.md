@@ -96,6 +96,12 @@ URI: [dpv:IncidentNearMissclass](https://w3id.org/dpv#IncidentNearMissclass)
   - [IncidentStatus](IncidentStatus.md)
     - **IncidentNearMissclass**
 
+## Class Properties
+
+| Property  | Value                                                                   |
+| --------- | ----------------------------------------------------------------------- |
+| Class URI | [dpv:IncidentNearMissclass](https://w3id.org/dpv#IncidentNearMissclass) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range          | Description                                                                      | Inheritance         |

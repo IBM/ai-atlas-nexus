@@ -148,6 +148,13 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
   - [Concept](Concept.md)
     - **RiskConcept**
 
+## Class Properties
+
+| Property  | Value                                                 |
+| --------- | ----------------------------------------------------- |
+| Class URI | [airo:RiskConcept](https://w3id.org/airo#RiskConcept) |
+| Mixin     | Yes                                                   |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance           |

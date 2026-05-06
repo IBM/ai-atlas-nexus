@@ -12,15 +12,26 @@ Alias: isProvidedBy
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [BaseAi](BaseAi.md)                         | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
-| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
 | [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
-| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | yes           |
+| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | yes           |
+| [BaseAi](BaseAi.md)                         | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
 
 ## Properties
 
-- Range: [AiProvider](AiProvider.md)
+### Type and Range
+
+| Property  | Value                                                   |
+| --------- | ------------------------------------------------------- |
+| Range     | [AiProvider](AiProvider.md)                             |
+| Domain Of | [BaseAi](BaseAi.md)                                     |
+| Slot URI  | [airo:isProvidedBy](https://w3id.org/airo#isProvidedBy) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

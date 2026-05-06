@@ -11,18 +11,28 @@ Alias: hasPart
 
 | Name                                    | Description                                                                      | Modifies Slot |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | yes           |
+| [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
 | [Group](Group.md)                       | Labelled groups of concepts                                                      | no            |
+| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | yes           |
+| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
 | [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | yes           |
 | [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        | yes           |
-| [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
-| [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
 
 ## Properties
 
-- Range: [String](String.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                                                                                                                        |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Range     | [String](String.md)                                                                                                          |
+| Domain Of | [Group](Group.md), [RiskControlGroup](RiskControlGroup.md), [RiskGroup](RiskGroup.md), [CapabilityGroup](CapabilityGroup.md) |
+| Slot URI  | [skos:member](http://www.w3.org/2004/02/skos/core#member)                                                                    |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

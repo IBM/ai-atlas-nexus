@@ -284,25 +284,16 @@ slots:
     inlined: false
     description: >-
       Specifies the domain an AI system is used within.
-    domain:
-      - AISystem
-      - AIComponent
     range: Domain
   isDeployedBy:
     slot_uri: airo:isDeployedBy
     description: >-
       Indicates the deployer of an AI system or component.
-    domain:
-      - AISystem
-      - AIComponent
     range: AIDeployer
   isDevelopedBy:
     slot_uri: airo:isDevelopedBy
     description: >-
       Indicates the developer of an AI system or component.
-    domain:
-      - AISystem
-      - AIComponent
     range: AIDeveloper
   isProvidedBy:
     slot_uri: airo:isProvidedBy
@@ -320,9 +311,6 @@ slots:
     inlined: false
     description: >-
       Specifies the domain an AI system is used within.
-    domain:
-      - AISystem
-      - AIComponent
     range: LocalityOfUse
   training_data_preprocessing:
     multivalued: true
@@ -362,21 +350,16 @@ slots:
     range: RiskControl
   hasAIUser:
     slot_uri: airo:hasAiUser
-    domain: AISystem
+    domain: AiSystem
     description: >-
       Indicate the end-user of an AI system.
   hasStakeholder:
     slot_uri: airo:hasStakeholder
-    domain:
-      - airo:AISystem
-      - airo:AIComponent
     range: Stakeholder
     description: >-
       Indicates stakeholders of an AI system or component.
   hasAISubject:
     slot_uri: airo:hasAISubject
-    domain:
-      - airo:AISystem
     range: AISubject
     description: >-
       Indicates the subjects of an AI system

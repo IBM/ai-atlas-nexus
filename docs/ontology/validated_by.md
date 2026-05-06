@@ -9,9 +9,17 @@ Alias: validated_by
 
 ## Properties
 
-- Range: [AiModelValidation](AiModelValidation.md)
+### Type and Range
 
-- Multivalued: True
+| Property | Value                                     |
+| -------- | ----------------------------------------- |
+| Range    | [AiModelValidation](AiModelValidation.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

@@ -130,6 +130,12 @@ URI: [dpv:Recommendation](https://w3id.org/dpv#Recommendation)
     - **Recommendation**
       - [ControlActivityRecommendation](ControlActivityRecommendation.md) [ [ControlActivity](ControlActivity.md)]
 
+## Class Properties
+
+| Property  | Value                                                     |
+| --------- | --------------------------------------------------------- |
+| Class URI | [dpv:Recommendation](https://w3id.org/dpv#Recommendation) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |

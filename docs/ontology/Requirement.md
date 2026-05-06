@@ -207,13 +207,17 @@ URI: [nexus:Requirement](https://ibm.github.io/ai-atlas-nexus/ontology/Requireme
 
 ## Usages
 
-| used by                                                           | used in                             | type  | used                          |
-| ----------------------------------------------------------------- | ----------------------------------- | ----- | ----------------------------- |
-| [ControlActivity](ControlActivity.md)                             | [hasRequirement](hasRequirement.md) | range | [Requirement](Requirement.md) |
-| [ControlActivityPermission](ControlActivityPermission.md)         | [hasRequirement](hasRequirement.md) | range | [Requirement](Requirement.md) |
-| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasRequirement](hasRequirement.md) | range | [Requirement](Requirement.md) |
-| [ControlActivityObligation](ControlActivityObligation.md)         | [hasRequirement](hasRequirement.md) | range | [Requirement](Requirement.md) |
-| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasRequirement](hasRequirement.md) | range | [Requirement](Requirement.md) |
+| used by                                                           | used in                             | type   | used                          |
+| ----------------------------------------------------------------- | ----------------------------------- | ------ | ----------------------------- |
+| [ControlActivity](ControlActivity.md)                             | [hasRequirement](hasRequirement.md) | range  | [Requirement](Requirement.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)         | [hasRequirement](hasRequirement.md) | range  | [Requirement](Requirement.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)       | [hasRequirement](hasRequirement.md) | range  | [Requirement](Requirement.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)         | [hasRequirement](hasRequirement.md) | range  | [Requirement](Requirement.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | [hasRequirement](hasRequirement.md) | range  | [Requirement](Requirement.md) |
+| [Requirement](Requirement.md)                                     | [hasApplication](hasApplication.md) | domain | [Requirement](Requirement.md) |
+| [Requirement](Requirement.md)                                     | [hasFrequency](hasFrequency.md)     | domain | [Requirement](Requirement.md) |
+| [Requirement](Requirement.md)                                     | [hasKeywords](hasKeywords.md)       | domain | [Requirement](Requirement.md) |
+| [Requirement](Requirement.md)                                     | [hasPrinciple](hasPrinciple.md)     | domain | [Requirement](Requirement.md) |
 
 ## Identifier and Mapping Information
 
@@ -334,6 +338,7 @@ attributes:
     description: The application category, Optional or Mandatory.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: nexus:hasApplication
     alias: hasApplication
     owner: Requirement
@@ -347,6 +352,7 @@ attributes:
     description: The frequency
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: nexus:hasFrequency
     alias: hasFrequency
     owner: Requirement
@@ -358,6 +364,7 @@ attributes:
     description: A collection of keywords
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: nexus:hasKeywords
     alias: hasKeywords
     owner: Requirement
@@ -371,6 +378,7 @@ attributes:
     description: Which of the AIUC-1 principles this requirement belongs to
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Requirement
     slot_uri: dpv:isPartOf
     alias: hasPrinciple
     owner: Requirement
@@ -384,6 +392,7 @@ attributes:
     description: This evidence only applies to AI systems with this capability
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: ControlActivity
     slot_uri: nexus:appliesToCapability
     alias: appliesToCapability
     owner: Requirement
@@ -398,6 +407,7 @@ attributes:
     description: The requirement type of whether this is preventive, detective, etc.
     from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
     rank: 1000
+    domain: Any
     slot_uri: nexus:hasRequirementType
     alias: hasRequirementType
     owner: Requirement

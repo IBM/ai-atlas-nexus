@@ -22,6 +22,12 @@ URI: [schema:Statement](http://schema.org/Statement)
 
 <!-- no inheritance hierarchy -->
 
+## Class Properties
+
+| Property  | Value                                           |
+| --------- | ----------------------------------------------- |
+| Class URI | [schema:Statement](http://schema.org/Statement) |
+
 ## Slots
 
 | Name                    | Cardinality and Range          | Description                                                                      | Inheritance |

@@ -15,9 +15,19 @@ Alias: refersToRisk
 
 ## Properties
 
-- Range: [Risk](Risk.md)
+### Type and Range
 
-- Multivalued: True
+| Property  | Value                           |
+| --------- | ------------------------------- |
+| Range     | [Risk](Risk.md)                 |
+| Domain    | [RiskIncident](RiskIncident.md) |
+| Domain Of | [RiskIncident](RiskIncident.md) |
+
+### Cardinality and Requirements
+
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 

@@ -15,7 +15,18 @@ Alias: hasConsequence
 
 ## Properties
 
-- Range: [Consequence](Consequence.md)
+### Type and Range
+
+| Property  | Value                           |
+| --------- | ------------------------------- |
+| Range     | [Consequence](Consequence.md)   |
+| Domain    | [RiskConcept](RiskConcept.md)   |
+| Domain Of | [RiskIncident](RiskIncident.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

@@ -117,6 +117,12 @@ URI: [schema:Organization](http://schema.org/Organization)
     - [AiProvider](AiProvider.md)
     - [AiOffice](AiOffice.md)
 
+## Class Properties
+
+| Property  | Value                                                 |
+| --------- | ----------------------------------------------------- |
+| Class URI | [schema:Organization](http://schema.org/Organization) |
+
 ## Slots
 
 | Name                                    | Cardinality and Range            | Description                                                                      | Inheritance         |

@@ -130,6 +130,12 @@ URI: [dpv:Permission](https://w3id.org/dpv#Permission)
     - **Permission**
       - [ControlActivityPermission](ControlActivityPermission.md) [ [ControlActivity](ControlActivity.md)]
 
+## Class Properties
+
+| Property  | Value                                             |
+| --------- | ------------------------------------------------- |
+| Class URI | [dpv:Permission](https://w3id.org/dpv#Permission) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range              | Description                                                                      | Inheritance         |

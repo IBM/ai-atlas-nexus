@@ -150,6 +150,12 @@ URI: [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/Capa
   - [Group](Group.md)
     - **CapabilityDomain** [ [CapabilityConcept](CapabilityConcept.md)]
 
+## Class Properties
+
+| Property  | Value                                                                                    |
+| --------- | ---------------------------------------------------------------------------------------- |
+| Class URI | [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/CapabilityDomain) |
+
 ## Slots
 
 | Name                                          | Cardinality and Range                          | Description                                                                      | Inheritance                              |

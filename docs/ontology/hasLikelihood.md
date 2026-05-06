@@ -15,7 +15,18 @@ Alias: hasLikelihood
 
 ## Properties
 
-- Range: [Likelihood](Likelihood.md)
+### Type and Range
+
+| Property  | Value                           |
+| --------- | ------------------------------- |
+| Range     | [Likelihood](Likelihood.md)     |
+| Domain    | [RiskConcept](RiskConcept.md)   |
+| Domain Of | [RiskIncident](RiskIncident.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 

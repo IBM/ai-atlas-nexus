@@ -1,0 +1,59 @@
+{
+    "ibm-risk-atlas": [
+        {
+            "Usecase": "AttaQ is a benchmark that measures the tendency of Large Language Models to generate harmful or undesirable responses. It consists of 1,402 adversarial questions in seven categories: deception, discrimination, harmful information, substance abuse, sexual content, personally identifiable information, and violence. The data was derived from the Anthropic/hh-rlhf dataset with semi-automatic labeling. Models are evaluated through a submission-based approach on HuggingFace. The benchmark uses a safety_metric for scoring. Data is licensed under MIT License.",
+            "Reasoning": "This is a safety/red-teaming benchmark containing adversarial attack prompts. The data itself contains harmful content by design (to test model safety). Key risks: the benchmark could be misused to train models to generate harmful outputs; the adversarial questions could enable dangerous uses; the data contains toxic content that could spread if misused; the benchmark specifically tests for harmful output generation capabilities.",
+            "Risks": [
+                "Harmful output",
+                "Spreading disinformation",
+                "Dangerous use",
+                "Toxic output",
+                "Data bias"
+            ]
+        },
+        {
+            "Usecase": "ETHOS is a hate speech detection benchmark containing 998 comments from social media platforms (YouTube and Reddit). The data includes binary labels for hate speech and multi-labels for categories like violence, gender, race, national origin, disability, religion, and sexual orientation. Annotation was done by crowdworkers on Figure Eight platform. The benchmark uses F1-score and accuracy metrics. The data is English-only and sourced from social media platforms.",
+            "Reasoning": "This benchmark's data comes from social media and contains hate speech by design. Key risks: the data reflects biases from social media platforms (data bias); outputs from models trained/evaluated on this data could produce biased hate speech classifications (output bias); the English-only scope means it cannot evaluate hate speech in other languages or cultural contexts (unrepresentative data); crowdworker annotation introduces subjectivity in labeling hate speech (uncertain data provenance); the benchmark methodology and scoring may not be fully transparent (lack of data transparency).",
+            "Risks": [
+                "Data bias",
+                "Output bias",
+                "Unrepresentative data",
+                "Uncertain data provenance",
+                "Lack of data transparency"
+            ]
+        },
+        {
+            "Usecase": "GSM8K is a benchmark of 8,732 grade school math word problems designed to evaluate multi-step mathematical reasoning in language models. Problems require 2-8 steps of elementary arithmetic. The dataset was created by human problem writers and verified by human solution writers. Models are evaluated in few-shot or chain-of-thought settings using exact match accuracy on final numeric answers. The data is English-only and covers only elementary math operations.",
+            "Reasoning": "This benchmark tests mathematical reasoning with human-created problems. Key risks: the data only covers English and elementary math, so strong performance does not indicate general reasoning ability (over- or under-reliance); the narrow domain of grade-school math means scores cannot be generalized to real-world mathematical tasks (improper usage); the exact-match scoring on final answers ignores reasoning quality — a model could arrive at the right answer through wrong reasoning (incomplete advice); the human-created problems may contain demographic or cultural biases in word problem scenarios (data bias); methodology details need to be clearly documented for reproducibility (reproducibility).",
+            "Risks": [
+                "Over- or under-reliance",
+                "Improper usage",
+                "Data bias",
+                "Reproducibility",
+                "Incomplete advice"
+            ]
+        },
+        {
+            "Usecase": "MMLU (Massive Multitask Language Understanding) is a benchmark with 15,908 multiple-choice questions across 57 subjects spanning STEM, humanities, social sciences, and more. Questions range from elementary to professional difficulty. The data was collected from freely available online sources including practice exams and course materials. Models are evaluated in zero-shot and few-shot settings using accuracy. The benchmark is English-only and covers knowledge up to its creation date.",
+            "Reasoning": "This is a broad knowledge benchmark sourced from online materials. Key risks: the data sourced from online exams may contain errors or outdated information (uncertain data provenance); some subject areas may be underrepresented or biased toward Western/English perspectives (data bias, unrepresentative data); strong MMLU scores are often treated as evidence of general intelligence which overstates what the benchmark actually measures (over- or under-reliance); the multiple-choice format tests recognition rather than generation ability which could be misleading about model capabilities (improper usage); the benchmark data could be present in training sets of models being evaluated, inflating scores (data contamination).",
+            "Risks": [
+                "Over- or under-reliance",
+                "Data bias",
+                "Data contamination",
+                "Uncertain data provenance",
+                "Unrepresentative data"
+            ]
+        },
+        {
+            "Usecase": "MuSR (Multistep Soft Reasoning) is a benchmark of 756 instances across three scenario-based tasks: Murder Mystery, Object Placements, and Team Allocations. The data is synthetically generated using GPT-4 via a neurosymbolic pipeline. Models are evaluated in zero-shot and one-shot settings using accuracy. The benchmark is English-only and tests multi-step reasoning over natural language narratives.",
+            "Reasoning": "This benchmark uses GPT-4-generated synthetic data, which creates specific risks: models trained on GPT-4 outputs may have seen similar patterns, inflating scores (data contamination); the synthetic generation via a proprietary model cannot be exactly reproduced (reproducibility); the benchmark covers only 3 narrow scenario types in English, so scores cannot generalize to broader reasoning tasks (unrepresentative data, over- or under-reliance); good performance on narrative puzzles could give false confidence about general reasoning ability (improper usage).",
+            "Risks": [
+                "Data contamination",
+                "Reproducibility",
+                "Over- or under-reliance",
+                "Unrepresentative data",
+                "Improper usage"
+            ]
+        }
+    ]
+}

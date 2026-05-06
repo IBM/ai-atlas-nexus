@@ -168,6 +168,12 @@ URI: [airo:AiCapability](https://w3id.org/airo#AiCapability)
   - [Entry](Entry.md)
     - **AiTask**
 
+## Class Properties
+
+| Property  | Value                                                   |
+| --------- | ------------------------------------------------------- |
+| Class URI | [airo:AiCapability](https://w3id.org/airo#AiCapability) |
+
 ## Slots
 
 | Name                                              | Cardinality and Range                      | Description                                                                      | Inheritance         |
