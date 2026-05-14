@@ -72,13 +72,14 @@ class TestAutoBenchmarkCardTransformation:
 
         result = loader.transform_record(record)
 
-        assert result["id"] == "auto_benchmark_card_MMLU"
-        assert result["name"] == "MMLU"
-        assert result["description"] == "Massive Multitask Language Understanding"
-        assert "dateCreated" in result
-        assert result["hasDataType"] == ["text"]
-        assert result["hasDomains"] == ["general"]
-        assert result["hasLanguages"] == ["English"]
+        assert result is not None
+        assert result.id == "auto_benchmark_card_MMLU"
+        assert result.name == "MMLU"
+        assert result.description == "Massive Multitask Language Understanding"
+        assert result.dateCreated is not None
+        assert result.hasDataType == ["text"]
+        assert result.hasDomains == ["general"]
+        assert result.hasLanguages == ["English"]
 
     def test_transform_record_missing_benchmark_card(self):
         """Test that record without benchmark_card field is skipped"""
@@ -91,8 +92,8 @@ class TestAutoBenchmarkCardTransformation:
 
         result = loader.transform_record(record)
 
-        # Should return empty dict for invalid records
-        assert result == {}
+        # Should return None for invalid records
+        assert result is None
 
     def test_transform_record_with_nested_fields(self):
         """Test transforming record with nested field extraction"""
@@ -142,10 +143,11 @@ class TestAutoBenchmarkCardTransformation:
 
         result = loader.transform_record(record)
 
-        assert result["id"] == "auto_benchmark_card_SuperGLUE"
-        assert result["hasMetrics"] == ["Macro F1", "Accuracy"]
-        assert "NLP" in result["hasDomains"]
-        assert "Text classification" in result["hasTasks"]
+        assert result is not None
+        assert result.id == "auto_benchmark_card_SuperGLUE"
+        assert result.hasMetrics == ["Macro F1", "Accuracy"]
+        assert "NLP" in result.hasDomains
+        assert "Text classification" in result.hasTasks
 
     def test_normalize_value_string(self):
         """Test normalizing string values"""
@@ -268,7 +270,8 @@ class TestAutoBenchmarkCardTransformation:
 
         result = loader.transform_record(record)
 
-        assert result["id"] == "auto_benchmark_card_ARC"
-        assert result["name"] == "ARC"
-        assert "Reading comprehension" in result["hasDomains"]
-        assert "Accuracy" in result["hasMetrics"]
+        assert result is not None
+        assert result.id == "auto_benchmark_card_ARC"
+        assert result.name == "ARC"
+        assert "Reading comprehension" in result.hasDomains
+        assert "Accuracy" in result.hasMetrics

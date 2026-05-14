@@ -39,7 +39,7 @@ class AutoBenchmarkCardLoader(HFDataLoaderBase):
 
         )
 
-    def transform_record(self, record):
+    def transform_record(self, record) -> Optional[BenchmarkMetadataCard]:
         """
         Transform a HuggingFace Auto-BenchmarkCard record into a BenchmarkMetadataCard.
 
@@ -48,14 +48,14 @@ class AutoBenchmarkCardLoader(HFDataLoaderBase):
                 A single record from the Auto-BenchmarkCard dataset
 
         Returns:
-            Dict[str, Any]
-                A dictionary representing a BenchmarkMetadataCard
+            Optional[BenchmarkMetadataCard]
+                A BenchmarkMetadataCard instance, or None if benchmark_card is missing
         """
         # Extract the nested benchmark card data
         benchmark_card = record.get("benchmark_card", {})
         if not benchmark_card:
             logger.warning("Record has no benchmark_card field, skipping record")
-            return {}
+            return None
 
         # Core fields from benchmark card
         metadata_card = {
@@ -119,9 +119,9 @@ class AutoBenchmarkCardLoader(HFDataLoaderBase):
 
 
         # Add metadata
-        metadata_card["dateCreated"] = datetime.now().date().isoformat()
+        metadata_card["dateCreated"] = datetime.now().date()
 
-        return metadata_card
+        return BenchmarkMetadataCard(**metadata_card)
 
     def _generate_id(self, benchmark_card: Dict[str, Any]) -> str:
         """

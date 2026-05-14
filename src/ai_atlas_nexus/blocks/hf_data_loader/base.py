@@ -103,7 +103,8 @@ class HFDataLoaderBase(ABC):
         for idx, record in enumerate(self.dataset):
             try:
                 transformed = self.transform_record(record)
-                transformed_records.append(transformed)
+                if transformed is not None:
+                    transformed_records.append(transformed)
             except Exception as e:
                 logger.warning(f"Failed to transform record {idx}: {e}")
                 continue
@@ -116,20 +117,28 @@ class HFDataLoaderBase(ABC):
         Save transformed records to a YAML file.
 
         Args:
-            records: List[Dict[str, Any]]
-                List of transformed LinkML entities
+            records: List[Dict[str, Any] | BaseModel]
+                List of transformed LinkML entities (dicts or Pydantic models)
             output_path: str
                 Path to save the YAML file
         """
         output_path = Path(output_path)
         output_path.parent.mkdir(parents=True, exist_ok=True)
 
+        # Convert Pydantic models to dicts for YAML serialization
+        serialized_records = []
+        for record in records:
+            if hasattr(record, 'model_dump'):
+                serialized_records.append(record.model_dump(exclude_none=True))
+            else:
+                serialized_records.append(record)
+
         # Get the plural form of the class name (simple pluralization)
         # This assumes the LinkML model uses lowercase plurals
         entity_type = self._get_entity_type_plural()
 
         output_data = {
-            entity_type: records
+            entity_type: serialized_records
         }
 
         with open(output_path, 'w') as f:

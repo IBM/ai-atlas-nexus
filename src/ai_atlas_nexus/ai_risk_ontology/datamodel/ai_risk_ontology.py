@@ -317,6 +317,7 @@ class Dataset(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -409,6 +410,7 @@ class Vocabulary(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -438,6 +440,7 @@ class Vocabulary(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -487,6 +490,7 @@ class Taxonomy(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -516,6 +520,7 @@ class Taxonomy(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -576,6 +581,7 @@ class Concept(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -594,6 +600,7 @@ class Concept(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -654,6 +661,7 @@ class Control(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -714,6 +722,7 @@ class Group(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -735,6 +744,7 @@ class Group(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -799,6 +809,7 @@ class Entry(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -830,6 +841,7 @@ class Entry(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -872,6 +884,7 @@ class Term(Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -885,6 +898,7 @@ class Term(Entry):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -932,6 +946,7 @@ class Term(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -973,6 +988,7 @@ class Principle(Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -1023,6 +1039,7 @@ class Principle(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1082,6 +1099,7 @@ class Policy(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1115,6 +1133,7 @@ class LLMQuestionPolicy(Policy):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -1154,6 +1173,7 @@ class LLMQuestionPolicy(Policy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1215,6 +1235,7 @@ class Rule(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1257,6 +1278,7 @@ class Permission(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1318,6 +1340,7 @@ class Prohibition(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1379,6 +1402,7 @@ class Obligation(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1440,6 +1464,7 @@ class Recommendation(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1501,6 +1526,7 @@ class Certification(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1540,6 +1566,7 @@ class Certification(Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -1597,6 +1624,7 @@ class RiskTaxonomy(Taxonomy):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -1626,6 +1654,7 @@ class RiskTaxonomy(Taxonomy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1672,6 +1701,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -1701,6 +1731,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1763,6 +1794,7 @@ class RiskConcept(Concept):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -1781,6 +1813,7 @@ class RiskConcept(Concept):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1849,6 +1882,7 @@ class RiskControlGroup(RiskConcept, Group):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -1868,6 +1902,7 @@ class RiskControlGroup(RiskConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -1938,6 +1973,7 @@ class RiskGroup(RiskConcept, Group):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -1957,6 +1993,7 @@ class RiskGroup(RiskConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2044,6 +2081,7 @@ class Risk(RiskConcept, Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2069,6 +2107,7 @@ class Risk(RiskConcept, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2136,6 +2175,7 @@ class RiskControl(RiskConcept, Control):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2168,6 +2208,7 @@ class RiskControl(RiskConcept, Control):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2187,6 +2228,7 @@ class Action(RiskControl):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -2204,6 +2246,7 @@ class Action(RiskControl):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2247,6 +2290,7 @@ class Action(RiskControl):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2337,6 +2381,7 @@ class RiskIncident(RiskConcept, Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2355,6 +2400,7 @@ class RiskIncident(RiskConcept, Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2414,6 +2460,7 @@ class Impact(RiskConcept, Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2432,6 +2479,7 @@ class Impact(RiskConcept, Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2625,6 +2673,7 @@ class BaseAi(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2692,6 +2741,7 @@ class AiSystem(BaseAi, Entry):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -2711,6 +2761,7 @@ class AiSystem(BaseAi, Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2774,6 +2825,7 @@ class AiSystem(BaseAi, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2826,6 +2878,7 @@ class AiAgent(AiSystem):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -2845,6 +2898,7 @@ class AiAgent(AiSystem):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -2908,6 +2962,7 @@ class AiAgent(AiSystem):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -2948,6 +3003,7 @@ class LargeLanguageModelFamily(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3009,6 +3065,7 @@ class AiTask(Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3037,6 +3094,7 @@ class AiTask(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3298,6 +3356,7 @@ class AiModel(AIComponent, BaseAi):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3382,6 +3441,7 @@ class LargeLanguageModel(AiModel):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3719,6 +3779,7 @@ class StakeholderGroup(Group):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3740,6 +3801,7 @@ class StakeholderGroup(Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3790,6 +3852,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3819,6 +3882,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3878,6 +3942,7 @@ class CapabilityConcept(Concept):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3896,6 +3961,7 @@ class CapabilityConcept(Concept):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -3959,6 +4025,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -3980,6 +4047,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4064,6 +4132,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -4082,6 +4151,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4185,6 +4255,7 @@ class Capability(CapabilityConcept, Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -4212,6 +4283,7 @@ class Capability(CapabilityConcept, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4261,12 +4333,13 @@ class AiEval(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasDataset: Optional[list[str]] = Field(default=None, description="""A relationship to datasets that are used.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval']} })
-    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'BenchmarkMetadataCard']} })
+    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasImplementation: Optional[list[str]] = Field(default=None, description="""A relationship to a implementation defining the risk evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval'], 'slot_uri': 'schema:url'} })
     hasUnitxtCard: Optional[list[str]] = Field(default=None, description="""A relationship to a Unitxt card defining the risk evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval'], 'slot_uri': 'schema:url'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
@@ -4287,6 +4360,7 @@ class AiEval(Entity):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -4331,61 +4405,175 @@ class AiEvalResult(Fact, Entity):
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
 
 
-class BenchmarkMetadataCard(Entity):
+class SourceMetadata(Entity):
     """
-    Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly.  This is an implementation of the design set out in 'BenchmarkCards: Large Language Model and Risk Reporting' (https://doi.org/10.48550/arXiv.2410.12974)
+    Metadata about the source of an evaluation
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:benchmarkmetadatacard',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:sourcemetadata',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
-    describesAiEval: Optional[list[str]] = Field(default=None, description="""A relationship where a BenchmarkMetadataCard describes and AI evaluation (benchmark).""", json_schema_extra = { "linkml_meta": {'domain': 'BenchmarkMetadataCard',
-         'domain_of': ['BenchmarkMetadataCard'],
-         'inverse': 'hasBenchmarkMetadata'} })
-    hasDataType: Optional[list[str]] = Field(default=None, description="""The type of data used in the benchmark (e.g., text, images, or multi-modal)""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasDomains: Optional[list[str]] = Field(default=None, description="""The specific domains or areas where the benchmark is applied (e.g., natural language processing,computer vision).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasLanguages: Optional[list[str]] = Field(default=None, description="""The languages included in the dataset used by the benchmark (e.g., English, multilingual).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasSimilarBenchmarks: Optional[list[str]] = Field(default=None, description="""Benchmarks that are closely related in terms of goals or data type.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasResources: Optional[list[str]] = Field(default=None, description="""Links to relevant resources, such as repositories or papers related to the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasGoal: Optional[str] = Field(default=None, description="""The specific goal or primary use case the benchmark is designed for.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasAudience: Optional[str] = Field(default=None, description="""The intended audience, such as researchers, developers, policymakers, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'BenchmarkMetadataCard']} })
-    hasLimitations: Optional[list[str]] = Field(default=None, description="""Limitations in evaluating or addressing risks, such as gaps in demographic coverage or specific domains.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasOutOfScopeUses: Optional[list[str]] = Field(default=None, description="""Use cases where the benchmark is not designed to be applied and could give misleading results.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasDataSource: Optional[list[str]] = Field(default=None, description="""The origin or source of the data used in the benchmark (e.g., curated datasets, user submissions).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasDataSize: Optional[str] = Field(default=None, description="""The size of the dataset, including the number of data points or examples.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasDataFormat: Optional[str] = Field(default=None, description="""The structure and modality of the data (e.g., sentence pairs, question-answer format, tabular data).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasAnnotation: Optional[str] = Field(default=None, description="""The process used to annotate or label the dataset, including who or what performed the annotations (e.g., human annotators, automated processes).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasMethods: Optional[list[str]] = Field(default=None, description="""The evaluation techniques applied within the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasMetrics: Optional[list[str]] = Field(default=None, description="""The specific performance metrics used to assess models (e.g., accuracy, F1 score, precision, recall).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasCalculation: Optional[list[str]] = Field(default=None, description="""The way metrics are computed based on model outputs and the benchmark data.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasInterpretation: Optional[list[str]] = Field(default=None, description="""How users should interpret the scores or results from the metrics.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasBaselineResults: Optional[str] = Field(default=None, description="""The results of well-known or widely used models to give context to new performance scores.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasValidation: Optional[list[str]] = Field(default=None, description="""Measures taken to ensure that the benchmark provides valid and reliable evaluations.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
-         'domain': 'Any',
-         'domain_of': ['Term',
-                       'LLMQuestionPolicy',
-                       'Action',
-                       'AiSystem',
-                       'AiEval',
-                       'BenchmarkMetadataCard',
-                       'Adapter',
-                       'LLMIntrinsic']} })
-    hasDemographicAnalysis: Optional[str] = Field(default=None, description="""How the benchmark evaluates performance across different demographic groups (e.g., gender, race).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasConsiderationPrivacyAndAnonymity: Optional[str] = Field(default=None, description="""How any personal or sensitive data is handled and whether any anonymization techniques are applied.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
-                       'Documentation',
-                       'Vocabulary',
-                       'Taxonomy',
-                       'RiskTaxonomy',
-                       'RiskControlGroupTaxonomy',
-                       'BaseAi',
-                       'AiEval',
-                       'BenchmarkMetadataCard',
-                       'Adapter'],
-         'slot_uri': 'airo:hasLicense'} })
-    hasConsiderationConsentProcedures: Optional[str] = Field(default=None, description="""Information on how consent was obtained (if applicable), especially for datasets involving personal data.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
-    hasConsiderationComplianceWithRegulations: Optional[str] = Field(default=None, description="""Compliance with relevant legal or ethical regulations (if applicable).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    source_name: Optional[str] = Field(default=None, description="""Name of the evaluation source""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata']} })
+    source_type: Optional[str] = Field(default=None, description="""Type of source (e.g., evaluation_run)""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata', 'SourceData']} })
+    source_organization_name: Optional[str] = Field(default=None, description="""Organization that provided the evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata']} })
+    source_organization_url: Optional[str] = Field(default=None, description="""URL of the source organization""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata']} })
+    evaluator_relationship: Optional[str] = Field(default=None, description="""Relationship of evaluator (e.g., first_party, third_party)""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
+class ModelInfo(Entity):
+    """
+    Information about the AI model being evaluated
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:modelinfo',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
+
+    model_name: Optional[str] = Field(default=None, description="""Name of the AI model""", json_schema_extra = { "linkml_meta": {'domain_of': ['ModelInfo']} })
+    model_id: Optional[str] = Field(default=None, description="""Identifier of the AI model""", json_schema_extra = { "linkml_meta": {'domain_of': ['ModelInfo']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
+class SourceData(Entity):
+    """
+    Information about the data source used in evaluation
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:sourcedata',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
+
+    dataset_name: Optional[str] = Field(default=None, description="""Name of the dataset""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceData']} })
+    source_type: Optional[str] = Field(default=None, description="""Type of data source (e.g., hf_dataset)""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata', 'SourceData']} })
+    hf_repo: Optional[str] = Field(default=None, description="""HuggingFace repository""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceData']} })
+    hf_split: Optional[str] = Field(default=None, description="""HuggingFace dataset split""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceData']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
+class MetricConfig(Entity):
+    """
+    Configuration for evaluation metrics
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:metricconfig',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
+
+    lower_is_better: Optional[bool] = Field(default=None, description="""Whether lower scores are better""", json_schema_extra = { "linkml_meta": {'domain_of': ['MetricConfig']} })
+    score_type: Optional[str] = Field(default=None, description="""Type of score (e.g., continuous)""", json_schema_extra = { "linkml_meta": {'domain_of': ['MetricConfig']} })
+    min_score: Optional[float] = Field(default=None, description="""Minimum possible score""", json_schema_extra = { "linkml_meta": {'domain_of': ['MetricConfig']} })
+    max_score: Optional[float] = Field(default=None, description="""Maximum possible score""", json_schema_extra = { "linkml_meta": {'domain_of': ['MetricConfig']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
+class ScoreDetails(Entity):
+    """
+    Details about evaluation scores
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:scoredetails',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
+
+    score: Optional[float] = Field(default=None, description="""The evaluation score""", json_schema_extra = { "linkml_meta": {'domain_of': ['ScoreDetails']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
+class EvaluationResultRecord(Entity):
+    """
+    A single evaluation result record
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:evaluationresultrecord',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
+
+    hasSourceData: Optional[SourceData] = Field(default=None, description="""Source data information""", json_schema_extra = { "linkml_meta": {'domain': 'EvaluationResultRecord', 'domain_of': ['EvaluationResultRecord']} })
+    hasMetricConfig: Optional[MetricConfig] = Field(default=None, description="""Metric configuration""", json_schema_extra = { "linkml_meta": {'domain': 'EvaluationResultRecord', 'domain_of': ['EvaluationResultRecord']} })
+    hasScoreDetails: Optional[ScoreDetails] = Field(default=None, description="""Score details""", json_schema_extra = { "linkml_meta": {'domain': 'EvaluationResultRecord', 'domain_of': ['EvaluationResultRecord']} })
+    evaluation_name: Optional[str] = Field(default=None, description="""Name of the evaluation benchmark""", json_schema_extra = { "linkml_meta": {'domain_of': ['EvaluationResultRecord']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
+class EveryEvalAIResult(AiEvalResult):
+    """
+    An evaluation result from the Every Eval Ever dataset, capturing evaluation metadata and results from the EEE_datastore.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:everyevalairesult',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
+
+    hasSourceMetadata: Optional[SourceMetadata] = Field(default=None, description="""Source metadata for the evaluation""", json_schema_extra = { "linkml_meta": {'domain': 'EveryEvalAIResult', 'domain_of': ['EveryEvalAIResult']} })
+    hasModelInfo: Optional[ModelInfo] = Field(default=None, description="""Model information for the evaluation""", json_schema_extra = { "linkml_meta": {'domain': 'EveryEvalAIResult', 'domain_of': ['EveryEvalAIResult']} })
+    hasEvaluationResults: Optional[dict[str, EvaluationResultRecord]] = Field(default=None, description="""Array of evaluation results""", json_schema_extra = { "linkml_meta": {'domain': 'EveryEvalAIResult', 'domain_of': ['EveryEvalAIResult']} })
+    hasDataType: Optional[list[str]] = Field(default=None, description="""The type of data used in the benchmark (e.g., text, images, or multi-modal)""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDomains: Optional[list[str]] = Field(default=None, description="""The specific domains or areas where the benchmark is applied (e.g., natural language processing,computer vision).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasLanguages: Optional[list[str]] = Field(default=None, description="""The languages included in the dataset used by the benchmark (e.g., English, multilingual).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDataSource: Optional[list[str]] = Field(default=None, description="""The origin or source of the data used in the benchmark (e.g., curated datasets, user submissions).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDataSize: Optional[str] = Field(default=None, description="""The size of the dataset, including the number of data points or examples.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDataFormat: Optional[list[str]] = Field(default=None, description="""The structure and modality of the data (e.g., sentence pairs, question-answer format, tabular data).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasMethods: Optional[list[str]] = Field(default=None, description="""The evaluation techniques applied within the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasMetrics: Optional[list[str]] = Field(default=None, description="""The specific performance metrics used to assess models (e.g., accuracy, F1 score, precision, recall).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasLimitations: Optional[list[str]] = Field(default=None, description="""Limitations in evaluating or addressing risks, such as gaps in demographic coverage or specific domains.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasGoal: Optional[str] = Field(default=None, description="""The specific goal or primary use case the benchmark is designed for.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasAudience: Optional[list[str]] = Field(default=None, description="""The intended audience, such as researchers, developers, policymakers, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasResources: Optional[list[str]] = Field(default=None, description="""Links to relevant resources, such as repositories or papers related to the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
                        'Taxonomy',
@@ -4400,12 +4588,141 @@ class BenchmarkMetadataCard(Entity):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
+         'domain': 'Any',
+         'domain_of': ['Term',
+                       'LLMQuestionPolicy',
+                       'Action',
+                       'AiSystem',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic']} })
+    schema_version: Optional[str] = Field(default=None, description="""Version of the evaluation schema""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult']} })
+    evaluation_id: Optional[str] = Field(default=None, description="""Unique identifier for this evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult']} })
+    evaluation_timestamp: Optional[datetime ] = Field(default=None, description="""ISO 8601 timestamp when evaluation was performed""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult']} })
+    retrieved_timestamp: Optional[str] = Field(default=None, description="""Unix timestamp when the data was retrieved""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult']} })
+    isResultOf: Optional[str] = Field(default=None, description="""A relationship indicating that an entity is the result of an AI evaluation.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEvalResult'], 'slot_uri': 'dqv:isMeasurementOf'} })
+    value: str = Field(default=..., description="""Some numeric or string value""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
+    evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
+class BenchmarkMetadataCard(Entity):
+    """
+    Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly.  This is an implementation of the design set out in 'BenchmarkCards: Large Language Model and Risk Reporting' (https://doi.org/10.48550/arXiv.2410.12974)
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:benchmarkmetadatacard',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
+
+    describesAiEval: Optional[list[str]] = Field(default=None, description="""A relationship where a BenchmarkMetadataCard describes an AI evaluation (benchmark).""", json_schema_extra = { "linkml_meta": {'domain': 'BenchmarkMetadataCard',
+         'domain_of': ['BenchmarkMetadataCard'],
+         'inverse': 'hasBenchmarkMetadata'} })
+    hasDataType: Optional[list[str]] = Field(default=None, description="""The type of data used in the benchmark (e.g., text, images, or multi-modal)""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDomains: Optional[list[str]] = Field(default=None, description="""The specific domains or areas where the benchmark is applied (e.g., natural language processing,computer vision).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasLanguages: Optional[list[str]] = Field(default=None, description="""The languages included in the dataset used by the benchmark (e.g., English, multilingual).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasSimilarBenchmarks: Optional[list[str]] = Field(default=None, description="""Benchmarks that are closely related in terms of goals or data type.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasResources: Optional[list[str]] = Field(default=None, description="""Links to relevant resources, such as repositories or papers related to the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasGoal: Optional[str] = Field(default=None, description="""The specific goal or primary use case the benchmark is designed for.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasAudience: Optional[list[str]] = Field(default=None, description="""The intended audience, such as researchers, developers, policymakers, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasLimitations: Optional[list[str]] = Field(default=None, description="""Limitations in evaluating or addressing risks, such as gaps in demographic coverage or specific domains.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasOutOfScopeUses: Optional[list[str]] = Field(default=None, description="""Use cases where the benchmark is not designed to be applied and could give misleading results.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasDataSource: Optional[list[str]] = Field(default=None, description="""The origin or source of the data used in the benchmark (e.g., curated datasets, user submissions).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDataSize: Optional[str] = Field(default=None, description="""The size of the dataset, including the number of data points or examples.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDataFormat: Optional[list[str]] = Field(default=None, description="""The structure and modality of the data (e.g., sentence pairs, question-answer format, tabular data).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasAnnotation: Optional[list[str]] = Field(default=None, description="""The process used to annotate or label the dataset, including who or what performed the annotations (e.g., human annotators, automated processes).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasMethods: Optional[list[str]] = Field(default=None, description="""The evaluation techniques applied within the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasMetrics: Optional[list[str]] = Field(default=None, description="""The specific performance metrics used to assess models (e.g., accuracy, F1 score, precision, recall).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasCalculation: Optional[list[str]] = Field(default=None, description="""The way metrics are computed based on model outputs and the benchmark data.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasInterpretation: Optional[list[str]] = Field(default=None, description="""How users should interpret the scores or results from the metrics.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasBaselineResults: Optional[list[str]] = Field(default=None, description="""The results of well-known or widely used models to give context to new performance scores.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasValidation: Optional[list[str]] = Field(default=None, description="""Measures taken to ensure that the benchmark provides valid and reliable evaluations.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
+         'domain': 'Any',
+         'domain_of': ['Term',
+                       'LLMQuestionPolicy',
+                       'Action',
+                       'AiSystem',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'Adapter',
+                       'LLMIntrinsic']} })
+    hasDemographicAnalysis: Optional[list[str]] = Field(default=None, description="""How the benchmark evaluates performance across different demographic groups (e.g., gender, race).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasConsiderationPrivacyAndAnonymity: Optional[list[str]] = Field(default=None, description="""How any personal or sensitive data is handled and whether any anonymization techniques are applied.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Documentation',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'BaseAi',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'Adapter'],
+         'slot_uri': 'airo:hasLicense'} })
+    hasConsiderationConsentProcedures: Optional[list[str]] = Field(default=None, description="""Information on how consent was obtained (if applicable), especially for datasets involving personal data.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasConsiderationComplianceWithRegulations: Optional[list[str]] = Field(default=None, description="""Compliance with relevant legal or ethical regulations (if applicable).""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     name: Optional[str] = Field(default=None, description="""The official name of the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard']} })
     overview: Optional[str] = Field(default=None, description="""A brief description of the benchmark's main goals and scope.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
+    type: Literal["BenchmarkMetadataCard"] = Field(default="BenchmarkMetadataCard", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'BenchmarkMetadataCard',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
     url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
@@ -4440,12 +4757,13 @@ class Question(AiEval):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasDataset: Optional[list[str]] = Field(default=None, description="""A relationship to datasets that are used.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval']} })
-    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'BenchmarkMetadataCard']} })
+    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasImplementation: Optional[list[str]] = Field(default=None, description="""A relationship to a implementation defining the risk evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval'], 'slot_uri': 'schema:url'} })
     hasUnitxtCard: Optional[list[str]] = Field(default=None, description="""A relationship to a Unitxt card defining the risk evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval'], 'slot_uri': 'schema:url'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
@@ -4466,6 +4784,7 @@ class Question(AiEval):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -4506,12 +4825,13 @@ class Questionnaire(AiEval):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     hasDataset: Optional[list[str]] = Field(default=None, description="""A relationship to datasets that are used.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval']} })
-    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'BenchmarkMetadataCard']} })
+    hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasImplementation: Optional[list[str]] = Field(default=None, description="""A relationship to a implementation defining the risk evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval'], 'slot_uri': 'schema:url'} })
     hasUnitxtCard: Optional[list[str]] = Field(default=None, description="""A relationship to a Unitxt card defining the risk evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval'], 'slot_uri': 'schema:url'} })
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
@@ -4532,6 +4852,7 @@ class Questionnaire(AiEval):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -4575,6 +4896,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -4597,6 +4919,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -4659,6 +4982,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4704,6 +5028,7 @@ class LLMIntrinsic(Entry):
                        'Action',
                        'AiSystem',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
@@ -4724,6 +5049,7 @@ class LLMIntrinsic(Entry):
                        'BaseAi',
                        'LargeLanguageModelFamily',
                        'AiEval',
+                       'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic'],
@@ -4778,6 +5104,7 @@ class LLMIntrinsic(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4862,6 +5189,7 @@ class ControlActivity(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -4923,6 +5251,7 @@ class ControlActivityPermission(ControlActivity, Permission):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -5005,6 +5334,7 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -5087,6 +5417,7 @@ class ControlActivityObligation(ControlActivity, Obligation):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -5169,6 +5500,7 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -5291,6 +5623,7 @@ class Requirement(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
                        'ControlActivityProhibition',
@@ -5422,6 +5755,13 @@ CapabilityGroup.model_rebuild()
 Capability.model_rebuild()
 AiEval.model_rebuild()
 AiEvalResult.model_rebuild()
+SourceMetadata.model_rebuild()
+ModelInfo.model_rebuild()
+SourceData.model_rebuild()
+MetricConfig.model_rebuild()
+ScoreDetails.model_rebuild()
+EvaluationResultRecord.model_rebuild()
+EveryEvalAIResult.model_rebuild()
 BenchmarkMetadataCard.model_rebuild()
 Question.model_rebuild()
 Questionnaire.model_rebuild()

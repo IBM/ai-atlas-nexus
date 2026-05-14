@@ -37,10 +37,11 @@ class TestEveryEvalEverTransformation:
 
         result = loader.transform_record(record)
 
-        assert result["id"] == "eee_test-eval-123"
-        assert result["evaluation_id"] == "test-eval-123"
-        assert result["schema_version"] == "1.0"
-        assert "dateCreated" in result
+        assert result is not None
+        assert result.id == "eee_test-eval-123"
+        assert result.evaluation_id == "test-eval-123"
+        assert result.schema_version == "1.0"
+        assert result.dateCreated is not None
 
     def test_transform_record_with_nested_data(self):
         """Test transforming a record with full nested structure"""
@@ -86,29 +87,34 @@ class TestEveryEvalEverTransformation:
 
         result = loader.transform_record(record)
 
+        assert result is not None
         # top-level fields
-        assert result["id"] == "eee_gsm8k/meta-llama/Llama-3.1-8B"
-        assert result["evaluation_id"] == "gsm8k/meta-llama/Llama-3.1-8B"
+        assert result.id == "eee_gsm8k/meta-llama/Llama-3.1-8B"
+        assert result.evaluation_id == "gsm8k/meta-llama/Llama-3.1-8B"
 
         # source metadata
-        assert "hasSourceMetadata" in result
-        assert result["hasSourceMetadata"]["source_name"] == "Test Leaderboard"
-        assert result["hasSourceMetadata"]["evaluator_relationship"] == "first_party"
+        assert result.hasSourceMetadata is not None
+        assert result.hasSourceMetadata.source_name == "Test Leaderboard"
+        assert result.hasSourceMetadata.evaluator_relationship == "first_party"
 
         # model info
-        assert "hasModelInfo" in result
-        assert result["hasModelInfo"]["model_name"] == "Llama 3.1 8B"
-        assert result["hasModelInfo"]["model_id"] == "meta-llama/Llama-3.1-8B"
+        assert result.hasModelInfo is not None
+        assert result.hasModelInfo.model_name == "Llama 3.1 8B"
+        assert result.hasModelInfo.model_id == "meta-llama/Llama-3.1-8B"
 
         # evaluation results
-        assert "hasEvaluationResults" in result
-        assert len(result["hasEvaluationResults"]) == 1
+        assert result.hasEvaluationResults is not None
+        assert len(result.hasEvaluationResults) == 1
 
-        eval_result = result["hasEvaluationResults"][0]
-        assert eval_result["evaluation_name"] == "GSM8K"
-        assert eval_result["hasSourceData"]["hf_repo"] == "openai/gsm8k"
-        assert eval_result["hasMetricConfig"]["score_type"] == "continuous"
-        assert eval_result["hasScoreDetails"]["score"] == 75.2
+        # Get the first evaluation result by key
+        eval_result = list(result.hasEvaluationResults.values())[0]
+        assert eval_result.evaluation_name == "GSM8K"
+        assert eval_result.hasSourceData is not None
+        assert eval_result.hasSourceData.hf_repo == "openai/gsm8k"
+        assert eval_result.hasMetricConfig is not None
+        assert eval_result.hasMetricConfig.score_type == "continuous"
+        assert eval_result.hasScoreDetails is not None
+        assert eval_result.hasScoreDetails.score == 75.2
 
     def test_transform_record_missing_evaluation_id(self):
         """Test that record without evaluation_id is skipped"""
@@ -121,8 +127,8 @@ class TestEveryEvalEverTransformation:
 
         result = loader.transform_record(record)
 
-        # Should return empty dict for invalid records
-        assert result == {}
+        # Should return None for invalid records
+        assert result is None
 
     def test_normalize_value_string(self):
         """Test normalizing string values"""
