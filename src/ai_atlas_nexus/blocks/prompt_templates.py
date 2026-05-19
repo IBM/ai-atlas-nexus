@@ -470,3 +470,40 @@ RISK_SEVERITY_TEMPLATE = """
            "Reasoning": "[Explanation]"
          }
 """
+
+NL_TO_SPARQL_TEMPLATE = """You are a SPARQL expert working with a knowledge graph about AI risks.
+
+GRAPH CONTEXT:
+- Namespace prefix: nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+- Standard prefixes always available: rdf:, nexus:, xsd:
+- Classes in this store: {{ classes }}
+- Common predicates: rdf:type, nexus:name, nexus:description, nexus:isDefinedByTaxonomy,
+  nexus:hasRelatedRisk, nexus:tag, nexus:url, nexus:concern, nexus:id
+
+EXAMPLES:
+Question: Find all risks
+SPARQL:
+SELECT ?s WHERE {
+    ?s rdf:type nexus:Risk .
+}
+
+Question: Find all actions defined by the NIST AI RMF taxonomy
+SPARQL:
+SELECT ?s WHERE {
+    ?s rdf:type nexus:Action .
+    ?s nexus:isDefinedByTaxonomy "nist-ai-rmf" .
+}
+
+Question: Find all risks related to any action defined by the NIST AI RMF taxonomy
+SPARQL:
+SELECT ?action ?risk WHERE {
+    ?action rdf:type nexus:Action .
+    ?action nexus:hasRelatedRisk ?risk .
+    ?s nexus:isDefinedByTaxonomy "nist-ai-rmf" .
+}
+
+Now translate the following question into a SPARQL SELECT query. Output only the SPARQL query, no explanation, no markdown fences.
+
+Question: {{ question }}
+SPARQL:
+"""

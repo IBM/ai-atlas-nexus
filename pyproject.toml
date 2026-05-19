@@ -59,7 +59,8 @@ dependencies = [
     "inflect",
     "cymple",
     "chardet==5.2.0",
-    "mellea"
+    "mellea",
+    "pyoxigraph"
 ]
 
 

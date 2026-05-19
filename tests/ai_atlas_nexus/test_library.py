@@ -411,7 +411,7 @@ class TestLibrary(TestCaseBase):
         # Cache should have two entries for these different queries
         self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 2)
 
-    def test_clear_cache_invalidates_all_caches(self):
+    def test_clear_cache_invalidates_query_cache(self):
         """Verify that clear_cache() invalidates both caches"""
         ran_lib = self.ran_lib
         test_eval = AiEval(id="test-eval-clear1")
@@ -424,9 +424,7 @@ class TestLibrary(TestCaseBase):
         _ = ran_lib.get_all("evaluations")
 
         self.assertGreater(len(ran_lib._atlas_explorer._combined_cache), 0)
-        self.assertGreater(len(ran_lib._atlas_explorer._id_cache), 0)
 
         ran_lib._atlas_explorer.clear_cache()
 
         self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 0)
-        self.assertEqual(len(ran_lib._atlas_explorer._id_cache), 0)

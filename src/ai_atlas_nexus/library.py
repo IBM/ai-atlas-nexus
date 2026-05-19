@@ -83,7 +83,7 @@ class AIAtlasNexus:
 
         Args:
             base_dir: str
-                (Optional) add an alternative source of date
+                (Optional) add an alternative source of data
         """
         if base_dir is not None:
             if type(base_dir) != str:

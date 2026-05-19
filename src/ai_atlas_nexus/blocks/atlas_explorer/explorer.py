@@ -342,7 +342,7 @@ class AtlasExplorer(ExplorerBase):
 
     def clear_cache(self):
           """
-          Manually clear caches
+          Manually clear combined cache only.
+          Don't need to clear _id_cache as it's built from the Pydantic data, not the query cache
           """
           self._combined_cache.clear()
-          self._id_cache.clear()
