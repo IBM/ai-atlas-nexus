@@ -168,9 +168,9 @@ URI: [nexus:RiskGroup](https://ibm.github.io/ai-atlas-nexus/ontology/RiskGroup)
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | direct                                   |
 | [hasPart](hasPart.md)                         | \* <br/> [Risk](Risk.md)                   | A relationship where a riskgroup has a risk                                      | direct                                   |
 | [isDetectedBy](isDetectedBy.md)               | \* <br/> [RiskControl](RiskControl.md)     | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)            |
-| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Group](Group.md) |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Group](Group.md), [Concept](Concept.md) |
 | [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                   | A relationship where a group belongs to a domain                                 | [Group](Group.md)                        |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Concept](Concept.md), [Group](Group.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)             |                                                                                  | [Group](Group.md), [Concept](Concept.md) |
 | [narrower](narrower.md)                       | \* <br/> [String](String.md)               |                                                                                  | [Group](Group.md)                        |
 | [broader](broader.md)                         | \* <br/> [String](String.md)               |                                                                                  | [Group](Group.md)                        |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
@@ -327,6 +327,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -368,6 +369,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

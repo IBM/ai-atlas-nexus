@@ -479,21 +479,6 @@ documents:
       for model developers, system integrators, and policymakers working to promote safer AI deployment.
     url: https://arxiv.org/abs/2503.05731
     hasLicense: license-cc-by-4.0
-  - id: https://arxiv.org/abs/2009.03300
-    name: Measuring Massive Multitask Language Understanding
-    description: >-
-      We propose a new test to measure a text model's multitask accuracy. The test covers 57 tasks including elementary
-      mathematics, US history, computer science, law, and more. To attain high accuracy on this test, models must possess
-      extensive world knowledge and problem solving ability. We find that while most recent models have near random-chance
-      accuracy, the very largest GPT-3 model improves over random chance by almost 20 percentage points on average. However,
-      on every one of the 57 tasks, the best models still need substantial improvements before they can reach expert-level
-      accuracy. Models also have lopsided performance and frequently do not know when they are wrong. Worse, they still have
-      near-random accuracy on some socially important subjects such as morality and law. By comprehensively evaluating the
-      breadth and depth of a model's academic and professional understanding, our test can be used to analyze models across
-      many tasks and to identify important shortcomings.
-    url: https://arxiv.org/abs/2009.03300
-    author: Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, Jacob Steinhardt
-    hasLicense: license-mit
   - id: https://arxiv.org/abs/2406.01574
     name: "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding Benchmark"
     description: >-
@@ -608,8 +593,59 @@ documents:
       This paper introduces MMLU and MMMLU, benchmarks for evaluating multitask language understanding across multiple
       languages and domains including humanities, social sciences, and hard sciences.
     url: "https://arxiv.org/abs/2009.03300"
+    author: Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, Jacob Steinhardt
+    hasLicense: license-mit
     dateCreated: "2020-09-07"
     dateModified: "2021-01-12"
+  - id: arxiv.org/2311.12022
+    name: "GPQA: A Graduate-Level Google-Proof Q&A Benchmark"
+    description: >-
+      This paper presents GPQA, a challenging dataset of 448 multiple-choice questions written by domain experts in
+      biology, physics, and chemistry.
+    url: "https://arxiv.org/abs/2311.12022"
+    dateCreated: "2023-11-20"
+    dateModified: "2023-11-20"
+  - id: arxiv.org/2311.07911
+    name: Instruction-Following Evaluation for Large Language Models
+    description: >-
+      This paper presents Instruction-Following Eval (IFEval) for large language models. IFEval is a straightforward
+      and easy-to-reproduce evaluation benchmark.
+    url: "https://arxiv.org/abs/2311.07911"
+    dateCreated: "2023-11-14"
+    dateModified: "2023-11-14"
+  - id: arxiv.org/2406.11939
+    name: "From Crowdsourced Data to High-Quality Benchmarks: Arena-Hard and BenchBuilder Pipeline"
+    description: >-
+      This paper introduces BenchBuilder, an automated pipeline that leverages LLMs to curate high-quality, open-ended
+      prompts from large, crowd-sourced datasets, enabling continuous benchmark updates without human in the loop.
+    url: "https://arxiv.org/abs/2406.11939"
+    dateCreated: "2024-06-17"
+    dateModified: "2024-06-17"
+  - id: arxiv.org/2306.05685
+    name: Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena
+    description: >-
+      This paper introduces MT-Bench and Chatbot Arena. They explore using strong LLMs as judges to evaluate these
+      models on more open-ended questions.
+    url: "https://arxiv.org/abs/2306.05685"
+    dateCreated: "2023-06-09"
+    dateModified: "2023-06-09"
+  - id: arxiv.org/2401.03065
+    name: "CRUXEval: A Benchmark for Code Reasoning, Understanding and Execution"
+    description: >-
+      CRUXEval is a benchmark consisting of 800 Python functions (3-13 lines of code) with input-output pairs.
+      It evaluates language models on code reasoning, understanding, and execution capabilities.
+    url: "https://arxiv.org/abs/2401.03065"
+    dateCreated: "2024-01-05"
+    dateModified: "2024-01-05"
+  - id: arxiv.org/2406.15877
+    name: "BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions"
+    description: >-
+      BigCodeBench is a benchmark consisting of 1,140 questions designed to evaluate code generation capabilities
+      of language models across diverse function calls and complex instructions. It includes problems of varying
+      difficulty and domains for comprehensive code generation evaluation.
+    url: "https://arxiv.org/abs/2406.15877"
+    dateCreated: "2024-06-21"
+    dateModified: "2024-06-21"
 
 datasets:
   - id: truthfulqa/truthful_qa
@@ -860,7 +896,7 @@ datasets:
       learn. This covers 57 tasks including elementary mathematics, US history, computer science, law, and more. To attain
       high accuracy on this test, models must possess extensive world knowledge and problem solving ability.
     hasDocumentation:
-      - https://arxiv.org/abs/2009.03300
+      - arxiv.org/2009.03300
     hasLicense: license-mit
     provider: cais
     url: https://huggingface.co/datasets/cais/mmlu
@@ -1444,7 +1480,7 @@ evaluations:
       high accuracy on this test, models must possess extensive world knowledge and problem solving ability.
     url: "https://huggingface.co/datasets/cais/mmlu"
     hasDocumentation:
-      - https://arxiv.org/abs/2009.03300
+      - arxiv.org/2009.03300
     hasDataset:
       - cais/mmlu
   - id: ai_eval_mmlu_pro
@@ -1745,7 +1781,6 @@ evaluations:
     hasDataset:
       - gorilla-llm/Berkeley-Function-Calling-Leaderboard
     hasTasks:
-      - tool-use
       - function-calling
       - multi-turn
   - id: ai_eval_salad_bench

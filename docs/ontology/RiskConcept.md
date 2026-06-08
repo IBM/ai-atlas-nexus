@@ -214,6 +214,7 @@ URI: [airo:RiskConcept](https://w3id.org/airo#RiskConcept)
 | [AiSystem](AiSystem.md)                           | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [AiAgent](AiAgent.md)                             | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
+| [EveryEvalAIResult](EveryEvalAIResult.md)         | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
 | [Questionnaire](Questionnaire.md)                 | [hasRelatedRisk](hasRelatedRisk.md)         | any_of[range] | [RiskConcept](RiskConcept.md) |
@@ -331,6 +332,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -357,6 +359,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

@@ -24,8 +24,9 @@ Alias: hasConsiderationComplianceWithRegulations
 
 ### Cardinality and Requirements
 
-| Property | Value |
-| -------- | ----- |
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 
@@ -52,6 +53,7 @@ alias: hasConsiderationComplianceWithRegulations
 domain_of:
 - BenchmarkMetadataCard
 range: string
+multivalued: true
 
 ```
 </details>

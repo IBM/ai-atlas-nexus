@@ -256,6 +256,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -283,6 +284,7 @@ attributes:
     owner: Questionnaire
     domain_of:
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     range: string
     multivalued: true
@@ -347,6 +349,7 @@ attributes:
     - Action
     - AiSystem
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic

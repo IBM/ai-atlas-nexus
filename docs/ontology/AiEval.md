@@ -208,6 +208,7 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 | [Container](Container.md)                         | [evaluations](evaluations.md)                   | range  | [AiEval](AiEval.md) |
 | [AiEval](AiEval.md)                               | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 | [AiEvalResult](AiEvalResult.md)                   | [isResultOf](isResultOf.md)                     | range  | [AiEval](AiEval.md) |
+| [EveryEvalAIResult](EveryEvalAIResult.md)         | [isResultOf](isResultOf.md)                     | range  | [AiEval](AiEval.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [describesAiEval](describesAiEval.md)           | range  | [AiEval](AiEval.md) |
 | [Question](Question.md)                           | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 | [Questionnaire](Questionnaire.md)                 | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
@@ -298,6 +299,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -325,6 +327,7 @@ attributes:
     owner: AiEval
     domain_of:
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     range: string
     multivalued: true
@@ -389,6 +392,7 @@ attributes:
     - Action
     - AiSystem
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic

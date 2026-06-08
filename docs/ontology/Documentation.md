@@ -173,6 +173,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [CapabilityGroup](CapabilityGroup.md)                   | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Capability](Capability.md)                             | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [AiEval](AiEval.md)                                     | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
+| [EveryEvalAIResult](EveryEvalAIResult.md)               | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Question](Question.md)                                 | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |
 | [Questionnaire](Questionnaire.md)                       | [hasDocumentation](hasDocumentation.md) | range | [Documentation](Documentation.md) |

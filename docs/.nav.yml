@@ -34,6 +34,7 @@ nav:
           - "Domain identification": examples/notebooks/domain_identification.ipynb
           - "Risk categorization": examples/notebooks/risk_categorization.ipynb
           - "Using Schemaview": examples/notebooks/schema_viewer.ipynb
+          - "Pyoxigraph Explorer": examples/notebooks/Pyoxigraph Explorer.ipynb
       - 📝 Questionnaire:
           - "Auto assist questionnaire": examples/notebooks/autoassist_questionnaire.ipynb
       - 🔀  Mapping:
@@ -42,6 +43,8 @@ nav:
           - "AIUC-1 crosswalk": examples/notebooks/Crosswalk_with_AIUC-1.ipynb
       - Extensions:
           - "Risk to ARES Evaluation": examples/notebooks/risk_to_ares_evaluation.ipynb
+      - Data ingestion:
+          - "Loading from Hugging Face": examples/notebooks/Loading data from Huggingface.ipynb
   - Ontology:
       - Ontology: ontology/index.md
       - "ontology/*"

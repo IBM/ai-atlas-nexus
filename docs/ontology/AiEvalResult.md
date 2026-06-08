@@ -13,6 +13,11 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
       Entity <|-- AiEvalResult
         click Entity href "../Entity/"
 
+
+      AiEvalResult <|-- EveryEvalAIResult
+        click EveryEvalAIResult href "../EveryEvalAIResult/"
+
+
       AiEvalResult : broad_mappings
 
 
@@ -113,6 +118,7 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
 
 - [Entity](Entity.md)
   - **AiEvalResult** [ [Fact](Fact.md)]
+    - [EveryEvalAIResult](EveryEvalAIResult.md)
 
 ## Class Properties
 

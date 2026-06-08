@@ -97,8 +97,6 @@ aimodels:
         code-generation,
         code-explanation,
         code-editing,
-        tool-use,
-        retrieval-augmented-generation,
       ]
     hasEvaluation:
       - mmlu-5shot-granite-4.1-3b
@@ -212,8 +210,6 @@ aimodels:
         code-generation,
         code-explanation,
         code-editing,
-        tool-use,
-        retrieval-augmented-generation,
       ]
     hasEvaluation:
       - mmlu-5shot-granite-4.1-8b
@@ -327,8 +323,6 @@ aimodels:
         code-generation,
         code-explanation,
         code-editing,
-        tool-use,
-        retrieval-augmented-generation,
       ]
     hasEvaluation:
       - mmlu-5shot-granite-4.1-30b

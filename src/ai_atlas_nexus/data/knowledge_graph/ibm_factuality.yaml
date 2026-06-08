@@ -640,7 +640,7 @@ llmintrinsics:
     hasAdapter:
       - ibm-factuality-adapter-granitelib-guardian-r1.0-guardian-core
     hasRelatedRisk:
-      - atlas-harmful-content
+      - atlas-harmful-output
       - atlas-jailbreaking
       - atlas-function-calling-hallucination-agentic
   - id: ibm-factuality-intrinsic-factuality-detection
@@ -686,8 +686,8 @@ llmintrinsics:
     hasAdapter:
       - ibm-factuality-adapter-granitelib-guardian-r1.0-policy-guardrails
     hasRelatedRisk:
-      - atlas-harmful-content
-      - nist-governance
+      - atlas-harmful-output
+      - nist-information-integrity
   - id: ibm-factuality-intrinsic-context-attribution
     name: Context Attribution
     description: >-

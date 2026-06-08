@@ -2,7 +2,7 @@
 
 This is an automatic generated API reference of the main components of AI Atlas Nexus
 
-::: ai*atlas_nexus.ai_risk_ontology
+::: ai_atlas_nexus.ai_risk_ontology
 handler: python
 options:
 show_if_no_docstring: true

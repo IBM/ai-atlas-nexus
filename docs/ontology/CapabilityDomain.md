@@ -160,11 +160,11 @@ URI: [nexus:CapabilityDomain](https://ibm.github.io/ai-atlas-nexus/ontology/Capa
 
 | Name                                          | Cardinality and Range                          | Description                                                                      | Inheritance                              |
 | --------------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------- |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)             | A relationship where a concept or a concept group is defined by a taxonomy       | [Concept](Concept.md), [Group](Group.md) |
-| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)     | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Group](Group.md) |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)             | A relationship where a concept or a concept group is defined by a taxonomy       | [Group](Group.md), [Concept](Concept.md) |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)     | Indicates documentation associated with an entity                                | [Group](Group.md), [Concept](Concept.md) |
 | [hasPart](hasPart.md)                         | \* <br/> [CapabilityGroup](CapabilityGroup.md) | A relationship where a capability domain has capability groups                   | [Group](Group.md)                        |
 | [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                       | A relationship where a group belongs to a domain                                 | [Group](Group.md)                        |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)                 |                                                                                  | [Concept](Concept.md), [Group](Group.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                 |                                                                                  | [Group](Group.md), [Concept](Concept.md) |
 | [narrower](narrower.md)                       | \* <br/> [String](String.md)                   |                                                                                  | [Group](Group.md)                        |
 | [broader](broader.md)                         | \* <br/> [String](String.md)                   |                                                                                  | [Group](Group.md)                        |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                    | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
@@ -290,6 +290,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -346,6 +347,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

@@ -1,6 +1,6 @@
 # Slot: hasDomains
 
-_The specific domains or areas where the benchmark is applied (e.g., natural language processing,computer vision)._
+_The specific domains or areas where the benchmark is applied (e.g., natural language processing, computer vision)._
 
 URI: [nexus:hasDomains](https://ibm.github.io/ai-atlas-nexus/ontology/hasDomains)
 Alias: hasDomains
@@ -11,16 +11,17 @@ Alias: hasDomains
 
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                             |
-| --------- | ------------------------------------------------- |
-| Range     | [String](String.md)                               |
-| Domain Of | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) |
+| Property  | Value                                                                                        |
+| --------- | -------------------------------------------------------------------------------------------- |
+| Range     | [String](String.md)                                                                          |
+| Domain Of | [EveryEvalAIResult](EveryEvalAIResult.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md) |
 
 ### Cardinality and Requirements
 
@@ -47,11 +48,12 @@ Alias: hasDomains
 ```yaml
 name: hasDomains
 description: The specific domains or areas where the benchmark is applied (e.g., natural
-  language processing,computer vision).
+  language processing, computer vision).
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
 alias: hasDomains
 domain_of:
+- EveryEvalAIResult
 - BenchmarkMetadataCard
 range: string
 multivalued: true

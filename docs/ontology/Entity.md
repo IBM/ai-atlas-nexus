@@ -70,6 +70,18 @@ URI: [schema:Thing](http://schema.org/Thing)
         click AiEval href "../AiEval/"
       Entity <|-- AiEvalResult
         click AiEvalResult href "../AiEvalResult/"
+      Entity <|-- SourceMetadata
+        click SourceMetadata href "../SourceMetadata/"
+      Entity <|-- ModelInfo
+        click ModelInfo href "../ModelInfo/"
+      Entity <|-- SourceData
+        click SourceData href "../SourceData/"
+      Entity <|-- MetricConfig
+        click MetricConfig href "../MetricConfig/"
+      Entity <|-- ScoreDetails
+        click ScoreDetails href "../ScoreDetails/"
+      Entity <|-- EvaluationResultRecord
+        click EvaluationResultRecord href "../EvaluationResultRecord/"
       Entity <|-- BenchmarkMetadataCard
         click BenchmarkMetadataCard href "../BenchmarkMetadataCard/"
 
@@ -187,6 +199,12 @@ URI: [schema:Thing](http://schema.org/Thing)
   - [Stakeholder](Stakeholder.md)
   - [AiEval](AiEval.md)
   - [AiEvalResult](AiEvalResult.md) [ [Fact](Fact.md)]
+  - [SourceMetadata](SourceMetadata.md)
+  - [ModelInfo](ModelInfo.md)
+  - [SourceData](SourceData.md)
+  - [MetricConfig](MetricConfig.md)
+  - [ScoreDetails](ScoreDetails.md)
+  - [EvaluationResultRecord](EvaluationResultRecord.md)
   - [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
 
 ## Class Properties

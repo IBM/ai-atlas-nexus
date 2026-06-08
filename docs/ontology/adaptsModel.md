@@ -24,8 +24,9 @@ Alias: adaptsModel
 
 ### Cardinality and Requirements
 
-| Property | Value |
-| -------- | ----- |
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 
@@ -52,6 +53,7 @@ alias: adaptsModel
 domain_of:
 - Adapter
 range: LargeLanguageModel
+multivalued: true
 
 ```
 </details>

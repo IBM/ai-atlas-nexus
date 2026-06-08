@@ -11,27 +11,28 @@ Alias: hasRelatedRisk
 
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Adapter](Adapter.md)                             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [Action](Action.md)                               | Action to remediate a risk                                                       | no            |
-| [Question](Question.md)                           | An evaluation where a question has to be answered                                | no            |
 | [Term](Term.md)                                   | A term and its definitions                                                       | no            |
-| [AiEval](AiEval.md)                               | An AI Evaluation, e                                                              | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)                   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [AiSystem](AiSystem.md)                           | A compound AI System composed of one or more AI capablities                      | no            |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 | [LLMQuestionPolicy](LLMQuestionPolicy.md)         | The policy guides how the language model should answer a diverse set of sensi... | no            |
-| [AiAgent](AiAgent.md)                             | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [Adapter](Adapter.md)                             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [Questionnaire](Questionnaire.md)                 | A questionnaire groups questions                                                 | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)                   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AiAgent](AiAgent.md)                             | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiEval](AiEval.md)                               | An AI Evaluation, e                                                              | no            |
+| [Action](Action.md)                               | Action to remediate a risk                                                       | no            |
+| [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
+| [Question](Question.md)                           | An evaluation where a question has to be answered                                | no            |
+| [AiSystem](AiSystem.md)                           | A compound AI System composed of one or more AI capablities                      | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                                                                                                                                                                                                                    |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Range     | [Term](Term.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)                                                                                                                                      |
-| Domain    | [Any](Any.md)                                                                                                                                                                                                                            |
-| Domain Of | [Term](Term.md), [LLMQuestionPolicy](LLMQuestionPolicy.md), [Action](Action.md), [AiSystem](AiSystem.md), [AiEval](AiEval.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [Adapter](Adapter.md), [LLMIntrinsic](LLMIntrinsic.md) |
+| Property  | Value                                                                                                                                                                                                                                                                               |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Range     | [Term](Term.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md)                                                                                                                                                                                 |
+| Domain    | [Any](Any.md)                                                                                                                                                                                                                                                                       |
+| Domain Of | [Term](Term.md), [LLMQuestionPolicy](LLMQuestionPolicy.md), [Action](Action.md), [AiSystem](AiSystem.md), [AiEval](AiEval.md), [EveryEvalAIResult](EveryEvalAIResult.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [Adapter](Adapter.md), [LLMIntrinsic](LLMIntrinsic.md) |
 
 ### Cardinality and Requirements
 
@@ -79,6 +80,7 @@ domain_of:
 - Action
 - AiSystem
 - AiEval
+- EveryEvalAIResult
 - BenchmarkMetadataCard
 - Adapter
 - LLMIntrinsic

@@ -4562,7 +4562,7 @@ class EveryEvalAIResult(AiEvalResult):
     hasModelInfo: Optional[ModelInfo] = Field(default=None, description="""Model information for the evaluation""", json_schema_extra = { "linkml_meta": {'domain': 'EveryEvalAIResult', 'domain_of': ['EveryEvalAIResult']} })
     hasEvaluationResults: Optional[dict[str, EvaluationResultRecord]] = Field(default=None, description="""Array of evaluation results""", json_schema_extra = { "linkml_meta": {'domain': 'EveryEvalAIResult', 'domain_of': ['EveryEvalAIResult']} })
     hasDataType: Optional[list[str]] = Field(default=None, description="""The type of data used in the benchmark (e.g., text, images, or multi-modal)""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
-    hasDomains: Optional[list[str]] = Field(default=None, description="""The specific domains or areas where the benchmark is applied (e.g., natural language processing,computer vision).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDomains: Optional[list[str]] = Field(default=None, description="""The specific domains or areas where the benchmark is applied (e.g., natural language processing, computer vision).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasLanguages: Optional[list[str]] = Field(default=None, description="""The languages included in the dataset used by the benchmark (e.g., English, multilingual).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasTasks: Optional[list[str]] = Field(default=None, description="""The tasks or evaluations the benchmark is intended to assess.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval', 'EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasDataSource: Optional[list[str]] = Field(default=None, description="""The origin or source of the data used in the benchmark (e.g., curated datasets, user submissions).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
@@ -4627,7 +4627,7 @@ class EveryEvalAIResult(AiEvalResult):
 
 class BenchmarkMetadataCard(Entity):
     """
-    Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly.  This is an implementation of the design set out in 'BenchmarkCards: Large Language Model and Risk Reporting' (https://doi.org/10.48550/arXiv.2410.12974)
+    Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly. This is an implementation of the design set out in BenchmarkCards: Large Language Model and Risk Reporting (https://doi.org/10.48550/arXiv.2410.12974)
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:benchmarkmetadatacard',
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
@@ -4636,7 +4636,7 @@ class BenchmarkMetadataCard(Entity):
          'domain_of': ['BenchmarkMetadataCard'],
          'inverse': 'hasBenchmarkMetadata'} })
     hasDataType: Optional[list[str]] = Field(default=None, description="""The type of data used in the benchmark (e.g., text, images, or multi-modal)""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
-    hasDomains: Optional[list[str]] = Field(default=None, description="""The specific domains or areas where the benchmark is applied (e.g., natural language processing,computer vision).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
+    hasDomains: Optional[list[str]] = Field(default=None, description="""The specific domains or areas where the benchmark is applied (e.g., natural language processing, computer vision).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasLanguages: Optional[list[str]] = Field(default=None, description="""The languages included in the dataset used by the benchmark (e.g., English, multilingual).""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
     hasSimilarBenchmarks: Optional[list[str]] = Field(default=None, description="""Benchmarks that are closely related in terms of goals or data type.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
     hasResources: Optional[list[str]] = Field(default=None, description="""Links to relevant resources, such as repositories or papers related to the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult', 'BenchmarkMetadataCard']} })
