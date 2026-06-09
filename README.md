@@ -15,7 +15,7 @@ Our intention is to create a starting point for an open AI Systems ontology whos
 ## Features
 
 - 🏗️ An ontology that combines the AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema
-- 📚 AI Risks collected from IBM AI Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AI Risk Taxonomy (AIR 2024), the AILuminate Benchmark, Credo's Unified Control Framework, and OWASP Top 10 for Large Language Model Applications
+- 📚 AI Risks collected from IBM AI Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AI Risk Taxonomy (AIR 2024), the AILuminate Benchmark, Credo's Unified Control Framework, OWASP Top 10 for Large Language Model Applications, and OWASP Top 10 for Agentic Applications
 - 🔗 Mappings are proposed between the taxonomies and between risks and actions
 - 🐍 Use the python library methods to quickly explore available risks, relations and actions
 - 🚨 Use the python library methods to detect potential risks in your usecase
