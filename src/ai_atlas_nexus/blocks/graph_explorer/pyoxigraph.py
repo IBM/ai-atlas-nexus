@@ -702,3 +702,15 @@ class PyoxigraphExplorer(ExplorerBase):
             return []
 
         return results
+
+    def _to_nquads(self) -> bytes:
+        """Serialise the internal pyoxigraph Store to N-Quads bytes.
+
+        Used by SHACLEngine to pass the data graph to pyshacl without
+        introducing an rdflib dependency in the caller.
+        """
+        import io as _io
+
+        buf = _io.BytesIO()
+        self._store.dump(buf, format=pyoxigraph.RdfFormat.N_QUADS)
+        return buf.getvalue()

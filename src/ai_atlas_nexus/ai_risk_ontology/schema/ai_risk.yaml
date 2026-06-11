@@ -92,6 +92,8 @@ classes:
     class_uri: airo:RiskConcept
     slots:
       - isDetectedBy
+      - isMitigatedBy
+      - isUsedWithinLocality
 
   RiskControl:
     is_a: Control
@@ -102,6 +104,7 @@ classes:
     description: A measure that maintains and/or modifies risk (and risk concepts)
     slots:
       - detectsRiskConcept
+      - mitigatesRiskConcept
       - isDefinedByTaxonomy
 
   Action:
@@ -220,6 +223,24 @@ slots:
     multivalued: true
     inlined: false
     inverse: detectsRiskConcept
+  mitigatesRiskConcept:
+    exact_mappings:
+      - airo:mitigatesRiskConcept
+    description: >-
+      Indicates the control used for mitigating risks, risk sources, consequences, and impacts.
+    domain: RiskControl
+    range: RiskConcept
+    multivalued: true
+    inlined: false
+    inverse: isMitigatedBy
+  isMitigatedBy:
+    description: >-
+      A relationship where a risk, risk source, consequence, or impact is mitigated by a risk control.
+    domain: RiskConcept
+    range: RiskControl
+    multivalued: true
+    inlined: false
+    inverse: mitigatesRiskConcept
   hasStatus:
     description: >-
       Indicates the status of specified concept

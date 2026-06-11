@@ -60,7 +60,8 @@ dependencies = [
     "cymple",
     "chardet==5.2.0",
     "mellea",
-    "pyoxigraph"
+    "pyoxigraph",
+    "pyshacl"
 ]
 
 
