@@ -276,29 +276,6 @@ entries:
     tag: function-call
     related_mappings:
       - atlas-hallucination
-  - id: atlas-harmful-output
-    related_mappings:
-      - granite-guardian-harm
-      - granite-sexual-content
-      - granite-unethical-behavior
-      - granite-harm-engagement
-      - granite-evasiveness
-      - granite-violence
-  - id: atlas-output-bias
-    related_mappings:
-      - granite-social-bias
-  - id: atlas-toxic-output
-    related_mappings:
-      - granite-profanity
-  - id: atlas-jailbreaking
-    related_mappings:
-      - granite-jailbreak
-  - id: atlas-hallucination
-    related_mappings:
-      - granite-function-call
-      - granite-answer-relevance
-      - granite-relevance
-      - granite-groundedness
 controls:
   - id: gg-harm-detection
     name: Harm detection
