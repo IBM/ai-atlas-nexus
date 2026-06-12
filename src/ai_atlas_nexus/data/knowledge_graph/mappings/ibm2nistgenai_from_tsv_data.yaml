@@ -57,9 +57,9 @@ entries:
     type: Risk
   - id: atlas-data-bias
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     broad_mappings:
       - atlas-data-bias
     type: Risk
@@ -161,9 +161,9 @@ entries:
     type: Risk
   - id: atlas-decision-bias
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     broad_mappings:
       - atlas-decision-bias
     type: Risk
@@ -265,9 +265,9 @@ entries:
     type: Risk
   - id: atlas-impact-on-affected-communities
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     broad_mappings:
       - atlas-impact-on-affected-communities
     type: Risk
@@ -473,9 +473,9 @@ entries:
     type: Risk
   - id: atlas-output-bias
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     broad_mappings:
       - atlas-output-bias
     type: Risk
@@ -577,9 +577,9 @@ entries:
     type: Risk
   - id: atlas-spreading-toxicity
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     broad_mappings:
       - atlas-spreading-toxicity
     type: Risk
@@ -617,9 +617,9 @@ entries:
     type: Risk
   - id: atlas-unrepresentative-data
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     broad_mappings:
       - atlas-unrepresentative-data
     type: Risk

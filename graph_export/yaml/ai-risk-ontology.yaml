@@ -4408,7 +4408,7 @@ entries:
       - mit-ai-risk-subdomain-7.3
       - nist-value-chain-and-component-integration
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-accuracy
     type: Risk
@@ -4603,7 +4603,7 @@ entries:
       - mit-ai-causal-risk-timing-pre-deployment
       - mit-ai-risk-subdomain-1.1
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-fairness
     type: Risk
@@ -4878,7 +4878,7 @@ entries:
       - mit-ai-causal-risk-timing-post-deployment
       - mit-ai-risk-subdomain-1.1
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-fairness
     type: Risk
@@ -5207,7 +5207,7 @@ entries:
       - mit-ai-causal-risk-timing-post-deployment
       - mit-ai-risk-subdomain-1.3
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-societal-impact
     type: Risk
@@ -5259,7 +5259,7 @@ entries:
       - mit-ai-causal-risk-intent-intentional
       - mit-ai-causal-risk-timing-post-deployment
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-misuse
     type: Risk
@@ -6196,7 +6196,7 @@ entries:
       - mit-ai-causal-risk-timing-post-deployment
       - mit-ai-risk-subdomain-1.1
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-fairness
     type: Risk
@@ -6706,7 +6706,7 @@ entries:
       - credo-risk-004
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     name: Harmful Bias or Homogenization
     description: Amplification and exacerbation of historical, societal, and systemic
       biases; performance disparities between sub-groups or languages, possibly due
@@ -7302,7 +7302,7 @@ entries:
       - mit-ai-risk-subdomain-1.3
       - mit-ai-risk-subdomain-2.2
       - nist-dangerous-violent-or-hateful-content
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-human-ai-configuration
       - nist-obscene-degrading-and-or-abusive-content
     isDefinedByTaxonomy: ailuminate-v1.0
@@ -7376,7 +7376,7 @@ entries:
       - mit-ai-risk-subdomain-3.1
       - mit-ai-risk-subdomain-4.1
       - mit-ai-risk-subdomain-4.3
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-information-integrity
       - nist-intellectual-property
       - nist-obscene-degrading-and-or-abusive-content
@@ -12225,7 +12225,7 @@ entries:
       - atlas-output-bias
       - atlas-unrepresentative-data
       - mit-ai-risk-subdomain-1.1
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-fairness-&-bias
     type: Risk
@@ -12248,7 +12248,7 @@ entries:
       - atlas-harmful-output
       - atlas-output-bias
       - mit-ai-risk-subdomain-1.1
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-fairness-&-bias
     type: Risk
@@ -12262,7 +12262,7 @@ entries:
       - granite-guardian-harm
       - atlas-dangerous-use
       - mit-ai-risk-subdomain-6.5
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-fairness-&-bias
@@ -12442,7 +12442,7 @@ entries:
     related_mappings:
       - atlas-decision-bias
       - atlas-output-bias
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-information-integrity
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-information-integrity
