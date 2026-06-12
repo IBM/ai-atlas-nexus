@@ -129,6 +129,41 @@ classes:
     slots:
       - requiresCapability
 
+  AiTaskTaxonomy:
+    is_a: Taxonomy
+    description: A taxonomy of AI Tasks
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  AiTaskDomain:
+    is_a: Group
+    description: A grouping of AI Tasks by domain.
+    class_uri: nexus:AiTaskDomain
+    slot_usage:
+      hasPart:
+        description: A relationship where an AI Task domain has a group.
+        range: AiTaskGroup
+    slots:
+      - isDefinedByTaxonomy
+      - hasPart
+
+  AiTaskGroup:
+    is_a: Group
+    description: A group of AI Tasks.
+    class_uri: nexus:AiTaskGroup
+    slot_usage:
+      hasPart:
+        description: A relationship where an AI task group has an AI task.
+        range: AiTask
+      isPartOf:
+        range: AiTaskDomain
+    slots:
+      - isDefinedByTaxonomy
+      - hasPart
+      - isPartOf
+
   AiLifecyclePhase:
     is_a: Entity
     class_uri: airo:AILifecyclePhase
