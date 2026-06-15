@@ -10,12 +10,26 @@ prefixes:
   airo: https://w3id.org/airo#
   nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
   dpv: https://w3id.org/dpv#
+  dpv-loc: https://w3id.org/dpv/loc#
   ai: https://w3id.org/dpv/ai#
   skos: https://www.w3.org/2009/08/skos-reference/skos.html#
   tech: https://w3id.org/dpv/tech#
 
 default_range: string
 default_prefix: nexus
+
+enums:
+  Jurisdiction:
+    description: >-
+      ISO 3166-1 country code, sourced from the DPV Location ontology
+      (https://w3id.org/dpv/loc). Values are subclasses of dpv:Country.
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:Country
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
 
 classes:
   Entity:
@@ -123,6 +137,7 @@ classes:
     slots:
       - isDefinedByTaxonomy
       - hasDocumentation
+      - hasJurisdiction
 
   Control:
     is_a: Entity
@@ -538,3 +553,11 @@ slots:
     multivalued: true
     inlined: false
     slot_uri: nexus:isApplicableinLocality
+  hasJurisdiction:
+    description: >-
+      The legal or political jurisdiction(s) in which this concept applies,
+      expressed as ISO 3166-1 country codes.
+    range: Jurisdiction
+    multivalued: true
+    inlined: false
+    slot_uri: dpv:hasJurisdiction
