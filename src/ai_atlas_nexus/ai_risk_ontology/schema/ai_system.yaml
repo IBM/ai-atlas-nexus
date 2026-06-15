@@ -173,7 +173,7 @@ classes:
     description: The end goal for which an entity is used or an action is taken.
 
   Domain:
-    is_a: Entity
+    is_a: Entry
     class_uri: airo:Domain
     description: An area, sector, or industry that is associated with economic activities.
 
