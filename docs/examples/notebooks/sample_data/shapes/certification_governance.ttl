@@ -1,0 +1,29 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/> .
+
+nexus:CertificationGovernanceShape a sh:NodeShape ;
+    sh:targetClass nexus:AiSystem ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+CONSTRUCT { ?this nexus:applicableFramework "nyc-local-law-144" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-ny-ny-usa" . }
+""" ] ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+CONSTRUCT { ?this nexus:applicableFramework "gdpr-art-22" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-dublin-ie-eu" . }
+""" ] ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+CONSTRUCT { ?this nexus:requiredControl "hiring-control-audit-ai-ny" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-ny-ny-usa" . }
+""" ] ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+CONSTRUCT { ?this nexus:requiredControl "hiring-control-gdpr-explanation-eu" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-dublin-ie-eu" . }
+""" ] .
