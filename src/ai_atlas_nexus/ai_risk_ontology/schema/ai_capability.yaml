@@ -129,14 +129,6 @@ slots:
     inlined: false
     inverse: implementsCapability
 
-  implementsCapability:
-    description: Indicates that this intrinsic implements a specific capability
-    domain: LLMIntrinsic
-    range: Capability
-    multivalued: true
-    inlined: false
-    inverse: implementedByIntrinsic
-
   # AI System-capability relationships
   possessedByAi:
     description: >-
