@@ -11,7 +11,7 @@ prefixes:
   nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
   dpv: https://w3id.org/dpv#
   ai: https://w3id.org/dpv/ai#
-  skos: https://www.w3.org/2009/08/skos-reference/skos.html#
+  skos: http://www.w3.org/2004/02/skos/core#
   tech: https://w3id.org/dpv/tech#
 
 default_range: string
