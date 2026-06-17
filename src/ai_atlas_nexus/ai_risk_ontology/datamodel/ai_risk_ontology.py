@@ -852,9 +852,7 @@ class Entry(Entity):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Entry"] = Field(default="Entry", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -963,9 +961,7 @@ class Term(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Term"] = Field(default="Term", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -1062,9 +1058,7 @@ class Principle(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Principle"] = Field(default="Principle", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -1717,9 +1711,7 @@ class Certification(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -2277,9 +2269,7 @@ class Risk(RiskConcept, Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Risk"] = Field(default="Risk", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -2946,7 +2936,10 @@ class AiSystem(BaseAi, Entry):
          'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'mixin': True,
          'mixins': ['BaseAi'],
-         'slot_usage': {'isComposedOf': {'description': 'Relationship indicating the '
+         'slot_usage': {'hasCapability': {'domain': 'AiSystem',
+                                          'inverse': 'possessedByAi',
+                                          'name': 'hasCapability'},
+                        'isComposedOf': {'description': 'Relationship indicating the '
                                                         'AI components from which a '
                                                         'complete AI system is '
                                                         'composed.',
@@ -2957,7 +2950,9 @@ class AiSystem(BaseAi, Entry):
     hasEuAiSystemType: Optional[AiSystemType] = Field(default=None, description="""The type of system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasEuRiskCategory: Optional[EuAiRiskCategory] = Field(default=None, description="""The risk category of an AI system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
-""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+""", json_schema_extra = { "linkml_meta": {'domain': 'AiSystem',
+         'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+         'inverse': 'possessedByAi',
          'slot_uri': 'tech:hasCapability'} })
     isAppliedWithinDomain: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isAppliedWithinDomain'} })
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
@@ -3047,9 +3042,7 @@ class AiSystem(BaseAi, Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiSystem"] = Field(default="AiSystem", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3102,7 +3095,9 @@ class AiAgent(AiSystem):
     hasEuAiSystemType: Optional[AiSystemType] = Field(default=None, description="""The type of system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasEuRiskCategory: Optional[EuAiRiskCategory] = Field(default=None, description="""The risk category of an AI system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
-""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+""", json_schema_extra = { "linkml_meta": {'domain': 'AiSystem',
+         'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+         'inverse': 'possessedByAi',
          'slot_uri': 'tech:hasCapability'} })
     isAppliedWithinDomain: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isAppliedWithinDomain'} })
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
@@ -3192,9 +3187,7 @@ class AiAgent(AiSystem):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiAgent"] = Field(default="AiAgent", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3277,9 +3270,12 @@ class AiTask(Entry):
     A task, such as summarization and classification, performed by an AI.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AiCapability',
-         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
+         'slot_usage': {'requiresCapability': {'domain': 'AiTask',
+                                               'name': 'requiresCapability',
+                                               'range': 'Capability'}}})
 
-    requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+    requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'AiTask',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
@@ -3331,9 +3327,7 @@ class AiTask(Entry):
                        'CapabilityGroup'],
          'slot_uri': 'schema:isPartOf'} })
     requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiTask"] = Field(default="AiTask", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3836,9 +3830,7 @@ class Purpose(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Purpose"] = Field(default="Purpose", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3935,9 +3927,7 @@ class Domain(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Domain"] = Field(default="Domain", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -4034,9 +4024,7 @@ class LocalityOfUse(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["LocalityOfUse"] = Field(default="LocalityOfUse", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -5039,13 +5027,14 @@ class Capability(CapabilityConcept, Entry):
                                                           'with this capability can '
                                                           'perform tasks that require '
                                                           'it.',
+                                           'domain': 'Capability',
                                            'name': 'requiredByTask',
                                            'range': 'AiTask'}}})
 
-    requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is required to perform a specific AI task. This links abstract capabilities (technical abilities) to concrete tasks (application-level operations). An AI system with this capability can perform tasks that require it.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Capability',
+    requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is required to perform a specific AI task. This links abstract capabilities (technical abilities) to concrete tasks (application-level operations). An AI system with this capability can perform tasks that require it.""", json_schema_extra = { "linkml_meta": {'domain': 'Capability',
          'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+         'inverse': 'requiresCapability'} })
+    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Capability', 'domain_of': ['Entry', 'Capability']} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -5716,7 +5705,14 @@ class Adapter(LargeLanguageModel, Entry):
     Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic',
-         'mixins': ['LargeLanguageModel']})
+         'mixins': ['LargeLanguageModel'],
+         'slot_usage': {'implementsCapability': {'description': 'Indicates that this '
+                                                                'adapter implements a '
+                                                                'specific capability',
+                                                 'domain': 'Adapter',
+                                                 'inverse': 'implementedByAdapter',
+                                                 'name': 'implementsCapability',
+                                                 'range': 'Capability'}}})
 
     hasAdapterType: Optional[list[AdapterType]] = Field(default=None, description="""The Adapter type, for example: LORA, ALORA, X-LORA""", json_schema_extra = { "linkml_meta": {'domain_of': ['Adapter']} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
@@ -5765,7 +5761,9 @@ class Adapter(LargeLanguageModel, Entry):
                        'Adapter',
                        'LLMIntrinsic']} })
     adaptsModel: Optional[list[str]] = Field(default=None, description="""The LargeLanguageModel being adapted""", json_schema_extra = { "linkml_meta": {'domain_of': ['Adapter']} })
-    implementsCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entity implements a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Adapter'], 'inverse': 'implementedByAdapter'} })
+    implementsCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this adapter implements a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Adapter',
+         'domain_of': ['Adapter', 'LLMIntrinsic'],
+         'inverse': 'implementedByAdapter'} })
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
 """, json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'tech:hasCapability'} })
@@ -5807,9 +5805,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Adapter"] = Field(default="Adapter", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -5863,7 +5859,11 @@ class LLMIntrinsic(Entry):
     A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'ai:Capability',
-         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic',
+         'slot_usage': {'implementsCapability': {'domain': 'LLMIntrinsic',
+                                                 'inverse': 'implementedByIntrinsic',
+                                                 'name': 'implementsCapability',
+                                                 'range': 'Capability'}}})
 
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
@@ -5905,6 +5905,9 @@ class LLMIntrinsic(Entry):
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
 """, json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'tech:hasCapability'} })
+    implementsCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entity implements a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'LLMIntrinsic',
+         'domain_of': ['Adapter', 'LLMIntrinsic'],
+         'inverse': 'implementedByIntrinsic'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -5935,9 +5938,7 @@ class LLMIntrinsic(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["LLMIntrinsic"] = Field(default="LLMIntrinsic", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,

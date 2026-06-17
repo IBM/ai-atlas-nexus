@@ -412,17 +412,15 @@ slots:
       Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
       capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
     domain: Any
-    range: Adapter
+    range: Any
     multivalued: true
     inlined: false
-    inverse: implementsCapability
   implementsCapability:
     description: Indicates that this entity implements a specific capability
     domain: Any
     range: Capability
     multivalued: true
     inlined: false
-    inverse: implementedByAdapter
   hasTerm:
     slot_uri: nexus:hasTerm
     range: Term

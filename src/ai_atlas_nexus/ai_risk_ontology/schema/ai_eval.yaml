@@ -11,7 +11,7 @@ prefixes:
   linkml: https://w3id.org/linkml/
   nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
   dqv: https://www.w3.org/TR/vocab-dqv/
-  skos: http://www.w3.org/2004/02/skos/core/
+  skos: http://www.w3.org/2004/02/skos/core#
 default_range: string
 default_prefix: nexus
 
