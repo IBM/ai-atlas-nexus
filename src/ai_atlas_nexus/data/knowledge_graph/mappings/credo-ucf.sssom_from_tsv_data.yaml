@@ -433,17 +433,17 @@ entries:
     type: Risk
   - id: credo-risk-010
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - credo-risk-010
     type: Risk
   - id: credo-risk-010
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - credo-risk-010
     type: Risk
@@ -513,17 +513,17 @@ entries:
     type: Risk
   - id: credo-risk-011
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - credo-risk-011
     type: Risk
   - id: credo-risk-011
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - credo-risk-011
     type: Risk
@@ -553,9 +553,9 @@ entries:
     type: Risk
   - id: credo-risk-012
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - credo-risk-012
     type: Risk
@@ -1097,9 +1097,9 @@ entries:
     type: Risk
   - id: credo-risk-022
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - credo-risk-022
     type: Risk

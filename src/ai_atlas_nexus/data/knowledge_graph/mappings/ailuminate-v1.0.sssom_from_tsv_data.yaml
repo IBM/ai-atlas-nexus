@@ -161,9 +161,9 @@ entries:
     type: Risk
   - id: ail-defamation
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - ail-defamation
     type: Risk
@@ -1361,9 +1361,9 @@ entries:
     type: Risk
   - id: ail-suicide-and-self-harm
     related_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
+  - id: nist-harmful-bias-and-homogenization
     related_mappings:
       - ail-suicide-and-self-harm
     type: Risk
