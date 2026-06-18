@@ -170,8 +170,8 @@ entries:
       GAI models, and related outcomes that may adversely impact ecosystems.
     type: Risk
     isDefinedByTaxonomy: nist-ai-rmf
-  - id: nist-harmful-bias-or-homogenization
-    name: Harmful Bias or Homogenization
+  - id: nist-harmful-bias-and-homogenization
+    name: Harmful Bias and Homogenization
     description: Amplification and exacerbation of historical, societal, and systemic
       biases; performance disparities between sub-groups or languages, possibly due
       to non-representative training data, that result in discrimination, amplification
