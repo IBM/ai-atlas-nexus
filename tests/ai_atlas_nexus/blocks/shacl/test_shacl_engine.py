@@ -152,7 +152,9 @@ class TestSHACLEngineInfer:
         derived = engine.infer(data_store)
         # Alice (age 15) should NOT get isAdult
         alice_uri = "http://example.org/Alice"
-        assert alice_uri not in derived or "isAdult" not in derived.get(alice_uri, {})
+        assert alice_uri not in derived or "isAdult" not in derived.get(
+            alice_uri, {}
+        )
 
     def test_infer_adds_triples_to_store(self):
         engine = _make_engine(_PERSON_SHAPE_TTL)
@@ -216,7 +218,9 @@ class TestSHACLEngineAugmentObjects:
         from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 
         engine = _make_engine(_PERSON_SHAPE_TTL)
-        derived = {"https://ibm.github.io/ai-atlas-nexus/ontology/my-risk": {"severity": "high"}}
+        derived = {
+            "https://w3id.org/ai-atlas-nexus/my-risk": {"severity": "high"}
+        }
 
         risk = Risk(id="my-risk", name="Test Risk")
         result = engine.augment_objects([risk], derived)
@@ -237,7 +241,7 @@ class TestSHACLEngineAugmentObjects:
         from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 
         engine = _make_engine(_PERSON_SHAPE_TTL)
-        derived = {"https://ibm.github.io/ai-atlas-nexus/ontology/test-id": {"foo": "bar"}}
+        derived = {"https://w3id.org/ai-atlas-nexus/test-id": {"foo": "bar"}}
         risk = Risk(id="test-id", name="Named Risk")
         result = engine.augment_objects([risk], derived)
         assert result[0].name == "Named Risk"

@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/common
+id: https://w3id.org/ai-atlas-nexus/common
 name: common
 description: A core schema supporting the AI Risk Model ontology
 default_curi_maps:
@@ -8,7 +8,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
   ai: https://w3id.org/dpv/ai#
   skos: https://www.w3.org/2009/08/skos-reference/skos.html#

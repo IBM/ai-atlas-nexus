@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_system
+id: https://w3id.org/ai-atlas-nexus/ai_system
 name: ai_system
 description: An ontology describing AI systems
 default_curi_maps:
@@ -13,7 +13,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
 
 default_range: string
 default_prefix: nexus

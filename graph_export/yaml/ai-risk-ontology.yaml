@@ -6707,7 +6707,7 @@ entries:
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
   - id: nist-harmful-bias-and-homogenization
-    name: Harmful Bias or Homogenization
+    name: Harmful Bias and Homogenization
     description: Amplification and exacerbation of historical, societal, and systemic
       biases; performance disparities between sub-groups or languages, possibly due
       to non-representative training data, that result in discrimination, amplification

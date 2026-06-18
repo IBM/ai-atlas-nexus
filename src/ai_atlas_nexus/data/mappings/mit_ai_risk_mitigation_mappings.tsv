@@ -4,7 +4,7 @@
 #   mit-draft-ai-risk-mitigation: https://airisk.mit.edu/blog/mapping-ai-risk-mitigations
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
-#   nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+#   nexus: https://w3id.org/ai-atlas-nexus/
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2026-02-23'
 # mapping_set_description: Mapping from Draft AI Risk Mitigation Taxonomy to a set of controls

@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability
+id: https://w3id.org/ai-atlas-nexus/ai_capability
 name: ai_capability
 description: >-
   Vocabulary describing AI capabilities as used by IBM Risk Atlas. Aligned with the W3C Data Privacy Vocabulary (DPV)
@@ -13,7 +13,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
   skos: http://www.w3.org/2004/02/skos/core#
   ai: https://w3id.org/dpv/ai#

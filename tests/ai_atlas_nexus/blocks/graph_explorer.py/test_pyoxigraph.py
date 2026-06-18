@@ -199,7 +199,7 @@ class TestPyoxigraphExplorerSPARQL:
         """Test basic SPARQL query."""
         sparql = """
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+        PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
 
         SELECT ?s WHERE {
             ?s rdf:type nexus:Risk .
@@ -214,7 +214,7 @@ class TestPyoxigraphExplorerSPARQL:
     def test_sparql_query_relationships(self, ox_explorer):
         """Test SPARQL query for relationships."""
         sparql = """
-        PREFIX nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+        PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
 
         SELECT ?action ?risk WHERE {
             ?action nexus:hasRelatedRisk ?risk .
@@ -230,7 +230,7 @@ class TestPyoxigraphExplorerSPARQL:
         """Test that SPARQL query results are dictionaries."""
         sparql = """
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+        PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
 
         SELECT ?s WHERE {
             ?s rdf:type nexus:Risk .
