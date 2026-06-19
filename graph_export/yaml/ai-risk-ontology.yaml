@@ -3513,6 +3513,13 @@ entries:
       hijacking exploits multi-step autonomous execution to redirect entire workflows.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     related_mappings:
+      - aiuc1-req-b003
+      - aiuc1-req-b006
+      - granite-guardian-harm
+      - granite-jailbreak
+      - atlas-jailbreaking
+      - atlas-prompt-injection
+      - atlas-prompt-priming
       - llm062025-excessive-agency
     broad_mappings:
       - llm01-prompt-injection
@@ -3536,6 +3543,15 @@ entries:
       covers cases where the agent operates within its authorized privileges but applies
       a legitimate tool in an unsafe or unintended way.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-a003
+      - aiuc1-req-d003
+      - aiuc1-req-d004
+      - granite-function-call
+      - granite-jailbreak
+      - atlas-over-or-under-reliance
+      - atlas-prompt-injection
+      - atlas-unauthorized-use-agentic
     narrow_mappings:
       - llm062025-excessive-agency
     isDefinedByTaxonomy: owasp-asi
@@ -3561,6 +3577,13 @@ entries:
       time-of-check to time-of-use in agent workflows, and synthetic identity injection.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     related_mappings:
+      - aiuc1-req-b001
+      - aiuc1-req-e001
+      - aiuc1-req-e015
+      - granite-guardian-harm
+      - atlas-exposing-personal-information
+      - atlas-nonconsensual-use
+      - atlas-unauthorized-use-agentic
       - llm01-prompt-injection
       - llm022025-sensitive-information-disclosure
     narrow_mappings:
@@ -3586,6 +3609,14 @@ entries:
       compromise targets dynamic runtime composition where agents discover and integrate
       components during execution.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-a001
+      - aiuc1-req-b009
+      - granite-evasiveness
+      - granite-guardian-harm
+      - atlas-data-contamination
+      - atlas-data-poisoning
+      - atlas-incomplete-advice
     narrow_mappings:
       - llm032025-supply-chain
     isDefinedByTaxonomy: owasp-asi
@@ -3610,6 +3641,14 @@ entries:
       of otherwise legitimate tool calls.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     related_mappings:
+      - aiuc1-req-b003
+      - aiuc1-req-d003
+      - aiuc1-req-d004
+      - granite-function-call
+      - granite-jailbreak
+      - atlas-extraction-attack
+      - atlas-jailbreaking
+      - atlas-prompt-injection
       - llm01-prompt-injection
     narrow_mappings:
       - llm052025-improper-output-handling
@@ -3635,6 +3674,14 @@ entries:
       cross-agent propagation of contaminated context.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     related_mappings:
+      - aiuc1-req-a001
+      - aiuc1-req-a006
+      - aiuc1-req-e015
+      - granite-groundedness
+      - granite-relevance
+      - atlas-data-bias
+      - atlas-data-poisoning
+      - atlas-hallucination
       - llm01-prompt-injection
       - llm082025-vector-and-embedding-weaknesses
     broad_mappings:
@@ -3662,6 +3709,14 @@ entries:
       downgrade attacks coercing agents into weaker communication modes.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     related_mappings:
+      - aiuc1-req-b001
+      - aiuc1-req-e001
+      - aiuc1-req-e015
+      - granite-evasiveness
+      - granite-guardian-harm
+      - atlas-attribute-inference-attack
+      - atlas-data-privacy-rights
+      - atlas-prompt-injection
       - llm022025-sensitive-information-disclosure
       - llm062025-excessive-agency
     isDefinedByTaxonomy: owasp-asi
@@ -3688,6 +3743,14 @@ entries:
       oscillating retries or feedback loops between agents, and downstream queue storms.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     related_mappings:
+      - aiuc1-req-c008
+      - aiuc1-req-d002
+      - aiuc1-req-e015
+      - granite-answer-relevance
+      - granite-groundedness
+      - atlas-data-contamination
+      - atlas-hallucination
+      - atlas-poor-model-accuracy
       - llm01-prompt-injection
       - llm042025-data-and-model-poisoning
       - llm062025-excessive-agency
@@ -3714,7 +3777,16 @@ entries:
       role in the compromise invisible to forensics. Automation bias, perceived authority,
       and anthropomorphic cues make abuse look legitimate and hard to spot.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    close_mappings:
+      - atlas-over-or-under-reliance
     related_mappings:
+      - aiuc1-req-d001
+      - aiuc1-req-e001
+      - aiuc1-req-e003
+      - granite-groundedness
+      - granite-guardian-harm
+      - atlas-incomplete-advice
+      - atlas-lack-of-system-transparency
       - llm01-prompt-injection
       - llm052025-improper-output-handling
       - llm062025-excessive-agency
@@ -3742,6 +3814,16 @@ entries:
       and reward hacking and optimization abuse.
     url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
     related_mappings:
+      - aiuc1-req-b006
+      - aiuc1-req-c008
+      - aiuc1-req-e012
+      - aiuc1-req-e015
+      - granite-function-call
+      - granite-guardian-harm
+      - granite-jailbreak
+      - atlas-function-calling-hallucination-agentic
+      - atlas-mitigation-maintenance-agentic
+      - atlas-unauthorized-use-agentic
       - llm022025-sensitive-information-disclosure
       - llm092025-misinformation
     isDefinedByTaxonomy: owasp-asi
@@ -3850,8 +3932,10 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     close_mappings:
+      - asi09-human-agent-trust-exploitation
       - credo-risk-016
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
       - shieldgemma-harassment
       - aiuc1-req-c007
       - aiuc1-req-c009
@@ -3980,6 +4064,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi07-insecure-inter-agent-communication
       - ail-intellectual-property
       - aiuc1-req-a001
       - aiuc1-req-a002
@@ -4110,6 +4195,8 @@ entries:
       - granite-answer-relevance
       - granite-relevance
       - granite-groundedness
+      - asi06-memory-and-context-poisoning
+      - asi08-cascading-failures
       - llm092025-misinformation
       - mit-ai-causal-risk-entity-ai
       - mit-ai-causal-risk-intent-unintentional
@@ -4243,6 +4330,7 @@ entries:
     dateCreated: 2025-04-28
     dateModified: 2025-10-10
     related_mappings:
+      - asi10-rogue-agents
       - aiuc1-req-e001
       - aiuc1-req-e002
       - aiuc1-req-e013
@@ -4293,6 +4381,7 @@ entries:
       - aiuc1-req-d003
       - aiuc1-req-d004
     related_mappings:
+      - asi10-rogue-agents
       - aiuc1-req-d003
       - aiuc1-req-d004
       - aiuc1-req-e003
@@ -4555,6 +4644,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi03-identity-and-privilege-abuse
       - shieldgemma-sexually-explicit
       - ail-child-sexual-exploitation
       - ail-defamation
@@ -4624,6 +4714,7 @@ entries:
     close_mappings:
       - aiuc1-req-a006
     related_mappings:
+      - asi03-identity-and-privilege-abuse
       - aiuc1-req-a005
       - aiuc1-req-a006
       - credo-risk-024
@@ -4871,6 +4962,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi06-memory-and-context-poisoning
       - shieldgemma-hate-speech
       - aiuc1-req-c003
       - mit-ai-causal-risk-entity-human
@@ -4931,6 +5023,9 @@ entries:
     close_mappings:
       - aiuc1-req-b006
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
+      - asi03-identity-and-privilege-abuse
+      - asi10-rogue-agents
       - aiuc1-req-b007
       - aiuc1-req-b008
       - aiuc1-req-d003
@@ -5026,6 +5121,8 @@ entries:
     dateCreated: 2024-09-24
     dateModified: 2025-10-22
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi08-cascading-failures
       - ail-privacy
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-unintentional
@@ -5546,6 +5643,8 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi09-human-agent-trust-exploitation
       - ail-specialized-advice
       - aiuc1-req-d001
       - mit-ai-causal-risk-entity-ai
@@ -5582,6 +5681,10 @@ entries:
       - aiuc1-req-b001
       - aiuc1-req-b002
     related_mappings:
+      - asi01-agent-goal-hijack
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
+      - asi07-insecure-inter-agent-communication
       - atlas-jailbreaking
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -5623,6 +5726,7 @@ entries:
     close_mappings:
       - aiuc1-req-e017
     related_mappings:
+      - asi09-human-agent-trust-exploitation
       - aiuc1-req-e017
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-other
@@ -5834,6 +5938,7 @@ entries:
     close_mappings:
       - aiuc1-req-b004
     related_mappings:
+      - asi05-unexpected-code-execution
       - aiuc1-req-b003
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -5864,6 +5969,8 @@ entries:
       - aiuc1-req-b002
     related_mappings:
       - granite-jailbreak
+      - asi01-agent-goal-hijack
+      - asi05-unexpected-code-execution
       - atlas-prompt-injection
       - aiuc1-req-b002
       - mit-ai-causal-risk-entity-human
@@ -5946,6 +6053,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-10
     related_mappings:
+      - asi01-agent-goal-hijack
       - aiuc1-req-b002
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -6001,6 +6109,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi07-insecure-inter-agent-communication
       - aiuc1-req-b004
       - llm022025-sensitive-information-disclosure
       - mit-ai-causal-risk-entity-human
@@ -6028,6 +6137,7 @@ entries:
     dateCreated: 2024-09-24
     dateModified: 2025-10-22
     related_mappings:
+      - asi08-cascading-failures
       - aiuc1-req-d001
       - aiuc1-req-d002
       - credo-risk-032
@@ -6361,6 +6471,8 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi06-memory-and-context-poisoning
       - aiuc1-req-b008
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -6707,7 +6819,7 @@ entries:
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
   - id: nist-harmful-bias-and-homogenization
-    name: Harmful Bias or Homogenization
+    name: Harmful Bias and Homogenization
     description: Amplification and exacerbation of historical, societal, and systemic
       biases; performance disparities between sub-groups or languages, possibly due
       to non-representative training data, that result in discrimination, amplification
@@ -11413,6 +11525,12 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-harmful-output
+      - asi01-agent-goal-hijack
+      - asi03-identity-and-privilege-abuse
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi07-insecure-inter-agent-communication
+      - asi09-human-agent-trust-exploitation
+      - asi10-rogue-agents
       - ail-child-sexual-exploitation
       - ail-defamation
       - ail-hate
@@ -11591,6 +11709,10 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-jailbreaking
+      - asi01-agent-goal-hijack
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
+      - asi10-rogue-agents
       - credo-risk-041
     broad_mappings:
       - granite-guardian-harm
@@ -11639,6 +11761,8 @@ entries:
     dateModified: 2025-02-26
     related_mappings:
       - atlas-harmful-output
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi07-insecure-inter-agent-communication
       - ail-specialized-advice
     broad_mappings:
       - granite-guardian-harm
@@ -11660,6 +11784,9 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi06-memory-and-context-poisoning
+      - asi08-cascading-failures
+      - asi09-human-agent-trust-exploitation
       - ail-specialized-advice
       - ail-suicide-and-self-harm
       - ail-violent-crimes
@@ -11680,6 +11807,7 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi06-memory-and-context-poisoning
       - ail-specialized-advice
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-rag-safety-group
@@ -11699,6 +11827,7 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi08-cascading-failures
       - ail-specialized-advice
       - ail-suicide-and-self-harm
     isDefinedByTaxonomy: ibm-granite-guardian
@@ -11718,6 +11847,9 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
+      - asi10-rogue-agents
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-agentic-safety-group
     type: Risk
@@ -32227,6 +32359,8 @@ rules:
       data is used for model training, inference processing, data retention periods,
       and customer data rights
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi06-memory-and-context-poisoning
       - atlas-data-acquisition
       - atlas-data-privacy-rights
       - atlas-data-usage
@@ -32278,6 +32412,7 @@ rules:
     description: Implement safeguards to limit AI agent data access to task-relevant
       information based on user roles and context
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
       - llm062025-excessive-agency
       - llm082025-vector-and-embedding-weaknesses
       - llm102025-unbounded-consumption
@@ -32363,6 +32498,7 @@ rules:
       - atlas-personal-information-in-data
       - atlas-personal-information-in-prompt
     related_mappings:
+      - asi06-memory-and-context-poisoning
       - llm022025-sensitive-information-disclosure
       - llm082025-vector-and-embedding-weaknesses
       - atlas-confidential-data-in-prompt
@@ -32420,6 +32556,8 @@ rules:
       - atlas-prompt-injection
       - atlas-specialized-tokens-attack
     related_mappings:
+      - asi03-identity-and-privilege-abuse
+      - asi07-insecure-inter-agent-communication
       - llm01-prompt-injection
       - llm042025-data-and-model-poisoning
       - llm052025-improper-output-handling
@@ -32478,6 +32616,8 @@ rules:
     description: Implement controls to prevent over-disclosure of technical information
       about AI systems and organizational details that could enable adversarial targeting
     related_mappings:
+      - asi01-agent-goal-hijack
+      - asi05-unexpected-code-execution
       - llm022025-sensitive-information-disclosure
       - llm052025-improper-output-handling
       - llm072025-system-prompt-leakage
@@ -32550,6 +32690,8 @@ rules:
       - atlas-misaligned-actions-agentic
       - atlas-unauthorized-use-agentic
     related_mappings:
+      - asi01-agent-goal-hijack
+      - asi10-rogue-agents
       - llm052025-improper-output-handling
       - llm062025-excessive-agency
       - llm082025-vector-and-embedding-weaknesses
@@ -32615,6 +32757,7 @@ rules:
     description: Implement output limitations and obfuscation techniques to safeguard
       against information leakage
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
       - llm022025-sensitive-information-disclosure
       - llm052025-improper-output-handling
       - llm082025-vector-and-embedding-weaknesses
@@ -32779,6 +32922,8 @@ rules:
     name: Monitor AI risk categories
     description: Implement monitoring of AI systems across risk categories
     related_mappings:
+      - asi08-cascading-failures
+      - asi10-rogue-agents
       - atlas-incorrect-risk-testing
     isDefinedByTaxonomy: aiuc1
     hasRule:
@@ -32873,6 +33018,7 @@ rules:
     close_mappings:
       - atlas-hallucination
     related_mappings:
+      - asi09-human-agent-trust-exploitation
       - llm052025-improper-output-handling
       - llm092025-misinformation
       - atlas-incomplete-advice
@@ -32897,6 +33043,7 @@ rules:
     close_mappings:
       - atlas-hallucination
     related_mappings:
+      - asi08-cascading-failures
       - llm092025-misinformation
       - atlas-poor-model-accuracy
     isDefinedByTaxonomy: aiuc1
@@ -32917,6 +33064,8 @@ rules:
       - atlas-function-calling-hallucination-agentic
       - atlas-misaligned-actions-agentic
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
       - llm062025-excessive-agency
       - llm082025-vector-and-embedding-weaknesses
       - llm102025-unbounded-consumption
@@ -32945,6 +33094,8 @@ rules:
     close_mappings:
       - atlas-function-calling-hallucination-agentic
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
       - llm062025-excessive-agency
       - atlas-function-calling-hallucination-agentic
       - atlas-incomplete-ai-agent-evaluation-agentic
@@ -32964,6 +33115,9 @@ rules:
       accountable owners and establishing notification and remediation with third-party
       support as needed (e.g. legal, PR, insurers)
     related_mappings:
+      - asi03-identity-and-privilege-abuse
+      - asi07-insecure-inter-agent-communication
+      - asi09-human-agent-trust-exploitation
       - atlas-legal-accountability
       - atlas-mitigation-maintenance-agentic
     isDefinedByTaxonomy: aiuc1
@@ -33003,6 +33157,7 @@ rules:
     close_mappings:
       - atlas-hallucination
     related_mappings:
+      - asi09-human-agent-trust-exploitation
       - atlas-function-calling-hallucination-agentic
       - atlas-legal-accountability
     isDefinedByTaxonomy: aiuc1
@@ -33159,6 +33314,7 @@ rules:
     description: Document applicable AI laws and standards, required data protections,
       and strategies for compliance
     related_mappings:
+      - asi10-rogue-agents
       - atlas-ai-agent-compliance-agentic
       - atlas-data-privacy-rights
       - atlas-data-usage
@@ -33213,6 +33369,11 @@ rules:
       - atlas-lack-of-ai-agent-transparency-agentic
       - atlas-unexplainable-untraceable-actions-agentic
     related_mappings:
+      - asi03-identity-and-privilege-abuse
+      - asi06-memory-and-context-poisoning
+      - asi07-insecure-inter-agent-communication
+      - asi08-cascading-failures
+      - asi10-rogue-agents
       - llm102025-unbounded-consumption
       - atlas-accountability-agentic
       - atlas-reproducibility-agentic
