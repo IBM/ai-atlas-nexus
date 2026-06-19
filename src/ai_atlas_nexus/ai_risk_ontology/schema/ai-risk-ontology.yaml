@@ -24,7 +24,7 @@ default_range: string
 default_prefix: nexus
 
 settings:
-  strict: false
+  strict: False
 
 # ----------------
 # Classes

@@ -2544,7 +2544,7 @@ class RiskIncident(RiskConcept, Entity):
     """
     An event occuring or occured which is a realised or materialised risk.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'https://w3id.org/dpv/risk#Incident',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv-risk:Incident',
          'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
          'mixins': ['RiskConcept']})
 
