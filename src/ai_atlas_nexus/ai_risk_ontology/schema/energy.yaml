@@ -1,11 +1,11 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/energy
+id: https://w3id.org/ai-atlas-nexus/energy
 name: energy
 description: Defines vocabularies relating to energy consumption
 imports:
   - linkml:types
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
 
 default_range: string
 default_prefix: nexus

@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/eu_ai_act
+id: https://w3id.org/ai-atlas-nexus/eu_ai_act
 name: eu_ai_act
 description: Vocabulary pertaining to the EU AI Act
 imports:
@@ -9,7 +9,7 @@ default_curi_maps:
   - semweb_context
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
 
 default_range: string
 default_prefix: nexus

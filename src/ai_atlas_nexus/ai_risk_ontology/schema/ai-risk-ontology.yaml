@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
+id: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 name: ai-risk-ontology
 version: 0.5.0
 license: https://www.apache.org/licenses/LICENSE-2.0.html
@@ -18,13 +18,13 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
 
 default_range: string
 default_prefix: nexus
 
 settings:
-  strict: false
+  strict: False
 
 # ----------------
 # Classes

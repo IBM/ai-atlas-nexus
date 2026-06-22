@@ -1,4 +1,4 @@
-NEXUS_URI = "https://ibm.github.io/ai-atlas-nexus/ontology/"
+NEXUS_URI = "https://w3id.org/ai-atlas-nexus/"
 
 
 class SPARQLQueryBuilder:

@@ -1,0 +1,914 @@
+entries:
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi08-cascading-failures
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi08-cascading-failures
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi08-cascading-failures
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi08-cascading-failures
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi08-cascading-failures
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi08-cascading-failures
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi08-cascading-failures
+    type: Risk
+  - id: asi10-rogue-agents
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - aiuc1-req-b003
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - aiuc1-req-b006
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - granite-guardian-harm
+    type: Risk
+  - id: granite-guardian-harm
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - granite-jailbreak
+    type: Risk
+  - id: granite-jailbreak
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-jailbreaking
+    type: Risk
+  - id: atlas-jailbreaking
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-prompt-priming
+    type: Risk
+  - id: atlas-prompt-priming
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - aiuc1-req-a003
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - aiuc1-req-d003
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - aiuc1-req-d004
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - granite-function-call
+    type: Risk
+  - id: granite-function-call
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - granite-jailbreak
+    type: Risk
+  - id: granite-jailbreak
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - atlas-over-or-under-reliance
+    type: Risk
+  - id: atlas-over-or-under-reliance
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - atlas-unauthorized-use-agentic
+    type: Risk
+  - id: atlas-unauthorized-use-agentic
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - aiuc1-req-b001
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - aiuc1-req-e001
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - aiuc1-req-e015
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - granite-guardian-harm
+    type: Risk
+  - id: granite-guardian-harm
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - atlas-exposing-personal-information
+    type: Risk
+  - id: atlas-exposing-personal-information
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - atlas-nonconsensual-use
+    type: Risk
+  - id: atlas-nonconsensual-use
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - atlas-unauthorized-use-agentic
+    type: Risk
+  - id: atlas-unauthorized-use-agentic
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - aiuc1-req-a001
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - aiuc1-req-b009
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - granite-evasiveness
+    type: Risk
+  - id: granite-evasiveness
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - granite-guardian-harm
+    type: Risk
+  - id: granite-guardian-harm
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - atlas-data-contamination
+    type: Risk
+  - id: atlas-data-contamination
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - atlas-data-poisoning
+    type: Risk
+  - id: atlas-data-poisoning
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - atlas-incomplete-advice
+    type: Risk
+  - id: atlas-incomplete-advice
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - aiuc1-req-b003
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - aiuc1-req-d003
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - aiuc1-req-d004
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - granite-function-call
+    type: Risk
+  - id: granite-function-call
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - granite-jailbreak
+    type: Risk
+  - id: granite-jailbreak
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - atlas-extraction-attack
+    type: Risk
+  - id: atlas-extraction-attack
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - atlas-jailbreaking
+    type: Risk
+  - id: atlas-jailbreaking
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - aiuc1-req-a001
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - aiuc1-req-a006
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - aiuc1-req-e015
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - granite-groundedness
+    type: Risk
+  - id: granite-groundedness
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - granite-relevance
+    type: Risk
+  - id: granite-relevance
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - atlas-data-bias
+    type: Risk
+  - id: atlas-data-bias
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - atlas-data-poisoning
+    type: Risk
+  - id: atlas-data-poisoning
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - aiuc1-req-b001
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - aiuc1-req-e001
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - aiuc1-req-e015
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - granite-evasiveness
+    type: Risk
+  - id: granite-evasiveness
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - granite-guardian-harm
+    type: Risk
+  - id: granite-guardian-harm
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - atlas-attribute-inference-attack
+    type: Risk
+  - id: atlas-attribute-inference-attack
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - atlas-data-privacy-rights
+    type: Risk
+  - id: atlas-data-privacy-rights
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - aiuc1-req-c008
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - aiuc1-req-d002
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - aiuc1-req-e015
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - granite-answer-relevance
+    type: Risk
+  - id: granite-answer-relevance
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - granite-groundedness
+    type: Risk
+  - id: granite-groundedness
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - atlas-data-contamination
+    type: Risk
+  - id: atlas-data-contamination
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - atlas-poor-model-accuracy
+    type: Risk
+  - id: atlas-poor-model-accuracy
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    close_mappings:
+      - atlas-over-or-under-reliance
+    type: Risk
+  - id: atlas-over-or-under-reliance
+    close_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - aiuc1-req-d001
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - aiuc1-req-e001
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - aiuc1-req-e003
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - granite-groundedness
+    type: Risk
+  - id: granite-groundedness
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - granite-guardian-harm
+    type: Risk
+  - id: granite-guardian-harm
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - atlas-incomplete-advice
+    type: Risk
+  - id: atlas-incomplete-advice
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - atlas-lack-of-system-transparency
+    type: Risk
+  - id: atlas-lack-of-system-transparency
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - aiuc1-req-b006
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - aiuc1-req-c008
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - aiuc1-req-e012
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - aiuc1-req-e015
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - granite-function-call
+    type: Risk
+  - id: granite-function-call
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - granite-guardian-harm
+    type: Risk
+  - id: granite-guardian-harm
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - granite-jailbreak
+    type: Risk
+  - id: granite-jailbreak
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-function-calling-hallucination-agentic
+    type: Risk
+  - id: atlas-function-calling-hallucination-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-mitigation-maintenance-agentic
+    type: Risk
+  - id: atlas-mitigation-maintenance-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-unauthorized-use-agentic
+    type: Risk
+  - id: atlas-unauthorized-use-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+rules:
+  - id: aiuc1-ctrl-a001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-a001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-a001-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-a001-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-a001-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-a001-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-a003-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-a003-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-a003-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-a006-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-a006-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-a006-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-b001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b001-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-b001-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-b003-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b003-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b003-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-b003-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-b006-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b006-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b006-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b006-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b009-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-b009-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-b009-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-c008-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-c008-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-c008-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-c008-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-c008-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-c008-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-d001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d001-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d001-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-d002-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d003-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d003-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d003-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d003-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d003-3
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d003-3
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d003-4
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-d003-4
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-d003-5
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-d003-5
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-d004-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-d004-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e001-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e003-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e003-2
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-e012-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-1
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-2
+    type: ControlActivityObligation
+  - id: aiuc1-ctrl-e015-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-e015-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-e015-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-e015-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-ctrl-e015-3
+    type: ControlActivityRecommendation
+  - id: aiuc1-req-b003
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Requirement
+  - id: aiuc1-req-b006
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Requirement
+  - id: aiuc1-req-a003
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Requirement
+  - id: aiuc1-req-d003
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Requirement
+  - id: aiuc1-req-d004
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Requirement
+  - id: aiuc1-req-b001
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Requirement
+  - id: aiuc1-req-e001
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Requirement
+  - id: aiuc1-req-e015
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Requirement
+  - id: aiuc1-req-a001
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Requirement
+  - id: aiuc1-req-b009
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Requirement
+  - id: aiuc1-req-b003
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Requirement
+  - id: aiuc1-req-d003
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Requirement
+  - id: aiuc1-req-d004
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Requirement
+  - id: aiuc1-req-a001
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Requirement
+  - id: aiuc1-req-a006
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Requirement
+  - id: aiuc1-req-e015
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Requirement
+  - id: aiuc1-req-b001
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Requirement
+  - id: aiuc1-req-e001
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Requirement
+  - id: aiuc1-req-e015
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Requirement
+  - id: aiuc1-req-c008
+    related_mappings:
+      - asi08-cascading-failures
+    type: Requirement
+  - id: aiuc1-req-d002
+    related_mappings:
+      - asi08-cascading-failures
+    type: Requirement
+  - id: aiuc1-req-e015
+    related_mappings:
+      - asi08-cascading-failures
+    type: Requirement
+  - id: aiuc1-req-d001
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Requirement
+  - id: aiuc1-req-e001
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Requirement
+  - id: aiuc1-req-e003
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Requirement
+  - id: aiuc1-req-b006
+    related_mappings:
+      - asi10-rogue-agents
+    type: Requirement
+  - id: aiuc1-req-c008
+    related_mappings:
+      - asi10-rogue-agents
+    type: Requirement
+  - id: aiuc1-req-e012
+    related_mappings:
+      - asi10-rogue-agents
+    type: Requirement
+  - id: aiuc1-req-e015
+    related_mappings:
+      - asi10-rogue-agents
+    type: Requirement

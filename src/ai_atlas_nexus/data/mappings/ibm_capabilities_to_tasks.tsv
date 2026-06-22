@@ -3,7 +3,7 @@
 #  hf-ml-tasks: https://huggingface.co/tasks/
 #  ibmadapter: https://huggingface.co/ibm-granite/
 #  semapv: https://w3id.org/semapv/vocab/
-#  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+#  nexus: https://w3id.org/ai-atlas-nexus/
 #  bigbench: https://github.com/google/BIG-bench/blob/main/bigbench/benchmark_tasks/keywords/
 #mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/ibm_capabilities_to_tasks.tsv
 #mapping_set_description: Mapping from IBM AI Capabilities to AI Tasks

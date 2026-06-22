@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk
+id: https://w3id.org/ai-atlas-nexus/ai_risk
 name: ai_risk
 description: Vocabulary describing AI risks as used by IBM Risk Atlas
 default_curi_maps:
@@ -9,8 +9,9 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
+  dpv-risk: https://w3id.org/dpv/risk#
 default_range: string
 default_prefix: nexus
 
@@ -124,7 +125,7 @@ classes:
     is_a: Entity
     mixins:
       - RiskConcept
-    class_uri: https://w3id.org/dpv/risk#Incident
+    class_uri: dpv-risk:Incident
     description: An event occuring or occured which is a realised or materialised risk.
     attributes:
       author:
