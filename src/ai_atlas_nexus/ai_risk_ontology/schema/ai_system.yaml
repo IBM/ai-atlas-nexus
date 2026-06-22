@@ -47,6 +47,9 @@ classes:
       isComposedOf:
         range: BaseAi
         description: Relationship indicating the AI components from which a complete AI system is composed.
+      hasCapability:
+        domain: AiSystem
+        inverse: possessedByAi
     slots:
       - isComposedOf
       - hasEuAiSystemType
@@ -126,6 +129,10 @@ classes:
     is_a: Entry
     class_uri: airo:AiCapability
     description: A task, such as summarization and classification, performed by an AI.
+    slot_usage:
+      requiresCapability:
+        domain: AiTask
+        range: Capability
     slots:
       - requiresCapability
 

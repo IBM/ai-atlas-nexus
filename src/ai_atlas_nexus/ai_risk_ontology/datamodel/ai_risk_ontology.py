@@ -60,7 +60,7 @@ linkml_meta = LinkMLMeta({'default_curi_maps': ['semweb_context'],
      'default_prefix': 'nexus',
      'default_range': 'string',
      'description': 'An ontology describing AI systems and their risks',
-     'id': 'https://w3id.org/ai-atlas-nexus/ai-risk-ontology',
+     'id': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology',
      'imports': ['linkml:types',
                  'common',
                  'ai_risk',
@@ -76,7 +76,7 @@ linkml_meta = LinkMLMeta({'default_curi_maps': ['semweb_context'],
                   'linkml': {'prefix_prefix': 'linkml',
                              'prefix_reference': 'https://w3id.org/linkml/'},
                   'nexus': {'prefix_prefix': 'nexus',
-                            'prefix_reference': 'https://w3id.org/ai-atlas-nexus/'}},
+                            'prefix_reference': 'https://ibm.github.io/ai-atlas-nexus/ontology/'}},
      'settings': {'strict': {'setting_key': 'strict', 'setting_value': 'False'}},
      'source_file': 'src/ai_atlas_nexus/ai_risk_ontology/schema/ai-risk-ontology.yaml'} )
 
@@ -226,7 +226,7 @@ class Entity(ConfiguredBaseModel):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'schema:Thing',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common',
          'mixin': True})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -248,7 +248,7 @@ class Organization(Entity):
     Any organizational entity such as a corporation, educational institution, consortium, government, etc.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Organization',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -270,7 +270,7 @@ class License(Entity):
     The general notion of a license which defines terms and grants permissions to users of AI systems, datasets and software.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:License',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
                        'Vocabulary',
@@ -298,7 +298,7 @@ class Dataset(Entity):
     A body of structured information describing some topic(s) of interest.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Dataset',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Documentation',
@@ -352,7 +352,7 @@ class Documentation(Entity):
     Documented information about a concept or other topic(s) of interest.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:Documentation',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Documentation',
@@ -387,7 +387,7 @@ class Fact(ConfiguredBaseModel):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'schema:Statement',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     value: str = Field(default=..., description="""Some numeric or string value""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
     evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
@@ -398,7 +398,7 @@ class Vocabulary(Entity):
     A collection of terms, with their definitions and relationships.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'skos:ConceptScheme',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common',
          'mixin': True})
 
     version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
@@ -481,7 +481,7 @@ class Taxonomy(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'skos:ConceptScheme',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common',
          'mixin': True})
 
     version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
@@ -564,7 +564,7 @@ class Concept(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'skos:Concept',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common',
          'mixin': True})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
@@ -648,7 +648,7 @@ class Control(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'nexus:Control',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common',
          'mixin': True})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
@@ -712,7 +712,7 @@ class Group(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'skos:Collection',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common',
          'mixin': True})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
@@ -806,7 +806,7 @@ class Entry(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'nexus:Entry',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -860,9 +860,7 @@ class Entry(Entity):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Entry"] = Field(default="Entry", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -904,7 +902,7 @@ class Term(Entry):
     """
     A term and its definitions.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
@@ -971,9 +969,7 @@ class Term(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Term"] = Field(default="Term", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -1016,7 +1012,7 @@ class Principle(Entry):
     A representation of values or norms that must be taken into consideration when conducting activities.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Principle',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -1070,9 +1066,7 @@ class Principle(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Principle"] = Field(default="Principle", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -1116,7 +1110,7 @@ class Policy(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'dpv:Policy',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -1177,7 +1171,7 @@ class LLMQuestionPolicy(Policy):
     """
     The policy guides how the language model should answer a diverse set of sensitive questions.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
@@ -1256,7 +1250,7 @@ class Rule(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'dpv:Rule',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -1315,7 +1309,7 @@ class Rule(Entity):
 
 
 class AttributeConditionRule(Rule):
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     preconditions: Optional[AnonymousClassExpression] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['AttributeConditionRule']} })
     postconditions: Optional[AnonymousClassExpression] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['AttributeConditionRule']} })
@@ -1376,13 +1370,13 @@ class AttributeConditionRule(Rule):
 
 
 class AnonymousClassExpression(ConfiguredBaseModel):
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     slot_conditions: Optional[list[SlotCondition]] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['AnonymousClassExpression']} })
 
 
 class SlotCondition(ConfiguredBaseModel):
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     slot_name: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['SlotCondition']} })
     equals_string: Optional[str] = Field(default=None, json_schema_extra = { "linkml_meta": {'domain_of': ['SlotCondition']} })
@@ -1394,7 +1388,7 @@ class Permission(Rule):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'dpv:Permission',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     type: Literal["Permission"] = Field(default="Permission", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -1458,7 +1452,7 @@ class Prohibition(Rule):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'dpv:Prohibition',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     type: Literal["Prohibition"] = Field(default="Prohibition", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -1522,7 +1516,7 @@ class Obligation(Rule):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'dpv:Obligation',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     type: Literal["Obligation"] = Field(default="Obligation", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -1586,7 +1580,7 @@ class Recommendation(Rule):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'dpv:Recommendation',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     type: Literal["Recommendation"] = Field(default="Recommendation", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -1650,7 +1644,7 @@ class Certification(Entry):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'dpv:Certification',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/common'})
 
     type: Literal["Certification"] = Field(default="Certification", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -1725,9 +1719,7 @@ class Certification(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -1748,7 +1740,7 @@ class RiskTaxonomy(Taxonomy):
     """
     A taxonomy of AI system related risks
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
                        'Vocabulary',
@@ -1828,7 +1820,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
     """
     A taxonomy of AI system related risk controls groups
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
                        'Vocabulary',
@@ -1909,7 +1901,7 @@ class RiskConcept(Concept):
     An umbrella term for referring to risk, risk source, consequence and impact.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:RiskConcept',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk',
          'mixin': True})
 
     isDetectedBy: Optional[list[str]] = Field(default=None, description="""A relationship where a risk, risk source, consequence, or impact is detected by a risk control.""", json_schema_extra = { "linkml_meta": {'domain': 'RiskConcept',
@@ -1999,7 +1991,7 @@ class RiskControlGroup(RiskConcept, Group):
     """
     A group of AI system related risk controls.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk',
          'mixins': ['RiskConcept'],
          'slot_usage': {'hasPart': {'description': 'A relationship where a '
                                                    'riskcontrolgroup has a risk '
@@ -2105,7 +2097,7 @@ class RiskGroup(RiskConcept, Group):
     """
     A group of AI system related risks that are part of a risk taxonomy.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk',
          'mixins': ['RiskConcept'],
          'slot_usage': {'hasPart': {'description': 'A relationship where a riskgroup '
                                                    'has a risk',
@@ -2211,7 +2203,7 @@ class Risk(RiskConcept, Entry):
     The state of uncertainty associated with an AI system, that has the potential to cause harms
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:Risk',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk',
          'mixins': ['RiskConcept'],
          'slot_usage': {'isPartOf': {'description': 'A relationship where a risk is '
                                                     'part of a risk group',
@@ -2288,9 +2280,7 @@ class Risk(RiskConcept, Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Risk"] = Field(default="Risk", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -2334,7 +2324,7 @@ class RiskControl(RiskConcept, Control):
     A measure that maintains and/or modifies risk (and risk concepts)
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:RiskControl',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk',
          'mixin': True,
          'mixins': ['RiskConcept']})
 
@@ -2434,7 +2424,7 @@ class Action(RiskControl):
     """
     Action to remediate a risk
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
@@ -2544,8 +2534,8 @@ class RiskIncident(RiskConcept, Entity):
     """
     An event occuring or occured which is a realised or materialised risk.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv-risk:Incident',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'https://w3id.org/dpv/risk#Incident',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk',
          'mixins': ['RiskConcept']})
 
     refersToRisk: Optional[list[str]] = Field(default=None, description="""Indicates the incident (subject) is a materialisation of the indicated risk (object)""", json_schema_extra = { "linkml_meta": {'domain': 'RiskIncident',
@@ -2649,7 +2639,7 @@ class RiskIncident(RiskConcept, Entity):
 
 class Impact(RiskConcept, Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Impact',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk',
          'mixins': ['RiskConcept']})
 
     isDetectedBy: Optional[list[str]] = Field(default=None, description="""A relationship where a risk, risk source, consequence, or impact is detected by a risk control.""", json_schema_extra = { "linkml_meta": {'domain': 'RiskConcept',
@@ -2737,7 +2727,7 @@ class Impact(RiskConcept, Entity):
 
 class IncidentStatus(Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:IncidentStatus',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2755,7 +2745,7 @@ class IncidentStatus(Entity):
 
 class IncidentConcludedclass(IncidentStatus):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:IncidentConcludedclass',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2773,7 +2763,7 @@ class IncidentConcludedclass(IncidentStatus):
 
 class IncidentHaltedclass(IncidentStatus):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:IncidentHaltedclass',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2791,7 +2781,7 @@ class IncidentHaltedclass(IncidentStatus):
 
 class IncidentMitigatedclass(IncidentStatus):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:IncidentMitigatedclass',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2809,7 +2799,7 @@ class IncidentMitigatedclass(IncidentStatus):
 
 class IncidentNearMissclass(IncidentStatus):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:IncidentNearMissclass',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2827,7 +2817,7 @@ class IncidentNearMissclass(IncidentStatus):
 
 class IncidentOngoingclass(IncidentStatus):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:IncidentOngoingclass',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2845,7 +2835,7 @@ class IncidentOngoingclass(IncidentStatus):
 
 class Severity(Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Severity',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2863,7 +2853,7 @@ class Severity(Entity):
 
 class Likelihood(Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Likelihood',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2881,7 +2871,7 @@ class Likelihood(Entity):
 
 class Consequence(Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Consequence',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_risk'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -2901,7 +2891,8 @@ class BaseAi(Entity):
     """
     Any type of AI, be it a LLM, RL agent, SVM, etc.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True, 'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     producer: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -2958,10 +2949,13 @@ class AiSystem(BaseAi, Entry):
     A compound AI System composed of one or more AI capablities. ChatGPT is an example of an AI system which deploys multiple GPT AI models.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AISystem',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'mixin': True,
          'mixins': ['BaseAi'],
-         'slot_usage': {'isComposedOf': {'description': 'Relationship indicating the '
+         'slot_usage': {'hasCapability': {'domain': 'AiSystem',
+                                          'inverse': 'possessedByAi',
+                                          'name': 'hasCapability'},
+                        'isComposedOf': {'description': 'Relationship indicating the '
                                                         'AI components from which a '
                                                         'complete AI system is '
                                                         'composed.',
@@ -2972,7 +2966,9 @@ class AiSystem(BaseAi, Entry):
     hasEuAiSystemType: Optional[AiSystemType] = Field(default=None, description="""The type of system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasEuRiskCategory: Optional[EuAiRiskCategory] = Field(default=None, description="""The risk category of an AI system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
-""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+""", json_schema_extra = { "linkml_meta": {'domain': 'AiSystem',
+         'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+         'inverse': 'possessedByAi',
          'slot_uri': 'tech:hasCapability'} })
     isAppliedWithinDomain: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isAppliedWithinDomain'} })
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
@@ -3062,9 +3058,7 @@ class AiSystem(BaseAi, Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiSystem"] = Field(default="AiSystem", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3106,7 +3100,7 @@ class AiAgent(AiSystem):
     """
     An artificial intelligence (AI) agent refers to a system or program that is capable of autonomously performing tasks on behalf of a user or another system by designing its workflow and utilizing available tools.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'mixin': True,
          'slot_usage': {'isProvidedBy': {'description': 'A relationship indicating the '
                                                         'AI agent has been provided by '
@@ -3117,7 +3111,9 @@ class AiAgent(AiSystem):
     hasEuAiSystemType: Optional[AiSystemType] = Field(default=None, description="""The type of system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasEuRiskCategory: Optional[EuAiRiskCategory] = Field(default=None, description="""The risk category of an AI system as defined by the EU AI Act.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem']} })
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
-""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+""", json_schema_extra = { "linkml_meta": {'domain': 'AiSystem',
+         'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
+         'inverse': 'possessedByAi',
          'slot_uri': 'tech:hasCapability'} })
     isAppliedWithinDomain: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isAppliedWithinDomain'} })
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
@@ -3207,9 +3203,7 @@ class AiAgent(AiSystem):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiAgent"] = Field(default="AiAgent", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3251,7 +3245,7 @@ class LargeLanguageModelFamily(Entity):
     """
     A large language model family is a set of models that are provided by the same AI systems provider and are built around the same architecture, but differ e.g. in the number of parameters. Examples are Meta's Llama2 family or the IBM granite models.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -3292,9 +3286,12 @@ class AiTask(Entry):
     A task, such as summarization and classification, performed by an AI.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AiCapability',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
+         'slot_usage': {'requiresCapability': {'domain': 'AiTask',
+                                               'name': 'requiresCapability',
+                                               'range': 'Capability'}}})
 
-    requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+    requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'AiTask',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
@@ -3346,9 +3343,7 @@ class AiTask(Entry):
                        'CapabilityGroup'],
          'slot_uri': 'schema:isPartOf'} })
     requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiTask"] = Field(default="AiTask", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3390,7 +3385,7 @@ class AiTaskTaxonomy(Taxonomy):
     """
     A taxonomy of AI Tasks
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
                        'Vocabulary',
@@ -3471,7 +3466,7 @@ class AiTaskDomain(Group):
     A grouping of AI Tasks by domain.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:AiTaskDomain',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'slot_usage': {'hasPart': {'description': 'A relationship where an AI Task '
                                                    'domain has a group.',
                                     'name': 'hasPart',
@@ -3567,7 +3562,7 @@ class AiTaskGroup(Group):
     A group of AI Tasks.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:AiTaskGroup',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'slot_usage': {'hasPart': {'description': 'A relationship where an AI task '
                                                    'group has an AI task.',
                                     'name': 'hasPart',
@@ -3672,7 +3667,7 @@ class AiLifecyclePhase(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
          'class_uri': 'airo:AILifecyclePhase',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -3692,7 +3687,7 @@ class DataPreprocessing(AiLifecyclePhase):
     """
     Data transformations, such as PI filtering, performed to ensure high quality of AI model training data.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -3712,7 +3707,7 @@ class AiModelValidation(AiLifecyclePhase):
     """
     AI model validation steps that have been performed after the model training to ensure high AI model quality.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -3733,7 +3728,7 @@ class AiProvider(Organization):
     A provider under the AI Act is defined by Article 3(3) as a natural or legal person or body that develops an AI system or general-purpose AI model or has an AI system or general-purpose AI model developed; and places that ystem or model on the market, or puts that system into service, under the provider's own name or trademark, whether for payment or free for charge.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AIProvider',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -3755,7 +3750,7 @@ class Modality(Entity):
     A modality supported by an Ai component. Examples include text, image, video.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:Modality',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -3776,7 +3771,7 @@ class Input(Entity):
     Input for which the system or component generates output.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:Input',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -3797,7 +3792,7 @@ class Purpose(Entry):
     The end goal for which an entity is used or an action is taken.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:Purpose',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -3851,9 +3846,7 @@ class Purpose(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Purpose"] = Field(default="Purpose", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3896,7 +3889,7 @@ class Domain(Entry):
     An area, sector, or industry that is associated with economic activities.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:Domain',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -3950,9 +3943,7 @@ class Domain(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Domain"] = Field(default="Domain", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -3995,7 +3986,7 @@ class LocalityOfUse(Entry):
     The area, e.g. facility or institution, in which an entity is used.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:LocalityOfUse',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -4049,9 +4040,7 @@ class LocalityOfUse(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["LocalityOfUse"] = Field(default="LocalityOfUse", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -4094,7 +4083,7 @@ class AIComponent(Entity):
     Component (element) of an AI system
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AIComponent',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -4114,7 +4103,7 @@ class AiModel(AIComponent, BaseAi):
     """
     A base AI Model class. No assumption about the type (SVM, LLM, etc.). Subclassed by model types (see LargeLanguageModel).
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'mixin': True,
          'mixins': ['AIComponent']})
 
@@ -4180,7 +4169,7 @@ class LargeLanguageModel(AiModel):
     A large language model (LLM) is an AI model which supports a range of language-related tasks such as generation, summarization, classification, among others. A LLM is implemented as an artificial neural networks using a transformer architecture.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'aliases': ['LLM'],
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'mixin': True,
          'slot_usage': {'isPartOf': {'description': 'Annotation that a Large Language '
                                                     'model is part of a family of '
@@ -4268,7 +4257,7 @@ class Stakeholder(Entity):
     Represents any individual, group or organization that can affect, be affected by or perceive itself to be affected by a decision or activity.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:Stakeholder',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system',
          'slot_usage': {'isPartOf': {'description': 'A relationship where a '
                                                     'stakeholder is part of a '
                                                     'stakeholder group',
@@ -4320,7 +4309,7 @@ class AISubject(Stakeholder):
     An entity that is subject to or impacted by the use of AI.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AISubject',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -4367,7 +4356,7 @@ class AIOperator(Stakeholder):
     Refers to a provider, product manufacturer, deployer, authorised representative, importer or distributor.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AIOperator',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -4414,7 +4403,7 @@ class AIDeveloper(Stakeholder):
     An organisation or entity that is concerned with the development of AI services and products.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AIDeveloper',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -4461,7 +4450,7 @@ class AIDeployer(AIOperator):
     Any natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AIDeployer',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -4508,7 +4497,7 @@ class AIUser(Stakeholder):
     Individual or group that interacts with a system.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:AIUser',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -4554,7 +4543,7 @@ class StakeholderGroup(Group):
     """
     An AI system stakeholder grouping.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_system'})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
@@ -4646,7 +4635,7 @@ class CapabilityTaxonomy(Taxonomy):
     A taxonomy of AI capabilities describing the abilities of AI systems.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'skos:ConceptScheme',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_capability'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability'})
 
     version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
                        'Vocabulary',
@@ -4727,7 +4716,7 @@ class CapabilityConcept(Concept):
     An umbrella term for referring to capability domains, groups, and individual capabilities.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:CapabilityConcept',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_capability',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability',
          'mixin': True})
 
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
@@ -4810,7 +4799,7 @@ class CapabilityDomain(CapabilityConcept, Group):
     A high-level domain of AI capabilities (e.g., Language, Reasoning, Knowledge)
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:CapabilityDomain',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_capability',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability',
          'mixins': ['CapabilityConcept'],
          'slot_usage': {'hasPart': {'description': 'A relationship where a capability '
                                                    'domain has capability groups',
@@ -4907,7 +4896,7 @@ class CapabilityGroup(CapabilityConcept, Group):
     """
     A group of AI capabilities that are part of a capability taxonomy, organized under a domain
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_capability',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability',
          'mixins': ['CapabilityConcept'],
          'slot_usage': {'belongsToDomain': {'description': 'A relationship where a '
                                                            'capability group belongs '
@@ -5024,7 +5013,7 @@ class Capability(CapabilityConcept, Entry):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'broad_mappings': ['tech:Capability'],
          'class_uri': 'ai:Capability',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_capability',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability',
          'mixins': ['CapabilityConcept'],
          'slot_usage': {'implementedByAdapter': {'description': 'Indicates that this '
                                                                 'capability is '
@@ -5057,13 +5046,14 @@ class Capability(CapabilityConcept, Entry):
                                                           'with this capability can '
                                                           'perform tasks that require '
                                                           'it.',
+                                           'domain': 'Capability',
                                            'name': 'requiredByTask',
                                            'range': 'AiTask'}}})
 
-    requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is required to perform a specific AI task. This links abstract capabilities (technical abilities) to concrete tasks (application-level operations). An AI system with this capability can perform tasks that require it.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Capability',
+    requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is required to perform a specific AI task. This links abstract capabilities (technical abilities) to concrete tasks (application-level operations). An AI system with this capability can perform tasks that require it.""", json_schema_extra = { "linkml_meta": {'domain': 'Capability',
          'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+         'inverse': 'requiresCapability'} })
+    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Capability', 'domain_of': ['Entry', 'Capability']} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -5158,7 +5148,7 @@ class AiEval(Entity):
     An AI Evaluation, e.g. a metric, benchmark, unitxt card evaluation, a question or a combination of such entities.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dqv:Metric',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval',
          'slot_usage': {'isComposedOf': {'description': 'A relationship indicating '
                                                         'that an AI evaluation maybe '
                                                         'composed of other AI '
@@ -5236,7 +5226,7 @@ class AiEvalResult(Fact, Entity):
     The result of an evaluation for a specific AI model.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dqv:QualityMeasurement',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval',
          'mixins': ['Fact']})
 
     isResultOf: Optional[str] = Field(default=None, description="""A relationship indicating that an entity is the result of an AI evaluation.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEvalResult'], 'slot_uri': 'dqv:isMeasurementOf'} })
@@ -5261,7 +5251,7 @@ class SourceMetadata(Entity):
     Metadata about the source of an evaluation
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:sourcemetadata',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     source_name: Optional[str] = Field(default=None, description="""Name of the evaluation source""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata']} })
     source_type: Optional[str] = Field(default=None, description="""Type of source (e.g., evaluation_run)""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata', 'SourceData']} })
@@ -5287,7 +5277,7 @@ class ModelInfo(Entity):
     Information about the AI model being evaluated
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:modelinfo',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     model_name: Optional[str] = Field(default=None, description="""Name of the AI model""", json_schema_extra = { "linkml_meta": {'domain_of': ['ModelInfo']} })
     model_id: Optional[str] = Field(default=None, description="""Identifier of the AI model""", json_schema_extra = { "linkml_meta": {'domain_of': ['ModelInfo']} })
@@ -5310,7 +5300,7 @@ class SourceData(Entity):
     Information about the data source used in evaluation
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:sourcedata',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     dataset_name: Optional[str] = Field(default=None, description="""Name of the dataset""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceData']} })
     source_type: Optional[str] = Field(default=None, description="""Type of data source (e.g., hf_dataset)""", json_schema_extra = { "linkml_meta": {'domain_of': ['SourceMetadata', 'SourceData']} })
@@ -5335,7 +5325,7 @@ class MetricConfig(Entity):
     Configuration for evaluation metrics
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:metricconfig',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     lower_is_better: Optional[bool] = Field(default=None, description="""Whether lower scores are better""", json_schema_extra = { "linkml_meta": {'domain_of': ['MetricConfig']} })
     score_type: Optional[str] = Field(default=None, description="""Type of score (e.g., continuous)""", json_schema_extra = { "linkml_meta": {'domain_of': ['MetricConfig']} })
@@ -5360,7 +5350,7 @@ class ScoreDetails(Entity):
     Details about evaluation scores
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:scoredetails',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     score: Optional[float] = Field(default=None, description="""The evaluation score""", json_schema_extra = { "linkml_meta": {'domain_of': ['ScoreDetails']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -5382,7 +5372,7 @@ class EvaluationResultRecord(Entity):
     A single evaluation result record
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:evaluationresultrecord',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     hasSourceData: Optional[SourceData] = Field(default=None, description="""Source data information""", json_schema_extra = { "linkml_meta": {'domain': 'EvaluationResultRecord', 'domain_of': ['EvaluationResultRecord']} })
     hasMetricConfig: Optional[MetricConfig] = Field(default=None, description="""Metric configuration""", json_schema_extra = { "linkml_meta": {'domain': 'EvaluationResultRecord', 'domain_of': ['EvaluationResultRecord']} })
@@ -5407,7 +5397,7 @@ class EveryEvalAIResult(AiEvalResult):
     An evaluation result from the Every Eval Ever dataset, capturing evaluation metadata and results from the EEE_datastore.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:everyevalairesult',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     hasSourceMetadata: Optional[SourceMetadata] = Field(default=None, description="""Source metadata for the evaluation""", json_schema_extra = { "linkml_meta": {'domain': 'EveryEvalAIResult', 'domain_of': ['EveryEvalAIResult']} })
     hasModelInfo: Optional[ModelInfo] = Field(default=None, description="""Model information for the evaluation""", json_schema_extra = { "linkml_meta": {'domain': 'EveryEvalAIResult', 'domain_of': ['EveryEvalAIResult']} })
@@ -5482,7 +5472,7 @@ class BenchmarkMetadataCard(Entity):
     Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly. This is an implementation of the design set out in BenchmarkCards: Large Language Model and Risk Reporting (https://doi.org/10.48550/arXiv.2410.12974)
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:benchmarkmetadatacard',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     describesAiEval: Optional[list[str]] = Field(default=None, description="""A relationship where a BenchmarkMetadataCard describes an AI evaluation (benchmark).""", json_schema_extra = { "linkml_meta": {'domain': 'BenchmarkMetadataCard',
          'domain_of': ['BenchmarkMetadataCard'],
@@ -5594,7 +5584,7 @@ class Question(AiEval):
     """
     An evaluation where a question has to be answered
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval'})
 
     text: str = Field(default=..., description="""The question itself""", json_schema_extra = { "linkml_meta": {'domain_of': ['Question']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
@@ -5664,7 +5654,7 @@ class Questionnaire(AiEval):
     """
     A questionnaire groups questions
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_eval',
          'slot_usage': {'composed_of': {'name': 'composed_of', 'range': 'Question'}}})
 
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
@@ -5734,8 +5724,15 @@ class Adapter(LargeLanguageModel, Entry):
     """
     Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_intrinsic',
-         'mixins': ['LargeLanguageModel']})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic',
+         'mixins': ['LargeLanguageModel'],
+         'slot_usage': {'implementsCapability': {'description': 'Indicates that this '
+                                                                'adapter implements a '
+                                                                'specific capability',
+                                                 'domain': 'Adapter',
+                                                 'inverse': 'implementedByAdapter',
+                                                 'name': 'implementsCapability',
+                                                 'range': 'Capability'}}})
 
     hasAdapterType: Optional[list[AdapterType]] = Field(default=None, description="""The Adapter type, for example: LORA, ALORA, X-LORA""", json_schema_extra = { "linkml_meta": {'domain_of': ['Adapter']} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
@@ -5784,9 +5781,9 @@ class Adapter(LargeLanguageModel, Entry):
                        'Adapter',
                        'LLMIntrinsic']} })
     adaptsModel: Optional[list[str]] = Field(default=None, description="""The LargeLanguageModel being adapted""", json_schema_extra = { "linkml_meta": {'domain_of': ['Adapter']} })
-    implementsCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this intrinsic implements a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'LLMIntrinsic',
-         'domain_of': ['Adapter'],
-         'inverse': 'implementedByIntrinsic'} })
+    implementsCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this adapter implements a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Adapter',
+         'domain_of': ['Adapter', 'LLMIntrinsic'],
+         'inverse': 'implementedByAdapter'} })
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
 """, json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'tech:hasCapability'} })
@@ -5828,9 +5825,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     requiredByTask: Optional[list[str]] = Field(default=None, description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Capability'], 'inverse': 'requiresCapability'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Adapter"] = Field(default="Adapter", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -5884,7 +5879,11 @@ class LLMIntrinsic(Entry):
     A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'ai:Capability',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_intrinsic'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic',
+         'slot_usage': {'implementsCapability': {'domain': 'LLMIntrinsic',
+                                                 'inverse': 'implementedByIntrinsic',
+                                                 'name': 'implementsCapability',
+                                                 'range': 'Capability'}}})
 
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'RiskConcept'}, {'range': 'Term'}],
          'domain': 'Any',
@@ -5926,6 +5925,9 @@ class LLMIntrinsic(Entry):
     hasCapability: Optional[list[str]] = Field(default=None, description="""Indicates the technical capabilities this entry possesses.
 """, json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'tech:hasCapability'} })
+    implementsCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entity implements a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'LLMIntrinsic',
+         'domain_of': ['Adapter', 'LLMIntrinsic'],
+         'inverse': 'implementedByIntrinsic'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -5956,9 +5958,7 @@ class LLMIntrinsic(Entry):
     requiresCapability: Optional[list[str]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    implementedByAdapter: Optional[list[str]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
-         'domain_of': ['Entry', 'Capability'],
-         'inverse': 'implementsCapability'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any', 'domain_of': ['Entry', 'Capability']} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["LLMIntrinsic"] = Field(default="LLMIntrinsic", description="""The entry type.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -6001,7 +6001,7 @@ class AiOffice(Organization):
     The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Organization',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/eu_ai_act'})
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/eu_ai_act'})
 
     grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
@@ -6022,7 +6022,8 @@ class ControlActivity(Rule):
     """
     An obligation, permission, or prohibition for AI system assurance.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_aiuc', 'mixin': True})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
+         'mixin': True})
 
     hasControlApplication: Optional[AIUC1ControlApplicationCategory] = Field(default=None, description="""Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
@@ -6106,7 +6107,7 @@ class ControlActivityPermission(ControlActivity, Permission):
     A control activity (rule) describing a permission to perform an activity
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityPermission',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_aiuc',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityPermission"] = Field(default="ControlActivityPermission", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -6191,7 +6192,7 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
     A control activity (rule) describing a prohibition to perform an activity
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityProhibition',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_aiuc',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityProhibition"] = Field(default="ControlActivityProhibition", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -6276,7 +6277,7 @@ class ControlActivityObligation(ControlActivity, Obligation):
     A control activity (rule) describing an obligation for performing an activity
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityObligation',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_aiuc',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityObligation"] = Field(default="ControlActivityObligation", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -6361,7 +6362,7 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
     A control activity (rule) describing a recommendation for performing an activity
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ControlActivityRecommendation',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_aiuc',
+         'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityRecommendation"] = Field(default="ControlActivityRecommendation", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -6445,7 +6446,7 @@ class Requirement(Rule):
     """
     A requirement representing a combination of obligation, permission, or prohibition for AI system assurance.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_aiuc',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc',
          'slot_usage': {'hasRule': {'description': 'Relationship indicating the '
                                                    'control activities (rules) of '
                                                    'which the requirement is composed.',
@@ -6530,7 +6531,7 @@ class Container(ConfiguredBaseModel):
     """
     An umbrella object that holds the ontology class instances
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai-risk-ontology',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology',
          'tree_root': True})
 
     organizations: Optional[list[Organization]] = Field(default=None, description="""A list of organizations""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })

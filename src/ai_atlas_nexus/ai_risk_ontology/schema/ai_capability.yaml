@@ -90,6 +90,7 @@ classes:
           Indicates that this capability is required to perform a specific AI task. This links abstract capabilities
           (technical abilities) to concrete tasks (application-level operations). An AI system with this capability can
           perform tasks that require it.
+        domain: Capability
         range: AiTask
       implementedByAdapter:
         description: >-
@@ -128,14 +129,6 @@ slots:
     multivalued: true
     inlined: false
     inverse: implementsCapability
-
-  implementsCapability:
-    description: Indicates that this intrinsic implements a specific capability
-    domain: LLMIntrinsic
-    range: Capability
-    multivalued: true
-    inlined: false
-    inverse: implementedByIntrinsic
 
   # AI System-capability relationships
   possessedByAi:

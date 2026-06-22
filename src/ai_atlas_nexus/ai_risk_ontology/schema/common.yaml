@@ -12,7 +12,7 @@ prefixes:
   dpv: https://w3id.org/dpv#
   dpv-loc: https://w3id.org/dpv/loc#
   ai: https://w3id.org/dpv/ai#
-  skos: https://www.w3.org/2009/08/skos-reference/skos.html#
+  skos: http://www.w3.org/2004/02/skos/core#
   tech: https://w3id.org/dpv/tech#
 
 default_range: string
@@ -427,18 +427,15 @@ slots:
       Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
       capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
     domain: Any
-    range: Adapter
+    range: Any
     multivalued: true
     inlined: false
-    inverse: implementsCapability
   implementsCapability:
-    description: Indicates that this adapter implements a specific capability
+    description: Indicates that this entity implements a specific capability
     domain: Any
     range: Capability
     multivalued: true
     inlined: false
-    inverse: implementedByAdapter
-
   hasTerm:
     slot_uri: nexus:hasTerm
     range: Term

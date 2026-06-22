@@ -33,6 +33,13 @@ classes:
     is_a: Entry
     mixins:
       - LargeLanguageModel
+    slot_usage:
+      implementsCapability:
+        description: >-
+          Indicates that this adapter implements a specific capability
+        domain: Adapter
+        range: Capability
+        inverse: implementedByAdapter
     slots:
       - hasAdapterType
       - isDefinedByVocabulary
@@ -51,6 +58,11 @@ classes:
       intrinsic itself is implemented.
     is_a: Entry
     class_uri: ai:Capability
+    slot_usage:
+      implementsCapability:
+        domain: LLMIntrinsic
+        range: Capability
+        inverse: implementedByIntrinsic
     slots:
       - hasRelatedRisk
       - hasRelatedTerm
@@ -58,6 +70,7 @@ classes:
       - isDefinedByVocabulary
       - hasAdapter
       - hasCapability
+      - implementsCapability
 
 enums:
   AdapterType:
