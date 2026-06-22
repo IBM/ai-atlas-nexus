@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_aiuc
+id: https://w3id.org/ai-atlas-nexus/ai_aiuc
 name: ai_aiuc
 description: AIUC-1 classes as used by AI Atlas Nexus
 license: license-apache-2.0
@@ -13,7 +13,7 @@ imports:
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
   airo: https://w3id.org/airo#
 default_range: string

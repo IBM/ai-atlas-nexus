@@ -474,7 +474,7 @@ RISK_SEVERITY_TEMPLATE = """
 NL_TO_SPARQL_TEMPLATE = """You are a SPARQL expert working with a knowledge graph about AI risks.
 
 GRAPH CONTEXT:
-- Namespace prefix: nexus: <https://ibm.github.io/ai-atlas-nexus/ontology/>
+- Namespace prefix: nexus: <https://w3id.org/ai-atlas-nexus/>
 - Standard prefixes always available: rdf:, nexus:, xsd:
 - Classes in this store: {{ classes }}
 - Common predicates: rdf:type, nexus:name, nexus:description, nexus:isDefinedByTaxonomy,

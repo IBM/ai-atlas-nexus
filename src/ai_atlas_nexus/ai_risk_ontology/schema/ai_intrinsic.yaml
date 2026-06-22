@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic
+id: https://w3id.org/ai-atlas-nexus/ai_intrinsic
 name: ai_intrinsic
 description: An ontology describing AI Intrinsics and representing LoRA (Low-Rank Adaptation) adapters
 license: license-apache-2.0
@@ -13,7 +13,7 @@ imports:
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
   ai: https://w3id.org/dpv/ai#
   airo: https://w3id.org/airo#
@@ -33,6 +33,13 @@ classes:
     is_a: Entry
     mixins:
       - LargeLanguageModel
+    slot_usage:
+      implementsCapability:
+        description: >-
+          Indicates that this adapter implements a specific capability
+        domain: Adapter
+        range: Capability
+        inverse: implementedByAdapter
     slots:
       - hasAdapterType
       - isDefinedByVocabulary
@@ -51,6 +58,11 @@ classes:
       intrinsic itself is implemented.
     is_a: Entry
     class_uri: ai:Capability
+    slot_usage:
+      implementsCapability:
+        domain: LLMIntrinsic
+        range: Capability
+        inverse: implementedByIntrinsic
     slots:
       - hasRelatedRisk
       - hasRelatedTerm
@@ -58,6 +70,7 @@ classes:
       - isDefinedByVocabulary
       - hasAdapter
       - hasCapability
+      - implementsCapability
 
 enums:
   AdapterType:
