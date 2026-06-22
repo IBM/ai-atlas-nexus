@@ -1,4 +1,36 @@
 entries:
+  - id: granite-answer-relevance
+    related_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    related_mappings:
+      - granite-answer-relevance
+    type: Risk
+  - id: granite-evasiveness
+    related_mappings:
+      - atlas-harmful-output
+    type: Risk
+  - id: atlas-harmful-output
+    related_mappings:
+      - granite-evasiveness
+    type: Risk
+  - id: granite-function-call
+    related_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    related_mappings:
+      - granite-function-call
+    type: Risk
+  - id: granite-groundedness
+    related_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    related_mappings:
+      - granite-groundedness
+    type: Risk
   - id: granite-guardian-harm
     related_mappings:
       - atlas-harmful-output
@@ -7,13 +39,21 @@ entries:
     related_mappings:
       - granite-guardian-harm
     type: Risk
-  - id: granite-social-bias
+  - id: granite-harm-engagement
     related_mappings:
-      - atlas-output-bias
+      - atlas-harmful-output
     type: Risk
-  - id: atlas-output-bias
+  - id: atlas-harmful-output
     related_mappings:
-      - granite-social-bias
+      - granite-harm-engagement
+    type: Risk
+  - id: granite-jailbreak
+    related_mappings:
+      - atlas-jailbreaking
+    type: Risk
+  - id: atlas-jailbreaking
+    related_mappings:
+      - granite-jailbreak
     type: Risk
   - id: granite-profanity
     related_mappings:
@@ -23,6 +63,14 @@ entries:
     related_mappings:
       - granite-profanity
     type: Risk
+  - id: granite-relevance
+    related_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    related_mappings:
+      - granite-relevance
+    type: Risk
   - id: granite-sexual-content
     related_mappings:
       - atlas-harmful-output
@@ -30,6 +78,14 @@ entries:
   - id: atlas-harmful-output
     related_mappings:
       - granite-sexual-content
+    type: Risk
+  - id: granite-social-bias
+    related_mappings:
+      - atlas-output-bias
+    type: Risk
+  - id: atlas-output-bias
+    related_mappings:
+      - granite-social-bias
     type: Risk
   - id: granite-unethical-behavior
     related_mappings:
@@ -46,60 +102,4 @@ entries:
   - id: atlas-harmful-output
     related_mappings:
       - granite-violence
-    type: Risk
-  - id: granite-jailbreak
-    related_mappings:
-      - atlas-jailbreaking
-    type: Risk
-  - id: atlas-jailbreaking
-    related_mappings:
-      - granite-jailbreak
-    type: Risk
-  - id: granite-harm-engagement
-    related_mappings:
-      - atlas-harmful-output
-    type: Risk
-  - id: atlas-harmful-output
-    related_mappings:
-      - granite-harm-engagement
-    type: Risk
-  - id: granite-evasiveness
-    related_mappings:
-      - atlas-harmful-output
-    type: Risk
-  - id: atlas-harmful-output
-    related_mappings:
-      - granite-evasiveness
-    type: Risk
-  - id: granite-groundedness
-    related_mappings:
-      - atlas-hallucination
-    type: Risk
-  - id: atlas-hallucination
-    related_mappings:
-      - granite-groundedness
-    type: Risk
-  - id: granite-relevance
-    related_mappings:
-      - atlas-hallucination
-    type: Risk
-  - id: atlas-hallucination
-    related_mappings:
-      - granite-relevance
-    type: Risk
-  - id: granite-answer-relevance
-    related_mappings:
-      - atlas-hallucination
-    type: Risk
-  - id: atlas-hallucination
-    related_mappings:
-      - granite-answer-relevance
-    type: Risk
-  - id: granite-function-call
-    related_mappings:
-      - atlas-hallucination
-    type: Risk
-  - id: atlas-hallucination
-    related_mappings:
-      - granite-function-call
     type: Risk
