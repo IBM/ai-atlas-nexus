@@ -381,33 +381,3 @@ class SPARQLQueryBuilder:
             ?s <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?type .
         }}
         """)
-
-
-def get_neighbours_with_hops(self, node_uri: str) -> str:
-    """Neightbours"""
-    return self._wrap(f"""
-            SELECT DISTINCT ?neighbour ?depth
-            WHERE {{
-                          {{
-                    <{node_uri}> ?p1 ?neighbour .
-                    BIND(1 AS ?depth)
-                }}
-                UNION
-                {{
-                    <{node_uri}> ?p1 ?mid1 .
-                    ?mid1 ?p2 ?neighbour .
-                    BIND(2 AS ?depth)
-                }}
-                UNION
-                {{
-                    <{node_uri}> ?p1 ?mid1 .
-                    ?mid1 ?p2 ?mid2 .
-                    ?mid2 ?p3 ?neighbour .
-                    BIND(3 AS ?depth)
-                }}
-
-                FILTER(?neighbour != <{node_uri}>)
-                FILTER(isIRI(?neighbour))
-                }}
-            ORDER BY ?depth
-            """)
