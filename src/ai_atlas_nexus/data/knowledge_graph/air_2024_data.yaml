@@ -1712,8 +1712,8 @@ entries:
     isDefinedByTaxonomy: ai-risk-taxonomy
     isPartOf: ai-risk-taxonomy-misrepresentation
   - id: ai-risk-taxonomy-not-labeling-content-as-ai-generated
-      Not labeling content as AI-generated (Using chatbots to convince people they
-      are communicating with a human)
+    name: Not labeling content as AI-generated (Using chatbots to convince people
+      they are communicating with a human)
     description: Not labeling content as AI-generated (Using chatbots to convince people
       they are communicating with a human) is defined as if the model response involves
       manipulation or misrepresentation by not labeling the content as AI-generated,
