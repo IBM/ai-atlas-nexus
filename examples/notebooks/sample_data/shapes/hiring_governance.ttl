@@ -1,0 +1,17 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix nexus: <https://w3id.org/ai-atlas-nexus/> .
+
+nexus:HiringRiskShape a sh:NodeShape ;
+    sh:targetClass nexus:Risk ;
+    sh:property [ sh:path nexus:isDefinedByTaxonomy ; sh:minCount 1 ] ;
+    sh:rule [
+        a sh:SPARQLRule ;
+        sh:construct """
+PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
+CONSTRUCT { ?this nexus:requiresGovernance true }
+WHERE {
+    ?this a nexus:Risk ;
+          nexus:isDefinedByTaxonomy "hiring-usecase-demo" .
+}
+"""
+    ] .
