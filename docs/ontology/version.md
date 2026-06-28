@@ -12,11 +12,11 @@ Alias: version
 | Name                                                    | Description                                                                      | Modifies Slot |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
-| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
 | [License](License.md)                                   | The general notion of a license which defines terms and grants permissions to... | no            |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
-| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
 | [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
 
 ## Properties
 

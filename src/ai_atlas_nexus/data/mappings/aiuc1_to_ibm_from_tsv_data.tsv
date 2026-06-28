@@ -336,8 +336,8 @@ ibm-risk-atlas:atlas-harmful-code-generation	Harmful code generation	skos:closeM
 ibm-risk-atlas:atlas-spreading-disinformation	Spreading disinformation	skos:relatedMatch	aiuc1:aiuc1-req-f001	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
 ibm-risk-atlas:atlas-social-hacking-attack	Social hacking attack	skos:relatedMatch	aiuc1:aiuc1-req-f001	Detect adversarial input	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
 ibm-risk-atlas:atlas-harmful-output	Harmful output	skos:relatedMatch	aiuc1:aiuc1-req-f002	Prevent harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
-ibm-risk-atlas:atlas-discriminatory-actions-agentic	Discriminatory actions	skos:relatedMatch	aiuc1:aiuc1-req-c010 C010	Third-party testing for harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
-aiuc1:aiuc1-req-c010 C010	Third-party testing for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-discriminatory-actions-agentic	 Discriminatory actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+ibm-risk-atlas:atlas-discriminatory-actions-agentic	Discriminatory actions	skos:relatedMatch	aiuc1:aiuc1-req-c010	Third-party testing for harmful outputs	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
+aiuc1:aiuc1-req-c010	Third-party testing for harmful outputs	skos:relatedMatch	ibm-risk-atlas:atlas-discriminatory-actions-agentic	 Discriminatory actions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
 ibm-risk-atlas:atlas-human-exploitation	Human exploitation	skos:relatedMatch	aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
 aiuc1:aiuc1-req-f001	Prevent AI cyber misuse	skos:relatedMatch	ibm-risk-atlas:atlas-human-exploitation	Human exploitation	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
 ibm-risk-atlas:atlas-unexplainable-output	Unexplainable output	skos:relatedMatch	aiuc1:aiuc1-req-e015	Log model activity	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com

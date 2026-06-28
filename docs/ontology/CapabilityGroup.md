@@ -169,8 +169,8 @@ URI: [nexus:CapabilityGroup](https://ibm.github.io/ai-atlas-nexus/ontology/Capab
 | [isPartOf](isPartOf.md)                       | 0..1 <br/> [CapabilityDomain](CapabilityDomain.md) | A relationship where a capability group belongs to a capability domain           | direct                                   |
 | [hasPart](hasPart.md)                         | \* <br/> [Capability](Capability.md)               | A relationship where a capability group has capabilities                         | direct                                   |
 | [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [CapabilityDomain](CapabilityDomain.md) | A relationship where a capability group belongs to a capability domain           | direct                                   |
-| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Group](Group.md) |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)                     |                                                                                  | [Concept](Concept.md), [Group](Group.md) |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [Group](Group.md), [Concept](Concept.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                     |                                                                                  | [Group](Group.md), [Concept](Concept.md) |
 | [narrower](narrower.md)                       | \* <br/> [String](String.md)                       |                                                                                  | [Group](Group.md)                        |
 | [broader](broader.md)                         | \* <br/> [String](String.md)                       |                                                                                  | [Group](Group.md)                        |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                        | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
@@ -362,6 +362,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -389,6 +390,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

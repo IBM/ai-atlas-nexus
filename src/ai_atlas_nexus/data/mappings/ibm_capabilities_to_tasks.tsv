@@ -3,7 +3,7 @@
 #  hf-ml-tasks: https://huggingface.co/tasks/
 #  ibmadapter: https://huggingface.co/ibm-granite/
 #  semapv: https://w3id.org/semapv/vocab/
-#  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+#  nexus: https://w3id.org/ai-atlas-nexus/
 #  bigbench: https://github.com/google/BIG-bench/blob/main/bigbench/benchmark_tasks/keywords/
 #mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/ibm_capabilities_to_tasks.tsv
 #mapping_set_description: Mapping from IBM AI Capabilities to AI Tasks
@@ -78,3 +78,9 @@ ibm-ai-capabilities:ibm-cap-contextual-understanding	Contextual Understanding	ne
 ibm-ai-capabilities:ibm-cap-reading-comprehension	Reading Comprehension	nexus:implementedByAdapter	ibmadapter:ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking	Passage Reranking	semapv:ManualMappingCuration	ibm-research	0.90	Understanding passage content
 ibm-ai-capabilities:ibm-cap-logical-reasoning	Logical Reasoning	nexus:implementedByAdapter	ibmadapter:ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking	Passage Reranking	semapv:ManualMappingCuration	ibm-research	0.85	Reasoning about relative relevance of passages
 ibm-ai-capabilities:ibm-cap-contextual-understanding	Contextual Understanding	nexus:implementedByAdapter	ibmadapter:ibm-factuality-adapter-granite-3.3-instruct-lora-passage-reranking	Passage Reranking	semapv:ManualMappingCuration	ibm-research	0.85	Understanding query context for ranking
+ibm-ai-capabilities:ibm-cap-uncertainty	Uncertainty	nexus:requiredByTask	hf-ml-tasks:question-answering	Question Answering	semapv:ManualMappingCuration	elizabeth.daly@ie.ibm.com	0.90	Avoid hallucinated answers
+ibm-ai-capabilities:ibm-cap-uncertainty	Uncertainty	nexus:implementedByAdapter	ibmadapter:ibm-factuality-adapter-granitelib-core-r1.0-uncertainty	Uncertainty	semapv:ManualMappingCuration	ibm-research	0.85	Understanding query context for ranking
+ibm-ai-capabilities:ibm-cap-requirement-check	Requirement Check	nexus:implementedByAdapter	ibmadapter:ibm-factuality-adapter-granitelib-core-r1.0-requirement-check	Requirement Check	semapv:ManualMappingCuration	ibm-research	0.85	Understanding query context for ranking
+ibm-ai-capabilities:ibm-cap-requirement-check	Requirement Check	nexus:requiredByTask	hf-ml-tasks:question-answering	Question Answering	semapv:ManualMappingCuration	elizabeth.daly@ie.ibm.com	0.90	Avoid hallucinated answers
+ibm-ai-capabilities:ibm-cap-context-attribution	Context Attribution	nexus:implementedByAdapter	ibmadapter:ibm-factuality-adapter-granitelib-core-r1.0-context-attribution	Context Attribution	semapv:ManualMappingCuration	ibm-research	0.85	Understanding query context for ranking
+ibm-ai-capabilities:ibm-cap-context-attribution	Context Attribution	nexus:requiredByTask	hf-ml-tasks:question-answering	Question Answering	semapv:ManualMappingCuration	elizabeth.daly@ie.ibm.com	0.90	Avoid hallucinated answers

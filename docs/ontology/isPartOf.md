@@ -11,24 +11,24 @@ Alias: isPartOf
 
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AIUser](AIUser.md)                         | Individual or group that interacts with a system                                 | no            |
-| [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
+| [Entry](Entry.md)                           | An entry and its definitions                                                     | no            |
+| [Risk](Risk.md)                             | The state of uncertainty associated with an AI system, that has the potential... | yes           |
+| [Term](Term.md)                             | A term and its definitions                                                       | no            |
+| [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
+| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)             | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AIUser](AIUser.md)                         | Individual or group that interacts with a system                                 | no            |
+| [AIDeveloper](AIDeveloper.md)               | An organisation or entity that is concerned with the development of AI servic... | no            |
 | [CapabilityGroup](CapabilityGroup.md)       | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
 | [AIDeployer](AIDeployer.md)                 | Any natural or legal person, public authority, agency or other body using an ... | no            |
-| [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
-| [Risk](Risk.md)                             | The state of uncertainty associated with an AI system, that has the potential... | yes           |
-| [AISubject](AISubject.md)                   | An entity that is subject to or impacted by the use of AI                        | no            |
-| [Term](Term.md)                             | A term and its definitions                                                       | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)             | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | yes           |
-| [AIOperator](AIOperator.md)                 | Refers to a provider, product manufacturer, deployer, authorised representati... | no            |
-| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [AiTask](AiTask.md)                         | A task, such as summarization and classification, performed by an AI             | no            |
-| [Entry](Entry.md)                           | An entry and its definitions                                                     | no            |
-| [AIDeveloper](AIDeveloper.md)               | An organisation or entity that is concerned with the development of AI servic... | no            |
+| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | yes           |
 | [Stakeholder](Stakeholder.md)               | Represents any individual, group or organization that can affect, be affected... | yes           |
+| [AIOperator](AIOperator.md)                 | Refers to a provider, product manufacturer, deployer, authorised representati... | no            |
+| [AISubject](AISubject.md)                   | An entity that is subject to or impacted by the use of AI                        | no            |
 | [Certification](Certification.md)           | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
 | [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
 
 ## Properties

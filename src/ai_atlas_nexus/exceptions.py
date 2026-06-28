@@ -50,3 +50,13 @@ class InferenceError(Exception):
 
     def __init__(self, message, *args, **kwargs):
         super(InferenceError, self).__init__(message, *args, **kwargs)
+
+
+class InvalidSPARQLQueryException(Exception):
+    """
+    The SPARQL query is invalid.
+    """
+
+    def __init__(self, error: str):
+        self.message = f"Invalid SPARQL query: {error}"
+        super().__init__(self.message)

@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 
 import inflect
 
-from ai_atlas_nexus.blocks.atlas_explorer.base import ExplorerBase
+from ai_atlas_nexus.blocks.graph_explorer.base import ExplorerBase
 from ai_atlas_nexus.data.knowledge_graph import *
 
 
@@ -27,7 +27,7 @@ class AtlasExplorer(ExplorerBase):
         for class_name in self._data.model_fields_set:
             items = getattr(self._data, class_name) or []
             for item in items:
-                if hasattr(item, 'id') and item.id:
+                if hasattr(item, "id") and item.id:
                     self._id_cache[item.id] = item
 
     def get_all_classes(self):
@@ -95,7 +95,16 @@ class AtlasExplorer(ExplorerBase):
         else:
             taxonomies = taxonomy
 
-        cache_key = (tuple(class_names) if isinstance(class_names, list) else class_name, tuple(taxonomies), vocabulary, document)
+        cache_key = (
+            (
+                tuple(class_names)
+                if isinstance(class_names, list)
+                else class_name
+            ),
+            tuple(taxonomies),
+            vocabulary,
+            document,
+        )
 
         if cache_key in self._combined_cache:
             return self._combined_cache[cache_key]
@@ -313,8 +322,10 @@ class AtlasExplorer(ExplorerBase):
 
         """
         return [
-            id_ for id_ in ids
-            if id_ in self._id_cache and type(self._id_cache[id_]).__name__ not in disallowed_types
+            id_
+            for id_ in ids
+            if id_ in self._id_cache
+            and type(self._id_cache[id_]).__name__ not in disallowed_types
         ]
 
     def arrange_ids_by_type(self, ids):
@@ -336,13 +347,13 @@ class AtlasExplorer(ExplorerBase):
                 if result.get(r_type):
                     result[r_type].append(id_)
                 else:
-                    result[r_type] =  [id_]
+                    result[r_type] = [id_]
 
         return result
 
     def clear_cache(self):
-          """
-          Manually clear caches
-          """
-          self._combined_cache.clear()
-          self._id_cache.clear()
+        """
+        Manually clear caches
+        """
+        self._combined_cache.clear()
+        self._id_cache.clear()

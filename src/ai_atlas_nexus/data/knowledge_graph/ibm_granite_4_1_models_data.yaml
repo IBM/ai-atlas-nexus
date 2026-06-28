@@ -1,0 +1,1466 @@
+documents:
+  - id: granite-4.1-blog
+    name: Granite 4.1 Language Models Technical Blog
+    description: >-
+      Technical blog post describing Granite 4.1, a family of dense, decoder-only language models (3B, 8B, and 30B) trained
+      on approximately 15 trillion tokens using a five-phase training strategy, including long-context extension to 512K
+      tokens. The models are further refined with supervised fine-tuning on ~4.1M curated samples and reinforcement learning
+      via on-policy GRPO with DAPO loss.
+    author: Yousaf Shah
+    url: https://huggingface.co/blog/ibm-granite/granite-4-1
+    dateCreated: 2026-04-29
+
+aimodelfamilies:
+  - id: ibm-granite
+    hasDocumentation:
+      - granite-4.1-blog
+
+aimodels:
+  - id: granite-4.1-3b-base
+    name: Granite-4.1-3B-Base
+    description: >-
+      Granite‑4.1‑3B‑Base is a decoder‑only language model with long‑context capabilities, designed to support a broad range
+      of general text‑to‑text generation tasks, as well as fill‑in‑the‑Middle (FIM) code completion.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.1-3b-base"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 3000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-04-29
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-3b-base
+      - mmlu-pro-5shot-cot-granite-4.1-3b-base
+      - bbh-3shot-cot-granite-4.1-3b-base
+      - agi-eval-3shot-granite-4.1-3b-base
+      - drop-5shot-granite-4.1-3b-base
+      - simpleqa-granite-4.1-3b-base
+      - gsm8k-8shot-granite-4.1-3b-base
+      - minerva-math-granite-4.1-3b-base
+      - humaneval-pass-1-starcoder-prompt-granite-4.1-3b-base
+      - humaneval-pass-1-granite-4.1-3b-base
+      - humaneval-plus-pass-1-granite-4.1-3b-base
+      - mbpp-pass-1-granite-4.1-3b-base
+      - mbpp-plus-pass-1-granite-4.1-3b-base
+      - eval-plus-avg-granite-4.1-3b-base
+      - mmmlu-5shot-granite-4.1-3b-base
+      - include-5shot--granite-4.1-3b-base
+      - mgsm-8shot-granite-4.1-3b-base
+
+  - id: granite-4.1-3b
+    name: Granite-4.1-3B
+    description: >-
+      Granite-4.1-3B is a 3B parameter long-context instruct model finetuned from Granite-4.1-3B-Base.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.1-3b"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 3000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-04-29
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-3b
+      - mmlu-pro-5shot-cot-granite-4.1-3b
+      - bbh-3shot-cot-granite-4.1-3b
+      - agi-eval-3shot-granite-4.1-3b
+      - gpqa-granite-4.1-3b
+      - simpleqa-granite-4.1-3b
+      - alpacaeval-2-granite-4.1-3b
+      - ifeval-avg-granite-4.1-3b
+      - arenahard-granite-4.1-3b
+      - mtbench-avg-granite-4.1-3b
+      - gsm8k-8shot-granite-4.1-3b
+      - gsm-symbolic-granite-4.1-3b
+      - minerva-math-granite-4.1-3b
+      - deepmind-math-granite-4.1-3b
+      - humaneval-pass-1-granite-4.1-3b
+      - humaneval-plus-pass-1-granite-4.1-3b
+      - mbpp-pass-1-granite-4.1-3b
+      - mbpp-plus-pass-1-granite-4.1-3b
+      - cruxeval-o-pass-1-granite-4.1-3b
+      - bigcodebench-pass-1-granite-4.1-3b
+      - multiple-pass-1-granite-4.1-3b
+      - eval-plus-avg-granite-4.1-3b
+      - bfcl-v3-granite-4.1-3b
+      - mmmlu-5shot-granite-4.1-3b
+      - include-5shot-granite-4.1-3b
+      - mgsm-8shot-granite-4.1-3b
+      - salad-bench-granite-4.1-3b
+      - attaq-granite-4.1-3b
+      - tulu3-safety-avg-granite-4.1-3b
+
+  - id: granite-4.1-8b-base
+    name: Granite-4.1-8B-Base
+    description: >-
+      Granite-4.1-8B-Base is a decoder-only language model with long-context capabilities, designed to support a broad range
+      of general text-to-text generation tasks, as well as fill-in-the-Middle (FIM) code completion.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.1-8b-base"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 8000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-04-29
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-8b-base
+      - mmlu-pro-5shot-cot-granite-4.1-8b-base
+      - bbh-3shot-cot-granite-4.1-8b-base
+      - agi-eval-3shot-granite-4.1-8b-base
+      - drop-5shot-granite-4.1-8b-base
+      - simpleqa-granite-4.1-8b-base
+      - gsm8k-8shot-granite-4.1-8b-base
+      - minerva-math-granite-4.1-8b-base
+      - humaneval-pass-1-starcoder-prompt-granite-4.1-8b-base
+      - humaneval-pass-1-granite-4.1-8b-base
+      - humaneval-plus-pass-1-granite-4.1-8b-base
+      - mbpp-pass-1-granite-4.1-8b-base
+      - mbpp-plus-pass-1-granite-4.1-8b-base
+      - eval-plus-avg-granite-4.1-8b-base
+      - mmmlu-5shot-granite-4.1-8b-base
+      - include-5shot-granite-4.1-8b-base
+      - mgsm-8shot-granite-4.1-8b-base
+
+  - id: granite-4.1-8b
+    name: Granite-4.1-8B
+    description: >-
+      Granite-4.1-8B is an 8B parameter long-context instruct model finetuned from Granite-4.1-8B-Base.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.1-8b"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 8000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-04-29
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-8b
+      - mmlu-pro-5shot-cot-granite-4.1-8b
+      - bbh-3shot-cot-granite-4.1-8b
+      - agi-eval-3shot-granite-4.1-8b
+      - gpqa-granite-4.1-8b
+      - simpleqa-granite-4.1-8b
+      - alpacaeval-2-granite-4.1-8b
+      - ifeval-avg-granite-4.1-8b
+      - arenahard-granite-4.1-8b
+      - mtbench-avg-granite-4.1-8b
+      - gsm8k-8shot-granite-4.1-8b
+      - gsm-symbolic-granite-4.1-8b
+      - minerva-math-granite-4.1-8b
+      - deepmind-math-granite-4.1-8b
+      - humaneval-pass-1-granite-4.1-8b
+      - humaneval-plus-pass-1-granite-4.1-8b
+      - mbpp-pass-1-granite-4.1-8b
+      - mbpp-plus-pass-1-granite-4.1-8b
+      - cruxeval-o-pass-1-granite-4.1-8b
+      - bigcodebench-pass-1-granite-4.1-8b
+      - multiple-pass-1-granite-4.1-8b
+      - eval-plus-avg-granite-4.1-8b
+      - bfcl-v3-granite-4.1-8b
+      - mmmlu-5shot-granite-4.1-8b
+      - include-5shot-granite-4.1-8b
+      - mgsm-8shot-granite-4.1-8b
+      - salad-bench-granite-4.1-8b
+      - attaq-granite-4.1-8b
+      - tulu3-safety-avg-granite-4.1-8b
+
+  - id: granite-4.1-30b-base
+    name: Granite-4.1-30B-Base
+    description: >-
+      Granite-4.1-30B-Base is a decoder-only language model with long-context capabilities, designed to support a broad range
+      of general text-to-text generation tasks, as well as fill-in-the-Middle (FIM) code completion.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.1-30b-base"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 30000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-04-29
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-30b-base
+      - mmlu-pro-5shot-cot-granite-4.1-30b-base
+      - bbh-3shot-cot-granite-4.1-30b-base
+      - agi-eval-3shot-granite-4.1-30b-base
+      - drop-5shot-granite-4.1-30b-base
+      - simpleqa-granite-4.1-30b-base
+      - gsm8k-8shot-granite-4.1-30b-base
+      - minerva-math-granite-4.1-30b-base
+      - humaneval-pass-1-starcoder-prompt-granite-4.1-30b-base
+      - humaneval-pass-1-granite-4.1-30b-base
+      - humaneval-plus-pass-1-granite-4.1-30b-base
+      - mbpp-pass-1-granite-4.1-30b-base
+      - mbpp-plus-pass-1-granite-4.1-30b-base
+      - eval-plus-avg-granite-4.1-30b-base
+      - mmmlu-5shot-granite-4.1-30b-base
+      - include-5shot-granite-4.1-30b-base
+      - mgsm-8shot-granite-4.1-30b-base
+
+  - id: granite-4.1-30b
+    name: Granite-4.1-30B
+    description: >-
+      Granite-4.1-30B is a 30B parameter long-context instruct model finetuned from Granite-4.1-30B-Base.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.1-30b"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 30000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-04-29
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      [
+        question-answering,
+        summarization,
+        text-classification,
+        text-generation,
+        code-generation,
+        code-explanation,
+        code-editing,
+      ]
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-30b
+      - mmlu-pro-5shot-cot-granite-4.1-30b
+      - bbh-3shot-cot-granite-4.1-30b
+      - agi-eval-3shot-granite-4.1-30b
+      - gpqa-granite-4.1-30b
+      - simpleqa-granite-4.1-30b
+      - alpacaeval-2-granite-4.1-30b
+      - ifeval-avg-granite-4.1-30b
+      - arenahard-granite-4.1-30b
+      - mtbench-avg-granite-4.1-30b
+      - gsm8k-8shot-granite-4.1-30b
+      - gsm-symbolic-granite-4.1-30b
+      - minerva-math-granite-4.1-30b
+      - deepmind-math-granite-4.1-30b
+      - humaneval-pass-1-granite-4.1-30b
+      - humaneval-plus-pass-1-granite-4.1-30b
+      - mbpp-pass-1-granite-4.1-30b
+      - mbpp-plus-pass-1-granite-4.1-30b
+      - cruxeval-o-pass-1-granite-4.1-30b
+      - bigcodebench-pass-1-granite-4.1-30b
+      - multiple-pass-1-granite-4.1-30b
+      - eval-plus-avg-granite-4.1-30b
+      - bfcl-v3-granite-4.1-30b
+      - mmmlu-5shot-granite-4.1-30b
+      - include-5shot-granite-4.1-30b
+      - mgsm-8shot-granite-4.1-30b
+      - salad-bench-granite-4.1-30b
+      - attaq-granite-4.1-30b
+      - tulu3-safety-avg-granite-4.1-30b
+
+aievalresults:
+  - id: mmlu-5shot-granite-4.1-3b-base
+    name: MMLU 5-shot
+    value: "66.47"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_mmlu
+
+  - id: mmlu-pro-5shot-cot-granite-4.1-3b-base
+    name: MMLU Pro 5 Shot, CoT
+    value: "37.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: bbh-3shot-cot-granite-4.1-3b-base
+    name: BBH 3-shot, CoT
+    value: "63.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_bbh
+
+  - id: agi-eval-3shot-granite-4.1-3b-base
+    name: AGI EVAL 3-shot
+    value: "54.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_agi
+
+  - id: drop-5shot-granite-4.1-3b-base
+    name: DROP 5-shot
+    value: "66.04"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_drop
+
+  - id: simpleqa-granite-4.1-3b-base
+    name: SimpleQA
+    value: "6.85"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_simple_qa
+
+  - id: gsm8k-8shot-granite-4.1-3b-base
+    name: GSM8K 8-shot
+    value: "72.93"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_gsm8k
+
+  - id: minerva-math-granite-4.1-3b-base
+    name: Minerva Math 4-shot
+    value: "38.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_minerva_math
+
+  - id: humaneval-pass-1-starcoder-prompt-granite-4.1-3b-base
+    name: HumanEval pass@1 [StarCoder Prompt]
+    value: "76.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-pass-1-granite-4.1-3b-base
+    name: HumanEval pass@1
+    value: "59.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-plus-pass-1-granite-4.1-3b-base
+    name: HumanEval+ pass@1
+    value: "54.27"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_mbpp
+
+  - id: mbpp-pass-1-granite-4.1-3b-base
+    name: MBPP pass@1
+    value: "81.48"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_mbpp
+
+  - id: mbpp-plus-pass-1-granite-4.1-3b-base
+    name: MBPP+ pass@1
+    value: "68.25"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_mbpp+
+
+  - id: eval-plus-avg-granite-4.1-3b-base
+    name: Eval+ Avg
+    value: "65.94"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_eval+
+
+  - id: mmmlu-5shot-granite-4.1-3b-base
+    name: MMMLU 5-shot
+    value: "56.59"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_mmmlu
+
+  - id: include-5shot--granite-4.1-3b-base
+    name: INCLUDE 5-shot
+    value: "51.77"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_include
+
+  - id: mgsm-8shot-granite-4.1-3b-base
+    name: MGSM 8-shot
+    value: "58.48"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    isResultOf: ai_eval_mgsm
+
+  # 30 Granite 4.1 3B  evaluation results
+  - id: mmlu-5shot-granite-4.1-3b
+    name: MMLU result for Granite-4.1-3B
+    value: "67.02"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu
+
+  - id: mmlu-pro-5shot-cot-granite-4.1-3b
+    name: MMLU-Pro result for Granite-4.1-3B
+    value: "49.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: bbh-3shot-cot-granite-4.1-3b
+    name: BBH result for Granite-4.1-3B
+    value: "75.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bbh
+
+  - id: agi-eval-3shot-granite-4.1-3b
+    name: AGI EVAL result for Granite-4.1-3B
+    value: "65.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_agi
+
+  - id: gpqa-granite-4.1-3b
+    name: GPQA result for Granite-4.1-3B
+    value: "31.70"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gpqa
+
+  - id: simpleqa-granite-4.1-3b
+    name: SimpleQA result for Granite-4.1-3B
+    value: "3.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_simple_qa
+
+  - id: alpacaeval-2-granite-4.1-3b
+    name: AlpacaEval 2.0 result for Granite-4.1-3B
+    value: "38.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_alpaca_eval
+
+  - id: ifeval-avg-granite-4.1-3b
+    name: IFEval Avg result for Granite-4.1-3B
+    value: "82.30"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_ifeval
+
+  - id: arenahard-granite-4.1-3b
+    name: ArenaHard result for Granite-4.1-3B
+    value: "37.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_arenahard
+
+  - id: mtbench-avg-granite-4.1-3b
+    name: MTBench Avg result for Granite-4.1-3B
+    value: "7.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mtbench
+
+  - id: gsm8k-8shot-granite-4.1-3b
+    name: GSM8K result for Granite-4.1-3B
+    value: "86.88"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm8k
+
+  - id: gsm-symbolic-granite-4.1-3b
+    name: GSM Symbolic result for Granite-4.1-3B
+    value: "81.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm_symbolic
+
+  - id: minerva-math-granite-4.1-3b
+    name: Minerva Math result for Granite-4.1-3B
+    value: "67.94"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_minerva_math
+
+  - id: deepmind-math-granite-4.1-3b
+    name: DeepMind Math result for Granite-4.1-3B
+    value: "64.64"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_deepmind_math
+
+  - id: humaneval-pass-1-granite-4.1-3b
+    name: HumanEval result for Granite-4.1-3B
+    value: "81.71"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-plus-pass-1-granite-4.1-3b
+    name: HumanEval+ result for Granite-4.1-3B
+    value: "76.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: mbpp-pass-1-granite-4.1-3b
+    name: MBPP result for Granite-4.1-3B
+    value: "71.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp
+
+  - id: mbpp-plus-pass-1-granite-4.1-3b
+    name: MBPP+ result for Granite-4.1-3B
+    value: "62.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp+
+
+  - id: cruxeval-o-pass-1-granite-4.1-3b
+    name: CRUXEval-O result for Granite-4.1-3B
+    value: "40.75"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_cruxeval_o
+
+  - id: bigcodebench-pass-1-granite-4.1-3b
+    name: BigCodeBench result for Granite-4.1-3B
+    value: "32.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bigcodebench
+
+  - id: multiple-pass-1-granite-4.1-3b
+    name: MULTIPLE result for Granite-4.1-3B
+    value: "52.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_multiple
+
+  - id: eval-plus-avg-granite-4.1-3b
+    name: Eval+ Avg result for Granite-4.1-3B
+    value: "67.05"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_eval+
+
+  - id: bfcl-v3-granite-4.1-3b
+    name: BFCL v3 result for Granite-4.1-3B
+    value: "60.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bfcl_v3
+
+  - id: mmmlu-5shot-granite-4.1-3b
+    name: MMMLU result for Granite-4.1-3B
+    value: "57.61"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmmlu
+
+  - id: include-5shot-granite-4.1-3b
+    name: INCLUDE result for Granite-4.1-3B
+    value: "52.05"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_include
+
+  - id: mgsm-8shot-granite-4.1-3b
+    name: MGSM result for Granite-4.1-3B
+    value: "70.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mgsm
+
+  - id: salad-bench-granite-4.1-3b
+    name: SALAD-Bench result for Granite-4.1-3B
+    value: "93.95"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_SALAD_Bench
+
+  - id: attaq-granite-4.1-3b
+    name: AttaQ result for Granite-4.1-3B
+    value: "81.88"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_AttaQ
+
+  - id: tulu3-safety-avg-granite-4.1-3b
+    name: Tulu3 Safety Eval Avg result for Granite-4.1-3B
+    value: "66.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_tulu3_safety
+
+  # 18 Granite 4.1 8B Base evaluation results
+  - id: mmlu-5shot-granite-4.1-8b-base
+    name: MMLU 5-shot result for Granite-4.1-8B-Base
+    value: "73.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu
+
+  - id: mmlu-pro-5shot-cot-granite-4.1-8b-base
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-8B-Base
+    value: "44.58"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: bbh-3shot-cot-granite-4.1-8b-base
+    name: BBH 3-shot, CoT result for Granite-4.1-8B-Base
+    value: "73.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bbh
+
+  - id: agi-eval-3shot-granite-4.1-8b-base
+    name: AGI EVAL 3-shot result for Granite-4.1-8B-Base
+    value: "61.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_agi
+
+  - id: drop-5shot-granite-4.1-8b-base
+    name: DROP 5-shot result for Granite-4.1-8B-Base
+    value: "72.36"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_drop
+
+  - id: simpleqa-granite-4.1-8b-base
+    name: SimpleQA result for Granite-4.1-8B-Base
+    value: "7.92"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_simple_qa
+
+  - id: gsm8k-8shot-granite-4.1-8b-base
+    name: GSM8K 8-shot result for Granite-4.1-8B-Base
+    value: "73.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm8k
+
+  - id: minerva-math-granite-4.1-8b-base
+    name: Minerva Math 4-shot result for Granite-4.1-8B-Base
+    value: "43.42"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_minerva_math
+
+  - id: humaneval-pass-1-starcoder-prompt-granite-4.1-8b-base
+    name: HumanEval pass@1 [StarCoder Prompt] result for Granite-4.1-8B-Base
+    value: "79.24"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-pass-1-granite-4.1-8b-base
+    name: HumanEval pass@1 result for Granite-4.1-8B-Base
+    value: "68.29"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-plus-pass-1-granite-4.1-8b-base
+    name: HumanEval+ pass@1 result for Granite-4.1-8B-Base
+    value: "62.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: mbpp-pass-1-granite-4.1-8b-base
+    name: MBPP pass@1 result for Granite-4.1-8B-Base
+    value: "63.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp
+
+  - id: mbpp-plus-pass-1-granite-4.1-8b-base
+    name: MBPP+ pass@1 result for Granite-4.1-8B-Base
+    value: "53.97"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp+
+
+  - id: eval-plus-avg-granite-4.1-8b-base
+    name: Eval+ Avg result for Granite-4.1-8B-Base
+    value: "62.21"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_eval+
+
+  - id: mmmlu-5shot-granite-4.1-8b-base
+    name: MMMLU 5-shot result for Granite-4.1-8B-Base
+    value: "64.73"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmmlu
+
+  - id: include-5shot-granite-4.1-8b-base
+    name: INCLUDE 5-shot result for Granite-4.1-8B-Base
+    value: "57.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_include
+
+  - id: mgsm-8shot-granite-4.1-8b-base
+    name: MGSM 8-shot result for Granite-4.1-8B-Base
+    value: "63.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mgsm
+
+  # 29 Granite 4.1 8B Dense evaluation results
+  - id: mmlu-5shot-granite-4.1-8b
+    name: MMLU 5-shot result for Granite-4.1-8B
+    value: "73.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu
+
+  - id: mmlu-pro-5shot-cot-granite-4.1-8b
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-8B
+    value: "55.99"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: bbh-3shot-cot-granite-4.1-8b
+    name: BBH 3-shot, CoT result for Granite-4.1-8B
+    value: "80.51"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bbh
+
+  - id: agi-eval-3shot-granite-4.1-8b
+    name: AGI EVAL 3-shot result for Granite-4.1-8B
+    value: "72.43"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_agi
+
+  - id: gpqa-granite-4.1-8b
+    name: GPQA result for Granite-4.1-8B
+    value: "41.96"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gpqa
+
+  - id: simpleqa-granite-4.1-8b
+    name: SimpleQA result for Granite-4.1-8B
+    value: "4.82"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_simple_qa
+
+  - id: alpacaeval-2-granite-4.1-8b
+    name: AlpacaEval 2.0 result for Granite-4.1-8B
+    value: "50.08"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_alpaca_eval
+
+  - id: ifeval-avg-granite-4.1-8b
+    name: IFEval Avg result for Granite-4.1-8B
+    value: "87.06"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_ifeval
+
+  - id: arenahard-granite-4.1-8b
+    name: ArenaHard result for Granite-4.1-8B
+    value: "68.98"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_arenahard
+
+  - id: mtbench-avg-granite-4.1-8b
+    name: MTBench Avg result for Granite-4.1-8B
+    value: "8.61"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mtbench
+
+  - id: gsm8k-8shot-granite-4.1-8b
+    name: GSM8K 8-shot result for Granite-4.1-8B
+    value: "92.49"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm8k
+
+  - id: gsm-symbolic-granite-4.1-8b
+    name: GSM Symbolic result for Granite-4.1-8B
+    value: "83.70"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm_symbolic
+
+  - id: minerva-math-granite-4.1-8b
+    name: Minerva Math result for Granite-4.1-8B
+    value: "80.10"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_minerva_math
+
+  - id: deepmind-math-granite-4.1-8b
+    name: DeepMind Math result for Granite-4.1-8B
+    value: "80.07"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_deepmind_math
+
+  - id: humaneval-pass-1-granite-4.1-8b
+    name: HumanEval pass@1 result for Granite-4.1-8B
+    value: "85.37"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-plus-pass-1-granite-4.1-8b
+    name: HumanEval+ pass@1 result for Granite-4.1-8B
+    value: "79.88"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: mbpp-pass-1-granite-4.1-8b
+    name: MBPP pass@1 result for Granite-4.1-8B
+    value: "87.30"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp
+
+  - id: mbpp-plus-pass-1-granite-4.1-8b
+    name: MBPP+ pass@1 result for Granite-4.1-8B
+    value: "73.81"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp+
+
+  - id: cruxeval-o-pass-1-granite-4.1-8b
+    name: CRUXEval-O pass@1 result for Granite-4.1-8B
+    value: "47.63"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_cruxeval_o
+
+  - id: bigcodebench-pass-1-granite-4.1-8b
+    name: BigCodeBench pass@1 result for Granite-4.1-8B
+    value: "35.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bigcodebench
+
+  - id: multiple-pass-1-granite-4.1-8b
+    name: MULTIPLE pass@1 result for Granite-4.1-8B
+    value: "60.26"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_multiple
+
+  - id: eval-plus-avg-granite-4.1-8b
+    name: Eval+ Avg pass@1 result for Granite-4.1-8B
+    value: "80.21"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_eval+
+
+  - id: bfcl-v3-granite-4.1-8b
+    name: BFCL v3 result for Granite-4.1-8B
+    value: "68.27"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bfcl_v3
+
+  - id: mmmlu-5shot-granite-4.1-8b
+    name: MMMLU 5-shot result for Granite-4.1-8B
+    value: "64.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmmlu
+
+  - id: include-5shot-granite-4.1-8b
+    name: INCLUDE 5-shot result for Granite-4.1-8B
+    value: "58.89"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_include
+
+  - id: mgsm-8shot-granite-4.1-8b
+    name: MGSM 8-shot result for Granite-4.1-8B
+    value: "82.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mgsm
+
+  - id: salad-bench-granite-4.1-8b
+    name: SALAD-Bench result for Granite-4.1-8B
+    value: "95.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_SALAD_Bench
+
+  - id: attaq-granite-4.1-8b
+    name: AttaQ result for Granite-4.1-8B
+    value: "81.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_AttaQ
+
+  - id: tulu3-safety-avg-granite-4.1-8b
+    name: Tulu3 Safety Eval Avg result for Granite-4.1-8B
+    value: "75.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_tulu3_safety
+
+  # 18 Granite 4.1 30B Base evaluation results
+  - id: mmlu-5shot-granite-4.1-30b-base
+    name: MMLU 5-shot result for Granite-4.1-30B-Base
+    value: "78.44"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu
+
+  - id: mmlu-pro-5shot-cot-granite-4.1-30b-base
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-30B-Base
+    value: "49.51"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: bbh-3shot-cot-granite-4.1-30b-base
+    name: BBH 3-shot, CoT result for Granite-4.1-30B-Base
+    value: "80.66"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bbh
+
+  - id: agi-eval-3shot-granite-4.1-30b-base
+    name: AGI EVAL 3-shot result for Granite-4.1-30B-Base
+    value: "69.20"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_agi
+
+  - id: drop-5shot-granite-4.1-30b-base
+    name: DROP 5-shot result for Granite-4.1-30B-Base
+    value: "78.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_drop
+
+  - id: simpleqa-granite-4.1-30b-base
+    name: SimpleQA result for Granite-4.1-30B-Base
+    value: "10.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_simple_qa
+
+  - id: gsm8k-8shot-granite-4.1-30b-base
+    name: GSM8K 8-shot result for Granite-4.1-30B-Base
+    value: "83.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm8k
+
+  - id: minerva-math-granite-4.1-30b-base
+    name: Minerva Math 4-shot result for Granite-4.1-30B-Base
+    value: "45.66"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_minerva_math
+
+  - id: humaneval-pass-1-starcoder-prompt-granite-4.1-30b-base
+    name: HumanEval pass@1 [StarCoder Prompt] result for Granite-4.1-30B-Base
+    value: "81.52"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-pass-1-granite-4.1-30b-base
+    name: HumanEval pass@1 result for Granite-4.1-30B-Base
+    value: "67.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-plus-pass-1-granite-4.1-30b-base
+    name: HumanEval+ pass@1 result for Granite-4.1-30B-Base
+    value: "62.20"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: mbpp-pass-1-granite-4.1-30b-base
+    name: MBPP pass@1 result for Granite-4.1-30B-Base
+    value: "83.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp
+
+  - id: mbpp-plus-pass-1-granite-4.1-30b-base
+    name: MBPP+ pass@1 result for Granite-4.1-30B-Base
+    value: "69.58"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp+
+
+  - id: eval-plus-avg-granite-4.1-30b-base
+    name: Eval+ Avg result for Granite-4.1-30B-Base
+    value: "70.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_eval+
+
+  - id: mmmlu-5shot-granite-4.1-30b-base
+    name: MMMLU 5-shot result for Granite-4.1-30B-Base
+    value: "73.36"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmmlu
+
+  - id: include-5shot-granite-4.1-30b-base
+    name: INCLUDE 5-shot result for Granite-4.1-30B-Base
+    value: "67.07"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_include
+
+  - id: mgsm-8shot-granite-4.1-30b-base
+    name: MGSM 8-shot result for Granite-4.1-30B-Base
+    value: "74.40"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mgsm
+
+  # 29 Granite 4.1 30B Dense evaluation results
+  - id: mmlu-5shot-granite-4.1-30b
+    name: MMLU 5-shot result for Granite-4.1-30B
+    value: "80.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu
+
+  - id: mmlu-pro-5shot-cot-granite-4.1-30b
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-30B
+    value: "64.09"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: bbh-3shot-cot-granite-4.1-30b
+    name: BBH 3-shot, CoT result for Granite-4.1-30B
+    value: "83.74"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bbh
+
+  - id: agi-eval-3shot-granite-4.1-30b
+    name: AGI EVAL 3-shot result for Granite-4.1-30B
+    value: "77.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_agi
+
+  - id: gpqa-granite-4.1-30b
+    name: GPQA result for Granite-4.1-30B
+    value: "45.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gpqa
+
+  - id: simpleqa-granite-4.1-30b
+    name: SimpleQA result for Granite-4.1-30B
+    value: "6.81"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_simple_qa
+
+  - id: alpacaeval-2-granite-4.1-30b
+    name: AlpacaEval 2.0 result for Granite-4.1-30B
+    value: "56.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_alpaca_eval
+
+  - id: ifeval-avg-granite-4.1-30b
+    name: IFEval Avg result for Granite-4.1-30B
+    value: "89.65"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_ifeval
+
+  - id: arenahard-granite-4.1-30b
+    name: ArenaHard result for Granite-4.1-30B
+    value: "71.02"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_arenahard
+
+  - id: mtbench-avg-granite-4.1-30b
+    name: MTBench Avg result for Granite-4.1-30B
+    value: "8.61"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mtbench
+
+  - id: gsm8k-8shot-granite-4.1-30b
+    name: GSM8K 8-shot result for Granite-4.1-30B
+    value: "94.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm8k
+
+  - id: gsm-symbolic-granite-4.1-30b
+    name: GSM Symbolic result for Granite-4.1-30B
+    value: "75.70"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_gsm_symbolic
+
+  - id: minerva-math-granite-4.1-30b
+    name: Minerva Math result for Granite-4.1-30B
+    value: "81.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_minerva_math
+
+  - id: deepmind-math-granite-4.1-30b
+    name: DeepMind Math result for Granite-4.1-30B
+    value: "81.93"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_deepmind_math
+
+  - id: humaneval-pass-1-granite-4.1-30b
+    name: HumanEval pass@1 result for Granite-4.1-30B
+    value: "88.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: humaneval-plus-pass-1-granite-4.1-30b
+    name: HumanEval+ pass@1 result for Granite-4.1-30B
+    value: "85.37"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_humaneval
+
+  - id: mbpp-pass-1-granite-4.1-30b
+    name: MBPP pass@1 result for Granite-4.1-30B
+    value: "85.45"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp
+
+  - id: mbpp-plus-pass-1-granite-4.1-30b
+    name: MBPP+ pass@1 result for Granite-4.1-30B
+    value: "73.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mbpp+
+
+  - id: cruxeval-o-pass-1-granite-4.1-30b
+    name: CRUXEval-O pass@1 result for Granite-4.1-30B
+    value: "55.75"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_cruxeval_o
+
+  - id: bigcodebench-pass-1-granite-4.1-30b
+    name: BigCodeBench pass@1 result for Granite-4.1-30B
+    value: "38.77"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bigcodebench
+
+  - id: multiple-pass-1-granite-4.1-30b
+    name: MULTIPLE pass@1 result for Granite-4.1-30B
+    value: "62.31"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_multiple
+
+  - id: eval-plus-avg-granite-4.1-30b
+    name: Eval+ Avg pass@1 result for Granite-4.1-30B
+    value: "82.66"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_eval+
+
+  - id: bfcl-v3-granite-4.1-30b
+    name: BFCL v3 result for Granite-4.1-30B
+    value: "73.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_bfcl_v3
+
+  - id: mmmlu-5shot-granite-4.1-30b
+    name: MMMLU 5-shot result for Granite-4.1-30B
+    value: "73.71"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mmmlu
+
+  - id: include-5shot-granite-4.1-30b
+    name: INCLUDE 5-shot result for Granite-4.1-30B
+    value: "67.26"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_include
+
+  - id: mgsm-8shot-granite-4.1-30b
+    name: MGSM 8-shot result for Granite-4.1-30B
+    value: "71.12"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_mgsm
+
+  - id: salad-bench-granite-4.1-30b
+    name: SALAD-Bench result for Granite-4.1-30B
+    value: "96.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_SALAD_Bench
+
+  - id: attaq-granite-4.1-30b
+    name: AttaQ result for Granite-4.1-30B
+    value: "85.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_AttaQ
+
+  - id: tulu3-safety-avg-granite-4.1-30b
+    name: Tulu3 Safety Eval Avg result for Granite-4.1-30B
+    value: "78.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    isResultOf: ai_eval_tulu3_safety

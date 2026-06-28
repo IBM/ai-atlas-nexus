@@ -6,6 +6,17 @@ organizations:
       cloud computing, software, quantum computing, e-commerce, consumer electronics,
       and artificial intelligence.
     url: https://www.google.com
+  - id: cais
+    name: Center for AI Safety
+    description:
+      The Center for AI Safety (CAIS — pronounced 'case') is a San Francisco-based
+      research and field-building nonprofit.
+    url: https://www.safe.ai
+  - id: TIGER-lab
+    name: Text and Image GEnerative Research (TIGER) Lab
+    description: Text and Image GEnerative Research (TIGER) Lab at the University of
+      Waterloo.
+    url: https://wenhuchen.github.io/lab
   - id: codeparrot
     name: CodeParrot and Friends
     description: This organization is dedicated to language models for code generation.
@@ -32,54 +43,67 @@ licenses:
     version: "1.0"
   - id: license-apache-2.0
     name: Apache 2.0
-    description: The 2.0 version of the Apache License, approved by the ASF in 2004,
+    description: "The 2.0 version of the Apache License, approved by the ASF in 2004,
       helps to achieve the goal of providing reliable and long-lived software products
       through collaborative, open-source software development.
+
+      "
     url: https://www.apache.org/licenses/LICENSE-2.0.html
     dateCreated: 2004-02-08
     version: "2.0"
   - id: license-cc-by-2.0
     name: Creative Commons Attribution 2.0 Generic
-    description: This license allows for the sharing and adaptation of a work, as long
+    description: "This license allows for the sharing and adaptation of a work, as long
       as the creator is given proper credit. This means you can copy, distribute, and
       even create derivative works based on the original, but you must acknowledge the
       original author and link back to the license.
+
+      "
     url: https://creativecommons.org/licenses/by/2.0/
   - id: license-cc-by-4.0
     name: Creative Commons Attribution 4.0 International
-    description: This license enables reusers to distribute, remix, adapt, and build
+    description: "This license enables reusers to distribute, remix, adapt, and build
       upon the material in any medium or format, so long as attribution is given to
       the creator. The license allows for commercial use.
+
+      "
     url: https://creativecommons.org/licenses/by/4.0/
     dateCreated: 2013-11-25
   - id: license-cc-by-nc-4.0
     name: Creative Commons Attribution-NonCommercial 4.0 International
-    description: This license enables reusers to distribute, remix, adapt, and build
+    description: "This license enables reusers to distribute, remix, adapt, and build
       upon the material in any medium or format, so long as attribution is given to
       the creator. The license does not allow for commercial use.
+
+      "
     url: https://creativecommons.org/licenses/by-nc/4.0/
     dateCreated: 2013-11-25
   - id: license-cc-by-sa-4.0
     name: Creative Commons Attribution-ShareAlike 4.0 International
-    description: This license enables reusers to distribute, remix, adapt, and build
+    description: "This license enables reusers to distribute, remix, adapt, and build
       upon the material in any medium or format, so long as attribution is given to
       the creator. The license allows for commercial use. If you remix, adapt, or build
       upon the material, you must license the modified material under identical terms.
+
+      "
     url: https://creativecommons.org/licenses/by-sa/4.0/deed.en
   - id: license-cc-by-nc-sa-4.0
     name: Creative Commons Attribution Non Commercial Share Alike 4.0 International
-    description: This license enables reusers to distribute, remix, adapt, and build
+    description: "This license enables reusers to distribute, remix, adapt, and build
       upon the material in any medium or format for noncommercial purposes only, and
       only so long as attribution is given to the creator. If you remix, adapt, or build
       upon the material, you must license the modified material under identical terms.
+
+      "
     url: https://creativecommons.org/licenses/by-sa/4.0/deed.en
   - id: license-mit
     name: MIT License
-    description:
-      This license grants permission to use, modify, and distribute the software,
-      with the condition that the original copyright notice and the license text are
-      retained in the redistributed software. This ensures proper attribution to the
-      original authors while offering maximum freedom for developers.
+    description: "This license grants permission to use, modify, and distribute the
+      software, with the condition that the original copyright notice and the license
+      text are retained in the redistributed software. This ensures proper attribution
+      to the original authors while offering maximum freedom for developers.
+
+      "
     url: https://opensource.org/license/MIT
   - id: license-cdla-permissive-2.0
     name: Community Data License Agreement Permissive 2.0
@@ -96,9 +120,11 @@ licenses:
     url: https://github.com/meta-llama/PurpleLlama/tree/main?tab=License-1-ov-file#readme
   - id: license-gnu-gplv3
     name: GNU General Public License v3.0
-    description: GNU GPLv3 - a free and open-source software license that guarantees
+    description: "GNU GPLv3 - a free and open-source software license that guarantees
       users the freedom to use, modify, and redistribute software. A 'copyleft' license,
       meaning any derivative works must also be released under the same GPLv3 terms.
+
+      "
     url: https://spdx.org/licenses/GPL-3.0-or-later.html
 modalities:
   - id: modality-text
@@ -240,11 +266,14 @@ aitasks:
     isDefinedByTaxonomy: hf-ml-tasks
     isPartOf: hf-ml-tasks-group-nlp
     requiresCapability:
+      - ibm-cap-context-attribution
       - ibm-cap-contextual-understanding
       - ibm-cap-domain-knowledge
       - ibm-cap-factual-accuracy
       - ibm-cap-logical-reasoning
       - ibm-cap-reading-comprehension
+      - ibm-cap-requirement-check
+      - ibm-cap-uncertainty
     type: AiTask
   - id: sentence-similarity
     name: Sentence Similarity
@@ -276,10 +305,8 @@ aitasks:
     type: AiTask
   - id: table-question-answering
     name: Table Question Answering
-    description:
-      "Summarization is the task of producing a shorter version of a document\
-      \ while preserving its important information.\n Some models can extract text from\
-      \ the original input, while other models can generate entirely new text."
+    description: Table Question Answering (Table QA) is the answering a question about
+      an information on a given table.
     url: https://huggingface.co/tasks/table-question-answering
     isDefinedByTaxonomy: hf-ml-tasks
     isPartOf: hf-ml-tasks-group-nlp
@@ -631,14 +658,26 @@ aitasks:
     type: AiTask
   - id: code-editing
     name: Code Editing
-    description: Code editing is the task of changing a given piece of code to reach
+    description: "Code editing is the task of changing a given piece of code to reach
       certain golas like e.g. better readability or improved performance.
+
+      "
     requiresCapability:
       - ibm-cap-code-generation
       - ibm-cap-code-understanding
       - ibm-cap-logical-reasoning
     type: AiTask
 documents:
+  - id: owasp-top-10-agentic-applications-2026
+    name: OWASP Top 10 for Agentic Applications for 2026
+    description:
+      The OWASP Top 10 for Agentic Applications 2026 is a globally peer-reviewed
+      framework that identifies the most critical security risks facing autonomous and
+      agentic AI systems. Published in December 2025 by the OWASP Agentic Security Initiative
+      (ASI), it addresses risks arising from goal misalignment, tool misuse, delegated
+      trust, inter-agent communication, persistent memory, and emergent autonomous behavior.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    dateCreated: 2025-12-09
   - id: 10a99803d8afd656
     name: "Foundation models: Opportunities, risks and mitigations"
     description:
@@ -1449,6 +1488,192 @@ documents:
       promote safer AI deployment.
     url: https://arxiv.org/abs/2503.05731
     hasLicense: license-cc-by-4.0
+  - id: https://arxiv.org/abs/2406.01574
+    name: "MMLU-Pro: A More Robust and Challenging Multi-Task Language Understanding
+      Benchmark"
+    description: In the age of large-scale language models, benchmarks like the Massive
+      Multitask Language Understanding (MMLU) have been pivotal in pushing the boundaries
+      of what AI can achieve in language comprehension and reasoning across diverse
+      domains. However, as models continue to improve, their performance on these benchmarks
+      has begun to plateau, making it increasingly difficult to discern differences
+      in model capabilities. This paper introduces MMLU-Pro, an enhanced dataset designed
+      to extend the mostly knowledge-driven MMLU benchmark by integrating more challenging,
+      reasoning-focused questions and expanding the choice set from four to ten options.
+      Additionally, MMLU-Pro eliminates the trivial and noisy questions in MMLU. Our
+      experimental results show that MMLU-Pro not only raises the challenge, causing
+      a significant drop in accuracy by 16% to 33% compared to MMLU but also demonstrates
+      greater stability under varying prompts. With 24 different prompt styles tested,
+      the sensitivity of model scores to prompt variations decreased from 4-5% in MMLU
+      to just 2% in MMLU-Pro. Additionally, we found that models utilizing Chain of
+      Thought (CoT) reasoning achieved better performance on MMLU-Pro compared to direct
+      answering, which is in stark contrast to the findings on the original MMLU, indicating
+      that MMLU-Pro includes more complex reasoning questions. Our assessments confirm
+      that MMLU-Pro is a more discriminative benchmark to better track progress in the
+      field.
+    url: https://arxiv.org/abs/2406.01574
+    hasLicense: license-cc-by-4.0
+    author: Yubo Wang, Xueguang Ma, Ge Zhang, Yuansheng Ni, Abhranil Chandra, Shiguang
+      Guo, Weiming Ren, Aaran Arulraj, Xuan He, Ziyan Jiang, Tianle Li, Max Ku, Kai
+      Wang, Alex Zhuang, Rongqi Fan, Xiang Yue, Wenhu Chen
+  - id: https://arxiv.org/abs/2210.09261
+    name: Challenging BIG-Bench Tasks and Whether Chain-of-Thought Can Solve Them
+    description: BIG-Bench (Srivastava et al., 2022) is a diverse evaluation suite that
+      focuses on tasks believed to be beyond the capabilities of current language models.
+      Language models have already made good progress on this benchmark, with the best
+      model in the BIG-Bench paper outperforming average reported human-rater results
+      on 65% of the BIG-Bench tasks via few-shot prompting. But on what tasks do language
+      models fall short of average human-rater performance, and are those tasks actually
+      unsolvable by current language models? In this work, we focus on a suite of 23
+      challenging BIG-Bench tasks which we call BIG-Bench Hard (BBH). These are the
+      task for which prior language model evaluations did not outperform the average
+      human-rater. We find that applying chain-of-thought (CoT) prompting to BBH tasks
+      enables PaLM to surpass the average human-rater performance on 10 of the 23 tasks,
+      and Codex (code-davinci-002) to surpass the average human-rater performance on
+      17 of the 23 tasks. Since many tasks in BBH require multi-step reasoning, few-shot
+      prompting without CoT, as done in the BIG-Bench evaluations (Srivastava et al.,
+      2022), substantially underestimates the best performance and capabilities of language
+      models, which is better captured via CoT prompting. As further analysis, we explore
+      the interaction between CoT and model scale on BBH, finding that CoT enables emergent
+      task performance on several BBH tasks with otherwise flat scaling curves.
+    url: https://arxiv.org/abs/2210.09261
+    hasLicense: license-cc-by-nc-sa-4.0
+    author: Mirac Suzgun, Nathan Scales, Nathanael Schärli, Sebastian Gehrmann, Yi Tay,
+      Hyung Won Chung, Aakanksha Chowdhery, Quoc V. Le, Ed H. Chi, Denny Zhou, Jason
+      Wei
+  - id: arxiv.org/2304.06364
+    name: "AGIEval: A Human-Centric Benchmark for Evaluating Foundation Models"
+    description: AGIEval is a human-centric benchmark specifically designed to evaluate
+      the general abilities of foundation models in tasks pertinent to human standardized
+      tests, including entrance exams for higher education institutions and qualification
+      exams for professional practitioners.
+    url: https://arxiv.org/abs/2304.06364
+    dateCreated: 2023-04-13
+    dateModified: 2023-04-13
+  - id: arxiv.org/1903.00161
+    name: "DROP: A Reading Comprehension Benchmark Requiring Discrete Reasoning Over
+      Paragraphs"
+    description: DROP is a crowdsourced reading comprehension benchmark that requires
+      systems to perform discrete reasoning over passages, emphasizing numerical operations
+      and comparisons. DROP is designed to be adversarially-constructed and focuses
+      on understanding and reasoning about numbers in text.
+    url: https://arxiv.org/abs/1903.00161
+    dateCreated: 2019-03-01
+    dateModified: 2019-04-16
+  - id: arxiv.org/2411.04368
+    name: Measuring short-form factuality in large language models
+    description: This paper presents SimpleQA, a benchmark that evaluates the ability
+      of language models to answer short, fact-seeking questions. SimpleQA measures
+      factuality in LLM outputs and helps identify hallucination issues.
+    url: https://arxiv.org/abs/2411.04368
+    dateCreated: 2024-11-07
+    dateModified: 2024-11-07
+  - id: arxiv.org/2110.14168
+    name: Training Verifiers to Solve Math Word Problems
+    description:
+      This paper introduces GSM8K, a dataset of 8.5K high quality grade school
+      math word problems created by human problem writers. The paper demonstrates training
+      verifiers to solve math word problems and evaluates language models on GSM8K.
+    url: https://arxiv.org/abs/2110.14168
+    dateCreated: 2021-10-27
+    dateModified: 2021-11-18
+  - id: arxiv.org/2206.14858
+    name: Solving Quantitative Reasoning Problems with Language Models
+    description: This paper introduces Minerva, a large language model designed to solve
+      quantitative reasoning problems. It includes Minerva Math, a benchmark dataset
+      for evaluating advanced mathematical reasoning capabilities.
+    url: https://arxiv.org/abs/2206.14858
+    dateCreated: 2022-06-29
+    dateModified: 2022-07-01
+  - id: arxiv.org/2107.03374
+    name: Evaluating Large Language Models Trained on Code
+    description:
+      This paper introduces HumanEval, a benchmark for evaluating code generation
+      capabilities of language models. HumanEval contains 164 handwritten problems with
+      function signatures and docstrings to test functional correctness.
+    url: https://arxiv.org/abs/2107.03374
+    dateCreated: 2021-07-07
+    dateModified: 2021-07-14
+  - id: arxiv.org/2108.07732
+    name: Program Synthesis with Large Language Models
+    description:
+      This paper introduces MBPP (Mostly Basic Programming Problems), a benchmark
+      consisting of around 1,000 crowd-sourced Python programming problems for evaluating
+      code generation capabilities of language models.
+    url: https://arxiv.org/abs/2108.07732
+    dateCreated: 2021-08-16
+    dateModified: 2021-08-16
+  - id: arxiv.org/2210.03057
+    name: Language Models are Multilingual Chain-of-Thought Reasoners
+    description:
+      This paper introduces MGSM (Multilingual Grade School Math), a benchmark
+      of 250 grade-school math problems manually translated from GSM8K into multiple
+      languages for evaluating multilingual reasoning capabilities.
+    url: https://arxiv.org/abs/2210.03057
+    dateCreated: 2022-10-06
+    dateModified: 2022-10-06
+  - id: arxiv.org/2009.03300
+    name: Measuring Massive Multitask Language Understanding
+    description:
+      This paper introduces MMLU and MMMLU, benchmarks for evaluating multitask
+      language understanding across multiple languages and domains including humanities,
+      social sciences, and hard sciences.
+    url: https://arxiv.org/abs/2009.03300
+    dateCreated: 2020-09-07
+    dateModified: 2021-01-12
+    hasLicense: license-mit
+    author: Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn
+      Song, Jacob Steinhardt
+  - id: arxiv.org/2311.12022
+    name: "GPQA: A Graduate-Level Google-Proof Q&A Benchmark"
+    description: This paper presents GPQA, a challenging dataset of 448 multiple-choice
+      questions written by domain experts in biology, physics, and chemistry.
+    url: https://arxiv.org/abs/2311.12022
+    dateCreated: 2023-11-20
+    dateModified: 2023-11-20
+  - id: arxiv.org/2311.07911
+    name: Instruction-Following Evaluation for Large Language Models
+    description:
+      This paper presents Instruction-Following Eval (IFEval) for large language
+      models. IFEval is a straightforward and easy-to-reproduce evaluation benchmark.
+    url: https://arxiv.org/abs/2311.07911
+    dateCreated: 2023-11-14
+    dateModified: 2023-11-14
+  - id: arxiv.org/2406.11939
+    name:
+      "From Crowdsourced Data to High-Quality Benchmarks: Arena-Hard and BenchBuilder
+      Pipeline"
+    description:
+      This paper introduces BenchBuilder, an automated pipeline that leverages
+      LLMs to curate high-quality, open-ended prompts from large, crowd-sourced datasets,
+      enabling continuous benchmark updates without human in the loop.
+    url: https://arxiv.org/abs/2406.11939
+    dateCreated: 2024-06-17
+    dateModified: 2024-06-17
+  - id: arxiv.org/2306.05685
+    name: Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena
+    description: This paper introduces MT-Bench and Chatbot Arena. They explore using
+      strong LLMs as judges to evaluate these models on more open-ended questions.
+    url: https://arxiv.org/abs/2306.05685
+    dateCreated: 2023-06-09
+    dateModified: 2023-06-09
+  - id: arxiv.org/2401.03065
+    name: "CRUXEval: A Benchmark for Code Reasoning, Understanding and Execution"
+    description: CRUXEval is a benchmark consisting of 800 Python functions (3-13 lines
+      of code) with input-output pairs. It evaluates language models on code reasoning,
+      understanding, and execution capabilities.
+    url: https://arxiv.org/abs/2401.03065
+    dateCreated: 2024-01-05
+    dateModified: 2024-01-05
+  - id: arxiv.org/2406.15877
+    name: "BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and
+      Complex Instructions"
+    description: BigCodeBench is a benchmark consisting of 1,140 questions designed
+      to evaluate code generation capabilities of language models across diverse function
+      calls and complex instructions. It includes problems of varying difficulty and
+      domains for comprehensive code generation evaluation.
+    url: https://arxiv.org/abs/2406.15877
+    dateCreated: 2024-06-21
+    dateModified: 2024-06-21
   - id: doc-mit-draft-ai-risk-repository
     name: "Mapping AI Risk Mitigations: Evidence Scan & Draft Mitigation Taxonomy"
     description:
@@ -1626,7 +1851,7 @@ documents:
     dateCreated: 2025-07-10
     dateModified: 2025-07-10
     author: EU AI Office
-  - id: doc-Gipiškis2024
+  - id: doc-Gipiskis2024
     name:
       Risk sources and risk management measures in support of standards for general-purpose
       AI systems
@@ -1649,7 +1874,7 @@ documents:
     url: https://arxiv.org/abs/2410.23472
     dateCreated: 2024-10-30
     dateModified: 2024-10-30
-    author: Rokas Gipiškis, Ayrton San Joaquin, Ze Shen Chin, Adrian Regenfuß, Ariel
+    author: Rokas Gipiskis, Ayrton San Joaquin, Ze Shen Chin, Adrian Regenfuß, Ariel
       Gil, Koen Holtman
   - id: doc-UK Government2023
     name: Emerging Processes for Frontier AI Safety
@@ -1690,8 +1915,8 @@ documents:
     dateModified: 2023-10-27
     author: UK Government
   - id: doc-Campos2025
-    name: "A Frontier AI Risk Management Framework: Bridging the Gap Between Current
-      AI Practices and Established Risk Management"
+    name: '"A Frontier AI Risk Management Framework: Bridging the Gap Between Current
+      AI Practices and Established Risk Management"'
     description: "The recent development of powerful AI systems has highlighted the
       need for robust risk management frameworks in the AI industry. Although companies
       have begun to6 implement safety frameworks, current approaches often lack the
@@ -1777,6 +2002,17 @@ documents:
       open foundation models ranging in scale from 400 million to 8 billion active parameters.
     url: https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf
     dateCreated: 2024-10-21
+  - id: granite-4.1-blog
+    name: Granite 4.1 Language Models Technical Blog
+    description:
+      Technical blog post describing Granite 4.1, a family of dense, decoder-only
+      language models (3B, 8B, and 30B) trained on approximately 15 trillion tokens
+      using a five-phase training strategy, including long-context extension to 512K
+      tokens. The models are further refined with supervised fine-tuning on ~4.1M curated
+      samples and reinforcement learning via on-policy GRPO with DAPO loss.
+    url: https://huggingface.co/blog/ibm-granite/granite-4-1
+    dateCreated: 2026-04-29
+    author: Yousaf Shah
   - id: granite-guardian-paper
     name: Granite Guardian
     description:
@@ -2053,6 +2289,7 @@ datasets:
     hasDocumentation:
       - https://arxiv.org/abs/2403.03218
       - repo_centerforaisafety_wmdp
+    provider: cais
   - id: CybersecurityBenchmarks_datasets_frr
     name: False Refusal Rate (FRR)
     description: A dataset to evaluate the False Refusal Rate (FRR) of LLM models when
@@ -2100,6 +2337,194 @@ datasets:
     hasLicense: license-apache-2.0
     hasDocumentation:
       - https://arxiv.org/abs/2310.00905
+  - id: cais/mmlu
+    description:
+      This is a massive multitask test consisting of multiple-choice questions
+      from various branches of knowledge. The test spans subjects in the humanities,
+      social sciences, hard sciences, and other areas that are important for some people
+      to learn. This covers 57 tasks including elementary mathematics, US history, computer
+      science, law, and more. To attain high accuracy on this test, models must possess
+      extensive world knowledge and problem solving ability.
+    url: https://huggingface.co/datasets/cais/mmlu
+    hasLicense: license-mit
+    hasDocumentation:
+      - arxiv.org/2009.03300
+    provider: cais
+  - id: TIGER-Lab/MMLU-Pro
+    description: MMLU-Pro dataset is a more robust and challenging massive multi-task
+      understanding dataset tailored to more rigorously benchmark large language models'
+      capabilities. This dataset contains 12K complex questions across various disciplines.
+    url: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro
+    hasLicense: license-mit
+    hasDocumentation:
+      - https://arxiv.org/abs/2406.01574
+    provider: TIGER-lab
+  - id: big-bench-hard-dataset
+    name: BIG-Bench
+    description: BIG-Bench (Srivastava et al., 2022) is a diverse evaluation suite that
+      focuses on tasks believed to be beyond the capabilities of current language models.
+      Language models have already made good progress on this benchmark, with the best
+      model in the BIG-Bench paper outperforming average reported human-rater results
+      on 65% of the BIG-Bench tasks via few-shot prompting. But on what tasks do language
+      models fall short of average human-rater performance, and are those tasks actually
+      unsolvable by current language models? In this work, we focus on a suite of 23
+      challenging BIG-Bench tasks which we call BIG-Bench Hard (BBH). These are the
+      task for which prior language model evaluations did not outperform the average
+      human-rater. We find that applying chain-of-thought (CoT) prompting to BBH tasks
+      enables PaLM to surpass the average human-rater performance on 10 of the 23 tasks,
+      and Codex (code-davinci-002) to surpass the average human-rater performance on
+      17 of the 23 tasks. Since many tasks in BBH require multi-step reasoning, few-shot
+      prompting without CoT, as done in the BIG-Bench evaluations (Srivastava et al.,
+      2022), substantially underestimates the best performance and capabilities of language
+      models, which is better captured via CoT prompting. As further analysis, we explore
+      the interaction between CoT and model scale on BBH, finding that CoT enables emergent
+      task performance on several BBH tasks with otherwise flat scaling curves.
+    url: https://arxiv.org/abs/2210.09261
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: lighteval/agi_eval_en
+    name: AGI EVAL (English)
+    description: AGIEval is a human-centric benchmark specifically designed to evaluate
+      the general abilities of foundation models in tasks pertinent to human standardized
+      tests, including entrance exams for higher education institutions and qualification
+      exams for professional practitioners.
+    url: https://huggingface.co/datasets/lighteval/agi_eval_en
+    hasLicense: license-cc-by-4.0
+    hasDocumentation:
+      - arxiv.org/2304.06364
+  - id: ucinlp/drop
+    name: DROP
+    description: DROP (Discrete Reasoning Over Paragraphs) is a crowdsourced reading
+      comprehension benchmark that requires systems to perform discrete reasoning over
+      passages, emphasizing numerical operations and comparisons.
+    url: https://huggingface.co/datasets/ucinlp/drop
+    hasLicense: license-cc-by-sa-4.0
+    hasDocumentation:
+      - arxiv.org/1903.00161
+  - id: basicv8vc/SimpleQA
+    name: SimpleQA
+    description:
+      SimpleQA is a factuality benchmark that measures the ability for language
+      models to answer short, fact-seeking questions.
+    url: https://huggingface.co/datasets/basicv8vc/SimpleQA
+    hasLicense: license-cc-by-4.0
+    hasDocumentation:
+      - arxiv.org/2411.04368
+  - id: openai/gsm8k
+    name: GSM8K
+    description:
+      GSM8K (Grade School Math 8K) is a dataset of 8.5K high quality linguistically
+      diverse grade school math word problems created through crowdsourcing.
+    url: https://huggingface.co/datasets/openai/gsm8k
+    hasLicense: license-mit
+    hasDocumentation:
+      - arxiv.org/2110.14168
+  - id: math-ai/minervamath
+    name: Minerva Math
+    description:
+      Minerva Math is a benchmark dataset for evaluating advanced mathematical
+      reasoning capabilities in language models.
+    url: https://huggingface.co/datasets/math-ai/minervamath
+    hasLicense: license-cc-by-4.0
+    hasDocumentation:
+      - arxiv.org/2206.14858
+  - id: openai/openai_humaneval
+    name: HumanEval
+    description:
+      HumanEval is a benchmark developed by OpenAI for evaluating code generation
+      capabilities of language models. It contains 164 handwritten problems with function
+      signatures and docstrings.
+    url: https://huggingface.co/datasets/openai/openai_humaneval
+    hasLicense: license-mit
+    hasDocumentation:
+      - arxiv.org/2107.03374
+  - id: nlile/mbpp
+    name: MBPP
+    description: MBPP (Mostly Basic Programming Problems) is a benchmark consisting
+      of around 1,000 crowd-sourced Python programming problems that evaluate code generation
+      capabilities.
+    url: https://huggingface.co/datasets/nlile/mbpp
+    hasLicense: license-apache-2.0
+    hasDocumentation:
+      - arxiv.org/2108.07732
+  - id: openai/MMMLU
+    name: MMMLU
+    description: MMMLU (Multilingual Massive Multitask Language Understanding) is a
+      multilingual extension of MMLU that evaluates multitask language understanding
+      capabilities across multiple languages.
+    url: https://huggingface.co/datasets/openai/MMMLU
+    hasLicense: license-mit
+    hasDocumentation:
+      - arxiv.org/2009.03300
+  - id: Idavidrein/gpqa
+    name: GPQA
+    description: "GPQA (Graduate-level Google-Proof Q&A) is a challenging dataset of
+      448 multiple-choice questions written by domain experts in biology, physics, and
+      chemistry. The questions are designed to be answerable by domain experts but difficult
+      for non-experts, testing the depth of knowledge and reasoning abilities of language
+      models. Note: Dataset creators request that examples not be revealed in plain
+      text online to reduce leakage into training corpora."
+    url: https://huggingface.co/datasets/Idavidrein/gpqa
+    hasLicense: license-cc-by-4.0
+    hasDocumentation:
+      - arxiv.org/2311.12022
+  - id: google/IFEval
+    name: IFEval
+    description: Instruction Following Evaluation (IFEval) is a benchmark dataset from
+      Google Research containing prompts used to evaluate how well language models follow
+      explicit instructions. It focuses on verifiable instructions such as word count
+      requirements and specific formatting directives.
+    url: https://huggingface.co/datasets/google/IFEval
+    hasLicense: license-apache-2.0
+    hasDocumentation:
+      - arxiv.org/2311.07911
+  - id: lmarena-ai/arena-hard-auto
+    name: ArenaHard
+    description: Arena-Hard is a benchmark dataset from LMSYS containing challenging
+      questions derived from the Chatbot Arena. The dataset includes diverse, difficult
+      queries selected from real user conversations that are challenging for current
+      language models, created through a crowdsourced pipeline.
+    url: https://huggingface.co/datasets/lmarena-ai/arena-hard-auto
+    hasLicense: license-apache-2.0
+    hasDocumentation:
+      - arxiv.org/2406.11939
+  - id: lmsys/mt_bench_human_judgments
+    name: MT-Bench Human Judgments
+    description: MT-Bench (Multi-Turn Benchmark) is a dataset from LMSYS consisting
+      of 80 high-quality questions covering diverse categories including writing, roleplay,
+      extraction, reasoning, math, and coding. It includes 3.3K expert-level pairwise
+      human preferences for model responses.
+    url: https://huggingface.co/datasets/lmsys/mt_bench_human_judgments
+    hasLicense: license-cc-by-4.0
+    hasDocumentation:
+      - arxiv.org/2306.05685
+  - id: cruxeval-org/cruxeval
+    name: CRUXEval
+    description: CRUXEval (Code Reasoning, Understanding, and eXecution Evaluation)
+      is a benchmark from Facebook Research consisting of 800 Python functions (3-13
+      lines of code) with input-output pairs. It evaluates language models on code reasoning,
+      understanding, and execution capabilities.
+    url: https://huggingface.co/datasets/cruxeval-org/cruxeval
+    hasLicense: license-mit
+    hasDocumentation:
+      - arxiv.org/2401.03065
+  - id: bigcode/bigcodebench
+    name: BigCodeBench
+    description: BigCodeBench is a benchmark from the BigCode Project consisting of
+      1,140 questions designed to evaluate code generation capabilities of language
+      models across diverse function calls and complex instructions. It includes problems
+      of varying difficulty and domains for comprehensive code generation evaluation.
+    url: https://huggingface.co/datasets/bigcode/bigcodebench
+    hasLicense: license-apache-2.0
+    hasDocumentation:
+      - arxiv.org/2406.15877
+  - id: gorilla-llm/Berkeley-Function-Calling-Leaderboard
+    name: Berkeley Function Calling Leaderboard
+    description: Berkeley Function Calling Leaderboard (BFCL) is a benchmark dataset
+      from UC Berkeley for evaluating language models on function calling capabilities
+      including single-turn calls, parallel function calls, missing parameters, and
+      multi-turn scenarios. It is designed to assess tool use and agent capabilities.
+    url: https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard
+    hasLicense: license-apache-2.0
   - id: github-code-clean
     name: Github-code-clean
     description: "This is a cleaner version of Github-code dataset, we add the following
@@ -2295,6 +2720,119 @@ llmintrinsics:
       - llm052025-improper-output-handling
     hasAdapter:
       - ibm-factuality-adapter-granite-3.2-8b-instruct-alora-jailbreak
+  - id: ibm-factuality-intrinsic-guardian-core
+    name: Guardian Core
+    description: Guardian Core judges whether input prompts and output responses meet
+      specified criteria including safety risks (harm, jailbreaking, profanity, violence,
+      sexual content, social bias, unethical behavior), hallucinations related to tool/function
+      calls, and retrieval-augmented generation (RAG) in agent-based systems. It outputs
+      a JSON object with a score field indicating "yes" or "no". This intrinsic can
+      be applied to both input prompts and generated responses.
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: LLMIntrinsic
+    hasRelatedRisk:
+      - atlas-harmful-output
+      - atlas-jailbreaking
+      - atlas-function-calling-hallucination-agentic
+    hasAdapter:
+      - ibm-factuality-adapter-granitelib-guardian-r1.0-guardian-core
+  - id: ibm-factuality-intrinsic-factuality-detection
+    name: Factuality Detection
+    description: Factuality Detection assesses the factual correctness of LLM-generated
+      responses by evaluating them against provided context sources. It identifies conflicts,
+      misrepresentations, or selective omissions of evidence, helping ensure that responses
+      are grounded in and consistent with the provided information. This is a post-generation
+      intrinsic.
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: LLMIntrinsic
+    hasRelatedRisk:
+      - atlas-hallucination
+      - nist-confabulation
+      - nist-information-integrity
+    hasAdapter:
+      - ibm-factuality-adapter-granitelib-guardian-r1.0-factuality-detection
+  - id: ibm-factuality-intrinsic-factuality-correction
+    name: Factuality Correction
+    description:
+      Factuality Correction corrects factually incorrect responses by accounting
+      for contextual passages with conflicting information. It corrects inaccuracies
+      in long-form responses while preserving the model's capabilities and maintaining
+      overall response quality and coherence. This is a post-generation intrinsic.
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: LLMIntrinsic
+    hasRelatedRisk:
+      - atlas-hallucination
+      - nist-confabulation
+      - nist-information-integrity
+    hasAdapter:
+      - ibm-factuality-adapter-granitelib-guardian-r1.0-factuality-correction
+  - id: ibm-factuality-intrinsic-policy-guardrails
+    name: Policy Guardrails
+    description: Policy Guardrails provides policy compliance checking by determining
+      whether scenarios comply with or violate given policies. It provides an 'Ambiguous'
+      response when certainty is insufficient, enabling nuanced policy evaluation in
+      complex scenarios. This intrinsic can be applied to assess whether prompts or
+      responses align with orgranizational policies and compliance requirements.
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: LLMIntrinsic
+    hasRelatedRisk:
+      - atlas-harmful-output
+      - nist-information-integrity
+    hasAdapter:
+      - ibm-factuality-adapter-granitelib-guardian-r1.0-policy-guardrails
+  - id: ibm-factuality-intrinsic-context-attribution
+    name: Context Attribution
+    description:
+      Predicts which sentences in the context (including documents and previous
+      conversation turns) were most important for the base model to generate each sentence
+      in its response. The adapter provides contributive attribution, identifying the
+      context sentences that actually influenced the model's response, and ranks them
+      by importance. This is a post-generation intrinsic designed to explain the base
+      model's behavior.
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: LLMIntrinsic
+    hasRelatedRisk:
+      - granite-relevance
+    hasAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-context-attribution
+  - id: ibm-factuality-intrinsic-requirement-check
+    name: Requirement Check
+    description:
+      Judges whether an assistant's generation satisfies a set of user-specified
+      requirements, outputting a binary yes/no assessment. It is designed for evaluating
+      constraint satisfaction in instruction-following scenarios, including formatting,
+      content, structural requirements, and quality assurance pipelines.
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: LLMIntrinsic
+    hasRelatedRisk:
+      - granite-relevance
+    hasAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-requirement-check
+  - id: ibm-factuality-intrinsic-uncertainty
+    name: Uncertainty
+    description: Provides calibrated certainty scores for the base model's responses.
+      Given a conversation ending with an assistant response, it calculates a certainty
+      percentage reflecting how confident the model is about its answer.
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: LLMIntrinsic
+    hasRelatedRisk:
+      - granite-relevance
+    hasAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-uncertainty
 adapters:
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-rewrite
     name: Granite 3.3 8b Instruct - Query Rewrite
@@ -2309,8 +2847,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
     implementsCapability:
       - ibm-cap-contextual-understanding
       - ibm-cap-reading-comprehension
@@ -2329,8 +2869,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
     implementsCapability:
       - ibm-cap-causal-reasoning
       - ibm-cap-contextual-understanding
@@ -2352,8 +2894,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
     implementsCapability:
       - ibm-cap-contextual-understanding
       - ibm-cap-logical-reasoning
@@ -2370,8 +2914,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
     implementsCapability:
       - ibm-cap-contextual-understanding
       - ibm-cap-factual-accuracy
@@ -2388,8 +2934,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
     implementsCapability:
       - ibm-cap-contextual-understanding
       - ibm-cap-logical-reasoning
@@ -2407,8 +2955,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-uncertainty
     name: Granite 3.3 8b Instruct - Uncertainty LoRA
     description:
@@ -2421,8 +2971,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-hallucination-detection
     name: Granite 3.3 8b Instruct - Hallucination detection
     description: Granite 3.3 8b Instruct - Hallucination Detection is a LoRA adapter
@@ -2436,8 +2988,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-citation-generation
     name: Granite 3.3 8b Instruct - Citation Generation
     description: Granite 3.3 8b Instruct - Citation Generation is a RAG-specific LoRA
@@ -2451,8 +3005,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.11704
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-5b-harm-correction
     name: Granite Guardian 3.2 5b Harm Correction LoRA
     description: "Granite Guardian 3.2 5b Harm Correction LoRA is a LoRA adapter for
@@ -2465,8 +3021,10 @@ adapters:
     hasDocumentation:
       - granite-guardian-paper
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.2-5b
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.2-5b
   - id: ibm-factuality-adapter-granite-3.2-5b-harm-categories
     name: Granite Guardian 3.2 5b Harm Categories LoRA
     description: Granite Guardian 3.2 5b Harm Categories LoRA is a LoRA adapter for
@@ -2480,8 +3038,10 @@ adapters:
     hasDocumentation:
       - granite-guardian-paper
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.2-5b
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.2-5b
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-jailbreak
     name: Granite 3.2 8B Instruct - Jailbreak aLoRA
     description: "An aLoRA adapter for ibm-granite/granite-3.2-8b-instruct, adding the
@@ -2496,8 +3056,10 @@ adapters:
       - arxiv.org/2504.12397
       - arxiv.org/2409.15398
     type: Adapter
-    hasAdapterType: ALORA
-    adaptsModel: granite-3.2-8b-instruct
+    hasAdapterType:
+      - ALORA
+    adaptsModel:
+      - granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-alora-uncertainty
     name: Granite 3.3 8B Instruct - Uncertainty aLoRA
     description: Granite 3.3 8b Instruct - Uncertainty is an Activated LoRA (aLoRA)
@@ -2509,8 +3071,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.12397
     type: Adapter
-    hasAdapterType: ALORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - ALORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-uncertainty
     name: Granite 3.2 8B Instruct - Uncertainty aLoRA
     description: Granite 3.2 8b Instruct - Uncertainty is an Activated LoRA (aLoRA)
@@ -2522,8 +3086,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.12397
     type: Adapter
-    hasAdapterType: ALORA
-    adaptsModel: granite-3.2-8b-instruct
+    hasAdapterType:
+      - ALORA
+    adaptsModel:
+      - granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-requirement-checker
     name: Granite 3.3 8B Instruct - Requirement Checker
     description: Granite 3.3 8b Instruct - Requirement Checker is an Activated LoRA
@@ -2536,8 +3102,10 @@ adapters:
       - arxiv.org/2504.12397
     type: Adapter
     hasLicense: license-apache-2.0
-    hasAdapterType: ALORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - ALORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-requirement-checker
     name: Granite 3.2 8B Instruct - Requirement Checker
     description: Granite 3.2 8b Instruct - Requirement Checker is an Activated LoRA
@@ -2550,8 +3118,10 @@ adapters:
       - arxiv.org/2504.12397
     type: Adapter
     hasLicense: license-apache-2.0
-    hasAdapterType: ALORA
-    adaptsModel: granite-3.2-8b-instruct
+    hasAdapterType:
+      - ALORA
+    adaptsModel:
+      - granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-query-rewrite
     name: Granite 3.2 8B Instruct - Query Rewrite aLoRA
     description: "Granite 3.2 8b Instruct - Query Rewrite is an Activated LoRA (aLoRA)
@@ -2566,10 +3136,12 @@ adapters:
       - arxiv.org/2504.12397
     type: Adapter
     hasLicense: license-apache-2.0
-    hasAdapterType: ALORA
+    hasAdapterType:
+      - ALORA
     hasRelatedRisk:
       - granite-relevance
-    adaptsModel: granite-3.2-8b-instruct
+    adaptsModel:
+      - granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.2-8b-instruct-alora-answerability-classification
     name: Granite 3.2 8B Instruct - Answerability Classification aLoRA
     description: Granite 3.2 8b Instruct - Answerability Classification is an Activated
@@ -2582,8 +3154,10 @@ adapters:
     hasDocumentation:
       - arxiv.org/2504.12397
     type: Adapter
-    hasAdapterType: ALORA
-    adaptsModel: granite-3.2-8b-instruct
+    hasAdapterType:
+      - ALORA
+    adaptsModel:
+      - granite-3.2-8b-instruct
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-math-prm
     name: Granite-3.3-8B-LoRA-Math-PRM
     description:
@@ -2600,9 +3174,158 @@ adapters:
     url: https://huggingface.co/ibm-granite/granite-3.3-8b-lora-math-prm
     isDefinedByVocabulary: ibm-factuality
     type: Adapter
-    hasAdapterType: LORA
-    adaptsModel: granite-guardian-3.3-8b-instruct
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-guardian-3.3-8b-instruct
+  - id: ibm-factuality-adapter-granitelib-guardian-r1.0-guardian-core
+    name: Granite Guardian Core
+    description: Guardian Core is a capability that judges whether input prompts and
+      output responses meet specified criteria including safety risks (harm, jailbreaking,
+      profanity, violence, sexual content, social bias, unethical behavior), hallucinations
+      related to tool/function calls, and retrieval-augmented generation (RAG) in agent-based
+      systems. It outputs a JSON object with a score field indicating "yes" or "no".
+    url: https://huggingface.co/ibm-granite/granitelib-guardian-r1.0
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - arxiv.org/2504.11704
+    type: Adapter
+    hasAdapterType:
+      - LORA
+      - ALORA
+    adaptsModel:
+      - granite-4.1-3b
+      - granite-4.1-30b
+      - granite-4.1-8b
+  - id: ibm-factuality-adapter-granitelib-guardian-r1.0-factuality-detection
+    name: Granite Factuality Detection
+    description: Factuality Detection is a capability that assesses factual correctness
+      by evaluating LLM-generated responses against context sources. It identifies conflicts,
+      misrepresentations, or selective omissions of evidence, helping ensure responses
+      are grounded in provided information.
+    url: https://huggingface.co/ibm-granite/granitelib-guardian-r1.0
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - arxiv.org/2504.11704
+    type: Adapter
+    hasAdapterType:
+      - LORA
+      - ALORA
+    adaptsModel:
+      - granite-4.1-3b
+      - granite-4.1-30b
+      - granite-4.1-8b
+  - id: ibm-factuality-adapter-granitelib-guardian-r1.0-factuality-correction
+    name: Granite Factuality Correction
+    description: Factuality Correction is a capability that corrects factually incorrect
+      responses by accounting for contextual passages with conflicting information.
+      It corrects inaccuracies in long-form responses while preserving model capabilities
+      and maintaining response quality.
+    url: https://huggingface.co/ibm-granite/granitelib-guardian-r1.0
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - arxiv.org/2504.11704
+    type: Adapter
+    hasAdapterType:
+      - LORA
+      - ALORA
+    adaptsModel:
+      - granite-4.1-3b
+      - granite-4.1-30b
+      - granite-4.1-8b
+  - id: ibm-factuality-adapter-granitelib-guardian-r1.0-policy-guardrails
+    name: Granite Policy Guardrails
+    description:
+      Policy Guardrails is a capability that provides policy compliance checking
+      by determining if scenarios comply with or violate given policies. It provides
+      an 'Ambiguous' response when certainty is insufficient, allowing for nuanced policy
+      evaluation in complex scenarios.
+    url: https://huggingface.co/ibm-granite/granitelib-guardian-r1.0
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - arxiv.org/2504.11704
+    type: Adapter
+    hasAdapterType:
+      - LORA
+      - ALORA
+    adaptsModel:
+      - granite-4.1-3b
+      - granite-4.1-30b
+      - granite-4.1-8b
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-context-attribution
+    name: Granite Context Attribution
+    description: Context Attribution is a LoRA purpose-built for a base model to predict
+      the sentences in the context that were most important for the base model to generate
+      each sentence in its response or output.
+    url: https://huggingface.co/ibm-granite/granitelib-core-r1.0/blob/main/context-attribution/README.md
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: Adapter
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-4.1-3b
+      - granite-4.1-30b
+      - granite-4.1-8b
+    implementsCapability:
+      - ibm-cap-context-attribution
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-requirement-check
+    name: Granite Requirement Check
+    description:
+      "Judges whether an assistant's generation satisfies a set of user-specified\
+      \ requirements, outputting a binary\n yes/no assessment. It is designed for evaluating\
+      \ constraint satisfaction in instruction-following scenarios,\n including formatting,\
+      \ content, structural requirements, and quality assurance pipelines."
+    url: https://huggingface.co/ibm-granite/granitelib-core-r1.0/blob/main/requirement-check/README.md
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: Adapter
+    hasAdapterType:
+      - LORA
+    adaptsModel:
+      - granite-4.1-3b
+      - granite-4.1-30b
+      - granite-4.1-8b
+    implementsCapability:
+      - ibm-cap-requirement-check
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-uncertainty
+    name: Granite Uncertainty
+    description: Provides calibrated certainty scores for the base model's responses.
+      Given a conversation ending with an assistant response, it calculates a certainty
+      percentage reflecting how confident the model is about its answer.
+    url: https://huggingface.co/ibm-granite/granitelib-core-r1.0/blob/main/uncertainty/README.md
+    isDefinedByVocabulary: ibm-factuality
+    hasDocumentation:
+      - granite-4.1-blog
+    type: Adapter
+    hasAdapterType:
+      - LORA
+      - ALORA
+    adaptsModel:
+      - granite-4.1-3b
+      - granite-4.1-30b
+      - granite-4.1-8b
+    implementsCapability:
+      - ibm-cap-uncertainty
 taxonomies:
+  - id: owasp-asi
+    name: OWASP Top 10 for Agentic Applications
+    description: The OWASP Top 10 for Agentic Applications identifies the most critical
+      security risks introduced by autonomous and semi-autonomous AI agents. Unlike
+      traditional LLM applications, agentic systems combine reasoning, memory, tools,
+      and multi-step execution, introducing new classes of vulnerabilities that extend
+      beyond prompt-level attacks. The 2026 edition focuses on failures arising from
+      goal misalignment, tool misuse, delegated trust, inter-agent communication, persistent
+      memory, and emergent autonomous behavior.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    dateCreated: 2025-12-09
+    dateModified: 2025-12-09
+    version: "2026"
+    hasDocumentation:
+      - owasp-top-10-agentic-applications-2026
+    type: RiskTaxonomy
   - id: ibm-risk-atlas
     name: IBM AI Risk Atlas
     description: Explore this atlas to understand some of the risks of working with
@@ -2778,6 +3501,340 @@ taxonomies:
       - credo-doc
     type: RiskTaxonomy
 entries:
+  - id: asi01-agent-goal-hijack
+    name: ASI01:2026 Agent Goal Hijack
+    description: Attackers manipulate agent goals, plans, or decision paths through
+      direct or indirect instruction injection, causing agents to pursue unintended
+      or malicious objectives. Attack vectors include direct goal manipulation via prompt
+      injection, indirect instruction injection through documents or RAG content or
+      tool outputs, recursive hijacking where goal modifications propagate through reasoning
+      chains, and cross-context injection where instructions embedded in one context
+      influence behavior elsewhere. Unlike single-prompt attacks on LLMs, agent goal
+      hijacking exploits multi-step autonomous execution to redirect entire workflows.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-b003
+      - aiuc1-req-b006
+      - granite-guardian-harm
+      - granite-jailbreak
+      - atlas-jailbreaking
+      - atlas-prompt-injection
+      - atlas-prompt-priming
+      - llm062025-excessive-agency
+    broad_mappings:
+      - llm01-prompt-injection
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: agent-goal-hijack
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: Autonomous agents that plan and execute multi-step workflows can have their
+      objectives silently redirected, causing sustained harmful actions that propagate
+      through reasoning chains rather than producing a single unintended output.
+  - id: asi02-tool-misuse-and-exploitation
+    name: ASI02:2026 Tool Misuse & Exploitation
+    description:
+      Agents can misuse legitimate tools due to prompt injection, misalignment,
+      or unsafe delegation or ambiguous instruction, leading to data exfiltration, tool
+      output manipulation, or workflow hijacking. Risks arise from how the agent chooses
+      and applies tools; agent memory, dynamic tool selection, and delegation can contribute
+      to misuse via chaining, privilege escalation, and unintended actions. This entry
+      covers cases where the agent operates within its authorized privileges but applies
+      a legitimate tool in an unsafe or unintended way.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-a003
+      - aiuc1-req-d003
+      - aiuc1-req-d004
+      - granite-function-call
+      - granite-jailbreak
+      - atlas-over-or-under-reliance
+      - atlas-prompt-injection
+      - atlas-unauthorized-use-agentic
+    narrow_mappings:
+      - llm062025-excessive-agency
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: tool-misuse
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: Agents with legitimate tool access can compose tools in unintended and
+      harmful sequences, create infinite execution loops, exhaust system resources,
+      or leak sensitive state between tool contexts without technically violating any
+      individual permission boundary.
+  - id: asi03-identity-and-privilege-abuse
+    name: ASI03:2026 Identity & Privilege Abuse
+    description: Identity and privilege abuse exploits dynamic trust and delegation
+      in agents to escalate access and bypass controls by manipulating delegation chains,
+      role inheritance, control flows, and agent context including cached credentials
+      or conversation history. This risk arises from the architectural mismatch between
+      user-centric identity systems and agentic design. Without a distinct, governed
+      identity of its own, an agent operates in an attribution gap that makes enforcing
+      true least privilege impossible. Abuse types include un-scoped privilege inheritance,
+      memory-based privilege retention, cross-agent trust exploitation (confused deputy),
+      time-of-check to time-of-use in agent workflows, and synthetic identity injection.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-b001
+      - aiuc1-req-e001
+      - aiuc1-req-e015
+      - granite-guardian-harm
+      - atlas-exposing-personal-information
+      - atlas-nonconsensual-use
+      - atlas-unauthorized-use-agentic
+      - llm01-prompt-injection
+      - llm022025-sensitive-information-disclosure
+    narrow_mappings:
+      - llm062025-excessive-agency
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: identity-privilege-abuse
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: Agents operating with delegated credentials can escalate privileges through
+      impersonation, trust chain exploitation, or identity inheritance, performing actions
+      far beyond their intended scope without triggering traditional access control
+      mechanisms.
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    name: ASI04:2026 Agentic Supply Chain Vulnerabilities
+    description: External agents, tools, schemas, or prompts that agents dynamically
+      trust or import at runtime become compromised. Attack vectors include schema manipulation
+      corrupting tool or API schemas agents rely upon, description deception through
+      misleading tool descriptions that trick agents, permission misrepresentation via
+      false capability or permission declarations, and registry poisoning through compromised
+      agent or tool registries. Unlike static supply chain risks, agentic supply chain
+      compromise targets dynamic runtime composition where agents discover and integrate
+      components during execution.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-a001
+      - aiuc1-req-b009
+      - granite-evasiveness
+      - granite-guardian-harm
+      - atlas-data-contamination
+      - atlas-data-poisoning
+      - atlas-incomplete-advice
+    narrow_mappings:
+      - llm032025-supply-chain
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: agentic-supply-chain
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: Agents that dynamically discover and integrate tools, schemas, and other
+      agents at runtime are vulnerable to compromised components that cannot be vetted
+      through traditional pre-deployment supply chain controls.
+  - id: asi05-unexpected-code-execution
+    name: ASI05:2026 Unexpected Code Execution (RCE)
+    description: Agentic systems, including popular vibe coding tools, often generate
+      and execute code. Attackers exploit code-generation features or embedded tool
+      access to escalate actions into remote code execution (RCE), local misuse, or
+      exploitation of internal systems. This risk covers unexpected or adversarial execution
+      of code including scripts, binaries, JIT/WASM modules, deserialized objects, template
+      engines, and in-memory evaluations that lead to host or container compromise,
+      persistence, or sandbox escape. It reflects the evolution from a single manipulated
+      output to orchestrated multi-tool chains that achieve execution through a sequence
+      of otherwise legitimate tool calls.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-b003
+      - aiuc1-req-d003
+      - aiuc1-req-d004
+      - granite-function-call
+      - granite-jailbreak
+      - atlas-extraction-attack
+      - atlas-jailbreaking
+      - atlas-prompt-injection
+      - llm01-prompt-injection
+    narrow_mappings:
+      - llm052025-improper-output-handling
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: unexpected-code-execution
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: Agents with code execution capabilities can generate and run arbitrary
+      code, invoke system commands, or evaluate dynamic expressions without adequate
+      sandboxing, turning natural language instructions into unrestricted system-level
+      operations.
+  - id: asi06-memory-and-context-poisoning
+    name: ASI06:2026 Memory & Context Poisoning
+    description: Adversaries corrupt or seed agent memory and retrievable context with
+      malicious or misleading data, causing future reasoning, planning, or tool use
+      to become biased, unsafe, or aid exfiltration. Context includes any information
+      an agent retains, retrieves, or reuses such as summaries, embeddings, and RAG
+      stores, but excludes one-time input prompts covered under prompt injection. Attack
+      types include long-term memory poisoning, shared user context poisoning, context-window
+      manipulation, long-term memory drift, systemic misalignment and backdoors, and
+      cross-agent propagation of contaminated context.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-a001
+      - aiuc1-req-a006
+      - aiuc1-req-e015
+      - granite-groundedness
+      - granite-relevance
+      - atlas-data-bias
+      - atlas-data-poisoning
+      - atlas-hallucination
+      - llm01-prompt-injection
+      - llm082025-vector-and-embedding-weaknesses
+    broad_mappings:
+      - llm042025-data-and-model-poisoning
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: memory-context-poisoning
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern: Agents with persistent memory can have their stored context corrupted,
+      causing altered reasoning and behavior that persists across sessions and may be
+      difficult to detect or remediate once the poisoned state has influenced downstream
+      decisions.
+  - id: asi07-insecure-inter-agent-communication
+    name: ASI07:2026 Insecure Inter-Agent Communication
+    description:
+      Manipulation of messages exchanged between agents, planners, and executors.
+      The threat spans transport, routing, discovery, and semantic layers, including
+      covert or side-channels where agents leak or infer data through timing or behavioral
+      cues. Communication vulnerabilities include agent-in-the-middle attacks through
+      interception and modification of agent messages, message injection through insertion
+      of malicious instructions into agent communication channels, message spoofing
+      through forging messages that appear to originate from trusted agents, and protocol
+      downgrade attacks coercing agents into weaker communication modes.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-b001
+      - aiuc1-req-e001
+      - aiuc1-req-e015
+      - granite-evasiveness
+      - granite-guardian-harm
+      - atlas-attribute-inference-attack
+      - atlas-data-privacy-rights
+      - atlas-prompt-injection
+      - llm022025-sensitive-information-disclosure
+      - llm062025-excessive-agency
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: insecure-inter-agent-comms
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern:
+      Multi-agent systems that exchange messages without authentication, integrity
+      verification, or encryption are vulnerable to spoofing, interception, and injection
+      attacks that can misdirect entire agent clusters.
+  - id: asi08-cascading-failures
+    name: ASI08:2026 Cascading Failures
+    description:
+      Agentic cascading failures occur when a single fault such as a hallucination,
+      malicious input, corrupted tool, or poisoned memory propagates across autonomous
+      agents, compounding into system-wide harm. Because agents plan, persist, and delegate
+      autonomously, a single error can bypass stepwise human checks and persist in a
+      saved state. ASI08 focuses on the propagation and amplification of faults rather
+      than their origin, and applies when a defect spreads across agents, sessions,
+      or workflows causing measurable fan-out or systemic impact beyond the original
+      breach. Observable symptoms include rapid fan-out, cross-domain or tenant spread,
+      oscillating retries or feedback loops between agents, and downstream queue storms.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-c008
+      - aiuc1-req-d002
+      - aiuc1-req-e015
+      - granite-answer-relevance
+      - granite-groundedness
+      - atlas-data-contamination
+      - atlas-hallucination
+      - atlas-poor-model-accuracy
+      - llm01-prompt-injection
+      - llm042025-data-and-model-poisoning
+      - llm062025-excessive-agency
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: cascading-failures
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern:
+      Interconnected agent systems can amplify localized failures into system-wide
+      incidents through dependency chains, retry storms, and cross-domain propagation,
+      producing impact disproportionate to the original defect.
+  - id: asi09-human-agent-trust-exploitation
+    name: ASI09:2026 Human-Agent Trust Exploitation
+    description: Intelligent agents can establish strong trust with human users through
+      their natural language fluency, emotional intelligence, and perceived expertise,
+      known as anthropomorphism. Adversaries or misaligned designs may exploit this
+      trust to influence user decisions, extract sensitive information, or steer outcomes
+      for malicious purposes. In agentic systems, this risk is amplified when humans
+      over-rely on autonomous recommendations or unverifiable rationales, approving
+      actions without independent validation. The agent acts as an untraceable bad influence,
+      manipulating the human into performing the final audited action, making the agent
+      role in the compromise invisible to forensics. Automation bias, perceived authority,
+      and anthropomorphic cues make abuse look legitimate and hard to spot.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    close_mappings:
+      - atlas-over-or-under-reliance
+    related_mappings:
+      - aiuc1-req-d001
+      - aiuc1-req-e001
+      - aiuc1-req-e003
+      - granite-groundedness
+      - granite-guardian-harm
+      - atlas-incomplete-advice
+      - atlas-lack-of-system-transparency
+      - llm01-prompt-injection
+      - llm052025-improper-output-handling
+      - llm062025-excessive-agency
+    broad_mappings:
+      - llm092025-misinformation
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: human-agent-trust-exploitation
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: Users who develop trust in autonomous agents are vulnerable to manipulation
+      through false authority claims, overconfident assertions, and plausible but incorrect
+      explanations, leading to poor decisions that users would not otherwise make.
+  - id: asi10-rogue-agents
+    name: ASI10:2026 Rogue Agents
+    description: Rogue agents are malicious or compromised AI agents that deviate from
+      their intended function or authorized scope, acting harmfully, deceptively, or
+      parasitically within multi-agent or human-agent ecosystems. The agent actions
+      may individually appear legitimate, but emergent behavior becomes harmful, creating
+      a containment gap for traditional rule-based systems. While external compromise
+      such as prompt injection or supply chain tampering can initiate the divergence,
+      ASI10 focuses on the loss of behavioral integrity and governance once drift begins.
+      Rogue behaviors include goal drift, workflow hijacking, collusion and self-replication,
+      and reward hacking and optimization abuse.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    related_mappings:
+      - aiuc1-req-b006
+      - aiuc1-req-c008
+      - aiuc1-req-e012
+      - aiuc1-req-e015
+      - granite-function-call
+      - granite-guardian-harm
+      - granite-jailbreak
+      - atlas-function-calling-hallucination-agentic
+      - atlas-mitigation-maintenance-agentic
+      - atlas-unauthorized-use-agentic
+      - llm022025-sensitive-information-disclosure
+      - llm092025-misinformation
+    isDefinedByTaxonomy: owasp-asi
+    type: Risk
+    tag: rogue-agents
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern: Agents whose individual actions may appear legitimate can exhibit emergent
+      harmful behavior through goal drift, inter-agent collusion, or reward hacking,
+      making detection difficult because no single action triggers conventional safeguards.
   - id: atlas-evasion-attack
     name: Evasion attack
     description: Evasion attacks attempt to make a model output incorrect results by
@@ -2875,8 +3932,10 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     close_mappings:
+      - asi09-human-agent-trust-exploitation
       - credo-risk-016
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
       - shieldgemma-harassment
       - aiuc1-req-c007
       - aiuc1-req-c009
@@ -3005,6 +4064,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi07-insecure-inter-agent-communication
       - ail-intellectual-property
       - aiuc1-req-a001
       - aiuc1-req-a002
@@ -3031,6 +4091,8 @@ entries:
     url: https://www.ibm.com/docs/en/watsonx/saas?topic=SSYOK8/wsj/ai-risk-atlas/discriminatory-actions-agentic.html
     dateCreated: 2025-04-28
     dateModified: 2025-10-10
+    related_mappings:
+      - aiuc1-req-c010
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-fairness
     type: Risk
@@ -3133,6 +4195,8 @@ entries:
       - granite-answer-relevance
       - granite-relevance
       - granite-groundedness
+      - asi06-memory-and-context-poisoning
+      - asi08-cascading-failures
       - llm092025-misinformation
       - mit-ai-causal-risk-entity-ai
       - mit-ai-causal-risk-intent-unintentional
@@ -3266,6 +4330,7 @@ entries:
     dateCreated: 2025-04-28
     dateModified: 2025-10-10
     related_mappings:
+      - asi10-rogue-agents
       - aiuc1-req-e001
       - aiuc1-req-e002
       - aiuc1-req-e013
@@ -3316,6 +4381,7 @@ entries:
       - aiuc1-req-d003
       - aiuc1-req-d004
     related_mappings:
+      - asi10-rogue-agents
       - aiuc1-req-d003
       - aiuc1-req-d004
       - aiuc1-req-e003
@@ -3431,7 +4497,7 @@ entries:
       - mit-ai-risk-subdomain-7.3
       - nist-value-chain-and-component-integration
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-accuracy
     type: Risk
@@ -3578,6 +4644,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi03-identity-and-privilege-abuse
       - shieldgemma-sexually-explicit
       - ail-child-sexual-exploitation
       - ail-defamation
@@ -3626,7 +4693,7 @@ entries:
       - mit-ai-causal-risk-timing-pre-deployment
       - mit-ai-risk-subdomain-1.1
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-fairness
     type: Risk
@@ -3647,6 +4714,7 @@ entries:
     close_mappings:
       - aiuc1-req-a006
     related_mappings:
+      - asi03-identity-and-privilege-abuse
       - aiuc1-req-a005
       - aiuc1-req-a006
       - credo-risk-024
@@ -3894,6 +4962,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi06-memory-and-context-poisoning
       - shieldgemma-hate-speech
       - aiuc1-req-c003
       - mit-ai-causal-risk-entity-human
@@ -3901,7 +4970,7 @@ entries:
       - mit-ai-causal-risk-timing-post-deployment
       - mit-ai-risk-subdomain-1.1
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-fairness
     type: Risk
@@ -3954,6 +5023,9 @@ entries:
     close_mappings:
       - aiuc1-req-b006
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
+      - asi03-identity-and-privilege-abuse
+      - asi10-rogue-agents
       - aiuc1-req-b007
       - aiuc1-req-b008
       - aiuc1-req-d003
@@ -4049,6 +5121,8 @@ entries:
     dateCreated: 2024-09-24
     dateModified: 2025-10-22
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi08-cascading-failures
       - ail-privacy
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-unintentional
@@ -4230,7 +5304,7 @@ entries:
       - mit-ai-causal-risk-timing-post-deployment
       - mit-ai-risk-subdomain-1.3
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-societal-impact
     type: Risk
@@ -4282,7 +5356,7 @@ entries:
       - mit-ai-causal-risk-intent-intentional
       - mit-ai-causal-risk-timing-post-deployment
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-misuse
     type: Risk
@@ -4569,6 +5643,8 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi09-human-agent-trust-exploitation
       - ail-specialized-advice
       - aiuc1-req-d001
       - mit-ai-causal-risk-entity-ai
@@ -4605,6 +5681,10 @@ entries:
       - aiuc1-req-b001
       - aiuc1-req-b002
     related_mappings:
+      - asi01-agent-goal-hijack
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
+      - asi07-insecure-inter-agent-communication
       - atlas-jailbreaking
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -4646,6 +5726,7 @@ entries:
     close_mappings:
       - aiuc1-req-e017
     related_mappings:
+      - asi09-human-agent-trust-exploitation
       - aiuc1-req-e017
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-other
@@ -4857,6 +5938,7 @@ entries:
     close_mappings:
       - aiuc1-req-b004
     related_mappings:
+      - asi05-unexpected-code-execution
       - aiuc1-req-b003
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -4887,6 +5969,8 @@ entries:
       - aiuc1-req-b002
     related_mappings:
       - granite-jailbreak
+      - asi01-agent-goal-hijack
+      - asi05-unexpected-code-execution
       - atlas-prompt-injection
       - aiuc1-req-b002
       - mit-ai-causal-risk-entity-human
@@ -4969,6 +6053,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-10
     related_mappings:
+      - asi01-agent-goal-hijack
       - aiuc1-req-b002
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -5024,6 +6109,7 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi07-insecure-inter-agent-communication
       - aiuc1-req-b004
       - llm022025-sensitive-information-disclosure
       - mit-ai-causal-risk-entity-human
@@ -5051,6 +6137,7 @@ entries:
     dateCreated: 2024-09-24
     dateModified: 2025-10-22
     related_mappings:
+      - asi08-cascading-failures
       - aiuc1-req-d001
       - aiuc1-req-d002
       - credo-risk-032
@@ -5219,7 +6306,7 @@ entries:
       - mit-ai-causal-risk-timing-post-deployment
       - mit-ai-risk-subdomain-1.1
     broad_mappings:
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-fairness
     type: Risk
@@ -5384,6 +6471,8 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi06-memory-and-context-poisoning
       - aiuc1-req-b008
       - mit-ai-causal-risk-entity-human
       - mit-ai-causal-risk-intent-intentional
@@ -5729,8 +6818,8 @@ entries:
       - credo-risk-004
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
-  - id: nist-harmful-bias-or-homogenization
-    name: Harmful Bias or Homogenization
+  - id: nist-harmful-bias-and-homogenization
+    name: Harmful Bias and Homogenization
     description: Amplification and exacerbation of historical, societal, and systemic
       biases; performance disparities between sub-groups or languages, possibly due
       to non-representative training data, that result in discrimination, amplification
@@ -6325,7 +7414,7 @@ entries:
       - mit-ai-risk-subdomain-1.3
       - mit-ai-risk-subdomain-2.2
       - nist-dangerous-violent-or-hateful-content
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-human-ai-configuration
       - nist-obscene-degrading-and-or-abusive-content
     isDefinedByTaxonomy: ailuminate-v1.0
@@ -6399,7 +7488,7 @@ entries:
       - mit-ai-risk-subdomain-3.1
       - mit-ai-risk-subdomain-4.1
       - mit-ai-risk-subdomain-4.3
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-information-integrity
       - nist-intellectual-property
       - nist-obscene-degrading-and-or-abusive-content
@@ -6575,7 +7664,7 @@ entries:
       - doc-un-ethical-use-of-ai-principles
     type: Principle
   - id: principle-un-defined-purpose-necessity-and-proportionality
-    name: Defined p
+    name: Defined purpose, necessity and proportionality
     description: The use of artificial intelligence systems, including the specific
       artificial intelligence method(s) employed, should be justified, appropriate in
       the context and not exceed what is necessary, and proportionate to achieve legitimate
@@ -6605,7 +7694,7 @@ entries:
       - doc-un-ethical-use-of-ai-principles
     type: Principle
   - id: principle-un-sustainability
-    name: Sustainab
+    name: Sustainability
     description: Artificial intelligence should be aimed at promoting environmental,
       economic and social sustainability. To this end, the human, social, cultural,
       political, economic and environmental impacts of such technologies should be continuously
@@ -7630,6 +8719,44 @@ entries:
     requiredByTask:
       - code-editing
       - code-explanation
+    type: Capability
+  - id: ibm-cap-context-attribution
+    name: Context Attribution
+    description: Predicting which sentences in the context (including documents and
+      previous conversation turns) were most important for the base model to generate
+      each sentence in its response.
+    dateCreated: 2026-05-18
+    dateModified: 2026-05-18
+    isDefinedByTaxonomy: ibm-ai-capabilities
+    isPartOf: ibm-cap-group-comprehension
+    requiredByTask:
+      - question-answering
+    implementedByAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-context-attribution
+    type: Capability
+  - id: ibm-cap-requirement-check
+    name: Requirement Check
+    description: Evaluating whether LLM-generated responses satisfy user-specified constraints.
+    dateCreated: 2026-05-18
+    dateModified: 2026-05-18
+    isDefinedByTaxonomy: ibm-ai-capabilities
+    isPartOf: ibm-cap-domain-language
+    requiredByTask:
+      - question-answering
+    implementedByAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-requirement-check
+    type: Capability
+  - id: ibm-cap-uncertainty
+    name: Uncertainty
+    description: Calculating how confident the model is about its answer.
+    dateCreated: 2026-05-18
+    dateModified: 2026-05-18
+    isDefinedByTaxonomy: ibm-ai-capabilities
+    isPartOf: ibm-cap-domain-language
+    requiredByTask:
+      - question-answering
+    implementedByAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-uncertainty
     type: Capability
   - id: principle-oecd-inclusive-growth
     name: Inclusive growth, sustainable development and well-being (Principle 1.1)
@@ -10398,6 +11525,12 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-harmful-output
+      - asi01-agent-goal-hijack
+      - asi03-identity-and-privilege-abuse
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi07-insecure-inter-agent-communication
+      - asi09-human-agent-trust-exploitation
+      - asi10-rogue-agents
       - ail-child-sexual-exploitation
       - ail-defamation
       - ail-hate
@@ -10576,6 +11709,10 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-jailbreaking
+      - asi01-agent-goal-hijack
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
+      - asi10-rogue-agents
       - credo-risk-041
     broad_mappings:
       - granite-guardian-harm
@@ -10624,6 +11761,8 @@ entries:
     dateModified: 2025-02-26
     related_mappings:
       - atlas-harmful-output
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi07-insecure-inter-agent-communication
       - ail-specialized-advice
     broad_mappings:
       - granite-guardian-harm
@@ -10645,6 +11784,9 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi06-memory-and-context-poisoning
+      - asi08-cascading-failures
+      - asi09-human-agent-trust-exploitation
       - ail-specialized-advice
       - ail-suicide-and-self-harm
       - ail-violent-crimes
@@ -10665,6 +11807,7 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi06-memory-and-context-poisoning
       - ail-specialized-advice
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-rag-safety-group
@@ -10684,6 +11827,7 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi08-cascading-failures
       - ail-specialized-advice
       - ail-suicide-and-self-harm
     isDefinedByTaxonomy: ibm-granite-guardian
@@ -10703,6 +11847,9 @@ entries:
     dateModified: 2024-12-10
     related_mappings:
       - atlas-hallucination
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
+      - asi10-rogue-agents
     isDefinedByTaxonomy: ibm-granite-guardian
     isPartOf: granite-guardian-agentic-safety-group
     type: Risk
@@ -10722,7 +11869,13 @@ entries:
       - aiuc1-req-b001
       - aiuc1-req-b002
       - aiuc1-req-b005
+      - asi03-identity-and-privilege-abuse
+      - asi05-unexpected-code-execution
+      - asi06-memory-and-context-poisoning
+      - asi08-cascading-failures
+      - asi09-human-agent-trust-exploitation
     broad_mappings:
+      - asi01-agent-goal-hijack
       - atlas-jailbreaking
       - atlas-prompt-priming
     isDefinedByTaxonomy: owasp-llm-2.0
@@ -10751,6 +11904,9 @@ entries:
       - aiuc1-req-b007
       - aiuc1-req-b008
       - aiuc1-req-b009
+      - asi03-identity-and-privilege-abuse
+      - asi07-insecure-inter-agent-communication
+      - asi10-rogue-agents
       - atlas-attribute-inference-attack
       - atlas-confidential-data-in-prompt
       - atlas-confidential-information-in-data
@@ -10785,6 +11941,8 @@ entries:
       - atlas-inaccessible-training-data
       - credo-risk-047
       - credo-risk-048
+    narrow_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
     broad_mappings:
       - atlas-data-acquisition
       - atlas-data-contamination
@@ -10807,9 +11965,11 @@ entries:
     related_mappings:
       - aiuc1-req-b001
       - aiuc1-req-b005
+      - asi08-cascading-failures
       - credo-risk-040
       - credo-risk-041
     broad_mappings:
+      - asi06-memory-and-context-poisoning
       - atlas-data-poisoning
     isDefinedByTaxonomy: owasp-llm-2.0
     type: Risk
@@ -10842,8 +12002,11 @@ entries:
       - aiuc1-req-c006
       - aiuc1-req-d001
       - aiuc1-req-e009
+      - asi09-human-agent-trust-exploitation
       - atlas-over-or-under-reliance
       - credo-risk-036
+    narrow_mappings:
+      - asi05-unexpected-code-execution
     isDefinedByTaxonomy: owasp-llm-2.0
     type: Risk
   - id: llm062025-excessive-agency
@@ -10867,11 +12030,18 @@ entries:
       - aiuc1-req-d003
       - aiuc1-req-d004
       - aiuc1-req-e009
+      - asi01-agent-goal-hijack
+      - asi07-insecure-inter-agent-communication
+      - asi08-cascading-failures
+      - asi09-human-agent-trust-exploitation
       - atlas-over-or-under-reliance
       - credo-risk-002
       - credo-risk-017
       - credo-risk-018
       - credo-risk-019
+    narrow_mappings:
+      - asi02-tool-misuse-and-exploitation
+      - asi03-identity-and-privilege-abuse
     isDefinedByTaxonomy: owasp-llm-2.0
     type: Risk
   - id: llm072025-system-prompt-leakage
@@ -10912,6 +12082,7 @@ entries:
       - aiuc1-req-b006
       - aiuc1-req-b009
       - aiuc1-req-d003
+      - asi06-memory-and-context-poisoning
       - credo-risk-033
       - credo-risk-035
       - credo-risk-040
@@ -10931,11 +12102,13 @@ entries:
       - aiuc1-req-c003
       - aiuc1-req-d001
       - aiuc1-req-d002
+      - asi10-rogue-agents
       - atlas-hallucination
       - atlas-harmful-code-generation
       - credo-risk-017
       - credo-risk-021
     broad_mappings:
+      - asi09-human-agent-trust-exploitation
       - atlas-incomplete-advice
       - atlas-spreading-disinformation
     isDefinedByTaxonomy: owasp-llm-2.0
@@ -11184,7 +12357,7 @@ entries:
       - atlas-output-bias
       - atlas-unrepresentative-data
       - mit-ai-risk-subdomain-1.1
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-fairness-&-bias
     type: Risk
@@ -11207,7 +12380,7 @@ entries:
       - atlas-harmful-output
       - atlas-output-bias
       - mit-ai-risk-subdomain-1.1
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-fairness-&-bias
     type: Risk
@@ -11221,7 +12394,7 @@ entries:
       - granite-guardian-harm
       - atlas-dangerous-use
       - mit-ai-risk-subdomain-6.5
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-fairness-&-bias
@@ -11401,7 +12574,7 @@ entries:
     related_mappings:
       - atlas-decision-bias
       - atlas-output-bias
-      - nist-harmful-bias-or-homogenization
+      - nist-harmful-bias-and-homogenization
       - nist-information-integrity
     isDefinedByTaxonomy: credo-ucf
     isPartOf: credo-rg-information-integrity
@@ -15078,7 +16251,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0957_Gipiškis2024
+  - id: A0957_Gipiskis2024
     name: Demonstrating a “margin of safety” for the worst plausible system failures
     description: "Model developers can demonstrate that there is an acceptable “margin
       of safety” between the current version of the model and a plausible version with
@@ -15100,8 +16273,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0959_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0959_Gipiskis2024
     name: Scenario analysis
     description: "Scenario analysis involves development of several plausible future
       scenarios, where these scenarios may be generated from varying the assumptions
@@ -15116,8 +16289,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0960_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0960_Gipiskis2024
     name: Fishbone diagram
     description: "The fishbone diagram, or a “cause-and-effect diagram” [107], can be
       used to show the potential causes of an undesirable event.
@@ -15138,8 +16311,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0961_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0961_Gipiskis2024
     name: Causal mapping
     description:
       "Causal mapping is a technique used to explore and map complex interactions
@@ -15159,8 +16332,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0962_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0962_Gipiskis2024
     name: Delphi technique
     description: "The Delphi technique is a multi-round forecasting process based on
       a structured framework on collecting and collating multiple expert judgments.
@@ -15181,8 +16354,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0963_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0963_Gipiskis2024
     name: Cross-impact analysis
     description: "Cross impact analysis is a forecasting methodology that analyzes the
       likelihood of a particular issue using expert analysis (i.e., Delphi technique)
@@ -15199,8 +16372,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0964_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0964_Gipiskis2024
     name: Bow-tie analysis
     description: "Bow-tie analysis is a method to assess the utility of implemented
       controls against a particular risk event. It involves centering the unwanted risk
@@ -15224,8 +16397,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0965_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0965_Gipiskis2024
     name: System-theoretic process analysis (STPA)
     description: "STPA is a method to assess the utility of implemented controls against
       a partic- ular risk within a complex system. Unlike bow-tie analysis, STPA factors
@@ -15254,8 +16427,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0966_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0966_Gipiskis2024
     name: Risk matrices
     description: "A risk matrix is a method for risk evaluation. It is a heatmap that,
       for each cell, shows the severity score weighted by the likelihood score of a
@@ -15275,8 +16448,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0967_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0967_Gipiskis2024
     name: Pre-allocate sufficient resources for risk man- agement
     description: "The process of conducting thorough risk management is potentially
       time-con- suming. Pre-allocating sufficient resources, in terms of personnel count
@@ -15290,7 +16463,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1028_Uuk2024
     name: Intolerable risk thresholds
     description: Assessing and monitoring AI models with regard to red-line risk or
@@ -16009,7 +17182,7 @@ controls:
     type: Action
     hasDocumentation:
       - NIST.AI.600-1
-  - id: A0994_Gipiškis2024
+  - id: A0994_Gipiskis2024
     name: More energy-efficient models or techniques
     description: Deploying more energy-efficient models can reduce their environmental
       impact. Different model architectural choices result in varying environmental
@@ -16021,8 +17194,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.6
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0995_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0995_Gipiskis2024
     name: Disclosure of energy consumption by AI systems to authorities
     description:
       Disclosures can direct more necessary attention and scrutiny to projects
@@ -16034,8 +17207,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.6
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0996_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0996_Gipiskis2024
     name: Using low carbon intensity energy grids
     description: Moving model training to energy grids with low carbon intensity can
       reduce the negative environmental impact [30]. The efficiency of energy grids
@@ -16045,7 +17218,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-1.6
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A0006_Bengio2025
     name: Engagement with Relevant Experts and Communities
     description: "Domain experts, users, and impacted communities have unique insights
@@ -16791,7 +17964,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0984_Gipiškis2024
+  - id: A0984_Gipiskis2024
     name: Protect proprietary or unreleased AI model ar- chitecture and parameters
     description: "The developers of AI models can invest in cybersecurity to prevent
       compute re- sources, training source code, model weights, and other critical resources
@@ -16808,8 +17981,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0985_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0985_Gipiskis2024
     name: Hardware limitations on data center network connections
     description:
       "Hardware-enforced bandwidth limitations on data center network connections
@@ -16829,7 +18002,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1045_Uuk2024
     name: Advanced information security
     description:
@@ -16908,7 +18081,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0978_Gipiškis2024
+  - id: A0978_Gipiskis2024
     name: AI model-assisted oversight of AI systems
     description:
       "AI model-assisted oversight can help monitor and supervise the training
@@ -16942,8 +18115,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1011_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1011_Gipiskis2024
     name: GPAI models explaining model outputs in a zero-sum debate game
     description: "Debate is a technique that aims to produce reliable explanations of
       AI model outputs that are too complicated for humans to understand, by letting
@@ -16971,7 +18144,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1026_Uuk2024
     name: Harmlessness training
     description: State-of-the-art reinforcement learning and fine-tuning techniques,
@@ -17220,7 +18393,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0935_Gipiškis2024
+  - id: A0935_Gipiskis2024
     name: Restrict web access during AI training
     description: Developers can restrict or disable AI systems’ internet access during
       training. For example, developers can restrict web access to read-only (e.g.,
@@ -17230,8 +18403,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0936_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0936_Gipiskis2024
     name: Adversarial training
     description: "Adversarial training [83] is a technique for training AI models in
       which adver- sarial inputs are generated for a model, and the model is then trained
@@ -17243,8 +18416,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0939_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0939_Gipiskis2024
     name: Incorporating the estimation of atypical input samples or classes for better
       model reliability
     description: Incorporating the estimation of rare atypical input samples or classes
@@ -17258,8 +18431,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0947_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0947_Gipiskis2024
     name: Enforcing model output interpretability post-training
     description: "While a resulting trained model may be opaque with respect to its
       predictions, the final output in a system that involves the model can nonetheless
@@ -17273,8 +18446,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0948_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0948_Gipiskis2024
     name: Paraphrasing to reduce hidden information
     description:
       Paraphrasing can mitigate steganography and encoded reasoning by reducing
@@ -17283,8 +18456,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0951_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0951_Gipiskis2024
     name: Modification of model internal representation
     description: "Model providers can modify the internal representation of the model
       [135, 237] up to the granular level and in consultation with other tools that
@@ -17299,8 +18472,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0952_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0952_Gipiskis2024
     name: Incorporating goal uncertainty into AI systems to mitigate risky behaviors
     description:
       Incorporating uncertainty into AI system goals can prevent rushed decision-
@@ -17310,8 +18483,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0973_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0973_Gipiskis2024
     name: Pop-up interventions in LLMs
     description: "Supplementary information can be shown to the user in specific query
       topics where factual accuracy is critical. This intervention can effectively divert
@@ -17327,8 +18500,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0983_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0983_Gipiskis2024
     name: Least Privilege access
     description:
       "Deployers of an AI system can restrict its permissions to a whitelisted
@@ -17348,8 +18521,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0990_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0990_Gipiskis2024
     name: Debiasing methods
     description: "Providers of AI models can apply techniques to reduce the biases of
       their models.
@@ -17381,8 +18554,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0991_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0991_Gipiskis2024
     name: Knowledge unlearning techniques
     description:
       Knowledge unlearning techniques allow specific information to be “forgotten”
@@ -17393,8 +18566,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1014_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1014_Gipiskis2024
     name: Tamper-resistant safeguards for open-weight models
     description: Training and implementing safeguards can improve the robustness of
       open- weight models against modifications from fine-tuning or other methods to
@@ -17405,7 +18578,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1019_Uuk2024
     name: Adversarial Robustness
     description: State-of-the-art methods such as adversarial training to make models
@@ -17661,7 +18834,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0974_Gipiškis2024
+  - id: A0974_Gipiskis2024
     name: AI identification
     description: "AI identifiers can be used to indicate that an AI is involved in a
       process or an interaction [40].
@@ -17678,8 +18851,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.4
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0975_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0975_Gipiskis2024
     name: AI output watermaking
     description:
       Output produced by or with AI assistance can be marked to clearly identify
@@ -17691,8 +18864,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.4
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0976_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0976_Gipiskis2024
     name: AI output metadata
     description: Output produced or whose production is aided by AI can contain metadata
       to record its origin and the transformations it has undergone. Metadata is evidence
@@ -17706,8 +18879,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2.4
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0937_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0937_Gipiskis2024
     name: Cost-inducing training of AI models specifically for malicious use
     description: AI models can be designed to make further post-training modifications
       (e.g., fine-tuning) too costly for malicious uses while preserving normal adaptability
@@ -17716,7 +18889,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A0001_Bengio2025
     name: Audits
     description:
@@ -18964,7 +20137,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0942_Gipiškis2024
+  - id: A0942_Gipiskis2024
     name: Scope red-teaming activities based on deploy- ment context
     description:
       "Red-teaming activities can be tailored and compared based on the specific
@@ -18985,8 +20158,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0943_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0943_Gipiskis2024
     name: Red teaming to test the resilience of open-weights models to fine-tuning
     description: Before the release of open-weights models, red teamers can test the
       resilience of safety training against fine-tuning. Safety training may be partially
@@ -18996,8 +20169,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0945_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0945_Gipiskis2024
     name: Audits with specific scoped goals
     description:
       Audits of AI systems will be easier to perform, and have clearer results
@@ -19007,8 +20180,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0946_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0946_Gipiskis2024
     name: Evaluating explainability method sensitivity to data inputs and model parameters
     description: Model parameter and data randomization tests can be employed as sanity
       checks [2] to determine the relationship between a model, its inputs, and the
@@ -19019,8 +20192,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0949_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0949_Gipiskis2024
     name: Testing for erroneous or irrelevant features through concept learning
     description: Interpretability techniques, particularly concept learning [77], can
       be used to test whether a model is learning erroneous features or relying on irrelevant
@@ -19031,8 +20204,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0953_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0953_Gipiskis2024
     name: Evaluations for truthful outputs
     description: AI systems can be evaluated for truthfulness when answering questions,
       includ- ing in contexts where humans tend to give incorrect but widely-accepted
@@ -19043,8 +20216,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0954_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0954_Gipiskis2024
     name: Interpretability techniques that target deception
     description: Interpretability techniques can be used for finding the root causes
       of outputs of an AI model that reliably lead to false beliefs for its users (e.g.,
@@ -19061,8 +20234,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0955_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0955_Gipiskis2024
     name: Benchmarks for Situational Awareness
     description: A model is situationally aware if it internally represents that it
       is a machine learning model and if it can accurately infer or act on model-relevant
@@ -19076,8 +20249,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0956_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0956_Gipiskis2024
     name: Evaluating AI systems’ performance on self-proliferation-related tasks
     description:
       "To prevent AI systems from self-proliferating, developers of AI systems
@@ -19097,8 +20270,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0958_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0958_Gipiskis2024
     name: Employing qualitative assessments in difficult- to-measure domains
     description:
       Qualitative evaluation can be used in cases when quantitative measurement
@@ -19108,8 +20281,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0981_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0981_Gipiskis2024
     name: Encouraging downstream provider to evaluate models for deployment-specific
       failure modes
     description: In some cases, AI system deployers are better positioned to perform
@@ -19122,8 +20295,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0987_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0987_Gipiskis2024
     name: Sandboxing of AI Systems
     description: AI systems can be developed and tested within a sandbox, (a secure
       and iso- lated environment used for separating running programs), such that outside
@@ -19135,8 +20308,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0993_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0993_Gipiskis2024
     name: Quantifying privacy risks of AI models
     description: "Measuring privacy risks of an AI model allows the provider and user
       to calibrate their expectations on where the model can be applied, and it allows
@@ -19156,8 +20329,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0997_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0997_Gipiskis2024
     name: Red team access to the final version of a model pre-deployment
     description: "Granting red teams access to the final pre-release version of the
       model can help with identifying potentially dangerous model properties. These
@@ -19171,8 +20344,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0998_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0998_Gipiskis2024
     name: Red teaming for GPAI system evaluation
     description:
       Red teaming refers to simulated adversarial attacks performed to identify
@@ -19182,8 +20355,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0999_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0999_Gipiskis2024
     name: Dynamic benchmarking
     description: "Dynamic benchmarks are benchmarks that can be continuously updated
       with new human-generated data. By having one or more target models “in the loop,”
@@ -19199,8 +20372,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1000_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1000_Gipiskis2024
     name: Benchmark dataset auditing
     description: Auditing benchmark datasets allows for verification of the utility
       and limitations of the datasets [158]. This allows the provider to more accurately
@@ -19211,8 +20384,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1001_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1001_Gipiskis2024
     name: Informative and powerful benchmarks
     description: "Developers of GPAI systems can select benchmarks that are difficult
       enough to be informative about the capabilities of their AI systems, and cover
@@ -19227,8 +20400,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1002_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1002_Gipiskis2024
     name: Statistical data quality reports for benchmarks
     description: If a benchmark dataset is too large to allow for the identification
       and removal of all flawed instances, statistical reports on the data composition
@@ -19238,8 +20411,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1003_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1003_Gipiskis2024
     name: Avoiding benchmark data with publicly avail- able solutions and releasing
       contextual information for internet-derived data
     description: Evaluators can improve the integrity of benchmarks by avoiding data
@@ -19253,8 +20426,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1008_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1008_Gipiskis2024
     name: Frequent benchmarking to identify when red teaming is needed
     description: "Benchmarks, once created, are inexpensive to apply but may be less
       informative than red teaming. One reason is that sensitive data (e.g., relating
@@ -19272,8 +20445,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1009_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1009_Gipiskis2024
     name: Test robustness of GPAI system on relevant benchmarks
     description:
       Various benchmarks [52, 236] have been developed to assess the robustness
@@ -19285,8 +20458,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1010_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1010_Gipiskis2024
     name: Benchmarking
     description:
       Benchmarking is an evaluation method where different models are compared
@@ -19298,8 +20471,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1012_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1012_Gipiskis2024
     name: Using an AI model to evaluate AI model outputs
     description: In cases where the outputs of AI models cannot be easily evaluated,
       AI mod- els can be used to evaluate their outputs or the outputs of other AI models
@@ -19310,8 +20483,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1013_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1013_Gipiskis2024
     name: Frequent testing when scaling model or dataset
     description: Testing models after significant increases in compute, data, or model
       parame- ters. Even relatively small changes to model or dataset size can introduce
@@ -19321,8 +20494,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1015_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1015_Gipiskis2024
     name: Robustness Certificates
     description:
       A model can be certified to withstand adversarial attacks given specific
@@ -19336,7 +20509,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1020_Uuk2024
     name: Bug bounty programs
     description: Clear and user-friendly bug bounty programs that acknowledge and reward
@@ -19938,7 +21111,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0934_Gipiškis2024
+  - id: A0934_Gipiskis2024
     name: Use of Synthetic Data
     description:
       Synthetic data refers to data that is not collected from the real world.
@@ -19952,8 +21125,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0940_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0940_Gipiskis2024
     name: Data cleaning
     description: Providers can filter out the training dataset via multiple layered
       techniques, ranging from rule-based filters to anomaly detection via data point
@@ -19965,8 +21138,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0989_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0989_Gipiskis2024
     name: Diverse data labeling and algorithm fairness audits
     description: To mitigate biases in AI models, model providers may want to prioritize
       di- versity among data labelers and conduct regular fairness audits on their algo-
@@ -19976,8 +21149,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0992_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0992_Gipiskis2024
     name: Differential privacy
     description:
       Differential privacy techniques [8] can be used to protect users’ privacy
@@ -19991,8 +21164,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1004_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1004_Gipiskis2024
     name: Reporting data decontamination efforts
     description: Decontamination analysis may involve comparing the training dataset
       with the benchmark data, and publishing a report with statistics such as data
@@ -20002,8 +21175,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1006_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1006_Gipiskis2024
     name: Preventing or mitigating data contamination and leakage
     description: "Developers of GPAIS and creators of benchmarks can take actions to
       prevent AI models from being trained on contaminated or leaked data, or mitigate
@@ -20019,8 +21192,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1007_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1007_Gipiskis2024
     name: Contamination detection
     description: "Contamination detection refers to techniques for assessing whether
       and to what extent a given model has benchmark data in its training dataset [161,
@@ -20036,8 +21209,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1016_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1016_Gipiskis2024
     name: Documentation of data collection, annotation, maintenance practices
     description:
       Dataset collection, annotation, and maintenance processes can be documented
@@ -20049,7 +21222,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.2
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1022_Uuk2024
     name: Data curation
     description:
@@ -20239,7 +21412,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0970_Gipiškis2024
+  - id: A0970_Gipiskis2024
     name: Limit deployment scope
     description: AI models can be restricted in terms of its use cases, where providers
       can require the deployers to limit its deployment to a predefined scope [81],
@@ -20249,8 +21422,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0971_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0971_Gipiskis2024
     name: Restricted usage terms for open-source models
     description:
       "Developers of open-weights and open-source AI models can vet and restrict
@@ -20265,8 +21438,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0986_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0986_Gipiskis2024
     name: Structured access to a model
     description: "Structured access refers to methods which limit users’ or deployers’
       direct access to a model’s parameters by constraining access to a model through
@@ -20282,7 +21455,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1025_Uuk2024
     name: Fine-tuning restrictions
     description:
@@ -20367,7 +21540,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0968_Gipiškis2024
+  - id: A0968_Gipiskis2024
     name: Staged release of model weights
     description:
       "When a model is developed by a provider for use in a certain AI system,
@@ -20383,8 +21556,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.4
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0969_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0969_Gipiskis2024
     name: Gradual or incremental monitored release of model access
     description: AI systems can be released for access incrementally, starting with
       a small and selected deployer base before progressively being released to a wider
@@ -20399,7 +21572,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.4
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1023_Uuk2024
     name: Deploying powerful models in stages
     description:
@@ -20978,7 +22151,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0950_Gipiškis2024
+  - id: A0950_Gipiskis2024
     name: Dashboard of model properties
     description:
       "A dashboard [41] displays all the relevant information about the model’s
@@ -20996,8 +22169,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0977_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0977_Gipiskis2024
     name: Monitoring of model capabilities
     description: "AI models are often trained to develop specific capabilities by using
       appropriate training data and training goals. However, models may develop capabilities
@@ -21011,8 +22184,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0979_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0979_Gipiskis2024
     name: Post-deployment ongoing monitoring for unexpected use cases
     description:
       "Ongoing monitoring of AI systems can uncover emergent or newly identified
@@ -21029,8 +22202,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0980_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0980_Gipiskis2024
     name: Monitoring protocols for po- tentially adversarial GPAI systems
     description:
       "Similar to cybersecurity protocols, AI providers can prepare in advance
@@ -21069,8 +22242,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A1005_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A1005_Gipiskis2024
     name: Tracking benchmark leakage
     description: Constant monitoring and documentation of benchmark leakage can help
       with the early detection of benchmark leaks [224, 95].
@@ -21078,7 +22251,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.5
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A0039_Casper2025
     name: Shutdown procedures
     description: Developers can be required to document if and which protocols exist
@@ -21441,7 +22614,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0941_Gipiškis2024
+  - id: A0941_Gipiskis2024
     name: Internal data poisoning diagnosis
     description: Providers can have an internal framework to identify what specific
       data poison- ing attack their model may be a victim of based on a set of symptoms,
@@ -21452,8 +22625,8 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.6
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
-  - id: A0988_Gipiškis2024
+      - doc-Gipiskis2024
+  - id: A0988_Gipiskis2024
     name: Redundant systems not reliant on GPAI
     description: "Redundant systems provide continuation of a given system’s processes
       in case of failure of the given system. Importantly, redundant systems should
@@ -21468,7 +22641,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-3.6
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1035_Uuk2024
     name: Safety Drills
     description: Regularly practicing the implementation of an emergency response plan
@@ -22022,7 +23195,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0938_Gipiškis2024
+  - id: A0938_Gipiskis2024
     name: Calibrated confidence measures for model pre- dictions
     description:
       Incorporating calibrated confidence measures alongside a model’s predictions
@@ -22035,7 +23208,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.1
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A0034_Casper2025
     name: Model registration
     description: Developers can be required to register (McKernon et al., 2024) frontier
@@ -22952,7 +24125,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0982_Gipiškis2024
+  - id: A0982_Gipiskis2024
     name: Encourage reporting of critical vulnerabilities to the upstream provider or
       other relevant stakeholders
     description: Downstream AI system deployers can report critical vulnerabilities
@@ -22963,7 +24136,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.3
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1036_Uuk2024
     name: Safety incident reports and security information sharing
     description: Disclosing reports about AI incidents, such as concrete harms and near
@@ -23205,7 +24378,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0972_Gipiškis2024
+  - id: A0972_Gipiskis2024
     name: Release strategy disagreement between developers
     description: Developers of restricted-access models with similar capabilities may
       disagree about the strategy or precautions to take for model release, especially
@@ -23216,7 +24389,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.4
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1039_Uuk2024
     name: Sharing safety cases
     description: Disclosing to a regulator how high-stakes decisions regarding model
@@ -23431,7 +24604,7 @@ controls:
     type: Action
     hasDocumentation:
       - doc-UK Government2023
-  - id: A0944_Gipiškis2024
+  - id: A0944_Gipiskis2024
     name: Pre-deployment access by third-party auditors
     description:
       Prior to full deployment of general-purpose AI models, a group of third-party
@@ -23445,7 +24618,7 @@ controls:
       - mit-draft-ai-risk-mitigation-group-4.5
     type: Action
     hasDocumentation:
-      - doc-Gipiškis2024
+      - doc-Gipiskis2024
   - id: A1018_Uuk2024
     name: Advanced model access for vetted external researchers
     description: "Examples of advanced access rights could include any of the following:
@@ -29095,6 +30268,365 @@ evaluations:
       - akariasai/PopQA
     hasRelatedRisk:
       - atlas-hallucination
+  - id: ai_eval_mmlu
+    name: MMLU
+    description:
+      This is a massive multitask test consisting of multiple-choice questions
+      from various branches of knowledge. The test spans subjects in the humanities,
+      social sciences, hard sciences, and other areas that are important for some people
+      to learn. This covers 57 tasks including elementary mathematics, US history, computer
+      science, law, and more. To attain high accuracy on this test, models must possess
+      extensive world knowledge and problem solving ability.
+    url: https://huggingface.co/datasets/cais/mmlu
+    hasDocumentation:
+      - arxiv.org/2009.03300
+    hasDataset:
+      - cais/mmlu
+  - id: ai_eval_mmlu_pro
+    name: MMLU-Pro
+    description: MMLU-Pro dataset is a more robust and challenging massive multi-task
+      understanding dataset tailored to more rigorously benchmark large language models'
+      capabilities. This dataset contains 12K complex questions across various disciplines.
+    url: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro
+    hasDocumentation:
+      - https://arxiv.org/abs/2406.01574
+    hasDataset:
+      - TIGER-Lab/MMLU-Pro
+  - id: ai_eval_bbh
+    name: BIG-Bench Hard
+    description: A suite of 23 challenging BIG-Bench tasks which we call BIG-Bench Hard
+      (BBH). These are the task for which prior language model evaluations did not outperform
+      the average human-rater.
+    url: https://github.com/suzgunmirac/BIG-Bench-Hard
+    hasDocumentation:
+      - https://arxiv.org/abs/2210.09261
+    hasDataset:
+      - big-bench-hard-dataset
+    hasTasks:
+      - question-answering
+      - text-classification
+      - text-generation
+      - multi-label-classification
+  - id: ai_eval_agi
+    name: AGI EVAL
+    description: AGIEval is a human-centric benchmark specifically designed to evaluate
+      the general abilities of foundation models in tasks pertinent to human standardized
+      tests, including entrance exams for higher education institutions and qualification
+      exams for professional practitioners.
+    url: https://huggingface.co/datasets/lighteval/agi_eval_en
+    hasDataset:
+      - lighteval/agi_eval_en
+    hasTasks:
+      - multiple-choice
+      - question-answering
+  - id: ai_eval_drop
+    name: DROP
+    description: DROP (Discrete Reasoning Over Paragraphs) is a crowdsourced reading
+      comprehension benchmark that requires systems to perform discrete reasoning over
+      passages, emphasizing numerical operations and comparisons. DROP is designed to
+      be adversarially-constructed and focuses on understanding and reasoning about
+      numbers in text.
+    url: https://huggingface.co/datasets/ucinlp/drop
+    hasDataset:
+      - ucinlp/drop
+    hasTasks:
+      - reading-comprehension
+      - question-answering
+  - id: ai_eval_simple_qa
+    name: SimpleQA
+    description:
+      SimpleQA is a factuality benchmark that measures the ability for language
+      models to answer short, fact-seeking questions. It evaluates model accuracy on
+      simple factual knowledge and helps identify hallucination issues in LLM outputs.
+    url: https://huggingface.co/datasets/basicv8vc/SimpleQA
+    hasDataset:
+      - basicv8vc/SimpleQA
+    hasTasks:
+      - question-answering
+      - factuality-evaluation
+  - id: ai_eval_gsm8k
+    name: GSM8K
+    description:
+      GSM8K (Grade School Math 8K) is a dataset of 8.5K high quality linguistically
+      diverse grade school math word problems created through crowdsourcing. The benchmark
+      tests multi-step mathematical reasoning and problem-solving abilities of language
+      models.
+    url: https://huggingface.co/datasets/openai/gsm8k
+    hasDataset:
+      - openai/gsm8k
+    hasTasks:
+      - question-answering
+      - mathematical-reasoning
+  - id: ai_eval_minerva_math
+    name: Minerva Math
+    description:
+      Minerva Math is a benchmark dataset for evaluating advanced mathematical
+      reasoning capabilities in language models, focusing on complex mathematical problems
+      and multi-step reasoning across various mathematical domains.
+    url: https://huggingface.co/datasets/math-ai/minervamath
+    hasDataset:
+      - math-ai/minervamath
+    hasTasks:
+      - question-answering
+      - mathematical-reasoning
+  - id: ai_eval_humaneval
+    name: HumanEval
+    description:
+      HumanEval is a benchmark developed by OpenAI for evaluating code generation
+      capabilities of language models through programming language code completion tasks.
+      It contains 164 handwritten problems with function signatures and docstrings to
+      test functional correctness.
+    url: https://huggingface.co/datasets/openai/openai_humaneval
+    hasDataset:
+      - openai/openai_humaneval
+    hasTasks:
+      - code-generation
+      - program-synthesis
+  - id: ai_eval_mbpp
+    name: MBPP
+    description: MBPP (Mostly Basic Programming Problems) is a benchmark consisting
+      of around 1,000 crowd-sourced Python programming problems that evaluate code generation
+      capabilities of language models. It tests the ability to write correct Python
+      functions for basic programming tasks.
+    url: https://huggingface.co/datasets/nlile/mbpp
+    hasDataset:
+      - nlile/mbpp
+    hasTasks:
+      - code-generation
+      - program-synthesis
+  - id: ai_eval_mbpp+
+    name: MBPP+
+    description: MBPP+ is an extended version of MBPP that includes additional test
+      cases and edge case coverage for evaluating code generation capabilities. It provides
+      more rigorous testing for correctness of code generation models.
+    url: https://huggingface.co/datasets/nlile/mbpp
+    hasDataset:
+      - nlile/mbpp
+    hasTasks:
+      - code-generation
+      - program-synthesis
+  - id: ai_eval_eval+
+    name: Eval+ Avg
+    description:
+      Eval+ Avg represents an average evaluation score computed across multiple
+      code generation benchmarks including HumanEval and MBPP, providing an aggregate
+      measure of code generation performance.
+    url: https://github.com/EleutherAI/lm-evaluation-harness
+    hasDataset:
+      - openai/openai_humaneval
+      - nlile/mbpp
+    hasTasks:
+      - code-generation
+      - program-synthesis
+  - id: ai_eval_mmmlu
+    name: MMMLU
+    description: MMMLU (Multilingual Massive Multitask Language Understanding) is a
+      multilingual extension of MMLU that evaluates multitask language understanding
+      capabilities across multiple languages and domains including humanities, social
+      sciences, and hard sciences.
+    url: https://huggingface.co/datasets/openai/MMMLU
+    hasDataset:
+      - openai/MMMLU
+    hasTasks:
+      - question-answering
+      - multiple-choice
+      - multilingual-understanding
+  - id: ai_eval_include
+    name: INCLUDE
+    description:
+      INCLUDE (Inclusive Language Understanding and Evaluation) is a benchmark
+      designed to evaluate multilingual language understanding with emphasis on inclusivity,
+      cultural diversity, and language-specific nuances across multiple languages and
+      domains.
+    url: https://openreview.net/forum?id=k3gCieTXeY
+    hasTasks:
+      - question-answering
+      - multilingual-understanding
+  - id: ai_eval_mgsm
+    name: MGSM
+    description:
+      MGSM (Multilingual Grade School Math) is a benchmark of 250 grade-school
+      math problems manually translated from GSM8K into multiple languages. It evaluates
+      multilingual reasoning and mathematical problem-solving capabilities across different
+      languages.
+    url: https://github.com/EleutherAI/lm-evaluation-harness/blob/main/lm_eval/tasks/mgsm/README.md
+    hasTasks:
+      - question-answering
+      - mathematical-reasoning
+      - multilingual-understanding
+  - id: ai_eval_gpqa
+    name: GPQA
+    description:
+      GPQA (Graduate-level Google-Proof Q&A) is a challenging benchmark consisting
+      of 448 multiple-choice questions written by domain experts in biology, physics,
+      and chemistry. It is designed to test the reasoning and knowledge of language
+      models on questions that would be difficult for non-experts to answer.
+    url: https://huggingface.co/datasets/Idavidrein/gpqa
+    hasDataset:
+      - Idavidrein/gpqa
+    hasTasks:
+      - question-answering
+      - multiple-choice
+      - reasoning
+  - id: ai_eval_alpaca_eval
+    name: AlpacaEval 2.0
+    description: AlpacaEval 2.0 is an automatic evaluation benchmark for language models
+      that assesses instruction-following and generation quality through length-controlled
+      comparison-based evaluation with length-controlled win-rates.
+    url: https://github.com/tatsu-lab/alpaca_eval
+    hasTasks:
+      - text-generation
+      - instruction-following
+      - evaluation
+  - id: ai_eval_ifeval
+    name: IFEval
+    description: Instruction Following Evaluation (IFEval) is a straightforward and
+      reproducible benchmark designed to evaluate how well language models follow explicit
+      instructions in prompts. It focuses on verifiable instructions and covers a wide
+      range of instruction types.
+    url: https://huggingface.co/datasets/google/IFEval
+    hasDataset:
+      - google/IFEval
+    hasTasks:
+      - instruction-following
+      - text-generation
+      - question-answering
+  - id: ai_eval_arenahard
+    name: ArenaHard
+    description: Arena-Hard is a benchmark pipeline from LMSYS containing challenging
+      questions sourced from the Chatbot Arena to evaluate the reasoning and problem-solving
+      capabilities of language models. It includes diverse queries that are difficult
+      for existing models to handle well.
+    url: https://huggingface.co/datasets/lmarena-ai/arena-hard-auto
+    hasDataset:
+      - lmarena-ai/arena-hard-auto
+    hasTasks:
+      - question-answering
+      - reasoning
+      - dialogue
+      - text-generation
+  - id: ai_eval_mtbench
+    name: MTBench
+    description:
+      MT-Bench is a multi-turn benchmark from LMSYS consisting of 80 high-quality
+      questions covering diverse categories including writing, roleplay, extraction,
+      reasoning, math, coding, and knowledge. It evaluates language models on their
+      ability to handle multi-turn conversations and maintain context across multiple
+      exchanges.
+    url: https://huggingface.co/datasets/lmsys/mt_bench_human_judgments
+    hasDataset:
+      - lmsys/mt_bench_human_judgments
+    hasTasks:
+      - conversation
+      - multi-turn-dialogue
+      - writing
+      - reasoning
+      - coding
+  - id: ai_eval_gsm_symbolic
+    name: GSM Symbolic
+    description:
+      GSM-Symbolic is a benchmark that extends GSM8K to understand the limitations
+      of mathematical reasoning in language models. It evaluates mathematical reasoning
+      with symbolic and abstract representations alongside numerical problems, consisting
+      of 50 datasets with 100 samples each.
+    url: https://arxiv.org/abs/2410.05229
+    hasTasks:
+      - mathematical-reasoning
+      - symbolic-reasoning
+      - problem-solving
+  - id: ai_eval_deepmind_math
+    name: DeepMind Math
+    description: DeepMind Mathematics Dataset is a dataset that generates mathematical
+      question and answer pairs from a range of question types at roughly school-level
+      difficulty. It is used as a benchmark for evaluating mathematical problem-solving
+      capabilities in language models.
+    url: https://github.com/google-deepmind/mathematics_dataset
+    hasTasks:
+      - mathematical-reasoning
+      - question-answering
+      - arithmetic
+  - id: ai_eval_cruxeval_o
+    name: CRUXEval-O
+    description: CRUXEval (Code Reasoning, Understanding, and eXecution Evaluation)
+      is a benchmark consisting of 800 Python functions (3-13 lines of code). CRUXEval-O
+      specifically evaluates language models on their ability to predict code output
+      and understand code semantics.
+    url: https://huggingface.co/datasets/cruxeval-org/cruxeval
+    hasDataset:
+      - cruxeval-org/cruxeval
+    hasTasks:
+      - code-generation
+      - code-understanding
+      - code-execution
+  - id: ai_eval_bigcodebench
+    name: BigCodeBench
+    description:
+      BigCodeBench is a comprehensive benchmark for evaluating code generation
+      towards AGI, specifically designed to benchmark code generation with diverse function
+      calls and complex instructions. It consists of 1,140 questions covering various
+      programming tasks.
+    url: https://huggingface.co/datasets/bigcode/bigcodebench
+    hasDataset:
+      - bigcode/bigcodebench
+    hasTasks:
+      - code-generation
+      - program-synthesis
+      - function-calling
+  - id: ai_eval_multiple
+    name: MULTIPLE
+    description: MULTIPLE is a multi-programming language benchmark designed to evaluate
+      code generation capabilities of language models across multiple programming languages
+      and diverse programming tasks.
+    url: https://github.com/nuprl/MultiPL-E
+    hasTasks:
+      - code-generation
+      - program-synthesis
+      - multi-language
+  - id: ai_eval_bfcl_v3
+    name: BFCL v3
+    description: Berkeley Function Calling Leaderboard (BFCL) V3 evaluates language
+      models on their ability to understand and call functions across diverse scenarios
+      including missing parameters and multi-turn function calling. It is a key benchmark
+      for tool use and agent capabilities.
+    url: https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard
+    hasDataset:
+      - gorilla-llm/Berkeley-Function-Calling-Leaderboard
+    hasTasks:
+      - function-calling
+      - multi-turn
+  - id: ai_eval_salad_bench
+    name: SALAD-Bench
+    description: SALAD-Bench is a challenging safety benchmark specifically designed
+      for evaluating LLMs, attack, and defense methods. It features a hierarchical taxonomy
+      with three levels and includes questions in standard format as well as with attack
+      and defense modifications.
+    url: https://github.com/OpenSafetyLab/SALAD-BENCH
+    hasTasks:
+      - safety-evaluation
+      - toxicity-detection
+      - adversarial-robustness
+  - id: ai_eval_attaq
+    name: AttaQ
+    description: "AttaQ (AttaQ red teaming dataset) consists of 1,402 carefully crafted
+      adversarial questions designed to assess the tendency of Large Language Models
+      to generate harmful or undesirable responses. It is categorized into seven distinct
+      classes: deception, discrimination, harmful information, substance abuse, sexual
+      content, personally identifiable information (PII), and violence."
+    url: https://huggingface.co/datasets/ibm-research/AttaQ
+    hasTasks:
+      - safety-evaluation
+      - adversarial-robustness
+      - red-teaming
+  - id: ai_eval_tulu3_safety
+    name: Tulu3 Safety Eval
+    description: Tulu3 Safety Evaluation is a comprehensive benchmark for assessing
+      the safety and alignment of language models. It evaluates models on their robustness
+      and appropriate handling of diverse safety-related prompts and scenarios.
+    url: https://github.com/allenai/tulu
+    hasTasks:
+      - safety-evaluation
+      - alignment
+      - instruction-following
 aievalresults:
   - id: truthfulqa-granite-3-2b-instruct
     name: TruthfulQA result for Granite-3.0-2B-Instruct
@@ -29118,6 +30650,972 @@ aievalresults:
       https://github.com/ibm-granite/granite-3.0-language-models/blob/main/paper.pdf
       Table 10
     isResultOf: cards.value_alignment.hallucinations.truthfulqa
+  - id: mmlu-5shot-granite-4.1-3b-base
+    name: MMLU 5-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "66.47"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_mmlu
+  - id: mmlu-pro-5shot-cot-granite-4.1-3b-base
+    name: MMLU Pro 5 Shot, CoT
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "37.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_mmlu_pro
+  - id: bbh-3shot-cot-granite-4.1-3b-base
+    name: BBH 3-shot, CoT
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "63.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_bbh
+  - id: agi-eval-3shot-granite-4.1-3b-base
+    name: AGI EVAL 3-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "54.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_agi
+  - id: drop-5shot-granite-4.1-3b-base
+    name: DROP 5-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "66.04"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_drop
+  - id: simpleqa-granite-4.1-3b-base
+    name: SimpleQA
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "6.85"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_simple_qa
+  - id: gsm8k-8shot-granite-4.1-3b-base
+    name: GSM8K 8-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "72.93"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_gsm8k
+  - id: minerva-math-granite-4.1-3b-base
+    name: Minerva Math 4-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "38.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_minerva_math
+  - id: humaneval-pass-1-starcoder-prompt-granite-4.1-3b-base
+    name: HumanEval pass@1 [StarCoder Prompt]
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "76.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-pass-1-granite-4.1-3b-base
+    name: HumanEval pass@1
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "59.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-plus-pass-1-granite-4.1-3b-base
+    name: HumanEval+ pass@1
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "54.27"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_mbpp
+  - id: mbpp-pass-1-granite-4.1-3b-base
+    name: MBPP pass@1
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "81.48"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_mbpp
+  - id: mbpp-plus-pass-1-granite-4.1-3b-base
+    name: MBPP+ pass@1
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "68.25"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_mbpp+
+  - id: eval-plus-avg-granite-4.1-3b-base
+    name: Eval+ Avg
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "65.94"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_eval+
+  - id: mmmlu-5shot-granite-4.1-3b-base
+    name: MMMLU 5-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "56.59"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_mmmlu
+  - id: include-5shot--granite-4.1-3b-base
+    name: INCLUDE 5-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "51.77"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_include
+  - id: mgsm-8shot-granite-4.1-3b-base
+    name: MGSM 8-shot
+    dateCreated: 2026-04-29
+    dateModified: 2026-04-29
+    value: "58.48"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    isResultOf: ai_eval_mgsm
+  - id: mmlu-5shot-granite-4.1-3b
+    name: MMLU result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "67.02"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_mmlu
+  - id: mmlu-pro-5shot-cot-granite-4.1-3b
+    name: MMLU-Pro result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "49.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_mmlu_pro
+  - id: bbh-3shot-cot-granite-4.1-3b
+    name: BBH result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "75.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_bbh
+  - id: agi-eval-3shot-granite-4.1-3b
+    name: AGI EVAL result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "65.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_agi
+  - id: gpqa-granite-4.1-3b
+    name: GPQA result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "31.70"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_gpqa
+  - id: simpleqa-granite-4.1-3b
+    name: SimpleQA result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "3.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_simple_qa
+  - id: alpacaeval-2-granite-4.1-3b
+    name: AlpacaEval 2.0 result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "38.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_alpaca_eval
+  - id: ifeval-avg-granite-4.1-3b
+    name: IFEval Avg result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "82.30"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_ifeval
+  - id: arenahard-granite-4.1-3b
+    name: ArenaHard result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "37.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_arenahard
+  - id: mtbench-avg-granite-4.1-3b
+    name: MTBench Avg result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "7.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_mtbench
+  - id: gsm8k-8shot-granite-4.1-3b
+    name: GSM8K result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "86.88"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_gsm8k
+  - id: gsm-symbolic-granite-4.1-3b
+    name: GSM Symbolic result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "81.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_gsm_symbolic
+  - id: minerva-math-granite-4.1-3b
+    name: Minerva Math result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "67.94"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_minerva_math
+  - id: deepmind-math-granite-4.1-3b
+    name: DeepMind Math result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "64.64"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_deepmind_math
+  - id: humaneval-pass-1-granite-4.1-3b
+    name: HumanEval result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "81.71"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-plus-pass-1-granite-4.1-3b
+    name: HumanEval+ result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "76.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_humaneval
+  - id: mbpp-pass-1-granite-4.1-3b
+    name: MBPP result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "71.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_mbpp
+  - id: mbpp-plus-pass-1-granite-4.1-3b
+    name: MBPP+ result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "62.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_mbpp+
+  - id: cruxeval-o-pass-1-granite-4.1-3b
+    name: CRUXEval-O result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "40.75"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_cruxeval_o
+  - id: bigcodebench-pass-1-granite-4.1-3b
+    name: BigCodeBench result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "32.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_bigcodebench
+  - id: multiple-pass-1-granite-4.1-3b
+    name: MULTIPLE result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "52.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_multiple
+  - id: eval-plus-avg-granite-4.1-3b
+    name: Eval+ Avg result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "67.05"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_eval+
+  - id: bfcl-v3-granite-4.1-3b
+    name: BFCL v3 result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "60.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_bfcl_v3
+  - id: mmmlu-5shot-granite-4.1-3b
+    name: MMMLU result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "57.61"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_mmmlu
+  - id: include-5shot-granite-4.1-3b
+    name: INCLUDE result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "52.05"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_include
+  - id: mgsm-8shot-granite-4.1-3b
+    name: MGSM result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "70.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_mgsm
+  - id: salad-bench-granite-4.1-3b
+    name: SALAD-Bench result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "93.95"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_SALAD_Bench
+  - id: attaq-granite-4.1-3b
+    name: AttaQ result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "81.88"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_AttaQ
+  - id: tulu3-safety-avg-granite-4.1-3b
+    name: Tulu3 Safety Eval Avg result for Granite-4.1-3B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "66.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-3b
+    isResultOf: ai_eval_tulu3_safety
+  - id: mmlu-5shot-granite-4.1-8b-base
+    name: MMLU 5-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_mmlu
+  - id: mmlu-pro-5shot-cot-granite-4.1-8b-base
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "44.58"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_mmlu_pro
+  - id: bbh-3shot-cot-granite-4.1-8b-base
+    name: BBH 3-shot, CoT result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.83"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_bbh
+  - id: agi-eval-3shot-granite-4.1-8b-base
+    name: AGI EVAL 3-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "61.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_agi
+  - id: drop-5shot-granite-4.1-8b-base
+    name: DROP 5-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "72.36"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_drop
+  - id: simpleqa-granite-4.1-8b-base
+    name: SimpleQA result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "7.92"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_simple_qa
+  - id: gsm8k-8shot-granite-4.1-8b-base
+    name: GSM8K 8-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_gsm8k
+  - id: minerva-math-granite-4.1-8b-base
+    name: Minerva Math 4-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "43.42"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_minerva_math
+  - id: humaneval-pass-1-starcoder-prompt-granite-4.1-8b-base
+    name: HumanEval pass@1 [StarCoder Prompt] result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "79.24"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-pass-1-granite-4.1-8b-base
+    name: HumanEval pass@1 result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "68.29"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-plus-pass-1-granite-4.1-8b-base
+    name: HumanEval+ pass@1 result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "62.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_humaneval
+  - id: mbpp-pass-1-granite-4.1-8b-base
+    name: MBPP pass@1 result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "63.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_mbpp
+  - id: mbpp-plus-pass-1-granite-4.1-8b-base
+    name: MBPP+ pass@1 result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "53.97"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_mbpp+
+  - id: eval-plus-avg-granite-4.1-8b-base
+    name: Eval+ Avg result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "62.21"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_eval+
+  - id: mmmlu-5shot-granite-4.1-8b-base
+    name: MMMLU 5-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "64.73"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_mmmlu
+  - id: include-5shot-granite-4.1-8b-base
+    name: INCLUDE 5-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "57.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_include
+  - id: mgsm-8shot-granite-4.1-8b-base
+    name: MGSM 8-shot result for Granite-4.1-8B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "63.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    isResultOf: ai_eval_mgsm
+  - id: mmlu-5shot-granite-4.1-8b
+    name: MMLU 5-shot result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_mmlu
+  - id: mmlu-pro-5shot-cot-granite-4.1-8b
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "55.99"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_mmlu_pro
+  - id: bbh-3shot-cot-granite-4.1-8b
+    name: BBH 3-shot, CoT result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "80.51"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_bbh
+  - id: agi-eval-3shot-granite-4.1-8b
+    name: AGI EVAL 3-shot result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "72.43"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_agi
+  - id: gpqa-granite-4.1-8b
+    name: GPQA result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "41.96"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_gpqa
+  - id: simpleqa-granite-4.1-8b
+    name: SimpleQA result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "4.82"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_simple_qa
+  - id: alpacaeval-2-granite-4.1-8b
+    name: AlpacaEval 2.0 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "50.08"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_alpaca_eval
+  - id: ifeval-avg-granite-4.1-8b
+    name: IFEval Avg result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "87.06"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_ifeval
+  - id: arenahard-granite-4.1-8b
+    name: ArenaHard result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "68.98"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_arenahard
+  - id: mtbench-avg-granite-4.1-8b
+    name: MTBench Avg result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "8.61"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_mtbench
+  - id: gsm8k-8shot-granite-4.1-8b
+    name: GSM8K 8-shot result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "92.49"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_gsm8k
+  - id: gsm-symbolic-granite-4.1-8b
+    name: GSM Symbolic result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "83.70"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_gsm_symbolic
+  - id: minerva-math-granite-4.1-8b
+    name: Minerva Math result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "80.10"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_minerva_math
+  - id: deepmind-math-granite-4.1-8b
+    name: DeepMind Math result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "80.07"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_deepmind_math
+  - id: humaneval-pass-1-granite-4.1-8b
+    name: HumanEval pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "85.37"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-plus-pass-1-granite-4.1-8b
+    name: HumanEval+ pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "79.88"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_humaneval
+  - id: mbpp-pass-1-granite-4.1-8b
+    name: MBPP pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "87.30"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_mbpp
+  - id: mbpp-plus-pass-1-granite-4.1-8b
+    name: MBPP+ pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.81"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_mbpp+
+  - id: cruxeval-o-pass-1-granite-4.1-8b
+    name: CRUXEval-O pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "47.63"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_cruxeval_o
+  - id: bigcodebench-pass-1-granite-4.1-8b
+    name: BigCodeBench pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "35.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_bigcodebench
+  - id: multiple-pass-1-granite-4.1-8b
+    name: MULTIPLE pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "60.26"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_multiple
+  - id: eval-plus-avg-granite-4.1-8b
+    name: Eval+ Avg pass@1 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "80.21"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_eval+
+  - id: bfcl-v3-granite-4.1-8b
+    name: BFCL v3 result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "68.27"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_bfcl_v3
+  - id: mmmlu-5shot-granite-4.1-8b
+    name: MMMLU 5-shot result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "64.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_mmmlu
+  - id: include-5shot-granite-4.1-8b
+    name: INCLUDE 5-shot result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "58.89"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_include
+  - id: mgsm-8shot-granite-4.1-8b
+    name: MGSM 8-shot result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "82.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_mgsm
+  - id: salad-bench-granite-4.1-8b
+    name: SALAD-Bench result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "95.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_SALAD_Bench
+  - id: attaq-granite-4.1-8b
+    name: AttaQ result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "81.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_AttaQ
+  - id: tulu3-safety-avg-granite-4.1-8b
+    name: Tulu3 Safety Eval Avg result for Granite-4.1-8B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "75.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-8b
+    isResultOf: ai_eval_tulu3_safety
+  - id: mmlu-5shot-granite-4.1-30b-base
+    name: MMLU 5-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "78.44"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_mmlu
+  - id: mmlu-pro-5shot-cot-granite-4.1-30b-base
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "49.51"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_mmlu_pro
+  - id: bbh-3shot-cot-granite-4.1-30b-base
+    name: BBH 3-shot, CoT result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "80.66"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_bbh
+  - id: agi-eval-3shot-granite-4.1-30b-base
+    name: AGI EVAL 3-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "69.20"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_agi
+  - id: drop-5shot-granite-4.1-30b-base
+    name: DROP 5-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "78.57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_drop
+  - id: simpleqa-granite-4.1-30b-base
+    name: SimpleQA result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "10.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_simple_qa
+  - id: gsm8k-8shot-granite-4.1-30b-base
+    name: GSM8K 8-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "83.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_gsm8k
+  - id: minerva-math-granite-4.1-30b-base
+    name: Minerva Math 4-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "45.66"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_minerva_math
+  - id: humaneval-pass-1-starcoder-prompt-granite-4.1-30b-base
+    name: HumanEval pass@1 [StarCoder Prompt] result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "81.52"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-pass-1-granite-4.1-30b-base
+    name: HumanEval pass@1 result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "67.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-plus-pass-1-granite-4.1-30b-base
+    name: HumanEval+ pass@1 result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "62.20"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_humaneval
+  - id: mbpp-pass-1-granite-4.1-30b-base
+    name: MBPP pass@1 result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "83.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_mbpp
+  - id: mbpp-plus-pass-1-granite-4.1-30b-base
+    name: MBPP+ pass@1 result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "69.58"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_mbpp+
+  - id: eval-plus-avg-granite-4.1-30b-base
+    name: Eval+ Avg result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "70.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_eval+
+  - id: mmmlu-5shot-granite-4.1-30b-base
+    name: MMMLU 5-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.36"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_mmmlu
+  - id: include-5shot-granite-4.1-30b-base
+    name: INCLUDE 5-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "67.07"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_include
+  - id: mgsm-8shot-granite-4.1-30b-base
+    name: MGSM 8-shot result for Granite-4.1-30B-Base
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "74.40"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    isResultOf: ai_eval_mgsm
+  - id: mmlu-5shot-granite-4.1-30b
+    name: MMLU 5-shot result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "80.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_mmlu
+  - id: mmlu-pro-5shot-cot-granite-4.1-30b
+    name: MMLU-Pro 5-shot, CoT result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "64.09"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_mmlu_pro
+  - id: bbh-3shot-cot-granite-4.1-30b
+    name: BBH 3-shot, CoT result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "83.74"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_bbh
+  - id: agi-eval-3shot-granite-4.1-30b
+    name: AGI EVAL 3-shot result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "77.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_agi
+  - id: gpqa-granite-4.1-30b
+    name: GPQA result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "45.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_gpqa
+  - id: simpleqa-granite-4.1-30b
+    name: SimpleQA result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "6.81"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_simple_qa
+  - id: alpacaeval-2-granite-4.1-30b
+    name: AlpacaEval 2.0 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "56.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_alpaca_eval
+  - id: ifeval-avg-granite-4.1-30b
+    name: IFEval Avg result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "89.65"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_ifeval
+  - id: arenahard-granite-4.1-30b
+    name: ArenaHard result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "71.02"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_arenahard
+  - id: mtbench-avg-granite-4.1-30b
+    name: MTBench Avg result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "8.61"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_mtbench
+  - id: gsm8k-8shot-granite-4.1-30b
+    name: GSM8K 8-shot result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "94.16"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_gsm8k
+  - id: gsm-symbolic-granite-4.1-30b
+    name: GSM Symbolic result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "75.70"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_gsm_symbolic
+  - id: minerva-math-granite-4.1-30b
+    name: Minerva Math result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "81.32"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_minerva_math
+  - id: deepmind-math-granite-4.1-30b
+    name: DeepMind Math result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "81.93"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_deepmind_math
+  - id: humaneval-pass-1-granite-4.1-30b
+    name: HumanEval pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "88.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_humaneval
+  - id: humaneval-plus-pass-1-granite-4.1-30b
+    name: HumanEval+ pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "85.37"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_humaneval
+  - id: mbpp-pass-1-granite-4.1-30b
+    name: MBPP pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "85.45"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_mbpp
+  - id: mbpp-plus-pass-1-granite-4.1-30b
+    name: MBPP+ pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.54"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_mbpp+
+  - id: cruxeval-o-pass-1-granite-4.1-30b
+    name: CRUXEval-O pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "55.75"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_cruxeval_o
+  - id: bigcodebench-pass-1-granite-4.1-30b
+    name: BigCodeBench pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "38.77"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_bigcodebench
+  - id: multiple-pass-1-granite-4.1-30b
+    name: MULTIPLE pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "62.31"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_multiple
+  - id: eval-plus-avg-granite-4.1-30b
+    name: Eval+ Avg pass@1 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "82.66"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_eval+
+  - id: bfcl-v3-granite-4.1-30b
+    name: BFCL v3 result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.68"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_bfcl_v3
+  - id: mmmlu-5shot-granite-4.1-30b
+    name: MMMLU 5-shot result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "73.71"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_mmmlu
+  - id: include-5shot-granite-4.1-30b
+    name: INCLUDE 5-shot result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "67.26"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_include
+  - id: mgsm-8shot-granite-4.1-30b
+    name: MGSM 8-shot result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "71.12"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_mgsm
+  - id: salad-bench-granite-4.1-30b
+    name: SALAD-Bench result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "96.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_SALAD_Bench
+  - id: attaq-granite-4.1-30b
+    name: AttaQ result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "85.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_AttaQ
+  - id: tulu3-safety-avg-granite-4.1-30b
+    name: Tulu3 Safety Eval Avg result for Granite-4.1-30B
+    dateCreated: 2026-05-15
+    dateModified: 2026-05-15
+    value: "78.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
+    isResultOf: ai_eval_tulu3_safety
 aimodelfamilies:
   - id: ibm-granite
     name: IBM Granite
@@ -29128,6 +31626,7 @@ aimodelfamilies:
     url: https://huggingface.co/ibm-granite
     hasDocumentation:
       - granite-3.0-paper
+      - granite-4.1-blog
 aimodels:
   - id: granite-guardian-3.2-3b-a800m
     name: Granite Guardian 3.2 3B-A800M
@@ -29531,6 +32030,328 @@ aimodels:
     hasOutputModality:
       - modality-text
     isPartOf: ibm-granite
+  - id: granite-4.1-3b-base
+    name: Granite-4.1-3B-Base
+    description: Granite‑4.1‑3B‑Base is a decoder‑only language model with long‑context
+      capabilities, designed to support a broad range of general text‑to‑text generation
+      tasks, as well as fill‑in‑the‑Middle (FIM) code completion.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    dateCreated: 2026-04-29
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.1-3b-base
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-3b-base
+      - mmlu-pro-5shot-cot-granite-4.1-3b-base
+      - bbh-3shot-cot-granite-4.1-3b-base
+      - agi-eval-3shot-granite-4.1-3b-base
+      - drop-5shot-granite-4.1-3b-base
+      - simpleqa-granite-4.1-3b-base
+      - gsm8k-8shot-granite-4.1-3b-base
+      - minerva-math-granite-4.1-3b-base
+      - humaneval-pass-1-starcoder-prompt-granite-4.1-3b-base
+      - humaneval-pass-1-granite-4.1-3b-base
+      - humaneval-plus-pass-1-granite-4.1-3b-base
+      - mbpp-pass-1-granite-4.1-3b-base
+      - mbpp-plus-pass-1-granite-4.1-3b-base
+      - eval-plus-avg-granite-4.1-3b-base
+      - mmmlu-5shot-granite-4.1-3b-base
+      - include-5shot--granite-4.1-3b-base
+      - mgsm-8shot-granite-4.1-3b-base
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 3000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    isPartOf: ibm-granite
+  - id: granite-4.1-3b
+    name: Granite-4.1-3B
+    description: Granite-4.1-3B is a 3B parameter long-context instruct model finetuned
+      from Granite-4.1-3B-Base.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    dateCreated: 2026-04-29
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.1-3b
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-3b
+      - mmlu-pro-5shot-cot-granite-4.1-3b
+      - bbh-3shot-cot-granite-4.1-3b
+      - agi-eval-3shot-granite-4.1-3b
+      - gpqa-granite-4.1-3b
+      - simpleqa-granite-4.1-3b
+      - alpacaeval-2-granite-4.1-3b
+      - ifeval-avg-granite-4.1-3b
+      - arenahard-granite-4.1-3b
+      - mtbench-avg-granite-4.1-3b
+      - gsm8k-8shot-granite-4.1-3b
+      - gsm-symbolic-granite-4.1-3b
+      - minerva-math-granite-4.1-3b
+      - deepmind-math-granite-4.1-3b
+      - humaneval-pass-1-granite-4.1-3b
+      - humaneval-plus-pass-1-granite-4.1-3b
+      - mbpp-pass-1-granite-4.1-3b
+      - mbpp-plus-pass-1-granite-4.1-3b
+      - cruxeval-o-pass-1-granite-4.1-3b
+      - bigcodebench-pass-1-granite-4.1-3b
+      - multiple-pass-1-granite-4.1-3b
+      - eval-plus-avg-granite-4.1-3b
+      - bfcl-v3-granite-4.1-3b
+      - mmmlu-5shot-granite-4.1-3b
+      - include-5shot-granite-4.1-3b
+      - mgsm-8shot-granite-4.1-3b
+      - salad-bench-granite-4.1-3b
+      - attaq-granite-4.1-3b
+      - tulu3-safety-avg-granite-4.1-3b
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 3000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    isPartOf: ibm-granite
+  - id: granite-4.1-8b-base
+    name: Granite-4.1-8B-Base
+    description: Granite-4.1-8B-Base is a decoder-only language model with long-context
+      capabilities, designed to support a broad range of general text-to-text generation
+      tasks, as well as fill-in-the-Middle (FIM) code completion.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    dateCreated: 2026-04-29
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.1-8b-base
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-8b-base
+      - mmlu-pro-5shot-cot-granite-4.1-8b-base
+      - bbh-3shot-cot-granite-4.1-8b-base
+      - agi-eval-3shot-granite-4.1-8b-base
+      - drop-5shot-granite-4.1-8b-base
+      - simpleqa-granite-4.1-8b-base
+      - gsm8k-8shot-granite-4.1-8b-base
+      - minerva-math-granite-4.1-8b-base
+      - humaneval-pass-1-starcoder-prompt-granite-4.1-8b-base
+      - humaneval-pass-1-granite-4.1-8b-base
+      - humaneval-plus-pass-1-granite-4.1-8b-base
+      - mbpp-pass-1-granite-4.1-8b-base
+      - mbpp-plus-pass-1-granite-4.1-8b-base
+      - eval-plus-avg-granite-4.1-8b-base
+      - mmmlu-5shot-granite-4.1-8b-base
+      - include-5shot-granite-4.1-8b-base
+      - mgsm-8shot-granite-4.1-8b-base
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 8000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    isPartOf: ibm-granite
+  - id: granite-4.1-8b
+    name: Granite-4.1-8B
+    description: Granite-4.1-8B is an 8B parameter long-context instruct model finetuned
+      from Granite-4.1-8B-Base.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    dateCreated: 2026-04-29
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.1-8b
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-8b
+      - mmlu-pro-5shot-cot-granite-4.1-8b
+      - bbh-3shot-cot-granite-4.1-8b
+      - agi-eval-3shot-granite-4.1-8b
+      - gpqa-granite-4.1-8b
+      - simpleqa-granite-4.1-8b
+      - alpacaeval-2-granite-4.1-8b
+      - ifeval-avg-granite-4.1-8b
+      - arenahard-granite-4.1-8b
+      - mtbench-avg-granite-4.1-8b
+      - gsm8k-8shot-granite-4.1-8b
+      - gsm-symbolic-granite-4.1-8b
+      - minerva-math-granite-4.1-8b
+      - deepmind-math-granite-4.1-8b
+      - humaneval-pass-1-granite-4.1-8b
+      - humaneval-plus-pass-1-granite-4.1-8b
+      - mbpp-pass-1-granite-4.1-8b
+      - mbpp-plus-pass-1-granite-4.1-8b
+      - cruxeval-o-pass-1-granite-4.1-8b
+      - bigcodebench-pass-1-granite-4.1-8b
+      - multiple-pass-1-granite-4.1-8b
+      - eval-plus-avg-granite-4.1-8b
+      - bfcl-v3-granite-4.1-8b
+      - mmmlu-5shot-granite-4.1-8b
+      - include-5shot-granite-4.1-8b
+      - mgsm-8shot-granite-4.1-8b
+      - salad-bench-granite-4.1-8b
+      - attaq-granite-4.1-8b
+      - tulu3-safety-avg-granite-4.1-8b
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 8000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    isPartOf: ibm-granite
+  - id: granite-4.1-30b-base
+    name: Granite-4.1-30B-Base
+    description: Granite-4.1-30B-Base is a decoder-only language model with long-context
+      capabilities, designed to support a broad range of general text-to-text generation
+      tasks, as well as fill-in-the-Middle (FIM) code completion.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    dateCreated: 2026-04-29
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.1-30b-base
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-30b-base
+      - mmlu-pro-5shot-cot-granite-4.1-30b-base
+      - bbh-3shot-cot-granite-4.1-30b-base
+      - agi-eval-3shot-granite-4.1-30b-base
+      - drop-5shot-granite-4.1-30b-base
+      - simpleqa-granite-4.1-30b-base
+      - gsm8k-8shot-granite-4.1-30b-base
+      - minerva-math-granite-4.1-30b-base
+      - humaneval-pass-1-starcoder-prompt-granite-4.1-30b-base
+      - humaneval-pass-1-granite-4.1-30b-base
+      - humaneval-plus-pass-1-granite-4.1-30b-base
+      - mbpp-pass-1-granite-4.1-30b-base
+      - mbpp-plus-pass-1-granite-4.1-30b-base
+      - eval-plus-avg-granite-4.1-30b-base
+      - mmmlu-5shot-granite-4.1-30b-base
+      - include-5shot-granite-4.1-30b-base
+      - mgsm-8shot-granite-4.1-30b-base
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 30000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    isPartOf: ibm-granite
+  - id: granite-4.1-30b
+    name: Granite-4.1-30B
+    description:
+      Granite-4.1-30B is a 30B parameter long-context instruct model finetuned
+      from Granite-4.1-30B-Base.
+    url: https://github.com/ibm-granite/granite-4.1-language-models
+    dateCreated: 2026-04-29
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.1-30b
+    hasDocumentation:
+      - granite-4.1-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - mmlu-5shot-granite-4.1-30b
+      - mmlu-pro-5shot-cot-granite-4.1-30b
+      - bbh-3shot-cot-granite-4.1-30b
+      - agi-eval-3shot-granite-4.1-30b
+      - gpqa-granite-4.1-30b
+      - simpleqa-granite-4.1-30b
+      - alpacaeval-2-granite-4.1-30b
+      - ifeval-avg-granite-4.1-30b
+      - arenahard-granite-4.1-30b
+      - mtbench-avg-granite-4.1-30b
+      - gsm8k-8shot-granite-4.1-30b
+      - gsm-symbolic-granite-4.1-30b
+      - minerva-math-granite-4.1-30b
+      - deepmind-math-granite-4.1-30b
+      - humaneval-pass-1-granite-4.1-30b
+      - humaneval-plus-pass-1-granite-4.1-30b
+      - mbpp-pass-1-granite-4.1-30b
+      - mbpp-plus-pass-1-granite-4.1-30b
+      - cruxeval-o-pass-1-granite-4.1-30b
+      - bigcodebench-pass-1-granite-4.1-30b
+      - multiple-pass-1-granite-4.1-30b
+      - eval-plus-avg-granite-4.1-30b
+      - bfcl-v3-granite-4.1-30b
+      - mmmlu-5shot-granite-4.1-30b
+      - include-5shot-granite-4.1-30b
+      - mgsm-8shot-granite-4.1-30b
+      - salad-bench-granite-4.1-30b
+      - attaq-granite-4.1-30b
+      - tulu3-safety-avg-granite-4.1-30b
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm)
+    numParameters: 30000000000
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    isPartOf: ibm-granite
 rules:
   - id: aiuc1-req-a001
     name: Establish input data policy
@@ -29538,6 +32359,8 @@ rules:
       data is used for model training, inference processing, data retention periods,
       and customer data rights
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi06-memory-and-context-poisoning
       - atlas-data-acquisition
       - atlas-data-privacy-rights
       - atlas-data-usage
@@ -29589,6 +32412,7 @@ rules:
     description: Implement safeguards to limit AI agent data access to task-relevant
       information based on user roles and context
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
       - llm062025-excessive-agency
       - llm082025-vector-and-embedding-weaknesses
       - llm102025-unbounded-consumption
@@ -29674,6 +32498,7 @@ rules:
       - atlas-personal-information-in-data
       - atlas-personal-information-in-prompt
     related_mappings:
+      - asi06-memory-and-context-poisoning
       - llm022025-sensitive-information-disclosure
       - llm082025-vector-and-embedding-weaknesses
       - atlas-confidential-data-in-prompt
@@ -29731,6 +32556,8 @@ rules:
       - atlas-prompt-injection
       - atlas-specialized-tokens-attack
     related_mappings:
+      - asi03-identity-and-privilege-abuse
+      - asi07-insecure-inter-agent-communication
       - llm01-prompt-injection
       - llm042025-data-and-model-poisoning
       - llm052025-improper-output-handling
@@ -29789,6 +32616,8 @@ rules:
     description: Implement controls to prevent over-disclosure of technical information
       about AI systems and organizational details that could enable adversarial targeting
     related_mappings:
+      - asi01-agent-goal-hijack
+      - asi05-unexpected-code-execution
       - llm022025-sensitive-information-disclosure
       - llm052025-improper-output-handling
       - llm072025-system-prompt-leakage
@@ -29861,6 +32690,8 @@ rules:
       - atlas-misaligned-actions-agentic
       - atlas-unauthorized-use-agentic
     related_mappings:
+      - asi01-agent-goal-hijack
+      - asi10-rogue-agents
       - llm052025-improper-output-handling
       - llm062025-excessive-agency
       - llm082025-vector-and-embedding-weaknesses
@@ -29926,6 +32757,7 @@ rules:
     description: Implement output limitations and obfuscation techniques to safeguard
       against information leakage
     related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
       - llm022025-sensitive-information-disclosure
       - llm052025-improper-output-handling
       - llm082025-vector-and-embedding-weaknesses
@@ -30090,6 +32922,8 @@ rules:
     name: Monitor AI risk categories
     description: Implement monitoring of AI systems across risk categories
     related_mappings:
+      - asi08-cascading-failures
+      - asi10-rogue-agents
       - atlas-incorrect-risk-testing
     isDefinedByTaxonomy: aiuc1
     hasRule:
@@ -30130,6 +32964,7 @@ rules:
       - atlas-toxic-output
     related_mappings:
       - atlas-decision-bias
+      - atlas-discriminatory-actions-agentic
       - atlas-output-bias
       - atlas-unrepresentative-risk-testing
     isDefinedByTaxonomy: aiuc1
@@ -30183,6 +33018,7 @@ rules:
     close_mappings:
       - atlas-hallucination
     related_mappings:
+      - asi09-human-agent-trust-exploitation
       - llm052025-improper-output-handling
       - llm092025-misinformation
       - atlas-incomplete-advice
@@ -30207,6 +33043,7 @@ rules:
     close_mappings:
       - atlas-hallucination
     related_mappings:
+      - asi08-cascading-failures
       - llm092025-misinformation
       - atlas-poor-model-accuracy
     isDefinedByTaxonomy: aiuc1
@@ -30227,6 +33064,8 @@ rules:
       - atlas-function-calling-hallucination-agentic
       - atlas-misaligned-actions-agentic
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
       - llm062025-excessive-agency
       - llm082025-vector-and-embedding-weaknesses
       - llm102025-unbounded-consumption
@@ -30255,6 +33094,8 @@ rules:
     close_mappings:
       - atlas-function-calling-hallucination-agentic
     related_mappings:
+      - asi02-tool-misuse-and-exploitation
+      - asi05-unexpected-code-execution
       - llm062025-excessive-agency
       - atlas-function-calling-hallucination-agentic
       - atlas-incomplete-ai-agent-evaluation-agentic
@@ -30274,6 +33115,9 @@ rules:
       accountable owners and establishing notification and remediation with third-party
       support as needed (e.g. legal, PR, insurers)
     related_mappings:
+      - asi03-identity-and-privilege-abuse
+      - asi07-insecure-inter-agent-communication
+      - asi09-human-agent-trust-exploitation
       - atlas-legal-accountability
       - atlas-mitigation-maintenance-agentic
     isDefinedByTaxonomy: aiuc1
@@ -30313,6 +33157,7 @@ rules:
     close_mappings:
       - atlas-hallucination
     related_mappings:
+      - asi09-human-agent-trust-exploitation
       - atlas-function-calling-hallucination-agentic
       - atlas-legal-accountability
     isDefinedByTaxonomy: aiuc1
@@ -30469,6 +33314,7 @@ rules:
     description: Document applicable AI laws and standards, required data protections,
       and strategies for compliance
     related_mappings:
+      - asi10-rogue-agents
       - atlas-ai-agent-compliance-agentic
       - atlas-data-privacy-rights
       - atlas-data-usage
@@ -30523,6 +33369,11 @@ rules:
       - atlas-lack-of-ai-agent-transparency-agentic
       - atlas-unexplainable-untraceable-actions-agentic
     related_mappings:
+      - asi03-identity-and-privilege-abuse
+      - asi06-memory-and-context-poisoning
+      - asi07-insecure-inter-agent-communication
+      - asi08-cascading-failures
+      - asi10-rogue-agents
       - llm102025-unbounded-consumption
       - atlas-accountability-agentic
       - atlas-reproducibility-agentic

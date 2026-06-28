@@ -379,6 +379,10 @@ entries:
     related_mappings:
       - aiuc1-req-c010
     type: Risk
+  - id: atlas-discriminatory-actions-agentic
+    related_mappings:
+      - aiuc1-req-c010
+    type: Risk
   - id: atlas-output-bias
     related_mappings:
       - aiuc1-req-c010
@@ -838,6 +842,10 @@ entries:
   - id: atlas-direct-instructions-attack
     related_mappings:
       - aiuc1-req-b005
+    type: Risk
+  - id: atlas-discriminatory-actions-agentic
+    related_mappings:
+      - aiuc1-req-c010
     type: Risk
   - id: atlas-encoded-interactions-attack
     related_mappings:
@@ -1774,6 +1782,10 @@ rules:
     type: Requirement
   - id: aiuc1-req-c010
     related_mappings:
+      - atlas-discriminatory-actions-agentic
+    type: Requirement
+  - id: aiuc1-req-c010
+    related_mappings:
       - atlas-output-bias
     type: Requirement
   - id: aiuc1-req-c010
@@ -2231,6 +2243,10 @@ rules:
   - id: aiuc1-req-b005
     related_mappings:
       - atlas-direct-instructions-attack
+    type: Requirement
+  - id: aiuc1-req-c010
+    related_mappings:
+      - atlas-discriminatory-actions-agentic
     type: Requirement
   - id: aiuc1-req-b001
     related_mappings:

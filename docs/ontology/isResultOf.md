@@ -9,9 +9,10 @@ Alias: isResultOf
 
 ## Applicable Classes
 
-| Name                            | Description                                         | Modifies Slot |
-| ------------------------------- | --------------------------------------------------- | ------------- |
-| [AiEvalResult](AiEvalResult.md) | The result of an evaluation for a specific AI model | no            |
+| Name                                      | Description                                                                      | Modifies Slot |
+| ----------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [EveryEvalAIResult](EveryEvalAIResult.md) | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [AiEvalResult](AiEvalResult.md)           | The result of an evaluation for a specific AI model                              | no            |
 
 ## Properties
 

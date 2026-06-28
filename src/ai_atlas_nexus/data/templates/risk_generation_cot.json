@@ -50,5 +50,22 @@
                 "Function Calling Hallucination"
             ]
         }
+    ],
+    "owasp-asi": [
+        {
+            "Usecase": "An autonomous AI agent is deployed to manage a company's IT infrastructure. It can monitor systems, execute remediation scripts, escalate tickets to other agents or human operators, access credentials vaults, and make decisions about patching and resource allocation based on real-time telemetry. The agent operates with delegated authority and can invoke sub-agents for specialized tasks such as security scanning, log analysis, and compliance reporting.",
+            "Risks": [
+                "Agent Goal Hijack",
+                "Tool Misuse & Exploitation",
+                "Identity & Privilege Abuse",
+                "Agentic Supply Chain Vulnerabilities",
+                "Unexpected Code Execution (RCE)",
+                "Memory & Context Poisoning",
+                "Insecure Inter-Agent Communication",
+                "Cascading Failures",
+                "Human-Agent Trust Exploitation",
+                "Rogue Agents"
+            ]
+        }
     ]
 }

@@ -264,6 +264,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition
@@ -308,6 +309,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

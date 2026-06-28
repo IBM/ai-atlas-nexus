@@ -1,9 +1,9 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_capability
+id: https://w3id.org/ai-atlas-nexus/ai_capability
 name: ai_capability
 description: >-
   Vocabulary describing AI capabilities as used by IBM Risk Atlas. Aligned with the W3C Data Privacy Vocabulary (DPV)
-  Capability concept. Capabilities represent what AI technologies are capable of achieving or providing, distinct from
-  their intended purpose or actual
+  Capability concept. Capabilities represent what AI technologies are capable of achieving or providing, distinct from their
+  intended purpose or actual
 default_curi_maps:
   - semweb_context
 imports:
@@ -13,7 +13,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
   skos: http://www.w3.org/2004/02/skos/core#
   ai: https://w3id.org/dpv/ai#
@@ -72,14 +72,12 @@ classes:
     mixins:
       - CapabilityConcept
     description: >-
-      A specific AI capability or ability, such as reading comprehension, logical reasoning, or code generation.
-      Aligned with the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of
-      achieving or providing.
+      A specific AI capability or ability, such as reading comprehension, logical reasoning, or code generation. Aligned with
+      the W3C DPV AI extension dpv-ai:Capability, representing what an AI technology is capable of achieving or providing.
 
-      Capabilities are distinct from:
-      (1) the intended purpose for which the technology is designed,
-      (2) the actual tasks performed in a specific deployment context, and
-      (3) the technical implementation mechanisms (intrinsics, adapters) that enable the capability.
+      Capabilities are distinct from: (1) the intended purpose for which the technology is designed, (2) the actual tasks
+      performed in a specific deployment context, and (3) the technical implementation mechanisms (intrinsics, adapters) that
+      enable the capability.
     class_uri: ai:Capability
     broad_mappings:
       - tech:Capability
@@ -89,15 +87,15 @@ classes:
         range: CapabilityGroup
       requiredByTask:
         description: >-
-          Indicates that this capability is required to perform a specific AI task.
-          This links abstract capabilities (technical abilities) to concrete tasks (application-level operations).
-          An AI system with this capability can perform tasks that require it.
+          Indicates that this capability is required to perform a specific AI task. This links abstract capabilities
+          (technical abilities) to concrete tasks (application-level operations). An AI system with this capability can
+          perform tasks that require it.
+        domain: Capability
         range: AiTask
       implementedByAdapter:
         description: >-
-          Indicates that this capability is implemented by a specific adapter.
-          This relationship distinguishes the abstract capability (what can be done) from
-          the technical implementation mechanism (how it is added/extended via adapters).
+          Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
+          capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
         domain: Capability
         range: Adapter
     slots:
@@ -124,28 +122,19 @@ slots:
   # Intrinsic-capability relationships
   implementedByIntrinsic:
     description: >-
-      Indicates that this capability is implemented by a specific LLM intrinsic.
-      This relationship distinguishes the abstract capability (what can be done) from
-      the technical implementation mechanism (how it is done at the model component level).
+      Indicates that this capability is implemented by a specific LLM intrinsic. This relationship distinguishes the abstract
+      capability (what can be done) from the technical implementation mechanism (how it is done at the model component
+      level).
     range: LLMIntrinsic
     multivalued: true
     inlined: false
     inverse: implementsCapability
 
-  implementsCapability:
-    description: Indicates that this intrinsic implements a specific capability
-    domain: LLMIntrinsic
-    range: Capability
-    multivalued: true
-    inlined: false
-    inverse: implementedByIntrinsic
-
   # AI System-capability relationships
   possessedByAi:
     description: >-
-      Indicates that this capability is possessed by a specific AI system or component.
-      Inverse of hasCapability, allowing navigation from capabilities to AI systems.
-      This enables queries like "which AI systems have this capability?"
+      Indicates that this capability is possessed by a specific AI system or component. Inverse of hasCapability, allowing
+      navigation from capabilities to AI systems. This enables queries like "which AI systems have this capability?"
     domain: Capability
     range: BaseAi
     slot_uri: tech:hasCapability

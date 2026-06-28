@@ -648,6 +648,7 @@ attributes:
     - Action
     - AiSystem
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -703,6 +704,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -877,6 +879,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

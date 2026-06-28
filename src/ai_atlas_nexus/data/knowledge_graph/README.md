@@ -16,6 +16,7 @@ For more information about LinkML data instances see [the LinkML documentation](
 | `nist_ai_rmf_data.yaml`                     | RiskTaxonomy           | The NIST AI Risk Management Framework risk taxonomy                                                   |
 | `nist_ai_rmf_actions_data.yaml`             | Actions                | The NIST AI Risk Management Framework risk related actions                                            |
 | `owasp_llm_2.0_data.yaml`                   | RiskTaxonomy           | The OWASP Top 10 for Large Language Model Applications version 2 risk definitions.                    |
+| `owasp_asi_data.yaml`                       | RiskTaxonomy           | The OWASP Top 10 for Agentic Applications 2026 risk definitions                                       |
 | `mit_ai_risk_repository_data.yaml`          | RiskTaxonomy           | The MIT AI Risk Repository risk taxonomy                                                              |
 | `ailuminate.yaml`                           | RiskTaxonomy           | The AILuminate benchmark risk taxonomy                                                                |
 | `credo.yaml`                                | RiskTaxonomy           | the Unified Control Framework from Credo                                                              |

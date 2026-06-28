@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_intrinsic
+id: https://w3id.org/ai-atlas-nexus/ai_intrinsic
 name: ai_intrinsic
 description: An ontology describing AI Intrinsics and representing LoRA (Low-Rank Adaptation) adapters
 license: license-apache-2.0
@@ -13,7 +13,7 @@ imports:
 
 prefixes:
   linkml: https://w3id.org/linkml/
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
   ai: https://w3id.org/dpv/ai#
   airo: https://w3id.org/airo#
@@ -25,10 +25,21 @@ default_prefix: nexus
 # ----------------
 classes:
   Adapter:
-    description: Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
+    description: >-
+      Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen
+      pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate
+      comparable performance to a fully finetuned model and enable training larger models with fewer resources.
+      (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
     is_a: Entry
     mixins:
       - LargeLanguageModel
+    slot_usage:
+      implementsCapability:
+        description: >-
+          Indicates that this adapter implements a specific capability
+        domain: Adapter
+        range: Capability
+        inverse: implementedByAdapter
     slots:
       - hasAdapterType
       - isDefinedByVocabulary
@@ -42,9 +53,16 @@ classes:
       # Can it be used on any model?
 
   LLMIntrinsic:
-    description: A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM intrinsic itself is implemented.
+    description: >-
+      A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM
+      intrinsic itself is implemented.
     is_a: Entry
     class_uri: ai:Capability
+    slot_usage:
+      implementsCapability:
+        domain: LLMIntrinsic
+        range: Capability
+        inverse: implementedByIntrinsic
     slots:
       - hasRelatedRisk
       - hasRelatedTerm
@@ -52,16 +70,29 @@ classes:
       - isDefinedByVocabulary
       - hasAdapter
       - hasCapability
+      - implementsCapability
 
 enums:
   AdapterType:
     permissible_values:
       LORA:
-        description: Low-rank adapters, or LoRAs, are a fast way to give generalist large language models targeted knowledge and skills so they can do things like summarize IT manuals or rate the accuracy of their own answers. LoRA reduces the number of trainable parameters by learning pairs of rank-decompostion matrices while freezing the original weights. This vastly reduces the storage requirement for large language models adapted to specific tasks and enables efficient task-switching during deployment all without introducing inference latency. LoRA also outperforms several other adaptation methods including adapter, prefix-tuning, and fine-tuning. See arXiv:2106.09685
+        description: >-
+          Low-rank adapters, or LoRAs, are a fast way to give generalist large language models targeted knowledge and skills
+          so they can do things like summarize IT manuals or rate the accuracy of their own answers. LoRA reduces the number
+          of trainable parameters by learning pairs of rank-decompostion matrices while freezing the original weights. This
+          vastly reduces the storage requirement for large language models adapted to specific tasks and enables efficient
+          task-switching during deployment all without introducing inference latency. LoRA also outperforms several other
+          adaptation methods including adapter, prefix-tuning, and fine-tuning. See arXiv:2106.09685
       ALORA:
-        description: Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reusing existing base model KV cache for more efficient inference, unlike standard LoRA models. As a result, aLoRA models can be quickly invoked as-needed for specialized tasks during (long) flows where the base model is primarily used, avoiding potentially expensive prefill costs in terms of latency, throughput, and GPU memory. See arXiv:2504.12397 for further details.
+        description: >-
+          Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reusing existing base model KV cache for
+          more efficient inference, unlike standard LoRA models. As a result, aLoRA models can be quickly invoked as-needed
+          for specialized tasks during (long) flows where the base model is primarily used, avoiding potentially expensive
+          prefill costs in terms of latency, throughput, and GPU memory. See arXiv:2504.12397 for further details.
       X-LORA:
-        description: Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse gating to dynamically activate LoRA experts.
+        description: >-
+          Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse
+          gating to dynamically activate LoRA experts.
 
 slots:
   hasAdapter:
@@ -71,8 +102,10 @@ slots:
     multivalued: true
     inlined: false
   hasAdapterType:
+    multivalued: true
     description: "The Adapter type, for example: LORA, ALORA, X-LORA"
     range: AdapterType
   adaptsModel:
+    multivalued: true
     description: The LargeLanguageModel being adapted
     range: LargeLanguageModel

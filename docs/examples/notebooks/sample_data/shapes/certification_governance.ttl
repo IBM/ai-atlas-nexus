@@ -1,0 +1,29 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix nexus: <https://w3id.org/ai-atlas-nexus/> .
+
+nexus:CertificationGovernanceShape a sh:NodeShape ;
+    sh:targetClass nexus:AiSystem ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
+CONSTRUCT { ?this nexus:applicableFramework "nyc-local-law-144" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-ny-ny-usa" . }
+""" ] ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
+CONSTRUCT { ?this nexus:applicableFramework "gdpr-art-22" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-dublin-ie-eu" . }
+""" ] ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
+CONSTRUCT { ?this nexus:requiredControl "hiring-control-audit-ai-ny" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-ny-ny-usa" . }
+""" ] ;
+
+    sh:rule [ a sh:SPARQLRule ; sh:construct """
+PREFIX nexus: <https://w3id.org/ai-atlas-nexus/>
+CONSTRUCT { ?this nexus:requiredControl "hiring-control-gdpr-explanation-eu" }
+WHERE { ?this nexus:isUsedWithinLocality "hiring-usecase-locality-dublin-ie-eu" . }
+""" ] .

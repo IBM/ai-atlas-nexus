@@ -11,18 +11,18 @@ Alias: hasRule
 
 | Name                                                              | Description                                                                      | Modifies Slot |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Requirement](Requirement.md)                                     | A requirement representing a combination of obligation, permission, or prohib... | yes           |
+| [Permission](Permission.md)                                       | A rule describing a permission to perform an activity                            | no            |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md)                         | The policy guides how the language model should answer a diverse set of sensi... | no            |
 | [Recommendation](Recommendation.md)                               | A rule describing a recommendation for performing an activity                    | no            |
 | [ControlActivity](ControlActivity.md)                             | An obligation, permission, or prohibition for AI system assurance                | no            |
-| [ControlActivityRecommendation](ControlActivityRecommendation.md) | A control activity (rule) describing a recommendation for performing an activ... | no            |
-| [ControlActivityPermission](ControlActivityPermission.md)         | A control activity (rule) describing a permission to perform an activity         | no            |
-| [Prohibition](Prohibition.md)                                     | A rule describing a prohibition to perform an activity                           | no            |
 | [Rule](Rule.md)                                                   | A rule describing a process or control that directs or determines if and how ... | no            |
-| [Obligation](Obligation.md)                                       | A rule describing an obligation for performing an activity                       | no            |
-| [ControlActivityObligation](ControlActivityObligation.md)         | A control activity (rule) describing an obligation for performing an activity    | no            |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md)                         | The policy guides how the language model should answer a diverse set of sensi... | no            |
-| [Permission](Permission.md)                                       | A rule describing a permission to perform an activity                            | no            |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | A control activity (rule) describing a prohibition to perform an activity        | no            |
+| [Requirement](Requirement.md)                                     | A requirement representing a combination of obligation, permission, or prohib... | yes           |
+| [Obligation](Obligation.md)                                       | A rule describing an obligation for performing an activity                       | no            |
+| [ControlActivityPermission](ControlActivityPermission.md)         | A control activity (rule) describing a permission to perform an activity         | no            |
+| [ControlActivityObligation](ControlActivityObligation.md)         | A control activity (rule) describing an obligation for performing an activity    | no            |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | A control activity (rule) describing a recommendation for performing an activ... | no            |
+| [Prohibition](Prohibition.md)                                     | A rule describing a prohibition to perform an activity                           | no            |
 
 ## Properties
 

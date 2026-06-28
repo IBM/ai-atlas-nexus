@@ -1,4 +1,4 @@
-id: https://ibm.github.io/ai-atlas-nexus/ontology/ai_system
+id: https://w3id.org/ai-atlas-nexus/ai_system
 name: ai_system
 description: An ontology describing AI systems
 default_curi_maps:
@@ -13,7 +13,7 @@ imports:
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
 
 default_range: string
 default_prefix: nexus
@@ -47,6 +47,9 @@ classes:
       isComposedOf:
         range: BaseAi
         description: Relationship indicating the AI components from which a complete AI system is composed.
+      hasCapability:
+        domain: AiSystem
+        inverse: possessedByAi
     slots:
       - isComposedOf
       - hasEuAiSystemType
@@ -126,8 +129,47 @@ classes:
     is_a: Entry
     class_uri: airo:AiCapability
     description: A task, such as summarization and classification, performed by an AI.
+    slot_usage:
+      requiresCapability:
+        domain: AiTask
+        range: Capability
     slots:
       - requiresCapability
+
+  AiTaskTaxonomy:
+    is_a: Taxonomy
+    description: A taxonomy of AI Tasks
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  AiTaskDomain:
+    is_a: Group
+    description: A grouping of AI Tasks by domain.
+    class_uri: nexus:AiTaskDomain
+    slot_usage:
+      hasPart:
+        description: A relationship where an AI Task domain has a group.
+        range: AiTaskGroup
+    slots:
+      - isDefinedByTaxonomy
+      - hasPart
+
+  AiTaskGroup:
+    is_a: Group
+    description: A group of AI Tasks.
+    class_uri: nexus:AiTaskGroup
+    slot_usage:
+      hasPart:
+        description: A relationship where an AI task group has an AI task.
+        range: AiTask
+      isPartOf:
+        range: AiTaskDomain
+    slots:
+      - isDefinedByTaxonomy
+      - hasPart
+      - isPartOf
 
   AiLifecyclePhase:
     is_a: Entity
@@ -168,17 +210,17 @@ classes:
     slots:
 
   Purpose:
-    is_a: Entity
+    is_a: Entry
     class_uri: airo:Purpose
     description: The end goal for which an entity is used or an action is taken.
 
   Domain:
-    is_a: Entity
+    is_a: Entry
     class_uri: airo:Domain
     description: An area, sector, or industry that is associated with economic activities.
 
   LocalityOfUse:
-    is_a: Entity
+    is_a: Entry
     class_uri: airo:LocalityOfUse
     description: The area, e.g. facility or institution, in which an entity is used.
 
@@ -268,6 +310,8 @@ slots:
       A relationship indicating the output modalities supported by an AI component. Examples include text, image, video.
     range: Modality
   hasPurpose:
+    multivalued: true
+    inlined: false
     slot_uri: airo:hasPurpose
     range: Purpose
     description: >-
@@ -350,7 +394,9 @@ slots:
     range: RiskControl
   hasAIUser:
     slot_uri: airo:hasAiUser
+    multivalued: true
     domain: AiSystem
+    range: AIUser
     description: >-
       Indicate the end-user of an AI system.
   hasStakeholder:
@@ -360,6 +406,7 @@ slots:
       Indicates stakeholders of an AI system or component.
   hasAISubject:
     slot_uri: airo:hasAISubject
+    multivalued: true
     range: AISubject
     description: >-
       Indicates the subjects of an AI system

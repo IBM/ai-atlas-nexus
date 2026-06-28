@@ -1,0 +1,185 @@
+entries:
+  - id: asi01-agent-goal-hijack
+    broad_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    broad_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    narrow_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    narrow_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    narrow_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    narrow_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    narrow_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    narrow_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    narrow_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    narrow_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    broad_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    broad_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - llm082025-vector-and-embedding-weaknesses
+    type: Risk
+  - id: llm082025-vector-and-embedding-weaknesses
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    broad_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    broad_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk

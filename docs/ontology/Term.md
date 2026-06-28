@@ -241,6 +241,7 @@ URI: [nexus:Term](https://ibm.github.io/ai-atlas-nexus/ontology/Term)
 | [AiSystem](AiSystem.md)                           | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [AiAgent](AiAgent.md)                             | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
+| [EveryEvalAIResult](EveryEvalAIResult.md)         | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
 | [Questionnaire](Questionnaire.md)                 | [hasRelatedRisk](hasRelatedRisk.md)           | any_of[range] | [Term](Term.md) |
@@ -330,6 +331,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -376,6 +378,7 @@ attributes:
     - Action
     - AiSystem
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -496,6 +499,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

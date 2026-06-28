@@ -19,7 +19,7 @@ URI: [nexus:Adapter](https://ibm.github.io/ai-atlas-nexus/ontology/Adapter)
 
 
 
-        Adapter --> "0..1" LargeLanguageModel : adaptsModel
+        Adapter --> "*" LargeLanguageModel : adaptsModel
         click LargeLanguageModel href "../LargeLanguageModel/"
 
 
@@ -79,7 +79,7 @@ URI: [nexus:Adapter](https://ibm.github.io/ai-atlas-nexus/ontology/Adapter)
 
 
 
-        Adapter --> "0..1" AdapterType : hasAdapterType
+        Adapter --> "*" AdapterType : hasAdapterType
         click AdapterType href "../AdapterType/"
 
 
@@ -357,12 +357,12 @@ URI: [nexus:Adapter](https://ibm.github.io/ai-atlas-nexus/ontology/Adapter)
 
 | Name                                              | Cardinality and Range                                                                                        | Description                                                                      | Inheritance                                                    |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| [hasAdapterType](hasAdapterType.md)               | 0..1 <br/> [AdapterType](AdapterType.md)                                                                     | The Adapter type, for example: LORA, ALORA, X-LORA                               | direct                                                         |
+| [hasAdapterType](hasAdapterType.md)               | \* <br/> [AdapterType](AdapterType.md)                                                                       | The Adapter type, for example: LORA, ALORA, X-LORA                               | direct                                                         |
 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)                                                                       | A relationship where a term or a term group is defined by a vocabulary           | direct                                                         |
 | [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)                                                                   | Indicates documentation associated with an entity                                | direct                                                         |
 | [hasLicense](hasLicense.md)                       | 0..1 <br/> [License](License.md)                                                                             | Indicates licenses associated with a resource                                    | direct                                                         |
 | [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Term](Term.md)&nbsp;or&nbsp;<br />[Risk](Risk.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md) | A relationship where an entity relates to a risk                                 | direct                                                         |
-| [adaptsModel](adaptsModel.md)                     | 0..1 <br/> [LargeLanguageModel](LargeLanguageModel.md)                                                       | The LargeLanguageModel being adapted                                             | direct                                                         |
+| [adaptsModel](adaptsModel.md)                     | \* <br/> [LargeLanguageModel](LargeLanguageModel.md)                                                         | The LargeLanguageModel being adapted                                             | direct                                                         |
 | [implementsCapability](implementsCapability.md)   | \* <br/> [Capability](Capability.md)                                                                         | Indicates that this adapter implements a specific capability                     | direct                                                         |
 | [hasCapability](hasCapability.md)                 | \* <br/> [Capability](Capability.md)                                                                         | Indicates the technical capabilities this entry possesses                        | direct                                                         |
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Capability](Capability.md)                                                                         | Indicates that this entry requires a specific capability                         | direct                                                         |
@@ -490,6 +490,7 @@ attributes:
     domain_of:
     - Adapter
     range: AdapterType
+    multivalued: true
   isDefinedByVocabulary:
     name: isDefinedByVocabulary
     description: A relationship where a term or a term group is defined by a vocabulary
@@ -527,6 +528,7 @@ attributes:
     - BaseAi
     - LargeLanguageModelFamily
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -567,6 +569,7 @@ attributes:
     - Action
     - AiSystem
     - AiEval
+    - EveryEvalAIResult
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
@@ -586,6 +589,7 @@ attributes:
     domain_of:
     - Adapter
     range: LargeLanguageModel
+    multivalued: true
   implementsCapability:
     name: implementsCapability
     description: Indicates that this adapter implements a specific capability
@@ -824,6 +828,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
     - ControlActivityProhibition

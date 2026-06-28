@@ -24,8 +24,9 @@ Alias: hasConsiderationPrivacyAndAnonymity
 
 ### Cardinality and Requirements
 
-| Property | Value |
-| -------- | ----- |
+| Property    | Value |
+| ----------- | ----- |
+| Multivalued | Yes   |
 
 ## Identifier and Mapping Information
 
@@ -53,6 +54,7 @@ alias: hasConsiderationPrivacyAndAnonymity
 domain_of:
 - BenchmarkMetadataCard
 range: string
+multivalued: true
 
 ```
 </details>

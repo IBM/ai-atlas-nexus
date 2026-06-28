@@ -26,7 +26,7 @@ entries:
     hasDocumentation:
       - doc-un-ethical-use-of-ai-principles
   - id: principle-un-defined-purpose-necessity-and-proportionality
-    name: Defined p
+    name: Defined purpose, necessity and proportionality
     type: Principle
     description: >-
       The use of artificial intelligence systems, including the specific
@@ -62,7 +62,7 @@ entries:
     hasDocumentation:
       - doc-un-ethical-use-of-ai-principles
   - id: principle-un-sustainability
-    name: Sustainab
+    name: Sustainability
     type: Principle
     description: >-
       Artificial intelligence should be aimed at promoting environmental,

@@ -244,7 +244,7 @@ def export_data_to_cypher(container: Container) -> str:
     )
     schema_view = SchemaView(schema=model, merge_imports=True, importmap=importmap)
     linkml_types = get_linkml_types(schema_view)
-    container_class = model.classes["Container"]
+
     graph_nodes: list[GraphNode] = []
     for container_slot in schema_view.class_induced_slots("Container"):
         if container_slot.range not in linkml_types:

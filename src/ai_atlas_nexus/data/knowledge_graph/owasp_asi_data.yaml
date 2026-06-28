@@ -1,0 +1,291 @@
+# OWASP Top 10 for Agentic Applications 2026
+documents:
+  - id: owasp-top-10-agentic-applications-2026
+    name: OWASP Top 10 for Agentic Applications for 2026
+    description: >-
+      The OWASP Top 10 for Agentic Applications 2026 is a globally peer-reviewed
+      framework that identifies the most critical security risks facing autonomous
+      and agentic AI systems. Published in December 2025 by the OWASP Agentic
+      Security Initiative (ASI), it addresses risks arising from goal
+      misalignment, tool misuse, delegated trust, inter-agent communication,
+      persistent memory, and emergent autonomous behavior.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    dateCreated: "2025-12-09"
+
+taxonomies:
+  - id: owasp-asi
+    name: OWASP Top 10 for Agentic Applications
+    type: RiskTaxonomy
+    description: >-
+      The OWASP Top 10 for Agentic Applications identifies the most critical
+      security risks introduced by autonomous and semi-autonomous AI agents.
+      Unlike traditional LLM applications, agentic systems combine reasoning,
+      memory, tools, and multi-step execution, introducing new classes of
+      vulnerabilities that extend beyond prompt-level attacks. The 2026 edition
+      focuses on failures arising from goal misalignment, tool misuse, delegated
+      trust, inter-agent communication, persistent memory, and emergent
+      autonomous behavior.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    version: "2026"
+    dateCreated: "2025-12-09"
+    dateModified: "2025-12-09"
+    hasDocumentation:
+      - owasp-top-10-agentic-applications-2026
+
+entries:
+  - id: asi01-agent-goal-hijack
+    name: "ASI01:2026 Agent Goal Hijack"
+    description: >-
+      Attackers manipulate agent goals, plans, or decision paths through direct
+      or indirect instruction injection, causing agents to pursue unintended or
+      malicious objectives. Attack vectors include direct goal manipulation via
+      prompt injection, indirect instruction injection through documents or RAG
+      content or tool outputs, recursive hijacking where goal modifications
+      propagate through reasoning chains, and cross-context injection where
+      instructions embedded in one context influence behavior elsewhere. Unlike
+      single-prompt attacks on LLMs, agent goal hijacking exploits multi-step
+      autonomous execution to redirect entire workflows.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: agent-goal-hijack
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: >-
+      Autonomous agents that plan and execute multi-step workflows can have their
+      objectives silently redirected, causing sustained harmful actions that
+      propagate through reasoning chains rather than producing a single
+      unintended output.
+
+  - id: asi02-tool-misuse-and-exploitation
+    name: "ASI02:2026 Tool Misuse & Exploitation"
+    description: >-
+      Agents can misuse legitimate tools due to prompt injection, misalignment,
+      or unsafe delegation or ambiguous instruction, leading to data
+      exfiltration, tool output manipulation, or workflow hijacking. Risks arise
+      from how the agent chooses and applies tools; agent memory, dynamic tool
+      selection, and delegation can contribute to misuse via chaining, privilege
+      escalation, and unintended actions. This entry covers cases where the
+      agent operates within its authorized privileges but applies a legitimate
+      tool in an unsafe or unintended way.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: tool-misuse
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: >-
+      Agents with legitimate tool access can compose tools in unintended and
+      harmful sequences, create infinite execution loops, exhaust system
+      resources, or leak sensitive state between tool contexts without
+      technically violating any individual permission boundary.
+
+  - id: asi03-identity-and-privilege-abuse
+    name: "ASI03:2026 Identity & Privilege Abuse"
+    description: >-
+      Identity and privilege abuse exploits dynamic trust and delegation in
+      agents to escalate access and bypass controls by manipulating delegation
+      chains, role inheritance, control flows, and agent context including cached
+      credentials or conversation history. This risk arises from the
+      architectural mismatch between user-centric identity systems and agentic
+      design. Without a distinct, governed identity of its own, an agent
+      operates in an attribution gap that makes enforcing true least privilege
+      impossible. Abuse types include un-scoped privilege inheritance,
+      memory-based privilege retention, cross-agent trust exploitation (confused
+      deputy), time-of-check to time-of-use in agent workflows, and synthetic
+      identity injection.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: identity-privilege-abuse
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: >-
+      Agents operating with delegated credentials can escalate privileges
+      through impersonation, trust chain exploitation, or identity inheritance,
+      performing actions far beyond their intended scope without triggering
+      traditional access control mechanisms.
+
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    name: "ASI04:2026 Agentic Supply Chain Vulnerabilities"
+    description: >-
+      External agents, tools, schemas, or prompts that agents dynamically trust
+      or import at runtime become compromised. Attack vectors include schema
+      manipulation corrupting tool or API schemas agents rely upon, description
+      deception through misleading tool descriptions that trick agents,
+      permission misrepresentation via false capability or permission
+      declarations, and registry poisoning through compromised agent or tool
+      registries. Unlike static supply chain risks, agentic supply chain
+      compromise targets dynamic runtime composition where agents discover and
+      integrate components during execution.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: agentic-supply-chain
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: >-
+      Agents that dynamically discover and integrate tools, schemas, and other
+      agents at runtime are vulnerable to compromised components that cannot be
+      vetted through traditional pre-deployment supply chain controls.
+
+  - id: asi05-unexpected-code-execution
+    name: "ASI05:2026 Unexpected Code Execution (RCE)"
+    description: >-
+      Agentic systems, including popular vibe coding tools, often generate and
+      execute code. Attackers exploit code-generation features or embedded tool
+      access to escalate actions into remote code execution (RCE), local misuse,
+      or exploitation of internal systems. This risk covers unexpected or
+      adversarial execution of code including scripts, binaries, JIT/WASM
+      modules, deserialized objects, template engines, and in-memory evaluations
+      that lead to host or container compromise, persistence, or sandbox escape.
+      It reflects the evolution from a single manipulated output to orchestrated
+      multi-tool chains that achieve execution through a sequence of otherwise
+      legitimate tool calls.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: unexpected-code-execution
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: >-
+      Agents with code execution capabilities can generate and run arbitrary
+      code, invoke system commands, or evaluate dynamic expressions without
+      adequate sandboxing, turning natural language instructions into
+      unrestricted system-level operations.
+
+  - id: asi06-memory-and-context-poisoning
+    name: "ASI06:2026 Memory & Context Poisoning"
+    description: >-
+      Adversaries corrupt or seed agent memory and retrievable context with
+      malicious or misleading data, causing future reasoning, planning, or tool
+      use to become biased, unsafe, or aid exfiltration. Context includes any
+      information an agent retains, retrieves, or reuses such as summaries,
+      embeddings, and RAG stores, but excludes one-time input prompts covered
+      under prompt injection. Attack types include long-term memory poisoning,
+      shared user context poisoning, context-window manipulation, long-term
+      memory drift, systemic misalignment and backdoors, and cross-agent
+      propagation of contaminated context.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: memory-context-poisoning
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern: >-
+      Agents with persistent memory can have their stored context corrupted,
+      causing altered reasoning and behavior that persists across sessions and
+      may be difficult to detect or remediate once the poisoned state has
+      influenced downstream decisions.
+
+  - id: asi07-insecure-inter-agent-communication
+    name: "ASI07:2026 Insecure Inter-Agent Communication"
+    description: >-
+      Manipulation of messages exchanged between agents, planners, and executors.
+      The threat spans transport, routing, discovery, and semantic layers,
+      including covert or side-channels where agents leak or infer data through
+      timing or behavioral cues. Communication vulnerabilities include
+      agent-in-the-middle attacks through interception and modification of agent
+      messages, message injection through insertion of malicious instructions
+      into agent communication channels, message spoofing through forging
+      messages that appear to originate from trusted agents, and protocol
+      downgrade attacks coercing agents into weaker communication modes.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: insecure-inter-agent-comms
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern: >-
+      Multi-agent systems that exchange messages without authentication,
+      integrity verification, or encryption are vulnerable to spoofing,
+      interception, and injection attacks that can misdirect entire agent
+      clusters.
+
+  - id: asi08-cascading-failures
+    name: "ASI08:2026 Cascading Failures"
+    description: >-
+      Agentic cascading failures occur when a single fault such as a
+      hallucination, malicious input, corrupted tool, or poisoned memory
+      propagates across autonomous agents, compounding into system-wide harm.
+      Because agents plan, persist, and delegate autonomously, a single error
+      can bypass stepwise human checks and persist in a saved state. ASI08
+      focuses on the propagation and amplification of faults rather than their
+      origin, and applies when a defect spreads across agents, sessions, or
+      workflows causing measurable fan-out or systemic impact beyond the
+      original breach. Observable symptoms include rapid fan-out, cross-domain
+      or tenant spread, oscillating retries or feedback loops between agents,
+      and downstream queue storms.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: cascading-failures
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern: >-
+      Interconnected agent systems can amplify localized failures into
+      system-wide incidents through dependency chains, retry storms, and
+      cross-domain propagation, producing impact disproportionate to the
+      original defect.
+
+  - id: asi09-human-agent-trust-exploitation
+    name: "ASI09:2026 Human-Agent Trust Exploitation"
+    description: >-
+      Intelligent agents can establish strong trust with human users through
+      their natural language fluency, emotional intelligence, and perceived
+      expertise, known as anthropomorphism. Adversaries or misaligned designs
+      may exploit this trust to influence user decisions, extract sensitive
+      information, or steer outcomes for malicious purposes. In agentic systems,
+      this risk is amplified when humans over-rely on autonomous recommendations
+      or unverifiable rationales, approving actions without independent
+      validation. The agent acts as an untraceable bad influence, manipulating
+      the human into performing the final audited action, making the agent role
+      in the compromise invisible to forensics. Automation bias, perceived
+      authority, and anthropomorphic cues make abuse look legitimate and hard to
+      spot.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: human-agent-trust-exploitation
+    risk_type: agentic
+    descriptor:
+      - amplified by agentic AI
+    concern: >-
+      Users who develop trust in autonomous agents are vulnerable to
+      manipulation through false authority claims, overconfident assertions, and
+      plausible but incorrect explanations, leading to poor decisions that users
+      would not otherwise make.
+
+  - id: asi10-rogue-agents
+    name: "ASI10:2026 Rogue Agents"
+    description: >-
+      Rogue agents are malicious or compromised AI agents that deviate from
+      their intended function or authorized scope, acting harmfully,
+      deceptively, or parasitically within multi-agent or human-agent
+      ecosystems. The agent actions may individually appear legitimate, but
+      emergent behavior becomes harmful, creating a containment gap for
+      traditional rule-based systems. While external compromise such as prompt
+      injection or supply chain tampering can initiate the divergence, ASI10
+      focuses on the loss of behavioral integrity and governance once drift
+      begins. Rogue behaviors include goal drift, workflow hijacking, collusion
+      and self-replication, and reward hacking and optimization abuse.
+    url: https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/
+    type: Risk
+    isDefinedByTaxonomy: owasp-asi
+    tag: rogue-agents
+    risk_type: agentic
+    descriptor:
+      - specific to agentic AI
+    concern: >-
+      Agents whose individual actions may appear legitimate can exhibit emergent
+      harmful behavior through goal drift, inter-agent collusion, or reward
+      hacking, making detection difficult because no single action triggers
+      conventional safeguards.

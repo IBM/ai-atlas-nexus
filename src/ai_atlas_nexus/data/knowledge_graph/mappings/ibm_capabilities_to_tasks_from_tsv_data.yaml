@@ -19,6 +19,10 @@ aitasks:
     requiresCapability:
       - ibm-cap-common-sense-reasoning
     type: AiTask
+  - id: question-answering
+    requiresCapability:
+      - ibm-cap-context-attribution
+    type: AiTask
   - id: document-question-answering
     requiresCapability:
       - ibm-cap-contextual-understanding
@@ -187,6 +191,10 @@ aitasks:
     requiresCapability:
       - ibm-cap-reading-comprehension
     type: AiTask
+  - id: question-answering
+    requiresCapability:
+      - ibm-cap-requirement-check
+    type: AiTask
   - id: code-explanation
     requiresCapability:
       - ibm-cap-text-generation
@@ -207,11 +215,19 @@ aitasks:
     requiresCapability:
       - ibm-cap-text-generation
     type: AiTask
+  - id: question-answering
+    requiresCapability:
+      - ibm-cap-uncertainty
+    type: AiTask
 adapters:
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
     type: Adapter
     implementsCapability:
       - ibm-cap-causal-reasoning
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-context-attribution
+    type: Adapter
+    implementsCapability:
+      - ibm-cap-context-attribution
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-answerability-determination
     type: Adapter
     implementsCapability:
@@ -264,6 +280,10 @@ adapters:
     type: Adapter
     implementsCapability:
       - ibm-cap-reading-comprehension
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-requirement-check
+    type: Adapter
+    implementsCapability:
+      - ibm-cap-requirement-check
   - id: ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
     type: Adapter
     implementsCapability:
@@ -272,6 +292,10 @@ adapters:
     type: Adapter
     implementsCapability:
       - ibm-cap-text-generation
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-uncertainty
+    type: Adapter
+    implementsCapability:
+      - ibm-cap-uncertainty
 entries:
   - id: ibm-cap-causal-reasoning
     implementedByAdapter:
@@ -320,6 +344,22 @@ entries:
   - id: text-generation
     requiresCapability:
       - ibm-cap-common-sense-reasoning
+    type: AiTask
+  - id: ibm-cap-context-attribution
+    implementedByAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-context-attribution
+    type: Capability
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-context-attribution
+    type: Adapter
+    implementsCapability:
+      - ibm-cap-context-attribution
+  - id: ibm-cap-context-attribution
+    requiredByTask:
+      - question-answering
+    type: Capability
+  - id: question-answering
+    requiresCapability:
+      - ibm-cap-context-attribution
     type: AiTask
   - id: ibm-cap-contextual-understanding
     implementedByAdapter:
@@ -761,6 +801,22 @@ entries:
     requiresCapability:
       - ibm-cap-reading-comprehension
     type: AiTask
+  - id: ibm-cap-requirement-check
+    implementedByAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-requirement-check
+    type: Capability
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-requirement-check
+    type: Adapter
+    implementsCapability:
+      - ibm-cap-requirement-check
+  - id: ibm-cap-requirement-check
+    requiredByTask:
+      - question-answering
+    type: Capability
+  - id: question-answering
+    requiresCapability:
+      - ibm-cap-requirement-check
+    type: AiTask
   - id: ibm-cap-text-generation
     implementedByAdapter:
       - ibm-factuality-adapter-granite-3.3-8b-instruct-lora-query-expansion
@@ -816,4 +872,20 @@ entries:
   - id: translation
     requiresCapability:
       - ibm-cap-text-generation
+    type: AiTask
+  - id: ibm-cap-uncertainty
+    implementedByAdapter:
+      - ibm-factuality-adapter-granitelib-core-r1.0-uncertainty
+    type: Capability
+  - id: ibm-factuality-adapter-granitelib-core-r1.0-uncertainty
+    type: Adapter
+    implementsCapability:
+      - ibm-cap-uncertainty
+  - id: ibm-cap-uncertainty
+    requiredByTask:
+      - question-answering
+    type: Capability
+  - id: question-answering
+    requiresCapability:
+      - ibm-cap-uncertainty
     type: AiTask

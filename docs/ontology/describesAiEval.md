@@ -1,6 +1,6 @@
 # Slot: describesAiEval
 
-_A relationship where a BenchmarkMetadataCard describes and AI evaluation (benchmark)._
+_A relationship where a BenchmarkMetadataCard describes an AI evaluation (benchmark)._
 
 URI: [nexus:describesAiEval](https://ibm.github.io/ai-atlas-nexus/ontology/describesAiEval)
 Alias: describesAiEval
@@ -56,7 +56,7 @@ Alias: describesAiEval
 <details>
 ```yaml
 name: describesAiEval
-description: A relationship where a BenchmarkMetadataCard describes and AI evaluation
+description: A relationship where a BenchmarkMetadataCard describes an AI evaluation
   (benchmark).
 from_schema: https://ibm.github.io/ai-atlas-nexus/ontology/ai-risk-ontology
 rank: 1000
