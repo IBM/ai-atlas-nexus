@@ -66,7 +66,7 @@ class InferenceEngine(ABC):
             self.ping()
         except Exception as e:
             raise Exception(
-                f"Failed to create `{self._inference_engine_type}` inference engine. Reason: {str(e)}"
+                f"Failed to create `{self._inference_engine_type}` inference engine. Reason - {str(e)}"
             )
 
         # Create inference backend

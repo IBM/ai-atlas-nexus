@@ -138,6 +138,8 @@ class VLLMInferenceEngineParams(TypedDict):
     min_tokens: int = 0
     logprobs: Optional[int] = None
     prompt_logprobs: Optional[int] = None
+    max_model_len: Optional[int] = None
+    gpu_memory_utilization: Optional[float] = None
 
 
 class HFInferenceEngineParams(TypedDict):

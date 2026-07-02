@@ -22,7 +22,7 @@ from ai_atlas_nexus.toolkit.job_utils import (
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
-logger = configure_logger(__name__)
+LOGGER = configure_logger(__name__)
 
 # load .env file to environment
 load_dotenv()
@@ -46,7 +46,7 @@ class OllamaInferenceEngine(InferenceEngine):
         )
 
         if api_url:
-            logger.debug(
+            LOGGER.debug(
                 f"{self._inference_engine_type} inference engine will execute requests on the server at {api_url}."
             )
 
@@ -68,15 +68,36 @@ class OllamaInferenceEngine(InferenceEngine):
         if self.model_name_or_path not in [
             model.model for model in self.client.list().models
         ]:
-            raise Exception(
-                f"Model `{self.model_name_or_path}` not found. Please download it first."
-            )
+            LOGGER.info(f"Model `{self.model_name_or_path}` not found. Downloading...")
+            self._pull_model(self.model_name_or_path)
+            LOGGER.info(f"Successfully downloaded model `{self.model_name_or_path}`")
 
         if "think" in self.parameters and self.parameters["think"]:
             if not "thinking" in self.client.show(self.model_name_or_path).capabilities:
                 raise Exception(
-                    f"`Model {self.model_name_or_path}` does not support thinking. Please pass `think=False` or pass a supported model."
+                    f"Model `{self.model_name_or_path}` does not support thinking. "
+                    f"Please pass `think=False` or use a supported model."
                 )
+
+    def _pull_model(self, model_name_or_path: str) -> None:
+        """
+        Pull (download) a model from the Ollama registry.
+
+        Args:
+            model_name_or_path: Name of the model to pull
+        """
+        try:
+            for progress in self.client.pull(model_name_or_path, stream=True):
+                if hasattr(progress, "status"):
+                    completed = progress.completed
+                    total = progress.total
+                    if total and completed and total > 0:
+                        percent = (completed / total) * 100
+                        print(f"{progress.status}: {percent:.2f}% done", end="\r")
+        except Exception as e:
+            raise Exception(
+                f"Error pulling model '{model_name_or_path}': {str(e)}. You can manually download it using: `ollama pull {model_name_or_path}`"
+            )
 
     @postprocess
     def generate(
