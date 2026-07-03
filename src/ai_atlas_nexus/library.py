@@ -1993,7 +1993,7 @@ class AIAtlasNexus:
             "<RAN92358069E>",
             str,
             allow_none=False,
-            target_class=id,
+            target_class=target_class,
         )
         type_check(
             "<RAN61877043E>",
@@ -2002,8 +2002,8 @@ class AIAtlasNexus:
             taxonomy=taxonomy,
         )
 
-        instances: list[Any] = cls._atlas_explorer.get_instances(
-            target_class, taxonomy
+        instances: list[Any] = cls._atlas_explorer.get_all(
+            target_class, taxonomy=taxonomy
         )
         return instances
 

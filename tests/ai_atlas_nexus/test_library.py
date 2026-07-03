@@ -143,6 +143,19 @@ class TestLibrary(TestCaseBase):
         all_actions = ran_lib.get_all_actions()
         self.assertIsInstance(all_actions, list)
 
+    def test_get_instances(self):
+        """Get instances of a class generically, filtered by taxonomy"""
+        ran_lib = self.ran_lib
+        instances = ran_lib.get_instances("risks", taxonomy="ibm-risk-atlas")
+        self.assertIsInstance(instances, list)
+        self.assertGreater(len(instances), 0)
+        assert instances[0].linkml_meta.root["class_uri"] == "airo:Risk"
+
+    def test_get_instances_target_class_not_a_str(self):
+        """Get instances of a class generically - target_class type is wrong"""
+        ran_lib = self.ran_lib
+        self.assertRaises(TypeError, ran_lib.get_instances, 123)
+
     def test_identify_risks_from_usecase_taxonomy_not_a_str(self):
         """Identify potential risks from a usecase description - taxonomy type is wrong"""
         ran_lib = self.ran_lib
