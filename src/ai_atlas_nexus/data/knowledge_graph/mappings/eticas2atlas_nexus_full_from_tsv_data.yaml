@@ -1,0 +1,713 @@
+entries:
+  - id: eticas-adversarial-attacks
+    close_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.2
+    close_mappings:
+      - eticas-adversarial-attacks
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.1
+    close_mappings:
+      - eticas-agentic-ai
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.6
+    close_mappings:
+      - eticas-agentic-ai
+    type: Risk
+  - id: eticas-ai-interaction-disclosure
+    close_mappings:
+      - atlas-non-disclosure
+    type: Risk
+  - id: atlas-non-disclosure
+    close_mappings:
+      - eticas-ai-interaction-disclosure
+    type: Risk
+  - id: eticas-ai-interaction-disclosure
+    related_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    related_mappings:
+      - eticas-ai-interaction-disclosure
+    type: Risk
+  - id: eticas-behavioural-manipulation
+    close_mappings:
+      - mit-ai-risk-subdomain-4.3
+    type: Risk
+  - id: mit-ai-risk-subdomain-4.3
+    close_mappings:
+      - eticas-behavioural-manipulation
+    type: Risk
+  - id: nist-harmful-bias-and-homogenization
+    close_mappings:
+      - eticas-bias-fairness
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.3
+    exact_mappings:
+      - eticas-bias-outcome-disparities
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.1
+    close_mappings:
+      - eticas-bias-representational-harm
+    type: Risk
+  - id: eticas-confidential-information-leakage
+    close_mappings:
+      - atlas-revealing-confidential-information
+    type: Risk
+  - id: atlas-revealing-confidential-information
+    close_mappings:
+      - eticas-confidential-information-leakage
+    type: Risk
+  - id: eticas-confidential-information-leakage
+    close_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    close_mappings:
+      - eticas-confidential-information-leakage
+    type: Risk
+  - id: eticas-csam-ncii-generation
+    close_mappings:
+      - nist-obscene-degrading-and-or-abusive-content
+    type: Risk
+  - id: nist-obscene-degrading-and-or-abusive-content
+    close_mappings:
+      - eticas-csam-ncii-generation
+    type: Risk
+  - id: eticas-data-poisoning
+    exact_mappings:
+      - atlas-data-poisoning
+    type: Risk
+  - id: atlas-data-poisoning
+    exact_mappings:
+      - eticas-data-poisoning
+    type: Risk
+  - id: eticas-data-poisoning
+    narrow_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.2
+    narrow_mappings:
+      - eticas-data-poisoning
+    type: Risk
+  - id: eticas-data-poisoning
+    narrow_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    narrow_mappings:
+      - eticas-data-poisoning
+    type: Risk
+  - id: eticas-disparate-impact-protected-groups
+    close_mappings:
+      - atlas-decision-bias
+    type: Risk
+  - id: atlas-decision-bias
+    close_mappings:
+      - eticas-disparate-impact-protected-groups
+    type: Risk
+  - id: eticas-disparate-impact-protected-groups
+    close_mappings:
+      - atlas-output-bias
+    type: Risk
+  - id: atlas-output-bias
+    close_mappings:
+      - eticas-disparate-impact-protected-groups
+    type: Risk
+  - id: eticas-disparate-impact-protected-groups
+    close_mappings:
+      - mit-ai-risk-subdomain-1.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.1
+    close_mappings:
+      - eticas-disparate-impact-protected-groups
+    type: Risk
+  - id: eticas-disparate-impact-protected-groups
+    close_mappings:
+      - mit-ai-risk-subdomain-1.3
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.3
+    close_mappings:
+      - eticas-disparate-impact-protected-groups
+    type: Risk
+  - id: atlas-impact-on-the-environment
+    exact_mappings:
+      - eticas-environmental-impact
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.6
+    exact_mappings:
+      - eticas-environmental-impact
+    type: Risk
+  - id: nist-environmental-impacts
+    exact_mappings:
+      - eticas-environmental-impact
+    type: Risk
+  - id: eticas-feedback-loops
+    related_mappings:
+      - mit-ai-risk-subdomain-6.5
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.5
+    related_mappings:
+      - eticas-feedback-loops
+    type: Risk
+  - id: eticas-fitness-for-purpose
+    close_mappings:
+      - mit-ai-risk-subdomain-7.3
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.3
+    close_mappings:
+      - eticas-fitness-for-purpose
+    type: Risk
+  - id: eticas-function-calling-hallucination
+    close_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    close_mappings:
+      - eticas-function-calling-hallucination
+    type: Risk
+  - id: atlas-lack-of-data-transparency
+    close_mappings:
+      - eticas-governance
+    type: Risk
+  - id: atlas-lack-of-model-transparency
+    close_mappings:
+      - eticas-governance
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.5
+    close_mappings:
+      - eticas-governance
+    type: Risk
+  - id: eticas-hallucination
+    close_mappings:
+      - mit-ai-risk-subdomain-3.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-3.1
+    close_mappings:
+      - eticas-hallucination
+    type: Risk
+  - id: eticas-hallucination
+    exact_mappings:
+      - atlas-hallucination
+    type: Risk
+  - id: atlas-hallucination
+    exact_mappings:
+      - eticas-hallucination
+    type: Risk
+  - id: eticas-hallucination
+    exact_mappings:
+      - nist-confabulation
+    type: Risk
+  - id: nist-confabulation
+    exact_mappings:
+      - eticas-hallucination
+    type: Risk
+  - id: eticas-hardware-efficiency
+    narrow_mappings:
+      - nist-environmental-impacts
+    type: Risk
+  - id: nist-environmental-impacts
+    narrow_mappings:
+      - eticas-hardware-efficiency
+    type: Risk
+  - id: eticas-harmful-content-toxicity
+    close_mappings:
+      - atlas-harmful-output
+    type: Risk
+  - id: atlas-harmful-output
+    close_mappings:
+      - eticas-harmful-content-toxicity
+    type: Risk
+  - id: eticas-harmful-content-toxicity
+    close_mappings:
+      - mit-ai-risk-subdomain-1.2
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.2
+    close_mappings:
+      - eticas-harmful-content-toxicity
+    type: Risk
+  - id: eticas-harmful-content-toxicity
+    close_mappings:
+      - nist-dangerous-violent-or-hateful-content
+    type: Risk
+  - id: nist-dangerous-violent-or-hateful-content
+    close_mappings:
+      - eticas-harmful-content-toxicity
+    type: Risk
+  - id: eticas-harmful-content-toxicity
+    exact_mappings:
+      - atlas-toxic-output
+    type: Risk
+  - id: atlas-toxic-output
+    exact_mappings:
+      - eticas-harmful-content-toxicity
+    type: Risk
+  - id: eticas-homogenization-output-across-groups
+    exact_mappings:
+      - nist-harmful-bias-and-homogenization
+    type: Risk
+  - id: nist-harmful-bias-and-homogenization
+    exact_mappings:
+      - eticas-homogenization-output-across-groups
+    type: Risk
+  - id: eticas-homogenization-output-across-groups
+    related_mappings:
+      - mit-ai-risk-subdomain-6.3
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.3
+    related_mappings:
+      - eticas-homogenization-output-across-groups
+    type: Risk
+  - id: eticas-human-oversight-control
+    close_mappings:
+      - mit-ai-risk-subdomain-5.2
+    type: Risk
+  - id: mit-ai-risk-subdomain-5.2
+    close_mappings:
+      - eticas-human-oversight-control
+    type: Risk
+  - id: eticas-human-oversight-control
+    close_mappings:
+      - nist-human-ai-configuration
+    type: Risk
+  - id: nist-human-ai-configuration
+    close_mappings:
+      - eticas-human-oversight-control
+    type: Risk
+  - id: eticas-incident-response-gaps
+    close_mappings:
+      - mit-ai-risk-subdomain-6.5
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.5
+    close_mappings:
+      - eticas-incident-response-gaps
+    type: Risk
+  - id: eticas-inference-energy-consumption
+    narrow_mappings:
+      - mit-ai-risk-subdomain-6.6
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.6
+    narrow_mappings:
+      - eticas-inference-energy-consumption
+    type: Risk
+  - id: eticas-inference-energy-consumption
+    narrow_mappings:
+      - nist-environmental-impacts
+    type: Risk
+  - id: nist-environmental-impacts
+    narrow_mappings:
+      - eticas-inference-energy-consumption
+    type: Risk
+  - id: eticas-jailbreaking
+    exact_mappings:
+      - atlas-jailbreaking
+    type: Risk
+  - id: atlas-jailbreaking
+    exact_mappings:
+      - eticas-jailbreaking
+    type: Risk
+  - id: eticas-jailbreaking
+    narrow_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.2
+    narrow_mappings:
+      - eticas-jailbreaking
+    type: Risk
+  - id: eticas-limited-auditability
+    close_mappings:
+      - mit-ai-risk-subdomain-6.5
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.5
+    close_mappings:
+      - eticas-limited-auditability
+    type: Risk
+  - id: eticas-measurement-validity
+    related_mappings:
+      - nist-confabulation
+    type: Risk
+  - id: nist-confabulation
+    related_mappings:
+      - eticas-measurement-validity
+    type: Risk
+  - id: eticas-misuse-beyond-intended-purpose
+    close_mappings:
+      - atlas-dangerous-use
+    type: Risk
+  - id: atlas-dangerous-use
+    close_mappings:
+      - eticas-misuse-beyond-intended-purpose
+    type: Risk
+  - id: eticas-misuse-beyond-intended-purpose
+    close_mappings:
+      - atlas-improper-usage
+    type: Risk
+  - id: atlas-improper-usage
+    close_mappings:
+      - eticas-misuse-beyond-intended-purpose
+    type: Risk
+  - id: eticas-misuse-beyond-intended-purpose
+    close_mappings:
+      - mit-ai-risk-domain-4
+    type: Risk
+  - id: eticas-misuse-beyond-intended-purpose
+    narrow_mappings:
+      - nist-cbrn-information-or-capabilities
+    type: Risk
+  - id: nist-cbrn-information-or-capabilities
+    narrow_mappings:
+      - eticas-misuse-beyond-intended-purpose
+    type: Risk
+  - id: eticas-model-extraction
+    exact_mappings:
+      - atlas-extraction-attack
+    type: Risk
+  - id: atlas-extraction-attack
+    exact_mappings:
+      - eticas-model-extraction
+    type: Risk
+  - id: eticas-model-extraction
+    narrow_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.2
+    narrow_mappings:
+      - eticas-model-extraction
+    type: Risk
+  - id: eticas-model-extraction
+    narrow_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    narrow_mappings:
+      - eticas-model-extraction
+    type: Risk
+  - id: eticas-output-drift
+    narrow_mappings:
+      - mit-ai-risk-subdomain-7.3
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.3
+    narrow_mappings:
+      - eticas-output-drift
+    type: Risk
+  - id: eticas-output-inconsistency
+    narrow_mappings:
+      - mit-ai-risk-subdomain-7.3
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.3
+    narrow_mappings:
+      - eticas-output-inconsistency
+    type: Risk
+  - id: eticas-performance-equity
+    close_mappings:
+      - mit-ai-risk-subdomain-1.3
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.3
+    close_mappings:
+      - eticas-performance-equity
+    type: Risk
+  - id: eticas-performance-equity
+    exact_mappings:
+      - atlas-output-bias
+    type: Risk
+  - id: atlas-output-bias
+    exact_mappings:
+      - eticas-performance-equity
+    type: Risk
+  - id: eticas-pii-leakage
+    close_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    close_mappings:
+      - eticas-pii-leakage
+    type: Risk
+  - id: eticas-pii-leakage
+    exact_mappings:
+      - atlas-exposing-personal-information
+    type: Risk
+  - id: atlas-exposing-personal-information
+    exact_mappings:
+      - eticas-pii-leakage
+    type: Risk
+  - id: eticas-pii-leakage
+    exact_mappings:
+      - mit-ai-risk-subdomain-2.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.1
+    exact_mappings:
+      - eticas-pii-leakage
+    type: Risk
+  - id: eticas-poor-documentation
+    close_mappings:
+      - atlas-lack-of-data-transparency
+    type: Risk
+  - id: atlas-lack-of-data-transparency
+    close_mappings:
+      - eticas-poor-documentation
+    type: Risk
+  - id: eticas-poor-documentation
+    close_mappings:
+      - atlas-lack-of-model-transparency
+    type: Risk
+  - id: atlas-lack-of-model-transparency
+    close_mappings:
+      - eticas-poor-documentation
+    type: Risk
+  - id: eticas-poor-documentation
+    close_mappings:
+      - atlas-lack-of-system-transparency
+    type: Risk
+  - id: atlas-lack-of-system-transparency
+    close_mappings:
+      - eticas-poor-documentation
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.1
+    close_mappings:
+      - eticas-privacy-confidentiality
+    type: Risk
+  - id: nist-data-privacy
+    close_mappings:
+      - eticas-privacy-confidentiality
+    type: Risk
+  - id: eticas-prompt-injection
+    exact_mappings:
+      - atlas-prompt-injection
+    type: Risk
+  - id: atlas-prompt-injection
+    exact_mappings:
+      - eticas-prompt-injection
+    type: Risk
+  - id: eticas-prompt-injection
+    narrow_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.2
+    narrow_mappings:
+      - eticas-prompt-injection
+    type: Risk
+  - id: eticas-prompt-injection
+    narrow_mappings:
+      - nist-information-security
+    type: Risk
+  - id: nist-information-security
+    narrow_mappings:
+      - eticas-prompt-injection
+    type: Risk
+  - id: eticas-re-identification
+    close_mappings:
+      - mit-ai-risk-subdomain-2.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.1
+    close_mappings:
+      - eticas-re-identification
+    type: Risk
+  - id: eticas-re-identification
+    exact_mappings:
+      - atlas-reidentification
+    type: Risk
+  - id: atlas-reidentification
+    exact_mappings:
+      - eticas-re-identification
+    type: Risk
+  - id: eticas-regulatory-non-compliance
+    related_mappings:
+      - mit-ai-risk-subdomain-6.5
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.5
+    related_mappings:
+      - eticas-regulatory-non-compliance
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.3
+    close_mappings:
+      - eticas-reliability
+    type: Risk
+  - id: nist-confabulation
+    close_mappings:
+      - eticas-reliability
+    type: Risk
+  - id: eticas-right-to-explanation-contestation
+    narrow_mappings:
+      - mit-ai-risk-subdomain-7.4
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.4
+    narrow_mappings:
+      - eticas-right-to-explanation-contestation
+    type: Risk
+  - id: eticas-scope-creep-goal-misalignment
+    close_mappings:
+      - mit-ai-risk-subdomain-7.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.1
+    close_mappings:
+      - eticas-scope-creep-goal-misalignment
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.2
+    close_mappings:
+      - eticas-security-misuse
+    type: Risk
+  - id: nist-information-security
+    close_mappings:
+      - eticas-security-misuse
+    type: Risk
+  - id: eticas-sentiment-fairness
+    narrow_mappings:
+      - mit-ai-risk-subdomain-1.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.1
+    narrow_mappings:
+      - eticas-sentiment-fairness
+    type: Risk
+  - id: eticas-stakeholder-communication
+    close_mappings:
+      - mit-ai-risk-subdomain-7.4
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.4
+    close_mappings:
+      - eticas-stakeholder-communication
+    type: Risk
+  - id: eticas-stereotyping-demeaning-content
+    close_mappings:
+      - atlas-output-bias
+    type: Risk
+  - id: atlas-output-bias
+    close_mappings:
+      - eticas-stereotyping-demeaning-content
+    type: Risk
+  - id: eticas-stereotyping-demeaning-content
+    close_mappings:
+      - mit-ai-risk-subdomain-1.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-1.1
+    close_mappings:
+      - eticas-stereotyping-demeaning-content
+    type: Risk
+  - id: eticas-synthetic-media-abuse
+    close_mappings:
+      - atlas-non-disclosure
+    type: Risk
+  - id: atlas-non-disclosure
+    close_mappings:
+      - eticas-synthetic-media-abuse
+    type: Risk
+  - id: eticas-synthetic-media-abuse
+    close_mappings:
+      - atlas-spreading-disinformation
+    type: Risk
+  - id: atlas-spreading-disinformation
+    close_mappings:
+      - eticas-synthetic-media-abuse
+    type: Risk
+  - id: eticas-synthetic-media-abuse
+    close_mappings:
+      - mit-ai-risk-subdomain-4.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-4.1
+    close_mappings:
+      - eticas-synthetic-media-abuse
+    type: Risk
+  - id: eticas-synthetic-media-abuse
+    close_mappings:
+      - nist-information-integrity
+    type: Risk
+  - id: nist-information-integrity
+    close_mappings:
+      - eticas-synthetic-media-abuse
+    type: Risk
+  - id: eticas-system-explainability
+    close_mappings:
+      - atlas-unexplainable-output
+    type: Risk
+  - id: atlas-unexplainable-output
+    close_mappings:
+      - eticas-system-explainability
+    type: Risk
+  - id: eticas-system-explainability
+    close_mappings:
+      - mit-ai-risk-subdomain-7.4
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.4
+    close_mappings:
+      - eticas-system-explainability
+    type: Risk
+  - id: eticas-training-resource-consumption
+    narrow_mappings:
+      - mit-ai-risk-subdomain-6.6
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.6
+    narrow_mappings:
+      - eticas-training-resource-consumption
+    type: Risk
+  - id: eticas-training-resource-consumption
+    narrow_mappings:
+      - nist-environmental-impacts
+    type: Risk
+  - id: nist-environmental-impacts
+    narrow_mappings:
+      - eticas-training-resource-consumption
+    type: Risk
+  - id: atlas-unexplainable-output
+    close_mappings:
+      - eticas-transparency-explainability
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.4
+    close_mappings:
+      - eticas-transparency-explainability
+    type: Risk
+  - id: eticas-trust-exploitation-between-agents
+    close_mappings:
+      - mit-ai-risk-subdomain-7.6
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.6
+    close_mappings:
+      - eticas-trust-exploitation-between-agents
+    type: Risk
+  - id: eticas-unclear-responsibilities
+    close_mappings:
+      - mit-ai-risk-subdomain-6.5
+    type: Risk
+  - id: mit-ai-risk-subdomain-6.5
+    close_mappings:
+      - eticas-unclear-responsibilities
+    type: Risk
+  - id: eticas-unlawful-data-processing
+    close_mappings:
+      - mit-ai-risk-subdomain-2.1
+    type: Risk
+  - id: mit-ai-risk-subdomain-2.1
+    close_mappings:
+      - eticas-unlawful-data-processing
+    type: Risk
+  - id: eticas-unlawful-data-processing
+    close_mappings:
+      - nist-data-privacy
+    type: Risk
+  - id: nist-data-privacy
+    close_mappings:
+      - eticas-unlawful-data-processing
+    type: Risk
+  - id: eticas-unsafe-tool-calls
+    close_mappings:
+      - mit-ai-risk-subdomain-7.6
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.6
+    close_mappings:
+      - eticas-unsafe-tool-calls
+    type: Risk
+  - id: eticas-untraceable-agent-actions
+    close_mappings:
+      - atlas-unexplainable-output
+    type: Risk
+  - id: atlas-unexplainable-output
+    close_mappings:
+      - eticas-untraceable-agent-actions
+    type: Risk
+  - id: eticas-untraceable-agent-actions
+    close_mappings:
+      - mit-ai-risk-subdomain-7.4
+    type: Risk
+  - id: mit-ai-risk-subdomain-7.4
+    close_mappings:
+      - eticas-untraceable-agent-actions
+    type: Risk

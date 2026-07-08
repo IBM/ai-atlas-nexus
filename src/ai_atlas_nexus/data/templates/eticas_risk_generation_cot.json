@@ -1,0 +1,33 @@
+{
+  "eticas-ai-risk-taxonomy": [
+    {
+      "Usecase": "An LLM-based system that scores CVs and ranks candidates for shortlisting, deployed by a public sector organisation to support recruitment decisions across multiple job grades. The system was trained on historical hiring data and produces a shortlisting recommendation for each applicant.",
+      "Risks": [
+        "Disparate impact on protected groups",
+        "Differential performance across populations",
+        "Fitness for purpose and task effectiveness",
+        "Right to explanation and contestation",
+        "Poor documentation",
+        "Human oversight and control",
+        "Measurement validity of evaluative outputs",
+        "Data governance",
+        "Regulatory non-compliance"
+      ]
+    },
+    {
+      "Usecase": "A retrieval-augmented generation (RAG) system deployed by a financial services firm to handle customer queries by retrieving from an internal knowledge base of product documentation, regulatory guidance, and past case notes. The system responds directly to customers without mandatory human review.",
+      "Risks": [
+        "Hallucination and fabricated outputs",
+        "PII leakage through model outputs",
+        "Confidential information leakage through model outputs",
+        "Output inconsistency",
+        "Inadequate disclosure of system capabilities and limitations",
+        "Disclosure of AI interaction and synthetic content",
+        "Monitoring and evaluation gaps",
+        "Incident response gaps",
+        "Prompt injection",
+        "Unauthorised access"
+      ]
+    }
+  ]
+}

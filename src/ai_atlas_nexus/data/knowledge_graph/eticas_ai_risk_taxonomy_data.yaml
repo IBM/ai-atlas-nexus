@@ -1,0 +1,702 @@
+taxonomies:
+  - id: eticas-ai-risk-taxonomy
+    name: Eticas AI Risk Taxonomy
+    description: An auditor-facing AI risk taxonomy developed by Eticas, an AI auditing
+      company. Covers Bias & Fairness, Privacy & Confidentiality, Reliability, Security
+      & Misuse, Transparency & Explainability, Governance, Environmental Impact, Autonomy
+      & Agency, Organisational Readiness, and Agentic AI. Designed for operationalisation
+      in third-party AI audits. Version 1.5.0.
+    url: https://taxonomy.eticas.ai
+    version: 1.5.0
+groups:
+  - id: eticas-bias-fairness
+    type: RiskGroup
+    name: Bias & Fairness
+    description:
+      The risk that an AI system produces outcomes that systematically advantage
+      or disadvantage individuals or groups based on protected or sensitive attributes,
+      leading to unequal treatment, reduced accuracy, or unjust impacts.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-bias-outcome-disparities
+    type: RiskGroup
+    name: Outcome disparities
+    description: Risks related to unequal treatment, allocation, or performance outcomes
+      across demographic and protected groups.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-bias-fairness
+  - id: eticas-bias-representational-harm
+    type: RiskGroup
+    name: Representational harm
+    description: Risks related to how the system represents groups in its outputs —
+      through stereotypes, toxic content, skewed representation, or homogenization.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-bias-fairness
+  - id: eticas-bias-dynamic-systemic-bias
+    type: RiskGroup
+    name: Dynamic & Systemic bias
+    description: Risks related to how bias is amplified or perpetuated over time through
+      interaction between AI systems and the social systems they operate in.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-bias-fairness
+  - id: eticas-privacy-confidentiality
+    type: RiskGroup
+    name: Privacy & Confidentiality
+    description: The risk that an AI system collects, processes, or infers personal
+      information in ways that infringe on individuals' rights to control their data,
+      or that sensitive information is exposed, accessed, or shared without authorization.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-privacy-collection-use
+    type: RiskGroup
+    name: Data collection & use
+    description: Risks from how personal data is collected, processed, and repurposed.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-privacy-confidentiality
+  - id: eticas-privacy-data-protection
+    type: RiskGroup
+    name: Data protection
+    description: Risks related to safeguards for stored and processed personal data.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-privacy-confidentiality
+  - id: eticas-privacy-model-level
+    type: RiskGroup
+    name: Model-level privacy
+    description: Risks from AI models leaking or exposing private information through
+      their outputs or structure.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-privacy-confidentiality
+  - id: eticas-reliability
+    type: RiskGroup
+    name: Reliability
+    description:
+      Risks arising from an AI system's failure to perform dependably — whether
+      through degraded output integrity and robustness, or through inability to maintain
+      function under adverse or changing conditions.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-reliability-output-quality
+    type: RiskGroup
+    name: Output Integrity and Robustness
+    description: Risks including hallucinations, output inconsistency, model drift,
+      and out-of-distribution failures that undermine the dependability and trustworthiness
+      of system outputs.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-reliability
+  - id: eticas-reliability-measurement-validity
+    type: RiskGroup
+    name: Measurement Validity
+    description:
+      Risks arising when AI systems that produce evaluative judgements, scores,
+      or rankings fail to validly measure the constructs they purport to measure — through
+      under-sensitivity to relevant evidence or contamination by irrelevant signals.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-reliability
+  - id: eticas-reliability-resilience
+    type: RiskGroup
+    name: Operational Resilience
+    description: Risks related to the system's ability to absorb disruption, degrade
+      gracefully, and recover.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-reliability
+  - id: eticas-governance
+    type: RiskGroup
+    name: Governance
+    description: The risk that an AI system lacks adequate structures, policies, or
+      accountability mechanisms to oversee its design, deployment, and use.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-governance-accountability
+    type: RiskGroup
+    name: Accountability
+    description: Risks from unclear allocation of responsibility, weak human oversight,
+      and inadequate attribution mechanisms for AI system decisions and their adverse
+      impacts.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-governance
+  - id: eticas-governance-documentation
+    type: RiskGroup
+    name: Documentation & auditability
+    description: Risks from incomplete, inaccessible, or absent documentation and audit
+      trails.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-governance
+  - id: eticas-governance-compliance
+    type: RiskGroup
+    name: Compliance & process
+    description: Risks from gaps in organisational processes for ongoing oversight,
+      compliance, and lifecycle management of AI systems.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-governance
+  - id: eticas-security-misuse
+    type: RiskGroup
+    name: Security & Misuse
+    description: The risk that an AI system is exposed to AI-specific vulnerabilities,
+      attacks, or misuse that compromise its integrity, availability, or confidentiality.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-security-ai-attacks
+    type: RiskGroup
+    name: Adversarial Threats & Attacks
+    description: The risks that arise from adversarial inputs, injected instructions,
+      bypassed safety controls, or corrupted training data.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-security-misuse
+  - id: eticas-security-system
+    type: RiskGroup
+    name: Infrastructure & System security
+    description: The risks that arise from unauthorised access, vulnerable third-party
+      components, or over-disclosure of technical details that enable targeting.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-security-misuse
+  - id: eticas-security-harmful-misuse
+    type: RiskGroup
+    name: Harmful & Malicious Misuse
+    description:
+      Risks from deliberate misuse of the AI system to generate harmful content,
+      manipulate users, or operate beyond its intended purpose.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-security-misuse
+  - id: eticas-environmental-impact
+    type: RiskGroup
+    name: Environmental Impact
+    description: The risk that an AI system's development, deployment, or use causes
+      negative environmental effects, such as excessive energy or water consumption,
+      carbon emissions, or unsustainable use of hardware and resources.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-transparency-explainability
+    type: RiskGroup
+    name: Transparency & Explainability
+    description: The risk that stakeholders cannot understand how an AI system works,
+      what it does, or why it produces specific outputs.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-transparency-explainability-group
+    type: RiskGroup
+    name: Explainability
+    description:
+      Risks from stakeholders being unable to understand why the system produces
+      specific outputs.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-transparency-explainability
+  - id: eticas-transparency-communication
+    type: RiskGroup
+    name: Communication & disclosure
+    description:
+      Risks from inadequate communication about system capabilities, limitations,
+      and AI involvement.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-transparency-explainability
+  - id: eticas-agentic-ai
+    type: RiskGroup
+    name: Agentic AI
+    description: Risks arising from AI systems that autonomously plan, reason, and act
+      across multiple steps using tools, memory, and external services, beyond single-inference
+      interactions.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+  - id: eticas-agentic-actions-tool-use
+    type: RiskGroup
+    name: Autonomous Actions and Tool Use
+    description: Risks from the agent taking real-world actions through external tools,
+      APIs, and services.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-agentic-ai
+  - id: eticas-agentic-multi-agent-integrity
+    type: RiskGroup
+    name: Multi-agent Integrity
+    description:
+      Risks from systems composed of multiple agents — including trust exploitation,
+      cascading failures, goal misalignment between agents, and insufficient traceability
+      across the pipeline.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    broader:
+      - eticas-agentic-ai
+entries:
+  - id: eticas-disparate-impact-protected-groups
+    type: Risk
+    name: Disparate impact on protected groups
+    description:
+      The system produces systematically different — typically worse — outcomes
+      for individuals belonging to protected groups, including across multiple intersecting
+      attributes.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-outcome-disparities
+  - id: eticas-performance-equity
+    type: Risk
+    name: Differential performance across populations
+    description: The AI system performs systematically worse for some demographic groups
+      than others — through higher error rates, lower accuracy, or reduced reliability.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-outcome-disparities
+  - id: eticas-geographic-cultural-language-skew
+    type: Risk
+    name: Geographic, cultural, or language skew
+    description: Systematic performance differences across geographies, cultures, or
+      languages, often resulting from training data that overrepresents certain regions
+      or linguistic traditions.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-representational-harm
+  - id: eticas-stereotyping-demeaning-content
+    type: Risk
+    name: Stereotyping and demeaning content
+    description:
+      AI system outputs that reinforce, perpetuate, erase, or demean demographic
+      groups through stereotypical representations or language.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-representational-harm
+  - id: eticas-harmful-content-toxicity
+    type: Risk
+    name: Harmful content and toxicity
+    description:
+      Offensive, hateful, or otherwise harmful outputs that damage user well-being
+      and erode trust.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-representational-harm
+  - id: eticas-sentiment-fairness
+    type: Risk
+    name: Sentiment and quality disparity across groups
+    description:
+      The system produces outputs of systematically different tone, sentiment,
+      or quality when describing or addressing different demographic groups.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-representational-harm
+  - id: eticas-homogenization-output-across-groups
+    type: Risk
+    name: Homogenization of output across groups
+    description:
+      The system produces outputs that flatten cultural, linguistic, or stylistic
+      diversity, defaulting to dominant patterns and erasing distinctive characteristics
+      of underrepresented groups.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-representational-harm
+  - id: eticas-feedback-loops
+    type: Risk
+    name: Feedback loops reinforcing inequality
+    description: System outputs that, when fed back into the system or its operational
+      context, amplify existing biases over time.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-bias-dynamic-systemic-bias
+  - id: eticas-unlawful-data-processing
+    type: Risk
+    name: Unlawful collection or processing of personal data
+    description: Collection, storage, or processing of personal data without adequate
+      legal basis, consent, or compliance with applicable data protection regulations.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-privacy-collection-use
+  - id: eticas-function-creep
+    type: Risk
+    name: Function creep
+    description: Repurposing of personal data beyond the original intent or consent
+      scope, including secondary uses not anticipated at collection time.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-privacy-collection-use
+  - id: eticas-inference-based-profiling
+    type: Risk
+    name: Inference-based profiling of sensitive attributes
+    description:
+      Inference of sensitive attributes or characteristics — emotional states,
+      political opinions, sexual orientation, health status, and similar — from behavioural,
+      interaction, or other proxy data the individual did not directly disclose.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-privacy-collection-use
+  - id: eticas-weak-data-controls
+    type: Risk
+    name: Weak data retention, erasure, and access controls
+    description: Insufficient policies or technical measures for data retention limits,
+      secure deletion, and access restrictions.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-privacy-data-protection
+  - id: eticas-re-identification
+    type: Risk
+    name: Re-identification of anonymised data
+    description: The possibility that anonymised or pseudonymised data can be linked
+      back to specific individuals through inference, combination with other datasets,
+      or model outputs.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-privacy-data-protection
+  - id: eticas-pii-leakage
+    type: Risk
+    name: PII leakage through model outputs
+    description: Personal data present in training data surfacing in model outputs,
+      either through memorisation or through responses that reveal sensitive information
+      about individuals.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-privacy-model-level
+  - id: eticas-confidential-information-leakage
+    type: Risk
+    name: Confidential information leakage through model outputs
+    description: Exposure of non-personal confidential information — trade secrets,
+      proprietary business data, or other parties' confidential material present in
+      training data, context, or connected systems — through model outputs.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-privacy-model-level
+  - id: eticas-hallucination
+    type: Risk
+    name: Hallucination and fabricated outputs
+    description: Generation of false, fabricated, or misleading information that appears
+      credible, including invented facts, statistics, citations, or events.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-output-quality
+  - id: eticas-output-inconsistency
+    type: Risk
+    name: Output inconsistency
+    description: Inconsistent results across similar inputs and contexts, undermining
+      reproducibility and user trust.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-output-quality
+  - id: eticas-output-drift
+    type: Risk
+    name: Output drift over time
+    description: Degradation of output quality or accuracy as data distributions, user
+      behaviour, or operating conditions change after deployment.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-output-quality
+  - id: eticas-out-of-distribution-robustness
+    type: Risk
+    name: Out-of-distribution robustness
+    description: Unpredictable behaviour or failure when the system is exposed to inputs
+      outside the distribution of its training data.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-output-quality
+  - id: eticas-measurement-validity
+    type: Risk
+    name: Measurement validity of evaluative outputs
+    description: For systems that produce evaluative judgements or scores, the risk
+      that the output does not validly reflect the construct it purports to measure.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-measurement-validity
+  - id: eticas-graceful-degradation
+    type: Risk
+    name: Graceful degradation
+    description:
+      Absence of defined degradation pathways that allow the system to maintain
+      partial function when components fail, connectivity is lost, or resources are
+      constrained.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-resilience
+  - id: eticas-recovery-capability
+    type: Risk
+    name: Recovery capability
+    description: Lack of tested recovery procedures, rollback mechanisms, or recovery
+      time objectives for restoring system function after disruption.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-resilience
+  - id: eticas-infrastructure-dependency
+    type: Risk
+    name: Infrastructure dependency
+    description: Unmapped or unmitigated dependencies on external infrastructure whose
+      failure would disable the system.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-resilience
+  - id: eticas-contextual-resilience
+    type: Risk
+    name: Contextual and ethical resilience
+    description:
+      Absence of safeguards against function creep, weaponisation, or repurposing
+      of the system against the populations it was designed to serve.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-reliability-resilience
+  - id: eticas-unclear-responsibilities
+    type: Risk
+    name: Unclear responsibilities and accountability gaps
+    description: Missing or ambiguous assignment of roles and responsibilities for AI
+      system design, deployment, monitoring, and incident response.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-accountability
+  - id: eticas-responsible-actor-attribution
+    type: Risk
+    name: Responsible actor attribution
+    description: Unclear or undocumented roles of developers, deployers, or reviewers,
+      creating accountability gaps.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-accountability
+  - id: eticas-oversight-of-adverse-impacts
+    type: Risk
+    name: Oversight of significant adverse impacts
+    description:
+      Missing processes for identifying, escalating, and responding to harmful
+      outcomes.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-accountability
+  - id: eticas-human-oversight-control
+    type: Risk
+    name: Human oversight and control
+    description: Lack of defined intervention points, override capabilities, or human
+      review mechanisms.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-accountability
+  - id: eticas-supply-chain-vulnerabilities
+    type: Risk
+    name: Supply-chain vulnerabilities
+    description: Risks introduced through third-party components, pre-trained models,
+      data sources, or other dependencies not fully under the deployer's control.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-accountability
+  - id: eticas-poor-documentation
+    type: Risk
+    name: Poor documentation
+    description:
+      Incomplete, outdated, or absent documentation of system purpose, architecture,
+      data sources, known limitations, and operational procedures.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-documentation
+  - id: eticas-limited-auditability
+    type: Risk
+    name: Limited auditability
+    description:
+      Insufficient logging, versioning, or traceability for meaningful external
+      review or internal audit.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-documentation
+  - id: eticas-decision-traceability
+    type: Risk
+    name: Decision traceability
+    description: Inability to trace decisions made or influenced by the AI system back
+      to specific inputs, processes, or actors.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-documentation
+  - id: eticas-input-output-logging
+    type: Risk
+    name: Critical input/output logging
+    description: Failure to log inputs and outputs systematically, hindering detection
+      of failures, bias, or misuse.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-documentation
+  - id: eticas-regulatory-non-compliance
+    type: Risk
+    name: Regulatory non-compliance
+    description: Failure to align with applicable legal, ethical, or organisational
+      standards, including sector-specific regulations.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-compliance
+  - id: eticas-lack-of-change-management
+    type: Risk
+    name: Lack of change management
+    description: Absence of controlled processes for system modifications, including
+      uncontrolled changes to production systems.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-compliance
+  - id: eticas-fitness-for-purpose
+    type: Risk
+    name: Fitness for purpose and task effectiveness
+    description: The system has not been validated against the problem it is intended
+      to solve, or does not achieve adequate or equitable task performance.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-compliance
+  - id: eticas-data-governance
+    type: Risk
+    name: Data governance
+    description: Inadequate labelling, tagging, approval, or appropriateness assessment
+      of data, leading to downstream issues with fitness for purpose, bias, and compliance.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-compliance
+  - id: eticas-failure-remediation-gaps
+    type: Risk
+    name: Failure and remediation gaps
+    description: Absence of remediation plans for predictable or unknown failure modes,
+      leaving critical services unable to recover or degrade gracefully.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-compliance
+  - id: eticas-monitoring-evaluation-gaps
+    type: Risk
+    name: Monitoring and evaluation gaps
+    description: Lack of ongoing monitoring that renders datasets obsolete and system
+      outputs unreliable, including absence of feedback mechanisms and periodic evaluation.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-compliance
+  - id: eticas-incident-response-gaps
+    type: Risk
+    name: Incident response gaps
+    description: Insufficient detection, logging, escalation, or response capabilities
+      for security incidents and misuse events.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-governance-compliance
+  - id: eticas-adversarial-attacks
+    type: Risk
+    name: Adversarial attacks
+    description:
+      Evasion, poisoning, and extraction attacks designed to manipulate system
+      behaviour, corrupt training data, or steal model information.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-ai-attacks
+  - id: eticas-prompt-injection
+    type: Risk
+    name: Prompt injection
+    description:
+      Malicious inputs designed to subvert system intent by injecting instructions
+      that override the system prompt.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-ai-attacks
+  - id: eticas-jailbreaking
+    type: Risk
+    name: Jailbreaking
+    description: Techniques used to bypass safety controls, content filters, or usage
+      restrictions to trigger prohibited behaviours or outputs.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-ai-attacks
+  - id: eticas-model-extraction
+    type: Risk
+    name: Model extraction
+    description: Attacks that aim to recover or replicate the underlying AI model, its
+      parameters, or its training data through queried interactions.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-ai-attacks
+  - id: eticas-data-poisoning
+    type: Risk
+    name: Data poisoning
+    description: Adversarial manipulation of training or fine-tuning data to introduce
+      backdoors, bias, or systematic errors into the model.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-ai-attacks
+  - id: eticas-unauthorized-access
+    type: Risk
+    name: Unauthorized access
+    description: Exploitation of access control weaknesses to gain unauthorized access
+      to the system, its data, or its administrative functions.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-system
+  - id: eticas-misuse-beyond-intended-purpose
+    type: Risk
+    name: Misuse beyond intended purpose
+    description:
+      Use of the system for purposes it was not designed for, including repurposing
+      for surveillance, manipulation, or other harmful applications.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-harmful-misuse
+  - id: eticas-behavioural-manipulation
+    type: Risk
+    name: Behavioural manipulation
+    description:
+      Subliminal influence, dark patterns, or exploitation of cognitive biases
+      to steer user behaviour without informed consent.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-harmful-misuse
+  - id: eticas-synthetic-media-abuse
+    type: Risk
+    name: Synthetic media abuse
+    description:
+      Generation of deepfakes, fake voices, or undisclosed AI-generated content
+      used to deceive or harm.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-harmful-misuse
+  - id: eticas-csam-ncii-generation
+    type: Risk
+    name: CSAM and NCII generation
+    description: Generation by the AI system of child sexual abuse material (CSAM) or
+      non-consensual intimate imagery (NCII).
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-security-harmful-misuse
+  - id: eticas-inference-energy-consumption
+    type: Risk
+    name: Inference-time energy consumption
+    description:
+      High energy use during deployment and inference, increasing environmental
+      impact and infrastructure costs.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-environmental-impact
+  - id: eticas-training-resource-consumption
+    type: Risk
+    name: Training resource consumption
+    description:
+      Significant carbon emissions, energy use, and water consumption associated
+      with model training.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-environmental-impact
+  - id: eticas-hardware-efficiency
+    type: Risk
+    name: Hardware efficiency
+    description: Poor hardware utilisation increasing costs, environmental footprint,
+      and limiting the feasibility of equitable access to AI capabilities.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-environmental-impact
+  - id: eticas-system-explainability
+    type: Risk
+    name: AI system explainability
+    description: Stakeholders misinterpret or misunderstand the intended purpose or
+      use of an AI system based on its outputs, due to insufficient explanation of how
+      outputs are produced.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-transparency-explainability-group
+  - id: eticas-right-to-explanation-contestation
+    type: Risk
+    name: Right to explanation and contestation
+    description: The risk that affected individuals are not informed about decisions
+      taken with AI assistance, do not receive a meaningful explanation, or have no
+      effective channel to challenge or appeal them.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-transparency-explainability-group
+  - id: eticas-stakeholder-communication
+    type: Risk
+    name: Inadequate disclosure of system capabilities and limitations
+    description: The AI system's capabilities, limitations, intended use cases, and
+      known failure modes are not communicated clearly to deployers, users, or affected
+      parties.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-transparency-communication
+  - id: eticas-ai-interaction-disclosure
+    type: Risk
+    name: Disclosure of AI interaction and synthetic content
+    description: Failure to disclose that a person is interacting with an AI system,
+      or that content was generated or manipulated by AI.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-transparency-communication
+  - id: eticas-unsafe-tool-calls
+    type: Risk
+    name: Unsafe or unauthorised tool calls
+    description: The agent invokes tools, APIs, or services beyond its intended scope.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-agentic-actions-tool-use
+  - id: eticas-function-calling-hallucination
+    type: Risk
+    name: Function calling hallucination
+    description: The agent generates incorrect or malformed function calls, causing
+      downstream failures or unintended system interactions.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-agentic-actions-tool-use
+  - id: eticas-excessive-agency
+    type: Risk
+    name: Excessive agency
+    description: The agent has been granted more permissions, capabilities, or access
+      rights than necessary for its defined task.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-agentic-actions-tool-use
+  - id: eticas-scope-creep-goal-misalignment
+    type: Risk
+    name: Scope creep and goal misalignment
+    description:
+      The agent pursues its objective in ways that exceed intended boundaries,
+      develop unintended sub-goals, or conflict with user intent.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-agentic-actions-tool-use
+  - id: eticas-redundant-actions
+    type: Risk
+    name: Redundant actions
+    description: Risks specific to agent task execution arising from poorly scoped operation.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-agentic-actions-tool-use
+  - id: eticas-trust-exploitation-between-agents
+    type: Risk
+    name: Trust exploitation between agents
+    description: A compromised or malicious agent manipulates other agents in a pipeline
+      by exploiting implicit trust in inter-agent communication.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-agentic-multi-agent-integrity
+  - id: eticas-untraceable-agent-actions
+    type: Risk
+    name: Unexplainable and untraceable actions
+    description: Agent actions across multi-step pipelines cannot be reconstructed,
+      explained, or attributed.
+    isDefinedByTaxonomy: eticas-ai-risk-taxonomy
+    isPartOf: eticas-agentic-multi-agent-integrity
