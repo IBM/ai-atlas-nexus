@@ -415,6 +415,8 @@ class AIAtlasNexus:
             risk = cls.get_risk(id=id)
         elif tag:
             risk = cls.get_risk(tag=tag)
+        elif name:
+            risk = cls.get_risk(name=name)
 
         # just get all the related risks from the risk, these should have been added during lifting
         options = [

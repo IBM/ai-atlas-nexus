@@ -131,6 +131,14 @@ class TestLibrary(TestCaseBase):
         risks = ran_lib.get_related_risks(id="granite-function-call")
         self.assertGreater(len(risks), 0)
 
+    def test_get_related_risks_by_name(self):
+        """Get related risk definitions from the LinkML, by risk name"""
+        ran_lib = self.ran_lib
+        risks = ran_lib.get_related_risks(name="Toxic output")
+        self.assertGreater(len(risks), 0)
+        risks_by_id = ran_lib.get_related_risks(id="atlas-toxic-output")
+        assert [i.id for i in risks] == [i.id for i in risks_by_id]
+
     def test_get_risk_actions_by_risk_id(self):
         """Get related actions definitions from the LinkML, by risk id"""
         ran_lib = self.ran_lib
