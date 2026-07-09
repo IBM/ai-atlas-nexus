@@ -3,8 +3,8 @@ name: ai_eval
 description: Defines vocabulary relating to AI model evaluation
 imports:
   - linkml:types
-  - common
-  - ai_risk
+  - ./common
+  - ./ai_risk
 default_curi_maps:
   - semweb_context
 prefixes:
