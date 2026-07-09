@@ -88,11 +88,9 @@ class AtlasExplorer(ExplorerBase):
 
         taxonomies = []
 
-        if taxonomy is None:
-            taxonomies = ["ibm-risk-atlas"]
-        elif isinstance(taxonomy, str):
+        if isinstance(taxonomy, str):
             taxonomies.append(taxonomy)
-        else:
+        elif taxonomy is not None:
             taxonomies = taxonomy
 
         cache_key = (
@@ -101,7 +99,7 @@ class AtlasExplorer(ExplorerBase):
                 if isinstance(class_names, list)
                 else class_name
             ),
-            tuple(taxonomies),
+            tuple(taxonomies) if taxonomy is not None else None,
             vocabulary,
             document,
         )

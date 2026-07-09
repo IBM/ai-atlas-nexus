@@ -424,6 +424,22 @@ class TestLibrary(TestCaseBase):
         # Cache should have two entries for these different queries
         self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 2)
 
+    def test_get_all_cache_taxonomy_none_distinct(self):
+        """Verify unfiltered and taxonomy-filtered get_all do not share a cache entry"""
+        ran_lib = self.ran_lib
+        # filtered first, then unfiltered
+        ran_lib._atlas_explorer.clear_cache()
+        filtered = ran_lib.get_all("risks", taxonomy="ibm-risk-atlas")
+        all_risks = ran_lib.get_all("risks")
+        self.assertGreater(len(all_risks), len(filtered))
+        self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 2)
+        # reverse order on a cold cache: filtered call must not get the unfiltered entry
+        ran_lib._atlas_explorer.clear_cache()
+        all_risks_2 = ran_lib.get_all("risks")
+        filtered_2 = ran_lib.get_all("risks", taxonomy="ibm-risk-atlas")
+        self.assertEqual(len(all_risks_2), len(all_risks))
+        self.assertEqual(len(filtered_2), len(filtered))
+
     def test_clear_cache_invalidates_all_caches(self):
         """Verify that clear_cache() invalidates both caches"""
         ran_lib = self.ran_lib
