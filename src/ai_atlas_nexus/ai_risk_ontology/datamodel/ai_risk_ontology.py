@@ -2973,7 +2973,7 @@ class AiSystem(BaseAi, Entry):
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
          'slot_uri': 'airo:isUsedWithinLocality'} })
     hasPurpose: Optional[list[str]] = Field(default=None, description="""Indicates the purpose of an entity, e.g. AI system, components.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasPurpose'} })
-    hasStakeholder: Optional[str] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
+    hasStakeholder: Optional[list[str]] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
     isDeployedBy: Optional[str] = Field(default=None, description="""Indicates the deployer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDeployedBy'} })
     isDevelopedBy: Optional[str] = Field(default=None, description="""Indicates the developer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDevelopedBy'} })
     hasAISubject: Optional[list[str]] = Field(default=None, description="""Indicates the subjects of an AI system""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasAISubject'} })
@@ -3118,7 +3118,7 @@ class AiAgent(AiSystem):
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
          'slot_uri': 'airo:isUsedWithinLocality'} })
     hasPurpose: Optional[list[str]] = Field(default=None, description="""Indicates the purpose of an entity, e.g. AI system, components.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasPurpose'} })
-    hasStakeholder: Optional[str] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
+    hasStakeholder: Optional[list[str]] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
     isDeployedBy: Optional[str] = Field(default=None, description="""Indicates the deployer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDeployedBy'} })
     isDevelopedBy: Optional[str] = Field(default=None, description="""Indicates the developer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDevelopedBy'} })
     hasAISubject: Optional[list[str]] = Field(default=None, description="""Indicates the subjects of an AI system""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasAISubject'} })

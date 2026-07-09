@@ -401,6 +401,7 @@ slots:
       Indicate the end-user of an AI system.
   hasStakeholder:
     slot_uri: airo:hasStakeholder
+    multivalued: true
     range: Stakeholder
     description: >-
       Indicates stakeholders of an AI system or component.
