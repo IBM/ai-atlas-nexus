@@ -5,9 +5,9 @@ taxonomies:
       company. Covers Bias & Fairness, Privacy & Confidentiality, Reliability, Security
       & Misuse, Transparency & Explainability, Governance, Environmental Impact, Autonomy
       & Agency, Organisational Readiness, and Agentic AI. Designed for operationalisation
-      in third-party AI audits. Version 1.5.0.
+      in third-party AI audits.
     url: https://taxonomy.eticas.ai
-    version: 1.5.0
+    version: 2.0.0
 groups:
   - id: eticas-bias-fairness
     type: RiskGroup
