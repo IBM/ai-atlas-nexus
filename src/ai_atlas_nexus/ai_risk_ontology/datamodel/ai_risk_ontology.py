@@ -62,13 +62,13 @@ linkml_meta = LinkMLMeta({'default_curi_maps': ['semweb_context'],
      'description': 'An ontology describing AI systems and their risks',
      'id': 'https://w3id.org/ai-atlas-nexus/ai-risk-ontology',
      'imports': ['linkml:types',
-                 'common',
-                 'ai_risk',
-                 'ai_capability',
-                 'ai_system',
-                 'ai_eval',
-                 'ai_intrinsic',
-                 'ai_aiuc'],
+                 './common',
+                 './ai_risk',
+                 './ai_capability',
+                 './ai_system',
+                 './ai_eval',
+                 './ai_intrinsic',
+                 './ai_aiuc'],
      'license': 'https://www.apache.org/licenses/LICENSE-2.0.html',
      'name': 'ai-risk-ontology',
      'prefixes': {'airo': {'prefix_prefix': 'airo',
@@ -85,21 +85,6 @@ class Jurisdiction(str):
     ISO 3166-1 country code, sourced from the DPV Location ontology (https://w3id.org/dpv/loc). Values are subclasses of dpv:Country.
     """
     pass
-
-
-class AdapterType(str, Enum):
-    LORA = "LORA"
-    """
-    Low-rank adapters, or LoRAs, are a fast way to give generalist large language models targeted knowledge and skills so they can do things like summarize IT manuals or rate the accuracy of their own answers. LoRA reduces the number of trainable parameters by learning pairs of rank-decompostion matrices while freezing the original weights. This vastly reduces the storage requirement for large language models adapted to specific tasks and enables efficient task-switching during deployment all without introducing inference latency. LoRA also outperforms several other adaptation methods including adapter, prefix-tuning, and fine-tuning. See arXiv:2106.09685
-    """
-    ALORA = "ALORA"
-    """
-    Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reusing existing base model KV cache for more efficient inference, unlike standard LoRA models. As a result, aLoRA models can be quickly invoked as-needed for specialized tasks during (long) flows where the base model is primarily used, avoiding potentially expensive prefill costs in terms of latency, throughput, and GPU memory. See arXiv:2504.12397 for further details.
-    """
-    X_LORA = "X-LORA"
-    """
-    Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse gating to dynamically activate LoRA experts.
-    """
 
 
 class EuAiRiskCategory(str, Enum):
@@ -149,6 +134,21 @@ class AiSystemType(str, Enum):
     HIGH_RISK = "HIGH_RISK"
     """
     AI systems pursuant to Article 6(1)(2) Classification Rules for High-Risk AI Systems
+    """
+
+
+class AdapterType(str, Enum):
+    LORA = "LORA"
+    """
+    Low-rank adapters, or LoRAs, are a fast way to give generalist large language models targeted knowledge and skills so they can do things like summarize IT manuals or rate the accuracy of their own answers. LoRA reduces the number of trainable parameters by learning pairs of rank-decompostion matrices while freezing the original weights. This vastly reduces the storage requirement for large language models adapted to specific tasks and enables efficient task-switching during deployment all without introducing inference latency. LoRA also outperforms several other adaptation methods including adapter, prefix-tuning, and fine-tuning. See arXiv:2106.09685
+    """
+    ALORA = "ALORA"
+    """
+    Activated LoRA (aLoRA) is a low rank adapter architecture that allows for reusing existing base model KV cache for more efficient inference, unlike standard LoRA models. As a result, aLoRA models can be quickly invoked as-needed for specialized tasks during (long) flows where the base model is primarily used, avoiding potentially expensive prefill costs in terms of latency, throughput, and GPU memory. See arXiv:2504.12397 for further details.
+    """
+    X_LORA = "X-LORA"
+    """
+    Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse gating to dynamically activate LoRA experts.
     """
 
 
@@ -2973,7 +2973,7 @@ class AiSystem(BaseAi, Entry):
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
          'slot_uri': 'airo:isUsedWithinLocality'} })
     hasPurpose: Optional[list[str]] = Field(default=None, description="""Indicates the purpose of an entity, e.g. AI system, components.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasPurpose'} })
-    hasStakeholder: Optional[str] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
+    hasStakeholder: Optional[list[str]] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
     isDeployedBy: Optional[str] = Field(default=None, description="""Indicates the deployer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDeployedBy'} })
     isDevelopedBy: Optional[str] = Field(default=None, description="""Indicates the developer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDevelopedBy'} })
     hasAISubject: Optional[list[str]] = Field(default=None, description="""Indicates the subjects of an AI system""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasAISubject'} })
@@ -3118,7 +3118,7 @@ class AiAgent(AiSystem):
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
          'slot_uri': 'airo:isUsedWithinLocality'} })
     hasPurpose: Optional[list[str]] = Field(default=None, description="""Indicates the purpose of an entity, e.g. AI system, components.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasPurpose'} })
-    hasStakeholder: Optional[str] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
+    hasStakeholder: Optional[list[str]] = Field(default=None, description="""Indicates stakeholders of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasStakeholder'} })
     isDeployedBy: Optional[str] = Field(default=None, description="""Indicates the deployer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDeployedBy'} })
     isDevelopedBy: Optional[str] = Field(default=None, description="""Indicates the developer of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:isDevelopedBy'} })
     hasAISubject: Optional[list[str]] = Field(default=None, description="""Indicates the subjects of an AI system""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem'], 'slot_uri': 'airo:hasAISubject'} })
@@ -5719,6 +5719,28 @@ class Questionnaire(AiEval):
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
 
 
+class AiOffice(Organization):
+    """
+    The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Organization',
+         'from_schema': 'https://w3id.org/ai-atlas-nexus/eu_ai_act'})
+
+    grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+
+
 class Adapter(LargeLanguageModel, Entry):
     """
     Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)
@@ -5981,28 +6003,6 @@ class LLMIntrinsic(Entry):
                        'ControlActivityObligation',
                        'ControlActivityRecommendation',
                        'Requirement']} })
-    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
-    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
-    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
-    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
-    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
-    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
-    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
-    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
-    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
-    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
-    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
-    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-
-
-class AiOffice(Organization):
-    """
-    The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)
-    """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'schema:Organization',
-         'from_schema': 'https://w3id.org/ai-atlas-nexus/eu_ai_act'})
-
-    grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -6652,9 +6652,9 @@ EveryEvalAIResult.model_rebuild()
 BenchmarkMetadataCard.model_rebuild()
 Question.model_rebuild()
 Questionnaire.model_rebuild()
+AiOffice.model_rebuild()
 Adapter.model_rebuild()
 LLMIntrinsic.model_rebuild()
-AiOffice.model_rebuild()
 ControlActivity.model_rebuild()
 ControlActivityPermission.model_rebuild()
 ControlActivityProhibition.model_rebuild()

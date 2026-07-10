@@ -3,8 +3,8 @@ name: eu_ai_act
 description: Vocabulary pertaining to the EU AI Act
 imports:
   - linkml:types
-  - common
-  - ai_system
+  - ./common
+  - ./ai_system
 default_curi_maps:
   - semweb_context
 prefixes:

@@ -7,13 +7,13 @@ default_curi_maps:
   - semweb_context
 imports:
   - linkml:types
-  - common
-  - ai_risk
-  - ai_capability
-  - ai_system
-  - ai_eval
-  - ai_intrinsic
-  - ai_aiuc
+  - ./common
+  - ./ai_risk
+  - ./ai_capability
+  - ./ai_system
+  - ./ai_eval
+  - ./ai_intrinsic
+  - ./ai_aiuc
 
 prefixes:
   linkml: https://w3id.org/linkml/

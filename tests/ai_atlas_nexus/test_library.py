@@ -138,19 +138,13 @@ class TestLibrary(TestCaseBase):
         risks = ran_lib.get_related_risks(id="granite-function-call")
         self.assertGreater(len(risks), 0)
 
-    def test_get_related_risk_ids_by_id(self):
-        """Get related risk definitions from the LinkML, by risk id"""
+    def test_get_related_risks_by_name(self):
+        """Get related risk definitions from the LinkML, by risk name"""
         ran_lib = self.ran_lib
-        risks = ran_lib.get_related_risks(id="granite-function-call")
+        risks = ran_lib.get_related_risks(name="Toxic output")
         self.assertGreater(len(risks), 0)
-
-    def test_get_related_risk_ids_by_id_with_taxonomy(self):
-        """Get related risk definitions from the LinkML, by risk id"""
-        ran_lib = self.ran_lib
-        risks = ran_lib.get_related_risks(
-            id="granite-function-call", taxonomy="owasp-asi"
-        )
-        self.assertGreater(len(risks), 0)
+        risks_by_id = ran_lib.get_related_risks(id="atlas-toxic-output")
+        assert [i.id for i in risks] == [i.id for i in risks_by_id]
 
     def test_get_risk_actions_by_risk_id(self):
         """Get related actions definitions from the LinkML, by risk id"""
@@ -163,6 +157,19 @@ class TestLibrary(TestCaseBase):
         ran_lib = self.ran_lib
         all_actions = ran_lib.get_all_actions()
         self.assertIsInstance(all_actions, list)
+
+    def test_get_instances(self):
+        """Get instances of a class generically, filtered by taxonomy"""
+        ran_lib = self.ran_lib
+        instances = ran_lib.get_instances("risks", taxonomy="ibm-risk-atlas")
+        self.assertIsInstance(instances, list)
+        self.assertGreater(len(instances), 0)
+        assert instances[0].linkml_meta.root["class_uri"] == "airo:Risk"
+
+    def test_get_instances_target_class_not_a_str(self):
+        """Get instances of a class generically - target_class type is wrong"""
+        ran_lib = self.ran_lib
+        self.assertRaises(TypeError, ran_lib.get_instances, 123)
 
     def test_identify_risks_from_usecase_taxonomy_not_a_str(self):
         """Identify potential risks from a usecase description - taxonomy type is wrong"""

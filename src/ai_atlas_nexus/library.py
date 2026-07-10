@@ -415,6 +415,8 @@ class AIAtlasNexus:
             risk = cls.get_risk(id=id)
         elif tag:
             risk = cls.get_risk(tag=tag)
+        elif name:
+            risk = cls.get_risk(name=name)
 
         # just get all the related risks from the risk, these should have been added during lifting
         options = [
@@ -1995,7 +1997,7 @@ class AIAtlasNexus:
             "<RAN92358069E>",
             str,
             allow_none=False,
-            target_class=id,
+            target_class=target_class,
         )
         type_check(
             "<RAN61877043E>",
@@ -2004,8 +2006,8 @@ class AIAtlasNexus:
             taxonomy=taxonomy,
         )
 
-        instances: list[Any] = cls._atlas_explorer.get_instances(
-            target_class, taxonomy
+        instances: list[Any] = cls._atlas_explorer.get_all(
+            target_class, taxonomy=taxonomy
         )
         return instances
 

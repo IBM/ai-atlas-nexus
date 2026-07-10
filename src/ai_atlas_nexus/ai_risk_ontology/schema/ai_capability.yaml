@@ -8,8 +8,8 @@ default_curi_maps:
   - semweb_context
 imports:
   - linkml:types
-  - common
-  - ai_system
+  - ./common
+  - ./ai_system
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
