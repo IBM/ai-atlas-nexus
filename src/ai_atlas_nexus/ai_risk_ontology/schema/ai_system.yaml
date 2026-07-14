@@ -219,11 +219,6 @@ classes:
     class_uri: airo:Domain
     description: An area, sector, or industry that is associated with economic activities.
 
-  LocalityOfUse:
-    is_a: Entry
-    class_uri: airo:LocalityOfUse
-    description: The area, e.g. facility or institution, in which an entity is used.
-
   AIComponent:
     is_a: Entity
     class_uri: airo:AIComponent
@@ -349,13 +344,6 @@ slots:
     description: >-
       Indicates user of an AI system.
     range: AiProvider
-  isUsedWithinLocality:
-    slot_uri: airo:isUsedWithinLocality
-    multivalued: true
-    inlined: false
-    description: >-
-      Specifies the domain an AI system is used within.
-    range: LocalityOfUse
   training_data_preprocessing:
     multivalued: true
     inlined: false

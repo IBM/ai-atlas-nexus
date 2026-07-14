@@ -10,6 +10,7 @@ imports:
   - ./common
   - ./ai_system
   - ./ai_eval
+  - ./ai_capability
 
 prefixes:
   linkml: https://w3id.org/linkml/

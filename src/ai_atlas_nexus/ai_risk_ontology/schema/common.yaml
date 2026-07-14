@@ -324,6 +324,11 @@ classes:
     description: Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
     class_uri: dpv:Certification
 
+  LocalityOfUse:
+    is_a: Entry
+    class_uri: airo:LocalityOfUse
+    description: The area, e.g. facility or institution, in which an entity is used.
+
 slots:
   id:
     identifier: true
@@ -431,6 +436,16 @@ slots:
     range: Any
     multivalued: true
     inlined: false
+  implementedByIntrinsic:
+    description: >-
+      Indicates that this capability is implemented by a specific LLM intrinsic. This relationship distinguishes the abstract
+      capability (what can be done) from the technical implementation mechanism (how it is done at the model component
+      level).
+    domain: Any
+    range: LLMIntrinsic
+    multivalued: true
+    inlined: false
+    inverse: implementsCapability
   implementsCapability:
     description: Indicates that this entity implements a specific capability
     domain: Any
@@ -559,3 +574,10 @@ slots:
     multivalued: true
     inlined: false
     slot_uri: dpv:hasJurisdiction
+  isUsedWithinLocality:
+    slot_uri: airo:isUsedWithinLocality
+    multivalued: true
+    inlined: false
+    description: >-
+      Specifies the domain an AI system is used within.
+    range: LocalityOfUse

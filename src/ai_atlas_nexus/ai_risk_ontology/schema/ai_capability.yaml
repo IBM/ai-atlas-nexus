@@ -119,17 +119,6 @@ slots:
     inlined: false
     inverse: evaluatedByBenchmark
 
-  # Intrinsic-capability relationships
-  implementedByIntrinsic:
-    description: >-
-      Indicates that this capability is implemented by a specific LLM intrinsic. This relationship distinguishes the abstract
-      capability (what can be done) from the technical implementation mechanism (how it is done at the model component
-      level).
-    range: LLMIntrinsic
-    multivalued: true
-    inlined: false
-    inverse: implementsCapability
-
   # AI System-capability relationships
   possessedByAi:
     description: >-
