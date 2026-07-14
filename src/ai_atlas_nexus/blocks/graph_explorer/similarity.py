@@ -6,11 +6,6 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-try:
-    from txtai import Embeddings
-except ImportError:
-    Embeddings = None
-
 
 @dataclass
 class SubGraph:
@@ -302,7 +297,11 @@ def _semantic_similarity(sg1: SubGraph, sg2: SubGraph) -> SimilarityResult:
     Raises:
         ImportError: If txtai is not installed.
     """
-    if Embeddings is None:
+    # Imported here so that txtai (and torch) only load when semantic
+    # similarity is actually requested.
+    try:
+        from txtai import Embeddings
+    except ImportError:
         raise ImportError(
             "txtai is not installed. Install it with: pip install txtai[embeddings]"
         )

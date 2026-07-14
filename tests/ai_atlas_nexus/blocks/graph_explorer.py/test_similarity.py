@@ -1,3 +1,4 @@
+import sys
 from unittest.mock import MagicMock, patch
 
 import pytest
@@ -188,7 +189,6 @@ class TestComputeSimilarityStructural:
 
 
 class TestComputeSimilaritySemantic:
-    @patch("ai_atlas_nexus.blocks.graph_explorer.similarity.Embeddings", None)
     def test_compute_similarity_semantic_no_txtai(self, ox_explorer):
         """Semantic similarity raises ImportError if txtai not installed."""
         sg1 = SubGraph(root_id="a")
@@ -197,8 +197,11 @@ class TestComputeSimilaritySemantic:
         sg2 = SubGraph(root_id="b")
         sg2.text_summary = "test summary"
 
-        with pytest.raises(ImportError, match="txtai is not installed"):
-            compute_similarity(sg1, sg2, method="semantic")
+        # Setting the module to None makes the deferred `from txtai import
+        # Embeddings` raise ImportError, as if txtai were not installed.
+        with patch.dict(sys.modules, {"txtai": None}):
+            with pytest.raises(ImportError, match="txtai is not installed"):
+                compute_similarity(sg1, sg2, method="semantic")
 
     def test_compute_similarity_semantic_empty_summaries(self, ox_explorer):
         """Semantic similarity with empty summaries returns 0.0."""

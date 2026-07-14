@@ -19,11 +19,6 @@ from ai_atlas_nexus.data.knowledge_graph import *
 from ai_atlas_nexus.exceptions import InvalidSPARQLQueryException
 
 
-try:
-    from txtai import Embeddings
-except ImportError:
-    Embeddings = None
-
 ie = inflect.engine()
 logger = logging.getLogger(__name__)
 
