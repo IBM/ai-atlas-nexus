@@ -14,6 +14,11 @@ from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
 from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
 from ai_atlas_nexus.blocks.risk_mapping import RiskMappingBase
 from ai_atlas_nexus.metadata_base import MappingMethod
+from ai_atlas_nexus.toolkit.logging import configure_logger
+
+
+logger = configure_logger(__name__)
+
 
 # Thresholds for bucketing a semantic similarity score (txtai returns a float
 # in the 0-1 range) into a SKOS match predicate. These are a starting proposal
@@ -33,8 +38,9 @@ class RiskMapper(RiskMappingBase):
                 The semantic similarity score, in the 0-1 range
 
         Returns:
-            str
-                A representation of the relationship
+            Optional[str]
+                The SKOS match predicate, or None if the score is below the
+                related-match threshold (no match)
         """
         if score >= EXACT_MATCH_THRESHOLD:
             return "skos:exactMatch"
@@ -43,7 +49,7 @@ class RiskMapper(RiskMappingBase):
         elif score >= RELATED_MATCH_THRESHOLD:
             return "skos:relatedMatch"
 
-        return "noMatch"
+        return None
 
     def _format_with_curie(self, curie_prefix, entity_id):
         """Format the string with curie prefix
@@ -124,6 +130,15 @@ class RiskMapper(RiskMappingBase):
                 # let's just use the top match for now
 
                 top_uid, top_score = embeddings.search(query, 5)[0]
+                predicate = self._bucket_semantic_score(top_score)
+                if predicate is None:
+                    logger.info(
+                        "No match found for %s (best similarity %.3f)",
+                        nr.id,
+                        top_score,
+                    )
+                    continue
+
                 s = data[top_uid]  # string data belonging to that ID
                 result_id = re.search("ID:(.*), Name", s)
                 result_name = re.search("Name:(.*), Description:", s)
@@ -131,7 +146,7 @@ class RiskMapper(RiskMappingBase):
                 mapping = Mapping(
                     subject_id=self._format_with_curie(nr.isDefinedByTaxonomy, nr.id),
                     subject_label=nr.name,
-                    predicate_id=self._bucket_semantic_score(top_score),
+                    predicate_id=predicate,
                     object_id=self._format_with_curie(
                         taxonomy_for_mapping[result_id.group(1).strip()],
                         result_id.group(1),
