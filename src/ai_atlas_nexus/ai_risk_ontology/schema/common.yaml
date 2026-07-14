@@ -411,6 +411,7 @@ slots:
   requiredByTask:
     description: >-
       Indicates that this entry is required to perform a specific AI task.
+    domain: Entry
     range: AiTask
     multivalued: true
     inlined: false
