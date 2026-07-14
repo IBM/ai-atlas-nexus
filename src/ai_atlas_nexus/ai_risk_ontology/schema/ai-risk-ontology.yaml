@@ -23,9 +23,6 @@ prefixes:
 default_range: string
 default_prefix: nexus
 
-settings:
-  strict: False
-
 # ----------------
 # Classes
 # ----------------
