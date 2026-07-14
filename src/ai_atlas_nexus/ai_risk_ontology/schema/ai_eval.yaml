@@ -37,6 +37,7 @@ classes:
       - hasRelatedRisk
       - bestValue
       - hasBenchmarkMetadata
+      - isComposedOf
 
   AiEvalResult:
     is_a: Entity
@@ -236,7 +237,7 @@ classes:
     is_a: AiEval
     description: A questionnaire groups questions
     slot_usage:
-      composed_of:
+      isComposedOf:
         range: Question
 
 slots:
