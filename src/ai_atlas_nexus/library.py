@@ -1,9 +1,11 @@
+from __future__ import annotations
+
 import itertools
 import json
 import os
 from importlib.metadata import version
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Union
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
 
 import yaml
 from jinja2 import Template
@@ -40,7 +42,6 @@ from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Rule,
     Stakeholder,
 )
-from ai_atlas_nexus.blocks.inference import InferenceEngine
 from ai_atlas_nexus.blocks.prompt_builder import (
     FewShotPromptBuilder,
     ZeroShotPromptBuilder,
@@ -55,15 +56,18 @@ from ai_atlas_nexus.blocks.prompt_templates import (
     QUESTIONNAIRE_COT_TEMPLATE,
 )
 from ai_atlas_nexus.blocks.risk_categorization.severity import RiskSeverityCategorizer
-from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
-from ai_atlas_nexus.blocks.risk_mapping import RiskMapper
 from ai_atlas_nexus.data import load_resource
-from ai_atlas_nexus.extension import Extension
 from ai_atlas_nexus.metadata_base import BackendType, MappingMethod
 from ai_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from ai_atlas_nexus.toolkit.error_utils import type_check, value_check
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
+
+# Inference, risk detector, risk mapper and extension modules pull in heavy
+# dependencies (openai, txtai/torch, typer), so they are imported inside the
+# methods that need them to keep `import ai_atlas_nexus` fast.
+if TYPE_CHECKING:
+    from ai_atlas_nexus.blocks.inference import InferenceEngine
 
 logger = configure_logger(__name__)
 RISK_IDENTIFICATION_COT = load_resource("risk_generation_cot.json")
@@ -717,6 +721,9 @@ class AIAtlasNexus:
             List[List[Risk]]:
                 Result containing a list of risks
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+        from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
+
         type_check(
             "<RANE02D314BE>",
             List,
@@ -858,6 +865,8 @@ class AIAtlasNexus:
             List[List[Risk]]:
                 Result containing a list of risks
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+
         type_check(
             "<RANE053314BE>",
             List,
@@ -1015,6 +1024,8 @@ class AIAtlasNexus:
         Returns:
             List[str]: List of LLM predictions.
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+
         type_check(
             "<RANF7EFFADAE>",
             InferenceEngine,
@@ -1094,6 +1105,8 @@ class AIAtlasNexus:
         Returns:
             List[str]: List of LLM predictions.
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+
         type_check(
             "<RAN19989483E>",
             InferenceEngine,
@@ -1159,6 +1172,8 @@ class AIAtlasNexus:
             List[List[str]]:
                 Result containing a list of AI tasks
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+
         type_check(
             "<RAN3B9CD886E>",
             InferenceEngine,
@@ -1238,6 +1253,9 @@ class AIAtlasNexus:
             List[Mapping]
                 Result containing a list of mappings
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+        from ai_atlas_nexus.blocks.risk_mapping import RiskMapper
+
         type_check(
             "<RAN28959363E>",
             InferenceEngine,
@@ -2010,6 +2028,8 @@ class AIAtlasNexus:
             List[List[str]]:
                 Result containing a list of AI tasks
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+
         type_check(
             "<RAN3B9CD886E>",
             InferenceEngine,
@@ -2090,6 +2110,8 @@ class AIAtlasNexus:
             results (List[Dict]):
                 Results detailing risk categorization by usecase.
         """
+        from ai_atlas_nexus.blocks.inference import InferenceEngine
+
         type_check(
             "<RAN75727859E>",
             InferenceEngine,
@@ -2185,6 +2207,8 @@ class AIAtlasNexus:
         Returns:
             None
         """
+        from ai_atlas_nexus.extension import Extension
+
         logger.info(
             f"Risks submitted for ARES evluation: {json.dumps([risk.name for risk in risks], indent=2)}"
         )
