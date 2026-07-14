@@ -21,12 +21,15 @@ default_prefix: nexus
 
 enums:
   AIUC1ApplicationCategory:
+    description: AIUC1 Application Category
     permissible_values:
       MANDATORY:
         description: Mandatory
-      OPTIONAL: Optional
+      OPTIONAL:
+        description: Optional
 
   AIUC1ControlApplicationCategory:
+    description: AIUC1 ControlApplication Category
     permissible_values:
       CORE:
         description: Core Control
@@ -34,6 +37,7 @@ enums:
         description: Supplemental Control
 
   AIUC1EvidenceCategory:
+    description: AIUC1 Evidence Category
     permissible_values:
       TECHNICAL_IMPLEMENTATION:
         description: Technical Implementation
@@ -45,6 +49,7 @@ enums:
         description: Third-party Evals
 
   AIUC1Frequency:
+    description: AIUC1 Frequency
     permissible_values:
       MONTHS_3:
         description: Every 3 months
@@ -54,6 +59,7 @@ enums:
         description: Every 12 months
 
   AIUC1RequirementType:
+    description: AIUC1 Requirement Type
     permissible_values:
       DETECTIVE:
         description: Detective
