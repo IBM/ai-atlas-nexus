@@ -1,5 +1,6 @@
-"""Tests for RiskMapper semantic mapping."""
+"""Tests for RiskMapper semantic and inference mapping."""
 
+from types import SimpleNamespace
 from unittest.mock import patch
 
 import pytest
@@ -75,6 +76,54 @@ class TestGenerateSemanticBelowThreshold:
 
         assert mappings == []
         assert "No match found for new-x" in caplog.text
+
+
+class _FakeEngine:
+    """Inference engine stub returning canned, already-postprocessed predictions."""
+
+    def __init__(self, predictions):
+        self._predictions = predictions
+
+    def generate(self, prompts, response_format=None, postprocessors=None):
+        return [
+            SimpleNamespace(prediction=pred)
+            for pred in self._predictions[: len(prompts)]
+        ]
+
+
+class TestGenerateInference:
+    """generate() with INFERENCE emits the graded predicate from the classifier."""
+
+    def test_inference_uses_graded_predicate(self):
+        existing = [
+            _risk("atlas-a", "Alpha risk", "About alpha", "tax-existing"),
+            _risk("atlas-b", "Beta risk", "About beta", "tax-existing"),
+        ]
+        new = [_risk("new-b", "Beta-ish risk", "About beta", "tax-new")]
+        engine = _FakeEngine([[{"category": "Beta risk", "relation": "closeMatch"}]])
+        mapper = RiskMapper(
+            new_risks=new,
+            existing_risks=existing,
+            inference_engine=engine,
+            new_prefix="tax-new",
+            mapping_method=MappingMethod.INFERENCE,
+        )
+
+        mappings = mapper.generate(
+            new_risks=new,
+            existing_risks=existing,
+            inference_engine=engine,
+            new_prefix="tax-new",
+            mapping_method=MappingMethod.INFERENCE,
+        )
+
+        assert len(mappings) == 1
+        m = mappings[0]
+        assert m.subject_id == "tax-new:new-b"
+        assert m.object_id == "tax-existing:atlas-b"
+        # graded, not the old hardcoded skos:relatedMatch
+        assert m.predicate_id == "skos:closeMatch"
+        assert m.mapping_justification == "semapv:LLMBasedMatching"
 
 
 @pytest.mark.slow

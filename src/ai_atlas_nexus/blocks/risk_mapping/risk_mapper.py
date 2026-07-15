@@ -1,17 +1,12 @@
 import datetime
-import json
 import re
-from typing import List
 
 from sssom_schema import EntityReference, Mapping
 from txtai import Embeddings
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
 from ai_atlas_nexus.blocks.inference import InferenceEngine
-from ai_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
-from ai_atlas_nexus.blocks.prompt_builder import ZeroShotPromptBuilder
-from ai_atlas_nexus.blocks.prompt_response_schema import LIST_OF_STR_SCHEMA
-from ai_atlas_nexus.blocks.risk_detector import GenericRiskDetector
+from ai_atlas_nexus.blocks.risk_detector import RiskRelationDetector
 from ai_atlas_nexus.blocks.risk_mapping import RiskMappingBase
 from ai_atlas_nexus.metadata_base import MappingMethod
 from ai_atlas_nexus.toolkit.logging import configure_logger
@@ -174,25 +169,22 @@ class RiskMapper(RiskMappingBase):
                 for nr in new_risks
             ]
 
-            risk_detector = GenericRiskDetector(
+            relation_detector = RiskRelationDetector(
                 risks=existing_risks,
                 inference_engine=self.inference_engine,
                 cot_examples=None,
             )
 
-            rls = risk_detector.detect(usecases)
+            rls = relation_detector.detect(usecases)
 
-            for (
-                index,
-                rl,
-            ) in enumerate(rls):
-                for risk in rl:
+            for index, matches in enumerate(rls):
+                for risk, predicate in matches:
                     mapping = Mapping(
                         subject_id=self._format_with_curie(
                             new_risks[index].isDefinedByTaxonomy, new_risks[index].id
                         ),
                         subject_label=new_risks[index].name,
-                        predicate_id="skos:relatedMatch",  #  opted for this here as there is no way to assess relatedness of match with current template
+                        predicate_id=predicate,
                         object_id=self._format_with_curie(
                             taxonomy_for_mapping[risk.id.strip()], risk.id
                         ),
