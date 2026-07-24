@@ -97,7 +97,7 @@ class RITSInferenceEngine(InferenceEngine):
                         unwrap_arguments_and_call_func,
                         partial(self.backend.generate_text, response_format),
                     ),
-                    items=prompts,
+                    items=self._validate_generate_prompts(prompts),
                     desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     concurrency_limit=self.concurrency_limit,
                     verbose=verbose,

@@ -135,22 +135,24 @@ class MelleaInferenceBackend(InferenceBackend):
             if isinstance(self.session.backend, OpenAIBackend):
                 return ChatCompletion(**response_thunk._meta["oai_chat_response"])
             elif "oai_chat_response" in response_thunk._meta:
-                return {"choices": [response_thunk._meta["oai_chat_response"]]}
-            else:
+                return response_thunk._meta["oai_chat_response"]
+            elif "chat_response" in response_thunk._meta:
                 return response_thunk._meta["chat_response"]
+            else:
+                return ""
 
         except Exception as e:
             raise RuntimeError(f"Mellea text generation failed: {str(e)}")
 
     def generate_chat_response(
-        self, format: type[BaseModel], tools: bool, messages: str
+        self, format: type[BaseModel], tools: bool, message: str
     ) -> str:
         """Generate a Mellea chat response. It is a lighter-weight alternative that sends a plain message with no requirements and no sampling strategy
 
         Args:
             format (type[BaseModel]): If set, the BaseModel to use for constrained decoding. Defaults to None.
             tools (bool): If true, tool calling is enabled in mellea. Default to False.
-            messages (str): The description of the instruction.
+            message (str): The description of the instruction.
 
         Returns:
             str: a str chat response
@@ -161,11 +163,11 @@ class MelleaInferenceBackend(InferenceBackend):
             )
 
         try:
-            if not isinstance(messages[0], str):
+            if not isinstance(message, str):
                 raise Exception("Mellea chat input should always be a plain string.")
 
             response_thunk = self.session.chat(
-                content=messages[0],
+                content=message,
                 format=format,
                 model_options=self.model_options,
                 tool_calls=bool(tools),
