@@ -50,6 +50,9 @@ classes:
       hasCapability:
         domain: AiSystem
         inverse: possessedByAi
+      hasRelatedRisk:
+        domain: AiSystem
+        range: Risk
     slots:
       - isComposedOf
       - hasEuAiSystemType

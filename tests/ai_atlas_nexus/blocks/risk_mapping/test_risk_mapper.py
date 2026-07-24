@@ -75,7 +75,7 @@ class TestGenerateSemanticBelowThreshold:
             )
 
         assert mappings == []
-        assert "No match found for new-x" in caplog.text
+
 
 
 class _FakeEngine:

@@ -4191,12 +4191,12 @@ entries:
       - aiuc1-req-d002
       - aiuc1-req-e003
     related_mappings:
-      - granite-function-call
-      - granite-answer-relevance
-      - granite-relevance
-      - granite-groundedness
       - asi06-memory-and-context-poisoning
       - asi08-cascading-failures
+      - granite-answer-relevance
+      - granite-function-call
+      - granite-groundedness
+      - granite-relevance
       - llm092025-misinformation
       - mit-ai-causal-risk-entity-ai
       - mit-ai-causal-risk-intent-unintentional
@@ -4256,12 +4256,6 @@ entries:
       - aiuc1-req-c010
       - nist-dangerous-violent-or-hateful-content
     related_mappings:
-      - granite-guardian-harm
-      - granite-sexual-content
-      - granite-unethical-behavior
-      - granite-harm-engagement
-      - granite-evasiveness
-      - granite-violence
       - shieldgemma-dangerous-content
       - shieldgemma-harassment
       - shieldgemma-sexually-explicit
@@ -4273,6 +4267,12 @@ entries:
       - ail-sexual-content
       - ail-suicide-and-self-harm
       - ail-violent-crimes
+      - granite-evasiveness
+      - granite-guardian-harm
+      - granite-harm-engagement
+      - granite-sexual-content
+      - granite-unethical-behavior
+      - granite-violence
       - aiuc1-req-e002
       - aiuc1-req-f002
       - credo-risk-002
@@ -5968,9 +5968,9 @@ entries:
       - aiuc1-req-b001
       - aiuc1-req-b002
     related_mappings:
-      - granite-jailbreak
       - asi01-agent-goal-hijack
       - asi05-unexpected-code-execution
+      - granite-jailbreak
       - atlas-prompt-injection
       - aiuc1-req-b002
       - mit-ai-causal-risk-entity-human
@@ -6294,8 +6294,8 @@ entries:
     dateCreated: 2024-03-06
     dateModified: 2025-10-22
     related_mappings:
-      - granite-social-bias
       - shieldgemma-hate-speech
+      - granite-social-bias
       - aiuc1-req-c003
       - aiuc1-req-c010
       - credo-risk-010
@@ -6422,12 +6422,12 @@ entries:
       - nist-dangerous-violent-or-hateful-content
       - nist-obscene-degrading-and-or-abusive-content
     related_mappings:
-      - granite-profanity
       - shieldgemma-harassment
       - shieldgemma-hate-speech
       - shieldgemma-sexually-explicit
       - ail-sex-related-crimes
       - ail-violent-crimes
+      - granite-profanity
       - credo-risk-015
       - mit-ai-causal-risk-entity-ai
       - mit-ai-causal-risk-intent-other
@@ -10155,9 +10155,9 @@ entries:
     isDefinedByTaxonomy: ai-risk-taxonomy
     isPartOf: ai-risk-taxonomy-misrepresentation
     type: Risk
-  - id: ai-risk-taxonomy-not-labeling-content-as-ai-generated Not labeling content as
-      AI-generated (Using chatbots to convince people they are communicating with a
-      human)
+  - id: ai-risk-taxonomy-not-labeling-content-as-ai-generated
+    name: Not labeling content as AI-generated (Using chatbots to convince people they
+      are communicating with a human)
     description: Not labeling content as AI-generated (Using chatbots to convince people
       they are communicating with a human) is defined as if the model response involves
       manipulation or misrepresentation by not labeling the content as AI-generated,

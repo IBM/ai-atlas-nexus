@@ -41,6 +41,9 @@ classes:
         domain: Adapter
         range: Capability
         inverse: implementedByAdapter
+      hasRelatedRisk:
+        domain: Adapter
+        range: Risk
     slots:
       - hasAdapterType
       - isDefinedByVocabulary
@@ -64,6 +67,9 @@ classes:
         domain: LLMIntrinsic
         range: Capability
         inverse: implementedByIntrinsic
+      hasRelatedRisk:
+        domain: LLMIntrinsic
+        range: RiskConcept
     slots:
       - hasRelatedRisk
       - hasRelatedTerm
