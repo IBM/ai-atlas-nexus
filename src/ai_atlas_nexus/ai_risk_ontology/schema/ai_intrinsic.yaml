@@ -7,9 +7,10 @@ default_curi_maps:
   - semweb_context
 imports:
   - linkml:types
-  - common
-  - ai_system
-  - ai_eval
+  - ./common
+  - ./ai_system
+  - ./ai_eval
+  - ./ai_capability
 
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -40,6 +41,9 @@ classes:
         domain: Adapter
         range: Capability
         inverse: implementedByAdapter
+      hasRelatedRisk:
+        domain: Adapter
+        range: Risk
     slots:
       - hasAdapterType
       - isDefinedByVocabulary
@@ -63,6 +67,9 @@ classes:
         domain: LLMIntrinsic
         range: Capability
         inverse: implementedByIntrinsic
+      hasRelatedRisk:
+        domain: LLMIntrinsic
+        range: RiskConcept
     slots:
       - hasRelatedRisk
       - hasRelatedTerm

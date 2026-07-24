@@ -115,6 +115,8 @@ pip install -e ".[ollama]"
 
 3. When selecting Ollama engine in AI Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
 
+4. The API will automatically download the OLLAMA model if it is not present. Large models may take a long time to download. Set `auto_download_model` to False to disable this behavior.
+
 #### vLLM
 
 When using the vLLM inference, you need to:

@@ -13,6 +13,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
     ValidChatCompletionMessageParam,
+    ValidGenerateCompletionMessageParam,
     ValidListChatCompletionMessageParam,
     VLLMInferenceEngineParams,
     WMLInferenceEngineParams,
@@ -22,6 +23,16 @@ from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
 logger = configure_logger(__name__)
+
+
+def isListEmpty(inList):
+    if isinstance(inList, List):
+        if len(inList) == 0:
+            return True
+        else:
+            return any(map(isListEmpty, inList))
+    else:
+        return False
 
 
 class InferenceEngine(ABC):
@@ -43,6 +54,7 @@ class InferenceEngine(ABC):
         ] = None,
         backend: Literal["default", "mellea"] = BackendType.DEFAULT,
         concurrency_limit: int = 10,
+        auto_download_model: bool = True,
     ):
         """Create an instance of the InferenceEngine using the `model_name_or_path` and chosen LLM service.
 
@@ -51,12 +63,14 @@ class InferenceEngine(ABC):
             credentials (Optional[Union[Dict, InferenceEngineCredentials]], optional): credentials for the inference engine instance. Defaults to None.
             parameters (Optional[ Union[ RITSInferenceEngineParams, WMLInferenceEngineParams, OllamaInferenceEngineParams, VLLMInferenceEngineParams, ] ], optional): parameters to use during request generation. Defaults to None.
             concurrency_limit (int, optional): No of parallel calls to be made to the LLM service. Defaults to 10.
+            auto_download_model (bool, optional): Automatically download the OLLAMA model if it does not exist. Not applicable to RITS and WML. Default to True.
         """
 
         self.model_name_or_path = model_name_or_path
         self.credentials = self.prepare_credentials(credentials or {})
         self.parameters = self._check_if_parameters_are_valid(parameters or {})
         self.concurrency_limit = concurrency_limit
+        self.auto_download_model = auto_download_model
 
         # Create inference client
         self.client = self.create_client()
@@ -66,7 +80,7 @@ class InferenceEngine(ABC):
             self.ping()
         except Exception as e:
             raise Exception(
-                f"Failed to create `{self._inference_engine_type}` inference engine. Reason: {str(e)}"
+                f"Failed to create `{self._inference_engine_type}` inference engine. {str(e)}"
             )
 
         # Create inference backend
@@ -113,22 +127,27 @@ class InferenceEngine(ABC):
                 f"Invalid input message format. Please use openai format or plain str."
             )
 
+    def _validate_generate_prompts(self, prompts):
+        error_message = (
+            "Input should be of valid type: List[str], List[MelleaInferenceParams]"
+        )
+
+        if isListEmpty(prompts):
+            raise ValueError(error_message)
+
+        try:
+            TypeAdapter(ValidGenerateCompletionMessageParam).validate_python(prompts)
+            return prompts
+        except ValidationError:
+            raise ValueError(error_message)
+
     def _validate_chat_messages(self, messages):
         error_message = "Input should be of valid type: str, List[str], OpenAIChatCompletionMessageParam, List[OpenAIChatCompletionMessageParam]"
 
-        def isListEmpty(inList):
-            if isinstance(inList, List):
-                if len(inList) == 0:
-                    return True
-                else:
-                    return any(map(isListEmpty, inList))
-            else:
-                return False
+        if isListEmpty(messages):
+            raise ValueError(error_message)
 
         try:
-            if isListEmpty(messages):
-                raise ValueError
-
             TypeAdapter(ValidChatCompletionMessageParam).validate_python(messages)
             return [messages]
         except ValidationError:
@@ -138,9 +157,7 @@ class InferenceEngine(ABC):
                 )
                 return messages
             except ValidationError:
-                raise Exception(error_message)
-        except ValueError:
-            raise Exception(error_message)
+                raise ValueError(error_message)
 
     def ping(self):
         # Implement inference engine specific ping in their respective class.

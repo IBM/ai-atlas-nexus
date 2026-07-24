@@ -3,8 +3,9 @@ name: ai_eval
 description: Defines vocabulary relating to AI model evaluation
 imports:
   - linkml:types
-  - common
-  - ai_risk
+  - ./common
+  - ./ai_risk
+  - ./ai_intrinsic
 default_curi_maps:
   - semweb_context
 prefixes:
@@ -27,6 +28,9 @@ classes:
         description: >-
           A relationship indicating that an AI evaluation maybe composed of other AI evaluations (e.g. it's an overall
           average of other scores).
+      hasRelatedRisk:
+        domain: AiEval
+        range: Risk
     slots:
       - hasDocumentation
       - hasDataset
@@ -37,6 +41,7 @@ classes:
       - hasRelatedRisk
       - bestValue
       - hasBenchmarkMetadata
+      - isComposedOf
 
   AiEvalResult:
     is_a: Entity
@@ -157,6 +162,10 @@ classes:
       retrieved_timestamp:
         description: Unix timestamp when the data was retrieved
         range: string
+    slot_usage:
+      hasRelatedRisk:
+        domain: AiEvalResult
+        range: RiskConcept
     slots:
       - hasSourceMetadata
       - hasModelInfo
@@ -194,6 +203,10 @@ classes:
       type:
         range: string
         designates_type: true
+    slot_usage:
+      hasRelatedRisk:
+        domain: BenchmarkMetadataCard
+        range: RiskConcept
     slots:
       - describesAiEval
       - hasDataType
@@ -236,7 +249,7 @@ classes:
     is_a: AiEval
     description: A questionnaire groups questions
     slot_usage:
-      composed_of:
+      isComposedOf:
         range: Question
 
 slots:

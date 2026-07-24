@@ -5,7 +5,8 @@ default_curi_maps:
   - semweb_context
 imports:
   - linkml:types
-  - common
+  - ./common
+  - ./ai_intrinsic
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
@@ -112,14 +113,15 @@ classes:
     is_a: RiskControl
     description: Action to remediate a risk
     attributes:
+    slot_usage:
+      hasRelatedRisk:
+        domain: Action
+        range: Risk
     slots:
       - hasRelatedRisk
       - hasDocumentation
       - isDefinedByTaxonomy
       - hasAiActorTask
-
-  Any:
-    class_uri: linkml:Any
 
   RiskIncident:
     is_a: Entity
@@ -191,15 +193,6 @@ slots:
       Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action
       in the subcategory (i.e., some apply to AI development and others apply to AI deployment).
     multivalued: true
-  hasRelatedRisk:
-    description: A relationship where an entity relates to a risk
-    domain: Any
-    any_of:
-      - range: RiskConcept
-      - range: Term
-    range: Risk
-    multivalued: true
-    inlined: false
   hasRelatedAction:
     description: A relationship where an entity relates to an action
     range: Action

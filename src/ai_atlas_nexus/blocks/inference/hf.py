@@ -55,9 +55,7 @@ class HFInferenceEngine(InferenceEngine):
     def prepare_credentials(
         self, credentials: Union[Dict, InferenceEngineCredentials]
     ) -> InferenceEngineCredentials:
-        api_key = credentials.get(
-            "api_key", os.environ.get("HF_TOKEN", None)
-        )
+        api_key = credentials.get("api_key", os.environ.get("HF_TOKEN", None))
         assert api_key, (
             f"Error while trying to run {self._inference_engine_type}. "
             f"Please set the env variable: 'HF_TOKEN' or pass api_key to credentials."
@@ -67,9 +65,7 @@ class HFInferenceEngine(InferenceEngine):
             "api_url", os.environ.get("HF_API_URL", DEFAULT_HF_API_URL)
         )
 
-        org_id = credentials.get(
-            "org_id", os.environ.get("HF_ORG", None)
-        )
+        org_id = credentials.get("org_id", os.environ.get("HF_ORG", None))
 
         return InferenceEngineCredentials(
             api_key=api_key, api_url=api_url, org_id=org_id
@@ -119,7 +115,7 @@ class HFInferenceEngine(InferenceEngine):
                         unwrap_arguments_and_call_func,
                         partial(self.backend.generate_text, response_format),
                     ),
-                    items=prompts,
+                    items=self._validate_generate_prompts(prompts),
                     desc=f"Inferring with {self._inference_engine_type}, backend - {self.backend._backend_type.upper()}",
                     concurrency_limit=self.concurrency_limit,
                     verbose=verbose,

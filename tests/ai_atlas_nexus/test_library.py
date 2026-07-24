@@ -46,7 +46,6 @@ class TestLibrary(TestCaseBase):
     def tearDownClass(cls):
         return NotImplemented
 
-
     ###############################################################################################
     #                                 Tests for .get_schema()                                    #
     ###############################################################################################
@@ -72,7 +71,9 @@ class TestLibrary(TestCaseBase):
     ###############################################################################################
 
     def test_own_base_dir_actually_exists(self):
-        self.assertRaises(FileNotFoundError, AIAtlasNexus, "/an_unlikely_file_path")
+        self.assertRaises(
+            FileNotFoundError, AIAtlasNexus, "/an_unlikely_file_path"
+        )
 
     def test_get_all_risks_type(self):
         """Check type of Get all risk definitions"""
@@ -108,21 +109,27 @@ class TestLibrary(TestCaseBase):
         """Get related risk definitions from the LinkML, by risk atlas tag"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(tag="toxic-output")
-        assert all(i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks)
+        assert all(
+            i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks
+        )
         self.assertGreater(len(risks), 0)
 
     def test_get_related_risk_ids_by_tag(self):
         """Get related risk definitions from the LinkML, by risk atlas tag"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(tag="toxic-output")
-        assert all(i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks)
+        assert all(
+            i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks
+        )
         self.assertGreater(len(risks), 0)
 
     def test_get_related_risks_by_id(self):
         """Get related risk definitions from the LinkML, by risk id"""
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(id="granite-function-call")
-        assert all(i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks)
+        assert all(
+            i.linkml_meta.root["class_uri"] == "airo:Risk" for i in risks
+        )
         self.assertGreater(len(risks), 0)
 
     def test_get_related_risk_ids_by_id(self):
@@ -130,6 +137,14 @@ class TestLibrary(TestCaseBase):
         ran_lib = self.ran_lib
         risks = ran_lib.get_related_risks(id="granite-function-call")
         self.assertGreater(len(risks), 0)
+
+    def test_get_related_risks_by_name(self):
+        """Get related risk definitions from the LinkML, by risk name"""
+        ran_lib = self.ran_lib
+        risks = ran_lib.get_related_risks(name="Toxic output")
+        self.assertGreater(len(risks), 0)
+        risks_by_id = ran_lib.get_related_risks(id="atlas-toxic-output")
+        assert [i.id for i in risks] == [i.id for i in risks_by_id]
 
     def test_get_risk_actions_by_risk_id(self):
         """Get related actions definitions from the LinkML, by risk id"""
@@ -178,7 +193,6 @@ class TestLibrary(TestCaseBase):
             [],
         )
 
-
     def test_identify_risks_from_usecase_wrong_taxonomy(self):
         """Identify potential risks from a usecase description - taxonomy not found"""
         ran_lib = self.ran_lib
@@ -211,7 +225,9 @@ class TestLibrary(TestCaseBase):
     def test_get_risk_control_by_id(self):
         """Get risk_control definition from the LinkML filtered by risk_control id"""
         ran_lib = self.ran_lib
-        risk_control = ran_lib.get_risk_control(id="gg-unethical-behavior-detection")
+        risk_control = ran_lib.get_risk_control(
+            id="gg-unethical-behavior-detection"
+        )
         assert risk_control.id == "gg-unethical-behavior-detection"
 
     def test_generate_proposed_mappings(self):
@@ -248,20 +264,32 @@ class TestLibrary(TestCaseBase):
 
     def test_get_risk_incidents(self):
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'riskincidents', [RiskIncident(id="test-ri")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "riskincidents",
+            [RiskIncident(id="test-ri")],
+        )
         ris = ran_lib.get_risk_incidents()
         assert all(isinstance(i, RiskIncident) for i in ris)
         self.assertIs(len(ris), 1)
 
     def test_get_risk_incident(self):
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'riskincidents', [RiskIncident(id="test-ri")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "riskincidents",
+            [RiskIncident(id="test-ri")],
+        )
         ri = ran_lib.get_risk_incident(id="test-ri")
         assert isinstance(ri, RiskIncident)
 
     def test_get_related_risk_incidents(self):
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'riskincidents', [RiskIncident(id="test-ri", refersToRisk=["atlas-data-bias"])])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "riskincidents",
+            [RiskIncident(id="test-ri", refersToRisk=["atlas-data-bias"])],
+        )
         ri = ran_lib.get_risk_incident(id="test-ri")
         assert isinstance(ri, RiskIncident)
         rris = ran_lib.get_related_risk_incidents(risk_id="atlas-data-bias")
@@ -281,7 +309,11 @@ class TestLibrary(TestCaseBase):
     def test_get_evaluation_by_id(self):
         """Get evaluation definition from the LinkML filtered by evaluation id"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [AiEval(id="test-eval1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "evaluations",
+            [AiEval(id="test-eval1")],
+        )
         ran_lib._atlas_explorer.clear_cache()
         ran_lib._atlas_explorer._build_id_cache_index()
         evaluation = ran_lib.get_evaluation(id="test-eval1")
@@ -289,7 +321,11 @@ class TestLibrary(TestCaseBase):
 
     def test_get_related_evaluations(self):
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [AiEval(id="test-eval1", hasRelatedRisk=["atlas-data-bias"])])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "evaluations",
+            [AiEval(id="test-eval1", hasRelatedRisk=["atlas-data-bias"])],
+        )
         ran_lib._atlas_explorer.clear_cache()
         ran_lib._atlas_explorer._build_id_cache_index()
         ev1 = ran_lib.get_evaluation(id="test-eval1")
@@ -301,75 +337,112 @@ class TestLibrary(TestCaseBase):
         self.assertEqual(ev.id, "test-eval1")
         self.assertIn("atlas-data-bias", ev.hasRelatedRisk)
 
+    def test_get_related_evaluations_none_id(self):
+        ran_lib = self.ran_lib
+        self.assertRaises(
+            ValueError,
+            ran_lib.get_related_evaluations,
+            None,
+            "non-existing-risk-id",
+        )
+
     def test_get_all_benchmark_metadata_cards(self):
         """Get all benchmark_metadata_card definitions from the LinkML"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'benchmarkmetadatacards', [BenchmarkMetadataCard(id="test-bmc1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "benchmarkmetadatacards",
+            [BenchmarkMetadataCard(id="test-bmc1")],
+        )
         bmcs = ran_lib.get_benchmark_metadata_cards()
         self.assertGreater(len(bmcs), 0)
 
     def test_get_benchmark_metadata_card_by_id(self):
         """Get benchmark metadata card definition from the LinkML filtered by dataset id"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'benchmarkmetadatacards', [BenchmarkMetadataCard(id="test-bmc1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "benchmarkmetadatacards",
+            [BenchmarkMetadataCard(id="test-bmc1")],
+        )
         bmc = ran_lib.get_benchmark_metadata_card(id="test-bmc1")
         assert bmc.id == "test-bmc1"
 
     def test_get_all_documents(self):
         """Get all documents definitions from the LinkML"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'documents', [Documentation(id="test-ds1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "documents",
+            [Documentation(id="test-ds1")],
+        )
         documents = ran_lib.get_documents()
         self.assertGreater(len(documents), 0)
 
     def test_get_document_by_id(self):
         """Get document definition from the LinkML filtered by dataset id"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'documents', [Documentation(id="test-ds1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "documents",
+            [Documentation(id="test-ds1")],
+        )
         document = ran_lib.get_document(id="test-ds1")
         assert document.id == "test-ds1"
 
     def test_get_all_datasets(self):
         """Get all dataset definitions from the LinkML"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'datasets', [Dataset(id="test-ds1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data, "datasets", [Dataset(id="test-ds1")]
+        )
         datasets = ran_lib.get_datasets()
         self.assertGreater(len(datasets), 0)
 
     def test_get_dataset_by_id(self):
         """Get dataset definition from the LinkML filtered by dataset id"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'datasets', [Dataset(id="test-ds1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data, "datasets", [Dataset(id="test-ds1")]
+        )
         dataset = ran_lib.get_dataset(id="test-ds1")
         assert dataset.id == "test-ds1"
 
     def test_get_all_stakeholders(self):
         """Get all stakeholder definitions from the LinkML"""
         ran_lib = self.ran_lib
-        m = Stakeholder(id='test-stakeholder1')
-        object.__setattr__(ran_lib._atlas_explorer._data, 'stakeholders', [m])
+        m = Stakeholder(id="test-stakeholder1")
+        object.__setattr__(ran_lib._atlas_explorer._data, "stakeholders", [m])
         stakeholders = ran_lib.get_stakeholders()
         self.assertGreater(len(stakeholders), 0)
 
     def test_get_stakeholder_by_id(self):
         """Get stakeholder definition from the LinkML filtered by stakeholder id"""
         ran_lib = self.ran_lib
-        m = Stakeholder(id='test-stakeholder1')
-        object.__setattr__(ran_lib._atlas_explorer._data, 'stakeholders', [m])
+        m = Stakeholder(id="test-stakeholder1")
+        object.__setattr__(ran_lib._atlas_explorer._data, "stakeholders", [m])
         stakeholder = ran_lib.get_stakeholder(id="test-stakeholder1")
         assert stakeholder.id == "test-stakeholder1"
 
     def test_get_all_intrinsics(self):
         """Get all llm intrinsic definitions from the LinkML"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'llmintrinsics', [LLMIntrinsic(id="test-intrinsic")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "llmintrinsics",
+            [LLMIntrinsic(id="test-intrinsic")],
+        )
         llm_intrinsics = ran_lib.get_intrinsics()
         self.assertGreater(len(llm_intrinsics), 0)
 
     def test_get_intrinsic_by_id(self):
         """Get intrinsic definition from the LinkML filtered by intrinsic id"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'llmintrinsics', [LLMIntrinsic(id="test-intrinsic1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "llmintrinsics",
+            [LLMIntrinsic(id="test-intrinsic1")],
+        )
         ran_lib._atlas_explorer.clear_cache()
         ran_lib._atlas_explorer._build_id_cache_index()
         intrinsic = ran_lib.get_intrinsic(id="test-intrinsic1")
@@ -377,7 +450,15 @@ class TestLibrary(TestCaseBase):
 
     def test_get_related_intrinsics(self):
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'llmintrinsics', [LLMIntrinsic(id="test-intrinsic1", hasRelatedRisk=["atlas-data-bias"])])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "llmintrinsics",
+            [
+                LLMIntrinsic(
+                    id="test-intrinsic1", hasRelatedRisk=["atlas-data-bias"]
+                )
+            ],
+        )
         ran_lib._atlas_explorer.clear_cache()
         ran_lib._atlas_explorer._build_id_cache_index()
         ev1 = ran_lib.get_intrinsic(id="test-intrinsic1")
@@ -388,14 +469,22 @@ class TestLibrary(TestCaseBase):
     def test_get_all_principles(self):
         """Get all principle definitions from the LinkML"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'principles', [Principle(id="test-principle")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "principles",
+            [Principle(id="test-principle")],
+        )
         principles = ran_lib.get_principles()
         self.assertGreater(len(principles), 0)
 
     def test_get_principle_by_id(self):
         """Get principle definition from the LinkML filtered by principle id"""
         ran_lib = self.ran_lib
-        object.__setattr__(ran_lib._atlas_explorer._data, 'principles', [Principle(id="test-principle1")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "principles",
+            [Principle(id="test-principle1")],
+        )
         ran_lib._atlas_explorer.clear_cache()
         ran_lib._atlas_explorer._build_id_cache_index()
         principle = ran_lib.get_principle(id="test-principle1")
@@ -405,11 +494,17 @@ class TestLibrary(TestCaseBase):
         """Verify that get_by_id uses cached results on second call"""
         ran_lib = self.ran_lib
         test_eval = AiEval(id="test-eval-cache1")
-        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [test_eval])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data, "evaluations", [test_eval]
+        )
         ran_lib._atlas_explorer.clear_cache()
         ran_lib._atlas_explorer._build_id_cache_index()
         result1 = ran_lib.get_evaluation(id="test-eval-cache1")
-        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [AiEval(id="test-eval-cache1", description="modified")])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data,
+            "evaluations",
+            [AiEval(id="test-eval-cache1", description="modified")],
+        )
         result2 = ran_lib.get_evaluation(id="test-eval-cache1")
 
         self.assertIs(result1, result2, "Should return same cached object")
@@ -419,16 +514,36 @@ class TestLibrary(TestCaseBase):
         ran_lib = self.ran_lib
         ran_lib._atlas_explorer.clear_cache()
         all_evals = ran_lib.get_all("evaluations")
-        taxonomy_evals = ran_lib.get_all("evaluations", taxonomy="test-taxonomy")
+        taxonomy_evals = ran_lib.get_all(
+            "evaluations", taxonomy="test-taxonomy"
+        )
 
         # Cache should have two entries for these different queries
         self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 2)
+
+    def test_get_all_cache_taxonomy_none_distinct(self):
+        """Verify unfiltered and taxonomy-filtered get_all do not share a cache entry"""
+        ran_lib = self.ran_lib
+        # filtered first, then unfiltered
+        ran_lib._atlas_explorer.clear_cache()
+        filtered = ran_lib.get_all("risks", taxonomy="ibm-risk-atlas")
+        all_risks = ran_lib.get_all("risks")
+        self.assertGreater(len(all_risks), len(filtered))
+        self.assertEqual(len(ran_lib._atlas_explorer._combined_cache), 2)
+        # reverse order on a cold cache: filtered call must not get the unfiltered entry
+        ran_lib._atlas_explorer.clear_cache()
+        all_risks_2 = ran_lib.get_all("risks")
+        filtered_2 = ran_lib.get_all("risks", taxonomy="ibm-risk-atlas")
+        self.assertEqual(len(all_risks_2), len(all_risks))
+        self.assertEqual(len(filtered_2), len(filtered))
 
     def test_clear_cache_invalidates_all_caches(self):
         """Verify that clear_cache() invalidates both caches"""
         ran_lib = self.ran_lib
         test_eval = AiEval(id="test-eval-clear1")
-        object.__setattr__(ran_lib._atlas_explorer._data, 'evaluations', [test_eval])
+        object.__setattr__(
+            ran_lib._atlas_explorer._data, "evaluations", [test_eval]
+        )
         ran_lib._atlas_explorer.clear_cache()
         ran_lib._atlas_explorer._build_id_cache_index()
 

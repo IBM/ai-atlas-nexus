@@ -115,7 +115,7 @@ class OllamaInferenceEngineParams(TypedDict):
     top_logprobs: Optional[int] = None
 
     # enable or disable model thinking
-    think: Optional[Union[bool, Literal["low", "medium", "high"]]] = (None,)
+    think: Optional[Union[bool, Literal["low", "medium", "high"]]] = False
 
 
 class VLLMInferenceEngineParams(TypedDict):
@@ -138,6 +138,8 @@ class VLLMInferenceEngineParams(TypedDict):
     min_tokens: int = 0
     logprobs: Optional[int] = None
     prompt_logprobs: Optional[int] = None
+    max_model_len: Optional[int] = None
+    gpu_memory_utilization: Optional[float] = None
 
 
 class HFInferenceEngineParams(TypedDict):
@@ -211,3 +213,8 @@ class MelleaInferenceParams(TypedDict, total=False):
     prefix: Optional[str] = None
     grounding_context: Optional[dict[str, str]] = None
     requirements: Optional[list[str]] = None
+
+
+ValidGenerateCompletionMessageParam: TypeAlias = Union[
+    List[str], List[MelleaInferenceParams]
+]

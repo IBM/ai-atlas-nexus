@@ -7,9 +7,10 @@ default_curi_maps:
   - semweb_context
 imports:
   - linkml:types
-  - common
-  - ai_system
-  - ai_eval
+  - ./common
+  - ./ai_system
+  - ./ai_eval
+  - ./ai_intrinsic
 
 prefixes:
   linkml: https://w3id.org/linkml/
@@ -21,32 +22,50 @@ default_prefix: nexus
 
 enums:
   AIUC1ApplicationCategory:
+    description: AIUC1 Application Category
     permissible_values:
-      MANDATORY: Mandatory
-      OPTIONAL: Optional
+      MANDATORY:
+        description: Mandatory
+      OPTIONAL:
+        description: Optional
 
   AIUC1ControlApplicationCategory:
+    description: AIUC1 ControlApplication Category
     permissible_values:
-      CORE: Core Control
-      SUPPLEMENTAL: Supplemental Control
+      CORE:
+        description: Core Control
+      SUPPLEMENTAL:
+        description: Supplemental Control
 
   AIUC1EvidenceCategory:
+    description: AIUC1 Evidence Category
     permissible_values:
-      TECHNICAL_IMPLEMENTATION: Technical Implementation
-      LEGAL_POLICIES: Legal Policies
-      OPERATIONAL_PRACTICES: Operational Practices
-      THIRD_PARTY_EVALS: Third-party Evals
+      TECHNICAL_IMPLEMENTATION:
+        description: Technical Implementation
+      LEGAL_POLICIES:
+        description: Legal Policies
+      OPERATIONAL_PRACTICES:
+        description: Operational Practices
+      THIRD_PARTY_EVALS:
+        description: Third-party Evals
 
   AIUC1Frequency:
+    description: AIUC1 Frequency
     permissible_values:
-      MONTHS_3: Every 3 months
-      MONTHS_6: Every 6 months
-      MONTHS_12: Every 12 months
+      MONTHS_3:
+        description: Every 3 months
+      MONTHS_6:
+        description: Every 6 months
+      MONTHS_12:
+        description: Every 12 months
 
   AIUC1RequirementType:
+    description: AIUC1 Requirement Type
     permissible_values:
-      DETECTIVE: Detective
-      PREVENTATIVE: Preventative
+      DETECTIVE:
+        description: Detective
+      PREVENTATIVE:
+        description: Preventative
 
 classes:
   ControlActivity:

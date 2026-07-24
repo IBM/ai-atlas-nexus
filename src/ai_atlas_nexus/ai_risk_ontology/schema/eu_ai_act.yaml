@@ -3,8 +3,8 @@ name: eu_ai_act
 description: Vocabulary pertaining to the EU AI Act
 imports:
   - linkml:types
-  - common
-  - ai_system
+  - ./common
+  - ./ai_system
 default_curi_maps:
   - semweb_context
 prefixes:
@@ -23,11 +23,16 @@ classes:
 enums:
   EuAiRiskCategory:
     permissible_values:
-      EXCLUDED: Excluded
-      PROHIBITED: Prohibited
-      HIGH_RISK_EXCEPTION: High-Risk Exception
-      HIGH_RISK: High Risk
-      LIMITED_OR_LOW_RISK: Limited or Low Risk
+      EXCLUDED:
+        description: Excluded
+      PROHIBITED:
+        description: Prohibited
+      HIGH_RISK_EXCEPTION:
+        description: High-Risk Exception
+      HIGH_RISK:
+        description: High Risk
+      LIMITED_OR_LOW_RISK:
+        description: Limited or Low Risk
 
   AiSystemType:
     permissible_values:

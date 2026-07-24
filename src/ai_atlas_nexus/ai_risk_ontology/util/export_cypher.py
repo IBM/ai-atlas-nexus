@@ -10,8 +10,6 @@ from typing import Any
 
 # Third Party
 from cymple import QueryBuilder
-from linkml_runtime.linkml_model import SchemaDefinition
-from linkml_runtime.loaders import yaml_loader
 from linkml_runtime.utils.schemaview import SchemaView
 from pydantic import BaseModel
 
@@ -236,13 +234,15 @@ def export_data_to_cypher(container: Container) -> str:
     file_list = [
         file_name
         for file_name in listdir(SCHEMA_DIR)
-        if isfile(join(SCHEMA_DIR, file_name))
+        if isfile(join(SCHEMA_DIR, file_name)) and file_name.endswith('.yaml')
     ]
-    importmap = {Path(item).stem: SCHEMA_DIR + Path(item).stem for item in file_list}
-    model: SchemaDefinition = yaml_loader.load(
-        SCHEMA_FILE, SchemaDefinition, base_dir=SCHEMA_DIR
-    )
-    schema_view = SchemaView(schema=model, merge_imports=True, importmap=importmap)
+    # LinkML auto-appends .yaml to importmap paths, so remove the extension
+    importmap = {
+        Path(item).stem: str(Path(join(SCHEMA_DIR, Path(item).stem)).resolve())
+        for item in file_list
+    }
+    schema_path = str(Path(join(SCHEMA_DIR, SCHEMA_FILE)).resolve())
+    schema_view = SchemaView(schema_path, merge_imports=True, importmap=importmap)
     linkml_types = get_linkml_types(schema_view)
 
     graph_nodes: list[GraphNode] = []

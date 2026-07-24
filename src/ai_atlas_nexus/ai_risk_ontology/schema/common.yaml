@@ -102,6 +102,7 @@ classes:
     description: A collection of terms, with their definitions and relationships.
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     slots:
@@ -117,6 +118,7 @@ classes:
     description: A hierachical taxonomy of concepts, with their definitions and relationships.
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     slots:
@@ -132,6 +134,7 @@ classes:
     description: A concept
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     slots:
@@ -147,6 +150,7 @@ classes:
     description: A measure that maintains and/or modifies
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     slots:
@@ -161,13 +165,16 @@ classes:
     description: Labelled groups of concepts.
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
         ifabsent: string(Group)
       narrower:
+        description: Related concepts that are narrower in scope or hierarchy.
         multivalued: true
         slot_uri: skos:narrower
       broader:
+        description: Related concepts that are broader in scope or hierarchy.
         multivalued: true
         slot_uri: skos:narrower
     slots:
@@ -183,7 +190,7 @@ classes:
     description: An entry and its definitions.
     attributes:
       type:
-        description: The entry type.
+        description: The entry type or class designation specifying what kind of entry this is.
         range: string
         designates_type: true
     slots:
@@ -220,6 +227,7 @@ classes:
     class_uri: dpv:Policy
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     slots:
@@ -241,6 +249,7 @@ classes:
     abstract: true
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     class_uri: dpv:Rule
@@ -254,15 +263,18 @@ classes:
     is_a: Rule
     attributes:
       preconditions:
+        description: Conditions that must be satisfied before the rule applies.
         range: AnonymousClassExpression
         inlined: true
       postconditions:
+        description: Conditions that result from applying the rule.
         range: AnonymousClassExpression
         inlined: true
 
   AnonymousClassExpression:
     attributes:
       slot_conditions:
+        description: List of slot conditions that must be satisfied.
         range: SlotCondition
         multivalued: true
         inlined_as_list: true
@@ -270,8 +282,10 @@ classes:
   SlotCondition:
     attributes:
       slot_name:
+        description: The name of the slot being evaluated in this condition.
         range: string
       equals_string:
+        description: The string value that the slot must equal to satisfy this condition.
         range: string
 
   Permission:
@@ -279,6 +293,7 @@ classes:
     abstract: true
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     description: A rule describing a permission to perform an activity
@@ -289,6 +304,7 @@ classes:
     abstract: true
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     description: A rule describing a prohibition to perform an activity
@@ -299,6 +315,7 @@ classes:
     abstract: true
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     description: A rule describing an obligation for performing an activity
@@ -309,6 +326,7 @@ classes:
     abstract: true
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     description: A rule describing a recommendation for performing an activity
@@ -319,10 +337,19 @@ classes:
     abstract: true
     attributes:
       type:
+        description: The type or class designation of this entity instance.
         range: string
         designates_type: true
     description: Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
     class_uri: dpv:Certification
+
+  LocalityOfUse:
+    is_a: Entry
+    class_uri: airo:LocalityOfUse
+    description: The area, e.g. facility or institution, in which an entity is used.
+
+  Any:
+    class_uri: linkml:Any
 
 slots:
   id:
@@ -411,29 +438,22 @@ slots:
   requiredByTask:
     description: >-
       Indicates that this entry is required to perform a specific AI task.
-    range: AiTask
+    domain: Entry
+    range: Any
     multivalued: true
     inlined: false
     inverse: requiresCapability
   requiresCapability:
     description: Indicates that this entry requires a specific capability
     domain: Any
-    range: Capability
-    multivalued: true
-    inlined: false
-    inverse: requiredByTask
-  implementedByAdapter:
-    description: >-
-      Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
-      capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
-    domain: Any
     range: Any
     multivalued: true
     inlined: false
+    inverse: requiredByTask
   implementsCapability:
     description: Indicates that this entity implements a specific capability
     domain: Any
-    range: Capability
+    range: Any
     multivalued: true
     inlined: false
   hasTerm:
@@ -558,3 +578,35 @@ slots:
     multivalued: true
     inlined: false
     slot_uri: dpv:hasJurisdiction
+  isUsedWithinLocality:
+    slot_uri: airo:isUsedWithinLocality
+    multivalued: true
+    inlined: false
+    description: >-
+      Specifies the domain an AI system is used within.
+    range: LocalityOfUse
+  implementedByAdapter:
+    description: >-
+      Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
+      capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
+    inverse: implementsCapability
+  implementedByIntrinsic:
+    description: >-
+      Indicates that this capability is implemented by a specific LLM intrinsic. This relationship distinguishes the abstract
+      capability (what can be done) from the technical implementation mechanism (how it is done at the model component
+      level).
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
+    inverse: implementsCapability
+  hasRelatedRisk:
+    description: A relationship where an entity relates to a risk
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
