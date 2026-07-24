@@ -1,108 +1,113 @@
-#mapping_set_id: https://taxonomy.eticas.ai/mappings/eticas2atlas_nexus
-#mapping_set_title: Eticas AI Risk Taxonomy to IBM AI Atlas Nexus
-#mapping_set_version: 1.5.0
-#creator_id: https://eticas.ai
-#license: https://creativecommons.org/licenses/by/4.0/
-#
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	comment
-eticas-taxonomy:eticas-bias-fairness	bias fairness	skos:closeMatch	mit-ai-risk-domain-1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-bias-fairness	bias fairness	skos:closeMatch	nist-harmful-bias-and-homogenization		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-bias-outcome-disparities	bias outcome disparities	skos:exactMatch	mit-ai-risk-subdomain-1.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	mit-ai-risk-subdomain-1.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	atlas-decision-bias		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	atlas-output-bias		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-performance-equity	performance equity	skos:closeMatch	mit-ai-risk-subdomain-1.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-performance-equity	performance equity	skos:exactMatch	atlas-output-bias		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-bias-representational-harm	bias representational harm	skos:closeMatch	mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-stereotyping-demeaning-content	stereotyping demeaning content	skos:closeMatch	mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-stereotyping-demeaning-content	stereotyping demeaning content	skos:closeMatch	atlas-output-bias		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:closeMatch	mit-ai-risk-subdomain-1.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:closeMatch	nist-dangerous-violent-or-hateful-content		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:exactMatch	atlas-toxic-output		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:closeMatch	atlas-harmful-output		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-sentiment-fairness	sentiment fairness	skos:narrowMatch	mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-homogenization-output-across-groups	homogenization output across groups	skos:exactMatch	nist-harmful-bias-and-homogenization		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-homogenization-output-across-groups	homogenization output across groups	skos:relatedMatch	mit-ai-risk-subdomain-6.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-feedback-loops	feedback loops	skos:relatedMatch	mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-privacy-confidentiality	privacy confidentiality	skos:closeMatch	mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-privacy-confidentiality	privacy confidentiality	skos:closeMatch	nist-data-privacy		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-unlawful-data-processing	unlawful data processing	skos:closeMatch	mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-unlawful-data-processing	unlawful data processing	skos:closeMatch	nist-data-privacy		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-pii-leakage	pii leakage	skos:exactMatch	mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-pii-leakage	pii leakage	skos:closeMatch	nist-data-privacy		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-pii-leakage	pii leakage	skos:exactMatch	atlas-exposing-personal-information		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-confidential-information-leakage	confidential information leakage	skos:closeMatch	atlas-revealing-confidential-information		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-confidential-information-leakage	confidential information leakage	skos:closeMatch	nist-information-security		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-re-identification	re identification	skos:closeMatch	mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-re-identification	re identification	skos:exactMatch	atlas-reidentification		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-reliability	reliability	skos:closeMatch	mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-reliability	reliability	skos:closeMatch	nist-confabulation		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-hallucination	hallucination	skos:exactMatch	nist-confabulation		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-hallucination	hallucination	skos:closeMatch	mit-ai-risk-subdomain-3.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-hallucination	hallucination	skos:exactMatch	atlas-hallucination		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-output-inconsistency	output inconsistency	skos:narrowMatch	mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-output-drift	output drift	skos:narrowMatch	mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-measurement-validity	measurement validity	skos:relatedMatch	nist-confabulation		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-governance	governance	skos:closeMatch	mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-governance	governance	skos:closeMatch	atlas-lack-of-model-transparency		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-governance	governance	skos:closeMatch	atlas-lack-of-data-transparency		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-unclear-responsibilities	unclear responsibilities	skos:closeMatch	mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-poor-documentation	poor documentation	skos:closeMatch	atlas-lack-of-model-transparency		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-poor-documentation	poor documentation	skos:closeMatch	atlas-lack-of-data-transparency		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-poor-documentation	poor documentation	skos:closeMatch	atlas-lack-of-system-transparency		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-limited-auditability	limited auditability	skos:closeMatch	mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-fitness-for-purpose	fitness for purpose	skos:closeMatch	mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-regulatory-non-compliance	regulatory non compliance	skos:relatedMatch	mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-incident-response-gaps	incident response gaps	skos:closeMatch	mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-human-oversight-control	human oversight control	skos:closeMatch	mit-ai-risk-subdomain-5.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-human-oversight-control	human oversight control	skos:closeMatch	nist-human-ai-configuration		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-security-misuse	security misuse	skos:closeMatch	mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-security-misuse	security misuse	skos:closeMatch	mit-ai-risk-domain-4		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-security-misuse	security misuse	skos:closeMatch	nist-information-security		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-adversarial-attacks	adversarial attacks	skos:closeMatch	mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-prompt-injection	prompt injection	skos:narrowMatch	mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-prompt-injection	prompt injection	skos:exactMatch	atlas-prompt-injection		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-prompt-injection	prompt injection	skos:narrowMatch	nist-information-security		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-jailbreaking	jailbreaking	skos:narrowMatch	mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-jailbreaking	jailbreaking	skos:exactMatch	atlas-jailbreaking		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-model-extraction	model extraction	skos:narrowMatch	mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-model-extraction	model extraction	skos:narrowMatch	nist-information-security		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-model-extraction	model extraction	skos:exactMatch	atlas-extraction-attack		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-data-poisoning	data poisoning	skos:narrowMatch	mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-data-poisoning	data poisoning	skos:narrowMatch	nist-information-security		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-data-poisoning	data poisoning	skos:exactMatch	atlas-data-poisoning		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:closeMatch	mit-ai-risk-domain-4		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:narrowMatch	nist-cbrn-information-or-capabilities		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:closeMatch	atlas-improper-usage		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:closeMatch	atlas-dangerous-use		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-behavioural-manipulation	behavioural manipulation	skos:closeMatch	mit-ai-risk-subdomain-4.3		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	mit-ai-risk-subdomain-4.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	nist-information-integrity		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	atlas-spreading-disinformation		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	atlas-non-disclosure		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-csam-ncii-generation	csam ncii generation	skos:closeMatch	nist-obscene-degrading-and-or-abusive-content		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-environmental-impact	environmental impact	skos:exactMatch	mit-ai-risk-subdomain-6.6		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-environmental-impact	environmental impact	skos:exactMatch	nist-environmental-impacts		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-environmental-impact	environmental impact	skos:exactMatch	atlas-impact-on-the-environment		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-inference-energy-consumption	inference energy consumption	skos:narrowMatch	nist-environmental-impacts		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-inference-energy-consumption	inference energy consumption	skos:narrowMatch	mit-ai-risk-subdomain-6.6		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-training-resource-consumption	training resource consumption	skos:narrowMatch	nist-environmental-impacts		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-training-resource-consumption	training resource consumption	skos:narrowMatch	mit-ai-risk-subdomain-6.6		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-hardware-efficiency	hardware efficiency	skos:narrowMatch	nist-environmental-impacts		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-transparency-explainability	transparency explainability	skos:closeMatch	mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-transparency-explainability	transparency explainability	skos:closeMatch	atlas-unexplainable-output		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-system-explainability	system explainability	skos:closeMatch	mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-system-explainability	system explainability	skos:closeMatch	atlas-unexplainable-output		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-right-to-explanation-contestation	right to explanation contestation	skos:narrowMatch	mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-stakeholder-communication	stakeholder communication	skos:closeMatch	mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-ai-interaction-disclosure	ai interaction disclosure	skos:closeMatch	atlas-non-disclosure		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-ai-interaction-disclosure	ai interaction disclosure	skos:relatedMatch	nist-information-integrity		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-agentic-ai	agentic ai	skos:closeMatch	mit-ai-risk-subdomain-7.6		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-agentic-ai	agentic ai	skos:closeMatch	mit-ai-risk-subdomain-7.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-unsafe-tool-calls	unsafe tool calls	skos:closeMatch	mit-ai-risk-subdomain-7.6		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-function-calling-hallucination	function calling hallucination	skos:closeMatch	atlas-hallucination		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-scope-creep-goal-misalignment	scope creep goal misalignment	skos:closeMatch	mit-ai-risk-subdomain-7.1		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-trust-exploitation-between-agents	trust exploitation between agents	skos:closeMatch	mit-ai-risk-subdomain-7.6		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-untraceable-agent-actions	untraceable agent actions	skos:closeMatch	mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration
-eticas-taxonomy:eticas-untraceable-agent-actions	untraceable agent actions	skos:closeMatch	atlas-unexplainable-output		semapv:ManualMappingCuration
+# curie_map:
+#   ibm-risk-atlas: https://www.ibm.com/docs/en/watsonx/saas?topic=
+#   nist-ai-rmf: https://www.nist.gov/itl/ai-risk-management-framework/
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   mit-ai-risk-repository: https://airisk.mit.edu/
+# license: https://www.apache.org/licenses/LICENSE-2.0.html
+# mapping_set_id: https://taxonomy.eticas.ai/mappings/eticas2atlas_nexus
+# mapping_set_title: Eticas AI Risk Taxonomy to IBM AI Atlas Nexus
+# mapping_set_version: 1.5.0
+# creator_id: https://eticas.ai
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	comment
+eticas-ai-risk-taxonomy:eticas-bias-fairness	bias fairness	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-domain-1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-bias-fairness	bias fairness	skos:closeMatch	nist-ai-rmf:nist-harmful-bias-and-homogenization		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-bias-outcome-disparities	bias outcome disparities	skos:exactMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	ibm-risk-atlas:atlas-decision-bias		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-disparate-impact-protected-groups	disparate impact protected groups	skos:closeMatch	ibm-risk-atlas:atlas-output-bias		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-performance-equity	performance equity	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-performance-equity	performance equity	skos:exactMatch	ibm-risk-atlas:atlas-output-bias		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-bias-representational-harm	bias representational harm	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-stereotyping-demeaning-content	stereotyping demeaning content	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-stereotyping-demeaning-content	stereotyping demeaning content	skos:closeMatch	ibm-risk-atlas:atlas-output-bias		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:closeMatch	nist-ai-rmf:nist-dangerous-violent-or-hateful-content		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:exactMatch	ibm-risk-atlas:atlas-toxic-output		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-harmful-content-toxicity	harmful content toxicity	skos:closeMatch	ibm-risk-atlas:atlas-harmful-output		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-sentiment-fairness	sentiment fairness	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-1.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-homogenization-output-across-groups	homogenization output across groups	skos:exactMatch	nist-ai-rmf:nist-harmful-bias-and-homogenization		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-homogenization-output-across-groups	homogenization output across groups	skos:relatedMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-feedback-loops	feedback loops	skos:relatedMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-privacy-confidentiality	privacy confidentiality	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-privacy-confidentiality	privacy confidentiality	skos:closeMatch	nist-ai-rmf:nist-data-privacy		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-unlawful-data-processing	unlawful data processing	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-unlawful-data-processing	unlawful data processing	skos:closeMatch	nist-ai-rmf:nist-data-privacy		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-pii-leakage	pii leakage	skos:exactMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-pii-leakage	pii leakage	skos:closeMatch	nist-ai-rmf:nist-data-privacy		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-pii-leakage	pii leakage	skos:exactMatch	ibm-risk-atlas:atlas-exposing-personal-information		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-confidential-information-leakage	confidential information leakage	skos:closeMatch	ibm-risk-atlas:atlas-revealing-confidential-information		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-confidential-information-leakage	confidential information leakage	skos:closeMatch	nist-ai-rmf:nist-information-security		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-re-identification	re identification	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-re-identification	re identification	skos:exactMatch	ibm-risk-atlas:atlas-reidentification		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-reliability	reliability	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-reliability	reliability	skos:closeMatch	nist-ai-rmf:nist-confabulation		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-hallucination	hallucination	skos:exactMatch	nist-ai-rmf:nist-confabulation		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-hallucination	hallucination	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-3.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-hallucination	hallucination	skos:exactMatch	ibm-risk-atlas:atlas-hallucination		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-output-inconsistency	output inconsistency	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-output-drift	output drift	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-measurement-validity	measurement validity	skos:relatedMatch	nist-ai-rmf:nist-confabulation		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-governance	governance	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-governance	governance	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-model-transparency		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-governance	governance	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-data-transparency		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-unclear-responsibilities	unclear responsibilities	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-poor-documentation	poor documentation	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-model-transparency		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-poor-documentation	poor documentation	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-data-transparency		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-poor-documentation	poor documentation	skos:closeMatch	ibm-risk-atlas:atlas-lack-of-system-transparency		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-limited-auditability	limited auditability	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-fitness-for-purpose	fitness for purpose	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-regulatory-non-compliance	regulatory non compliance	skos:relatedMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-incident-response-gaps	incident response gaps	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.5		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-human-oversight-control	human oversight control	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-5.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-human-oversight-control	human oversight control	skos:closeMatch	nist-ai-rmf:nist-human-ai-configuration		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-security-misuse	security misuse	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-security-misuse	security misuse	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-domain-4		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-security-misuse	security misuse	skos:closeMatch	nist-ai-rmf:nist-information-security		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-adversarial-attacks	adversarial attacks	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-prompt-injection	prompt injection	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-prompt-injection	prompt injection	skos:exactMatch	ibm-risk-atlas:atlas-prompt-injection		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-prompt-injection	prompt injection	skos:narrowMatch	nist-ai-rmf:nist-information-security		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-jailbreaking	jailbreaking	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-jailbreaking	jailbreaking	skos:exactMatch	ibm-risk-atlas:atlas-jailbreaking		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-model-extraction	model extraction	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-model-extraction	model extraction	skos:narrowMatch	nist-ai-rmf:nist-information-security		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-model-extraction	model extraction	skos:exactMatch	ibm-risk-atlas:atlas-extraction-attack		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-data-poisoning	data poisoning	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-2.2		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-data-poisoning	data poisoning	skos:narrowMatch	nist-ai-rmf:nist-information-security		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-data-poisoning	data poisoning	skos:exactMatch	ibm-risk-atlas:atlas-data-poisoning		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-domain-4		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:narrowMatch	nist-ai-rmf:nist-cbrn-information-or-capabilities		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:closeMatch	ibm-risk-atlas:atlas-improper-usage		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-misuse-beyond-intended-purpose	misuse beyond intended purpose	skos:closeMatch	ibm-risk-atlas:atlas-dangerous-use		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-behavioural-manipulation	behavioural manipulation	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-4.3		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-4.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	nist-ai-rmf:nist-information-integrity		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	ibm-risk-atlas:atlas-spreading-disinformation		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-synthetic-media-abuse	synthetic media abuse	skos:closeMatch	ibm-risk-atlas:atlas-non-disclosure		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-csam-ncii-generation	csam ncii generation	skos:closeMatch	nist-ai-rmf:nist-obscene-degrading-and-or-abusive-content		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-environmental-impact	environmental impact	skos:exactMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.6		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-environmental-impact	environmental impact	skos:exactMatch	nist-ai-rmf:nist-environmental-impacts		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-environmental-impact	environmental impact	skos:exactMatch	ibm-risk-atlas:atlas-impact-on-the-environment		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-inference-energy-consumption	inference energy consumption	skos:narrowMatch	nist-ai-rmf:nist-environmental-impacts		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-inference-energy-consumption	inference energy consumption	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.6		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-training-resource-consumption	training resource consumption	skos:narrowMatch	nist-ai-rmf:nist-environmental-impacts		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-training-resource-consumption	training resource consumption	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-6.6		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-hardware-efficiency	hardware efficiency	skos:narrowMatch	nist-ai-rmf:nist-environmental-impacts		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-transparency-explainability	transparency explainability	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-transparency-explainability	transparency explainability	skos:closeMatch	ibm-risk-atlas:atlas-unexplainable-output		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-system-explainability	system explainability	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-system-explainability	system explainability	skos:closeMatch	ibm-risk-atlas:atlas-unexplainable-output		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-right-to-explanation-contestation	right to explanation contestation	skos:narrowMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-stakeholder-communication	stakeholder communication	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-ai-interaction-disclosure	ai interaction disclosure	skos:closeMatch	ibm-risk-atlas:atlas-non-disclosure		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-ai-interaction-disclosure	ai interaction disclosure	skos:relatedMatch	nist-ai-rmf:nist-information-integrity		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-agentic-ai	agentic ai	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.6		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-agentic-ai	agentic ai	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-unsafe-tool-calls	unsafe tool calls	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.6		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-function-calling-hallucination	function calling hallucination	skos:closeMatch	ibm-risk-atlas:atlas-hallucination		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-scope-creep-goal-misalignment	scope creep goal misalignment	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-trust-exploitation-between-agents	trust exploitation between agents	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.6		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-untraceable-agent-actions	untraceable agent actions	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-subdomain-7.4		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
+eticas-ai-risk-taxonomy:eticas-untraceable-agent-actions	untraceable agent actions	skos:closeMatch	ibm-risk-atlas:atlas-unexplainable-output		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
