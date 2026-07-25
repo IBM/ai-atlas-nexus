@@ -3,6 +3,7 @@ from __future__ import annotations
 import itertools
 import json
 import os
+from functools import lru_cache
 from importlib.metadata import version
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Union
@@ -12,16 +13,6 @@ from jinja2 import Template
 from linkml_runtime import SchemaView
 from linkml_runtime.dumpers import YAMLDumper
 from sssom_schema import Mapping
-
-from ai_atlas_nexus.blocks.graph_explorer import AtlasExplorer
-from ai_atlas_nexus.blocks.graph_explorer.pyoxigraph import PyoxigraphExplorer
-from ai_atlas_nexus.blocks.shacl import SHACLEngine
-from ai_atlas_nexus.exceptions import RiskInferenceError, handle_exception
-
-
-# workaround for txtai
-os.environ["KMP_DUPLICATE_LIB_OK"] = "True"
-os.environ["OMP_NUM_THREADS"] = "1"
 
 from ai_atlas_nexus import AiTask, Taxonomy
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
@@ -42,35 +33,26 @@ from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Rule,
     Stakeholder,
 )
-from ai_atlas_nexus.blocks.prompt_builder import (
-    FewShotPromptBuilder,
-    ZeroShotPromptBuilder,
-)
-from ai_atlas_nexus.blocks.prompt_response_schema import (
-    AITaskList,
-    DomainType,
-    QuestionnaireOutput,
-)
-from ai_atlas_nexus.blocks.prompt_templates import (
-    AI_TASKS_TEMPLATE,
-    QUESTIONNAIRE_COT_TEMPLATE,
-)
-from ai_atlas_nexus.blocks.risk_categorization.severity import RiskSeverityCategorizer
+from ai_atlas_nexus.blocks.graph_explorer import AtlasExplorer
+from ai_atlas_nexus.blocks.graph_explorer.pyoxigraph import PyoxigraphExplorer
+from ai_atlas_nexus.blocks.shacl import SHACLEngine
 from ai_atlas_nexus.data import load_resource
+from ai_atlas_nexus.exceptions import RiskInferenceError, handle_exception
 from ai_atlas_nexus.metadata_base import BackendType, MappingMethod
 from ai_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from ai_atlas_nexus.toolkit.error_utils import type_check, value_check
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
-# Inference, risk detector, risk mapper and extension modules pull in heavy
-# dependencies (openai, txtai/torch, typer), so they are imported inside the
-# methods that need them to keep `import ai_atlas_nexus` fast.
 if TYPE_CHECKING:
     from ai_atlas_nexus.blocks.inference import InferenceEngine
 
 logger = configure_logger(__name__)
-RISK_IDENTIFICATION_COT = load_resource("risk_generation_cot.json")
+
+
+@lru_cache(maxsize=1)
+def _get_risk_identification_cot():
+    return load_resource("risk_generation_cot.json")
 
 
 class AIAtlasNexus:
@@ -806,7 +788,7 @@ class AIAtlasNexus:
                 # set it as None. The CoT examples include risk-related questions that have been synthetically generated for this task.
                 processed_examples = (
                     cot_examples and cot_examples.get(tx, None)
-                ) or RISK_IDENTIFICATION_COT.get(tx, None)
+                ) or _get_risk_identification_cot().get(tx, None)
                 if (
                     combined_processed_examples
                     and type(combined_processed_examples) == list
@@ -1025,6 +1007,9 @@ class AIAtlasNexus:
             List[str]: List of LLM predictions.
         """
         from ai_atlas_nexus.blocks.inference import InferenceEngine
+        from ai_atlas_nexus.blocks.prompt_builder import ZeroShotPromptBuilder
+        from ai_atlas_nexus.blocks.prompt_response_schema import QuestionnaireOutput
+        from ai_atlas_nexus.blocks.prompt_templates import QUESTIONNAIRE_COT_TEMPLATE
 
         type_check(
             "<RANF7EFFADAE>",
@@ -1106,6 +1091,9 @@ class AIAtlasNexus:
             List[str]: List of LLM predictions.
         """
         from ai_atlas_nexus.blocks.inference import InferenceEngine
+        from ai_atlas_nexus.blocks.prompt_builder import FewShotPromptBuilder
+        from ai_atlas_nexus.blocks.prompt_response_schema import QuestionnaireOutput
+        from ai_atlas_nexus.blocks.prompt_templates import QUESTIONNAIRE_COT_TEMPLATE
 
         type_check(
             "<RAN19989483E>",
@@ -1173,6 +1161,8 @@ class AIAtlasNexus:
                 Result containing a list of AI tasks
         """
         from ai_atlas_nexus.blocks.inference import InferenceEngine
+        from ai_atlas_nexus.blocks.prompt_response_schema import AITaskList
+        from ai_atlas_nexus.blocks.prompt_templates import AI_TASKS_TEMPLATE
 
         type_check(
             "<RAN3B9CD886E>",
@@ -2029,6 +2019,9 @@ class AIAtlasNexus:
                 Result containing a list of AI tasks
         """
         from ai_atlas_nexus.blocks.inference import InferenceEngine
+        from ai_atlas_nexus.blocks.prompt_builder import FewShotPromptBuilder
+        from ai_atlas_nexus.blocks.prompt_response_schema import DomainType
+        from ai_atlas_nexus.blocks.prompt_templates import QUESTIONNAIRE_COT_TEMPLATE
 
         type_check(
             "<RAN3B9CD886E>",
@@ -2111,6 +2104,9 @@ class AIAtlasNexus:
                 Results detailing risk categorization by usecase.
         """
         from ai_atlas_nexus.blocks.inference import InferenceEngine
+        from ai_atlas_nexus.blocks.risk_categorization.severity import (
+            RiskSeverityCategorizer,
+        )
 
         type_check(
             "<RAN75727859E>",
