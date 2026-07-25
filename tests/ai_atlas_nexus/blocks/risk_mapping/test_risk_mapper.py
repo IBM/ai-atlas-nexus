@@ -58,7 +58,7 @@ class TestBucketSemanticScore:
 class TestGenerateSemanticBelowThreshold:
     """A below-threshold match is skipped and logged, not emitted as a mapping."""
 
-    @patch("ai_atlas_nexus.blocks.risk_mapping.risk_mapper.Embeddings")
+    @patch("txtai.Embeddings")
     def test_below_threshold_emits_no_mapping(self, mock_embeddings, caplog):
         # force the top match to score below the related-match threshold
         mock_embeddings.return_value.search.return_value = [(0, 0.10)]

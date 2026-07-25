@@ -1,16 +1,19 @@
+from __future__ import annotations
+
 import datetime
 import re
+from typing import TYPE_CHECKING
 
 from sssom_schema import EntityReference, Mapping
-from txtai import Embeddings
 
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
-from ai_atlas_nexus.blocks.inference import InferenceEngine
-from ai_atlas_nexus.blocks.risk_detector import RiskRelationDetector
 from ai_atlas_nexus.blocks.risk_mapping import RiskMappingBase
 from ai_atlas_nexus.metadata_base import MappingMethod
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
+
+if TYPE_CHECKING:
+    from ai_atlas_nexus.blocks.inference import InferenceEngine
 
 logger = configure_logger(__name__)
 
@@ -104,6 +107,7 @@ class RiskMapper(RiskMappingBase):
 
         if mapping_method == MappingMethod.SEMANTIC:
             # create an embedding with existing risk data
+            from txtai import Embeddings
 
             embeddings = Embeddings(path="sentence-transformers/nli-mpnet-base-v2")
             embeddings.index(data)
@@ -156,6 +160,8 @@ class RiskMapper(RiskMappingBase):
                 mappings.append(mapping)
 
         elif mapping_method == MappingMethod.INFERENCE:
+            from ai_atlas_nexus.blocks.risk_detector import RiskRelationDetector
+
             # this query is just using name and description, not any other attributes
             usecases = [
                 (
