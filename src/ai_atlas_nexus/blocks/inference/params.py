@@ -156,6 +156,24 @@ class HFInferenceEngineParams(TypedDict):
     n: Optional[int] = None
 
 
+class OpenAIInferenceEngineParams(TypedDict):
+    frequency_penalty: Optional[float] = None
+    presence_penalty: Optional[float] = None
+    max_completion_tokens: Optional[int] = None
+    seed: Optional[int] = None
+    stop: Union[Optional[str], List[str]] = None
+    temperature: Optional[float] = None
+    top_p: Optional[float] = None
+    top_logprobs: Optional[int] = None
+    logit_bias: Optional[Dict[str, int]] = None
+    logprobs: Optional[bool] = None
+    n: Optional[int] = None
+    parallel_tool_calls: Optional[bool] = None
+    service_tier: Optional[Literal["auto", "default", "flex"]] = None
+    store: Optional[bool] = None
+    user: Optional[str] = None
+
+
 @dataclasses.dataclass(kw_only=True)
 class TextGenerationInferenceOutput:
     """Contains the prediction results and metadata for the inference.

@@ -1,6 +1,7 @@
 from .base import InferenceEngine
 from .hf import HFInferenceEngine
 from .ollama import OllamaInferenceEngine
+from .openai import OpenAIInferenceEngine
 from .params import TextGenerationInferenceOutput
 from .rits import RITSInferenceEngine
 from .vllm import VLLMInferenceEngine

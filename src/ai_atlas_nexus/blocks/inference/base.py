@@ -10,6 +10,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     MelleaInferenceParams,
     OllamaInferenceEngineParams,
     OpenAIChatCompletionMessageParam,
+    OpenAIInferenceEngineParams,
     RITSInferenceEngineParams,
     TextGenerationInferenceOutput,
     ValidChatCompletionMessageParam,
@@ -50,6 +51,7 @@ class InferenceEngine(ABC):
                 OllamaInferenceEngineParams,
                 VLLMInferenceEngineParams,
                 HFInferenceEngineParams,
+                OpenAIInferenceEngineParams,
             ]
         ] = None,
         backend: Literal["default", "mellea"] = BackendType.DEFAULT,
