@@ -82,6 +82,7 @@ classes:
     description: Documented information about a concept or other topic(s) of interest.
     slots:
       - hasLicense
+      - hasJurisdiction
     attributes:
       author:
         name: author
@@ -572,7 +573,7 @@ slots:
     slot_uri: nexus:isApplicableinLocality
   hasJurisdiction:
     description: >-
-      The legal or political jurisdiction(s) in which this concept applies,
+      The legal or political jurisdiction(s) in which this entity applies,
       expressed as ISO 3166-1 country codes.
     range: Jurisdiction
     multivalued: true

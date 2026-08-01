@@ -380,6 +380,7 @@ class Documentation(Entity):
                        'BenchmarkMetadataCard',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
     author: Optional[str] = Field(default=None, description="""The author or authors of the documentation""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'RiskIncident']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -620,7 +621,7 @@ class Concept(Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["Concept"] = Field(default="Concept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -2080,7 +2081,7 @@ class RiskConcept(Concept):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["RiskConcept"] = Field(default="RiskConcept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -2219,7 +2220,7 @@ class RiskControlGroup(RiskConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class RiskGroup(RiskConcept, Group):
@@ -2324,7 +2325,7 @@ class RiskGroup(RiskConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class Risk(RiskConcept, Entry):
@@ -2449,7 +2450,7 @@ class Risk(RiskConcept, Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class RiskControl(RiskConcept, Control):
@@ -2550,7 +2551,7 @@ class RiskControl(RiskConcept, Control):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class Action(RiskControl):
@@ -2662,7 +2663,7 @@ class Action(RiskControl):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class RiskIncident(RiskConcept, Entity):
@@ -2748,7 +2749,7 @@ class RiskIncident(RiskConcept, Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["RiskIncident"] = Field(default="RiskIncident", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -2836,7 +2837,7 @@ class Impact(RiskConcept, Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["Impact"] = Field(default="Impact", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -3150,7 +3151,7 @@ class CapabilityConcept(Concept):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["CapabilityConcept"] = Field(default="CapabilityConcept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -3281,7 +3282,7 @@ class CapabilityDomain(CapabilityConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class CapabilityGroup(CapabilityConcept, Group):
@@ -3395,7 +3396,7 @@ class CapabilityGroup(CapabilityConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class Capability(CapabilityConcept, Entry):
@@ -3534,7 +3535,7 @@ class Capability(CapabilityConcept, Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this entity applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Documentation', 'Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class BaseAi(Entity):
