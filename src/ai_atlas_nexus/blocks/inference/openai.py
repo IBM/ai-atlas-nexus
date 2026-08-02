@@ -82,7 +82,11 @@ class OpenAIInferenceEngine(InferenceEngine):
 
     def ping(self):
         try:
-            self.client.models.list()
+            available_models = [model.id for model in self.client.models.list().data]
+            if self.model_name_or_path not in available_models:
+                raise Exception(
+                    f"Model `{self.model_name_or_path}` not found. Available - {available_models}"
+                )
         except APIConnectionError:
             raise Exception("Connection error. Please check OPENAI_API_URL.")
         except (AuthenticationError, PermissionDeniedError):
@@ -112,18 +116,11 @@ class OpenAIInferenceEngine(InferenceEngine):
                     verbose=verbose,
                 )
             ]
-        except (AuthenticationError, PermissionDeniedError):
-            raise InferenceError("Authentication failed. Invalid OPENAI_API_KEY.")
         except Exception as e:
             raise InferenceError(str(e))
 
     def generate_text(self, response_format, prompt):
-        return self.client.chat.completions.create(
-            messages=self._to_openai_format(prompt),
-            model=self.model_name_or_path,
-            response_format=self._create_schema_format(self.format(response_format)),
-            **self.parameters,
-        )
+        return self.generate_chat_response(response_format, tools=None, messages=prompt)
 
     @postprocess
     def chat(
@@ -155,8 +152,6 @@ class OpenAIInferenceEngine(InferenceEngine):
                     verbose=verbose,
                 )
             ]
-        except (AuthenticationError, PermissionDeniedError):
-            raise InferenceError("Authentication failed. Invalid OPENAI_API_KEY.")
         except Exception as e:
             raise InferenceError(str(e))
 

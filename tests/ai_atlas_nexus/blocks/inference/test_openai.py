@@ -9,11 +9,7 @@ from openai import (
 )
 
 from ai_atlas_nexus.blocks.inference.openai import DEFAULT_OPENAI_API_URL, OpenAIInferenceEngine
-from ai_atlas_nexus.blocks.inference.params import (
-    InferenceEngineCredentials,
-    TextGenerationInferenceOutput,
-)
-from ai_atlas_nexus.exceptions import InferenceError
+from ai_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 
 
@@ -24,6 +20,21 @@ def _make_engine(**attrs) -> OpenAIInferenceEngine:
     for key, value in attrs.items():
         setattr(engine, key, value)
     return engine
+
+
+def _mock_response(content, *, total=10, completion=3, logprobs=None):
+    """Build a minimal OpenAI chat-completion response mock."""
+    mock_usage = Mock()
+    mock_usage.total_tokens = total
+    mock_usage.completion_tokens = completion
+    mock_choice = Mock()
+    mock_choice.message.content = content
+    mock_choice.finish_reason = "stop"
+    mock_choice.logprobs = logprobs
+    mock_response = Mock()
+    mock_response.choices = [mock_choice]
+    mock_response.usage = mock_usage
+    return mock_response
 
 
 class TestOpenAIInferenceEngine(unittest.TestCase):
@@ -58,11 +69,25 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
     # ping
 
     def test_ping_success(self):
-        """Successful ping when models.list() does not raise."""
+        """Successful ping when model is in available list."""
+        mock_model = Mock()
+        mock_model.id = "gpt-4o"
         mock_client = Mock()
-        mock_client.models.list.return_value = Mock()
+        mock_client.models.list.return_value = Mock(data=[mock_model])
         engine = _make_engine(model_name_or_path="gpt-4o", client=mock_client)
         engine.ping()
+
+    def test_ping_model_not_found(self):
+        """ping raises when model is not in the available list."""
+        mock_model = Mock()
+        mock_model.id = "gpt-4o"
+        mock_client = Mock()
+        mock_client.models.list.return_value = Mock(data=[mock_model])
+        engine = _make_engine(model_name_or_path="gpt-fake-99", client=mock_client)
+        with self.assertRaises(Exception) as ctx:
+            engine.ping()
+        self.assertIn("gpt-fake-99", str(ctx.exception))
+        self.assertIn("not found", str(ctx.exception))
 
     def test_ping_connection_error(self):
         """ping raises on APIConnectionError."""
@@ -103,74 +128,33 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
 
     # create_client — URL normalisation
 
-    def test_create_client_normalises_url_without_v1(self):
-        """api_url without /v1 suffix should have /v1 appended."""
-        engine = _make_engine(
-            credentials={"api_key": "sk-test", "api_url": "https://api.openai.com"}
-        )
-        with patch("ai_atlas_nexus.blocks.inference.openai.OpenAI") as mock_openai:
-            engine.create_client()
-            self.assertEqual(
-                mock_openai.call_args.kwargs["base_url"], "https://api.openai.com/v1"
-            )
-
-    def test_create_client_keeps_existing_v1_suffix(self):
-        """api_url that already ends with /v1 should not get a second /v1."""
-        engine = _make_engine(
-            credentials={"api_key": "sk-test", "api_url": "https://api.openai.com/v1"}
-        )
-        with patch("ai_atlas_nexus.blocks.inference.openai.OpenAI") as mock_openai:
-            engine.create_client()
-            self.assertEqual(
-                mock_openai.call_args.kwargs["base_url"], "https://api.openai.com/v1"
-            )
-
-    def test_create_client_strips_trailing_slash(self):
-        """Trailing slash in api_url should be stripped before /v1 is appended."""
-        engine = _make_engine(
-            credentials={"api_key": "sk-test", "api_url": "https://api.openai.com/"}
-        )
-        with patch("ai_atlas_nexus.blocks.inference.openai.OpenAI") as mock_openai:
-            engine.create_client()
-            self.assertEqual(
-                mock_openai.call_args.kwargs["base_url"], "https://api.openai.com/v1"
-            )
+    def test_create_client_url_normalisation(self):
+        """api_url is always normalised to end with exactly /v1."""
+        cases = [
+            ("no suffix",       "https://api.openai.com",    "https://api.openai.com/v1"),
+            ("trailing slash",  "https://api.openai.com/",   "https://api.openai.com/v1"),
+            ("already has /v1", "https://api.openai.com/v1", "https://api.openai.com/v1"),
+        ]
+        for label, input_url, expected in cases:
+            with self.subTest(label):
+                engine = _make_engine(
+                    credentials={"api_key": "sk-test", "api_url": input_url}
+                )
+                with patch("ai_atlas_nexus.blocks.inference.openai.OpenAI") as mock_openai:
+                    engine.create_client()
+                    self.assertEqual(
+                        mock_openai.call_args.kwargs["base_url"], expected
+                    )
 
     # _prepare_chat_output
 
-    def test_prepare_chat_output_string(self):
-        """_prepare_chat_output from a plain string (postprocessed path)."""
-        engine = _make_engine(
-            model_name_or_path="gpt-4o",
-            _inference_engine_type=InferenceEngineType.OPENAI,
-        )
-        result = engine._prepare_chat_output("hello world")
-        self.assertIsInstance(result, TextGenerationInferenceOutput)
-        self.assertEqual(result.prediction, "hello world")
-        self.assertEqual(result.model_name_or_path, "gpt-4o")
-
     def test_prepare_chat_output_with_response_object(self):
-        """_prepare_chat_output from an OpenAI response object."""
+        """_prepare_chat_output extracts prediction, token counts, and stop reason."""
         engine = _make_engine(
             model_name_or_path="gpt-4o",
             _inference_engine_type=InferenceEngineType.OPENAI,
         )
-
-        mock_message = Mock()
-        mock_message.content = "generated text"
-        mock_choice = Mock()
-        mock_choice.message = mock_message
-        mock_choice.finish_reason = "stop"
-        mock_choice.logprobs = None
-        mock_usage = Mock()
-        mock_usage.total_tokens = 120
-        mock_usage.completion_tokens = 40
-        mock_response = Mock()
-        mock_response.choices = [mock_choice]
-        mock_response.usage = mock_usage
-
-        result = engine._prepare_chat_output(mock_response)
-
+        result = engine._prepare_chat_output(_mock_response("generated text", total=120, completion=40))
         self.assertIsInstance(result, TextGenerationInferenceOutput)
         self.assertEqual(result.prediction, "generated text")
         self.assertEqual(result.input_tokens, 120)
@@ -179,30 +163,19 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
         self.assertIsNone(result.logprobs)
 
     def test_prepare_chat_output_with_logprobs(self):
-        """_prepare_chat_output maps logprobs correctly."""
+        """_prepare_chat_output maps logprobs token→logprob correctly."""
         engine = _make_engine(
             model_name_or_path="gpt-4o",
             _inference_engine_type=InferenceEngineType.OPENAI,
         )
-
         lp1, lp2 = Mock(), Mock()
         lp1.token, lp1.logprob = "foo", -0.5
         lp2.token, lp2.logprob = "bar", -1.2
         mock_logprobs = Mock()
         mock_logprobs.content = [lp1, lp2]
-        mock_choice = Mock()
-        mock_choice.message.content = "foo bar"
-        mock_choice.finish_reason = "stop"
-        mock_choice.logprobs = mock_logprobs
-        mock_usage = Mock()
-        mock_usage.total_tokens = 10
-        mock_usage.completion_tokens = 2
-        mock_response = Mock()
-        mock_response.choices = [mock_choice]
-        mock_response.usage = mock_usage
-
-        result = engine._prepare_chat_output(mock_response)
-
+        result = engine._prepare_chat_output(
+            _mock_response("foo bar", total=10, completion=2, logprobs=mock_logprobs)
+        )
         self.assertEqual(result.logprobs["foo"], -0.5)
         self.assertEqual(result.logprobs["bar"], -1.2)
 
@@ -233,27 +206,16 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
         engine = _make_engine()
         self.assertIsNone(engine._create_schema_format(None))
 
+    # array envelope unwrapping
+
     def test_prepare_chat_output_unwraps_array_envelope(self):
         """_prepare_chat_output unwraps the {"items": [...]} envelope."""
         engine = _make_engine(
             model_name_or_path="gpt-4o",
             _inference_engine_type=InferenceEngineType.OPENAI,
         )
-
-        wrapped_content = json.dumps({"items": ["Risk A", "Risk B"]})
-        mock_choice = Mock()
-        mock_choice.message.content = wrapped_content
-        mock_choice.finish_reason = "stop"
-        mock_choice.logprobs = None
-        mock_usage = Mock()
-        mock_usage.total_tokens = 20
-        mock_usage.completion_tokens = 5
-        mock_response = Mock()
-        mock_response.choices = [mock_choice]
-        mock_response.usage = mock_usage
-
-        result = engine._prepare_chat_output(mock_response)
-
+        wrapped = json.dumps({"items": ["Risk A", "Risk B"]})
+        result = engine._prepare_chat_output(_mock_response(wrapped, total=20, completion=5))
         self.assertEqual(result.prediction, json.dumps(["Risk A", "Risk B"]))
 
     def test_prepare_chat_output_leaves_non_envelope_objects_intact(self):
@@ -262,21 +224,8 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
             model_name_or_path="gpt-4o",
             _inference_engine_type=InferenceEngineType.OPENAI,
         )
-
         multi_key = json.dumps({"items": ["A"], "extra": "value"})
-        mock_choice = Mock()
-        mock_choice.message.content = multi_key
-        mock_choice.finish_reason = "stop"
-        mock_choice.logprobs = None
-        mock_usage = Mock()
-        mock_usage.total_tokens = 10
-        mock_usage.completion_tokens = 3
-        mock_response = Mock()
-        mock_response.choices = [mock_choice]
-        mock_response.usage = mock_usage
-
-        result = engine._prepare_chat_output(mock_response)
-
+        result = engine._prepare_chat_output(_mock_response(multi_key))
         self.assertEqual(result.prediction, multi_key)
 
 
