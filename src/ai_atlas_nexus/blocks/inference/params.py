@@ -42,37 +42,29 @@ class RITSInferenceEngineParams(TypedDict):
 
 
 class WMLInferenceEngineParams(TypedDict):
-
-    # generation params
-    decoding_method: Optional[Literal["greedy", "sample"]] = None
-    length_penalty: Optional[Dict[str, Union[int, float]]] = None
+    frequency_penalty: Optional[float] = None
+    logprobs: Optional[bool] = None
+    top_logprobs: Optional[int] = None
+    presence_penalty: Optional[float] = None
+    response_format: Optional[dict] = None
     temperature: Optional[float] = None
-    top_p: Optional[float] = None
-    top_k: Optional[int] = None
-    random_seed: Optional[int] = None
-    repetition_penalty: Optional[float] = None
-    min_new_tokens: Optional[int] = None
-    max_new_tokens: Optional[int] = None
-    stop_sequences: Optional[List[str]] = None
+    max_tokens: Optional[int] = None
+    max_completion_tokens: Optional[int] = None
     time_limit: Optional[int] = None
-    truncate_input_tokens: Optional[int] = None
-    prompt_variables: Optional[Dict[str, Any]] = None
-    return_options: Optional[Dict[str, bool]] = None
-
-    # chat params
-    frequency_penalty: float | None = None
-    logprobs: bool | None = None
-    top_logprobs: int | None = None
-    presence_penalty: float | None = None
-    response_format: dict | None = None
-    temperature: float | None = None
-    max_tokens: int | None = None
-    time_limit: int | None = None
-    top_p: float | None = None
-    n: int | None = None
-    logit_bias: dict | None = None
-    seed: int | None = None
-    stop: list[str] | None = None
+    top_p: Optional[float] = None
+    n: Optional[int] = None
+    logit_bias: Optional[dict] = None
+    seed: Optional[int] = None
+    stop: Optional[list[str]] = None
+    guided_choice: Optional[list[str]] = None
+    guided_regex: Optional[str] = None
+    guided_grammar: Optional[str] = None
+    guided_json: Optional[dict] = None
+    chat_template_kwargs: Optional[dict] = None
+    reasoning_effort: Optional[Literal["low", "medium", "high"]] = None
+    include_reasoning: Optional[bool] = None
+    repetition_penalty: Optional[float] = None
+    length_penalty: Optional[float] = None
 
 
 class OllamaInferenceEngineParams(TypedDict):

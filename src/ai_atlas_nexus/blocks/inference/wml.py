@@ -169,9 +169,11 @@ class WMLInferenceEngine(InferenceEngine):
     def generate_chat_response(
         self, response_format, tools, messages
     ) -> List[TextGenerationInferenceOutput]:
+        self.parameters.update({"guided_json": response_format})
         return self.client.chat(
             messages=self._to_openai_format(messages),
             params=self.parameters,
+            tools=tools,
         )
 
     def _prepare_prediction_output(
