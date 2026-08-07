@@ -5,7 +5,40 @@ scores those suggestions against a set of curated (human-reviewed) mappings so
 we can establish a baseline and re-run the same measurement after changes.
 """
 
+from pathlib import Path
+
 from sssom_schema import Mapping
+
+
+# Curated mapping files ship in the package data directory.
+_MAPPINGS_DIR = Path(__file__).resolve().parents[2] / "data" / "mappings"
+
+
+def load_curated_mappings(
+    filename: str, justification: str = "semapv:ManualMappingCuration"
+) -> list[Mapping]:
+    """Load curated mappings from a shipped SSSOM/TSV file, for use as ground truth.
+
+    Args:
+        filename: str
+            Name of a mapping file in the package's data/mappings directory.
+        justification: str
+            Keep only mappings with this mapping_justification. Defaults to
+            manual curation so the mapper is not scored against machine-generated
+            mappings, which would be circular.
+
+    Returns:
+        list[Mapping]: the curated mappings, with noMatch rows removed.
+    """
+    from sssom.parsers import parse_sssom_table
+
+    path = _MAPPINGS_DIR / filename
+    mapping_set = parse_sssom_table(file_path=str(path)).to_mapping_set()
+    return [
+        m
+        for m in mapping_set.mappings
+        if m.mapping_justification == justification and m.predicate_id != "noMatch"
+    ]
 
 
 def _pair_key(mapping: Mapping) -> tuple:

@@ -2,7 +2,7 @@
 
 from sssom_schema import Mapping
 
-from ai_atlas_nexus.blocks.risk_mapping import evaluate_mappings
+from ai_atlas_nexus.blocks.risk_mapping import evaluate_mappings, load_curated_mappings
 
 
 def _m(subject, obj, predicate="skos:relatedMatch"):
@@ -93,3 +93,24 @@ class TestCoverage:
         cov = evaluate_mappings([_m("ibm:a", "mit:x")], [])["coverage"]
         assert cov["source_risk_coverage"] == 0.0
         assert cov["n_source_risks"] == 0
+
+
+class TestLoadCuratedMappings:
+    """Loading curated ground truth from the shipped SSSOM files."""
+
+    def test_loads_ibm_mit_manual_pairs(self):
+        mappings = load_curated_mappings("mit-ai-risk-repository_ibm-risk-atlas.tsv")
+        assert len(mappings) == 252
+        assert all(
+            m.mapping_justification == "semapv:ManualMappingCuration" for m in mappings
+        )
+        assert all(m.subject_id and m.object_id for m in mappings)
+
+    def test_default_keeps_only_manual_curation(self):
+        # ailuminate is entirely LLM/similarity generated, so nothing is manual
+        assert load_curated_mappings("ailuminate-v1.0.sssom.tsv") == []
+
+    def test_drops_no_match_rows(self):
+        mappings = load_curated_mappings("ibm2owasp.tsv")
+        assert mappings  # file has manual rows
+        assert all(m.predicate_id != "noMatch" for m in mappings)
