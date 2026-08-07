@@ -80,8 +80,16 @@ classes:
     is_a: Entity
     class_uri: airo:Documentation
     description: Documented information about a concept or other topic(s) of interest.
+    aliases:
+      - ExternalReference
     slots:
       - hasLicense
+    slot_usage:
+      isCategorizedAs:
+        range: Term
+        description: >-
+          The category this document falls under, referenced as a catalogued Term rather
+          than repeated as free text, so grouping labels are declared in one place.
     attributes:
       author:
         name: author
@@ -156,6 +164,7 @@ classes:
     slots:
       - isDefinedByTaxonomy
       - isApplicableinLocality
+      - hasExternalReference
 
   Group:
     is_a: Entity
@@ -197,6 +206,7 @@ classes:
       - isDefinedByTaxonomy
       - isDefinedByVocabulary
       - hasDocumentation
+      - hasExternalReference
       - isPartOf
       - requiredByTask
       - requiresCapability
@@ -391,6 +401,20 @@ slots:
     multivalued: true
     inlined: false
     description: Indicates documentation associated with an entity.
+  hasExternalReference:
+    slot_uri: nexus:hasExternalReference
+    exact_mappings:
+      - rdfs:seeAlso
+    aliases:
+      - additional resources
+      - external_links
+    range: Documentation
+    multivalued: true
+    inlined: false
+    description: >-
+      External references / additional resources related to this entity, such as articles,
+      tools, or datasets. Distinct from hasDocumentation, which documents the entity itself.
+      External references are not necessarily curated or vetted, and quality will vary.
   hasLicense:
     slot_uri: airo:hasLicense
     range: License

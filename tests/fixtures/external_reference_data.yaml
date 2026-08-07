@@ -1,0 +1,147 @@
+# Test data for the hasExternalReference slot and the Documentation.isCategorizedAs
+# narrowing (range: Term). Container-shaped, loadable via
+# linkml_runtime.loaders.yaml_loader against the Container tree_root.
+#
+# Shape under test:
+#   Entry/Control --hasExternalReference--> Documentation --isCategorizedAs--> Term
+# Both edges are inlined: false, so they are id references and each document is
+# declared exactly once no matter how many records cite it.
+#
+# Content is taken from FINOS AI Governance Framework, which motivated
+#  https://github.com/IBM/ai-atlas-nexus/issues/181:
+#
+#  Links:
+#   docs/_risks/ri-10_prompt-injection.md
+#   docs/_risks/ri-5_foundation-model-versioning.md
+#
+#  Additional Resources ("Tooling" grouping):
+#   docs/_mitigations/mi-3_user-app-model-firewalling-filtering.md
+#
+# Those section names and the "Tooling" grouping bullet are what isCategorizedAs
+# captures here - the categories are transcribed, not invented.
+#
+# The finos: CURIE prefix (https://w3id.org/finos/aigf/) is used for downstream
+# record ids - "finos" is not declared in the schema (its consumer-side).
+
+vocabularies:
+  - id: nexus:vocab-external-reference-category
+    type: Vocabulary
+    name: External reference categories
+    description: Controlled grouping labels applied to external references.
+
+entries:
+  # Grouping labels, declared once and referenced by id. Both are taken from the
+  # section headings the FINOS documents actually use.
+  - id: nexus:extref-category-tooling
+    type: Term
+    name: Tooling
+    description: Software tools, libraries, and models.
+    isDefinedByVocabulary: nexus:vocab-external-reference-category
+
+  - id: nexus:extref-category-links
+    type: Term
+    name: Links
+    description: Background reading, incident reports, and research papers.
+    isDefinedByVocabulary: nexus:vocab-external-reference-category
+
+  # FINOS ri-10. A Risk is an Entry, so it carries hasExternalReference.
+  - id: finos:ri-10
+    type: Risk
+    name: Prompt Injection
+    url: https://air-governance-framework.finos.org/risks/ri-10_prompt-injection.html
+    hasExternalReference:
+      - finos:doc-owasp-llm-top-10
+      - finos:doc-bbc-dpd-chatbot
+      - finos:doc-willison-indirect-prompt-injection
+      - finos:doc-arxiv-jailbreaking-llms
+
+  # FINOS ri-5 cites the same BBC report as ri-10. In the source that link is
+  # duplicated as free text under three different titles; here it is one
+  # Documentation, declared once and referenced twice.
+  - id: finos:ri-5
+    type: Risk
+    name: Foundation Model Versioning
+    url: https://air-governance-framework.finos.org/risks/ri-5_foundation-model-versioning.html
+    hasExternalReference:
+      - finos:doc-bbc-dpd-chatbot
+      - finos:doc-arxiv-prompt-instability
+
+actions:
+  # FINOS mi-3. A mitigation maps to Action, which descends from Control rather
+  # than Entry - hence hasExternalReference is declared on both.
+  - id: finos:mi-3
+    type: Action
+    name: User/App/Model Firewalling/Filtering
+    url: https://air-governance-framework.finos.org/mitigations/mi-3_user-app-model-firewalling-filtering.html
+    hasExternalReference:
+      - finos:doc-llm-guard
+      - finos:doc-deberta-prompt-injection
+      - finos:doc-shieldlm
+
+documents:
+  # --- Tooling (from mi-3 "Additional Resources" -> **Tooling**) -------------
+  - id: finos:doc-llm-guard
+    name: LLM Guard
+    description: >-
+      Open source LLM filter for sanitization, detection of harmful language,
+      prevention of data leakage, and resistance against prompt injection attacks.
+    url: https://github.com/protectai/llm-guard
+    isCategorizedAs:
+      - nexus:extref-category-tooling
+
+  - id: finos:doc-deberta-prompt-injection
+    name: deberta-v3-base-prompt-injection-v2
+    description: >-
+      Fine-tuned deberta-v3-base model developed to detect and classify prompt
+      injection attacks.
+    url: https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2
+    isCategorizedAs:
+      - nexus:extref-category-tooling
+
+  - id: finos:doc-shieldlm
+    name: ShieldLM
+    description: >-
+      Open source bilingual safety detector for identifying safety issues in
+      LLM generations.
+    url: https://github.com/thu-coai/ShieldLM
+    isCategorizedAs:
+      - nexus:extref-category-tooling
+
+  # --- Links (from the "## Links" sections of ri-10 and ri-5) ---------------
+  - id: finos:doc-owasp-llm-top-10
+    name: OWASP Top 10 for LLM Applications (PDF)
+    url: https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-2023-v1_1.pdf
+    isCategorizedAs:
+      - nexus:extref-category-links
+
+  # Cited by ri-10 and ri-5. The source gives this one URL three different
+  # titles; modelling it as one Documentation forces a single canonical name.
+  - id: finos:doc-bbc-dpd-chatbot
+    name: DPD error caused chatbot to swear at customer
+    url: https://www.bbc.co.uk/news/technology-68025677
+    isCategorizedAs:
+      - nexus:extref-category-links
+
+  - id: finos:doc-willison-indirect-prompt-injection
+    name: Indirect Prompt Injection - Simon Willison
+    description: Technical explanation and examples of indirect prompt injection risks.
+    url: https://simonwillison.net/2023/Apr/3/indirect-prompt-injection/
+    isCategorizedAs:
+      - nexus:extref-category-links
+
+  # Carries two labels, exercising the multivalued category.
+  - id: finos:doc-arxiv-jailbreaking-llms
+    name: Jailbreaking LLMs via Prompt Injection - ArXiv
+    description: Research exploring how models can be jailbroken using carefully crafted prompts.
+    url: https://arxiv.org/abs/2302.12173
+    isCategorizedAs:
+      - nexus:extref-category-links
+      - nexus:extref-category-tooling
+
+  - id: finos:doc-arxiv-prompt-instability
+    name: >-
+      Surprisingly Fragile: Assessing and Addressing Prompt Instability in
+      Multimodal Foundation Models
+    url: https://www.arxiv.org/abs/2408.14595
+    isCategorizedAs:
+      - nexus:extref-category-links
