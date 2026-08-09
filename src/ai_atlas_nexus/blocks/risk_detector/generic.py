@@ -109,12 +109,19 @@ class GenericRiskDetector(RiskDetector):
                 )
             )
 
-            all_risks.append(
-                [
-                    self._risks[index]
-                    for index, response in enumerate(inference_responses)
-                    if response.prediction["answer"] == "Yes"
-                ]
-            )
+            identified_risks = []
+            for index, response in enumerate(inference_responses):
+                if (
+                    isinstance(response.prediction, dict)
+                    and "answer" in response.prediction
+                ):
+                    if response.prediction["answer"] == "Yes":
+                        identified_risks.append(self._risks[index])
+                elif (
+                    isinstance(response.prediction, str)
+                    and "yes" in response.prediction.lower()
+                ):
+                    identified_risks.append(self._risks[index])
+            all_risks.append(identified_risks)
 
         return all_risks
