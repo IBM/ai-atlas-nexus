@@ -218,7 +218,7 @@ class TestWMLInferenceEngine(unittest.TestCase):
                 result = engine.generate_text(response_format, prompt)
 
                 mock_gen_chat.assert_called_once_with(
-                    response_format, None, prompt
+                    response_format, tools=None, messages=prompt
                 )
                 self.assertEqual(result, mock_response)
 
