@@ -131,7 +131,7 @@ class WMLInferenceEngine(InferenceEngine):
     def generate_text(
         self, response_format, prompt: str
     ) -> List[TextGenerationInferenceOutput]:
-        return self.generate_chat_response(response_format, None, prompt)
+        return self.generate_chat_response(response_format, tools=None, messages=prompt)
 
     @postprocess
     def chat(
@@ -146,7 +146,7 @@ class WMLInferenceEngine(InferenceEngine):
         response_format=None,
         postprocessors: List[str] = None,
         verbose=True,
-    ) -> TextGenerationInferenceOutput:
+    ) -> List[TextGenerationInferenceOutput]:
         try:
             return [
                 self._prepare_prediction_output(response)
@@ -166,10 +166,10 @@ class WMLInferenceEngine(InferenceEngine):
         except Exception as e:
             raise InferenceError(str(e))
 
-    def generate_chat_response(
-        self, response_format, tools, messages
-    ) -> List[TextGenerationInferenceOutput]:
-        self.parameters.update({"guided_json": self.format(response_format)})
+    def generate_chat_response(self, response_format, tools, messages):
+        self.parameters.update(
+            {"response_format": self._create_schema_format(response_format)}
+        )
         return self.client.chat(
             messages=self._to_openai_format(messages),
             params=self.parameters,
@@ -207,3 +207,16 @@ class WMLInferenceEngine(InferenceEngine):
             inference_engine=str(self._inference_engine_type),
             **prediction_data,
         )
+
+    def _create_schema_format(self, response_format):
+        if response_format:
+            return {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "WML_Schema",
+                    "schema": self.format(response_format),
+                    "strict": True,
+                },
+            }
+        else:
+            return None
