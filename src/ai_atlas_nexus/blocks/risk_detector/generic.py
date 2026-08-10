@@ -115,7 +115,7 @@ class GenericRiskDetector(RiskDetector):
                     isinstance(response.prediction, dict)
                     and "answer" in response.prediction
                 ):
-                    if response.prediction["answer"] == "Yes":
+                    if response.prediction["answer"].lower() == "yes":
                         identified_risks.append(self._risks[index])
                 elif (
                     isinstance(response.prediction, str)
