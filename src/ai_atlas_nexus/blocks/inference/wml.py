@@ -167,7 +167,8 @@ class WMLInferenceEngine(InferenceEngine):
             raise InferenceError(str(e))
 
     def generate_chat_response(self, response_format, tools, messages):
-        self.parameters.update(
+        parameters = self.parameters.copy()
+        parameters.update(
             {
                 "response_format": self._create_schema_format(
                     self.format(response_format)
@@ -176,48 +177,41 @@ class WMLInferenceEngine(InferenceEngine):
         )
         return self.client.chat(
             messages=self._to_openai_format(messages),
-            params=self.parameters,
+            params=parameters,
             tools=tools,
         )
 
     def _prepare_prediction_output(
         self, response: Union[str, Dict]
     ) -> List[TextGenerationInferenceOutput]:
-        try:
-            if isinstance(response, str):
-                prediction_data = {"prediction": response}
+        if isinstance(response, str):
+            prediction_data = {"prediction": response}
+        else:
+            _CHAT_API = True if "choices" in response else False
+            if _CHAT_API:
+                prediction_data = {
+                    "prediction": response["choices"][0]["message"].get("content", ""),
+                    "input_tokens": response.get("usage", {}).get(
+                        "prompt_tokens", None
+                    ),
+                    "output_tokens": response.get("usage", {}).get(
+                        "completion_tokens", None
+                    ),
+                    "stop_reason": response["choices"][0]["finish_reason"],
+                }
             else:
-                _CHAT_API = True if "choices" in response else False
-                if _CHAT_API:
-                    prediction_data = {
-                        "prediction": response["choices"][0]["message"].get(
-                            "content", ""
-                        ),
-                        "input_tokens": response.get("usage", {}).get(
-                            "prompt_tokens", None
-                        ),
-                        "output_tokens": response.get("usage", {}).get(
-                            "completion_tokens", None
-                        ),
-                        "stop_reason": response["choices"][0]["finish_reason"],
-                    }
-                else:
-                    prediction_data = {
-                        "prediction": response["results"][0]["generated_text"],
-                        "input_tokens": response["results"][0]["input_token_count"],
-                        "output_tokens": response["results"][0][
-                            "generated_token_count"
-                        ],
-                        "stop_reason": response["results"][0]["stop_reason"],
-                    }
+                prediction_data = {
+                    "prediction": response["results"][0]["generated_text"],
+                    "input_tokens": response["results"][0]["input_token_count"],
+                    "output_tokens": response["results"][0]["generated_token_count"],
+                    "stop_reason": response["results"][0]["stop_reason"],
+                }
 
-            return TextGenerationInferenceOutput(
-                model_name_or_path=self.model_name_or_path,
-                inference_engine=str(self._inference_engine_type),
-                **prediction_data,
-            )
-        except Exception as e:
-            print()
+        return TextGenerationInferenceOutput(
+            model_name_or_path=self.model_name_or_path,
+            inference_engine=str(self._inference_engine_type),
+            **prediction_data,
+        )
 
     def _create_schema_format(self, response_format):
         if response_format:
