@@ -219,7 +219,7 @@ class WMLInferenceEngine(InferenceEngine):
                 "type": "json_schema",
                 "json_schema": {
                     "name": "WML_Schema",
-                    "schema": self.format(response_format),
+                    "schema": response_format,
                     "strict": True,
                 },
             }

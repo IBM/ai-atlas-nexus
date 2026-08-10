@@ -111,7 +111,7 @@ class VLLMInferenceEngine(InferenceEngine):
         response_format=None,
         postprocessors: List[str] = None,
         verbose=True,
-    ):
+    ) -> List[TextGenerationInferenceOutput]:
         try:
             if isinstance(self.client, OpenAI):
                 return [
@@ -131,8 +131,9 @@ class VLLMInferenceEngine(InferenceEngine):
                 from vllm import SamplingParams
                 from vllm.sampling_params import StructuredOutputsParams
 
+                parameters = self.parameters.copy()
                 if response_format:
-                    self.parameters.update(
+                    parameters.update(
                         {
                             "structured_outputs": StructuredOutputsParams(
                                 json=self.format(response_format)
@@ -143,7 +144,7 @@ class VLLMInferenceEngine(InferenceEngine):
                     self._prepare_prediction_output(response)
                     for response in self.client.generate(
                         prompts=self._validate_generate_prompts(prompts),
-                        sampling_params=SamplingParams(**self.parameters),
+                        sampling_params=SamplingParams(**parameters),
                         use_tqdm=verbose,
                     )
                 ]
@@ -171,7 +172,7 @@ class VLLMInferenceEngine(InferenceEngine):
         response_format=None,
         postprocessors: List[str] = None,
         verbose=True,
-    ):
+    ) -> List[TextGenerationInferenceOutput]:
         try:
             if isinstance(self.client, OpenAI):
                 return [
@@ -195,8 +196,9 @@ class VLLMInferenceEngine(InferenceEngine):
                 from vllm import SamplingParams
                 from vllm.sampling_params import StructuredOutputsParams
 
+                parameters = self.parameters.copy()
                 if response_format:
-                    self.parameters.update(
+                    parameters.update(
                         {
                             "structured_outputs": StructuredOutputsParams(
                                 json=self.format(response_format)
@@ -210,7 +212,7 @@ class VLLMInferenceEngine(InferenceEngine):
                             self._to_openai_format(message)
                             for message in self._validate_chat_messages(messages)
                         ],
-                        sampling_params=SamplingParams(**self.parameters),
+                        sampling_params=SamplingParams(**parameters),
                         use_tqdm=verbose,
                     )
                 ]
@@ -226,7 +228,9 @@ class VLLMInferenceEngine(InferenceEngine):
             **self.parameters,
         )
 
-    def _prepare_prediction_output(self, response, offline=True):
+    def _prepare_prediction_output(
+        self, response, offline=True
+    ) -> TextGenerationInferenceOutput:
         if isinstance(response, str):
             prediction_data = {"prediction": response}
         elif offline:
