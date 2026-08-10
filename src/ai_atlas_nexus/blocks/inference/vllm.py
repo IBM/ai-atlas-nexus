@@ -89,7 +89,6 @@ class VLLMInferenceEngine(InferenceEngine):
 
             return LLM(
                 model=self.model_name_or_path,
-                trust_remote_code=True,
                 gpu_memory_utilization=self.parameters.pop(
                     "gpu_memory_utilization", 0.92
                 ),
