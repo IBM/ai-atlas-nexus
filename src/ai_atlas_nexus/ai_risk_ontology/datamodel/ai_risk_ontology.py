@@ -375,7 +375,7 @@ class Documentation(Entity):
     """
     Documented information about a concept or other topic(s) of interest.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'aliases': ['ExternalReference', 'see also'],
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'aliases': ['ExternalReference'],
          'class_uri': 'airo:Documentation',
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
          'slot_usage': {'isCategorizedAs': {'description': 'The category this document '
@@ -704,9 +704,9 @@ class Control(Entity):
                        'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
     isApplicableinLocality: Optional[list[str]] = Field(default=None, description="""A relationship where an entity has is applicable in these localities.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Control', 'Policy'], 'slot_uri': 'nexus:isApplicableinLocality'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     type: Literal["Control"] = Field(default="Control", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -886,9 +886,9 @@ class Entry(Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -1002,9 +1002,9 @@ class Term(Entry):
                        'StakeholderGroup',
                        'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -1107,9 +1107,9 @@ class Principle(Entry):
          'slot_uri': 'schema:isPartOf'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -1767,9 +1767,9 @@ class Certification(Entry):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -1851,9 +1851,9 @@ class LocalityOfUse(Entry):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -2448,9 +2448,9 @@ class Risk(RiskConcept, Entry):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     requiredByTask: Optional[list[Any]] = Field(default=None, description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain': 'Entry',
          'domain_of': ['Entry', 'Capability'],
@@ -2544,9 +2544,9 @@ class RiskControl(RiskConcept, Control):
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
          'slot_uri': 'airo:isUsedWithinLocality'} })
     isApplicableinLocality: Optional[list[str]] = Field(default=None, description="""A relationship where an entity has is applicable in these localities.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Control', 'Policy'], 'slot_uri': 'nexus:isApplicableinLocality'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     type: Literal["RiskControl"] = Field(default="RiskControl", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -2680,9 +2680,9 @@ class Action(RiskControl):
     isUsedWithinLocality: Optional[list[str]] = Field(default=None, description="""Specifies the domain an AI system is used within.""", json_schema_extra = { "linkml_meta": {'domain_of': ['RiskConcept', 'AiSystem'],
          'slot_uri': 'airo:isUsedWithinLocality'} })
     isApplicableinLocality: Optional[list[str]] = Field(default=None, description="""A relationship where an entity has is applicable in these localities.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Control', 'Policy'], 'slot_uri': 'nexus:isApplicableinLocality'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     type: Literal["Action"] = Field(default="Action", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
@@ -3544,9 +3544,9 @@ class Capability(CapabilityConcept, Entry):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where a capability is part of a capability group""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -3757,9 +3757,9 @@ class AiSystem(BaseAi, Entry):
          'slot_uri': 'schema:isPartOf'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -3909,9 +3909,9 @@ class AiAgent(AiSystem):
          'slot_uri': 'schema:isPartOf'} })
     isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
          'slot_uri': 'schema:isPartOf'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -4060,9 +4060,9 @@ class AiTask(Entry):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -4568,9 +4568,9 @@ class Purpose(Entry):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -4673,9 +4673,9 @@ class Domain(Entry):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',
@@ -5972,9 +5972,9 @@ class Adapter(LargeLanguageModel, Entry):
                        'StakeholderGroup',
                        'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     requiredByTask: Optional[list[Any]] = Field(default=None, description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain': 'Entry',
          'domain_of': ['Entry', 'Capability'],
@@ -6105,9 +6105,9 @@ class LLMIntrinsic(Entry):
                        'StakeholderGroup',
                        'Requirement'],
          'slot_uri': 'schema:isPartOf'} })
-    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['see also', 'additional resource', 'related link'],
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
          'domain_of': ['Control', 'Entry'],
-         'exact_mappings': ['rdfs:seeAlso'],
          'slot_uri': 'nexus:hasExternalReference'} })
     isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
                        'Risk',

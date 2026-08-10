@@ -403,7 +403,7 @@ slots:
     description: Indicates documentation associated with an entity.
   hasExternalReference:
     slot_uri: nexus:hasExternalReference
-    exact_mappings:
+    close_mappings:
       - rdfs:seeAlso
     aliases:
       - additional resources
