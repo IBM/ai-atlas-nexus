@@ -84,7 +84,7 @@ AI Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. 
 
 When using the WML platform, you need to:
 
-1. Add configuration to `.env` file as follows. Please follow this [documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-credentials.html?context=wx&locale=en) on obtaining WML credentials.
+1. Add following variables to the configuration file `.env` or set them as environment variables. Please follow this [documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-credentials.html?context=wx&locale=en) on obtaining WML credentials.
 
 ```yaml
 WML_API_KEY=<WML api key goes here>
@@ -100,6 +100,8 @@ Either 'WML_PROJECT_ID' or 'WML_SPACE_ID' need to be specified.
 ```command
 pip install -e ".[wml]"
 ```
+
+**Note**: WML utilizes the function-calling feature for structured outputs. Since the AI Atlas Nexus APIs extensively use structured output, your WML model must support tool calling to be compatible with the AI Atlas Nexus APIs.
 
 #### Ollama
 
