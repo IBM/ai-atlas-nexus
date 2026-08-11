@@ -90,6 +90,28 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
 
 
+      LLMIntrinsic : hasExternalReference
+
+
+
+
+
+        LLMIntrinsic --> "*" Documentation : hasExternalReference
+        click Documentation href "../Documentation/"
+
+
+
+      LLMIntrinsic : hasLifecycleStatus
+
+
+
+
+
+        LLMIntrinsic --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       LLMIntrinsic : hasRelatedRisk
 
 
@@ -259,6 +281,7 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | [hasCapability](hasCapability.md)                 | \* <br/> [Capability](Capability.md)                                      | Indicates the technical capabilities this entry possesses                        | direct              |
 | [implementsCapability](implementsCapability.md)   | \* <br/> [Capability](Capability.md)                                      | Indicates that this entity implements a specific capability                      | direct              |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                                        | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)   |
+| [hasExternalReference](hasExternalReference.md)   | \* <br/> [Documentation](Documentation.md)                                | External references / additional resources related to this entity, such as ar... | [Entry](Entry.md)   |
 | [isPartOf](isPartOf.md)                           | 0..1 <br/> [String](String.md)                                            | A relationship where an entity is part of another entity                         | [Entry](Entry.md)   |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [Any](Any.md)                                                    | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)   |
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Any](Any.md)                                                    | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)   |
@@ -277,6 +300,7 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                                                    | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                                                    | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                                                    | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| [hasLifecycleStatus](hasLifecycleStatus.md)       | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                          | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
 
 ## Usages
 
@@ -512,6 +536,28 @@ attributes:
     - StakeholderGroup
     - Requirement
     range: Taxonomy
+  hasExternalReference:
+    name: hasExternalReference
+    description: External references / additional resources related to this entity,
+      such as articles, tools, or datasets. Distinct from hasDocumentation, which
+      documents the entity itself. External references are not necessarily curated
+      or vetted, and quality will vary.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - additional resources
+    - external_links
+    close_mappings:
+    - rdfs:seeAlso
+    rank: 1000
+    slot_uri: nexus:hasExternalReference
+    alias: hasExternalReference
+    owner: LLMIntrinsic
+    domain_of:
+    - Control
+    - Entry
+    range: Documentation
+    multivalued: true
+    inlined: false
   isPartOf:
     name: isPartOf
     description: A relationship where an entity is part of another entity
@@ -782,6 +828,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: LLMIntrinsic
+    domain_of:
+    - Entity
+    range: LifecycleStatus
 class_uri: ai:Capability
 
 ````

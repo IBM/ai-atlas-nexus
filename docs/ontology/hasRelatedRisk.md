@@ -19,17 +19,17 @@ Alias: hasRelatedRisk
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [AiEval](AiEval.md)                               | An AI Evaluation, e                                                              | yes           |
-| [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | yes           |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | yes           |
+| [LLMIntrinsic](LLMIntrinsic.md)                   | A capability that can be invoked through a well-defined API that is reasonabl... | yes           |
+| [Adapter](Adapter.md)                             | Adapter-based methods add extra trainable parameters after the attention and ... | yes           |
 | [Questionnaire](Questionnaire.md)                 | A questionnaire groups questions                                                 | no            |
 | [Question](Question.md)                           | An evaluation where a question has to be answered                                | no            |
-| [LLMQuestionPolicy](LLMQuestionPolicy.md)         | The policy guides how the language model should answer a diverse set of sensi... | no            |
-| [AiSystem](AiSystem.md)                           | A compound AI System composed of one or more AI capablities                      | yes           |
-| [LLMIntrinsic](LLMIntrinsic.md)                   | A capability that can be invoked through a well-defined API that is reasonabl... | yes           |
 | [AiAgent](AiAgent.md)                             | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [Term](Term.md)                                   | A term and its definitions                                                       | no            |
-| [Adapter](Adapter.md)                             | Adapter-based methods add extra trainable parameters after the attention and ... | yes           |
+| [LLMQuestionPolicy](LLMQuestionPolicy.md)         | The policy guides how the language model should answer a diverse set of sensi... | no            |
+| [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | yes           |
+| [AiSystem](AiSystem.md)                           | A compound AI System composed of one or more AI capablities                      | yes           |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | yes           |
 | [Action](Action.md)                               | Action to remediate a risk                                                       | yes           |
+| [Term](Term.md)                                   | A term and its definitions                                                       | no            |
 
 ## Properties
 

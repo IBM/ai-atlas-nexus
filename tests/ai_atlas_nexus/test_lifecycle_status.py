@@ -25,6 +25,7 @@ slot, and the schema is the source of truth regardless.
 import pytest
 from linkml_runtime.utils.schemaview import SchemaView
 
+
 # ---------------------------------------------------------------------------
 # Schema under test
 # ---------------------------------------------------------------------------

@@ -2,20 +2,10 @@ from __future__ import annotations
 
 import re
 import sys
-from datetime import (
-    date,
-    datetime,
-    time
-)
+from datetime import date, datetime, time
 from decimal import Decimal
 from enum import Enum
-from typing import (
-    Any,
-    ClassVar,
-    Literal,
-    Optional,
-    Union
-)
+from typing import Any, ClassVar, Literal, Optional, Union
 
 from pydantic import (
     BaseModel,
@@ -25,11 +15,11 @@ from pydantic import (
     SerializationInfo,
     SerializerFunctionWrapHandler,
     field_validator,
-    model_serializer
+    model_serializer,
 )
 
 
-metamodel_version = "1.11.0"
+metamodel_version = "1.7.0"
 version = "0.5.0"
 
 
@@ -88,6 +78,36 @@ linkml_meta = LinkMLMeta({'default_curi_maps': ['semweb_context'],
                   'nexus': {'prefix_prefix': 'nexus',
                             'prefix_reference': 'https://w3id.org/ai-atlas-nexus/'}},
      'source_file': 'src/ai_atlas_nexus/ai_risk_ontology/schema/ai-risk-ontology.yaml'} )
+
+class LifecycleStatus(str, Enum):
+    """
+    Editorial / publication state of a catalogued entity. Permissible values align to the ADMS-status codelist where one exists; otherwise drawn from PSO vocabulary, and failing that, minted in this nexus namespace.
+    """
+    DRAFT = "DRAFT"
+    """
+    Initial draft under development.
+    """
+    REVIEW = "REVIEW"
+    """
+    Under editorial or technical review.
+    """
+    APPROVED = "APPROVED"
+    """
+    Approved / published as authoritative.
+    """
+    DEPRECATED = "DEPRECATED"
+    """
+    Discouraged for new use but still available.
+    """
+    SUPERSEDED = "SUPERSEDED"
+    """
+    Replaced by a newer version of this entity.
+    """
+    WITHDRAWN = "WITHDRAWN"
+    """
+    Removed / no longer available.
+    """
+
 
 class Jurisdiction(str):
     """
@@ -265,6 +285,9 @@ class Entity(ConfiguredBaseModel):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Organization(Entity):
@@ -287,6 +310,9 @@ class Organization(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class License(Entity):
@@ -315,6 +341,9 @@ class License(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Dataset(Entity):
@@ -356,7 +385,7 @@ class Dataset(Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    provider: Optional[str] = Field(default=None, description="""A relationship to the Organization instance that provides this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset'], 'slot_uri': 'schema:provider'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -369,6 +398,9 @@ class Dataset(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Documentation(Entity):
@@ -412,6 +444,9 @@ class Documentation(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[str]] = Field(default=None, description="""The category this document falls under, referenced as a catalogued Term rather than repeated as free text, so grouping labels are declared in one place.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Fact(ConfiguredBaseModel):
@@ -506,6 +541,9 @@ class Vocabulary(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Taxonomy(Entity):
@@ -589,6 +627,9 @@ class Taxonomy(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Concept(Entity):
@@ -673,6 +714,9 @@ class Concept(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Control(Entity):
@@ -741,6 +785,9 @@ class Control(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Group(Entity):
@@ -835,6 +882,9 @@ class Group(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Entry(Entity):
@@ -941,6 +991,9 @@ class Entry(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Term(Entry):
@@ -1057,6 +1110,9 @@ class Term(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Principle(Entry):
@@ -1162,6 +1218,9 @@ class Principle(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Policy(Entity):
@@ -1225,6 +1284,9 @@ class Policy(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class LLMQuestionPolicy(Policy):
@@ -1301,6 +1363,9 @@ class LLMQuestionPolicy(Policy):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Rule(Entity):
@@ -1365,6 +1430,9 @@ class Rule(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AttributeConditionRule(Rule):
@@ -1426,6 +1494,9 @@ class AttributeConditionRule(Rule):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AnonymousClassExpression(ConfiguredBaseModel):
@@ -1503,6 +1574,9 @@ class Permission(Rule):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Prohibition(Rule):
@@ -1567,6 +1641,9 @@ class Prohibition(Rule):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Obligation(Rule):
@@ -1631,6 +1708,9 @@ class Obligation(Rule):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Recommendation(Rule):
@@ -1695,6 +1775,9 @@ class Recommendation(Rule):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Certification(Entry):
@@ -1801,6 +1884,9 @@ class Certification(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class LocalityOfUse(Entry):
@@ -1906,6 +1992,9 @@ class LocalityOfUse(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class RiskTaxonomy(Taxonomy):
@@ -1986,6 +2075,9 @@ class RiskTaxonomy(Taxonomy):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class RiskControlGroupTaxonomy(Taxonomy):
@@ -2066,6 +2158,9 @@ class RiskControlGroupTaxonomy(Taxonomy):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class RiskConcept(Concept):
@@ -2157,6 +2252,9 @@ class RiskConcept(Concept):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class RiskControlGroup(RiskConcept, Group):
@@ -2262,6 +2360,9 @@ class RiskControlGroup(RiskConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
@@ -2367,6 +2468,9 @@ class RiskGroup(RiskConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
@@ -2496,6 +2600,9 @@ class Risk(RiskConcept, Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
@@ -2581,6 +2688,9 @@ class RiskControl(RiskConcept, Control):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
                        'Taxonomy',
@@ -2717,6 +2827,9 @@ class Action(RiskControl):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
@@ -2783,6 +2896,9 @@ class RiskIncident(RiskConcept, Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
                        'Taxonomy',
@@ -2852,6 +2968,9 @@ class Impact(RiskConcept, Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -2931,6 +3050,9 @@ class IncidentStatus(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class IncidentConcludedclass(IncidentStatus):
@@ -2949,6 +3071,9 @@ class IncidentConcludedclass(IncidentStatus):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class IncidentHaltedclass(IncidentStatus):
@@ -2967,6 +3092,9 @@ class IncidentHaltedclass(IncidentStatus):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class IncidentMitigatedclass(IncidentStatus):
@@ -2985,6 +3113,9 @@ class IncidentMitigatedclass(IncidentStatus):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class IncidentNearMissclass(IncidentStatus):
@@ -3003,6 +3134,9 @@ class IncidentNearMissclass(IncidentStatus):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class IncidentOngoingclass(IncidentStatus):
@@ -3021,6 +3155,9 @@ class IncidentOngoingclass(IncidentStatus):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Severity(Entity):
@@ -3039,6 +3176,9 @@ class Severity(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Likelihood(Entity):
@@ -3057,6 +3197,9 @@ class Likelihood(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Consequence(Entity):
@@ -3075,6 +3218,9 @@ class Consequence(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class CapabilityTaxonomy(Taxonomy):
@@ -3156,6 +3302,9 @@ class CapabilityTaxonomy(Taxonomy):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class CapabilityConcept(Concept):
@@ -3239,6 +3388,9 @@ class CapabilityConcept(Concept):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class CapabilityDomain(CapabilityConcept, Group):
@@ -3336,6 +3488,9 @@ class CapabilityDomain(CapabilityConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
@@ -3450,6 +3605,9 @@ class CapabilityGroup(CapabilityConcept, Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
@@ -3593,6 +3751,9 @@ class Capability(CapabilityConcept, Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
 
 
@@ -3602,7 +3763,7 @@ class BaseAi(Entity):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True, 'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
 
-    producer: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
+    isProducedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -3637,7 +3798,7 @@ class BaseAi(Entity):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
-    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -3650,6 +3811,9 @@ class BaseAi(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiSystem(BaseAi, Entry):
@@ -3700,7 +3864,7 @@ class AiSystem(BaseAi, Entry):
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
-    producer: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
+    isProducedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -3735,7 +3899,7 @@ class AiSystem(BaseAi, Entry):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
-    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -3812,6 +3976,9 @@ class AiSystem(BaseAi, Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiAgent(AiSystem):
@@ -3852,7 +4019,7 @@ class AiAgent(AiSystem):
                        'BenchmarkMetadataCard',
                        'Adapter',
                        'LLMIntrinsic']} })
-    producer: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
+    isProducedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -3887,7 +4054,7 @@ class AiAgent(AiSystem):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
-    isProvidedBy: Optional[str] = Field(default=None, description="""A relationship indicating the AI agent has been provided by an AI systems provider.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""A relationship indicating the AI agent has been provided by an AI systems provider.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -3964,6 +4131,9 @@ class AiAgent(AiSystem):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class LargeLanguageModelFamily(Entity):
@@ -4004,6 +4174,9 @@ class LargeLanguageModelFamily(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiTask(Entry):
@@ -4112,6 +4285,9 @@ class AiTask(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiTaskTaxonomy(Taxonomy):
@@ -4192,6 +4368,9 @@ class AiTaskTaxonomy(Taxonomy):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiTaskDomain(Group):
@@ -4288,6 +4467,9 @@ class AiTaskDomain(Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiTaskGroup(Group):
@@ -4392,6 +4574,9 @@ class AiTaskGroup(Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiLifecyclePhase(Entity):
@@ -4414,6 +4599,9 @@ class AiLifecyclePhase(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class DataPreprocessing(AiLifecyclePhase):
@@ -4434,6 +4622,9 @@ class DataPreprocessing(AiLifecyclePhase):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiModelValidation(AiLifecyclePhase):
@@ -4454,6 +4645,9 @@ class AiModelValidation(AiLifecyclePhase):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiProvider(Organization):
@@ -4476,6 +4670,9 @@ class AiProvider(Organization):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Modality(Entity):
@@ -4497,6 +4694,9 @@ class Modality(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Input(Entity):
@@ -4518,6 +4718,9 @@ class Input(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Purpose(Entry):
@@ -4623,6 +4826,9 @@ class Purpose(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Domain(Entry):
@@ -4728,6 +4934,9 @@ class Domain(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AIComponent(Entity):
@@ -4749,6 +4958,9 @@ class AIComponent(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiModel(AIComponent, BaseAi):
@@ -4766,7 +4978,7 @@ class AiModel(AIComponent, BaseAi):
     carbon_emitted: Optional[float] = Field(default=None, description="""The number of tons of carbon dioxide equivalent that are emitted during training""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'],
          'unit': {'descriptive_name': 'tons of CO2 equivalent', 'symbol': 't CO2-eq'}} })
     hasRiskControl: Optional[list[str]] = Field(default=None, description="""Indicates the control measures associated with a system or component to modify risks.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'], 'slot_uri': 'airo:hasRiskControl'} })
-    producer: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
+    isProducedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -4801,7 +5013,7 @@ class AiModel(AIComponent, BaseAi):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
-    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -4814,6 +5026,9 @@ class AiModel(AIComponent, BaseAi):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class LargeLanguageModel(AiModel):
@@ -4854,7 +5069,7 @@ class LargeLanguageModel(AiModel):
     carbon_emitted: Optional[float] = Field(default=None, description="""The number of tons of carbon dioxide equivalent that are emitted during training""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'],
          'unit': {'descriptive_name': 'tons of CO2 equivalent', 'symbol': 't CO2-eq'}} })
     hasRiskControl: Optional[list[str]] = Field(default=None, description="""Indicates the control measures associated with a system or component to modify risks.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'], 'slot_uri': 'airo:hasRiskControl'} })
-    producer: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
+    isProducedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -4889,7 +5104,7 @@ class LargeLanguageModel(AiModel):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
-    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -4902,6 +5117,9 @@ class LargeLanguageModel(AiModel):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Stakeholder(Entity):
@@ -4954,6 +5172,9 @@ class Stakeholder(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AISubject(Stakeholder):
@@ -5001,6 +5222,9 @@ class AISubject(Stakeholder):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AIOperator(Stakeholder):
@@ -5048,6 +5272,9 @@ class AIOperator(Stakeholder):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AIDeveloper(Stakeholder):
@@ -5095,6 +5322,9 @@ class AIDeveloper(Stakeholder):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AIDeployer(AIOperator):
@@ -5142,6 +5372,9 @@ class AIDeployer(AIOperator):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AIUser(Stakeholder):
@@ -5189,6 +5422,9 @@ class AIUser(Stakeholder):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class StakeholderGroup(Group):
@@ -5280,6 +5516,9 @@ class StakeholderGroup(Group):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiEval(Entity):
@@ -5361,6 +5600,9 @@ class AiEval(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiEvalResult(Fact, Entity):
@@ -5386,6 +5628,9 @@ class AiEvalResult(Fact, Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class SourceMetadata(Entity):
@@ -5412,6 +5657,9 @@ class SourceMetadata(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class ModelInfo(Entity):
@@ -5435,6 +5683,9 @@ class ModelInfo(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class SourceData(Entity):
@@ -5460,6 +5711,9 @@ class SourceData(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class MetricConfig(Entity):
@@ -5485,6 +5739,9 @@ class MetricConfig(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class ScoreDetails(Entity):
@@ -5507,6 +5764,9 @@ class ScoreDetails(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class EvaluationResultRecord(Entity):
@@ -5532,6 +5792,9 @@ class EvaluationResultRecord(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class EveryEvalAIResult(AiEvalResult):
@@ -5609,6 +5872,9 @@ class EveryEvalAIResult(AiEvalResult):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class BenchmarkMetadataCard(Entity):
@@ -5724,6 +5990,9 @@ class BenchmarkMetadataCard(Entity):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Question(AiEval):
@@ -5794,6 +6063,9 @@ class Question(AiEval):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Questionnaire(AiEval):
@@ -5864,6 +6136,9 @@ class Questionnaire(AiEval):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Adapter(LargeLanguageModel, Entry):
@@ -6017,6 +6292,9 @@ class Adapter(LargeLanguageModel, Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
     hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'], 'slot_uri': 'dqv:hasQualityMeasurement'} })
     architecture: Optional[str] = Field(default=None, description="""A description of the architecture of an AI such as 'Decoder-only'.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
     gpu_hours: Optional[int] = Field(default=None, description="""GPU consumption in terms of hours""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
@@ -6024,10 +6302,10 @@ class Adapter(LargeLanguageModel, Entry):
     carbon_emitted: Optional[float] = Field(default=None, description="""The number of tons of carbon dioxide equivalent that are emitted during training""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'],
          'unit': {'descriptive_name': 'tons of CO2 equivalent', 'symbol': 't CO2-eq'}} })
     hasRiskControl: Optional[list[str]] = Field(default=None, description="""Indicates the control measures associated with a system or component to modify risks.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'], 'slot_uri': 'airo:hasRiskControl'} })
-    producer: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
+    isProducedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
-    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
 
 
 class LLMIntrinsic(Entry):
@@ -6160,6 +6438,9 @@ class LLMIntrinsic(Entry):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class AiOffice(Organization):
@@ -6182,6 +6463,9 @@ class AiOffice(Organization):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class ControlActivity(Rule):
@@ -6199,9 +6483,9 @@ class ControlActivity(Rule):
     hasTypicalLocation: Optional[list[str]] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasTypicalLocation'} })
-    appliesToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
+    isApplicableToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity', 'Requirement'],
-         'slot_uri': 'nexus:appliesToCapability'} })
+         'slot_uri': 'nexus:isApplicableToCapability'} })
     hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasRequirement'} })
@@ -6265,6 +6549,9 @@ class ControlActivity(Rule):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class ControlActivityPermission(ControlActivity, Permission):
@@ -6305,9 +6592,9 @@ class ControlActivityPermission(ControlActivity, Permission):
     hasTypicalLocation: Optional[list[str]] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasTypicalLocation'} })
-    appliesToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
+    isApplicableToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity', 'Requirement'],
-         'slot_uri': 'nexus:appliesToCapability'} })
+         'slot_uri': 'nexus:isApplicableToCapability'} })
     hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasRequirement'} })
@@ -6350,6 +6637,9 @@ class ControlActivityPermission(ControlActivity, Permission):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class ControlActivityProhibition(ControlActivity, Prohibition):
@@ -6390,9 +6680,9 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
     hasTypicalLocation: Optional[list[str]] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasTypicalLocation'} })
-    appliesToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
+    isApplicableToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity', 'Requirement'],
-         'slot_uri': 'nexus:appliesToCapability'} })
+         'slot_uri': 'nexus:isApplicableToCapability'} })
     hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasRequirement'} })
@@ -6435,6 +6725,9 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class ControlActivityObligation(ControlActivity, Obligation):
@@ -6475,9 +6768,9 @@ class ControlActivityObligation(ControlActivity, Obligation):
     hasTypicalLocation: Optional[list[str]] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasTypicalLocation'} })
-    appliesToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
+    isApplicableToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity', 'Requirement'],
-         'slot_uri': 'nexus:appliesToCapability'} })
+         'slot_uri': 'nexus:isApplicableToCapability'} })
     hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasRequirement'} })
@@ -6520,6 +6813,9 @@ class ControlActivityObligation(ControlActivity, Obligation):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class ControlActivityRecommendation(ControlActivity, Recommendation):
@@ -6560,9 +6856,9 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
     hasTypicalLocation: Optional[list[str]] = Field(default=None, description="""The evidence is usually found here""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasTypicalLocation'} })
-    appliesToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
+    isApplicableToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity', 'Requirement'],
-         'slot_uri': 'nexus:appliesToCapability'} })
+         'slot_uri': 'nexus:isApplicableToCapability'} })
     hasRequirement: Optional[str] = Field(default=None, description="""This requirement this rule belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasRequirement'} })
@@ -6605,6 +6901,9 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Requirement(Rule):
@@ -6630,9 +6929,9 @@ class Requirement(Rule):
     hasPrinciple: Optional[list[str]] = Field(default=None, description="""Which of the AIUC-1 principles this requirement belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'Requirement',
          'domain_of': ['Requirement'],
          'slot_uri': 'dpv:isPartOf'} })
-    appliesToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
+    isApplicableToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity', 'Requirement'],
-         'slot_uri': 'nexus:appliesToCapability'} })
+         'slot_uri': 'nexus:isApplicableToCapability'} })
     hasRequirementType: Optional[AIUC1RequirementType] = Field(default=None, description="""The requirement type of whether this is preventive, detective, etc.""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['ControlActivity', 'Requirement'],
          'slot_uri': 'nexus:hasRequirementType'} })
@@ -6690,6 +6989,9 @@ class Requirement(Rule):
     narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
     broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
     isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
 
 
 class Container(ConfiguredBaseModel):

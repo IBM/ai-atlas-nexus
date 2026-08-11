@@ -62,6 +62,17 @@ URI: [airo:AIOperator](https://w3id.org/airo#AIOperator)
 
 
 
+      AIOperator : hasLifecycleStatus
+
+
+
+
+
+        AIOperator --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       AIOperator : id
 
       AIOperator : isCategorizedAs
@@ -157,6 +168,7 @@ URI: [airo:AIOperator](https://w3id.org/airo#AIOperator)
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)           |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)           |
 | [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                             | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)           |
+| [hasLifecycleStatus](hasLifecycleStatus.md)   | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)   | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)           |
 
 ## Identifier and Mapping Information
 
@@ -402,6 +414,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: AIOperator
+    domain_of:
+    - Entity
+    range: LifecycleStatus
 class_uri: airo:AIOperator
 
 ````

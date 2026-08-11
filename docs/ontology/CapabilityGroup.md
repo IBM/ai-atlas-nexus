@@ -94,6 +94,17 @@ URI: [nexus:CapabilityGroup](https://w3id.org/ai-atlas-nexus/CapabilityGroup)
 
 
 
+      CapabilityGroup : hasLifecycleStatus
+
+
+
+
+
+        CapabilityGroup --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       CapabilityGroup : hasPart
 
 
@@ -203,6 +214,7 @@ URI: [nexus:CapabilityGroup](https://w3id.org/ai-atlas-nexus/CapabilityGroup)
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 | [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                             | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                      |
+| [hasLifecycleStatus](hasLifecycleStatus.md)   | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)   | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                      |
 | [hasJurisdiction](hasJurisdiction.md)         | \* <br/> [Jurisdiction](Jurisdiction.md)           | The legal or political jurisdiction(s) in which this concept applies, express... | [Concept](Concept.md)                    |
 
 ## Usages
@@ -606,6 +618,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: CapabilityGroup
+    domain_of:
+    - Entity
+    range: LifecycleStatus
   hasJurisdiction:
     name: hasJurisdiction
     description: The legal or political jurisdiction(s) in which this concept applies,

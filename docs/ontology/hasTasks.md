@@ -19,10 +19,10 @@ Alias: hasTasks
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
 | [AiEval](AiEval.md)                               | An AI Evaluation, e                                                              | no            |
-| [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 | [Questionnaire](Questionnaire.md)                 | A questionnaire groups questions                                                 | no            |
 | [Question](Question.md)                           | An evaluation where a question has to be answered                                | no            |
+| [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 

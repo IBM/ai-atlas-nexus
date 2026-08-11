@@ -116,6 +116,17 @@ URI: [nexus:LargeLanguageModel](https://w3id.org/ai-atlas-nexus/LargeLanguageMod
 
 
 
+      LargeLanguageModel : hasLifecycleStatus
+
+
+
+
+
+        LargeLanguageModel --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       LargeLanguageModel : hasModelCard
 
       LargeLanguageModel : hasOutputModality
@@ -175,14 +186,25 @@ URI: [nexus:LargeLanguageModel](https://w3id.org/ai-atlas-nexus/LargeLanguageMod
 
 
 
+      LargeLanguageModel : isProducedBy
+
+
+
+
+
+        LargeLanguageModel --> "0..1" Organization : isProducedBy
+        click Organization href "../Organization/"
+
+
+
       LargeLanguageModel : isProvidedBy
 
 
 
 
 
-        LargeLanguageModel --> "0..1" AiProvider : isProvidedBy
-        click AiProvider href "../AiProvider/"
+        LargeLanguageModel --> "0..1" Organization : isProvidedBy
+        click Organization href "../Organization/"
 
 
 
@@ -215,17 +237,6 @@ URI: [nexus:LargeLanguageModel](https://w3id.org/ai-atlas-nexus/LargeLanguageMod
 
 
       LargeLanguageModel : power_consumption_w
-
-      LargeLanguageModel : producer
-
-
-
-
-
-        LargeLanguageModel --> "0..1" Organization : producer
-        click Organization href "../Organization/"
-
-
 
       LargeLanguageModel : related_mappings
 
@@ -289,12 +300,12 @@ URI: [nexus:LargeLanguageModel](https://w3id.org/ai-atlas-nexus/LargeLanguageMod
 | [power_consumption_w](power_consumption_w.md) | 0..1 <br/> [Integer](Integer.md)                                   | power consumption in Watts                                                       | [AiModel](AiModel.md) |
 | [carbon_emitted](carbon_emitted.md)           | 0..1 <br/> [Float](Float.md)                                       | The number of tons of carbon dioxide equivalent that are emitted during train... | [AiModel](AiModel.md) |
 | [hasRiskControl](hasRiskControl.md)           | \* <br/> [RiskControl](RiskControl.md)                             | Indicates the control measures associated with a system or component to modif... | [AiModel](AiModel.md) |
-| [producer](producer.md)                       | 0..1 <br/> [Organization](Organization.md)                         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)   |
+| [isProducedBy](isProducedBy.md)               | 0..1 <br/> [Organization](Organization.md)                         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)   |
 | [hasModelCard](hasModelCard.md)               | \* <br/> [String](String.md)                                       | A relationship to model card references                                          | [BaseAi](BaseAi.md)   |
 | [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)                         | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md)   |
 | [hasLicense](hasLicense.md)                   | 0..1 <br/> [License](License.md)                                   | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md)   |
 | [performsTask](performsTask.md)               | \* <br/> [AiTask](AiTask.md)                                       | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md)   |
-| [isProvidedBy](isProvidedBy.md)               | 0..1 <br/> [AiProvider](AiProvider.md)                             | Indicates provider of an AI system or component                                  | [BaseAi](BaseAi.md)   |
+| [isProvidedBy](isProvidedBy.md)               | 0..1 <br/> [Organization](Organization.md)                         | A relationship to the Organization instance that provides this instance          | [BaseAi](BaseAi.md)   |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                                        | A unique identifier to this instance of the model element                        | [Entity](Entity.md)   |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                                     | A text name of this instance                                                     | [Entity](Entity.md)   |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)                                     | The description of an entity                                                     | [Entity](Entity.md)   |
@@ -307,6 +318,7 @@ URI: [nexus:LargeLanguageModel](https://w3id.org/ai-atlas-nexus/LargeLanguageMod
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)   |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)   |
 | [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                                             | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)   |
+| [hasLifecycleStatus](hasLifecycleStatus.md)   | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                   | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)   |
 
 ## Mixin Usage
 
@@ -597,12 +609,12 @@ attributes:
     - AiModel
     range: RiskControl
     multivalued: true
-  producer:
-    name: producer
+  isProducedBy:
+    name: isProducedBy
     description: A relationship to the Organization instance which produces this instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: producer
+    alias: isProducedBy
     owner: LargeLanguageModel
     domain_of:
     - BaseAi
@@ -686,15 +698,16 @@ attributes:
     inlined: false
   isProvidedBy:
     name: isProvidedBy
-    description: Indicates provider of an AI system or component.
+    description: A relationship to the Organization instance that provides this instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    slot_uri: airo:isProvidedBy
+    slot_uri: schema:provider
     alias: isProvidedBy
     owner: LargeLanguageModel
     domain_of:
+    - Dataset
     - BaseAi
-    range: AiProvider
+    range: Organization
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -853,6 +866,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: LargeLanguageModel
+    domain_of:
+    - Entity
+    range: LifecycleStatus
 
 ````
 

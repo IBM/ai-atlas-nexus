@@ -2289,7 +2289,7 @@ datasets:
     hasDocumentation:
       - https://arxiv.org/abs/2403.03218
       - repo_centerforaisafety_wmdp
-    provider: cais
+    isProvidedBy: cais
   - id: CybersecurityBenchmarks_datasets_frr
     name: False Refusal Rate (FRR)
     description: A dataset to evaluate the False Refusal Rate (FRR) of LLM models when
@@ -2349,7 +2349,7 @@ datasets:
     hasLicense: license-mit
     hasDocumentation:
       - arxiv.org/2009.03300
-    provider: cais
+    isProvidedBy: cais
   - id: TIGER-Lab/MMLU-Pro
     description: MMLU-Pro dataset is a more robust and challenging massive multi-task
       understanding dataset tailored to more rigorously benchmark large language models'
@@ -2358,7 +2358,7 @@ datasets:
     hasLicense: license-mit
     hasDocumentation:
       - https://arxiv.org/abs/2406.01574
-    provider: TIGER-lab
+    isProvidedBy: TIGER-lab
   - id: big-bench-hard-dataset
     name: BIG-Bench
     description: BIG-Bench (Srivastava et al., 2022) is a diverse evaluation suite that
@@ -2533,7 +2533,7 @@ datasets:
       2.94% of the dataset."
     url: https://huggingface.co/datasets/codeparrot/github-code-clean
     hasLicense: license-apache-2.0
-    provider: codeparrot
+    isProvidedBy: codeparrot
   - id: starcoder
     name: Star Coder Training Dataset
     description: This is the dataset used for training StarCoder and StarCoderBase.
@@ -2543,7 +2543,7 @@ datasets:
     url: https://huggingface.co/datasets/bigcode/starcoderdata
     dateCreated: 2023-03-30
     dateModified: 2023-05-16
-    provider: bigcode
+    isProvidedBy: bigcode
   - id: open-web-math
     name: OpenWebMath Dataset
     description: OpenWebMath is a dataset containing the majority of the high-quality,
@@ -33351,7 +33351,7 @@ rules:
       - Opt-Out
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     hasRequirementType: PREVENTATIVE
   - id: aiuc1-req-a002
@@ -33376,7 +33376,7 @@ rules:
       - Opt-Out
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a003
     name: Limit AI agent data collection
@@ -33402,7 +33402,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a004
     name: Protect IP and trade secrets
@@ -33431,7 +33431,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a005
     name: Prevent cross-customer data exposure
@@ -33459,7 +33459,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a006
     name: Prevent PII leakage
@@ -33486,7 +33486,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a007
     name: Prevent IP violations
@@ -33512,7 +33512,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
       - external-facing-capability
   - id: aiuc1-req-b001

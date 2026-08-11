@@ -18,51 +18,51 @@ Alias: hasDocumentation
 
 | Name                                                    | Description                                                                      | Modifies Slot |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiEval](AiEval.md)                                     | An AI Evaluation, e                                                              | no            |
-| [AiTask](AiTask.md)                                     | A task, such as summarization and classification, performed by an AI             | no            |
-| [Questionnaire](Questionnaire.md)                       | A questionnaire groups questions                                                 | no            |
-| [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
-| [Impact](Impact.md)                                     |                                                                                  | no            |
 | [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
-| [CapabilityDomain](CapabilityDomain.md)                 | A high-level domain of AI capabilities (e                                        | no            |
-| [Group](Group.md)                                       | Labelled groups of concepts                                                      | no            |
-| [AiTaskTaxonomy](AiTaskTaxonomy.md)                     | A taxonomy of AI Tasks                                                           | no            |
-| [RiskControlGroup](RiskControlGroup.md)                 | A group of AI system related risk controls                                       | no            |
-| [Question](Question.md)                                 | An evaluation where a question has to be answered                                | no            |
-| [Concept](Concept.md)                                   | A concept                                                                        | no            |
-| [Entry](Entry.md)                                       | An entry and its definitions                                                     | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)                         | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
-| [RiskGroup](RiskGroup.md)                               | A group of AI system related risks that are part of a risk taxonomy              | no            |
-| [Term](Term.md)                                         | A term and its definitions                                                       | no            |
-| [Adapter](Adapter.md)                                   | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [AiAgent](AiAgent.md)                                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
-| [AiTaskGroup](AiTaskGroup.md)                           | A group of AI Tasks                                                              | no            |
-| [LargeLanguageModel](LargeLanguageModel.md)             | A large language model (LLM) is an AI model which supports a range of languag... | no            |
 | [Capability](Capability.md)                             | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
-| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... | no            |
+| [RiskControlGroup](RiskControlGroup.md)                 | A group of AI system related risk controls                                       | no            |
+| [RiskGroup](RiskGroup.md)                               | A group of AI system related risks that are part of a risk taxonomy              | no            |
+| [Questionnaire](Questionnaire.md)                       | A questionnaire groups questions                                                 | no            |
+| [AiTaskGroup](AiTaskGroup.md)                           | A group of AI Tasks                                                              | no            |
 | [StakeholderGroup](StakeholderGroup.md)                 | An AI system stakeholder grouping                                                | no            |
-| [LocalityOfUse](LocalityOfUse.md)                       | The area, e                                                                      | no            |
-| [Purpose](Purpose.md)                                   | The end goal for which an entity is used or an action is taken                   | no            |
-| [CapabilityConcept](CapabilityConcept.md)               | An umbrella term for referring to capability domains, groups, and individual ... | no            |
 | [RiskConcept](RiskConcept.md)                           | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
-| [AiSystem](AiSystem.md)                                 | A compound AI System composed of one or more AI capablities                      | no            |
-| [Certification](Certification.md)                       | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
-| [Domain](Domain.md)                                     | An area, sector, or industry that is associated with economic activities         | no            |
 | [AiTaskDomain](AiTaskDomain.md)                         | A grouping of AI Tasks by domain                                                 | no            |
-| [Action](Action.md)                                     | Action to remediate a risk                                                       | no            |
-| [CapabilityGroup](CapabilityGroup.md)                   | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
-| [BaseAi](BaseAi.md)                                     | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
+| [CapabilityDomain](CapabilityDomain.md)                 | A high-level domain of AI capabilities (e                                        | no            |
 | [RiskIncident](RiskIncident.md)                         | An event occuring or occured which is a realised or materialised risk            | no            |
+| [Certification](Certification.md)                       | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [BaseAi](BaseAi.md)                                     | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
+| [AiEval](AiEval.md)                                     | An AI Evaluation, e                                                              | no            |
+| [AiTaskTaxonomy](AiTaskTaxonomy.md)                     | A taxonomy of AI Tasks                                                           | no            |
+| [Adapter](Adapter.md)                                   | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [Dataset](Dataset.md)                                   | A body of structured information describing some topic(s) of interest            | no            |
-| [EveryEvalAIResult](EveryEvalAIResult.md)               | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
+| [Purpose](Purpose.md)                                   | The end goal for which an entity is used or an action is taken                   | no            |
 | [Principle](Principle.md)                               | A representation of values or norms that must be taken into consideration whe... | no            |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
+| [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
+| [AiAgent](AiAgent.md)                                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [Domain](Domain.md)                                     | An area, sector, or industry that is associated with economic activities         | no            |
+| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
+| [AiSystem](AiSystem.md)                                 | A compound AI System composed of one or more AI capablities                      | no            |
 | [Risk](Risk.md)                                         | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
-| [AiModel](AiModel.md)                                   | A base AI Model class                                                            | no            |
 | [RiskControl](RiskControl.md)                           | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
+| [AiModel](AiModel.md)                                   | A base AI Model class                                                            | no            |
+| [Question](Question.md)                                 | An evaluation where a question has to be answered                                | no            |
+| [Entry](Entry.md)                                       | An entry and its definitions                                                     | no            |
+| [CapabilityConcept](CapabilityConcept.md)               | An umbrella term for referring to capability domains, groups, and individual ... | no            |
+| [EveryEvalAIResult](EveryEvalAIResult.md)               | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [Concept](Concept.md)                                   | A concept                                                                        | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
+| [Action](Action.md)                                     | Action to remediate a risk                                                       | no            |
+| [Impact](Impact.md)                                     |                                                                                  | no            |
+| [Term](Term.md)                                         | A term and its definitions                                                       | no            |
+| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [Group](Group.md)                                       | Labelled groups of concepts                                                      | no            |
+| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... | no            |
+| [AiTask](AiTask.md)                                     | A task, such as summarization and classification, performed by an AI             | no            |
+| [LocalityOfUse](LocalityOfUse.md)                       | The area, e                                                                      | no            |
+| [LargeLanguageModel](LargeLanguageModel.md)             | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)                         | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [CapabilityGroup](CapabilityGroup.md)                   | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
 
 ## Properties
 

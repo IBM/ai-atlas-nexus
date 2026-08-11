@@ -5,11 +5,11 @@ search:
 
 # Slot: isProvidedBy
 
-_Indicates provider of an AI system or component._
+_A relationship to the Organization instance that provides this instance._
 
 <div data-search-exclude markdown="1">
 
-URI: [airo:isProvidedBy](https://w3id.org/airo#isProvidedBy)
+URI: [schema:provider](http://schema.org/provider)
 Alias: isProvidedBy
 
 <!-- no inheritance hierarchy -->
@@ -18,22 +18,23 @@ Alias: isProvidedBy
 
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [BaseAi](BaseAi.md)                         | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
-| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
-| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | yes           |
 | [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [Dataset](Dataset.md)                       | A body of structured information describing some topic(s) of interest            | no            |
 | [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
+| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | yes           |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
+| [BaseAi](BaseAi.md)                         | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                                   |
-| --------- | ------------------------------------------------------- |
-| Range     | [AiProvider](AiProvider.md)                             |
-| Domain Of | [BaseAi](BaseAi.md)                                     |
-| Slot URI  | [airo:isProvidedBy](https://w3id.org/airo#isProvidedBy) |
+| Property  | Value                                         |
+| --------- | --------------------------------------------- |
+| Range     | [Organization](Organization.md)               |
+| Domain Of | [Dataset](Dataset.md), [BaseAi](BaseAi.md)    |
+| Slot URI  | [schema:provider](http://schema.org/provider) |
 
 ### Cardinality and Requirements
 
@@ -50,7 +51,7 @@ Alias: isProvidedBy
 
 | Mapping Type | Mapped Value       |
 | ------------ | ------------------ |
-| self         | airo:isProvidedBy  |
+| self         | schema:provider    |
 | native       | nexus:isProvidedBy |
 
 ## LinkML Source
@@ -58,14 +59,15 @@ Alias: isProvidedBy
 <details>
 ```yaml
 name: isProvidedBy
-description: Indicates provider of an AI system or component.
+description: A relationship to the Organization instance that provides this instance.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-slot_uri: airo:isProvidedBy
+slot_uri: schema:provider
 alias: isProvidedBy
 domain_of:
+- Dataset
 - BaseAi
-range: AiProvider
+range: Organization
 
 ```
 </details></div>

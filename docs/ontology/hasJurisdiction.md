@@ -18,19 +18,19 @@ Alias: hasJurisdiction
 
 | Name                                      | Description                                                                      | Modifies Slot |
 | ----------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [RiskControlGroup](RiskControlGroup.md)   | A group of AI system related risk controls                                       | no            |
-| [CapabilityGroup](CapabilityGroup.md)     | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
-| [RiskIncident](RiskIncident.md)           | An event occuring or occured which is a realised or materialised risk            | no            |
-| [Capability](Capability.md)               | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
-| [Action](Action.md)                       | Action to remediate a risk                                                       | no            |
-| [CapabilityConcept](CapabilityConcept.md) | An umbrella term for referring to capability domains, groups, and individual ... | no            |
-| [RiskConcept](RiskConcept.md)             | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
-| [Concept](Concept.md)                     | A concept                                                                        | no            |
-| [Impact](Impact.md)                       |                                                                                  | no            |
-| [CapabilityDomain](CapabilityDomain.md)   | A high-level domain of AI capabilities (e                                        | no            |
-| [RiskGroup](RiskGroup.md)                 | A group of AI system related risks that are part of a risk taxonomy              | no            |
 | [Risk](Risk.md)                           | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Capability](Capability.md)               | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
+| [RiskControlGroup](RiskControlGroup.md)   | A group of AI system related risk controls                                       | no            |
+| [RiskGroup](RiskGroup.md)                 | A group of AI system related risks that are part of a risk taxonomy              | no            |
 | [RiskControl](RiskControl.md)             | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
+| [RiskConcept](RiskConcept.md)             | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
+| [CapabilityConcept](CapabilityConcept.md) | An umbrella term for referring to capability domains, groups, and individual ... | no            |
+| [CapabilityDomain](CapabilityDomain.md)   | A high-level domain of AI capabilities (e                                        | no            |
+| [RiskIncident](RiskIncident.md)           | An event occuring or occured which is a realised or materialised risk            | no            |
+| [Concept](Concept.md)                     | A concept                                                                        | no            |
+| [Action](Action.md)                       | Action to remediate a risk                                                       | no            |
+| [Impact](Impact.md)                       |                                                                                  | no            |
+| [CapabilityGroup](CapabilityGroup.md)     | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
 
 ## Properties
 

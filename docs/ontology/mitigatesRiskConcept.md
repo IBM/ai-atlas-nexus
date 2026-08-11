@@ -18,8 +18,8 @@ Alias: mitigatesRiskConcept
 
 | Name                          | Description                                                       | Modifies Slot |
 | ----------------------------- | ----------------------------------------------------------------- | ------------- |
-| [Action](Action.md)           | Action to remediate a risk                                        | no            |
 | [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) | no            |
+| [Action](Action.md)           | Action to remediate a risk                                        | no            |
 
 ## Properties
 

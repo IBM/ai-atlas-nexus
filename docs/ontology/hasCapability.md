@@ -20,10 +20,10 @@ Alias: hasCapability
 
 | Name                            | Description                                                                      | Modifies Slot |
 | ------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Adapter](Adapter.md)           | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [AiSystem](AiSystem.md)         | A compound AI System composed of one or more AI capablities                      | yes           |
-| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 | [AiAgent](AiAgent.md)           | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md) | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AiSystem](AiSystem.md)         | A compound AI System composed of one or more AI capablities                      | yes           |
+| [Adapter](Adapter.md)           | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 

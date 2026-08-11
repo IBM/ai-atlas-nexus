@@ -72,6 +72,17 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
 
 
+      Capability : hasExternalReference
+
+
+
+
+
+        Capability --> "*" Documentation : hasExternalReference
+        click Documentation href "../Documentation/"
+
+
+
       Capability : hasJurisdiction
 
 
@@ -80,6 +91,17 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
         Capability --> "*" Jurisdiction : hasJurisdiction
         click Jurisdiction href "../Jurisdiction/"
+
+
+
+      Capability : hasLifecycleStatus
+
+
+
+
+
+        Capability --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
 
 
 
@@ -222,13 +244,14 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | ------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ---------------------------------------- |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [AiTask](AiTask.md)                     | Indicates that this capability is required to perform a specific AI task         | direct                                   |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Adapter](Adapter.md)                   | Indicates that this capability is implemented by a specific adapter              | direct                                   |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)               | A relationship where a concept or a concept group is defined by a taxonomy       | [Concept](Concept.md), [Entry](Entry.md) |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)               | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md), [Concept](Concept.md) |
 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)           | A relationship where a term or a term group is defined by a vocabulary           | [Entry](Entry.md)                        |
-| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Entry](Entry.md) |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Entry](Entry.md), [Concept](Concept.md) |
+| [hasExternalReference](hasExternalReference.md)   | \* <br/> [Documentation](Documentation.md)       | External references / additional resources related to this entity, such as ar... | [Entry](Entry.md)                        |
 | [isPartOf](isPartOf.md)                           | 0..1 <br/> [CapabilityGroup](CapabilityGroup.md) | A relationship where a capability is part of a capability group                  | [Entry](Entry.md)                        |
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Any](Any.md)                           | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)                        |
 | [hasRule](hasRule.md)                             | \* <br/> [Rule](Rule.md)                         | Specifying applicability or inclusion of a rule within specified context         | [Entry](Entry.md)                        |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)                   | The entry type or class designation specifying what kind of entry this is        | [Concept](Concept.md), [Entry](Entry.md) |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)                   | The entry type or class designation specifying what kind of entry this is        | [Entry](Entry.md), [Concept](Concept.md) |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md)                      |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md)                      |
@@ -241,6 +264,7 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 | [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                      |
 | [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                      |
+| [hasLifecycleStatus](hasLifecycleStatus.md)       | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md) | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                      |
 | [hasJurisdiction](hasJurisdiction.md)             | \* <br/> [Jurisdiction](Jurisdiction.md)         | The legal or political jurisdiction(s) in which this concept applies, express... | [Concept](Concept.md)                    |
 
 ## Usages
@@ -470,6 +494,28 @@ attributes:
     - BenchmarkMetadataCard
     - Adapter
     - LLMIntrinsic
+    range: Documentation
+    multivalued: true
+    inlined: false
+  hasExternalReference:
+    name: hasExternalReference
+    description: External references / additional resources related to this entity,
+      such as articles, tools, or datasets. Distinct from hasDocumentation, which
+      documents the entity itself. External references are not necessarily curated
+      or vetted, and quality will vary.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - additional resources
+    - external_links
+    close_mappings:
+    - rdfs:seeAlso
+    rank: 1000
+    slot_uri: nexus:hasExternalReference
+    alias: hasExternalReference
+    owner: Capability
+    domain_of:
+    - Control
+    - Entry
     range: Documentation
     multivalued: true
     inlined: false
@@ -711,6 +757,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: Capability
+    domain_of:
+    - Entity
+    range: LifecycleStatus
   hasJurisdiction:
     name: hasJurisdiction
     description: The legal or political jurisdiction(s) in which this concept applies,

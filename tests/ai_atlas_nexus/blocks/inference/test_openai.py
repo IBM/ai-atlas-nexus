@@ -2,13 +2,12 @@ import json
 import unittest
 from unittest.mock import Mock, patch
 
-from openai import (
-    APIConnectionError,
-    AuthenticationError,
-    NotFoundError,
-)
+from openai import APIConnectionError, AuthenticationError, NotFoundError
 
-from ai_atlas_nexus.blocks.inference.openai import DEFAULT_OPENAI_API_URL, OpenAIInferenceEngine
+from ai_atlas_nexus.blocks.inference.openai import (
+    DEFAULT_OPENAI_API_URL,
+    OpenAIInferenceEngine,
+)
 from ai_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
 from ai_atlas_nexus.metadata_base import InferenceEngineType
 

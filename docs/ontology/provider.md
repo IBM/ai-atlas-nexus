@@ -1,34 +1,24 @@
 ---
 search:
-  boost: 5.0
+  boost: 0.5
 ---
 
-# Slot: provider
-
-_A relationship to the Organization instance that provides this instance._
+# Slot: provider <span style="color: red;"><strong> (DEPRECATED) </strong></span>
 
 <div data-search-exclude markdown="1">
 
-URI: [schema:provider](http://schema.org/provider)
+URI: [nexus:provider](https://w3id.org/ai-atlas-nexus/provider)
 Alias: provider
 
 <!-- no inheritance hierarchy -->
-
-## Applicable Classes
-
-| Name                  | Description                                                           | Modifies Slot |
-| --------------------- | --------------------------------------------------------------------- | ------------- |
-| [Dataset](Dataset.md) | A body of structured information describing some topic(s) of interest | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                         |
-| --------- | --------------------------------------------- |
-| Range     | [Organization](Organization.md)               |
-| Domain Of | [Dataset](Dataset.md)                         |
-| Slot URI  | [schema:provider](http://schema.org/provider) |
+| Property | Value               |
+| -------- | ------------------- |
+| Range    | [String](String.md) |
 
 ### Cardinality and Requirements
 
@@ -43,24 +33,22 @@ Alias: provider
 
 ## Mappings
 
-| Mapping Type | Mapped Value    |
-| ------------ | --------------- |
-| self         | schema:provider |
-| native       | nexus:provider  |
+| Mapping Type | Mapped Value   |
+| ------------ | -------------- |
+| self         | nexus:provider |
+| native       | nexus:provider |
 
 ## LinkML Source
 
 <details>
 ```yaml
 name: provider
-description: A relationship to the Organization instance that provides this instance.
+deprecated: Changed to match slot naming convention.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+deprecated_element_has_exact_replacement: isProvidedBy
 rank: 1000
-slot_uri: schema:provider
 alias: provider
-domain_of:
-- Dataset
-range: Organization
+range: string
 
 ```
 </details></div>

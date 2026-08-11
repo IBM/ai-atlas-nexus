@@ -79,6 +79,17 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 
 
 
+      Dataset : hasLifecycleStatus
+
+
+
+
+
+        Dataset --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       Dataset : id
 
       Dataset : isCategorizedAs
@@ -92,6 +103,17 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 
 
 
+      Dataset : isProvidedBy
+
+
+
+
+
+        Dataset --> "0..1" Organization : isProvidedBy
+        click Organization href "../Organization/"
+
+
+
       Dataset : name
 
       Dataset : narrow_mappings
@@ -102,17 +124,6 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 
         Dataset --> "*" Any : narrow_mappings
         click Any href "../Any/"
-
-
-
-      Dataset : provider
-
-
-
-
-
-        Dataset --> "0..1" Organization : provider
-        click Organization href "../Organization/"
 
 
 
@@ -145,23 +156,24 @@ URI: [schema:Dataset](http://schema.org/Dataset)
 
 ## Slots
 
-| Name                                    | Cardinality and Range                      | Description                                                                      | Inheritance         |
-| --------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
-| [hasLicense](hasLicense.md)             | 0..1 <br/> [License](License.md)           | Indicates licenses associated with a resource                                    | direct              |
-| [hasDocumentation](hasDocumentation.md) | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | direct              |
-| [provider](provider.md)                 | 0..1 <br/> [Organization](Organization.md) | A relationship to the Organization instance that provides this instance          | direct              |
-| [id](id.md)                             | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
-| [name](name.md)                         | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
-| [description](description.md)           | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
-| [url](url.md)                           | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md)           | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md) |
-| [dateModified](dateModified.md)         | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md)     | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md)     | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md) | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md)   | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md)     | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [isCategorizedAs](isCategorizedAs.md)   | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| Name                                        | Cardinality and Range                            | Description                                                                      | Inheritance         |
+| ------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [hasLicense](hasLicense.md)                 | 0..1 <br/> [License](License.md)                 | Indicates licenses associated with a resource                                    | direct              |
+| [hasDocumentation](hasDocumentation.md)     | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | direct              |
+| [isProvidedBy](isProvidedBy.md)             | 0..1 <br/> [Organization](Organization.md)       | A relationship to the Organization instance that provides this instance          | direct              |
+| [id](id.md)                                 | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                             | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)               | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                               | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)               | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)             | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)         | \* <br/> [Any](Any.md)                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)         | \* <br/> [Any](Any.md)                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)     | \* <br/> [Any](Any.md)                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)       | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)         | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)       | \* <br/> [Any](Any.md)                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| [hasLifecycleStatus](hasLifecycleStatus.md) | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md) | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
 
 ## Usages
 
@@ -202,7 +214,7 @@ is_a: Entity
 slots:
 - hasLicense
 - hasDocumentation
-- provider
+- isProvidedBy
 class_uri: schema:Dataset
 
 ````
@@ -269,16 +281,17 @@ attributes:
     range: Documentation
     multivalued: true
     inlined: false
-  provider:
-    name: provider
+  isProvidedBy:
+    name: isProvidedBy
     description: A relationship to the Organization instance that provides this instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:provider
-    alias: provider
+    alias: isProvidedBy
     owner: Dataset
     domain_of:
     - Dataset
+    - BaseAi
     range: Organization
   id:
     name: id
@@ -438,6 +451,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: Dataset
+    domain_of:
+    - Entity
+    range: LifecycleStatus
 class_uri: schema:Dataset
 
 ````

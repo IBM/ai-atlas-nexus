@@ -18,17 +18,6 @@ URI: [nexus:Requirement](https://w3id.org/ai-atlas-nexus/Requirement)
       Rule <|-- Requirement
         click Rule href "../Rule/"
 
-      Requirement : appliesToCapability
-
-
-
-
-
-        Requirement --> "*" AiTask : appliesToCapability
-        click AiTask href "../AiTask/"
-
-
-
       Requirement : broad_mappings
 
 
@@ -92,6 +81,17 @@ URI: [nexus:Requirement](https://w3id.org/ai-atlas-nexus/Requirement)
 
       Requirement : hasKeywords
 
+      Requirement : hasLifecycleStatus
+
+
+
+
+
+        Requirement --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       Requirement : hasPrinciple
 
 
@@ -126,6 +126,17 @@ URI: [nexus:Requirement](https://w3id.org/ai-atlas-nexus/Requirement)
 
 
       Requirement : id
+
+      Requirement : isApplicableToCapability
+
+
+
+
+
+        Requirement --> "*" AiTask : isApplicableToCapability
+        click AiTask href "../AiTask/"
+
+
 
       Requirement : isCategorizedAs
 
@@ -188,29 +199,30 @@ URI: [nexus:Requirement](https://w3id.org/ai-atlas-nexus/Requirement)
 
 ## Slots
 
-| Name                                          | Cardinality and Range                                            | Description                                                                      | Inheritance         |
-| --------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------- |
-| [hasApplication](hasApplication.md)           | \* <br/> [AIUC1ApplicationCategory](AIUC1ApplicationCategory.md) | The application category, Optional or Mandatory                                  | direct              |
-| [hasFrequency](hasFrequency.md)               | 0..1 <br/> [AIUC1Frequency](AIUC1Frequency.md)                   | The frequency                                                                    | direct              |
-| [hasKeywords](hasKeywords.md)                 | \* <br/> [String](String.md)                                     | A collection of keywords                                                         | direct              |
-| [hasPrinciple](hasPrinciple.md)               | \* <br/> [Principle](Principle.md)                               | Which of the AIUC-1 principles this requirement belongs to                       | direct              |
-| [appliesToCapability](appliesToCapability.md) | \* <br/> [AiTask](AiTask.md)                                     | This evidence only applies to AI systems with this capability                    | direct              |
-| [hasRequirementType](hasRequirementType.md)   | 0..1 <br/> [AIUC1RequirementType](AIUC1RequirementType.md)       | The requirement type of whether this is preventive, detective, etc               | direct              |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)                               | A relationship where a concept or a concept group is defined by a taxonomy       | direct              |
-| [hasRule](hasRule.md)                         | \* <br/> [Rule](Rule.md)                                         | Relationship indicating the control activities (rules) of which the requireme... | direct              |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)                                   |                                                                                  | direct              |
-| [id](id.md)                                   | 1 <br/> [String](String.md)                                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
-| [name](name.md)                               | 0..1 <br/> [String](String.md)                                   | A text name of this instance                                                     | [Entity](Entity.md) |
-| [description](description.md)                 | 0..1 <br/> [String](String.md)                                   | The description of an entity                                                     | [Entity](Entity.md) |
-| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                                       | The date on which the entity was created                                         | [Entity](Entity.md) |
-| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                                       | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| Name                                                    | Cardinality and Range                                            | Description                                                                      | Inheritance         |
+| ------------------------------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------- |
+| [hasApplication](hasApplication.md)                     | \* <br/> [AIUC1ApplicationCategory](AIUC1ApplicationCategory.md) | The application category, Optional or Mandatory                                  | direct              |
+| [hasFrequency](hasFrequency.md)                         | 0..1 <br/> [AIUC1Frequency](AIUC1Frequency.md)                   | The frequency                                                                    | direct              |
+| [hasKeywords](hasKeywords.md)                           | \* <br/> [String](String.md)                                     | A collection of keywords                                                         | direct              |
+| [hasPrinciple](hasPrinciple.md)                         | \* <br/> [Principle](Principle.md)                               | Which of the AIUC-1 principles this requirement belongs to                       | direct              |
+| [isApplicableToCapability](isApplicableToCapability.md) | \* <br/> [AiTask](AiTask.md)                                     | This evidence only applies to AI systems with this capability                    | direct              |
+| [hasRequirementType](hasRequirementType.md)             | 0..1 <br/> [AIUC1RequirementType](AIUC1RequirementType.md)       | The requirement type of whether this is preventive, detective, etc               | direct              |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)           | 0..1 <br/> [Taxonomy](Taxonomy.md)                               | A relationship where a concept or a concept group is defined by a taxonomy       | direct              |
+| [hasRule](hasRule.md)                                   | \* <br/> [Rule](Rule.md)                                         | Relationship indicating the control activities (rules) of which the requireme... | direct              |
+| [type](type.md)                                         | 0..1 <br/> [String](String.md)                                   |                                                                                  | direct              |
+| [id](id.md)                                             | 1 <br/> [String](String.md)                                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                                         | 0..1 <br/> [String](String.md)                                   | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)                           | 0..1 <br/> [String](String.md)                                   | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                           | 0..1 <br/> [Uri](Uri.md)                                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                           | 0..1 <br/> [Date](Date.md)                                       | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)                         | 0..1 <br/> [Date](Date.md)                                       | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)                     | \* <br/> [Any](Any.md)                                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)                     | \* <br/> [Any](Any.md)                                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)                 | \* <br/> [Any](Any.md)                                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)                   | \* <br/> [Any](Any.md)                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)                     | \* <br/> [Any](Any.md)                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)                   | \* <br/> [Any](Any.md)                                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| [hasLifecycleStatus](hasLifecycleStatus.md)             | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                 | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
 
 ## Usages
 
@@ -257,7 +269,7 @@ slots:
 - hasFrequency
 - hasKeywords
 - hasPrinciple
-- appliesToCapability
+- isApplicableToCapability
 - hasRequirementType
 - isDefinedByTaxonomy
 - hasRule
@@ -396,14 +408,14 @@ attributes:
     range: Principle
     multivalued: true
     inlined: false
-  appliesToCapability:
-    name: appliesToCapability
+  isApplicableToCapability:
+    name: isApplicableToCapability
     description: This evidence only applies to AI systems with this capability
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: ControlActivity
-    slot_uri: nexus:appliesToCapability
-    alias: appliesToCapability
+    slot_uri: nexus:isApplicableToCapability
+    alias: isApplicableToCapability
     owner: Requirement
     domain_of:
     - ControlActivity
@@ -628,6 +640,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: Requirement
+    domain_of:
+    - Entity
+    range: LifecycleStatus
 
 ````
 

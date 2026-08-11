@@ -62,7 +62,6 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 | [Documentation](Documentation.md)                                 | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |
 | [Documentation](Documentation.md)                                 | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [Documentation](Documentation.md)                                 | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
-| [Documentation](Documentation.md)                                 | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
 | [Vocabulary](Vocabulary.md)                                       | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
 | [Vocabulary](Vocabulary.md)                                       | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
 | [Vocabulary](Vocabulary.md)                                       | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |

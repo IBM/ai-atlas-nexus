@@ -124,6 +124,17 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 
 
 
+      Adapter : hasExternalReference
+
+
+
+
+
+        Adapter --> "*" Documentation : hasExternalReference
+        click Documentation href "../Documentation/"
+
+
+
       Adapter : hasInputModality
 
 
@@ -143,6 +154,17 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 
         Adapter --> "0..1" License : hasLicense
         click License href "../License/"
+
+
+
+      Adapter : hasLifecycleStatus
+
+
+
+
+
+        Adapter --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
 
 
 
@@ -271,14 +293,25 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 
 
 
+      Adapter : isProducedBy
+
+
+
+
+
+        Adapter --> "0..1" Organization : isProducedBy
+        click Organization href "../Organization/"
+
+
+
       Adapter : isProvidedBy
 
 
 
 
 
-        Adapter --> "0..1" AiProvider : isProvidedBy
-        click AiProvider href "../AiProvider/"
+        Adapter --> "0..1" Organization : isProvidedBy
+        click Organization href "../Organization/"
 
 
 
@@ -311,17 +344,6 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 
 
       Adapter : power_consumption_w
-
-      Adapter : producer
-
-
-
-
-
-        Adapter --> "0..1" Organization : producer
-        click Organization href "../Organization/"
-
-
 
       Adapter : related_mappings
 
@@ -394,6 +416,7 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 | [supported_languages](supported_languages.md)     | \* <br/> [String](String.md)                                       | A list of languages, expressed as ISO two letter codes                           | [LargeLanguageModel](LargeLanguageModel.md)                    |
 | [isPartOf](isPartOf.md)                           | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models             | [LargeLanguageModel](LargeLanguageModel.md), [Entry](Entry.md) |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                                 | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)                                              |
+| [hasExternalReference](hasExternalReference.md)   | \* <br/> [Documentation](Documentation.md)                         | External references / additional resources related to this entity, such as ar... | [Entry](Entry.md)                                              |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [Any](Any.md)                                             | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)                                              |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Any](Any.md)                                             | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)                                              |
 | [hasRule](hasRule.md)                             | \* <br/> [Rule](Rule.md)                                           | Specifying applicability or inclusion of a rule within specified context         | [Entry](Entry.md)                                              |
@@ -410,16 +433,17 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 | [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                                            |
 | [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                                            |
 | [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                                             | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                                            |
+| [hasLifecycleStatus](hasLifecycleStatus.md)       | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                   | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                                            |
 | [hasEvaluation](hasEvaluation.md)                 | \* <br/> [AiEvalResult](AiEvalResult.md)                           | A relationship indicating that an entity has an AI evaluation result             | [AiModel](AiModel.md)                                          |
 | [architecture](architecture.md)                   | 0..1 <br/> [String](String.md)                                     | A description of the architecture of an AI such as 'Decoder-only'                | [AiModel](AiModel.md)                                          |
 | [gpu_hours](gpu_hours.md)                         | 0..1 <br/> [Integer](Integer.md)                                   | GPU consumption in terms of hours                                                | [AiModel](AiModel.md)                                          |
 | [power_consumption_w](power_consumption_w.md)     | 0..1 <br/> [Integer](Integer.md)                                   | power consumption in Watts                                                       | [AiModel](AiModel.md)                                          |
 | [carbon_emitted](carbon_emitted.md)               | 0..1 <br/> [Float](Float.md)                                       | The number of tons of carbon dioxide equivalent that are emitted during train... | [AiModel](AiModel.md)                                          |
 | [hasRiskControl](hasRiskControl.md)               | \* <br/> [RiskControl](RiskControl.md)                             | Indicates the control measures associated with a system or component to modif... | [AiModel](AiModel.md)                                          |
-| [producer](producer.md)                           | 0..1 <br/> [Organization](Organization.md)                         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)                                            |
+| [isProducedBy](isProducedBy.md)                   | 0..1 <br/> [Organization](Organization.md)                         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)                                            |
 | [hasModelCard](hasModelCard.md)                   | \* <br/> [String](String.md)                                       | A relationship to model card references                                          | [BaseAi](BaseAi.md)                                            |
 | [performsTask](performsTask.md)                   | \* <br/> [AiTask](AiTask.md)                                       | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md)                                            |
-| [isProvidedBy](isProvidedBy.md)                   | 0..1 <br/> [AiProvider](AiProvider.md)                             | Indicates provider of an AI system or component                                  | [BaseAi](BaseAi.md)                                            |
+| [isProvidedBy](isProvidedBy.md)                   | 0..1 <br/> [Organization](Organization.md)                         | A relationship to the Organization instance that provides this instance          | [BaseAi](BaseAi.md)                                            |
 
 ## Usages
 
@@ -812,6 +836,28 @@ attributes:
     - StakeholderGroup
     - Requirement
     range: Taxonomy
+  hasExternalReference:
+    name: hasExternalReference
+    description: External references / additional resources related to this entity,
+      such as articles, tools, or datasets. Distinct from hasDocumentation, which
+      documents the entity itself. External references are not necessarily curated
+      or vetted, and quality will vary.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - additional resources
+    - external_links
+    close_mappings:
+    - rdfs:seeAlso
+    rank: 1000
+    slot_uri: nexus:hasExternalReference
+    alias: hasExternalReference
+    owner: Adapter
+    domain_of:
+    - Control
+    - Entry
+    range: Documentation
+    multivalued: true
+    inlined: false
   requiredByTask:
     name: requiredByTask
     description: Indicates that this entry is required to perform a specific AI task.
@@ -1049,6 +1095,22 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: Adapter
+    domain_of:
+    - Entity
+    range: LifecycleStatus
   hasEvaluation:
     name: hasEvaluation
     description: A relationship indicating that an entity has an AI evaluation result.
@@ -1121,12 +1183,12 @@ attributes:
     - AiModel
     range: RiskControl
     multivalued: true
-  producer:
-    name: producer
+  isProducedBy:
+    name: isProducedBy
     description: A relationship to the Organization instance which produces this instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: producer
+    alias: isProducedBy
     owner: Adapter
     domain_of:
     - BaseAi
@@ -1158,15 +1220,16 @@ attributes:
     inlined: false
   isProvidedBy:
     name: isProvidedBy
-    description: Indicates provider of an AI system or component.
+    description: A relationship to the Organization instance that provides this instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    slot_uri: airo:isProvidedBy
+    slot_uri: schema:provider
     alias: isProvidedBy
     owner: Adapter
     domain_of:
+    - Dataset
     - BaseAi
-    range: AiProvider
+    range: Organization
 
 ````
 
