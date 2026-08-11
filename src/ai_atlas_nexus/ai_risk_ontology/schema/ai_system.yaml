@@ -27,7 +27,7 @@ classes:
     abstract: true
     description: Any type of AI, be it a LLM, RL agent, SVM, etc.
     slots:
-      - producer
+      - isProducedBy
       - hasModelCard
       - hasDocumentation
       - hasLicense
@@ -347,14 +347,17 @@ slots:
     description: >-
       Indicates user of an AI system.
     range: AiProvider
-  training_data_preprocessing:
+  hasTrainingDataPreprocessing:
     multivalued: true
     inlined: false
     description: >-
-      relationship indicating data preprocessing steps performed on training data sets to ensure high quality training
+      Relationship indicating data preprocessing steps performed on training data sets to ensure high quality training
       data.
     range: DataPreprocessing
-  validated_by:
+  training_data_preprocessing:
+    deprecated: Changed to match slot naming convention.
+    deprecated_element_has_exact_replacement: hasTrainingDataPreprocessing
+  isValidatedBy:
     multivalued: true
     inlined_as_list: true
     description: >-

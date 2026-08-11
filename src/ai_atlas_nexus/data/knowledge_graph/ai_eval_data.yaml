@@ -844,7 +844,7 @@ datasets:
     hasDocumentation:
       - https://arxiv.org/abs/2403.03218
       - repo_centerforaisafety_wmdp
-    provider: cais
+    isProvidedBy: cais
   - id: CybersecurityBenchmarks_datasets_frr
     name: False Refusal Rate (FRR)
     description:
@@ -898,7 +898,7 @@ datasets:
     hasDocumentation:
       - arxiv.org/2009.03300
     hasLicense: license-mit
-    provider: cais
+    isProvidedBy: cais
     url: https://huggingface.co/datasets/cais/mmlu
   - id: TIGER-Lab/MMLU-Pro
     description: >-
@@ -907,7 +907,7 @@ datasets:
     hasDocumentation:
       - https://arxiv.org/abs/2406.01574
     hasLicense: license-mit
-    provider: TIGER-lab
+    isProvidedBy: TIGER-lab
     url: https://huggingface.co/datasets/TIGER-Lab/MMLU-Pro
   - id: big-bench-hard-dataset
     name: BIG-Bench

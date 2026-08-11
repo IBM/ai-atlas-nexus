@@ -38,7 +38,7 @@ datasets:
       numeric characters fraction > 0.25, Remove auto-generated files (keyword search). 3.39M files are removed making
       up 2.94% of the dataset.
     url: "https://huggingface.co/datasets/codeparrot/github-code-clean"
-    provider: codeparrot
+    isProvidedBy: codeparrot
     hasLicense: license-apache-2.0
   - id: starcoder
     name: Star Coder Training Dataset
@@ -49,7 +49,7 @@ datasets:
     url: "https://huggingface.co/datasets/bigcode/starcoderdata"
     dateCreated: "2023-03-30"
     dateModified: "2023-05-16"
-    provider: bigcode
+    isProvidedBy: bigcode
   - id: open-web-math
     name: OpenWebMath Dataset
     description: >-
