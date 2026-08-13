@@ -1,8 +1,9 @@
 import dataclasses
-from typing import Any, Dict, List, Literal, Optional, TypeAlias, TypedDict, Union
+from typing import Any, Dict, List, Literal, Optional, TypeAlias, Union
 
 from openai.types.chat import ChatCompletionMessageParam
 from pydantic import BaseModel
+from typing_extensions import TypedDict
 
 
 class InferenceEngineCredentials(TypedDict):
