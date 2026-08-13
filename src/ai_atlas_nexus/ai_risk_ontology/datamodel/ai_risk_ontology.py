@@ -136,6 +136,64 @@ class Jurisdiction(str):
     pass
 
 
+class SupranationalJurisdiction(str, Enum):
+    """
+    Supra-national, regional, or non-country jurisdictions that are outside the scope of ISO 3166-1 country codes. Used in conjunction with the existing Jurisdiction (ISO 3166) range on hasJurisdiction via any_of.
+    """
+    EU = "EU"
+    """
+    European Union — a political and economic union of 27 member states. Primary regulatory authority for the EU AI Act, GDPR, and related instruments.
+    """
+    EEA = "EEA"
+    """
+    European Economic Area — extends EU single-market rules to Iceland, Liechtenstein, and Norway; GDPR and related EU regulations apply here.
+    """
+    EFTA = "EFTA"
+    """
+    European Free Trade Association — Switzerland, Norway, Iceland, Liechtenstein; relevant for trade and conformity-assessment agreements.
+    """
+    GCC = "GCC"
+    """
+    Gulf Cooperation Council — Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, UAE; increasingly active in joint AI and data governance initiatives.
+    """
+    ASEAN = "ASEAN"
+    """
+    Association of Southeast Asian Nations — 10 member states with a regional AI governance guide (ASEAN Guide on AI Governance, 2024).
+    """
+    AU = "AU"
+    """
+    African Union — 55 member states; adopted the AI Continental Strategy for Africa (2024) and the Data Policy Framework.
+    """
+    MERCOSUR = "MERCOSUR"
+    """
+    Southern Common Market — Argentina, Brazil, Paraguay, Uruguay (and associated states); relevant for harmonised trade and emerging AI policy alignment.
+    """
+    International = "International"
+    """
+    Cross-border or multi-jurisdictional scope that cannot be attributed to a single country or recognised regional body. Use when a framework, risk, or regulation is explicitly global in reach (e.g. OECD AI Principles, UNESCO Recommendation on AI Ethics, ISO standards).
+    """
+    OECD = "OECD"
+    """
+    Organisation for Economic Co-operation and Development — 38 member countries; the OECD AI Principles (2019) and subsequent recommendations are frequently referenced in national AI policies.
+    """
+    UN = "UN"
+    """
+    United Nations — 193 member states; issues resolutions and reports (e.g. UNESCO Recommendation on the Ethics of AI) that establish normative AI governance expectations at a global level.
+    """
+    CoE = "CoE"
+    """
+    Council of Europe — 46 member states; produced the Framework Convention on AI and Human Rights, Democracy and the Rule of Law (2024), the first binding international AI treaty.
+    """
+    G7 = "G7"
+    """
+    Group of Seven — Canada, France, Germany, Italy, Japan, UK, USA plus EU; the Hiroshima AI Process (2023) produced shared principles and a code of conduct for advanced AI developers.
+    """
+    G20 = "G20"
+    """
+    Group of Twenty — major economies that endorsed the OECD AI Principles in 2019 and have pursued joint AI governance statements at subsequent summits.
+    """
+
+
 class AdapterType(str, Enum):
     LORA = "LORA"
     """
@@ -707,7 +765,9 @@ class Concept(Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["Concept"] = Field(default="Concept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -2263,7 +2323,9 @@ class RiskConcept(Concept):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["RiskConcept"] = Field(default="RiskConcept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -2410,7 +2472,9 @@ class RiskControlGroup(RiskConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class RiskGroup(RiskConcept, Group):
@@ -2519,7 +2583,9 @@ class RiskGroup(RiskConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class Risk(RiskConcept, Entry):
@@ -2652,7 +2718,9 @@ class Risk(RiskConcept, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class RiskControl(RiskConcept, Control):
@@ -2761,7 +2829,9 @@ class RiskControl(RiskConcept, Control):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class Action(RiskControl):
@@ -2881,7 +2951,9 @@ class Action(RiskControl):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class RiskIncident(RiskConcept, Entity):
@@ -2971,7 +3043,9 @@ class RiskIncident(RiskConcept, Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["RiskIncident"] = Field(default="RiskIncident", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -3063,7 +3137,9 @@ class Impact(RiskConcept, Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["Impact"] = Field(default="Impact", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -3417,7 +3493,9 @@ class CapabilityConcept(Concept):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["CapabilityConcept"] = Field(default="CapabilityConcept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
          'domain_of': ['Vocabulary',
                        'Taxonomy',
@@ -3556,7 +3634,9 @@ class CapabilityDomain(CapabilityConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class CapabilityGroup(CapabilityConcept, Group):
@@ -3674,7 +3754,9 @@ class CapabilityGroup(CapabilityConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class Capability(CapabilityConcept, Entry):
@@ -3821,7 +3903,9 @@ class Capability(CapabilityConcept, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Jurisdiction]] = Field(default=None, description="""The legal or political jurisdiction(s) in which this concept applies, expressed as ISO 3166-1 country codes.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept'], 'slot_uri': 'dpv:hasJurisdiction'} })
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SupranationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) in which an AI system operates or to which a policy, risk, or obligation applies. Accepts ISO 3166-1 country codes (via Jurisdiction) and/or supra-national designators (via SupranationalJurisdiction).""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'}, {'range': 'SupranationalJurisdiction'}],
+         'domain_of': ['Concept'],
+         'slot_uri': 'dpv:hasJurisdiction'} })
 
 
 class BaseAi(Entity):
