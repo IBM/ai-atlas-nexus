@@ -198,7 +198,7 @@ Name: ai-risk-ontology
 | [hasImplementation](hasImplementation.md)                                                 | A relationship to a implementation defining the risk evaluation                  |
 | [hasInputModality](hasInputModality.md)                                                   | A relationship indicating the input modalities supported by an AI component      |
 | [hasInterpretation](hasInterpretation.md)                                                 | How users should interpret the scores or results from the metrics                |
-| [hasJurisdiction](hasJurisdiction.md)                                                     | The legal or political jurisdiction(s) in which this concept applies, express... |
+| [hasJurisdiction](hasJurisdiction.md)                                                     | The legal or regulatory jurisdiction(s) applicable to an AI system, policy, r... |
 | [hasKeywords](hasKeywords.md)                                                             | A collection of keywords                                                         |
 | [hasLanguages](hasLanguages.md)                                                           | The languages included in the dataset used by the benchmark (e                   |
 | [hasLicense](hasLicense.md)                                                               | Indicates licenses associated with a resource                                    |
@@ -331,18 +331,20 @@ Name: ai-risk-ontology
 
 ## Enumerations
 
-| Enumeration                                                           | Description                                                                   |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [AdapterType](AdapterType.md)                                         |                                                                               |
-| [AiSystemType](AiSystemType.md)                                       |                                                                               |
-| [AIUC1ApplicationCategory](AIUC1ApplicationCategory.md)               | AIUC1 Application Category                                                    |
-| [AIUC1ControlApplicationCategory](AIUC1ControlApplicationCategory.md) | AIUC1 ControlApplication Category                                             |
-| [AIUC1EvidenceCategory](AIUC1EvidenceCategory.md)                     | AIUC1 Evidence Category                                                       |
-| [AIUC1Frequency](AIUC1Frequency.md)                                   | AIUC1 Frequency                                                               |
-| [AIUC1RequirementType](AIUC1RequirementType.md)                       | AIUC1 Requirement Type                                                        |
-| [EuAiRiskCategory](EuAiRiskCategory.md)                               |                                                                               |
-| [Jurisdiction](Jurisdiction.md)                                       | ISO 3166-1 country code, sourced from the DPV Location ontology (https://w3id |
-| [LifecycleStatus](LifecycleStatus.md)                                 | Editorial / publication state of a catalogued entity                          |
+| Enumeration                                                           | Description                                                                      |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [AdapterType](AdapterType.md)                                         |                                                                                  |
+| [AiSystemType](AiSystemType.md)                                       |                                                                                  |
+| [AIUC1ApplicationCategory](AIUC1ApplicationCategory.md)               | AIUC1 Application Category                                                       |
+| [AIUC1ControlApplicationCategory](AIUC1ControlApplicationCategory.md) | AIUC1 ControlApplication Category                                                |
+| [AIUC1EvidenceCategory](AIUC1EvidenceCategory.md)                     | AIUC1 Evidence Category                                                          |
+| [AIUC1Frequency](AIUC1Frequency.md)                                   | AIUC1 Frequency                                                                  |
+| [AIUC1RequirementType](AIUC1RequirementType.md)                       | AIUC1 Requirement Type                                                           |
+| [EuAiRiskCategory](EuAiRiskCategory.md)                               |                                                                                  |
+| [Jurisdiction](Jurisdiction.md)                                       | ISO 3166-1 country code, sourced from the DPV Location ontology (https://w3id    |
+| [LifecycleStatus](LifecycleStatus.md)                                 | Editorial / publication state of a catalogued entity                             |
+| [SubnationalJurisdiction](SubnationalJurisdiction.md)                 | Subnational or regional jurisdiction, sourced from the DPV Location ontology ... |
+| [SupraNationalJurisdiction](SupraNationalJurisdiction.md)             | Supra-national or intergovernmental jurisdiction, sourced from the DPV Locati... |
 
 ## Types
 
