@@ -64,7 +64,6 @@ enums:
       WITHDRAWN:
         description: Removed / no longer available.
         meaning: adms-status:Withdrawn
-
   Jurisdiction:
     description: >-
       ISO 3166-1 country code, sourced from the DPV Location ontology
@@ -77,133 +76,32 @@ enums:
         - rdfs:subClassOf
       include_self: false
 
-  SupranationalJurisdiction:
+  SupraNationalJurisdiction:
     description: >-
-      Supra-national, regional, or non-country jurisdictions that are outside
-      the scope of ISO 3166-1 country codes. Used in conjunction with the
-      existing Jurisdiction (ISO 3166) range on hasJurisdiction via any_of.
-    see_also:
-      - https://en.wikipedia.org/wiki/Supranational_organisation
-    permissible_values:
-      # ── Political / Economic Unions ─────────────────────────────────────────
+      Supra-national or intergovernmental jurisdiction, sourced from the
+      DPV Location ontology (https://w3id.org/dpv/loc). Values are
+      subclasses of dpv:SupraNationalUnion (e.g. EU, EEA).
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:SupraNationalUnion
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
 
-      EU:
-        description: >-
-          European Union — a political and economic union of 27 member states.
-          Primary regulatory authority for the EU AI Act, GDPR, and related
-          instruments.
-        meaning: https://www.wikidata.org/wiki/Q458
-        aliases:
-          - EuropeanUnion
-          - European Union
-
-      EEA:
-        description: >-
-          European Economic Area — extends EU single-market rules to Iceland,
-          Liechtenstein, and Norway; GDPR and related EU regulations apply here.
-        meaning: https://www.wikidata.org/wiki/Q8932
-        aliases:
-          - European Economic Area
-
-      EFTA:
-        description: >-
-          European Free Trade Association — Switzerland, Norway, Iceland,
-          Liechtenstein; relevant for trade and conformity-assessment agreements.
-        meaning: https://www.wikidata.org/wiki/Q8932
-        aliases:
-          - European Free Trade Association
-
-      GCC:
-        description: >-
-          Gulf Cooperation Council — Bahrain, Kuwait, Oman, Qatar, Saudi Arabia,
-          UAE; increasingly active in joint AI and data governance initiatives.
-        meaning: https://www.wikidata.org/wiki/Q170464
-        aliases:
-          - Gulf Cooperation Council
-
-      ASEAN:
-        description: >-
-          Association of Southeast Asian Nations — 10 member states with a
-          regional AI governance guide (ASEAN Guide on AI Governance, 2024).
-        meaning: https://www.wikidata.org/wiki/Q2153992
-        aliases:
-          - Association of Southeast Asian Nations
-
-      AU:
-        description: >-
-          African Union — 55 member states; adopted the AI Continental Strategy
-          for Africa (2024) and the Data Policy Framework.
-        meaning: https://www.wikidata.org/wiki/Q82121
-        aliases:
-          - African Union
-
-      MERCOSUR:
-        description: >-
-          Southern Common Market — Argentina, Brazil, Paraguay, Uruguay (and
-          associated states); relevant for harmonised trade and emerging AI
-          policy alignment.
-        meaning: https://www.wikidata.org/wiki/Q40477
-        aliases:
-          - Mercosur
-          - Southern Common Market
-
-      # ── International / Intergovernmental Bodies ─────────────────────────────
-
-      International:
-        description: >-
-          Cross-border or multi-jurisdictional scope that cannot be attributed
-          to a single country or recognised regional body. Use when a framework,
-          risk, or regulation is explicitly global in reach (e.g. OECD AI
-          Principles, UNESCO Recommendation on AI Ethics, ISO standards).
-        aliases:
-          - Global
-          - Worldwide
-          - Cross-border
-
-      OECD:
-        description: >-
-          Organisation for Economic Co-operation and Development — 38 member
-          countries; the OECD AI Principles (2019) and subsequent
-          recommendations are frequently referenced in national AI policies.
-        meaning: https://www.wikidata.org/wiki/Q41550
-        aliases:
-          - Organisation for Economic Co-operation and Development
-
-      UN:
-        description: >-
-          United Nations — 193 member states; issues resolutions and reports
-          (e.g. UNESCO Recommendation on the Ethics of AI) that establish
-          normative AI governance expectations at a global level.
-        meaning: https://www.wikidata.org/wiki/Q1065
-        aliases:
-          - United Nations
-
-      CoE:
-        description: >-
-          Council of Europe — 46 member states; produced the Framework
-          Convention on AI and Human Rights, Democracy and the Rule of Law
-          (2024), the first binding international AI treaty.
-        meaning: https://www.wikidata.org/wiki/Q8908
-        aliases:
-          - Council of Europe
-
-      G7:
-        description: >-
-          Group of Seven — Canada, France, Germany, Italy, Japan, UK, USA plus
-          EU; the Hiroshima AI Process (2023) produced shared principles and
-          a code of conduct for advanced AI developers.
-        meaning: https://www.wikidata.org/wiki/Q39934
-        aliases:
-          - Group of Seven
-
-      G20:
-        description: >-
-          Group of Twenty — major economies that endorsed the OECD AI Principles
-          in 2019 and have pursued joint AI governance statements at subsequent
-          summits.
-        meaning: https://www.wikidata.org/wiki/Q842490
-        aliases:
-          - Group of Twenty
+  SubnationalJurisdiction:
+    description: >-
+      Subnational or regional jurisdiction, sourced from the DPV Location
+      ontology (https://w3id.org/dpv/loc). Values are subclasses of
+      dpv:Region and use ISO 3166-2 subdivision codes
+      (e.g. US-CA for California, CA-QC for Quebec).
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:Region
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
 
 classes:
   Entity:
@@ -778,14 +676,17 @@ slots:
     slot_uri: nexus:isApplicableinLocality
   hasJurisdiction:
     description: >-
-      The legal or regulatory jurisdiction(s) in which an AI system operates
-      or to which a policy, risk, or obligation applies. Accepts ISO 3166-1
-      country codes (via Jurisdiction) and/or supra-national designators
-      (via SupranationalJurisdiction).
+      The legal or regulatory jurisdiction(s) applicable to an AI system,
+      policy, risk, or obligation. Accepts ISO 3166-1 country codes,
+      supra-national bodies, or subnational jurisdictions with distinct
+      regulatory significance. Aligns with dpv:hasJurisdiction.
     multivalued: true
+    see_also:
+      - https://w3id.org/dpv#hasJurisdiction
     any_of:
       - range: Jurisdiction
-      - range: SupranationalJurisdiction
+      - range: SupraNationalJurisdiction
+      - range: SubnationalJurisdiction
     inlined: false
     slot_uri: dpv:hasJurisdiction
   isUsedWithinLocality:
