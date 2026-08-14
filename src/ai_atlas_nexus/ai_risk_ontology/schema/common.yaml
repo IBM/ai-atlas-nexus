@@ -88,6 +88,14 @@ enums:
       relationship_types:
         - rdfs:subClassOf
       include_self: false
+    permissible_values:
+      International:
+        description: >-
+          Explicitly global scope not attributable to any single country
+          or recognised regional body.
+        aliases:
+          - INTERNATIONAL
+          - international
 
   SubnationalJurisdiction:
     description: >-

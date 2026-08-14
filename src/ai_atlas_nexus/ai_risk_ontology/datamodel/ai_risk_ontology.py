@@ -136,11 +136,14 @@ class Jurisdiction(str):
     pass
 
 
-class SupraNationalJurisdiction(str):
+class SupraNationalJurisdiction(str, Enum):
     """
     Supra-national or intergovernmental jurisdiction, sourced from the DPV Location ontology (https://w3id.org/dpv/loc). Values are subclasses of dpv:SupraNationalUnion (e.g. EU, EEA).
     """
-    pass
+    International = "International"
+    """
+    Explicitly global scope not attributable to any single country or recognised regional body.
+    """
 
 
 class SubnationalJurisdiction(str):
