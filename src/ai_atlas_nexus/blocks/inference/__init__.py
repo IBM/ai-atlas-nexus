@@ -1,4 +1,5 @@
 from .base import InferenceEngine
+from .bedrock import AWSBedrockInferenceEngine
 from .hf import HFInferenceEngine
 from .ollama import OllamaInferenceEngine
 from .openai import OpenAIInferenceEngine

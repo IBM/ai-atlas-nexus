@@ -24,6 +24,9 @@ class InferenceEngineCredentials(TypedDict):
     space_id: Optional[str] = None  # only used in WML engine
     project_id: Optional[str] = None  # only used in WML engine
     org_id: Optional[str] = None  # used in HF engine for org billing
+    aws_access_key_id: Optional[str] = None  # only used in Bedrock engine
+    aws_secret_access_key: Optional[str] = None  # only used in Bedrock engine
+    region_name: Optional[str] = None  # only used in Bedrock engine
 
 
 class RITSInferenceEngineParams(TypedDict):
@@ -148,23 +151,54 @@ class HFInferenceEngineParams(TypedDict):
     logprobs: Optional[bool] = True
     n: Optional[int] = None
 
+class AWSBedrockInferenceEngineParams(TypedDict):
+    # Native Bedrock converse params (amazon.*, anthropic.*, etc.)
+    maxTokens: Optional[int] = None
+    topP: Optional[float] = None
+    stopSequences: Optional[List[str]] = None
+    temperature: Optional[float] = None
+    # OpenAI-compatible params (openai.* models via invoke_model)
+    frequency_penalty: Optional[float] = None
+    presence_penalty: Optional[float] = None
+    max_completion_tokens: Optional[int] = None
+    max_tokens: Optional[int] = None
+    seed: Optional[int] = None
+    stop: Optional[List[str]] = None
+    top_p: Optional[float] = None
+    logprobs: Optional[bool] = None
+    top_logprobs: Optional[int] = None
+    logit_bias: Optional[Dict[str, int]] = None
+    n: Optional[int] = None
+    reasoning_effort: Optional[Literal["low", "medium", "high"]] = None
+    verbosity: Optional[Literal["low", "medium", "high"]] = None
+    service_tier: Optional[Literal["auto", "default", "flex", "scale", "priority"]] = None
+    store: Optional[bool] = None
+    metadata: Optional[Dict[str, str]] = None
+    safety_identifier: Optional[str] = None
+    prompt_cache_key: Optional[str] = None
+
 
 class OpenAIInferenceEngineParams(TypedDict):
     frequency_penalty: Optional[float] = None
     presence_penalty: Optional[float] = None
     max_completion_tokens: Optional[int] = None
     seed: Optional[int] = None
-    stop: Union[Optional[str], List[str]] = None
+    stop: Optional[list[str]] = None
     temperature: Optional[float] = None
     top_p: Optional[float] = None
+    max_tokens: Optional[int] = None
+    response_format: Optional[dict] = None
     top_logprobs: Optional[int] = None
-    logit_bias: Optional[Dict[str, int]] = None
+    logit_bias: Optional[dict] = None
     logprobs: Optional[bool] = None
     n: Optional[int] = None
-    parallel_tool_calls: Optional[bool] = None
-    service_tier: Optional[Literal["auto", "default", "flex"]] = None
+    reasoning_effort: Optional[Literal["low", "medium", "high"]] = None
+    verbosity: Optional[Literal["low", "medium", "high"]] = None
+    service_tier: Optional[Literal["auto", "default", "flex", "scale", "priority"]] = None
     store: Optional[bool] = None
-    user: Optional[str] = None
+    metadata: Optional[dict[str, str]] = None
+    safety_identifier: Optional[str] = None
+    prompt_cache_key: Optional[str] = None
 
 
 @dataclasses.dataclass(kw_only=True)

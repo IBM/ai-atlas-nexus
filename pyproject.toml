@@ -69,6 +69,7 @@ dependencies = [
 wml = ["ibm-watsonx-ai"]
 ollama = ["ollama"]
 vllm = ["vllm", "xgrammar"]
+bedrock = ["boto3"]
 docs = [
     "mkdocs-material",
     "mkdocs-jupyter",

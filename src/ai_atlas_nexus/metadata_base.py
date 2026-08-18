@@ -12,6 +12,7 @@ class InferenceEngineType(StrEnum):
     OLLAMA = "ollama"
     HF = "hf"
     OPENAI = "openai"
+    BEDROCK = "bedrock"
 
     @classmethod
     def list(cls):
