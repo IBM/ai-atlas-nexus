@@ -1,0 +1,149 @@
+# OWASP Agentic Skills Top 10 v1.0 (2026 Edition)
+documents:
+  - id: owasp-agentic-skills-top-10-whitepaper-v1
+    name: OWASP Agentic Skills Top 10 Whitepaper (V1)
+    description: >-
+      The OWASP Agentic Skills Top 10 whitepaper documents ten security risks
+      affecting reusable AI agent skills and provides guidance for builders,
+      enterprises, marketplaces, and reviewers.
+    author: OWASP Agentic Skills Top 10 Project
+    url: https://owasp.org/www-project-agentic-skills-top-10/assets/publications/ast10-top10-whitepaper-2.pdf
+    hasLicense: license-cc-by-sa-4.0
+
+taxonomies:
+  - id: owasp-ast10
+    name: OWASP Agentic Skills Top 10
+    type: RiskTaxonomy
+    description: >-
+      The OWASP Agentic Skills Top 10 documents ten security risks in reusable
+      AI agent skills. It focuses on the skill layer, where instructions, code,
+      dependencies, metadata, distribution channels, and runtime permissions
+      combine to shape agent behavior.
+    url: https://owasp.org/www-project-agentic-skills-top-10/
+    version: 1.0 (2026 Edition)
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasLicense: license-cc-by-sa-4.0
+
+entries:
+  - id: ast01-malicious-skills
+    name: AST01 - Malicious Skills
+    description: >-
+      Skills appear legitimate but contain hidden malicious payloads in code
+      or natural-language instructions. Because skills execute with the host
+      agent's permissions, they can expose credentials, data, and shell
+      capabilities.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast01.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: malicious-skills
+    risk_type: agentic
+
+  - id: ast02-supply-chain-compromise
+    name: AST02 - Supply Chain Compromise
+    description: >-
+      Attackers exploit weak provenance controls in skill registries and
+      distribution channels through methods such as mass uploads, dependency
+      confusion, account takeover, and repository poisoning.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast02.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: supply-chain-compromise
+    risk_type: agentic
+
+  - id: ast03-over-privileged-skills
+    name: AST03 - Over-Privileged Skills
+    description: >-
+      Skills receive permissions broader than their stated functions require.
+      Excessive access increases the impact of a malicious skill, a software
+      flaw, or a downstream instruction-injection attack.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast03.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: over-privileged-skills
+    risk_type: agentic
+
+  - id: ast04-insecure-metadata
+    name: AST04 - Insecure Metadata
+    description: >-
+      Skill metadata and definition files are attacker-controlled inputs.
+      Misleading fields can deceive installers, while unsafe parsing or
+      deserialization can execute malicious payloads during skill loading.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast04.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: insecure-metadata
+    risk_type: agentic
+
+  - id: ast05-untrusted-external-instructions
+    name: AST05 - Untrusted External Instructions
+    description: >-
+      Skills can direct agents to mutable external documents that are consumed
+      as instructions at runtime. Content outside the reviewed skill package
+      can change or be compromised while inheriting the skill's trust and
+      permissions.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast05.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: untrusted-external-instructions
+    risk_type: agentic
+
+  - id: ast06-weak-isolation
+    name: AST06 - Weak Isolation
+    description: >-
+      Skills execute in the same security context as the host agent when
+      sandboxing is unavailable, optional, or disabled. This can expose the
+      host file system, shell, network, credentials, and other resources.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast06.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: weak-isolation
+    risk_type: agentic
+
+  - id: ast07-update-drift
+    name: AST07 - Update Drift
+    description: >-
+      Deployed skills diverge from known-good versions when updates are not
+      pinned and verified. Missed patches leave vulnerabilities open, while
+      unverified updates can introduce malicious changes.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast07.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: update-drift
+    risk_type: agentic
+
+  - id: ast08-poor-scanning
+    name: AST08 - Poor Scanning
+    description: >-
+      Traditional code-scanning approaches can miss malicious behavior in
+      skills because skills combine code, metadata, dependencies, and
+      natural-language instructions.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast08.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: poor-scanning
+    risk_type: agentic
+
+  - id: ast09-no-governance
+    name: AST09 - No Governance
+    description: >-
+      Organizations lack the inventories, policies, approval processes, audit
+      trails, and revocation mechanisms needed to manage agent skills at
+      enterprise scale.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast09.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: no-governance
+    risk_type: agentic
+
+  - id: ast10-cross-platform-reuse
+    name: AST10 - Cross-Platform Reuse
+    description: >-
+      Moving skills between platforms can strip or alter permission manifests,
+      trust signals, and other security metadata when the destination format
+      cannot represent the source platform's controls.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast10.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: cross-platform-reuse
+    risk_type: agentic
