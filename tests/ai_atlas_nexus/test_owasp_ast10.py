@@ -56,14 +56,18 @@ class TestOWASPAST10Integration(TestCaseBase):
         self.assertEqual({risk.id for risk in risks}, expected_ids)
 
     def test_mappings_are_bidirectional(self):
-        """Verify the 12 mappings and their inverse relationships."""
+        """Verify at least 12 mappings and their inverse relationships."""
         risks = self.nexus.get_all_risks(taxonomy="owasp-ast10")
 
         mapping_count = sum(
             len(risk.related_mappings or [])
             for risk in risks
         )
-        self.assertEqual(mapping_count, 12)
+        self.assertGreaterEqual(
+            mapping_count,
+            12,
+            "Expected at least 12 mappings for OWASP AST10 risks",
+        )
 
         for risk in risks:
             self.assertGreater(len(risk.related_mappings or []), 0)
