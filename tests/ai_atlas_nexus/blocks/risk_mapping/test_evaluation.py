@@ -55,17 +55,20 @@ class TestRetrieval:
         assert r["precision"] == 1.0
 
     def test_empty_predicted(self):
+        # nothing predicted -> precision is not applicable, not a real 0.0
         gt = [_m("ibm:a", "mit:x")]
         r = evaluate_mappings([], gt)["retrieval"]
-        assert r["precision"] == 0.0
+        assert r["precision"] is None
         assert r["recall"] == 0.0
-        assert r["f1"] == 0.0
+        assert r["f1"] is None
 
     def test_empty_ground_truth_does_not_divide_by_zero(self):
+        # no ground truth -> recall is not applicable, not a real 0.0
         pred = [_m("ibm:a", "mit:x")]
         r = evaluate_mappings(pred, [])["retrieval"]
-        assert r["recall"] == 0.0
+        assert r["recall"] is None
         assert r["precision"] == 0.0
+        assert r["f1"] is None
 
 
 class TestCoverage:
@@ -90,8 +93,9 @@ class TestCoverage:
         assert cov["source_risk_coverage"] == 0.5
 
     def test_no_ground_truth(self):
+        # no ground-truth sources -> coverage is not applicable, not a real 0.0
         cov = evaluate_mappings([_m("ibm:a", "mit:x")], [])["coverage"]
-        assert cov["source_risk_coverage"] == 0.0
+        assert cov["source_risk_coverage"] is None
         assert cov["n_source_risks"] == 0
 
 
@@ -99,16 +103,23 @@ class TestLoadCuratedMappings:
     """Loading curated ground truth from the shipped SSSOM files."""
 
     def test_loads_ibm_mit_manual_pairs(self):
+        # exact row count isn't asserted, the file can grow as more mappings
+        # are curated; what must hold is that every row is manual and complete
         mappings = load_curated_mappings("mit-ai-risk-repository_ibm-risk-atlas.tsv")
-        assert len(mappings) == 252
+        assert mappings
         assert all(
             m.mapping_justification == "semapv:ManualMappingCuration" for m in mappings
         )
         assert all(m.subject_id and m.object_id for m in mappings)
 
     def test_default_keeps_only_manual_curation(self):
-        # ailuminate is entirely LLM/similarity generated, so nothing is manual
-        assert load_curated_mappings("ailuminate-v1.0.sssom.tsv") == []
+        # this file mixes ManualMappingCuration with SemanticSimilarityThresholdMatching,
+        # so this proves the filter both keeps manual rows and drops non-manual ones
+        mappings = load_curated_mappings("aiuc1_to_ibm_from_tsv_data.tsv")
+        assert mappings
+        assert all(
+            m.mapping_justification == "semapv:ManualMappingCuration" for m in mappings
+        )
 
     def test_drops_no_match_rows(self):
         mappings = load_curated_mappings("ibm2owasp.tsv")

@@ -68,7 +68,10 @@ def evaluate_mappings(predicted: list[Mapping], ground_truth: list[Mapping]) -> 
     Returns:
         dict: retrieval metrics (precision, recall, F1 on risk pairs, with
         counts) and coverage (the fraction of ground-truth source risks for
-        which at least one curated mapping was recovered).
+        which at least one curated mapping was recovered). A metric is
+        ``None`` when it is not applicable, e.g. precision when nothing was
+        predicted, which is different from a real ``0.0`` (something was
+        predicted and none of it was correct).
     """
     predicted_pairs = {_pair_key(m) for m in predicted}
     ground_truth_pairs = {_pair_key(m) for m in ground_truth}
@@ -78,9 +81,12 @@ def evaluate_mappings(predicted: list[Mapping], ground_truth: list[Mapping]) -> 
     n_ground_truth = len(ground_truth_pairs)
     n_matched = len(matched_pairs)
 
-    precision = n_matched / n_predicted if n_predicted else 0.0
-    recall = n_matched / n_ground_truth if n_ground_truth else 0.0
-    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0
+    precision = n_matched / n_predicted if n_predicted else None
+    recall = n_matched / n_ground_truth if n_ground_truth else None
+    if precision is None or recall is None:
+        f1 = None
+    else:
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0
 
     # Coverage: for how many curated source risks did we recover at least one of
     # their curated mappings? This is more informative than pair recall when a
@@ -92,19 +98,19 @@ def evaluate_mappings(predicted: list[Mapping], ground_truth: list[Mapping]) -> 
 
     covered = sum(1 for pairs in pairs_by_source.values() if pairs & predicted_pairs)
     n_sources = len(pairs_by_source)
-    source_coverage = covered / n_sources if n_sources else 0.0
+    source_coverage = covered / n_sources if n_sources else None
 
     return {
         "retrieval": {
-            "precision": round(precision, 4),
-            "recall": round(recall, 4),
-            "f1": round(f1, 4),
+            "precision": round(precision, 4) if precision is not None else None,
+            "recall": round(recall, 4) if recall is not None else None,
+            "f1": round(f1, 4) if f1 is not None else None,
             "n_predicted_pairs": n_predicted,
             "n_ground_truth_pairs": n_ground_truth,
             "n_matched_pairs": n_matched,
         },
         "coverage": {
-            "source_risk_coverage": round(source_coverage, 4),
+            "source_risk_coverage": round(source_coverage, 4) if source_coverage is not None else None,
             "n_source_risks": n_sources,
             "n_source_risks_covered": covered,
         },
