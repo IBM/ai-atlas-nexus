@@ -1,8 +1,12 @@
 # Assisted by watsonx Code Assistant
 import asyncio
+import gc
+import os
+import sys
 import time
 import unittest
 from concurrent.futures import ThreadPoolExecutor
+from unittest import mock
 
 from ai_atlas_nexus.toolkit.async_utils import (
     ClientCache,
@@ -101,7 +105,53 @@ class TestEventLoopHandler(unittest.TestCase):
         # Give some time for the loop to stop
         time.sleep(0.2)
         # Check that the thread is no longer alive after closing
-        # Note: daemon threads may still be alive but the loop should be stopped
+        self.assertFalse(thread.is_alive())
+        self.assertTrue(handler._event_loop.is_closed())
+
+    def test_close_event_loop_is_idempotent(self):
+        """Test that a second close (as __del__ triggers after an explicit one) does not raise."""
+        handler = _EventLoopHandler()
+        handler._close_event_loop()
+        handler._close_event_loop()
+
+    def test_close_event_loop_swallows_a_still_running_close_error(self):
+        """Test that close() reporting the loop as still running (interpreter shutdown) does not raise."""
+        handler = _EventLoopHandler()
+
+        with mock.patch.object(
+            handler._event_loop,
+            "close",
+            side_effect=RuntimeError("Cannot close a running event loop"),
+        ):
+            handler._close_event_loop()
+
+        handler._close_event_loop()
+
+    @unittest.skipUnless(
+        sys.platform.startswith("linux"), "fd accounting is Linux-specific"
+    )
+    def test_reentrant_calls_do_not_leak_file_descriptors(self):
+        """Test that ephemeral handlers created on the reentrant path release their fds."""
+
+        def open_fd_count():
+            return len(os.listdir("/proc/self/fd"))
+
+        async def inner():
+            return 1
+
+        handler = _EventLoopHandler()
+        before = open_fd_count()
+        for _ in range(30):
+
+            async def outer():
+                return handler(inner())
+
+            handler(outer())
+        gc.collect()
+        after = open_fd_count()
+        handler._close_event_loop()
+
+        self.assertEqual(after, before)
 
     def test_nested_call_creates_new_handler(self):
         """Test that calling from within the same event loop creates a new handler."""
