@@ -134,7 +134,23 @@ class TestEventLoopHandler(unittest.TestCase):
         """Test that ephemeral handlers created on the reentrant path release their fds."""
 
         def open_fd_count():
-            return len(os.listdir("/proc/self/fd"))
+            # Count only the fd kinds the leak this test guards against
+            # actually produces (an epoll fd plus a self-pipe per handler),
+            # not every fd in the process. A raw process-wide count would
+            # also pick up fds opened and closed by unrelated code (logging,
+            # sockets) during the loop below, which has nothing to do with
+            # whether _EventLoopHandler itself leaks.
+            count = 0
+            for fd in os.listdir("/proc/self/fd"):
+                try:
+                    target = os.readlink(f"/proc/self/fd/{fd}")
+                except OSError:
+                    continue
+                if target.startswith("anon_inode:[eventpoll]") or target.startswith(
+                    "pipe:"
+                ):
+                    count += 1
+            return count
 
         async def inner():
             return 1

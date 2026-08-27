@@ -78,10 +78,23 @@ class _EventLoopHandler:
                 pass
 
             # stop() only schedules a stop; close() before the thread exits
-            # raises, so join first to release the loop's fds.
-            self._event_loop.call_soon_threadsafe(self._event_loop.stop)
-            self._thread.join(timeout=5)
-            if not self._thread.is_alive():
+            # raises, so join first to release the loop's fds. Guard the whole
+            # thing: the thread may never have started (a failed __init__),
+            # or _close_event_loop may run from inside the loop's own thread,
+            # where join() on the current thread raises.
+            thread = getattr(self, "_thread", None)
+            try:
+                if (
+                    thread is not None
+                    and thread.is_alive()
+                    and thread is not threading.current_thread()
+                ):
+                    self._event_loop.call_soon_threadsafe(self._event_loop.stop)
+                    thread.join(timeout=5)
+            except Exception:
+                pass
+
+            if thread is None or not thread.is_alive():
                 try:
                     self._event_loop.close()
                 except Exception:
