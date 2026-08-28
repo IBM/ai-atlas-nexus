@@ -15,7 +15,9 @@ _MAPPINGS_DIR = Path(__file__).resolve().parents[2] / "data" / "mappings"
 
 
 def load_curated_mappings(
-    filename: str, justification: str = "semapv:ManualMappingCuration"
+    filename: str,
+    justification: str = "semapv:ManualMappingCuration",
+    risk_ids: set[str] | None = None,
 ) -> list[Mapping]:
     """Load curated mappings from a shipped SSSOM/TSV file, for use as ground truth.
 
@@ -26,6 +28,10 @@ def load_curated_mappings(
             Keep only mappings with this mapping_justification. Defaults to
             manual curation so the mapper is not scored against machine-generated
             mappings, which would be circular.
+        risk_ids: set[str], optional
+            If given, keep only mappings where both subject and object are risk
+            ids in this set. Excludes non-risk targets, e.g. classification
+            factors or requirements, that some curated files also mix in.
 
     Returns:
         list[Mapping]: the curated mappings, with noMatch rows removed.
@@ -34,11 +40,19 @@ def load_curated_mappings(
 
     path = _MAPPINGS_DIR / filename
     mapping_set = parse_sssom_table(file_path=str(path)).to_mapping_set()
-    return [
+    mappings = [
         m
         for m in mapping_set.mappings
         if m.mapping_justification == justification and m.predicate_id != "noMatch"
     ]
+    if risk_ids is not None:
+        mappings = [
+            m
+            for m in mappings
+            if str(m.subject_id).split(":")[-1] in risk_ids
+            and str(m.object_id).split(":")[-1] in risk_ids
+        ]
+    return mappings
 
 
 def _pair_key(mapping: Mapping) -> tuple:

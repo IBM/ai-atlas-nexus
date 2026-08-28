@@ -125,3 +125,17 @@ class TestLoadCuratedMappings:
         mappings = load_curated_mappings("ibm2owasp.tsv")
         assert mappings  # file has manual rows
         assert all(m.predicate_id != "noMatch" for m in mappings)
+
+    def test_risk_ids_filters_out_non_risk_targets(self):
+        # this subject also maps to MIT causal factors (not risks), which
+        # must be dropped when risk_ids only lists the real risk on both sides
+        risk_ids = {"atlas-attribute-inference-attack", "mit-ai-risk-subdomain-2.2"}
+        mappings = load_curated_mappings(
+            "mit-ai-risk-repository_ibm-risk-atlas.tsv", risk_ids=risk_ids
+        )
+        assert mappings
+        assert all(
+            str(m.subject_id).split(":")[-1] in risk_ids
+            and str(m.object_id).split(":")[-1] in risk_ids
+            for m in mappings
+        )
