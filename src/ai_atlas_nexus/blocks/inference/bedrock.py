@@ -107,20 +107,15 @@ class AWSBedrockInferenceEngine(InferenceEngine):
         except botocore.exceptions.EndpointConnectionError as exc:
             raise Exception(f"Connection error - {exc}")
 
-        # Cross-region inference profile IDs (us.*, eu.*, ap.*) are not returned by
-        # list_foundation_models — skip the model check for those and trust Bedrock
-        # to validate them at inference time.
-        _INFERENCE_PROFILE_PREFIXES = ("us.", "eu.", "ap.")
-        if not self.model_name_or_path.startswith(_INFERENCE_PROFILE_PREFIXES):
-            bedrock = boto3.client("bedrock", **self._boto3_kwargs())
-            available_models = [
-                m["modelId"]
-                for m in bedrock.list_foundation_models()["modelSummaries"]
-            ]
-            if self.model_name_or_path not in available_models:
-                raise Exception(
-                    f"Model `{self.model_name_or_path}` not found. Available - {available_models}"
-                )
+        bedrock = boto3.client("bedrock", **self._boto3_kwargs())
+        available_models = [
+            m["modelId"]
+            for m in bedrock.list_foundation_models()["modelSummaries"]
+        ]
+        if self.model_name_or_path not in available_models:
+            raise Exception(
+                f"Model `{self.model_name_or_path}` not found. Available - {available_models}"
+            )
 
     @postprocess
     def generate(
@@ -148,7 +143,20 @@ class AWSBedrockInferenceEngine(InferenceEngine):
             raise InferenceError(str(e))
 
     def generate_text(self, response_format, prompt):
-        """Delegate text generation to the chat-based inference API."""
+        """Delegate to the chat API — intentionally, not as a shortcut.
+
+        `generate()` and `chat()` converge on the same
+        `generate_chat_response` call because Bedrock doesn't expose a
+        second, independent completion endpoint for the model families
+        this engine supports: `converse` (native models) and the
+        OpenAI-compatible `invoke_model` body (`openai.*` models) are both
+        chat-shaped APIs, and AWS recommends `converse` over the legacy,
+        per-model `invoke_model` payload precisely because it unifies
+        single-turn and multi-turn requests behind one structure. A
+        "generate" call here is simply a `converse`/`invoke_model` call
+        with one user-role message and no history — there is no distinct
+        Bedrock "generate" operation left to implement separately.
+        """
         return self.generate_chat_response(response_format, tools=None, messages=prompt)
 
     @postprocess

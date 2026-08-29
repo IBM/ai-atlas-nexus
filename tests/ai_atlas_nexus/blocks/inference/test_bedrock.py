@@ -127,7 +127,7 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
     def test_ping_success(self):
         """Successful ping when credentials are valid and model is available."""
         engine = _make_engine(
-            model_name_or_path="amazon.nova-pro-v1:0",
+            model_name_or_path="openai.gpt-4o-mini",
             credentials={
                 "aws_access_key_id": "AKIA",
                 "aws_secret_access_key": "s",
@@ -135,13 +135,13 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
             }
         )
         with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
-            self._mock_boto3_for_ping(mock_boto3, "amazon.nova-pro-v1:0")
+            self._mock_boto3_for_ping(mock_boto3, "openai.gpt-4o-mini")
             engine.ping()  # should not raise
 
     def test_ping_invalid_credentials(self):
         """ping raises on invalid AWS credentials."""
         engine = _make_engine(
-            model_name_or_path="amazon.nova-pro-v1:0",
+            model_name_or_path="openai.gpt-4o-mini",
             credentials={
                 "aws_access_key_id": "BAD",
                 "aws_secret_access_key": "BAD",
@@ -150,7 +150,7 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
         )
         with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
             self._mock_boto3_for_ping(
-                mock_boto3, "amazon.nova-pro-v1:0",
+                mock_boto3, "openai.gpt-4o-mini",
                 sts_side_effect=botocore.exceptions.ClientError(
                     {"Error": {"Code": "InvalidClientTokenId", "Message": "invalid token"}},
                     "GetCallerIdentity",
@@ -163,7 +163,7 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
     def test_ping_model_not_found(self):
         """ping raises when model is not in the available list."""
         engine = _make_engine(
-            model_name_or_path="amazon.nova-fake-v9:0",
+            model_name_or_path="openai.gpt-fake",
             credentials={
                 "aws_access_key_id": "AKIA",
                 "aws_secret_access_key": "s",
@@ -171,16 +171,16 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
             }
         )
         with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
-            self._mock_boto3_for_ping(mock_boto3, "amazon.nova-pro-v1:0")
+            self._mock_boto3_for_ping(mock_boto3, "openai.gpt-4o-mini")
             with self.assertRaises(Exception) as ctx:
                 engine.ping()
-        self.assertIn("amazon.nova-fake-v9:0", str(ctx.exception))
+        self.assertIn("openai.gpt-fake", str(ctx.exception))
         self.assertIn("not found", str(ctx.exception))
 
     def test_ping_connection_error(self):
         """ping raises a connection error when STS cannot be reached."""
         engine = _make_engine(
-            model_name_or_path="amazon.nova-pro-v1:0",
+            model_name_or_path="openai.gpt-4o-mini",
             credentials={
                 "aws_access_key_id": "AKIA",
                 "aws_secret_access_key": "s",
@@ -189,7 +189,7 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
         )
         with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
             self._mock_boto3_for_ping(
-                mock_boto3, "amazon.nova-pro-v1:0",
+                mock_boto3, "openai.gpt-4o-mini",
                 sts_side_effect=botocore.exceptions.EndpointConnectionError(
                     endpoint_url="https://sts.us-east-1.amazonaws.com"
                 ),
