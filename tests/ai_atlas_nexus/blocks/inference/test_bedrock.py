@@ -2,6 +2,8 @@ import json
 import unittest
 from unittest.mock import Mock, patch
 
+import botocore.exceptions
+
 from ai_atlas_nexus.blocks.inference.bedrock import AWSBedrockInferenceEngine
 from ai_atlas_nexus.blocks.inference.params import TextGenerationInferenceOutput
 from ai_atlas_nexus.metadata_base import InferenceEngineType
@@ -16,12 +18,11 @@ def _make_engine(**attrs) -> AWSBedrockInferenceEngine:
     return engine
 
 
-def _mock_response(content, *, input_tokens=10, output_tokens=3, stop_reason="end_turn"):
-    """Build a minimal Bedrock converse response mock."""
+def _mock_openai_response(content, *, input_tokens=10, output_tokens=3, stop_reason="stop"):
+    """Build a minimal OpenAI-compatible response mock."""
     return {
-        "output": {"message": {"content": [{"text": content}]}},
-        "usage": {"inputTokens": input_tokens, "outputTokens": output_tokens},
-        "stopReason": stop_reason,
+        "choices": [{"message": {"content": content}, "finish_reason": stop_reason}],
+        "usage": {"prompt_tokens": input_tokens, "completion_tokens": output_tokens},
     }
 
 
@@ -150,7 +151,10 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
         with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
             self._mock_boto3_for_ping(
                 mock_boto3, "amazon.nova-pro-v1:0",
-                sts_side_effect=Exception("InvalidClientTokenId"),
+                sts_side_effect=botocore.exceptions.ClientError(
+                    {"Error": {"Code": "InvalidClientTokenId", "Message": "invalid token"}},
+                    "GetCallerIdentity",
+                ),
             )
             with self.assertRaises(Exception) as ctx:
                 engine.ping()
@@ -186,93 +190,131 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
         with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
             self._mock_boto3_for_ping(
                 mock_boto3, "amazon.nova-pro-v1:0",
-                sts_side_effect=Exception("Could not connect to endpoint"),
+                sts_side_effect=botocore.exceptions.EndpointConnectionError(
+                    endpoint_url="https://sts.us-east-1.amazonaws.com"
+                ),
             )
             with self.assertRaises(Exception) as ctx:
                 engine.ping()
         self.assertIn("Connection error", str(ctx.exception))
 
-    # _to_bedrock_format
-
-    def test_to_bedrock_format_string(self):
-        """Plain strings are wrapped as user messages."""
-        engine = _make_engine()
-        result = engine._to_bedrock_format("hello")
-        self.assertEqual(result, [{"role": "user", "content": [{"text": "hello"}]}])
-
-    def test_to_bedrock_format_openai_messages(self):
-        """OpenAI-style message dicts are converted to Bedrock format."""
-        engine = _make_engine()
-        messages = [
-            {"role": "user", "content": "What is risk?"},
-            {"role": "assistant", "content": "Risk is ..."},
-        ]
-        result = engine._to_bedrock_format(messages)
-        self.assertEqual(result[0]["role"], "user")
-        self.assertEqual(result[0]["content"][0]["text"], "What is risk?")
-        self.assertEqual(result[1]["role"], "assistant")
-        self.assertEqual(result[1]["content"][0]["text"], "Risk is ...")
-
     # _prepare_chat_output
 
-    def test_prepare_chat_output_with_response_dict(self):
+    def test_prepare_chat_output_with_openai_response(self):
         """_prepare_chat_output extracts prediction, token counts, and stop reason."""
         engine = _make_engine(
-            model_name_or_path="amazon.nova-pro-v1:0",
+            model_name_or_path="openai.gpt-4o-mini",
             _inference_engine_type=InferenceEngineType.BEDROCK,
         )
         result = engine._prepare_chat_output(
-            _mock_response("generated text", input_tokens=120, output_tokens=40)
+            _mock_openai_response("generated text", input_tokens=120, output_tokens=40)
         )
         self.assertIsInstance(result, TextGenerationInferenceOutput)
         self.assertEqual(result.prediction, "generated text")
         self.assertEqual(result.input_tokens, 120)
         self.assertEqual(result.output_tokens, 40)
-        self.assertEqual(result.stop_reason, "end_turn")
+        self.assertEqual(result.stop_reason, "stop")
 
     def test_prepare_chat_output_unwraps_array_envelope(self):
         """_prepare_chat_output unwraps the {"items": [...]} envelope."""
         engine = _make_engine(
-            model_name_or_path="amazon.nova-pro-v1:0",
+            model_name_or_path="openai.gpt-4o-mini",
             _inference_engine_type=InferenceEngineType.BEDROCK,
         )
         wrapped = json.dumps({"items": ["Risk A", "Risk B"]})
-        result = engine._prepare_chat_output(_mock_response(wrapped))
+        result = engine._prepare_chat_output(_mock_openai_response(wrapped))
         self.assertEqual(result.prediction, json.dumps(["Risk A", "Risk B"]))
 
     def test_prepare_chat_output_leaves_non_envelope_objects_intact(self):
         """_prepare_chat_output does NOT unwrap objects with multiple keys."""
         engine = _make_engine(
-            model_name_or_path="amazon.nova-pro-v1:0",
+            model_name_or_path="openai.gpt-4o-mini",
             _inference_engine_type=InferenceEngineType.BEDROCK,
         )
         multi_key = json.dumps({"items": ["A"], "extra": "value"})
-        result = engine._prepare_chat_output(_mock_response(multi_key))
+        result = engine._prepare_chat_output(_mock_openai_response(multi_key))
         self.assertEqual(result.prediction, multi_key)
 
     # _create_schema_format
 
     def test_create_schema_format_with_object_schema(self):
-        """Object-type schemas pass through unwrapped."""
+        """Object-type schemas are wrapped in the json_schema envelope."""
         engine = _make_engine()
         schema = {"type": "object", "properties": {"name": {"type": "string"}}}
         result = engine._create_schema_format(schema)
-        self.assertEqual(result, schema)
+        self.assertEqual(result["type"], "json_schema")
+        self.assertEqual(result["json_schema"]["name"], "Bedrock_Schema")
+        self.assertEqual(result["json_schema"]["schema"], schema)
+        self.assertTrue(result["json_schema"]["strict"])
 
     def test_create_schema_format_wraps_root_array(self):
-        """Root-array schemas are wrapped in an object."""
+        """Root-array schemas are wrapped in an object, then the json_schema envelope."""
         engine = _make_engine()
         array_schema = {"type": "array", "items": {"enum": ["A", "B"]}}
         result = engine._create_schema_format(array_schema)
-        self.assertEqual(result["type"], "object")
-        self.assertIn("items", result["properties"])
-        self.assertEqual(result["properties"]["items"], array_schema)
-        self.assertEqual(result["required"], ["items"])
+        self.assertEqual(result["type"], "json_schema")
+        inner = result["json_schema"]["schema"]
+        self.assertEqual(inner["type"], "object")
+        self.assertIn("items", inner["properties"])
+        self.assertEqual(inner["properties"]["items"], array_schema)
+        self.assertEqual(inner["required"], ["items"])
 
     def test_create_schema_format_none(self):
         """_create_schema_format returns None when no format given."""
         engine = _make_engine()
         self.assertIsNone(engine._create_schema_format(None))
+
+    # _invoke_openai_model
+
+    def _make_openai_engine(self, model_id="openai.gpt-4o-mini", parameters=None):
+        """Helper: engine with a mock client for _invoke_openai_model tests."""
+        engine = _make_engine(
+            model_name_or_path=model_id,
+            parameters=parameters or {},
+        )
+        engine.client = Mock()
+        engine.client.invoke_model.return_value = {
+            "body": Mock(read=lambda: json.dumps(_mock_openai_response("ok")).encode())
+        }
+        return engine
+
+    def test_invoke_openai_model_sends_correct_body(self):
+        """_invoke_openai_model includes model, messages, parameters, schema, and tools in the body."""
+        engine = self._make_openai_engine(parameters={"max_tokens": 100, "temperature": 0.5})
+        messages = [{"role": "user", "content": "hello"}]
+        engine._invoke_openai_model(messages)
+        call_kwargs = engine.client.invoke_model.call_args[1]
+        body = json.loads(call_kwargs["body"])
+        self.assertEqual(body["model"], "openai.gpt-4o-mini")
+        self.assertEqual(body["messages"], messages)
+        self.assertEqual(body["max_tokens"], 100)
+        self.assertEqual(body["temperature"], 0.5)
+
+    def test_invoke_openai_model_omits_none_params(self):
+        """Parameters with None values are not included in the body."""
+        engine = self._make_openai_engine(parameters={"max_tokens": None, "temperature": 0.7})
+        engine._invoke_openai_model([{"role": "user", "content": "hi"}])
+        body = json.loads(engine.client.invoke_model.call_args[1]["body"])
+        self.assertNotIn("max_tokens", body)
+        self.assertEqual(body["temperature"], 0.7)
+
+    def test_invoke_openai_model_includes_schema_and_tools(self):
+        """schema and tools are forwarded as response_format and tools in the body."""
+        engine = self._make_openai_engine()
+        schema = {"type": "json_schema", "json_schema": {"name": "S", "schema": {}, "strict": True}}
+        tools = [{"type": "function", "function": {"name": "f"}}]
+        engine._invoke_openai_model([{"role": "user", "content": "hi"}], schema=schema, tools=tools)
+        body = json.loads(engine.client.invoke_model.call_args[1]["body"])
+        self.assertEqual(body["response_format"], schema)
+        self.assertEqual(body["tools"], tools)
+
+    def test_invoke_openai_model_omits_none_schema_and_tools(self):
+        """response_format and tools keys are absent from the body when not provided."""
+        engine = self._make_openai_engine()
+        engine._invoke_openai_model([{"role": "user", "content": "hi"}])
+        body = json.loads(engine.client.invoke_model.call_args[1]["body"])
+        self.assertNotIn("response_format", body)
+        self.assertNotIn("tools", body)
 
 
 if __name__ == "__main__":
