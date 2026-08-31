@@ -198,6 +198,7 @@ class WMLInferenceEngine(InferenceEngine):
                         "completion_tokens", None
                     ),
                     "stop_reason": response["choices"][0]["finish_reason"],
+                    "seed": self.parameters.get("seed"),
                 }
             else:
                 prediction_data = {
@@ -205,6 +206,7 @@ class WMLInferenceEngine(InferenceEngine):
                     "input_tokens": response["results"][0]["input_token_count"],
                     "output_tokens": response["results"][0]["generated_token_count"],
                     "stop_reason": response["results"][0]["stop_reason"],
+                    "seed": self.parameters.get("seed"),
                 }
 
         return TextGenerationInferenceOutput(
