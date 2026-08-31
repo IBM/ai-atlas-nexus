@@ -232,6 +232,7 @@ class AWSBedrockInferenceEngine(InferenceEngine):
                 "input_tokens": usage.get("prompt_tokens"),
                 "output_tokens": usage.get("completion_tokens"),
                 "stop_reason": choice.get("finish_reason"),
+                "seed": self.parameters.get("seed"),
             }
         content = prediction_data["prediction"]
         if content:
