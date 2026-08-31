@@ -5,6 +5,8 @@ from openai.types.chat import ChatCompletionMessageParam
 from pydantic import BaseModel
 from typing_extensions import TypedDict
 
+from ai_atlas_nexus.metadata_base import ExplanationType
+
 
 class InferenceEngineCredentials(TypedDict):
     """Contains the prediction results and metadata for the inference.
@@ -227,7 +229,7 @@ class TextGenerationInferenceOutput:
         thinking: When thinking is enabled in ollama (think=True), the output will separate the model's thinking from the model's output.
     """
 
-    prediction: Union[str, List[Dict[str, Any]]]
+    prediction: Union[str, Dict[str, Any], List[Any]]
     input_tokens: Optional[int] = None
     output_tokens: Optional[int] = None
     stop_reason: Optional[str] = None
@@ -263,3 +265,67 @@ class MelleaInferenceParams(TypedDict, total=False):
 ValidGenerateCompletionMessageParam: TypeAlias = Union[
     List[str], List[MelleaInferenceParams]
 ]
+
+
+@dataclasses.dataclass(kw_only=True)
+class TokenUsage:
+    """Token usage metrics from one or more LLM inference calls.
+
+    A count is None when the engine did not report it. `total_tokens` sums the counts
+    that were reported.
+    """
+
+    input_tokens: Optional[int] = None
+    output_tokens: Optional[int] = None
+    total_tokens: Optional[int] = None
+
+    def __post_init__(self) -> None:
+        # Derive the total when a caller reports only the parts.
+        if self.total_tokens is None and not (
+            self.input_tokens is None and self.output_tokens is None
+        ):
+            self.total_tokens = (self.input_tokens or 0) + (self.output_tokens or 0)
+
+    def __add__(self, other: "TokenUsage") -> "TokenUsage":
+        def _add(left: Optional[int], right: Optional[int]) -> Optional[int]:
+            if left is None and right is None:
+                return None
+            return (0 if left is None else left) + (0 if right is None else right)
+
+        return TokenUsage(
+            input_tokens=_add(self.input_tokens, other.input_tokens),
+            output_tokens=_add(self.output_tokens, other.output_tokens),
+            total_tokens=_add(self.total_tokens, other.total_tokens),
+        )
+
+
+@dataclasses.dataclass(kw_only=True)
+class UsecaseInferenceMetadata:
+    """Metadata from the inference calls made for a single usecase.
+    """
+
+    token_usage: TokenUsage
+    num_calls: int
+    seed: Optional[int] = None
+    stop_reason_summary: Dict[str, int] = dataclasses.field(default_factory=dict)
+    has_thinking: bool = False
+
+
+@dataclasses.dataclass(kw_only=True)
+class InferenceMetadata:
+    """Metadata from the inference calls within a detection operation.
+
+    The top-level fields aggregate every call in the run.
+    `per_usecase` breaks the same figures down one entry per usecase.
+    """
+
+    token_usage: TokenUsage
+    inference_engine: str
+    model: str
+    num_calls: int
+    seed: Optional[int] = None
+    stop_reason_summary: Dict[str, int] = dataclasses.field(default_factory=dict)
+    has_thinking: bool = False
+    per_usecase: List[UsecaseInferenceMetadata] = dataclasses.field(
+        default_factory=list
+    )

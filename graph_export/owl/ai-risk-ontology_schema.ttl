@@ -20,80 +20,104 @@
 nexus:Container a owl:Class ;
     rdfs:label "Container" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Obligation ;
-            owl:onProperty nexus:obligations ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:stakeholders ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:LargeLanguageModel ;
-            owl:onProperty nexus:aimodels ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:riskincidents ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:aimodels ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Entry ;
-            owl:onProperty nexus:entries ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Policy ;
-            owl:onProperty nexus:policies ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:benchmarkmetadatacards ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Permission ;
-            owl:onProperty nexus:permissions ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom skos:Collection ;
-            owl:onProperty nexus:groups ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:aievalresults ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <http://schema.org/Dataset> ;
-            owl:onProperty nexus:datasets ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <http://schema.org/Organization> ;
-            owl:onProperty nexus:organizations ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Stakeholder ;
-            owl:onProperty nexus:stakeholders ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:AiCapability ;
-            owl:onProperty nexus:aitasks ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Rule ;
-            owl:onProperty nexus:rules ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty nexus:documents ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:actions ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:stakeholdergroups ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Modality ;
-            owl:onProperty nexus:modalities ],
+            owl:allValuesFrom nexus:Control ;
+            owl:onProperty nexus:controls ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:benchmarkmetadatacard ;
             owl:onProperty nexus:benchmarkmetadatacards ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:llmintrinsics ],
+            owl:onProperty nexus:stakeholdergroups ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:permissions ],
+            owl:onProperty nexus:organizations ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dqv:QualityMeasurement ;
-            owl:onProperty nexus:aievalresults ],
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:aitasks ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Policy ;
+            owl:onProperty nexus:policies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Prohibition ;
+            owl:onProperty nexus:prohibitions ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:actions ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Obligation ;
+            owl:onProperty nexus:obligations ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:obligations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:LargeLanguageModel ;
+            owl:onProperty nexus:aimodels ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ai:Capability ;
+            owl:onProperty nexus:llmintrinsics ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:policies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv-risk:Incident ;
+            owl:onProperty nexus:riskincidents ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:Collection ;
+            owl:onProperty nexus:groups ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:modalities ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty nexus:taxonomies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <http://schema.org/Dataset> ;
+            owl:onProperty nexus:datasets ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:Action ;
+            owl:onProperty nexus:actions ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:adapters ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:taxonomies ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:stakeholders ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:prohibitions ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty nexus:documents ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:riskincidents ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Permission ;
+            owl:onProperty nexus:permissions ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dqv:Metric ;
+            owl:onProperty nexus:evaluations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:llmintrinsics ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:aimodels ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty nexus:vocabularies ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <http://schema.org/Organization> ;
+            owl:onProperty nexus:organizations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:entries ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:Concept ;
+            owl:onProperty nexus:concepts ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:aimodelfamilies ],
@@ -101,102 +125,78 @@ nexus:Container a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:groups ],
         [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty nexus:taxonomies ],
+            owl:allValuesFrom airo:License ;
+            owl:onProperty nexus:licenses ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:prohibitions ],
+            owl:onProperty nexus:evaluations ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:rules ],
+            owl:onProperty nexus:concepts ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:Entry ;
+            owl:onProperty nexus:entries ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:benchmarkmetadatacards ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dqv:QualityMeasurement ;
+            owl:onProperty nexus:aievalresults ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:Adapter ;
             owl:onProperty nexus:adapters ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:licenses ],
+            owl:onProperty nexus:documents ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:permissions ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Rule ;
+            owl:onProperty nexus:rules ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:AiCapability ;
             owl:onProperty nexus:aitasks ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:datasets ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:StakeholderGroup ;
             owl:onProperty nexus:stakeholdergroups ],
         [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty nexus:vocabularies ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:adapters ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:controls ],
         [ a owl:Restriction ;
+            owl:allValuesFrom airo:Stakeholder ;
+            owl:onProperty nexus:stakeholders ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:datasets ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:vocabularies ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:aievalresults ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:rules ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Modality ;
             owl:onProperty nexus:modalities ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:LargeLanguageModelFamily ;
             owl:onProperty nexus:aimodelfamilies ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dpv-risk:Incident ;
-            owl:onProperty nexus:riskincidents ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom skos:Concept ;
-            owl:onProperty nexus:concepts ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:License ;
-            owl:onProperty nexus:licenses ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:organizations ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:taxonomies ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dqv:Metric ;
-            owl:onProperty nexus:evaluations ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Prohibition ;
-            owl:onProperty nexus:prohibitions ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:policies ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Action ;
-            owl:onProperty nexus:actions ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:vocabularies ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ai:Capability ;
-            owl:onProperty nexus:llmintrinsics ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:concepts ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:documents ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Control ;
-            owl:onProperty nexus:controls ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:evaluations ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:entries ] ;
+            owl:onProperty nexus:licenses ] ;
     skos:definition "An umbrella object that holds the ontology class instances" ;
     skos:inScheme nexus:ai-risk-ontology .
 
 nexus:Questionnaire a owl:Class ;
     rdfs:label "Questionnaire" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom nexus:Question ;
             owl:onProperty nexus:isComposedOf ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Question ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:isComposedOf ],
         dqv:Metric ;
     skos:definition "A questionnaire groups questions" ;
@@ -328,14 +328,14 @@ pso:under-review a skos:Concept ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:value ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:value ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:evidence ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:evidence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:evidence ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:value ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:evidence ] ;
@@ -489,10 +489,10 @@ pso:under-review a skos:Concept ;
 nexus:Question a owl:Class ;
     rdfs:label "Question" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 1 ;
             owl:onProperty nexus:text ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:text ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
@@ -504,22 +504,22 @@ nexus:Question a owl:Class ;
 nexus:SlotCondition a owl:Class ;
     rdfs:label "SlotCondition" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:slot_name ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:slot_name ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:equals_string ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:slot_name ],
+            owl:onProperty nexus:equals_string ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:equals_string ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:slot_name ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:slot_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:equals_string ] ;
     skos:inScheme nexus:common .
 
@@ -602,10 +602,10 @@ skos:relatedMatch a owl:ObjectProperty ;
 nexus:AiAgent a owl:Class ;
     rdfs:label "AiAgent" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom owl:Thing ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:isProvidedBy ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom owl:Thing ;
             owl:onProperty nexus:isProvidedBy ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
@@ -620,24 +620,6 @@ nexus:AiModel a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:architecture ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dqv:QualityMeasurement ;
-            owl:onProperty dqv:hasQualityMeasurement ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:RiskControl ;
-            owl:onProperty airo:hasRiskControl ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:integer ;
-                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
-            owl:onProperty nexus:power_consumption_w ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:integer ;
-                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
-            owl:onProperty nexus:gpu_hours ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:carbon_emitted ],
         [ a owl:Restriction ;
@@ -646,21 +628,24 @@ nexus:AiModel a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dqv:hasQualityMeasurement ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
+            owl:onProperty nexus:power_consumption_w ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:architecture ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasRiskControl ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:carbon_emitted ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
             owl:onProperty nexus:gpu_hours ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:power_consumption_w ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a rdfs:Datatype ;
                     owl:intersectionOf ( xsd:float [ a rdfs:Datatype ;
@@ -669,10 +654,25 @@ nexus:AiModel a owl:Class ;
             owl:onProperty nexus:carbon_emitted ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:gpu_hours ],
+            owl:onProperty airo:hasRiskControl ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:architecture ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:RiskControl ;
+            owl:onProperty airo:hasRiskControl ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:power_consumption_w ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:gpu_hours ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:gpu_hours ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dqv:QualityMeasurement ;
+            owl:onProperty dqv:hasQualityMeasurement ],
         nexus:BaseAi,
         airo:AIComponent ;
     skos:definition "A base AI Model class. No assumption about the type (SVM, LLM, etc.). Subclassed by model types (see LargeLanguageModel)." ;
@@ -1172,18 +1172,6 @@ adms:status a owl:ObjectProperty ;
 nexus:AiTaskTaxonomy a owl:Class ;
     rdfs:label "AiTaskTaxonomy" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/version> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <http://schema.org/version> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
             owl:allValuesFrom airo:License ;
             owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
@@ -1195,6 +1183,18 @@ nexus:AiTaskTaxonomy a owl:Class ;
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasLicense ],
         skos:ConceptScheme ;
     skos:definition "A taxonomy of AI Tasks" ;
     skos:inScheme nexus:ai_system .
@@ -1202,22 +1202,22 @@ nexus:AiTaskTaxonomy a owl:Class ;
 nexus:AttributeConditionRule a owl:Class ;
     rdfs:label "AttributeConditionRule" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:preconditions ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:preconditions ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty nexus:postconditions ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:AnonymousClassExpression ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:preconditions ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:AnonymousClassExpression ;
             owl:onProperty nexus:postconditions ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:preconditions ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:AnonymousClassExpression ;
+            owl:onProperty nexus:preconditions ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:postconditions ],
         dpv:Rule ;
     skos:inScheme nexus:common .
@@ -1226,22 +1226,10 @@ nexus:LLMQuestionPolicy a owl:Class ;
     rdfs:label "LLMQuestionPolicy" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasShortReplyType ],
+            owl:onProperty nexus:hasException ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasShortReplyType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty dpv:hasRule ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty nexus:hasRelatedRisk ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:hasReasonDenial ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasShortReplyType ],
         [ a owl:Restriction ;
             owl:allValuesFrom dpv:Rule ;
             owl:onProperty dpv:hasRule ],
@@ -1249,20 +1237,32 @@ nexus:LLMQuestionPolicy a owl:Class ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasReasonDenial ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasReasonDenial ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasShortReplyType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasException ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasShortReplyType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasException ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasException ],
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasShortReplyType ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasException ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasException ],
+            owl:onProperty dpv:hasRule ],
         dpv:Policy ;
     skos:definition "The policy guides how the language model should answer a diverse set of sensitive questions." ;
     skos:inScheme nexus:common .
@@ -1270,10 +1270,10 @@ nexus:LLMQuestionPolicy a owl:Class ;
 nexus:LargeLanguageModelFamily a owl:Class ;
     rdfs:label "LargeLanguageModelFamily" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
+            owl:minCardinality 0 ;
             owl:onProperty airo:hasDocumentation ],
         <http://schema.org/Thing> ;
     skos:definition "A large language model family is a set of models that are provided by the same AI systems provider and are built around the same architecture, but differ e.g. in the number of parameters. Examples are Meta's Llama2 family or the IBM granite models." ;
@@ -1282,17 +1282,17 @@ nexus:LargeLanguageModelFamily a owl:Class ;
 nexus:RiskControlGroup a owl:Class ;
     rdfs:label "RiskControlGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom airo:RiskControl ;
             owl:onProperty skos:member ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty skos:member ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
@@ -1304,20 +1304,17 @@ nexus:RiskControlGroup a owl:Class ;
 nexus:RiskControlGroupTaxonomy a owl:Class ;
     rdfs:label "RiskControlGroupTaxonomy" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:License ;
             owl:onProperty airo:hasLicense ],
@@ -1325,8 +1322,11 @@ nexus:RiskControlGroupTaxonomy a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
         skos:ConceptScheme ;
     skos:definition "A taxonomy of AI system related risk controls groups" ;
     skos:inScheme nexus:ai_risk .
@@ -1334,6 +1334,12 @@ nexus:RiskControlGroupTaxonomy a owl:Class ;
 nexus:RiskTaxonomy a owl:Class ;
     rdfs:label "RiskTaxonomy" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom airo:License ;
             owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
@@ -1341,19 +1347,13 @@ nexus:RiskTaxonomy a owl:Class ;
             owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/version> ],
+            owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty airo:hasLicense ],
@@ -1442,38 +1442,86 @@ nexus:evaluator_relationship a owl:DatatypeProperty ;
 nexus:everyevalairesult a owl:Class ;
     rdfs:label "EveryEvalAIResult" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasMethods ],
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasGoal ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasTasks ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasEvaluationResults ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasLanguages ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasResources ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDomains ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:evaluation_timestamp ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:evaluation_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty nexus:hasGoal ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDataType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:hasDataSource ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasLimitations ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:retrieved_timestamp ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasModelInfo ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasMetrics ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:schema_version ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasDataSize ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:hasDataSize ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:evaluation_timestamp ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:evaluation_timestamp ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasSourceMetadata ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:retrieved_timestamp ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasAudience ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasMetrics ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasLanguages ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasDataType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:schema_version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasResources ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:evaluation_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasDataFormat ],
@@ -1481,122 +1529,74 @@ nexus:everyevalairesult a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:hasSourceMetadata ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:evaluationresultrecord ;
-            owl:onProperty nexus:hasEvaluationResults ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasLimitations ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:dateTime ;
-            owl:onProperty nexus:evaluation_timestamp ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasLanguages ],
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasResources ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDataType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasEvaluationResults ],
+            owl:onProperty nexus:hasMethods ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:retrieved_timestamp ],
+            owl:onProperty nexus:evaluation_id ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:evaluation_timestamp ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasDataSize ],
+            owl:onProperty nexus:evaluation_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasTasks ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasAudience ],
+            owl:onProperty nexus:hasDataFormat ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:schema_version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:modelinfo ;
+            owl:onProperty nexus:hasModelInfo ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:hasGoal ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:retrieved_timestamp ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDomains ],
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasModelInfo ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:retrieved_timestamp ],
+            owl:onProperty nexus:hasDomains ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:sourcemetadata ;
             owl:onProperty nexus:hasSourceMetadata ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:dateTime ;
+            owl:onProperty nexus:evaluation_timestamp ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:RiskConcept ;
             owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasLanguages ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:evaluation_id ],
+            owl:onProperty nexus:hasDomains ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:schema_version ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasResources ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasModelInfo ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasDataSource ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasTasks ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:retrieved_timestamp ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasModelInfo ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasMetrics ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasSourceMetadata ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDataFormat ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDataSize ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:schema_version ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasGoal ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasMethods ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasLimitations ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:modelinfo ;
-            owl:onProperty nexus:hasModelInfo ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:evaluation_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasMethods ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasAudience ],
         [ a owl:Restriction ;
+            owl:allValuesFrom nexus:evaluationresultrecord ;
+            owl:onProperty nexus:hasEvaluationResults ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:schema_version ],
+            owl:onProperty nexus:hasDataType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasDataSize ],
         dqv:QualityMeasurement ;
     skos:definition "An evaluation result from the Every Eval Ever dataset, capturing evaluation metadata and results from the EEE_datastore." ;
     skos:exactMatch nexus:EveryEvalAIResult ;
@@ -1828,37 +1828,37 @@ nexus:metricconfig a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:min_score ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:score_type ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:lower_is_better ],
+            owl:onProperty nexus:max_score ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:max_score ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:score_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty nexus:max_score ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty nexus:min_score ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:min_score ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:boolean ;
             owl:onProperty nexus:lower_is_better ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:lower_is_better ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:lower_is_better ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:min_score ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:score_type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty nexus:max_score ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:max_score ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:score_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:max_score ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty nexus:min_score ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty nexus:score_type ],
         <http://schema.org/Thing> ;
     skos:definition "Configuration for evaluation metrics" ;
@@ -1892,23 +1892,23 @@ nexus:model_name a owl:DatatypeProperty ;
 nexus:modelinfo a owl:Class ;
     rdfs:label "ModelInfo" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:model_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:model_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:model_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:model_name ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:model_name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:model_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:model_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:model_name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:model_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:model_name ],
         <http://schema.org/Thing> ;
     skos:definition "Information about the AI model being evaluated" ;
     skos:exactMatch nexus:ModelInfo ;
@@ -1994,13 +1994,13 @@ nexus:score_type a owl:DatatypeProperty ;
 nexus:scoredetails a owl:Class ;
     rdfs:label "ScoreDetails" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom xsd:float ;
             owl:onProperty nexus:score ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:score ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:score ],
         <http://schema.org/Thing> ;
     skos:definition "Details about evaluation scores" ;
@@ -2035,41 +2035,41 @@ nexus:source_uri a owl:DatatypeProperty ;
 nexus:sourcedata a owl:Class ;
     rdfs:label "SourceData" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hf_split ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:source_type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:dataset_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hf_repo ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hf_split ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hf_split ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:source_type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:dataset_name ],
+            owl:onProperty nexus:hf_split ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hf_repo ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:source_type ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hf_split ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty nexus:source_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hf_repo ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:source_type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hf_repo ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:dataset_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:dataset_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hf_repo ],
         <http://schema.org/Thing> ;
     skos:definition "Information about the data source used in evaluation" ;
     skos:exactMatch nexus:SourceData ;
@@ -2078,20 +2078,14 @@ nexus:sourcedata a owl:Class ;
 nexus:sourcemetadata a owl:Class ;
     rdfs:label "SourceMetadata" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:evaluator_relationship ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:source_type ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:source_name ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:source_organization_name ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:source_organization_name ],
+            owl:onProperty nexus:source_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:evaluator_relationship ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:source_type ],
@@ -2099,29 +2093,35 @@ nexus:sourcemetadata a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:source_organization_url ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:source_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:evaluator_relationship ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:source_organization_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:source_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:source_organization_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:source_type ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:source_organization_url ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:source_type ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:evaluator_relationship ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:source_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:source_name ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:evaluator_relationship ],
+            owl:onProperty nexus:source_organization_name ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:anyURI ;
             owl:onProperty nexus:source_organization_url ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:source_organization_name ],
         <http://schema.org/Thing> ;
     skos:definition "Metadata about the source of an evaluation" ;
     skos:exactMatch nexus:SourceMetadata ;
@@ -2165,10 +2165,10 @@ airo:isDevelopedBy a owl:ObjectProperty ;
 dpv:Certification a owl:Class ;
     rdfs:label "Certification" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
@@ -2228,13 +2228,13 @@ nexus:AIUC1ControlApplicationCategory a owl:Class ;
 nexus:ControlActivityObligation a owl:Class ;
     rdfs:label "ControlActivityObligation" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         nexus:ControlActivity,
         dpv:Obligation ;
@@ -2245,13 +2245,13 @@ nexus:ControlActivityObligation a owl:Class ;
 nexus:ControlActivityPermission a owl:Class ;
     rdfs:label "ControlActivityPermission" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         nexus:ControlActivity,
         dpv:Permission ;
@@ -2262,13 +2262,13 @@ nexus:ControlActivityPermission a owl:Class ;
 nexus:ControlActivityProhibition a owl:Class ;
     rdfs:label "ControlActivityProhibition" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         nexus:ControlActivity,
         dpv:Prohibition ;
@@ -2279,13 +2279,13 @@ nexus:ControlActivityProhibition a owl:Class ;
 nexus:ControlActivityRecommendation a owl:Class ;
     rdfs:label "ControlActivityRecommendation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         nexus:ControlActivity,
         dpv:Recommendation ;
@@ -2296,89 +2296,89 @@ nexus:ControlActivityRecommendation a owl:Class ;
 nexus:LargeLanguageModel a owl:Class ;
     rdfs:label "LargeLanguageModel" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty nexus:requiresCapability ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:fine_tuning ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasTrainingData ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:numTrainingTokens ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:numParameters ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:fine_tuning ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
+            owl:onProperty nexus:contextWindowSize ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Modality ;
+            owl:onProperty nexus:hasInputModality ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasInputModality ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:numParameters ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:contextWindowSize ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:numTrainingTokens ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:contextWindowSize ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasOutputModality ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
+            owl:onProperty nexus:numTrainingTokens ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:supported_languages ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:supported_languages ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:fine_tuning ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Modality ;
+            owl:onProperty nexus:hasOutputModality ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a rdfs:Datatype ;
+                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
+            owl:onProperty nexus:numParameters ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <http://schema.org/Dataset> ;
             owl:onProperty airo:hasTrainingData ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:fine_tuning ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:contextWindowSize ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:numParameters ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
             owl:onProperty nexus:requiresCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:supported_languages ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:numParameters ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:integer ;
-                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
-            owl:onProperty nexus:contextWindowSize ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:LargeLanguageModelFamily ;
             owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:requiresCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:integer ;
-                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
-            owl:onProperty nexus:numParameters ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:fine_tuning ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:contextWindowSize ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasOutputModality ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasTrainingData ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:numTrainingTokens ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:fine_tuning ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Modality ;
-            owl:onProperty nexus:hasOutputModality ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Modality ;
-            owl:onProperty nexus:hasInputModality ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a rdfs:Datatype ;
-                    owl:intersectionOf ( xsd:integer [ a rdfs:Datatype ;
-                                owl:onDatatype xsd:integer ;
-                                owl:withRestrictions ( [ xsd:minInclusive 0 ] ) ] ) ] ;
-            owl:onProperty nexus:numTrainingTokens ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:numTrainingTokens ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasInputModality ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:supported_languages ],
         nexus:AiModel ;
     skos:altLabel "LLM" ;
     skos:definition "A large language model (LLM) is an AI model which supports a range of language-related tasks such as generation, summarization, classification, among others. A LLM is implemented as an artificial neural networks using a transformer architecture." ;
@@ -2387,20 +2387,20 @@ nexus:LargeLanguageModel a owl:Class ;
 nexus:RiskGroup a owl:Class ;
     rdfs:label "RiskGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom airo:Risk ;
-            owl:onProperty skos:member ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty skos:member ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Risk ;
+            owl:onProperty skos:member ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:member ],
         skos:Collection,
         airo:RiskConcept ;
     skos:definition "A group of AI system related risks that are part of a risk taxonomy." ;
@@ -2541,31 +2541,31 @@ nexus:Action a owl:Class ;
     rdfs:label "Action" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:hasAiActorTask ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Risk ;
             owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasAiActorTask ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRelatedRisk ],
+            owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasAiActorTask ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         airo:RiskControl ;
     skos:definition "Action to remediate a risk" ;
     skos:inScheme nexus:ai_risk .
@@ -2581,19 +2581,19 @@ nexus:AiTaskDomain a owl:Class ;
     rdfs:label "AiTaskDomain" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty skos:member ],
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:AiTaskGroup ;
-            owl:onProperty skos:member ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty <http://schema.org/isPartOf> ],
+            owl:minCardinality 0 ;
+            owl:onProperty skos:member ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:AiTaskGroup ;
+            owl:onProperty skos:member ],
         skos:Collection ;
     skos:definition "A grouping of AI Tasks by domain." ;
     skos:exactMatch nexus:AiTaskDomain ;
@@ -2602,14 +2602,14 @@ nexus:AiTaskDomain a owl:Class ;
 nexus:AiTaskGroup a owl:Class ;
     rdfs:label "AiTaskGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
+            owl:allValuesFrom nexus:AiTaskDomain ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:AiTaskDomain ;
-            owl:onProperty <http://schema.org/isPartOf> ],
+            owl:minCardinality 0 ;
+            owl:onProperty skos:member ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
@@ -2621,9 +2621,9 @@ nexus:AiTaskGroup a owl:Class ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty skos:member ],
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         skos:Collection ;
     skos:definition "A group of AI Tasks." ;
@@ -2633,50 +2633,50 @@ nexus:AiTaskGroup a owl:Class ;
 nexus:BaseAi a owl:Class ;
     rdfs:label "BaseAi" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:isProducedBy ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty airo:isProvidedBy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:AIProvider ;
-            owl:onProperty airo:isProvidedBy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:isProvidedBy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <http://schema.org/Organization> ;
-            owl:onProperty nexus:isProducedBy ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom airo:AiCapability ;
             owl:onProperty nexus:performsTask ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasModelCard ],
+            owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:License ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:isProducedBy ],
+            owl:onProperty airo:isProvidedBy ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasModelCard ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:AiCapability ;
+            owl:allValuesFrom <http://schema.org/Organization> ;
+            owl:onProperty nexus:isProducedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:License ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasModelCard ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:performsTask ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isProducedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:AIProvider ;
+            owl:onProperty airo:isProvidedBy ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:isProducedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty airo:isProvidedBy ],
         <http://schema.org/Thing>,
         nexus:AiModel ;
     skos:definition "Any type of AI, be it a LLM, RL agent, SVM, etc." ;
@@ -2685,37 +2685,37 @@ nexus:BaseAi a owl:Class ;
 nexus:CapabilityGroup a owl:Class ;
     rdfs:label "CapabilityGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom nexus:CapabilityDomain ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty skos:member ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:CapabilityDomain ;
+            owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom ai:Capability ;
             owl:onProperty skos:member ],
         [ a owl:Restriction ;
+            owl:allValuesFrom nexus:CapabilityDomain ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:member ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
+            owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         skos:Collection,
         nexus:CapabilityConcept ;
@@ -2725,10 +2725,10 @@ nexus:CapabilityGroup a owl:Class ;
 nexus:StakeholderGroup a owl:Class ;
     rdfs:label "StakeholderGroup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
@@ -2757,83 +2757,80 @@ nexus:requiredByTask a owl:ObjectProperty ;
 airo:AISystem a owl:Class ;
     rdfs:label "AiSystem" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom airo:Purpose ;
-            owl:onProperty airo:hasPurpose ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasEuAiSystemType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRelatedRisk ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasPurpose ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:LocalityOfUse ;
             owl:onProperty airo:isUsedWithinLocality ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:isUsedWithinLocality ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty airo:isDeployedBy ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:isComposedOf ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:isDevelopedBy ],
+            owl:allValuesFrom nexus:EuAiRiskCategory ;
+            owl:onProperty nexus:hasEuRiskCategory ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasStakeholder ],
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasEuRiskCategory ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasAISubject ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasEuAiSystemType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ai:Capability ;
-            owl:onProperty tech:hasCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Risk ;
-            owl:onProperty nexus:hasRelatedRisk ],
+            owl:allValuesFrom airo:AIDeployer ;
+            owl:onProperty airo:isDeployedBy ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Stakeholder ;
             owl:onProperty airo:hasStakeholder ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty tech:hasCapability ],
+            owl:onProperty airo:hasStakeholder ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:isAppliedWithinDomain ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:BaseAi ;
-            owl:onProperty nexus:isComposedOf ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:AIDeployer ;
-            owl:onProperty airo:isDeployedBy ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasEuRiskCategory ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:isDeployedBy ],
+            owl:allValuesFrom airo:Risk ;
+            owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty airo:isDevelopedBy ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasEuRiskCategory ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:AiSystemType ;
             owl:onProperty nexus:hasEuAiSystemType ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasEuRiskCategory ],
+            owl:onProperty airo:hasPurpose ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:AISubject ;
+            owl:onProperty airo:hasAISubject ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ai:Capability ;
+            owl:onProperty tech:hasCapability ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Purpose ;
+            owl:onProperty airo:hasPurpose ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasAISubject ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:BaseAi ;
+            owl:onProperty nexus:isComposedOf ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:isAppliedWithinDomain ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:isDevelopedBy ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:AIUser ;
             owl:onProperty airo:hasAiUser ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:EuAiRiskCategory ;
-            owl:onProperty nexus:hasEuRiskCategory ],
+            owl:minCardinality 0 ;
+            owl:onProperty tech:hasCapability ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasEuAiSystemType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty airo:isDeployedBy ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Domain ;
             owl:onProperty airo:isAppliedWithinDomain ],
@@ -2841,11 +2838,14 @@ airo:AISystem a owl:Class ;
             owl:allValuesFrom airo:AIDeveloper ;
             owl:onProperty airo:isDevelopedBy ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:AISubject ;
-            owl:onProperty airo:hasAISubject ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty airo:hasAiUser ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:isDeployedBy ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:isUsedWithinLocality ],
         nexus:BaseAi,
         nexus:Entry ;
     skos:definition "A compound AI System composed of one or more AI capablities. ChatGPT is an example of an AI system which deploys multiple GPT AI models." ;
@@ -2869,13 +2869,13 @@ airo:Purpose a owl:Class ;
 dpv:Obligation a owl:Class ;
     rdfs:label "Obligation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
         nexus:ControlActivityObligation,
         dpv:Rule ;
@@ -2889,10 +2889,10 @@ dpv:Permission a owl:Class ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
         nexus:ControlActivityPermission,
         dpv:Rule ;
@@ -2903,29 +2903,29 @@ dpv:Permission a owl:Class ;
 dpv:Policy a owl:Class ;
     rdfs:label "Policy" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:LocalityOfUse ;
-            owl:onProperty nexus:isApplicableinLocality ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:isApplicableinLocality ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:LocalityOfUse ;
+            owl:onProperty nexus:isApplicableinLocality ],
         <http://schema.org/Thing>,
         nexus:LLMQuestionPolicy ;
     skos:definition "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols." ;
@@ -2935,10 +2935,10 @@ dpv:Policy a owl:Class ;
 dpv:Principle a owl:Class ;
     rdfs:label "Principle" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
+            owl:minCardinality 0 ;
             owl:onProperty airo:hasDocumentation ],
         nexus:Entry ;
     skos:definition "A representation of values or norms that must be taken into consideration when conducting activities." ;
@@ -2951,10 +2951,10 @@ dpv:Prohibition a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         nexus:ControlActivityProhibition,
         dpv:Rule ;
@@ -2965,10 +2965,10 @@ dpv:Prohibition a owl:Class ;
 dqv:QualityMeasurement a owl:Class ;
     rdfs:label "AiEvalResult" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty dqv:isMeasurementOf ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty dqv:isMeasurementOf ],
         [ a owl:Restriction ;
             owl:allValuesFrom dqv:Metric ;
@@ -2986,19 +2986,19 @@ dqv:QualityMeasurement a owl:Class ;
             owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
+            owl:onProperty airo:isProvidedBy ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:AIProvider ;
             owl:onProperty airo:isProvidedBy ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:isProvidedBy ],
+            owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
+            owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty airo:isProvidedBy ],
@@ -3022,10 +3022,10 @@ nexus:AIUC1EvidenceCategory a owl:Class ;
 nexus:CapabilityDomain a owl:Class ;
     rdfs:label "CapabilityDomain" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom nexus:CapabilityGroup ;
             owl:onProperty nexus:hasPart ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:CapabilityGroup ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasPart ],
         skos:Collection,
         nexus:CapabilityConcept ;
@@ -3036,35 +3036,35 @@ nexus:CapabilityDomain a owl:Class ;
 nexus:Control a owl:Class ;
     rdfs:label "Control" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasExternalReference ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isApplicableinLocality ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:type ],
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:LocalityOfUse ;
+            owl:onProperty nexus:isApplicableinLocality ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:isApplicableinLocality ],
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Documentation ;
             owl:onProperty nexus:hasExternalReference ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:LocalityOfUse ;
-            owl:onProperty nexus:isApplicableinLocality ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasExternalReference ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
         <http://schema.org/Thing>,
         airo:RiskControl ;
     skos:definition "A measure that maintains and/or modifies" ;
@@ -3076,41 +3076,41 @@ nexus:author a owl:DatatypeProperty .
 nexus:evaluationresultrecord a owl:Class ;
     rdfs:label "EvaluationResultRecord" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasSourceData ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:evaluation_name ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasScoreDetails ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:hasSourceData ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:scoredetails ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:hasScoreDetails ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:sourcedata ;
             owl:onProperty nexus:hasSourceData ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:metricconfig ;
-            owl:onProperty nexus:hasMetricConfig ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasScoreDetails ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasMetricConfig ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:evaluation_name ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasMetricConfig ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:scoredetails ;
+            owl:onProperty nexus:hasScoreDetails ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:metricconfig ;
+            owl:onProperty nexus:hasMetricConfig ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasMetricConfig ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:evaluation_name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasScoreDetails ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasMetricConfig ],
+            owl:onProperty nexus:hasSourceData ],
         <http://schema.org/Thing> ;
     skos:definition "A single evaluation result record" ;
     skos:exactMatch nexus:EvaluationResultRecord ;
@@ -3179,65 +3179,65 @@ airo:isProvidedBy a owl:ObjectProperty ;
 nexus:Adapter a owl:Class ;
     rdfs:label "Adapter" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom nexus:LargeLanguageModel ;
-            owl:onProperty nexus:adaptsModel ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:AdapterType ;
-            owl:onProperty nexus:hasAdapterType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ai:Capability ;
-            owl:onProperty nexus:implementsCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ai:Capability ;
-            owl:onProperty tech:hasCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty nexus:requiresCapability ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Risk ;
             owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:License ;
-            owl:onProperty airo:hasLicense ],
+            owl:allValuesFrom ai:Capability ;
+            owl:onProperty tech:hasCapability ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:adaptsModel ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:requiresCapability ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:AdapterType ;
             owl:onProperty nexus:hasAdapterType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:LargeLanguageModel ;
+            owl:onProperty nexus:adaptsModel ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty nexus:requiresCapability ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty tech:hasCapability ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:implementsCapability ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:requiresCapability ],
+            owl:onProperty nexus:hasAdapterType ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRelatedRisk ],
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:License ;
+            owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:adaptsModel ],
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:implementsCapability ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ai:Capability ;
+            owl:onProperty nexus:implementsCapability ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         nexus:Entry,
         nexus:LargeLanguageModel ;
     skos:definition "Adapter-based methods add extra trainable parameters after the attention and fully-connected layers of a frozen pretrained model to reduce memory-usage and speed up training. The adapters are typically small but demonstrate comparable performance to a fully finetuned model and enable training larger models with fewer resources. (https://huggingface.co/docs/peft/en/conceptual_guides/adapter)" ;
@@ -3283,13 +3283,13 @@ tech:hasCapability a owl:ObjectProperty ;
     rdfs:label "AiOffice",
         "Organization" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:grants_license ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:License ;
             owl:onProperty nexus:grants_license ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:grants_license ],
         <http://schema.org/Organization>,
         <http://schema.org/Thing> ;
@@ -3327,16 +3327,16 @@ nexus:LifecycleStatus a owl:Class ;
 airo:Stakeholder a owl:Class ;
     rdfs:label "Stakeholder" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom nexus:StakeholderGroup ;
+            owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom nexus:StakeholderGroup ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
+            owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
@@ -3364,101 +3364,101 @@ dpv:hasRule a owl:ObjectProperty ;
 dpv-risk:Incident a owl:Class ;
     rdfs:label "RiskIncident" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasStatus ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasSeverity ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:author ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasImpact ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:source_uri ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasImpactOn ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Risk ;
+            owl:onProperty nexus:refersToRisk ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasLikelihood ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasLikelihood ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasStatus ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Severity ;
+            owl:onProperty nexus:hasSeverity ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:source_uri ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv-risk:Incident ;
+            owl:onProperty nexus:hasVariant ],
         [ a owl:Restriction ;
             owl:allValuesFrom dpv:Impact ;
             owl:onProperty nexus:hasImpactOn ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasImpactOn ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasSeverity ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasImpact ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Risk ;
-            owl:onProperty nexus:refersToRisk ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasVariant ],
+            owl:onProperty nexus:hasConsequence ],
         [ a owl:Restriction ;
             owl:allValuesFrom dpv:IncidentStatus ;
             owl:onProperty nexus:hasStatus ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasConsequence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Impact ;
             owl:onProperty nexus:hasImpact ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasSeverity ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasImpactOn ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Likelihood ;
-            owl:onProperty nexus:hasLikelihood ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Severity ;
-            owl:onProperty nexus:hasSeverity ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:source_uri ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:source_uri ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:refersToRisk ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasStatus ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:author ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasLikelihood ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasVariant ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasConsequence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:source_uri ],
         [ a owl:Restriction ;
             owl:allValuesFrom dpv:Consequence ;
             owl:onProperty nexus:hasConsequence ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasStatus ],
+            owl:onProperty nexus:author ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom dpv:Likelihood ;
             owl:onProperty nexus:hasLikelihood ],
         [ a owl:Restriction ;
-            owl:allValuesFrom dpv-risk:Incident ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:source_uri ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasConsequence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasImpactOn ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:author ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Impact ;
+            owl:onProperty nexus:hasImpact ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasVariant ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:author ],
+            owl:onProperty nexus:hasVariant ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:author ],
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:refersToRisk ],
         <http://schema.org/Thing>,
         airo:RiskConcept ;
     skos:definition "An event occuring or occured which is a realised or materialised risk." ;
@@ -3469,43 +3469,46 @@ nexus:Requirement a owl:Class ;
     rdfs:label "Requirement" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:isApplicableToCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:AiCapability ;
-            owl:onProperty nexus:isApplicableToCapability ],
+            owl:onProperty nexus:hasFrequency ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRequirementType ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasKeywords ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasRequirementType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasFrequency ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom dpv:Principle ;
-            owl:onProperty dpv:isPartOf ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:AIUC1ApplicationCategory ;
             owl:onProperty nexus:hasApplication ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dpv:hasRule ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRequirementType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasFrequency ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasKeywords ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isApplicableToCapability ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:AIUC1RequirementType ;
+            owl:onProperty nexus:hasRequirementType ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom dpv:Principle ;
+            owl:onProperty dpv:isPartOf ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasFrequency ],
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasRequirementType ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dpv:isPartOf ],
@@ -3514,22 +3517,19 @@ nexus:Requirement a owl:Class ;
             owl:onProperty dpv:hasRule ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dpv:hasRule ],
+            owl:onProperty nexus:hasApplication ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:AiCapability ;
+            owl:onProperty nexus:isApplicableToCapability ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:AIUC1Frequency ;
             owl:onProperty nexus:hasFrequency ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasKeywords ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:AIUC1RequirementType ;
-            owl:onProperty nexus:hasRequirementType ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasApplication ],
+            owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
@@ -3540,209 +3540,209 @@ nexus:Requirement a owl:Class ;
 nexus:benchmarkmetadatacard a owl:Class ;
     rdfs:label "BenchmarkMetadataCard" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasDataType ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:overview ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasDataSource ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasValidation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasAnnotation ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasOutOfScopeUses ],
+            owl:onProperty nexus:hasSimilarBenchmarks ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasDemographicAnalysis ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasLanguages ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasDataFormat ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasTasks ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasDataSize ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasLimitations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasConsiderationConsentProcedures ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:RiskConcept ;
             owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasInterpretation ],
+            owl:onProperty nexus:hasLimitations ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:overview ],
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasDataSource ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasCalculation ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasGoal ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDataType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasResources ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasGoal ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasMetrics ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasLimitations ],
+            owl:onProperty nexus:hasResources ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasInterpretation ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasDemographicAnalysis ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasDomains ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasDataSize ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:License ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasSimilarBenchmarks ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasAnnotation ],
+            owl:onProperty nexus:hasInterpretation ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:hasGoal ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasConsiderationPrivacyAndAnonymity ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasCalculation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDomains ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasConsiderationConsentProcedures ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasLanguages ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasValidation ],
+            owl:onProperty nexus:overview ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasDataType ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDataSource ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasAnnotation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasConsiderationComplianceWithRegulations ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasMetrics ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDataSize ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDataFormat ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:name ],
+            owl:onProperty nexus:hasBaselineResults ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasOutOfScopeUses ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasCalculation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasAudience ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasMethods ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasTasks ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasAudience ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasConsiderationConsentProcedures ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasMethods ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasResources ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasTasks ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:overview ],
+            owl:onProperty nexus:hasGoal ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty airo:hasLicense ],
+            owl:onProperty nexus:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:overview ],
         [ a owl:Restriction ;
             owl:allValuesFrom dqv:Metric ;
             owl:onProperty nexus:describesAiEval ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasBaselineResults ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasLanguages ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDemographicAnalysis ],
+            owl:onProperty nexus:hasDataFormat ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:name ],
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasOutOfScopeUses ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasTasks ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasDomains ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasAudience ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:describesAiEval ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasConsiderationComplianceWithRegulations ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasAnnotation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasLanguages ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasMethods ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasGoal ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasDataSize ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasResources ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasMetrics ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasSimilarBenchmarks ],
+            owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasSimilarBenchmarks ],
+            owl:onProperty nexus:hasConsiderationPrivacyAndAnonymity ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDomains ],
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasAudience ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasValidation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasConsiderationComplianceWithRegulations ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasDataSize ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDataSource ],
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasConsiderationPrivacyAndAnonymity ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:describesAiEval ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:License ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasInterpretation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasLimitations ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:overview ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDataFormat ],
+            owl:onProperty nexus:hasCalculation ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:hasBaselineResults ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasDataSize ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasValidation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasConsiderationPrivacyAndAnonymity ],
         <http://schema.org/Thing> ;
     skos:definition "Benchmark metadata cards offer a standardized way to document LLM benchmarks clearly and transparently. Inspired by Model Cards and Datasheets, Benchmark metadata cards help researchers and practitioners understand exactly what benchmarks test, how they relate to real-world risks, and how to interpret their results responsibly. This is an implementation of the design set out in BenchmarkCards: Large Language Model and Risk Reporting (https://doi.org/10.48550/arXiv.2410.12974)" ;
     skos:exactMatch nexus:BenchmarkMetadataCard ;
@@ -3766,77 +3766,77 @@ airo:LocalityOfUse a owl:Class ;
 airo:Risk a owl:Class ;
     rdfs:label "Risk" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:descriptor ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:tag ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:concern ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:concern ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:risk_type ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:risk_type ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:tag ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:detectsRiskConcept ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:phase ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:RiskGroup ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:concern ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:phase ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:Action ;
             owl:onProperty nexus:hasRelatedAction ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:descriptor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:risk_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:tag ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:tag ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:phase ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:descriptor ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRelatedAction ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:concern ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:phase ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:risk_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:phase ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:RiskConcept ;
             owl:onProperty nexus:detectsRiskConcept ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRelatedAction ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
+            owl:onProperty nexus:detectsRiskConcept ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:descriptor ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:tag ],
+            owl:onProperty nexus:concern ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:phase ],
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:risk_type ],
+            owl:allValuesFrom nexus:RiskGroup ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:concern ],
         nexus:Entry,
         airo:RiskConcept ;
     skos:definition "The state of uncertainty associated with an AI system, that has the potential to cause harms" ;
@@ -3847,70 +3847,70 @@ dqv:Metric a owl:Class ;
     rdfs:label "AiEval" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty nexus:bestValue ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <http://schema.org/Dataset> ;
-            owl:onProperty nexus:hasDataset ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasDataset ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasBenchmarkMetadata ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty <http://schema.org/url> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:bestValue ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:isComposedOf ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:bestValue ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:License ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Risk ;
-            owl:onProperty nexus:hasRelatedRisk ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:benchmarkmetadatacard ;
-            owl:onProperty nexus:hasBenchmarkMetadata ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRelatedRisk ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty <http://schema.org/url> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:allValuesFrom dqv:Metric ;
             owl:onProperty nexus:isComposedOf ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasTasks ],
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:bestValue ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasTasks ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Risk ;
+            owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasBenchmarkMetadata ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:License ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty <http://schema.org/url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:benchmarkmetadatacard ;
+            owl:onProperty nexus:hasBenchmarkMetadata ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:bestValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasTasks ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:bestValue ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <http://schema.org/Dataset> ;
+            owl:onProperty nexus:hasDataset ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasDataset ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty <http://schema.org/url> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isComposedOf ],
         <http://schema.org/Thing> ;
     skos:definition "An AI Evaluation, e.g. a metric, benchmark, unitxt card evaluation, a question or a combination of such entities." ;
     skos:exactMatch nexus:AiEval ;
@@ -3919,57 +3919,57 @@ dqv:Metric a owl:Class ;
 skos:Collection a owl:Class ;
     rdfs:label "Group" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:narrower ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty skos:member ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty skos:narrower ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Any ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty skos:narrower ],
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty skos:narrower ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty skos:narrower ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty skos:member ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty skos:member ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
         [ owl:unionOf ( nexus:AiTaskDomain nexus:AiTaskGroup nexus:CapabilityDomain nexus:CapabilityGroup nexus:RiskControlGroup nexus:RiskGroup nexus:StakeholderGroup ) ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:member ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty skos:narrower ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty skos:narrower ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         <http://schema.org/Thing> ;
     skos:definition "Labelled groups of concepts." ;
     skos:exactMatch nexus:Group ;
@@ -3978,10 +3978,10 @@ skos:Collection a owl:Class ;
 airo:AiCapability a owl:Class ;
     rdfs:label "AiTask" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom ai:Capability ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:requiresCapability ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom ai:Capability ;
             owl:onProperty nexus:requiresCapability ],
         nexus:Entry ;
     skos:definition "A task, such as summarization and classification, performed by an AI." ;
@@ -3996,68 +3996,68 @@ skos:member a owl:DatatypeProperty ;
 nexus:ControlActivity a owl:Class ;
     rdfs:label "ControlActivity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasRequirementType ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasTypicalEvidence ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRequirement ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasTypicalLocation ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasEvidenceCategory ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:AIUC1ControlApplicationCategory ;
-            owl:onProperty nexus:hasControlApplication ],
+            owl:allValuesFrom nexus:AIUC1EvidenceCategory ;
+            owl:onProperty nexus:hasEvidenceCategory ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:hasTypicalEvidence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasControlApplication ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRequirementType ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasTypicalLocation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasTypicalEvidence ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasControlApplication ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:hasRequirement ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Requirement ;
-            owl:onProperty nexus:hasRequirement ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom airo:AiCapability ;
             owl:onProperty nexus:isApplicableToCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:AIUC1RequirementType ;
             owl:onProperty nexus:hasRequirementType ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasRequirement ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasTypicalEvidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:AIUC1EvidenceCategory ;
-            owl:onProperty nexus:hasEvidenceCategory ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasTypicalLocation ],
         [ a owl:Restriction ;
-            owl:allValuesFrom airo:AiCapability ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasRequirementType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasTypicalLocation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:isApplicableToCapability ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:AIUC1ControlApplicationCategory ;
+            owl:onProperty nexus:hasControlApplication ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRequirementType ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasControlApplication ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:Requirement ;
+            owl:onProperty nexus:hasRequirement ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:hasTypicalEvidence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRequirement ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasControlApplication ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:hasTypicalEvidence ],
         dpv:Rule ;
     skos:definition "An obligation, permission, or prohibition for AI system assurance." ;
     skos:inScheme nexus:ai_aiuc .
@@ -4065,20 +4065,17 @@ nexus:ControlActivity a owl:Class ;
 nexus:Term a owl:Class ;
     rdfs:label "Term" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Term ;
-            owl:onProperty nexus:hasSubDefinition ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:hasSubDefinition ],
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasParentDefinition ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
+            owl:onProperty nexus:hasSubDefinition ],
         [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
@@ -4086,17 +4083,20 @@ nexus:Term a owl:Class ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty nexus:hasRelatedRisk ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Term ;
-            owl:onProperty nexus:hasParentDefinition ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:Term ;
+            owl:onProperty nexus:hasSubDefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:Term ;
+            owl:onProperty nexus:hasParentDefinition ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
         nexus:Entry ;
     skos:definition "A term and its definitions." ;
     skos:inScheme nexus:common .
@@ -4105,25 +4105,25 @@ airo:RiskControl a owl:Class ;
     rdfs:label "RiskControl" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:detectsRiskConcept ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:mitigatesRiskConcept ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:RiskConcept ;
+            owl:onProperty nexus:mitigatesRiskConcept ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:RiskConcept ;
+            owl:onProperty nexus:detectsRiskConcept ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:detectsRiskConcept ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:RiskConcept ;
-            owl:onProperty nexus:mitigatesRiskConcept ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:RiskConcept ;
-            owl:onProperty nexus:detectsRiskConcept ],
         nexus:Control,
         airo:RiskConcept ;
     skos:definition "A measure that maintains and/or modifies risk (and risk concepts)" ;
@@ -4133,13 +4133,13 @@ airo:RiskControl a owl:Class ;
 airo:License a owl:Class ;
     rdfs:label "License" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/version> ],
         <http://schema.org/Thing> ;
     skos:definition "The general notion of a license which defines terms and grants permissions to users of AI systems, datasets and software." ;
@@ -4149,23 +4149,23 @@ airo:License a owl:Class ;
 dpv:Rule a owl:Class ;
     rdfs:label "Rule" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ owl:unionOf ( nexus:AttributeConditionRule nexus:ControlActivity dpv:Obligation dpv:Permission dpv:Prohibition dpv:Recommendation nexus:Requirement ) ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dpv:hasRule ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
+        [ owl:unionOf ( nexus:AttributeConditionRule nexus:ControlActivity dpv:Obligation dpv:Permission dpv:Prohibition dpv:Recommendation nexus:Requirement ) ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
@@ -4181,18 +4181,38 @@ dpv:Rule a owl:Class ;
 nexus:Entry a owl:Class ;
     rdfs:label "Entry" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty nexus:hasExternalReference ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty nexus:implementedByAdapter ],
-        [ owl:unionOf ( nexus:Adapter airo:AISystem airo:AiCapability ai:Capability dpv:Certification airo:Domain ai:Capability airo:LocalityOfUse dpv:Principle airo:Purpose airo:Risk nexus:Term ) ],
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:requiredByTask ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:type ],
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Any ;
             owl:onProperty nexus:requiresCapability ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:implementedByAdapter ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
@@ -4201,58 +4221,38 @@ nexus:Entry a owl:Class ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
             owl:onProperty nexus:requiredByTask ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:requiresCapability ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty nexus:implementedByAdapter ],
         [ a owl:Restriction ;
             owl:allValuesFrom dpv:Rule ;
             owl:onProperty dpv:hasRule ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
+        [ owl:unionOf ( nexus:Adapter airo:AISystem airo:AiCapability ai:Capability dpv:Certification airo:Domain ai:Capability airo:LocalityOfUse dpv:Principle airo:Purpose airo:Risk nexus:Term ) ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:hasExternalReference ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty nexus:hasExternalReference ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty nexus:requiredByTask ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:implementedByAdapter ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:requiresCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty dpv:hasRule ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
         <http://schema.org/Thing> ;
     skos:definition "An entry and its definitions." ;
     skos:exactMatch nexus:Entry ;
@@ -4274,20 +4274,29 @@ ai:Capability a owl:Class ;
     rdfs:label "Capability",
         "LLMIntrinsic" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:implementedByAdapter ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty nexus:implementsCapability ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty nexus:isPartOf ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:hasRelatedRisk ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ai:Capability ;
+            owl:onProperty tech:hasCapability ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:requiredByTask ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:Adapter ;
+            owl:onProperty nexus:implementedByAdapter ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom nexus:Adapter ;
             owl:onProperty nexus:hasAdapter ],
@@ -4295,50 +4304,41 @@ ai:Capability a owl:Class ;
             owl:allValuesFrom skos:ConceptScheme ;
             owl:onProperty <http://schema.org/isPartOf> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:CapabilityGroup ;
-            owl:onProperty nexus:isPartOf ],
+            owl:allValuesFrom airo:RiskConcept ;
+            owl:onProperty nexus:hasRelatedRisk ],
         [ a owl:Restriction ;
-            owl:allValuesFrom [ owl:intersectionOf ( [ owl:unionOf ( airo:RiskConcept nexus:Term ) ] nexus:Term ) ] ;
+            owl:minCardinality 0 ;
             owl:onProperty nexus:hasRelatedTerm ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ai:Capability ;
-            owl:onProperty tech:hasCapability ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:AiCapability ;
             owl:onProperty nexus:requiredByTask ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:isPartOf ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:requiredByTask ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:hasRelatedRisk ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:hasAdapter ],
         [ a owl:Restriction ;
-            owl:allValuesFrom nexus:Adapter ;
-            owl:onProperty nexus:implementedByAdapter ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty nexus:isPartOf ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ai:Capability ;
-            owl:onProperty nexus:implementsCapability ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:RiskConcept ;
-            owl:onProperty nexus:hasRelatedRisk ],
+            owl:onProperty nexus:implementedByAdapter ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty tech:hasCapability ],
         [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty nexus:isPartOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ owl:intersectionOf ( [ owl:unionOf ( airo:RiskConcept nexus:Term ) ] nexus:Term ) ] ;
             owl:onProperty nexus:hasRelatedTerm ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:CapabilityGroup ;
+            owl:onProperty nexus:isPartOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ai:Capability ;
+            owl:onProperty nexus:implementsCapability ],
         nexus:CapabilityConcept,
         nexus:Entry ;
     skos:broadMatch tech:Capability ;
@@ -4353,7 +4353,19 @@ Capabilities are distinct from: (1) the intended purpose for which the technolog
 airo:Documentation a owl:Class ;
     rdfs:label "Documentation" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:author ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:License ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isCategorizedAs ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
@@ -4364,18 +4376,6 @@ airo:Documentation a owl:Class ;
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:author ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:author ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:License ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:isCategorizedAs ],
         <http://schema.org/Thing> ;
     skos:altLabel "ExternalReference" ;
     skos:definition "Documented information about a concept or other topic(s) of interest." ;
@@ -4385,23 +4385,23 @@ airo:Documentation a owl:Class ;
 airo:RiskConcept a owl:Class ;
     rdfs:label "RiskConcept" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom airo:RiskControl ;
-            owl:onProperty nexus:isMitigatedBy ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:isDetectedBy ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:isMitigatedBy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:RiskControl ;
-            owl:onProperty nexus:isDetectedBy ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:isUsedWithinLocality ],
-        [ a owl:Restriction ;
             owl:allValuesFrom airo:LocalityOfUse ;
             owl:onProperty airo:isUsedWithinLocality ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty airo:isUsedWithinLocality ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isDetectedBy ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isMitigatedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:RiskControl ;
+            owl:onProperty nexus:isDetectedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:RiskControl ;
+            owl:onProperty nexus:isMitigatedBy ],
         skos:Concept ;
     skos:definition "An umbrella term for referring to risk, risk source, consequence and impact." ;
     skos:exactMatch nexus:RiskConcept ;
@@ -4410,72 +4410,93 @@ airo:RiskConcept a owl:Class ;
 <http://schema.org/Thing> a owl:Class ;
     rdfs:label "Entity" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/name> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/url> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:date ;
-            owl:onProperty <http://schema.org/dateModified> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty skos:broadMatch ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty nexus:isCategorizedAs ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/dateCreated> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom nexus:LifecycleStatus ;
-            owl:onProperty adms:status ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty adms:status ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/url> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/description> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty skos:closeMatch ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/identifier> ],
-        [ owl:unionOf ( airo:AIComponent dqv:Metric dqv:QualityMeasurement airo:AILifecyclePhase nexus:BaseAi nexus:benchmarkmetadatacard skos:Concept dpv:Consequence nexus:Control <http://schema.org/Dataset> airo:Documentation nexus:Entry nexus:evaluationresultrecord skos:Collection dpv:Impact dpv:IncidentStatus airo:Input nexus:LargeLanguageModelFamily airo:License dpv:Likelihood nexus:metricconfig airo:Modality nexus:modelinfo <http://schema.org/Organization> dpv:Policy dpv-risk:Incident dpv:Rule nexus:scoredetails dpv:Severity nexus:sourcedata nexus:sourcemetadata airo:Stakeholder skos:ConceptScheme skos:ConceptScheme ) ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/name> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty skos:relatedMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty skos:exactMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty skos:narrowMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty skos:note ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/dateModified> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty <http://schema.org/url> ],
+            owl:allValuesFrom xsd:date ;
+            owl:onProperty <http://schema.org/dateModified> ],
+        [ owl:unionOf ( airo:AIComponent dqv:Metric dqv:QualityMeasurement airo:AILifecyclePhase nexus:BaseAi nexus:benchmarkmetadatacard skos:Concept dpv:Consequence nexus:Control <http://schema.org/Dataset> airo:Documentation nexus:Entry nexus:evaluationresultrecord skos:Collection dpv:Impact dpv:IncidentStatus airo:Input nexus:LargeLanguageModelFamily airo:License dpv:Likelihood nexus:metricconfig airo:Modality nexus:modelinfo <http://schema.org/Organization> dpv:Policy dpv-risk:Incident dpv:Rule nexus:scoredetails dpv:Severity nexus:sourcedata nexus:sourcemetadata airo:Stakeholder skos:ConceptScheme skos:ConceptScheme ) ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty <http://schema.org/identifier> ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:relatedMatch ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:Any ;
             owl:onProperty skos:broadMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/url> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty <http://schema.org/identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty <http://schema.org/url> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <http://schema.org/description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:isCategorizedAs ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:closeMatch ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/dateCreated> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/description> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty skos:exactMatch ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty skos:narrowMatch ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom nexus:LifecycleStatus ;
+            owl:onProperty adms:status ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/dateCreated> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:broadMatch ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <http://schema.org/name> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/name> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty skos:narrowMatch ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/identifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty nexus:isCategorizedAs ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty adms:status ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty adms:status ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Any ;
+            owl:onProperty skos:relatedMatch ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/dateModified> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:date ;
             owl:onProperty <http://schema.org/dateCreated> ],
@@ -4483,38 +4504,17 @@ airo:RiskConcept a owl:Class ;
             owl:allValuesFrom linkml:Any ;
             owl:onProperty skos:closeMatch ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty skos:narrowMatch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty <http://schema.org/identifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <http://schema.org/name> ],
+            owl:minCardinality 0 ;
+            owl:onProperty skos:note ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty adms:status ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Any ;
-            owl:onProperty skos:relatedMatch ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <http://schema.org/description> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/dateModified> ],
+            owl:onProperty <http://schema.org/url> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty skos:exactMatch ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:isCategorizedAs ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/dateCreated> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty skos:note ] ;
+            owl:onProperty <http://schema.org/name> ] ;
     skos:definition "A generic grouping for any identifiable entity." ;
     skos:exactMatch nexus:Entity ;
     skos:inScheme nexus:common .
@@ -4535,6 +4535,9 @@ skos:ConceptScheme a owl:Class ;
         "Taxonomy",
         "Vocabulary" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom airo:License ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
@@ -4543,22 +4546,37 @@ skos:ConceptScheme a owl:Class ;
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty airo:hasLicense ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty <http://schema.org/version> ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:type ],
         [ owl:unionOf ( nexus:AiTaskTaxonomy skos:ConceptScheme nexus:RiskControlGroupTaxonomy nexus:RiskTaxonomy ) ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/version> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
             owl:allValuesFrom airo:License ;
             owl:onProperty airo:hasLicense ],
@@ -4566,41 +4584,23 @@ skos:ConceptScheme a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty airo:hasDocumentation ],
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
             owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:License ;
-            owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/version> ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty airo:hasLicense ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/version> ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty airo:hasLicense ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty nexus:type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty nexus:type ],
+            owl:onProperty airo:hasLicense ],
         <http://schema.org/Thing>,
         skos:ConceptScheme ;
     skos:definition "A collection of terms, with their definitions and relationships.",
@@ -4622,23 +4622,10 @@ skos:Concept a owl:Class ;
     rdfs:label "Concept" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty dpv:hasJurisdiction ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ owl:unionOf ( nexus:Jurisdiction nexus:SupraNationalJurisdiction nexus:SubnationalJurisdiction ) ] ;
-            owl:onProperty dpv:hasJurisdiction ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom airo:Documentation ;
-            owl:onProperty airo:hasDocumentation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty <http://schema.org/isPartOf> ],
-        [ owl:unionOf ( nexus:CapabilityConcept airo:RiskConcept ) ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty nexus:type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty dpv:hasJurisdiction ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty nexus:type ],
@@ -4646,11 +4633,24 @@ skos:Concept a owl:Class ;
             owl:maxCardinality 1 ;
             owl:onProperty nexus:type ],
         [ a owl:Restriction ;
+            owl:allValuesFrom skos:ConceptScheme ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ owl:unionOf ( nexus:Jurisdiction nexus:SupraNationalJurisdiction nexus:SubnationalJurisdiction ) ] ;
+            owl:onProperty dpv:hasJurisdiction ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty <http://schema.org/isPartOf> ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty airo:hasDocumentation ],
         [ a owl:Restriction ;
-            owl:allValuesFrom skos:ConceptScheme ;
+            owl:minCardinality 0 ;
             owl:onProperty <http://schema.org/isPartOf> ],
+        [ owl:unionOf ( nexus:CapabilityConcept airo:RiskConcept ) ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom airo:Documentation ;
+            owl:onProperty airo:hasDocumentation ],
         <http://schema.org/Thing> ;
     skos:definition "A concept" ;
     skos:exactMatch nexus:Concept ;
@@ -4673,169 +4673,14 @@ skos:Concept a owl:Class ;
 nexus:type a owl:DatatypeProperty .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf nexus:ControlActivityObligation ;
+    rdfs:subClassOf nexus:ControlActivityPermission ;
     owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:ControlActivityObligation .
+    owl:someValuesFrom nexus:ControlActivityPermission .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf airo:Purpose ;
+    rdfs:subClassOf nexus:AiTaskTaxonomy ;
     owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:Purpose .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:Adapter ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:Adapter .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:AiTaskDomain ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:AiTaskDomain .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Rule ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Rule .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:Entry ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:Entry .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:RiskControlGroup ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:RiskControlGroup .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Prohibition ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Prohibition .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:Action ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:Action .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:Requirement ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:Requirement .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:AttributeConditionRule ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:AttributeConditionRule .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:RiskControlGroupTaxonomy ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:RiskControlGroupTaxonomy .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf skos:ConceptScheme ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom skos:ConceptScheme .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Impact ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Impact .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf ai:Capability ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom ai:Capability .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf skos:Concept ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom skos:Concept .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:StakeholderGroup ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:StakeholderGroup .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Policy ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Policy .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv-risk:Incident ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv-risk:Incident .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:ControlActivity ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:ControlActivity .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf ai:Capability ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom ai:Capability .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf airo:AISystem ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:AISystem .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:CapabilityConcept ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:CapabilityConcept .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Certification ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Certification .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf airo:LocalityOfUse ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:LocalityOfUse .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:ControlActivityRecommendation ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:ControlActivityRecommendation .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf airo:Domain ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:Domain .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Obligation ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Obligation .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:Control ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:Control .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf airo:RiskControl ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:RiskControl .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Permission ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Permission .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Recommendation ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Recommendation .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf skos:ConceptScheme ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom skos:ConceptScheme .
+    owl:someValuesFrom nexus:AiTaskTaxonomy .
 
 [] a owl:Restriction ;
     rdfs:subClassOf nexus:AiTaskGroup ;
@@ -4843,69 +4688,14 @@ nexus:type a owl:DatatypeProperty .
     owl:someValuesFrom nexus:AiTaskGroup .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf airo:Risk ;
+    rdfs:subClassOf airo:RiskControl ;
     owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:Risk .
+    owl:someValuesFrom airo:RiskControl .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf skos:Collection ;
+    rdfs:subClassOf dpv:Prohibition ;
     owl:onProperty nexus:type ;
-    owl:someValuesFrom skos:Collection .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:ControlActivityPermission ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:ControlActivityPermission .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:benchmarkmetadatacard ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:benchmarkmetadatacard .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:ControlActivityProhibition ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:ControlActivityProhibition .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:RiskGroup ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:RiskGroup .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:CapabilityGroup ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:CapabilityGroup .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:Term ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:Term .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf dpv:Principle ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom dpv:Principle .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:LLMQuestionPolicy ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:LLMQuestionPolicy .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf airo:AiCapability ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:AiCapability .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf airo:RiskConcept ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom airo:RiskConcept .
-
-[] a owl:Restriction ;
-    rdfs:subClassOf nexus:CapabilityDomain ;
-    owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:CapabilityDomain .
+    owl:someValuesFrom dpv:Prohibition .
 
 [] a owl:Restriction ;
     rdfs:subClassOf nexus:RiskTaxonomy ;
@@ -4913,14 +4703,224 @@ nexus:type a owl:DatatypeProperty .
     owl:someValuesFrom nexus:RiskTaxonomy .
 
 [] a owl:Restriction ;
+    rdfs:subClassOf nexus:benchmarkmetadatacard ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:benchmarkmetadatacard .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf skos:ConceptScheme ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom skos:ConceptScheme .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:CapabilityDomain ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:CapabilityDomain .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:Control ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:Control .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:Term ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:Term .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:AiTaskDomain ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:AiTaskDomain .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf ai:Capability ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom ai:Capability .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf skos:ConceptScheme ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom skos:ConceptScheme .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv:Principle ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv:Principle .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:ControlActivityObligation ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:ControlActivityObligation .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:ControlActivityRecommendation ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:ControlActivityRecommendation .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:ControlActivityProhibition ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:ControlActivityProhibition .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:RiskControlGroup ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:RiskControlGroup .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf airo:Risk ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom airo:Risk .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv:Recommendation ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv:Recommendation .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:LLMQuestionPolicy ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:LLMQuestionPolicy .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf airo:LocalityOfUse ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom airo:LocalityOfUse .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf airo:Purpose ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom airo:Purpose .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf airo:AISystem ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom airo:AISystem .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:StakeholderGroup ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:StakeholderGroup .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:RiskGroup ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:RiskGroup .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:Entry ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:Entry .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:ControlActivity ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:ControlActivity .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:Requirement ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:Requirement .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv:Policy ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv:Policy .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv:Impact ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv:Impact .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:Adapter ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:Adapter .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf airo:Domain ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom airo:Domain .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv-risk:Incident ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv-risk:Incident .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:Action ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:Action .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf skos:Collection ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom skos:Collection .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf skos:Concept ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom skos:Concept .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:CapabilityGroup ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:CapabilityGroup .
+
+[] a owl:Restriction ;
     rdfs:subClassOf nexus:AiAgent ;
     owl:onProperty nexus:type ;
     owl:someValuesFrom nexus:AiAgent .
 
 [] a owl:Restriction ;
-    rdfs:subClassOf nexus:AiTaskTaxonomy ;
+    rdfs:subClassOf dpv:Rule ;
     owl:onProperty nexus:type ;
-    owl:someValuesFrom nexus:AiTaskTaxonomy .
+    owl:someValuesFrom dpv:Rule .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:AttributeConditionRule ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:AttributeConditionRule .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv:Obligation ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv:Obligation .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:CapabilityConcept ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:CapabilityConcept .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf airo:RiskConcept ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom airo:RiskConcept .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf ai:Capability ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom ai:Capability .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf nexus:RiskControlGroupTaxonomy ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom nexus:RiskControlGroupTaxonomy .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv:Certification ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv:Certification .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf airo:AiCapability ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom airo:AiCapability .
+
+[] a owl:Restriction ;
+    rdfs:subClassOf dpv:Permission ;
+    owl:onProperty nexus:type ;
+    owl:someValuesFrom dpv:Permission .
 
 [] a owl:Restriction ;
     rdfs:subClassOf skos:ConceptScheme ;

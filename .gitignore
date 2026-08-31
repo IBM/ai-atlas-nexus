@@ -2,6 +2,11 @@
 .vscode/
 .idea/
 
+# Ignore local credentials
+.env
+.env.*
+!.env.example
+
 # Ignore venv
 v-ai-atlas-nexus
 vrisk-atlas-nexus

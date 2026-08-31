@@ -179,7 +179,7 @@ class OpenAIInferenceEngine(InferenceEngine):
 
             prediction_data = {
                 "prediction": content,
-                "input_tokens": response.usage.total_tokens,
+                "input_tokens": response.usage.prompt_tokens,
                 "output_tokens": response.usage.completion_tokens,
                 "stop_reason": response.choices[0].finish_reason,
                 "logprobs": (

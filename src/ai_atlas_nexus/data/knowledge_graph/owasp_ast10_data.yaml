@@ -1,0 +1,185 @@
+# OWASP Agentic Skills Top 10 v1.0 (2026 Edition)
+documents:
+  - id: owasp-agentic-skills-top-10-whitepaper-v1
+    name: OWASP Agentic Skills Top 10 Whitepaper (V1)
+    description: >-
+      The OWASP Agentic Skills Top 10 whitepaper documents ten security risks
+      affecting reusable AI agent skills and provides guidance for builders,
+      enterprises, marketplaces, and reviewers.
+    author: OWASP Agentic Skills Top 10 Project
+    url: https://owasp.org/www-project-agentic-skills-top-10/assets/publications/ast10-top10-whitepaper-2.pdf
+    hasLicense: license-cc-by-sa-4.0
+
+taxonomies:
+  - id: owasp-ast10
+    name: OWASP Agentic Skills Top 10
+    type: RiskTaxonomy
+    description: >-
+      The OWASP Agentic Skills Top 10 documents ten security risks in reusable
+      AI agent skills. It focuses on the skill layer, where instructions, code,
+      dependencies, metadata, distribution channels, and runtime permissions
+      combine to shape agent behavior.
+    url: https://owasp.org/www-project-agentic-skills-top-10/
+    version: 1.0 (2026 Edition)
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasLicense: license-cc-by-sa-4.0
+
+entries:
+  - id: ast01-malicious-skills
+    name: AST01 - Malicious Skills
+    description: >-
+      Threat actors publish malicious skills through public repositories and
+      skill marketplaces, and may also distribute them through community
+      forums or trojanized or impersonated agent downloads. These skills
+      appear legitimate but contain hidden payloads - credential stealers,
+      reverse shells, backdoors, or social-engineering instructions embedded
+      in SKILL.md prose. Because agent skills execute with the host agent
+      permissions, a malicious skill can gain access to API keys, SSH
+      credentials, wallet files, browser data, and shell capabilities.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast01.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: malicious-skills
+    risk_type: agentic
+
+  - id: ast02-supply-chain-compromise
+    name: AST02 - Supply Chain Compromise
+    description: >-
+      Skill registries and distribution channels lack the provenance controls
+      common in mature package ecosystems (npm, PyPI, Cargo). Attackers exploit
+      this absence through coordinated mass uploads, dependency confusion,
+      account takeover, and repository poisoning. Configuration files that
+      were once passive metadata have become active execution paths - the
+      CI/CD pipeline now includes skills as a first-class attack surface.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast02.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: supply-chain-compromise
+    risk_type: agentic
+
+  - id: ast03-over-privileged-skills
+    name: AST03 - Over-Privileged Skills
+    description: >-
+      Skills are granted broader permissions than their stated function
+      requires - either because no permission manifest system exists, or
+      because users accept all permissions without review. This creates
+      excessive blast radius: a legitimate skill with overly permissive
+      database access can be weaponized by a downstream prompt injection
+      attack to execute DROP TABLE commands it was never meant to run.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast03.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: over-privileged-skills
+    risk_type: agentic
+
+  - id: ast04-insecure-metadata
+    name: AST04 - Insecure Metadata
+    description: >-
+      A skill's metadata and definition files - name, description, author,
+      permissions, requires, risk_tier, and the YAML/JSON/Markdown they are
+      written in - are attacker-controlled inputs the loader reads with little
+      or no validation. This exposes two linked weaknesses: at the semantic
+      layer, fields can impersonate trusted brands, understate permissions, or
+      misdeclare risk tiers to deceive the installer; at the parsing layer,
+      unsafe deserialization of those same files lets an attacker embed
+      executable payloads that trigger on load, before any user action.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast04.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: insecure-metadata
+    risk_type: agentic
+
+  - id: ast05-untrusted-external-instructions
+    name: AST05 - Untrusted External Instructions
+    description: >-
+      Skills routinely reference external documentation - API references, SDK
+      guides, schemas, runbooks - pointing the agent at a URL or remote file to
+      read at runtime. In practice that content becomes part of the skill's
+      instructions: the agent loads it, trusts it as it trusts the skill, and
+      acts on it with the host agent's full permissions. Yet unlike the skill
+      package - which can be reviewed, signed, and version- or hash-pinned -
+      this referenced content is mutable, lives outside the trust boundary,
+      and has no equivalent control; it can change at any moment. It can be
+      poisoned by an attacker who owns the external source, or rewritten by
+      the skill's own author after the skill has passed review - so the skill
+      that was audited is never the skill that actually runs.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast05.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: untrusted-external-instructions
+    risk_type: agentic
+
+  - id: ast06-weak-isolation
+    name: AST06 - Weak Isolation
+    description: >-
+      Skills execute in the same security context as the host agent - with full
+      file system access, shell access, and network egress - because sandboxing
+      is either unavailable, optional, or disabled by default. This removes all
+      containment guarantees and turns every installed skill into a potential
+      full-system compromise.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast06.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: weak-isolation
+    risk_type: agentic
+
+  - id: ast07-update-drift
+    name: AST07 - Update Drift
+    description: >-
+      Skills are installed and forgotten. Without immutable pinning and
+      automated update verification, deployed skills drift out of sync with
+      known-good versions - either because patches are not applied (leaving
+      known vulnerabilities open) or because auto-update mechanisms blindly
+      apply upstream changes that may themselves be malicious.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast07.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: update-drift
+    risk_type: agentic
+
+  - id: ast08-poor-scanning
+    name: AST08 - Poor Scanning
+    description: >-
+      Traditional code-scanning tools are often insufficient for agent skills
+      because skills combine natural-language instructions with executable
+      content and metadata. This hybrid format can evade pattern matching,
+      regular-expression filters, and signature-based detection, allowing some
+      malicious skills to pass the checks deployed by current marketplaces and
+      development workflows.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast08.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: poor-scanning
+    risk_type: agentic
+
+  - id: ast09-no-governance
+    name: AST09 - No Governance
+    description: >-
+      Organizations deploying AI agents lack the inventories, policies, review
+      processes, and audit trails needed to manage skills at enterprise scale.
+      Skills are installed by individual users with no SOC visibility, no
+      approval workflow, and no revocation mechanism - creating a "shadow AI"
+      layer that security teams cannot see or control.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast09.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: no-governance
+    risk_type: agentic
+
+  - id: ast10-cross-platform-reuse
+    name: AST10 - Cross-Platform Reuse
+    description: >-
+      Skills are increasingly ported across platforms (OpenClaw → Claude Code
+      → Cursor → VS Code) without translating the security properties of
+      the source format. A skill with a permission manifest on one platform is
+      stripped of that manifest on another. Security controls that exist in one
+      ecosystem's metadata format simply do not exist in others - creating
+      exploitable gaps as skills move between platforms. Porting agentic skills
+      across platforms creates critical security issues like manifest
+      stripping, context loss, and uncontrolled execution.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast10.html
+    type: Risk
+    isDefinedByTaxonomy: owasp-ast10
+    tag: cross-platform-reuse
+    risk_type: agentic

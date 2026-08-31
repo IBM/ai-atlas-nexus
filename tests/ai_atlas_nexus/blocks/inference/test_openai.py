@@ -21,11 +21,16 @@ def _make_engine(**attrs) -> OpenAIInferenceEngine:
     return engine
 
 
-def _mock_response(content, *, total=10, completion=3, logprobs=None):
-    """Build a minimal OpenAI chat-completion response mock."""
+def _mock_response(content, *, prompt=7, completion=3, logprobs=None):
+    """Build a minimal OpenAI chat-completion response mock.
+
+    `total_tokens` is derived so it stays distinct from `prompt_tokens`; tests assert on
+    the prompt count to catch a regression back to reporting the total as input.
+    """
     mock_usage = Mock()
-    mock_usage.total_tokens = total
+    mock_usage.prompt_tokens = prompt
     mock_usage.completion_tokens = completion
+    mock_usage.total_tokens = prompt + completion
     mock_choice = Mock()
     mock_choice.message.content = content
     mock_choice.finish_reason = "stop"
@@ -153,10 +158,11 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
             model_name_or_path="gpt-4o",
             _inference_engine_type=InferenceEngineType.OPENAI,
         )
-        result = engine._prepare_chat_output(_mock_response("generated text", total=120, completion=40))
+        result = engine._prepare_chat_output(_mock_response("generated text", prompt=80, completion=40))
         self.assertIsInstance(result, TextGenerationInferenceOutput)
         self.assertEqual(result.prediction, "generated text")
-        self.assertEqual(result.input_tokens, 120)
+        # prompt_tokens, not total_tokens (which would be 120)
+        self.assertEqual(result.input_tokens, 80)
         self.assertEqual(result.output_tokens, 40)
         self.assertEqual(result.stop_reason, "stop")
         self.assertIsNone(result.logprobs)
@@ -173,7 +179,7 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
         mock_logprobs = Mock()
         mock_logprobs.content = [lp1, lp2]
         result = engine._prepare_chat_output(
-            _mock_response("foo bar", total=10, completion=2, logprobs=mock_logprobs)
+            _mock_response("foo bar", prompt=8, completion=2, logprobs=mock_logprobs)
         )
         self.assertEqual(result.logprobs["foo"], -0.5)
         self.assertEqual(result.logprobs["bar"], -1.2)
@@ -214,7 +220,7 @@ class TestOpenAIInferenceEngine(unittest.TestCase):
             _inference_engine_type=InferenceEngineType.OPENAI,
         )
         wrapped = json.dumps({"items": ["Risk A", "Risk B"]})
-        result = engine._prepare_chat_output(_mock_response(wrapped, total=20, completion=5))
+        result = engine._prepare_chat_output(_mock_response(wrapped, prompt=15, completion=5))
         self.assertEqual(result.prediction, json.dumps(["Risk A", "Risk B"]))
 
     def test_prepare_chat_output_leaves_non_envelope_objects_intact(self):

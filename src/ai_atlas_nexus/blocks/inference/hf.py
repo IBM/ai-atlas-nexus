@@ -184,7 +184,7 @@ class HFInferenceEngine(InferenceEngine):
         else:
             prediction_data = {
                 "prediction": response.choices[0].message.content,
-                "input_tokens": response.usage.total_tokens,
+                "input_tokens": response.usage.prompt_tokens,
                 "output_tokens": response.usage.completion_tokens,
                 "stop_reason": response.choices[0].finish_reason,
                 "logprobs": (

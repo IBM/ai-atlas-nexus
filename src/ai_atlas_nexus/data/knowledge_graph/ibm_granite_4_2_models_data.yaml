@@ -1,0 +1,1350 @@
+documents:
+  - id: granite-4.2-blog
+    name: "Granite 4.2 LLMs: How They're Built"
+    description: >-
+      Technical blog post describing Granite 4.2, a family of dense, decoder-only reasoning models (3B, 8B and 30B)
+      post-trained from the Granite 4.1 base models. It covers the supervised fine-tuning corpus, the multi-phase
+      multi-environment reinforcement learning stage built on GRPO, the closing preference-alignment phase, and the
+      built-in thinking, non-thinking and low-effort inference modes.
+    author: Yousaf Shah, Swanand Kadhe, Riddhiman Moulick, Ashish Sunil Agrawal
+    url: https://huggingface.co/blog/ibm-granite/granite-4-2
+    dateCreated: 2026-08-25
+
+aimodelfamilies:
+  - id: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+
+aimodels:
+  - id: granite-4.2-3b
+    name: Granite-4.2-3B
+    description: >-
+      Granite-4.2-3B is a 3B parameter long-context reasoning model post-trained from Granite-4.1-3B-Base. It performs
+      chain-of-thought reasoning inside <think> tags before answering, and supports three inference modes: full
+      thinking (the default), non-thinking, and low-effort thinking. It is aimed at reasoning, code generation, tool
+      calling, agentic workflows and multilingual dialog.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-3b"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-08-25
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    fine_tuning: >-
+      Multi-stage post-training from Granite-4.1-3B-Base. Supervised fine-tuning draws on permissively licensed public
+      datasets, synthetic reasoning, tool-calling and chain-of-thought data, agentic traces, and curated
+      human-authored data. This is followed by multi-phase, multi-environment reinforcement learning with Group
+      Relative Policy Optimization across math, code, science, instruction following, tool use, chat and
+      structured-output environments, most of which provide verifiable rewards while open-ended prompts are scored by
+      a generative reward model. A closing preference-alignment (RLHF) phase tunes helpfulness, conversational quality
+      and safety. Reinforcement learning is carried out with NeMo RL and the environments run on NeMo Gym.
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    notes:
+      - >-
+        The context window is 131072 tokens natively; the model card additionally documents a long-context extension
+        to 512K tokens.
+      - >-
+        numParameters is the exact checkpoint parameter count; the model card states the nominal size as 3B.
+      - >-
+        numTrainingTokens reflects the approximately 15T-token pretraining corpus of the Granite 4.1 base model this
+        checkpoint is post-trained from. Granite 4.2 does not publish a separate post-training token count.
+      - >-
+        Trained on an NVIDIA GB200 NVL72 cluster hosted at CoreWeave. Evaluations were run with a framework based on
+        the NeMo Evaluator SDK.
+    hasEvaluation:
+      - tau3-bench-avg-granite-4.2-3b
+      - bfcl-v4-granite-4.2-3b
+      - profbench-granite-4.2-3b
+      - aime25-granite-4.2-3b
+      - hmmt-feb25-granite-4.2-3b
+      - gpqa-granite-4.2-3b
+      - livecodebench-v6-granite-4.2-3b
+      - scicode-granite-4.2-3b
+      - mmlu-pro-granite-4.2-3b
+      - mmlu-prox-lite-granite-4.2-3b
+      - arena-hard-v2-granite-4.2-3b
+      - ifbench-prompt-granite-4.2-3b
+      - ruler-64k-granite-4.2-3b
+      - ruler-128k-granite-4.2-3b
+
+  - id: granite-4.2-8b
+    name: Granite-4.2-8B
+    description: >-
+      Granite-4.2-8B is a 8B parameter long-context reasoning model post-trained from Granite-4.1-8B-Base. It performs
+      chain-of-thought reasoning inside <think> tags before answering, and supports three inference modes: full
+      thinking (the default), non-thinking, and low-effort thinking. It is aimed at reasoning, code generation, tool
+      calling, agentic workflows and multilingual dialog.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-8b"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-08-25
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    fine_tuning: >-
+      Multi-stage post-training from Granite-4.1-8B-Base. Supervised fine-tuning draws on permissively licensed public
+      datasets, synthetic reasoning, tool-calling and chain-of-thought data, agentic traces, and curated
+      human-authored data. This is followed by multi-phase, multi-environment reinforcement learning with Group
+      Relative Policy Optimization across math, code, science, instruction following, tool use, chat and
+      structured-output environments, most of which provide verifiable rewards while open-ended prompts are scored by
+      a generative reward model. A closing preference-alignment (RLHF) phase tunes helpfulness, conversational quality
+      and safety. Reinforcement learning is carried out with NeMo RL and the environments run on NeMo Gym.
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    notes:
+      - >-
+        The context window is 131072 tokens natively; the model card additionally documents a long-context extension
+        to 512K tokens.
+      - >-
+        numParameters is the exact checkpoint parameter count; the model card states the nominal size as 8B.
+      - >-
+        numTrainingTokens reflects the approximately 15T-token pretraining corpus of the Granite 4.1 base model this
+        checkpoint is post-trained from. Granite 4.2 does not publish a separate post-training token count.
+      - >-
+        Trained on an NVIDIA GB200 NVL72 cluster hosted at CoreWeave. Evaluations were run with a framework based on
+        the NeMo Evaluator SDK.
+    hasEvaluation:
+      - swe-bench-multilingual-granite-4.2-8b
+      - swe-bench-pro-granite-4.2-8b
+      - swe-bench-verified-granite-4.2-8b
+      - terminal-bench-2.1-granite-4.2-8b
+      - tau3-bench-avg-granite-4.2-8b
+      - bfcl-v4-granite-4.2-8b
+      - profbench-granite-4.2-8b
+      - bird-bench-granite-4.2-8b
+      - gdpval-granite-4.2-8b
+      - aime25-granite-4.2-8b
+      - hmmt-feb25-granite-4.2-8b
+      - gpqa-granite-4.2-8b
+      - livecodebench-v6-granite-4.2-8b
+      - scicode-granite-4.2-8b
+      - mmlu-pro-granite-4.2-8b
+      - mmlu-prox-lite-granite-4.2-8b
+      - arena-hard-v2-granite-4.2-8b
+      - ifbench-prompt-granite-4.2-8b
+      - ruler-64k-granite-4.2-8b
+      - ruler-128k-granite-4.2-8b
+
+  - id: granite-4.2-30b
+    name: Granite-4.2-30B
+    description: >-
+      Granite-4.2-30B is a 30B parameter long-context reasoning model post-trained from Granite-4.1-30B-Base. It
+      performs chain-of-thought reasoning inside <think> tags before answering, and supports three inference modes:
+      full thinking (the default), non-thinking, and low-effort thinking. It is aimed at reasoning, code generation,
+      tool calling, agentic workflows and multilingual dialog.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-30b"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    dateCreated: 2026-08-25
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    fine_tuning: >-
+      Multi-stage post-training from Granite-4.1-30B-Base. Supervised fine-tuning draws on permissively licensed
+      public datasets, synthetic reasoning, tool-calling and chain-of-thought data, agentic traces, and curated
+      human-authored data. This is followed by multi-phase, multi-environment reinforcement learning with Group
+      Relative Policy Optimization across math, code, science, instruction following, tool use, chat and
+      structured-output environments, most of which provide verifiable rewards while open-ended prompts are scored by
+      a generative reward model. A closing preference-alignment (RLHF) phase tunes helpfulness, conversational quality
+      and safety. Reinforcement learning is carried out with NeMo RL and the environments run on NeMo Gym.
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    notes:
+      - >-
+        The context window is 131072 tokens natively; the model card additionally documents a long-context extension
+        to 512K tokens.
+      - >-
+        numParameters is the exact checkpoint parameter count; the model card states the nominal size as 30B.
+      - >-
+        numTrainingTokens reflects the approximately 15T-token pretraining corpus of the Granite 4.1 base model this
+        checkpoint is post-trained from. Granite 4.2 does not publish a separate post-training token count.
+      - >-
+        Trained on an NVIDIA GB200 NVL72 cluster hosted at CoreWeave. Evaluations were run with a framework based on
+        the NeMo Evaluator SDK.
+    hasEvaluation:
+      - swe-bench-multilingual-granite-4.2-30b
+      - swe-bench-pro-granite-4.2-30b
+      - swe-bench-verified-granite-4.2-30b
+      - terminal-bench-2.1-granite-4.2-30b
+      - tau3-bench-avg-granite-4.2-30b
+      - bfcl-v4-granite-4.2-30b
+      - profbench-granite-4.2-30b
+      - bird-bench-granite-4.2-30b
+      - gdpval-granite-4.2-30b
+      - aime25-granite-4.2-30b
+      - hmmt-feb25-granite-4.2-30b
+      - gpqa-granite-4.2-30b
+      - livecodebench-v6-granite-4.2-30b
+      - scicode-granite-4.2-30b
+      - mmlu-pro-granite-4.2-30b
+      - mmlu-prox-lite-granite-4.2-30b
+      - arena-hard-v2-granite-4.2-30b
+      - ifbench-prompt-granite-4.2-30b
+      - ruler-64k-granite-4.2-30b
+      - ruler-128k-granite-4.2-30b
+
+  - id: granite-4.2-3b-gguf
+    name: Granite-4.2-3B-GGUF
+    description: >-
+      GGUF-format conversion with multiple quantization levels, for llama.cpp-family runtimes, derived from
+      Granite-4.2-3B. The weights are quantized from the released bfloat16 checkpoint, so behaviour may differ from
+      the parent model; the published Granite 4.2 benchmark results were measured on Granite-4.2-3B rather than on
+      this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-3b-GGUF"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    dateCreated: 2026-08-12
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-3b-fp8
+    name: Granite-4.2-3B-FP8
+    description: >-
+      FP8 post-training quantization, for reduced-memory serving on FP8-capable accelerators, derived from
+      Granite-4.2-3B. The weights are quantized from the released bfloat16 checkpoint, so behaviour may differ from
+      the parent model; the published Granite 4.2 benchmark results were measured on Granite-4.2-3B rather than on
+      this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-3b-fp8"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-3b-mxfp4
+    name: Granite-4.2-3B-MXFP4
+    description: >-
+      MXFP4 (microscaling 4-bit floating point) post-training quantization, derived from Granite-4.2-3B. The weights
+      are quantized from the released bfloat16 checkpoint, so behaviour may differ from the parent model; the
+      published Granite 4.2 benchmark results were measured on Granite-4.2-3B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-3b-mxfp4"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-3b-nvfp4
+    name: Granite-4.2-3B-NVFP4
+    description: >-
+      NVFP4 (NVIDIA 4-bit floating point) post-training quantization, derived from Granite-4.2-3B. The weights are
+      quantized from the released bfloat16 checkpoint, so behaviour may differ from the parent model; the published
+      Granite 4.2 benchmark results were measured on Granite-4.2-3B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-3b-nvfp4"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-8b-gguf
+    name: Granite-4.2-8B-GGUF
+    description: >-
+      GGUF-format conversion with multiple quantization levels, for llama.cpp-family runtimes, derived from
+      Granite-4.2-8B. The weights are quantized from the released bfloat16 checkpoint, so behaviour may differ from
+      the parent model; the published Granite 4.2 benchmark results were measured on Granite-4.2-8B rather than on
+      this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-8b-GGUF"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    dateCreated: 2026-08-12
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-8b-fp8
+    name: Granite-4.2-8B-FP8
+    description: >-
+      FP8 post-training quantization, for reduced-memory serving on FP8-capable accelerators, derived from
+      Granite-4.2-8B. The weights are quantized from the released bfloat16 checkpoint, so behaviour may differ from
+      the parent model; the published Granite 4.2 benchmark results were measured on Granite-4.2-8B rather than on
+      this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-8b-fp8"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-8b-mxfp4
+    name: Granite-4.2-8B-MXFP4
+    description: >-
+      MXFP4 (microscaling 4-bit floating point) post-training quantization, derived from Granite-4.2-8B. The weights
+      are quantized from the released bfloat16 checkpoint, so behaviour may differ from the parent model; the
+      published Granite 4.2 benchmark results were measured on Granite-4.2-8B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-8b-mxfp4"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-8b-nvfp4
+    name: Granite-4.2-8B-NVFP4
+    description: >-
+      NVFP4 (NVIDIA 4-bit floating point) post-training quantization, derived from Granite-4.2-8B. The weights are
+      quantized from the released bfloat16 checkpoint, so behaviour may differ from the parent model; the published
+      Granite 4.2 benchmark results were measured on Granite-4.2-8B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-8b-nvfp4"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-30b-gguf
+    name: Granite-4.2-30B-GGUF
+    description: >-
+      GGUF-format conversion with multiple quantization levels, for llama.cpp-family runtimes, derived from
+      Granite-4.2-30B. The weights are quantized from the released bfloat16 checkpoint, so behaviour may differ from
+      the parent model; the published Granite 4.2 benchmark results were measured on Granite-4.2-30B rather than on
+      this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-30b-GGUF"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    dateCreated: 2026-08-12
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-30b-fp8
+    name: Granite-4.2-30B-FP8
+    description: >-
+      FP8 post-training quantization, for reduced-memory serving on FP8-capable accelerators, derived from
+      Granite-4.2-30B. The weights are quantized from the released bfloat16 checkpoint, so behaviour may differ from
+      the parent model; the published Granite 4.2 benchmark results were measured on Granite-4.2-30B rather than on
+      this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-30b-fp8"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-30b-mxfp4
+    name: Granite-4.2-30B-MXFP4
+    description: >-
+      MXFP4 (microscaling 4-bit floating point) post-training quantization, derived from Granite-4.2-30B. The weights
+      are quantized from the released bfloat16 checkpoint, so behaviour may differ from the parent model; the
+      published Granite 4.2 benchmark results were measured on Granite-4.2-30B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-30b-mxfp4"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+  - id: granite-4.2-30b-nvfp4
+    name: Granite-4.2-30B-NVFP4
+    description: >-
+      NVFP4 (NVIDIA 4-bit floating point) post-training quantization, derived from Granite-4.2-30B. The weights are
+      quantized from the released bfloat16 checkpoint, so behaviour may differ from the parent model; the published
+      Granite 4.2 benchmark results were measured on Granite-4.2-30B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    hasModelCard:
+      - "https://huggingface.co/ibm-granite/granite-4.2-30b-nvfp4"
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    dateCreated: 2026-08-13
+    isProvidedBy: ibm
+    isPartOf: ibm-granite
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - >-
+        Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization slot, so the link to the
+        parent checkpoint is carried by related_mappings and by the shared isPartOf: ibm-granite family membership.
+      - >-
+        No evaluation results are attached: the variant's model card publishes none, and inheriting the parent's
+        scores would misstate quantized behaviour.
+
+aievalresults:
+  # 14 Granite 4.2 3B evaluation results
+  - id: tau3-bench-avg-granite-4.2-3b
+    name: τ³-bench (AVG) result for Granite-4.2-3B
+    value: "45.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_tau3_bench
+
+  - id: bfcl-v4-granite-4.2-3b
+    name: BFCL (v4) result for Granite-4.2-3B
+    value: "52.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_bfcl_v4
+
+  - id: profbench-granite-4.2-3b
+    name: ProfBench result for Granite-4.2-3B
+    value: "32.10"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_profbench
+
+  - id: aime25-granite-4.2-3b
+    name: AIME25 result for Granite-4.2-3B
+    value: "78.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_aime25
+
+  - id: hmmt-feb25-granite-4.2-3b
+    name: HMMT Feb25 result for Granite-4.2-3B
+    value: "66.67"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_hmmt_feb25
+
+  - id: gpqa-granite-4.2-3b
+    name: GPQA result for Granite-4.2-3B
+    value: "54.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_gpqa
+
+  - id: livecodebench-v6-granite-4.2-3b
+    name: LiveCodeBench v6 result for Granite-4.2-3B
+    value: "69.71"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_livecodebench
+
+  - id: scicode-granite-4.2-3b
+    name: SciCode result for Granite-4.2-3B
+    value: "24.11"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_scicode
+
+  - id: mmlu-pro-granite-4.2-3b
+    name: MMLU-Pro result for Granite-4.2-3B
+    value: "67.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: mmlu-prox-lite-granite-4.2-3b
+    name: MMLU-ProX lite (IBM) result for Granite-4.2-3B
+    value: "27.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_mmlu_prox_lite
+
+  - id: arena-hard-v2-granite-4.2-3b
+    name: Arena-Hard-V2 result for Granite-4.2-3B
+    value: "34.96"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_arena_hard_v2
+
+  - id: ifbench-prompt-granite-4.2-3b
+    name: IFBench (prompt) result for Granite-4.2-3B
+    value: "74.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ifbench
+
+  - id: ruler-64k-granite-4.2-3b
+    name: RULER 64K result for Granite-4.2-3B
+    value: "67.52"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ruler
+
+  - id: ruler-128k-granite-4.2-3b
+    name: RULER 128K result for Granite-4.2-3B
+    value: "55.30"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ruler
+
+  # 20 Granite 4.2 8B evaluation results
+  - id: swe-bench-multilingual-granite-4.2-8b
+    name: SWE Bench Multilingual result for Granite-4.2-8B
+    value: "30.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_swe_bench_multilingual
+
+  - id: swe-bench-pro-granite-4.2-8b
+    name: SWE Bench Pro result for Granite-4.2-8B
+    value: "19.11"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_swe_bench_pro
+
+  - id: swe-bench-verified-granite-4.2-8b
+    name: SWE Bench Verified result for Granite-4.2-8B
+    value: "47.67"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_swe_bench_verified
+
+  - id: terminal-bench-2.1-granite-4.2-8b
+    name: Terminal-Bench 2.1 result for Granite-4.2-8B
+    value: "20.56"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_terminal_bench
+
+  - id: tau3-bench-avg-granite-4.2-8b
+    name: τ³-bench (AVG) result for Granite-4.2-8B
+    value: "58.06"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_tau3_bench
+
+  - id: bfcl-v4-granite-4.2-8b
+    name: BFCL (v4) result for Granite-4.2-8B
+    value: "52.39"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_bfcl_v4
+
+  - id: profbench-granite-4.2-8b
+    name: ProfBench result for Granite-4.2-8B
+    value: "41.20"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_profbench
+
+  - id: bird-bench-granite-4.2-8b
+    name: BirdBench result for Granite-4.2-8B
+    value: "41.07"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_bird_bench
+
+  - id: gdpval-granite-4.2-8b
+    name: GDPval result for Granite-4.2-8B
+    value: "1189"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_gdpval
+
+  - id: aime25-granite-4.2-8b
+    name: AIME25 result for Granite-4.2-8B
+    value: "86.67"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_aime25
+
+  - id: hmmt-feb25-granite-4.2-8b
+    name: HMMT Feb25 result for Granite-4.2-8B
+    value: "78.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_hmmt_feb25
+
+  - id: gpqa-granite-4.2-8b
+    name: GPQA result for Granite-4.2-8B
+    value: "64.14"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_gpqa
+
+  - id: livecodebench-v6-granite-4.2-8b
+    name: LiveCodeBench v6 result for Granite-4.2-8B
+    value: "73.24"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_livecodebench
+
+  - id: scicode-granite-4.2-8b
+    name: SciCode result for Granite-4.2-8B
+    value: "36.09"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_scicode
+
+  - id: mmlu-pro-granite-4.2-8b
+    name: MMLU-Pro result for Granite-4.2-8B
+    value: "74.04"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: mmlu-prox-lite-granite-4.2-8b
+    name: MMLU-ProX lite (IBM) result for Granite-4.2-8B
+    value: "61.06"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_mmlu_prox_lite
+
+  - id: arena-hard-v2-granite-4.2-8b
+    name: Arena-Hard-V2 result for Granite-4.2-8B
+    value: "65.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_arena_hard_v2
+
+  - id: ifbench-prompt-granite-4.2-8b
+    name: IFBench (prompt) result for Granite-4.2-8B
+    value: "79.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ifbench
+
+  - id: ruler-64k-granite-4.2-8b
+    name: RULER 64K result for Granite-4.2-8B
+    value: "80.99"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ruler
+
+  - id: ruler-128k-granite-4.2-8b
+    name: RULER 128K result for Granite-4.2-8B
+    value: "71.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ruler
+
+  # 20 Granite 4.2 30B evaluation results
+  - id: swe-bench-multilingual-granite-4.2-30b
+    name: SWE Bench Multilingual result for Granite-4.2-30B
+    value: "41.89"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_swe_bench_multilingual
+
+  - id: swe-bench-pro-granite-4.2-30b
+    name: SWE Bench Pro result for Granite-4.2-30B
+    value: "33.29"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_swe_bench_pro
+
+  - id: swe-bench-verified-granite-4.2-30b
+    name: SWE Bench Verified result for Granite-4.2-30B
+    value: "57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_swe_bench_verified
+
+  - id: terminal-bench-2.1-granite-4.2-30b
+    name: Terminal-Bench 2.1 result for Granite-4.2-30B
+    value: "29.24"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_terminal_bench
+
+  - id: tau3-bench-avg-granite-4.2-30b
+    name: τ³-bench (AVG) result for Granite-4.2-30B
+    value: "62.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_tau3_bench
+
+  - id: bfcl-v4-granite-4.2-30b
+    name: BFCL (v4) result for Granite-4.2-30B
+    value: "61.39"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_bfcl_v4
+
+  - id: profbench-granite-4.2-30b
+    name: ProfBench result for Granite-4.2-30B
+    value: "42.90"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_profbench
+
+  - id: bird-bench-granite-4.2-30b
+    name: BirdBench result for Granite-4.2-30B
+    value: "41.85"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_bird_bench
+
+  - id: gdpval-granite-4.2-30b
+    name: GDPval result for Granite-4.2-30B
+    value: "1225"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_gdpval
+
+  - id: aime25-granite-4.2-30b
+    name: AIME25 result for Granite-4.2-30B
+    value: "89.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_aime25
+
+  - id: hmmt-feb25-granite-4.2-30b
+    name: HMMT Feb25 result for Granite-4.2-30B
+    value: "89.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_hmmt_feb25
+
+  - id: gpqa-granite-4.2-30b
+    name: GPQA result for Granite-4.2-30B
+    value: "66.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_gpqa
+
+  - id: livecodebench-v6-granite-4.2-30b
+    name: LiveCodeBench v6 result for Granite-4.2-30B
+    value: "75.77"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_livecodebench
+
+  - id: scicode-granite-4.2-30b
+    name: SciCode result for Granite-4.2-30B
+    value: "38.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_scicode
+
+  - id: mmlu-pro-granite-4.2-30b
+    name: MMLU-Pro result for Granite-4.2-30B
+    value: "77.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_mmlu_pro
+
+  - id: mmlu-prox-lite-granite-4.2-30b
+    name: MMLU-ProX lite (IBM) result for Granite-4.2-30B
+    value: "66.64"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_mmlu_prox_lite
+
+  - id: arena-hard-v2-granite-4.2-30b
+    name: Arena-Hard-V2 result for Granite-4.2-30B
+    value: "67.93"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_arena_hard_v2
+
+  - id: ifbench-prompt-granite-4.2-30b
+    name: IFBench (prompt) result for Granite-4.2-30B
+    value: "77.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ifbench
+
+  - id: ruler-64k-granite-4.2-30b
+    name: RULER 64K result for Granite-4.2-30B
+    value: "89.96"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ruler
+
+  - id: ruler-128k-granite-4.2-30b
+    name: RULER 128K result for Granite-4.2-30B
+    value: "81.38"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    isResultOf: ai_eval_ruler

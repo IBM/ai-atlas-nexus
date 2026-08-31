@@ -1,0 +1,458 @@
+documents:
+  - id: https://arxiv.org/abs/2310.06770
+    name: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    description: >-
+      Introduces SWE-bench, an evaluation framework of real GitHub issues and their pull requests drawn from popular
+      Python repositories, in which a model must edit a codebase so that the repository's own tests pass.
+    url: "https://arxiv.org/abs/2310.06770"
+    dateCreated: 2023-10-10
+  - id: https://arxiv.org/abs/2510.18941
+    name: "ProfBench: Multi-Domain Rubrics requiring Professional Knowledge to Answer and Judge"
+    description: >-
+      Introduces ProfBench, a benchmark of professional-level tasks across physics, chemistry, finance and consulting,
+      scored against expert-authored rubrics by an LLM judge.
+    url: "https://arxiv.org/abs/2510.18941"
+    dateCreated: 2025-10-21
+  - id: https://arxiv.org/abs/2305.03111
+    name: Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale Database Grounded Text-to-SQLs
+    description: >-
+      Introduces BIRD, a large-scale text-to-SQL benchmark grounded in 95 real databases spanning 37 professional
+      domains, emphasising dirty values, external knowledge and SQL execution efficiency.
+    url: "https://arxiv.org/abs/2305.03111"
+    dateCreated: 2023-05-04
+  - id: https://arxiv.org/abs/2605.00674
+    name: "Beyond Benchmarks: MathArena as an Evaluation Platform for Mathematics with LLMs"
+    description: >-
+      Describes MathArena, an evaluation platform that scores language models on mathematics competitions such as AIME
+      and HMMT immediately after they take place, so the problems are uncontaminated at evaluation time.
+    url: "https://arxiv.org/abs/2605.00674"
+    dateCreated: 2026-05-01
+  - id: https://arxiv.org/abs/2403.07974
+    name: "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code"
+    description: >-
+      Introduces LiveCodeBench, a continuously updated code benchmark that collects new competitive-programming
+      problems over time so that evaluation stays free of training-data contamination.
+    url: "https://arxiv.org/abs/2403.07974"
+    dateCreated: 2024-03-12
+  - id: https://arxiv.org/abs/2407.13168
+    name: "SciCode: A Research Coding Benchmark Curated by Scientists"
+    description: >-
+      Introduces SciCode, a benchmark of scientific research coding problems decomposed into subproblems by working
+      scientists across mathematics, physics, chemistry, biology and materials science.
+    url: "https://arxiv.org/abs/2407.13168"
+    dateCreated: 2024-07-18
+  - id: https://arxiv.org/abs/2503.10497
+    name: "MMLU-ProX: A Multilingual Benchmark for Advanced Large Language Model Evaluation"
+    description: >-
+      Introduces MMLU-ProX, a multilingual extension of MMLU-Pro that carries the reasoning-focused question set into
+      many typologically diverse languages through expert-verified translation.
+    url: "https://arxiv.org/abs/2503.10497"
+    dateCreated: 2025-03-13
+  - id: https://arxiv.org/abs/2507.02833
+    name: Generalizing Verifiable Instruction Following
+    description: >-
+      Introduces IFBench, a benchmark of held-out, programmatically verifiable output constraints designed to measure
+      whether instruction-following generalizes beyond the constraint types seen during training.
+    url: "https://arxiv.org/abs/2507.02833"
+    dateCreated: 2025-07-03
+  - id: https://arxiv.org/abs/2404.06654
+    name: "RULER: What's the Real Context Size of Your Long-Context Language Models?"
+    description: >-
+      Introduces RULER, a synthetic long-context benchmark spanning retrieval, multi-hop tracing, aggregation and
+      question answering at configurable input lengths, used to probe effective rather than claimed context size.
+    url: "https://arxiv.org/abs/2404.06654"
+    dateCreated: 2024-04-09
+
+datasets:
+  - id: SWE-bench/SWE-bench_Multilingual
+    name: SWE-bench Multilingual
+    description: >-
+      A multilingual extension of SWE-bench: 300 task instances drawn from repositories across nine programming
+      languages, each pairing a real issue with the tests that verify its resolution.
+    url: "https://huggingface.co/datasets/SWE-bench/SWE-bench_Multilingual"
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+    hasLicense: license-mit
+  - id: ScaleAI/SWE-bench_Pro
+    name: SWE-bench Pro
+    description: >-
+      A harder, contamination-resistant SWE-bench variant built from copyleft and enterprise repositories, with
+      long-horizon tasks that typically require edits across multiple files.
+    url: "https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro"
+  - id: princeton-nlp/SWE-bench_Verified
+    name: SWE-bench Verified
+    description: >-
+      A 500-instance subset of SWE-bench that human annotators confirmed to be solvable and correctly specified,
+      removing under-specified problems and broken test setups from the original set.
+    url: "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified"
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+  - id: nvidia/ProfBench
+    name: ProfBench
+    description: >-
+      Professional-knowledge tasks paired with expert-authored grading rubrics across physics, chemistry, finance and
+      consulting, for use with an LLM judge.
+    url: "https://huggingface.co/datasets/nvidia/ProfBench"
+    hasDocumentation:
+      - https://arxiv.org/abs/2510.18941
+  - id: openai/gdpval
+    name: GDPval
+    description: >-
+      Tasks drawn from real occupational deliverables across the sectors that contribute most to GDP, graded by
+      comparison against work produced by experienced professionals in each occupation.
+    url: "https://huggingface.co/datasets/openai/gdpval"
+  - id: MathArena/aime_2025
+    name: AIME 2025
+    description: >-
+      The problems and answers from the 2025 American Invitational Mathematics Examination, released for evaluation
+      immediately after the competition so that they are uncontaminated.
+    url: "https://huggingface.co/datasets/MathArena/aime_2025"
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: MathArena/hmmt_feb_2025
+    name: HMMT February 2025
+    description: >-
+      The problems and answers from the February 2025 Harvard-MIT Mathematics Tournament, released for evaluation
+      immediately after the competition so that they are uncontaminated.
+    url: "https://huggingface.co/datasets/MathArena/hmmt_feb_2025"
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: livecodebench/code_generation_lite
+    name: LiveCodeBench Code Generation (lite)
+    description: >-
+      The code-generation split of LiveCodeBench, published as dated releases so that a model can be scored only on
+      problems that appeared after its training cutoff.
+    url: "https://huggingface.co/datasets/livecodebench/code_generation_lite"
+    hasDocumentation:
+      - https://arxiv.org/abs/2403.07974
+  - id: SciCode1/SciCode
+    name: SciCode
+    description: >-
+      Scientific research coding problems curated by scientists, each decomposed into subproblems with reference
+      solutions and numerical test cases.
+    url: "https://huggingface.co/datasets/SciCode1/SciCode"
+    hasDocumentation:
+      - https://arxiv.org/abs/2407.13168
+    hasLicense: license-apache-2.0
+  - id: li-lab/MMLU-ProX-Lite
+    name: MMLU-ProX-Lite
+    description: >-
+      A lightweight sample of MMLU-ProX providing a fixed subset of the reasoning-focused MMLU-Pro questions in each
+      supported language, for cheaper multilingual evaluation.
+    url: "https://huggingface.co/datasets/li-lab/MMLU-ProX-Lite"
+    hasDocumentation:
+      - https://arxiv.org/abs/2503.10497
+
+evaluations:
+  - id: ai_eval_swe_bench_multilingual
+    name: SWE-bench Multilingual
+    description: >-
+      A multilingual extension of SWE-bench in which an agent must resolve a real GitHub issue by editing a repository
+      until its own tests pass. The 300 instances span nine programming languages, so the benchmark measures
+      software-engineering ability outside Python as well as within it.
+    url: "https://huggingface.co/datasets/SWE-bench/SWE-bench_Multilingual"
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+    hasDataset:
+      - SWE-bench/SWE-bench_Multilingual
+    hasTasks:
+      - code-editing
+      - software-engineering
+      - agentic-coding
+    hasImplementation:
+      - https://github.com/SWE-bench/SWE-bench
+    hasLicense: license-mit
+  - id: ai_eval_swe_bench_pro
+    name: SWE-bench Pro
+    description: >-
+      A harder, contamination-resistant variant of SWE-bench drawn from copyleft and enterprise repositories. Tasks
+      are long-horizon and usually require coordinated edits across several files, so scores are substantially lower
+      than on SWE-bench Verified.
+    url: "https://scale.com/leaderboard/swe_bench_pro_public"
+    hasDataset:
+      - ScaleAI/SWE-bench_Pro
+    hasTasks:
+      - code-editing
+      - software-engineering
+      - agentic-coding
+    hasImplementation:
+      - https://github.com/scaleapi/SWE-bench_Pro-os
+    notes:
+      - >-
+        The SWE-bench Pro technical report is published as a PDF on Scale AI's site rather than as a catalogued paper,
+        so no documentation node is referenced.
+  - id: ai_eval_swe_bench_verified
+    name: SWE-bench Verified
+    description: >-
+      The 500-instance human-validated subset of SWE-bench, filtered so that every task is solvable and correctly
+      specified. It is the most widely reported SWE-bench configuration and the standard measure of agentic
+      issue-resolution ability.
+    url: "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified"
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+    hasDataset:
+      - princeton-nlp/SWE-bench_Verified
+    hasTasks:
+      - code-editing
+      - software-engineering
+      - agentic-coding
+    hasImplementation:
+      - https://github.com/SWE-bench/SWE-bench
+      - https://www.swebench.com/
+  - id: ai_eval_terminal_bench
+    name: Terminal-Bench
+    description: >-
+      A benchmark for agents operating a real command-line shell. Each task places the agent in a containerised
+      terminal environment with an objective that is verified by scripted checks, measuring end-to-end competence at
+      multi-step system administration, build and debugging work.
+    url: "https://www.tbench.ai/"
+    hasTasks:
+      - agentic-tool-use
+      - terminal-use
+      - software-engineering
+    hasImplementation:
+      - https://www.tbench.ai/
+    notes:
+      - >-
+        Terminal-Bench is versioned and released iteratively; the specific version scored is recorded on the
+        individual evaluation results rather than in this node.
+  - id: ai_eval_tau3_bench
+    name: τ³-bench
+    description: >-
+      A conversational tool-agent benchmark in which a model acts as an agent in a simulated domain (retail, airline
+      or telecom), talking to a simulated user while calling domain APIs and respecting a written policy. Success
+      requires both correct tool use and a correct final database state.
+    url: "https://github.com/sierra-research/tau2-bench"
+    hasTasks:
+      - agentic-tool-use
+      - function-calling
+      - dialogue
+    hasImplementation:
+      - https://github.com/sierra-research/tau2-bench
+    notes:
+      - >-
+        Distributed as part of the sierra-research tau2-bench repository, which carries the τ³ task suite; the τ³
+        release does not have a separate paper of its own.
+  - id: ai_eval_bfcl_v4
+    name: BFCL v4
+    description: >-
+      Version 4 of the Berkeley Function Calling Leaderboard, which evaluates how accurately a model invokes
+      functions. Beyond the earlier single, parallel and multi-turn categories, v4 adds agentic web search, memory and
+      format-sensitivity evaluation.
+    url: "https://gorilla.cs.berkeley.edu/leaderboard.html"
+    hasDataset:
+      - gorilla-llm/Berkeley-Function-Calling-Leaderboard
+    hasTasks:
+      - function-calling
+      - agentic-tool-use
+    hasImplementation:
+      - https://github.com/ShishirPatil/gorilla
+    hasLicense: license-apache-2.0
+    notes:
+      - >-
+        Scores are not comparable with ai_eval_bfcl_v3: v4 changes both the category mix and the scoring.
+  - id: ai_eval_profbench
+    name: ProfBench
+    description: >-
+      A benchmark of professional-level tasks in physics, chemistry, finance and consulting, each graded against an
+      expert-authored rubric by an LLM judge. It measures whether a model can produce work that meets the standards of
+      a domain professional rather than merely answering a question correctly.
+    url: "https://huggingface.co/datasets/nvidia/ProfBench"
+    hasDocumentation:
+      - https://arxiv.org/abs/2510.18941
+    hasDataset:
+      - nvidia/ProfBench
+    hasTasks:
+      - question-answering
+      - report-generation
+      - domain-expertise
+    hasImplementation:
+      - https://huggingface.co/datasets/nvidia/ProfBench
+  - id: ai_eval_bird_bench
+    name: BIRD-Bench
+    description: >-
+      A large-scale text-to-SQL benchmark grounded in 95 real databases across 37 professional domains. Unlike earlier
+      text-to-SQL suites it retains dirty values and requires external knowledge, so a model must reason about the
+      data as well as the schema.
+    url: "https://bird-bench.github.io/"
+    hasDocumentation:
+      - https://arxiv.org/abs/2305.03111
+    hasTasks:
+      - text-to-sql
+      - question-answering
+      - code-generation
+    hasImplementation:
+      - https://bird-bench.github.io/
+    hasLicense: license-cc-by-sa-4.0
+    notes:
+      - >-
+        The Hugging Face distribution is published under date-stamped dataset repositories, so no dataset node is
+        referenced here.
+  - id: ai_eval_gdpval
+    name: GDPval
+    description: >-
+      An evaluation built from real occupational deliverables across the sectors contributing most to GDP. Model
+      output is compared against work produced by experienced professionals in the same occupation, so the reported
+      figure is a graded comparison rather than a percentage accuracy.
+    url: "https://huggingface.co/datasets/openai/gdpval"
+    hasDataset:
+      - openai/gdpval
+    hasTasks:
+      - report-generation
+      - domain-expertise
+      - agentic-tool-use
+    hasImplementation:
+      - https://huggingface.co/datasets/openai/gdpval
+    notes:
+      - >-
+        GDPval scores are not percentages. The Granite 4.2 model cards report four-digit GDPval figures without
+        stating the unit; interpret them only relative to other models scored the same way.
+  - id: ai_eval_aime25
+    name: AIME 2025
+    description: >-
+      The 2025 American Invitational Mathematics Examination, scored as exact-answer accuracy over the competition's
+      30 problems. Because the problems were released for evaluation immediately after the contest, they are
+      uncontaminated by model training data.
+    url: "https://huggingface.co/datasets/MathArena/aime_2025"
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+    hasDataset:
+      - MathArena/aime_2025
+    hasTasks:
+      - mathematical-reasoning
+      - question-answering
+    hasImplementation:
+      - https://github.com/eth-sri/matharena
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: ai_eval_hmmt_feb25
+    name: HMMT February 2025
+    description: >-
+      The February 2025 Harvard-MIT Mathematics Tournament, scored as exact-answer accuracy. Like the other MathArena
+      competition sets it was published for evaluation directly after the contest, making it an uncontaminated measure
+      of competition mathematics ability.
+    url: "https://huggingface.co/datasets/MathArena/hmmt_feb_2025"
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+    hasDataset:
+      - MathArena/hmmt_feb_2025
+    hasTasks:
+      - mathematical-reasoning
+      - question-answering
+    hasImplementation:
+      - https://github.com/eth-sri/matharena
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: ai_eval_livecodebench
+    name: LiveCodeBench
+    description: >-
+      A continuously updated code benchmark that collects new competitive-programming problems over time and scores
+      models only on problems published after their training cutoff, so contamination is avoided by construction.
+      Released in dated versions.
+    url: "https://livecodebench.github.io/"
+    hasDocumentation:
+      - https://arxiv.org/abs/2403.07974
+    hasDataset:
+      - livecodebench/code_generation_lite
+    hasTasks:
+      - code-generation
+      - mathematical-reasoning
+    hasImplementation:
+      - https://github.com/LiveCodeBench/LiveCodeBench
+    notes:
+      - >-
+        LiveCodeBench is released as dated versions; the version scored is recorded on the individual evaluation
+        results rather than in this node.
+  - id: ai_eval_scicode
+    name: SciCode
+    description: >-
+      A research coding benchmark curated by working scientists across mathematics, physics, chemistry, biology and
+      materials science. Each problem is decomposed into subproblems with reference solutions and numerical tests, so
+      it measures scientific reasoning expressed as executable code.
+    url: "https://scicode-bench.github.io/"
+    hasDocumentation:
+      - https://arxiv.org/abs/2407.13168
+    hasDataset:
+      - SciCode1/SciCode
+    hasTasks:
+      - code-generation
+      - scientific-reasoning
+    hasImplementation:
+      - https://github.com/scicode-bench/SciCode
+    hasLicense: license-apache-2.0
+  - id: ai_eval_mmlu_prox_lite
+    name: MMLU-ProX Lite
+    description: >-
+      A lightweight sample of MMLU-ProX, the multilingual extension of MMLU-Pro. It carries the reasoning-focused
+      MMLU-Pro question set into many typologically diverse languages, providing a fixed subset per language for
+      cheaper multilingual evaluation.
+    url: "https://huggingface.co/datasets/li-lab/MMLU-ProX-Lite"
+    hasDocumentation:
+      - https://arxiv.org/abs/2503.10497
+    hasDataset:
+      - li-lab/MMLU-ProX-Lite
+    hasTasks:
+      - question-answering
+      - multilingual-understanding
+      - logical-reasoning
+    hasImplementation:
+      - https://huggingface.co/datasets/li-lab/MMLU-ProX-Lite
+  - id: ai_eval_arena_hard_v2
+    name: Arena-Hard v2
+    description: >-
+      The second generation of Arena-Hard, an automatic evaluation of open-ended chat quality that scores a model's
+      win rate against a baseline as adjudicated by an LLM judge, using a refreshed and harder prompt set than the
+      original release.
+    url: "https://github.com/lmarena/arena-hard-auto"
+    hasDocumentation:
+      - arxiv.org/2406.11939
+    hasDataset:
+      - lmarena-ai/arena-hard-auto
+    hasTasks:
+      - text-generation
+      - dialogue
+      - instruction-following
+    hasImplementation:
+      - https://github.com/lmarena/arena-hard-auto
+    hasLicense: license-apache-2.0
+    notes:
+      - >-
+        Scores are not comparable with ai_eval_arenahard, which covers the original Arena-Hard prompt set.
+  - id: ai_eval_ifbench
+    name: IFBench
+    description: >-
+      A benchmark of held-out, programmatically verifiable output constraints, built to test whether instruction
+      following generalizes to constraint types a model was not trained on. Reported per prompt or per individual
+      constraint.
+    url: "https://github.com/allenai/IFBench"
+    hasDocumentation:
+      - https://arxiv.org/abs/2507.02833
+    hasTasks:
+      - instruction-following
+      - text-generation
+    hasImplementation:
+      - https://github.com/allenai/IFBench
+    notes:
+      - >-
+        Distinct from ai_eval_ifeval: IFBench uses held-out constraint types specifically chosen to be absent from
+        instruction-following training data.
+  - id: ai_eval_ruler
+    name: RULER
+    description: >-
+      A synthetic long-context benchmark spanning retrieval, multi-hop variable tracing, aggregation and long-context
+      question answering. Tasks are generated at configurable input lengths, so RULER measures a model's effective
+      context size rather than its advertised one.
+    url: "https://github.com/NVIDIA/RULER"
+    hasDocumentation:
+      - https://arxiv.org/abs/2404.06654
+    hasTasks:
+      - long-context-understanding
+      - retrieval
+      - question-answering
+    hasImplementation:
+      - https://github.com/NVIDIA/RULER
+    hasLicense: license-apache-2.0
+    notes:
+      - >-
+        RULER is evaluated at a chosen input length; the length is recorded on the individual evaluation results (for
+        example RULER 64K and RULER 128K) rather than as separate benchmark nodes.

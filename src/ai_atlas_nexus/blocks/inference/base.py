@@ -20,7 +20,7 @@ from ai_atlas_nexus.blocks.inference.params import (
     VLLMInferenceEngineParams,
     WMLInferenceEngineParams,
 )
-from ai_atlas_nexus.metadata_base import BackendType
+from ai_atlas_nexus.metadata_base import BackendType, InferenceEngineType
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
@@ -40,6 +40,7 @@ def isListEmpty(inList):
 class InferenceEngine(ABC):
 
     _backend_type = BackendType.DEFAULT
+    _inference_engine_type: InferenceEngineType
 
     def __init__(
         self,

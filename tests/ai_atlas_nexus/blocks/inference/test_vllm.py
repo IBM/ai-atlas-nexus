@@ -146,6 +146,9 @@ class TestVLLMInferenceEngine(unittest.TestCase):
 
             mock_response = Mock()
             mock_response.prompt = "test prompt"
+            # vLLM's RequestOutput always carries the prompt token ids; offline
+            # generation has no usage object, so they are the only input count.
+            mock_response.prompt_token_ids = [1, 2, 3, 4, 5]
             mock_response.outputs = [mock_output]
 
             result = engine._prepare_prediction_output(mock_response, offline=True)
@@ -153,6 +156,7 @@ class TestVLLMInferenceEngine(unittest.TestCase):
             self.assertEqual(type(result).__name__, "TextGenerationInferenceOutput")
             self.assertEqual(result.prediction, "generated text")
             self.assertEqual(result.input_text, "test prompt")
+            self.assertEqual(result.input_tokens, 5)
             self.assertEqual(result.output_tokens, 3)
             self.assertEqual(result.stop_reason, "stop")
 
@@ -175,8 +179,9 @@ class TestVLLMInferenceEngine(unittest.TestCase):
             mock_choice.logprobs = None
 
             mock_usage = Mock()
-            mock_usage.total_tokens = 100
+            mock_usage.prompt_tokens = 100
             mock_usage.completion_tokens = 50
+            mock_usage.total_tokens = 150
 
             mock_response = Mock()
             mock_response.choices = [mock_choice]

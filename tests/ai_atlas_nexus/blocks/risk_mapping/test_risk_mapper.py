@@ -121,14 +121,13 @@ class TestGenerateInference:
         m = mappings[0]
         assert m.subject_id == "tax-new:new-b"
         assert m.object_id == "tax-existing:atlas-b"
-        # graded, not the old hardcoded skos:relatedMatch
         assert m.predicate_id == "skos:closeMatch"
         assert m.mapping_justification == "semapv:LLMBasedMatching"
 
 
 @pytest.mark.slow
 class TestGenerateSemantic:
-    """generate() with SEMANTIC uses the similarity score, not the list index."""
+    """generate() with SEMANTIC uses the similarity score"""
 
     def test_similarity_score_is_a_float_not_an_index(self):
         existing = [
@@ -155,7 +154,7 @@ class TestGenerateSemantic:
         m = mappings[0]
         # matched the right existing risk
         assert m.object_id == "tax-existing:atlas-b"
-        # similarity_score is a real 0-1 similarity, not the row index
+        # similarity_score is a 0-1 similarity
         assert isinstance(m.similarity_score, float)
         assert 0.0 < m.similarity_score <= 1.0
         # a near-identical risk should be a strong match
