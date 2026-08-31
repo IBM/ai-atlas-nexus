@@ -98,9 +98,9 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
                 "region_name": "us-east-1",
             }
         )
-        with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
+        with patch("boto3.client") as mock_client:
             engine.create_client()
-            mock_boto3.client.assert_called_once_with(
+            mock_client.assert_called_once_with(
                 "bedrock-runtime",
                 aws_access_key_id="AKIA",
                 aws_secret_access_key="s3cr3t",
@@ -109,7 +109,7 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
 
     # ping
 
-    def _mock_boto3_for_ping(self, mock_boto3, model_id, sts_side_effect=None):
+    def _mock_boto3_for_ping(self, mock_client, model_id, sts_side_effect=None):
         """Configure boto3.client mock for ping(): first call = STS, second = bedrock mgmt."""
         mock_sts = Mock()
         if sts_side_effect:
@@ -122,7 +122,7 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
             "modelSummaries": [{"modelId": model_id}]
         }
 
-        mock_boto3.client.side_effect = [mock_sts, mock_bedrock_mgmt]
+        mock_client.side_effect = [mock_sts, mock_bedrock_mgmt]
 
     def test_ping_success(self):
         """Successful ping when credentials are valid and model is available."""
@@ -134,8 +134,8 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
                 "region_name": "us-east-1",
             }
         )
-        with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
-            self._mock_boto3_for_ping(mock_boto3, "openai.gpt-4o-mini")
+        with patch("boto3.client") as mock_client:
+            self._mock_boto3_for_ping(mock_client, "openai.gpt-4o-mini")
             engine.ping()  # should not raise
 
     def test_ping_invalid_credentials(self):
@@ -148,9 +148,9 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
                 "region_name": "us-east-1",
             }
         )
-        with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
+        with patch("boto3.client") as mock_client:
             self._mock_boto3_for_ping(
-                mock_boto3, "openai.gpt-4o-mini",
+                mock_client, "openai.gpt-4o-mini",
                 sts_side_effect=botocore.exceptions.ClientError(
                     {"Error": {"Code": "InvalidClientTokenId", "Message": "invalid token"}},
                     "GetCallerIdentity",
@@ -170,8 +170,8 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
                 "region_name": "us-east-1",
             }
         )
-        with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
-            self._mock_boto3_for_ping(mock_boto3, "openai.gpt-4o-mini")
+        with patch("boto3.client") as mock_client:
+            self._mock_boto3_for_ping(mock_client, "openai.gpt-4o-mini")
             with self.assertRaises(Exception) as ctx:
                 engine.ping()
         self.assertIn("openai.gpt-fake", str(ctx.exception))
@@ -187,9 +187,9 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
                 "region_name": "us-east-1",
             }
         )
-        with patch("ai_atlas_nexus.blocks.inference.bedrock.boto3") as mock_boto3:
+        with patch("boto3.client") as mock_client:
             self._mock_boto3_for_ping(
-                mock_boto3, "openai.gpt-4o-mini",
+                mock_client, "openai.gpt-4o-mini",
                 sts_side_effect=botocore.exceptions.EndpointConnectionError(
                     endpoint_url="https://sts.us-east-1.amazonaws.com"
                 ),
@@ -201,10 +201,11 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
     # _prepare_chat_output
 
     def test_prepare_chat_output_with_openai_response(self):
-        """_prepare_chat_output extracts prediction, token counts, and stop reason."""
+        """_prepare_chat_output extracts prediction, token counts, stop reason, and seed."""
         engine = _make_engine(
             model_name_or_path="openai.gpt-4o-mini",
             _inference_engine_type=InferenceEngineType.BEDROCK,
+            parameters={"seed": 42, "temperature": 0.7},
         )
         result = engine._prepare_chat_output(
             _mock_openai_response("generated text", input_tokens=120, output_tokens=40)
@@ -214,12 +215,14 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
         self.assertEqual(result.input_tokens, 120)
         self.assertEqual(result.output_tokens, 40)
         self.assertEqual(result.stop_reason, "stop")
+        self.assertEqual(result.seed, 42)
 
     def test_prepare_chat_output_unwraps_array_envelope(self):
         """_prepare_chat_output unwraps the {"items": [...]} envelope."""
         engine = _make_engine(
             model_name_or_path="openai.gpt-4o-mini",
             _inference_engine_type=InferenceEngineType.BEDROCK,
+            parameters={},
         )
         wrapped = json.dumps({"items": ["Risk A", "Risk B"]})
         result = engine._prepare_chat_output(_mock_openai_response(wrapped))
@@ -230,10 +233,21 @@ class TestAWSBedrockInferenceEngine(unittest.TestCase):
         engine = _make_engine(
             model_name_or_path="openai.gpt-4o-mini",
             _inference_engine_type=InferenceEngineType.BEDROCK,
+            parameters={},
         )
         multi_key = json.dumps({"items": ["A"], "extra": "value"})
         result = engine._prepare_chat_output(_mock_openai_response(multi_key))
         self.assertEqual(result.prediction, multi_key)
+
+    def test_prepare_chat_output_raises_on_unknown_response_format(self):
+        """_prepare_chat_output raises ValueError for unrecognised response shapes."""
+        engine = _make_engine(
+            model_name_or_path="openai.gpt-4o-mini",
+            _inference_engine_type=InferenceEngineType.BEDROCK,
+            parameters={},
+        )
+        with self.assertRaises(ValueError, msg="Unexpected response format from Bedrock"):
+            engine._prepare_chat_output({"unknown_key": "value"})
 
     # _create_schema_format
 

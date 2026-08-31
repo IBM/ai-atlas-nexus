@@ -4,8 +4,6 @@ import re
 from functools import partial
 from typing import Dict, List, Union
 
-import boto3
-import botocore.exceptions
 from dotenv import load_dotenv
 
 from ai_atlas_nexus.blocks.inference.base import InferenceEngine
@@ -90,9 +88,12 @@ class AWSBedrockInferenceEngine(InferenceEngine):
         }
 
     def create_client(self):
+        import boto3
         return boto3.client("bedrock-runtime", **self._boto3_kwargs())
 
     def ping(self):
+        import boto3
+        import botocore.exceptions
         try:
             sts = boto3.client("sts", **self._boto3_kwargs())
             sts.get_caller_identity()
@@ -232,8 +233,10 @@ class AWSBedrockInferenceEngine(InferenceEngine):
                 "input_tokens": usage.get("prompt_tokens"),
                 "output_tokens": usage.get("completion_tokens"),
                 "stop_reason": choice.get("finish_reason"),
-                "seed": self.parameters.get("seed"),
+                "seed": getattr(self, "parameters", {}).get("seed"),
             }
+        else:
+            raise ValueError(f"Unexpected response format from Bedrock: {response}")
         content = prediction_data["prediction"]
         if content:
             # If the model returned noise around the JSON (e.g. a Python list-repr or

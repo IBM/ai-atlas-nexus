@@ -244,6 +244,7 @@ class VLLMInferenceEngine(InferenceEngine):
                 ),
                 "output_tokens": len(response.outputs[0].token_ids),
                 "stop_reason": response.outputs[0].finish_reason,
+                "seed": getattr(self, "parameters", {}).get("seed"),
                 "logprobs": _extract_logprobs(response.outputs[0].logprobs),
             }
         else:
@@ -252,6 +253,7 @@ class VLLMInferenceEngine(InferenceEngine):
                 "input_tokens": response.usage.prompt_tokens,
                 "output_tokens": response.usage.completion_tokens,
                 "stop_reason": response.choices[0].finish_reason,
+                "seed": getattr(self, "parameters", {}).get("seed"),
                 "logprobs": (
                     {
                         output.token: output.logprob

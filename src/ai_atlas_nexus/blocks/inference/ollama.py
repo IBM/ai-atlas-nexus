@@ -253,6 +253,7 @@ class OllamaInferenceEngine(InferenceEngine):
                 "input_tokens": getattr(response, "prompt_eval_count", None),
                 "output_tokens": getattr(response, "eval_count", None),
                 "stop_reason": getattr(response, "done_reason", None),
+                "seed": getattr(self, "parameters", {}).get("seed"),
                 "thinking": getattr(
                     response,
                     "thinking",

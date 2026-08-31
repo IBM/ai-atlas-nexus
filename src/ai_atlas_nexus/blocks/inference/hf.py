@@ -187,6 +187,7 @@ class HFInferenceEngine(InferenceEngine):
                 "input_tokens": response.usage.prompt_tokens,
                 "output_tokens": response.usage.completion_tokens,
                 "stop_reason": response.choices[0].finish_reason,
+                "seed": getattr(self, "parameters", {}).get("seed"),
                 "logprobs": (
                     {
                         output.token: output.logprob
