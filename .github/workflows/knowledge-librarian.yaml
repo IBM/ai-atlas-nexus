@@ -1,0 +1,130 @@
+name: Knowledge Librarian
+
+# Scheduled LLM "librarian" that keeps the .lokf/ bundle in step with the repo (the
+# Karpathy rule): run the agent, validate, and open a review PR with whatever
+# changed. It NEVER pushes to the default branch and NEVER auto-merges; no changes
+# -> no PR; and it is inert until KNOWLEDGE_LIBRARIAN_CMD is set.
+on:
+  schedule:
+    - cron: "0 5 * * 1" # Mondays at 05:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write # create/push the librarian branch
+  pull-requests: write # open the review PR
+
+concurrency:
+  group: knowledge-librarian
+  cancel-in-progress: false
+
+jobs:
+  librarian:
+    name: Refresh the LOKF bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the lokf sidecar
+        id: install-lokf
+        continue-on-error: true
+        run: uv sync
+        working-directory: .lokf
+
+      # Wire this up: point the KNOWLEDGE_LIBRARIAN_CMD repo variable at your agent
+      # command (e.g. `bash .lokf/scripts/knowledge-librarian.sh`). Unset = safe no-op.
+      # The scaffolded wrapper also reads AGENT_CLI; pass it through here (switch to
+      # `secrets.AGENT_CLI` if the command embeds a token).
+      - name: Run the librarian agent
+        env:
+          KNOWLEDGE_LIBRARIAN_CMD: ${{ vars.KNOWLEDGE_LIBRARIAN_CMD }}
+          AGENT_CLI: ${{ vars.AGENT_CLI }}
+        run: |
+          set -euo pipefail
+          if [ -z "${KNOWLEDGE_LIBRARIAN_CMD:-}" ]; then
+            echo "::notice::KNOWLEDGE_LIBRARIAN_CMD is not set - skipping the agent step."
+            exit 0
+          fi
+          bash -c "${KNOWLEDGE_LIBRARIAN_CMD}"
+
+      - name: Validate the LOKF bundle
+        id: validate-lokf
+        if: steps.install-lokf.outcome == 'success'
+        continue-on-error: true
+        run: uv run lokf validate knowledge
+        working-directory: .lokf
+
+      - name: Detect changes
+        id: diff
+        run: |
+          set -euo pipefail
+          # Scope to the bundle so tool artifacts (e.g. a fresh .lokf/uv.lock from
+          # `uv sync`) never trigger a PR by themselves.
+          if [ -n "$(git status --porcelain -- .lokf/knowledge)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push the librarian branch
+        id: push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          branch="knowledge-librarian/$(date -u +%Y-%m-%d)-${GITHUB_RUN_ID}"
+          git config user.name  "knowledge-librarian[bot]"
+          git config user.email "knowledge-librarian[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add -- .lokf/knowledge
+          git commit -m "chore(lokf): scheduled librarian refresh of the knowledge bundle" \
+                     -m "Automated Karpathy-rule pass. Review required - do not auto-merge."
+          git push --set-upstream origin "$branch"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+
+      - name: Open the review PR
+        if: steps.diff.outputs.changed == 'true'
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        env:
+          BRANCH: ${{ steps.push.outputs.branch }}
+          LOKF_OUTCOME: ${{ steps.validate-lokf.outcome }}
+        with:
+          script: |
+            const { BRANCH, LOKF_OUTCOME } = process.env;
+            // On `schedule` triggers the event payload is empty, so resolve the
+            // default branch via the API rather than context.payload.repository.
+            const { data: repo } = await github.rest.repos.get(context.repo);
+            const base = repo.default_branch;
+            const check = (o) =>
+              o === 'success' ? 'pass'
+              : o === 'failure' ? 'failed (review the run log)'
+              : 'skipped';
+            const body = [
+              '## Scheduled knowledge-librarian refresh',
+              '',
+              'Automated Karpathy-rule pass: the librarian agent re-scraped the repo',
+              'and reconciled the `.lokf/` bundle. A human maintainer must review and',
+              'approve - this PR must not be auto-merged.',
+              '',
+              `- LOKF validation (\`lokf validate\`): ${check(LOKF_OUTCOME)}`,
+              '',
+              '### Reviewer checklist',
+              '- [ ] Claims trace to a source of truth.',
+              '- [ ] `type`/frontmatter and typed relations are correct.',
+              '- [ ] Validation findings above are acceptable or addressed.',
+            ].join('\n');
+            const { data: pr } = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: BRANCH,
+              base,
+              title: 'chore(lokf): scheduled librarian refresh of the knowledge bundle',
+              body,
+            });
+            console.log(`Opened PR #${pr.number}: ${pr.html_url}`);
