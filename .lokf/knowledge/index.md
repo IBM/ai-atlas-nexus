@@ -38,6 +38,7 @@ A [LOKF](https://lokf.nolan-nichols.com) knowledge base for AI Atlas Nexus. Ever
 * [Credo Unified Control Framework](references/credo-ucf.md) - unified AI governance controls.
 * [OWASP Top 10 for LLM Applications](references/owasp-llm-top10.md) - LLM application risks (v2.0).
 * [OWASP Top 10 for Agentic Applications](references/owasp-agentic-applications.md) - agentic application risks (2026).
+* [OWASP Agentic Skills Top 10](references/owasp-agentic-skills-top10.md) - security risks in reusable AI agent skills.
 * [EU AI Act](references/eu-ai-act.md) - EU regulation modelled as an ontology module.
 * [LinkML](references/linkml.md) - the modelling framework the ontology is built with.
 

@@ -7,7 +7,7 @@ genre: reference
 resource: https://github.com/IBM/ai-atlas-nexus
 generated:
   by: process:lokf-librarian
-  at: "2026-09-02T16:11:53Z"
+  at: "2026-09-02T16:35:47Z"
 references:
   - https://w3id.org/ai-atlas-nexus/knowledge/services/python-library
   - https://w3id.org/ai-atlas-nexus/knowledge/services/ran-extension-cli
@@ -37,7 +37,7 @@ This is the librarian's scrape map. Steady-state refresh runs re-verify each row
 | `src/ai_atlas_nexus/ai_risk_ontology/datamodel/`, `.../util/` | generated Pydantic classes and lifting tooling - recorded inside [ai-risk-ontology](../datasets/ai-risk-ontology.md) and [regenerate-artifacts](regenerate-artifacts.md), no concepts of their own | confirm they are still generated/driven by the `Makefile` |
 | `src/ai_atlas_nexus/data/knowledge_graph/*.yaml` + its `README.md` | [knowledge-graph](../datasets/knowledge-graph.md) (Dataset) and one Reference per headline taxonomy | walk the README's file/source table; each data file's `documentation` entries carry name + url |
 | `src/ai_atlas_nexus/data/templates/*.json` | [cot-template](../glossary/cot-template.md) (GlossaryTerm) | confirm the `*_cot.json` few-shot template files |
-| `src/ai_atlas_nexus/data/mappings/*.tsv` | SSSOM cross-taxonomy mappings - recorded inside [knowledge-graph](../datasets/knowledge-graph.md) | confirm the mappings folder and its README |
+| `src/ai_atlas_nexus/data/mappings/*.tsv` (source) and `src/ai_atlas_nexus/data/knowledge_graph/mappings/*.yaml` (lifted) | SSSOM cross-taxonomy mappings - recorded inside [knowledge-graph](../datasets/knowledge-graph.md) | confirm both folders; the YAML is generated from the TSV by `make lift_mappings_from_tsv` |
 | `graph_export/` | [graph-export](../datasets/graph-export.md) (Dataset) | confirm each format's exact export file and the README |
 | `Makefile` | [regenerate-artifacts](regenerate-artifacts.md) (Playbook) | diff `make help` target list against the playbook's bullets |
 | `docs/concepts/Contributing_a_taxonomy.md`, `CONTRIBUTING.md` | [contributing-a-taxonomy](contributing-a-taxonomy.md) (Playbook) | re-read the doc's section list |

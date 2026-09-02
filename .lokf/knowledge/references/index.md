@@ -11,5 +11,6 @@ External standards, taxonomies, and frameworks the project encodes or builds on.
 * [Credo Unified Control Framework](credo-ucf.md) - unified AI governance controls.
 * [OWASP Top 10 for LLM Applications](owasp-llm-top10.md) - LLM application risks (v2.0).
 * [OWASP Top 10 for Agentic Applications](owasp-agentic-applications.md) - agentic application risks (2026).
+* [OWASP Agentic Skills Top 10](owasp-agentic-skills-top10.md) - security risks in reusable AI agent skills.
 * [EU AI Act](eu-ai-act.md) - EU regulation modelled as an ontology module.
 * [LinkML](linkml.md) - the modelling framework the ontology is built with.
