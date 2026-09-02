@@ -55,6 +55,17 @@ URI: [nexus:AttributeConditionRule](https://w3id.org/ai-atlas-nexus/AttributeCon
 
 
 
+      AttributeConditionRule : hasLifecycleStatus
+
+
+
+
+
+        AttributeConditionRule --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       AttributeConditionRule : hasRule
 
 
@@ -102,6 +113,8 @@ URI: [nexus:AttributeConditionRule](https://w3id.org/ai-atlas-nexus/AttributeCon
         click Any href "../Any/"
 
 
+
+      AttributeConditionRule : notes
 
       AttributeConditionRule : postconditions
 
@@ -170,6 +183,8 @@ URI: [nexus:AttributeConditionRule](https://w3id.org/ai-atlas-nexus/AttributeCon
 | [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                                             | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
 | [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                                             | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| [hasLifecycleStatus](hasLifecycleStatus.md)   | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                   | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
+| [notes](notes.md)                             | \* <br/> [String](String.md)                                       | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md) |
 
 ## Identifier and Mapping Information
 
@@ -481,6 +496,36 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: AttributeConditionRule
+    domain_of:
+    - Entity
+    range: LifecycleStatus
+  notes:
+    name: notes
+    description: Free-text editorial notes, source breadcrumbs, or build-time provenance
+      that do not belong in the user-facing description. Opaque to consumers.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:note
+    alias: notes
+    owner: AttributeConditionRule
+    domain_of:
+    - Entity
+    range: string
+    recommended: false
+    multivalued: true
 
 ````
 

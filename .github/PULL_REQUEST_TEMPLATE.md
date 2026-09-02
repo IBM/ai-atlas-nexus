@@ -56,3 +56,7 @@ Signed-off-by: Your Name <email@ie.ibm.com>
 - [ ] Local git lint performed
 - [ ] Desired commit message set as PR title and description set above
 - [ ] Link to relevant GitHub issue provided
+
+## AI Assistance
+
+If you used AI tools while preparing this PR, you are still the author and responsible for understanding, verifying, and defending your submission. Please engage with reviewers personally rather than through your agent during feedback and revisions.

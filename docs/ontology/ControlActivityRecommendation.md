@@ -20,17 +20,6 @@ URI: [nexus:ControlActivityRecommendation](https://w3id.org/ai-atlas-nexus/Contr
       Recommendation <|-- ControlActivityRecommendation
         click Recommendation href "../Recommendation/"
 
-      ControlActivityRecommendation : appliesToCapability
-
-
-
-
-
-        ControlActivityRecommendation --> "*" AiTask : appliesToCapability
-        click AiTask href "../AiTask/"
-
-
-
       ControlActivityRecommendation : broad_mappings
 
 
@@ -92,6 +81,17 @@ URI: [nexus:ControlActivityRecommendation](https://w3id.org/ai-atlas-nexus/Contr
 
 
 
+      ControlActivityRecommendation : hasLifecycleStatus
+
+
+
+
+
+        ControlActivityRecommendation --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       ControlActivityRecommendation : hasRequirement
 
 
@@ -131,6 +131,17 @@ URI: [nexus:ControlActivityRecommendation](https://w3id.org/ai-atlas-nexus/Contr
 
       ControlActivityRecommendation : id
 
+      ControlActivityRecommendation : isApplicableToCapability
+
+
+
+
+
+        ControlActivityRecommendation --> "*" AiTask : isApplicableToCapability
+        click AiTask href "../AiTask/"
+
+
+
       ControlActivityRecommendation : isCategorizedAs
 
 
@@ -166,6 +177,8 @@ URI: [nexus:ControlActivityRecommendation](https://w3id.org/ai-atlas-nexus/Contr
 
 
 
+      ControlActivityRecommendation : notes
+
       ControlActivityRecommendation : related_mappings
 
 
@@ -199,30 +212,32 @@ URI: [nexus:ControlActivityRecommendation](https://w3id.org/ai-atlas-nexus/Contr
 
 ## Slots
 
-| Name                                              | Cardinality and Range                                                            | Description                                                                      | Inheritance                           |
-| ------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------- |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                                   |                                                                                  | direct                                |
-| [hasControlApplication](hasControlApplication.md) | 0..1 <br/> [AIUC1ControlApplicationCategory](AIUC1ControlApplicationCategory.md) | Which of the AIUC-1 ControlApplicationCategory this control activity (rule) b... | [ControlActivity](ControlActivity.md) |
-| [hasEvidenceCategory](hasEvidenceCategory.md)     | \* <br/> [AIUC1EvidenceCategory](AIUC1EvidenceCategory.md)                       | The evidence category, ie Technical Implementation, Operational Practices, et... | [ControlActivity](ControlActivity.md) |
-| [hasTypicalLocation](hasTypicalLocation.md)       | \* <br/> [String](String.md)                                                     | The evidence is usually found here                                               | [ControlActivity](ControlActivity.md) |
-| [appliesToCapability](appliesToCapability.md)     | \* <br/> [AiTask](AiTask.md)                                                     | This evidence only applies to AI systems with this capability                    | [ControlActivity](ControlActivity.md) |
-| [hasRequirement](hasRequirement.md)               | 0..1 <br/> [Requirement](Requirement.md)                                         | This requirement this rule belongs to                                            | [ControlActivity](ControlActivity.md) |
-| [hasRequirementType](hasRequirementType.md)       | 0..1 <br/> [AIUC1RequirementType](AIUC1RequirementType.md)                       | The requirement type of whether this is preventive, detective, etc               | [ControlActivity](ControlActivity.md) |
-| [hasTypicalEvidence](hasTypicalEvidence.md)       | 0..1 <br/> [String](String.md)                                                   | The evidence is usually found here                                               | [ControlActivity](ControlActivity.md) |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                                               | A relationship where a concept or a concept group is defined by a taxonomy       | [Rule](Rule.md)                       |
-| [hasRule](hasRule.md)                             | \* <br/> [Rule](Rule.md)                                                         | Specifying applicability or inclusion of a rule within specified context         | [Rule](Rule.md)                       |
-| [id](id.md)                                       | 1 <br/> [String](String.md)                                                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                   |
-| [name](name.md)                                   | 0..1 <br/> [String](String.md)                                                   | A text name of this instance                                                     | [Entity](Entity.md)                   |
-| [description](description.md)                     | 0..1 <br/> [String](String.md)                                                   | The description of an entity                                                     | [Entity](Entity.md)                   |
-| [url](url.md)                                     | 0..1 <br/> [Uri](Uri.md)                                                         | An optional URL associated with this instance                                    | [Entity](Entity.md)                   |
-| [dateCreated](dateCreated.md)                     | 0..1 <br/> [Date](Date.md)                                                       | The date on which the entity was created                                         | [Entity](Entity.md)                   |
-| [dateModified](dateModified.md)                   | 0..1 <br/> [Date](Date.md)                                                       | The date on which the entity was most recently modified                          | [Entity](Entity.md)                   |
-| [exact_mappings](exact_mappings.md)               | \* <br/> [Any](Any.md)                                                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)                   |
-| [close_mappings](close_mappings.md)               | \* <br/> [Any](Any.md)                                                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)                   |
-| [related_mappings](related_mappings.md)           | \* <br/> [Any](Any.md)                                                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                   |
-| [narrow_mappings](narrow_mappings.md)             | \* <br/> [Any](Any.md)                                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                   |
-| [broad_mappings](broad_mappings.md)               | \* <br/> [Any](Any.md)                                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                   |
-| [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                                                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                   |
+| Name                                                    | Cardinality and Range                                                            | Description                                                                      | Inheritance                           |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------- |
+| [type](type.md)                                         | 0..1 <br/> [String](String.md)                                                   |                                                                                  | direct                                |
+| [hasControlApplication](hasControlApplication.md)       | 0..1 <br/> [AIUC1ControlApplicationCategory](AIUC1ControlApplicationCategory.md) | Which of the AIUC-1 ControlApplicationCategory this control activity (rule) b... | [ControlActivity](ControlActivity.md) |
+| [hasEvidenceCategory](hasEvidenceCategory.md)           | \* <br/> [AIUC1EvidenceCategory](AIUC1EvidenceCategory.md)                       | The evidence category, ie Technical Implementation, Operational Practices, et... | [ControlActivity](ControlActivity.md) |
+| [hasTypicalLocation](hasTypicalLocation.md)             | \* <br/> [String](String.md)                                                     | The evidence is usually found here                                               | [ControlActivity](ControlActivity.md) |
+| [isApplicableToCapability](isApplicableToCapability.md) | \* <br/> [AiTask](AiTask.md)                                                     | This evidence only applies to AI systems with this capability                    | [ControlActivity](ControlActivity.md) |
+| [hasRequirement](hasRequirement.md)                     | 0..1 <br/> [Requirement](Requirement.md)                                         | This requirement this rule belongs to                                            | [ControlActivity](ControlActivity.md) |
+| [hasRequirementType](hasRequirementType.md)             | 0..1 <br/> [AIUC1RequirementType](AIUC1RequirementType.md)                       | The requirement type of whether this is preventive, detective, etc               | [ControlActivity](ControlActivity.md) |
+| [hasTypicalEvidence](hasTypicalEvidence.md)             | 0..1 <br/> [String](String.md)                                                   | The evidence is usually found here                                               | [ControlActivity](ControlActivity.md) |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md)           | 0..1 <br/> [Taxonomy](Taxonomy.md)                                               | A relationship where a concept or a concept group is defined by a taxonomy       | [Rule](Rule.md)                       |
+| [hasRule](hasRule.md)                                   | \* <br/> [Rule](Rule.md)                                                         | Specifying applicability or inclusion of a rule within specified context         | [Rule](Rule.md)                       |
+| [id](id.md)                                             | 1 <br/> [String](String.md)                                                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                   |
+| [name](name.md)                                         | 0..1 <br/> [String](String.md)                                                   | A text name of this instance                                                     | [Entity](Entity.md)                   |
+| [description](description.md)                           | 0..1 <br/> [String](String.md)                                                   | The description of an entity                                                     | [Entity](Entity.md)                   |
+| [url](url.md)                                           | 0..1 <br/> [Uri](Uri.md)                                                         | An optional URL associated with this instance                                    | [Entity](Entity.md)                   |
+| [dateCreated](dateCreated.md)                           | 0..1 <br/> [Date](Date.md)                                                       | The date on which the entity was created                                         | [Entity](Entity.md)                   |
+| [dateModified](dateModified.md)                         | 0..1 <br/> [Date](Date.md)                                                       | The date on which the entity was most recently modified                          | [Entity](Entity.md)                   |
+| [exact_mappings](exact_mappings.md)                     | \* <br/> [Any](Any.md)                                                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md)                   |
+| [close_mappings](close_mappings.md)                     | \* <br/> [Any](Any.md)                                                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md)                   |
+| [related_mappings](related_mappings.md)                 | \* <br/> [Any](Any.md)                                                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md)                   |
+| [narrow_mappings](narrow_mappings.md)                   | \* <br/> [Any](Any.md)                                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                   |
+| [broad_mappings](broad_mappings.md)                     | \* <br/> [Any](Any.md)                                                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md)                   |
+| [isCategorizedAs](isCategorizedAs.md)                   | \* <br/> [Any](Any.md)                                                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                   |
+| [hasLifecycleStatus](hasLifecycleStatus.md)             | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                                 | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                   |
+| [notes](notes.md)                                       | \* <br/> [String](String.md)                                                     | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md)                   |
 
 ## Identifier and Mapping Information
 
@@ -366,14 +381,14 @@ attributes:
     range: string
     multivalued: true
     inlined: false
-  appliesToCapability:
-    name: appliesToCapability
+  isApplicableToCapability:
+    name: isApplicableToCapability
     description: This evidence only applies to AI systems with this capability
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: ControlActivity
-    slot_uri: nexus:appliesToCapability
-    alias: appliesToCapability
+    slot_uri: nexus:isApplicableToCapability
+    alias: isApplicableToCapability
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -626,6 +641,36 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: ControlActivityRecommendation
+    domain_of:
+    - Entity
+    range: LifecycleStatus
+  notes:
+    name: notes
+    description: Free-text editorial notes, source breadcrumbs, or build-time provenance
+      that do not belong in the user-facing description. Opaque to consumers.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:note
+    alias: notes
+    owner: ControlActivityRecommendation
+    domain_of:
+    - Entity
+    range: string
+    recommended: false
+    multivalued: true
 class_uri: nexus:ControlActivityRecommendation
 
 ````

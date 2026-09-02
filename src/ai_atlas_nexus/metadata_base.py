@@ -12,6 +12,7 @@ class InferenceEngineType(StrEnum):
     OLLAMA = "ollama"
     HF = "hf"
     OPENAI = "openai"
+    BEDROCK = "bedrock"
 
     @classmethod
     def list(cls):
@@ -42,3 +43,13 @@ class BackendType(StrEnum):
 
     DEFAULT = auto()
     MELLEA = auto()
+
+
+@unique
+class ExplanationType(str, Enum):
+    """Types of explanations to include with detected risks."""
+
+    NONE = "none"
+    DESCRIPTION = "description"  # Risk description from ontology
+    REASONING = "reasoning"  # Model's thinking/reasoning if available
+    SELF_EXPLANATION = "self-explanation"  # Explanation from model's response itself

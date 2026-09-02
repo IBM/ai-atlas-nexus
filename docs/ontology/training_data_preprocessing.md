@@ -1,11 +1,9 @@
 ---
 search:
-  boost: 5.0
+  boost: 0.5
 ---
 
-# Slot: training_data_preprocessing
-
-_relationship indicating data preprocessing steps performed on training data sets to ensure high quality training data._
+# Slot: training_data_preprocessing <span style="color: red;"><strong> (DEPRECATED) </strong></span>
 
 <div data-search-exclude markdown="1">
 
@@ -18,15 +16,14 @@ Alias: training_data_preprocessing
 
 ### Type and Range
 
-| Property | Value                                     |
-| -------- | ----------------------------------------- |
-| Range    | [DataPreprocessing](DataPreprocessing.md) |
+| Property | Value               |
+| -------- | ------------------- |
+| Range    | [String](String.md) |
 
 ### Cardinality and Requirements
 
-| Property    | Value |
-| ----------- | ----- |
-| Multivalued | Yes   |
+| Property | Value |
+| -------- | ----- |
 
 ## Identifier and Mapping Information
 
@@ -46,14 +43,12 @@ Alias: training_data_preprocessing
 <details>
 ```yaml
 name: training_data_preprocessing
-description: relationship indicating data preprocessing steps performed on training
-  data sets to ensure high quality training data.
+deprecated: Changed to match slot naming convention.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+deprecated_element_has_exact_replacement: hasTrainingDataPreprocessing
 rank: 1000
 alias: training_data_preprocessing
-range: DataPreprocessing
-multivalued: true
-inlined: false
+range: string
 
 ```
 </details></div>

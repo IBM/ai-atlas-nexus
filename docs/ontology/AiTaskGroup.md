@@ -81,6 +81,17 @@ URI: [nexus:AiTaskGroup](https://w3id.org/ai-atlas-nexus/AiTaskGroup)
 
 
 
+      AiTaskGroup : hasLifecycleStatus
+
+
+
+
+
+        AiTaskGroup --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       AiTaskGroup : hasPart
 
 
@@ -142,6 +153,8 @@ URI: [nexus:AiTaskGroup](https://w3id.org/ai-atlas-nexus/AiTaskGroup)
 
       AiTaskGroup : narrower
 
+      AiTaskGroup : notes
+
       AiTaskGroup : related_mappings
 
 
@@ -174,28 +187,30 @@ URI: [nexus:AiTaskGroup](https://w3id.org/ai-atlas-nexus/AiTaskGroup)
 
 ## Slots
 
-| Name                                          | Cardinality and Range                      | Description                                                                      | Inheritance         |
-| --------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
-| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)         | A relationship where a concept or a concept group is defined by a taxonomy       | direct              |
-| [hasPart](hasPart.md)                         | \* <br/> [AiTask](AiTask.md)               | A relationship where an AI task group has an AI task                             | direct              |
-| [isPartOf](isPartOf.md)                       | 0..1 <br/> [AiTaskDomain](AiTaskDomain.md) | A relationship where an entity is part of another entity                         | direct              |
-| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | [Group](Group.md)   |
-| [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                   | A relationship where a group belongs to a domain                                 | [Group](Group.md)   |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)             | The type or class designation of this entity instance                            | [Group](Group.md)   |
-| [narrower](narrower.md)                       | \* <br/> [String](String.md)               | Related concepts that are narrower in scope or hierarchy                         | [Group](Group.md)   |
-| [broader](broader.md)                         | \* <br/> [String](String.md)               | Related concepts that are broader in scope or hierarchy                          | [Group](Group.md)   |
-| [id](id.md)                                   | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
-| [name](name.md)                               | 0..1 <br/> [String](String.md)             | A text name of this instance                                                     | [Entity](Entity.md) |
-| [description](description.md)                 | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
-| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md) |
-| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| Name                                          | Cardinality and Range                            | Description                                                                      | Inheritance         |
+| --------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)               | A relationship where a concept or a concept group is defined by a taxonomy       | direct              |
+| [hasPart](hasPart.md)                         | \* <br/> [AiTask](AiTask.md)                     | A relationship where an AI task group has an AI task                             | direct              |
+| [isPartOf](isPartOf.md)                       | 0..1 <br/> [AiTaskDomain](AiTaskDomain.md)       | A relationship where an entity is part of another entity                         | direct              |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Group](Group.md)   |
+| [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                         | A relationship where a group belongs to a domain                                 | [Group](Group.md)   |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                   | The type or class designation of this entity instance                            | [Group](Group.md)   |
+| [narrower](narrower.md)                       | \* <br/> [String](String.md)                     | Related concepts that are narrower in scope or hierarchy                         | [Group](Group.md)   |
+| [broader](broader.md)                         | \* <br/> [String](String.md)                     | Related concepts that are broader in scope or hierarchy                          | [Group](Group.md)   |
+| [id](id.md)                                   | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                               | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)                 | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                 | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)               | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)           | \* <br/> [Any](Any.md)                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)           | \* <br/> [Any](Any.md)                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)       | \* <br/> [Any](Any.md)                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)         | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)           | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)         | \* <br/> [Any](Any.md)                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| [hasLifecycleStatus](hasLifecycleStatus.md)   | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md) | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
+| [notes](notes.md)                             | \* <br/> [String](String.md)                     | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md) |
 
 ## Usages
 
@@ -581,6 +596,36 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: AiTaskGroup
+    domain_of:
+    - Entity
+    range: LifecycleStatus
+  notes:
+    name: notes
+    description: Free-text editorial notes, source breadcrumbs, or build-time provenance
+      that do not belong in the user-facing description. Opaque to consumers.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:note
+    alias: notes
+    owner: AiTaskGroup
+    domain_of:
+    - Entity
+    range: string
+    recommended: false
+    multivalued: true
 class_uri: nexus:AiTaskGroup
 
 ````

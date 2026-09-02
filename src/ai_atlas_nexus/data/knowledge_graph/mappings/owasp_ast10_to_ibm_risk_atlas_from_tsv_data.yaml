@@ -1,0 +1,97 @@
+entries:
+  - id: ast01-malicious-skills
+    related_mappings:
+      - atlas-external-resources-attack-agentic
+    type: Risk
+  - id: atlas-external-resources-attack-agentic
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - atlas-external-resources-attack-agentic
+    type: Risk
+  - id: atlas-external-resources-attack-agentic
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - atlas-sharing-info-tools-agentic
+    type: Risk
+  - id: atlas-sharing-info-tools-agentic
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - atlas-unauthorized-use-agentic
+    type: Risk
+  - id: atlas-unauthorized-use-agentic
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - atlas-exploit-trust-mismatch-agentic
+    type: Risk
+  - id: atlas-exploit-trust-mismatch-agentic
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - atlas-indirect-instructions-attack
+    type: Risk
+  - id: atlas-indirect-instructions-attack
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - atlas-sharing-info-tools-agentic
+    type: Risk
+  - id: atlas-sharing-info-tools-agentic
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - atlas-mitigation-maintenance-agentic
+    type: Risk
+  - id: atlas-mitigation-maintenance-agentic
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - atlas-incorrect-risk-testing
+    type: Risk
+  - id: atlas-incorrect-risk-testing
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - atlas-accountability-agentic
+    type: Risk
+  - id: atlas-accountability-agentic
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - atlas-unexplainable-untraceable-actions-agentic
+    type: Risk
+  - id: atlas-unexplainable-untraceable-actions-agentic
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - atlas-reproducibility-agentic
+    type: Risk
+  - id: atlas-reproducibility-agentic
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk

@@ -131,7 +131,7 @@ class WMLInferenceEngine(InferenceEngine):
     def generate_text(
         self, response_format, prompt: str
     ) -> List[TextGenerationInferenceOutput]:
-        return self.generate_chat_response(response_format, None, prompt)
+        return self.generate_chat_response(response_format, tools=None, messages=prompt)
 
     @postprocess
     def chat(
@@ -146,7 +146,7 @@ class WMLInferenceEngine(InferenceEngine):
         response_format=None,
         postprocessors: List[str] = None,
         verbose=True,
-    ) -> TextGenerationInferenceOutput:
+    ) -> List[TextGenerationInferenceOutput]:
         try:
             return [
                 self._prepare_prediction_output(response)
@@ -166,12 +166,19 @@ class WMLInferenceEngine(InferenceEngine):
         except Exception as e:
             raise InferenceError(str(e))
 
-    def generate_chat_response(
-        self, response_format, tools, messages
-    ) -> List[TextGenerationInferenceOutput]:
+    def generate_chat_response(self, response_format, tools, messages):
+        parameters = self.parameters.copy()
+        parameters.update(
+            {
+                "response_format": self._create_schema_format(
+                    self.format(response_format)
+                )
+            }
+        )
         return self.client.chat(
             messages=self._to_openai_format(messages),
-            params=self.parameters,
+            params=parameters,
+            tools=tools,
         )
 
     def _prepare_prediction_output(
@@ -183,7 +190,7 @@ class WMLInferenceEngine(InferenceEngine):
             _CHAT_API = True if "choices" in response else False
             if _CHAT_API:
                 prediction_data = {
-                    "prediction": response["choices"][0]["message"]["content"],
+                    "prediction": response["choices"][0]["message"].get("content", ""),
                     "input_tokens": response.get("usage", {}).get(
                         "prompt_tokens", None
                     ),
@@ -191,6 +198,7 @@ class WMLInferenceEngine(InferenceEngine):
                         "completion_tokens", None
                     ),
                     "stop_reason": response["choices"][0]["finish_reason"],
+                    "seed": getattr(self, "parameters", {}).get("seed"),
                 }
             else:
                 prediction_data = {
@@ -198,6 +206,7 @@ class WMLInferenceEngine(InferenceEngine):
                     "input_tokens": response["results"][0]["input_token_count"],
                     "output_tokens": response["results"][0]["generated_token_count"],
                     "stop_reason": response["results"][0]["stop_reason"],
+                    "seed": getattr(self, "parameters", {}).get("seed"),
                 }
 
         return TextGenerationInferenceOutput(
@@ -205,3 +214,16 @@ class WMLInferenceEngine(InferenceEngine):
             inference_engine=str(self._inference_engine_type),
             **prediction_data,
         )
+
+    def _create_schema_format(self, response_format):
+        if response_format:
+            return {
+                "type": "json_schema",
+                "json_schema": {
+                    "name": "WML_Schema",
+                    "schema": response_format,
+                    "strict": True,
+                },
+            }
+        else:
+            return None

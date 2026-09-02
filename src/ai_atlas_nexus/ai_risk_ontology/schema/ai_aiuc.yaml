@@ -81,7 +81,7 @@ classes:
       - hasControlApplication
       - hasEvidenceCategory
       - hasTypicalLocation
-      - appliesToCapability
+      - isApplicableToCapability
       - hasRequirement
       - hasRequirementType
       - hasTypicalEvidence
@@ -147,7 +147,7 @@ classes:
       - hasFrequency
       - hasKeywords
       - hasPrinciple
-      - appliesToCapability
+      - isApplicableToCapability
       - hasRequirementType
       - isDefinedByTaxonomy
       - hasRule
@@ -210,13 +210,16 @@ slots:
     multivalued: false
     inlined: false
     description: The evidence is usually found here
-  appliesToCapability:
-    slot_uri: nexus:appliesToCapability
+  isApplicableToCapability:
+    slot_uri: nexus:isApplicableToCapability
     domain: ControlActivity
     range: AiTask
     multivalued: true
     inlined: false
     description: This evidence only applies to AI systems with this capability
+  appliesToCapability:
+    deprecated: Changed to match slot naming convention.
+    deprecated_element_has_exact_replacement: isApplicableToCapability
   hasRequirement:
     slot_uri: nexus:hasRequirement
     domain: ControlActivity

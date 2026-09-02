@@ -122,6 +122,17 @@ URI: [nexus:benchmarkmetadatacard](https://w3id.org/ai-atlas-nexus/benchmarkmeta
 
 
 
+      BenchmarkMetadataCard : hasLifecycleStatus
+
+
+
+
+
+        BenchmarkMetadataCard --> "0..1" LifecycleStatus : hasLifecycleStatus
+        click LifecycleStatus href "../LifecycleStatus/"
+
+
+
       BenchmarkMetadataCard : hasLimitations
 
       BenchmarkMetadataCard : hasMethods
@@ -175,6 +186,8 @@ URI: [nexus:benchmarkmetadatacard](https://w3id.org/ai-atlas-nexus/benchmarkmeta
 
 
 
+      BenchmarkMetadataCard : notes
+
       BenchmarkMetadataCard : overview
 
       BenchmarkMetadataCard : related_mappings
@@ -208,50 +221,52 @@ URI: [nexus:benchmarkmetadatacard](https://w3id.org/ai-atlas-nexus/benchmarkmeta
 
 ## Slots
 
-| Name                                                                                      | Cardinality and Range                      | Description                                                                      | Inheritance         |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
-| [describesAiEval](describesAiEval.md)                                                     | \* <br/> [AiEval](AiEval.md)               | A relationship where a BenchmarkMetadataCard describes an AI evaluation (benc... | direct              |
-| [hasDataType](hasDataType.md)                                                             | \* <br/> [String](String.md)               | The type of data used in the benchmark (e                                        | direct              |
-| [hasDomains](hasDomains.md)                                                               | \* <br/> [String](String.md)               | The specific domains or areas where the benchmark is applied (e                  | direct              |
-| [hasLanguages](hasLanguages.md)                                                           | \* <br/> [String](String.md)               | The languages included in the dataset used by the benchmark (e                   | direct              |
-| [hasSimilarBenchmarks](hasSimilarBenchmarks.md)                                           | \* <br/> [String](String.md)               | Benchmarks that are closely related in terms of goals or data type               | direct              |
-| [hasResources](hasResources.md)                                                           | \* <br/> [String](String.md)               | Links to relevant resources, such as repositories or papers related to the be... | direct              |
-| [hasGoal](hasGoal.md)                                                                     | 0..1 <br/> [String](String.md)             | The specific goal or primary use case the benchmark is designed for              | direct              |
-| [hasAudience](hasAudience.md)                                                             | \* <br/> [String](String.md)               | The intended audience, such as researchers, developers, policymakers, etc        | direct              |
-| [hasTasks](hasTasks.md)                                                                   | \* <br/> [String](String.md)               | The tasks or evaluations the benchmark is intended to assess                     | direct              |
-| [hasLimitations](hasLimitations.md)                                                       | \* <br/> [String](String.md)               | Limitations in evaluating or addressing risks, such as gaps in demographic co... | direct              |
-| [hasOutOfScopeUses](hasOutOfScopeUses.md)                                                 | \* <br/> [String](String.md)               | Use cases where the benchmark is not designed to be applied and could give mi... | direct              |
-| [hasDataSource](hasDataSource.md)                                                         | \* <br/> [String](String.md)               | The origin or source of the data used in the benchmark (e                        | direct              |
-| [hasDataSize](hasDataSize.md)                                                             | 0..1 <br/> [String](String.md)             | The size of the dataset, including the number of data points or examples         | direct              |
-| [hasDataFormat](hasDataFormat.md)                                                         | \* <br/> [String](String.md)               | The structure and modality of the data (e                                        | direct              |
-| [hasAnnotation](hasAnnotation.md)                                                         | \* <br/> [String](String.md)               | The process used to annotate or label the dataset, including who or what perf... | direct              |
-| [hasMethods](hasMethods.md)                                                               | \* <br/> [String](String.md)               | The evaluation techniques applied within the benchmark                           | direct              |
-| [hasMetrics](hasMetrics.md)                                                               | \* <br/> [String](String.md)               | The specific performance metrics used to assess models (e                        | direct              |
-| [hasCalculation](hasCalculation.md)                                                       | \* <br/> [String](String.md)               | The way metrics are computed based on model outputs and the benchmark data       | direct              |
-| [hasInterpretation](hasInterpretation.md)                                                 | \* <br/> [String](String.md)               | How users should interpret the scores or results from the metrics                | direct              |
-| [hasBaselineResults](hasBaselineResults.md)                                               | \* <br/> [String](String.md)               | The results of well-known or widely used models to give context to new perfor... | direct              |
-| [hasValidation](hasValidation.md)                                                         | \* <br/> [String](String.md)               | Measures taken to ensure that the benchmark provides valid and reliable evalu... | direct              |
-| [hasRelatedRisk](hasRelatedRisk.md)                                                       | \* <br/> [RiskConcept](RiskConcept.md)     | A relationship where an entity relates to a risk                                 | direct              |
-| [hasDemographicAnalysis](hasDemographicAnalysis.md)                                       | \* <br/> [String](String.md)               | How the benchmark evaluates performance across different demographic groups (... | direct              |
-| [hasConsiderationPrivacyAndAnonymity](hasConsiderationPrivacyAndAnonymity.md)             | \* <br/> [String](String.md)               | How any personal or sensitive data is handled and whether any anonymization t... | direct              |
-| [hasLicense](hasLicense.md)                                                               | 0..1 <br/> [License](License.md)           | Indicates licenses associated with a resource                                    | direct              |
-| [hasConsiderationConsentProcedures](hasConsiderationConsentProcedures.md)                 | \* <br/> [String](String.md)               | Information on how consent was obtained (if applicable), especially for datas... | direct              |
-| [hasConsiderationComplianceWithRegulations](hasConsiderationComplianceWithRegulations.md) | \* <br/> [String](String.md)               | Compliance with relevant legal or ethical regulations (if applicable)            | direct              |
-| [hasDocumentation](hasDocumentation.md)                                                   | \* <br/> [Documentation](Documentation.md) | Indicates documentation associated with an entity                                | direct              |
-| [name](name.md)                                                                           | 0..1 <br/> [String](String.md)             | The official name of the benchmark                                               | direct              |
-| [overview](overview.md)                                                                   | 0..1 <br/> [String](String.md)             | A brief description of the benchmark's main goals and scope                      | direct              |
-| [type](type.md)                                                                           | 0..1 <br/> [String](String.md)             |                                                                                  | direct              |
-| [id](id.md)                                                                               | 1 <br/> [String](String.md)                | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
-| [description](description.md)                                                             | 0..1 <br/> [String](String.md)             | The description of an entity                                                     | [Entity](Entity.md) |
-| [url](url.md)                                                                             | 0..1 <br/> [Uri](Uri.md)                   | An optional URL associated with this instance                                    | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md)                                                             | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was created                                         | [Entity](Entity.md) |
-| [dateModified](dateModified.md)                                                           | 0..1 <br/> [Date](Date.md)                 | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md)                                                       | \* <br/> [Any](Any.md)                     | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md)                                                       | \* <br/> [Any](Any.md)                     | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md)                                                   | \* <br/> [Any](Any.md)                     | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md)                                                     | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md)                                                       | \* <br/> [Any](Any.md)                     | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [isCategorizedAs](isCategorizedAs.md)                                                     | \* <br/> [Any](Any.md)                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| Name                                                                                      | Cardinality and Range                            | Description                                                                      | Inheritance         |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
+| [describesAiEval](describesAiEval.md)                                                     | \* <br/> [AiEval](AiEval.md)                     | A relationship where a BenchmarkMetadataCard describes an AI evaluation (benc... | direct              |
+| [hasDataType](hasDataType.md)                                                             | \* <br/> [String](String.md)                     | The type of data used in the benchmark (e                                        | direct              |
+| [hasDomains](hasDomains.md)                                                               | \* <br/> [String](String.md)                     | The specific domains or areas where the benchmark is applied (e                  | direct              |
+| [hasLanguages](hasLanguages.md)                                                           | \* <br/> [String](String.md)                     | The languages included in the dataset used by the benchmark (e                   | direct              |
+| [hasSimilarBenchmarks](hasSimilarBenchmarks.md)                                           | \* <br/> [String](String.md)                     | Benchmarks that are closely related in terms of goals or data type               | direct              |
+| [hasResources](hasResources.md)                                                           | \* <br/> [String](String.md)                     | Links to relevant resources, such as repositories or papers related to the be... | direct              |
+| [hasGoal](hasGoal.md)                                                                     | 0..1 <br/> [String](String.md)                   | The specific goal or primary use case the benchmark is designed for              | direct              |
+| [hasAudience](hasAudience.md)                                                             | \* <br/> [String](String.md)                     | The intended audience, such as researchers, developers, policymakers, etc        | direct              |
+| [hasTasks](hasTasks.md)                                                                   | \* <br/> [String](String.md)                     | The tasks or evaluations the benchmark is intended to assess                     | direct              |
+| [hasLimitations](hasLimitations.md)                                                       | \* <br/> [String](String.md)                     | Limitations in evaluating or addressing risks, such as gaps in demographic co... | direct              |
+| [hasOutOfScopeUses](hasOutOfScopeUses.md)                                                 | \* <br/> [String](String.md)                     | Use cases where the benchmark is not designed to be applied and could give mi... | direct              |
+| [hasDataSource](hasDataSource.md)                                                         | \* <br/> [String](String.md)                     | The origin or source of the data used in the benchmark (e                        | direct              |
+| [hasDataSize](hasDataSize.md)                                                             | 0..1 <br/> [String](String.md)                   | The size of the dataset, including the number of data points or examples         | direct              |
+| [hasDataFormat](hasDataFormat.md)                                                         | \* <br/> [String](String.md)                     | The structure and modality of the data (e                                        | direct              |
+| [hasAnnotation](hasAnnotation.md)                                                         | \* <br/> [String](String.md)                     | The process used to annotate or label the dataset, including who or what perf... | direct              |
+| [hasMethods](hasMethods.md)                                                               | \* <br/> [String](String.md)                     | The evaluation techniques applied within the benchmark                           | direct              |
+| [hasMetrics](hasMetrics.md)                                                               | \* <br/> [String](String.md)                     | The specific performance metrics used to assess models (e                        | direct              |
+| [hasCalculation](hasCalculation.md)                                                       | \* <br/> [String](String.md)                     | The way metrics are computed based on model outputs and the benchmark data       | direct              |
+| [hasInterpretation](hasInterpretation.md)                                                 | \* <br/> [String](String.md)                     | How users should interpret the scores or results from the metrics                | direct              |
+| [hasBaselineResults](hasBaselineResults.md)                                               | \* <br/> [String](String.md)                     | The results of well-known or widely used models to give context to new perfor... | direct              |
+| [hasValidation](hasValidation.md)                                                         | \* <br/> [String](String.md)                     | Measures taken to ensure that the benchmark provides valid and reliable evalu... | direct              |
+| [hasRelatedRisk](hasRelatedRisk.md)                                                       | \* <br/> [RiskConcept](RiskConcept.md)           | A relationship where an entity relates to a risk                                 | direct              |
+| [hasDemographicAnalysis](hasDemographicAnalysis.md)                                       | \* <br/> [String](String.md)                     | How the benchmark evaluates performance across different demographic groups (... | direct              |
+| [hasConsiderationPrivacyAndAnonymity](hasConsiderationPrivacyAndAnonymity.md)             | \* <br/> [String](String.md)                     | How any personal or sensitive data is handled and whether any anonymization t... | direct              |
+| [hasLicense](hasLicense.md)                                                               | 0..1 <br/> [License](License.md)                 | Indicates licenses associated with a resource                                    | direct              |
+| [hasConsiderationConsentProcedures](hasConsiderationConsentProcedures.md)                 | \* <br/> [String](String.md)                     | Information on how consent was obtained (if applicable), especially for datas... | direct              |
+| [hasConsiderationComplianceWithRegulations](hasConsiderationComplianceWithRegulations.md) | \* <br/> [String](String.md)                     | Compliance with relevant legal or ethical regulations (if applicable)            | direct              |
+| [hasDocumentation](hasDocumentation.md)                                                   | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | direct              |
+| [name](name.md)                                                                           | 0..1 <br/> [String](String.md)                   | The official name of the benchmark                                               | direct              |
+| [overview](overview.md)                                                                   | 0..1 <br/> [String](String.md)                   | A brief description of the benchmark's main goals and scope                      | direct              |
+| [type](type.md)                                                                           | 0..1 <br/> [String](String.md)                   |                                                                                  | direct              |
+| [id](id.md)                                                                               | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [description](description.md)                                                             | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                                                                             | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)                                                             | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)                                                           | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)                                                       | \* <br/> [Any](Any.md)                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)                                                       | \* <br/> [Any](Any.md)                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)                                                   | \* <br/> [Any](Any.md)                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)                                                     | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)                                                       | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)                                                     | \* <br/> [Any](Any.md)                           | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
+| [hasLifecycleStatus](hasLifecycleStatus.md)                                               | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md) | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
+| [notes](notes.md)                                                                         | \* <br/> [String](String.md)                     | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md) |
 
 ## Usages
 
@@ -968,6 +983,36 @@ attributes:
     range: Any
     multivalued: true
     inlined: false
+  hasLifecycleStatus:
+    name: hasLifecycleStatus
+    description: The editorial / publication lifecycle state of this entity. Distinct
+      from AiLifecyclePhase, which describes an AI system's runtime evolution rather
+      than the editorial workflow of a catalogued entry.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    aliases:
+    - lifecycle_status
+    - doc_status
+    rank: 1000
+    slot_uri: adms:status
+    alias: hasLifecycleStatus
+    owner: BenchmarkMetadataCard
+    domain_of:
+    - Entity
+    range: LifecycleStatus
+  notes:
+    name: notes
+    description: Free-text editorial notes, source breadcrumbs, or build-time provenance
+      that do not belong in the user-facing description. Opaque to consumers.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: skos:note
+    alias: notes
+    owner: BenchmarkMetadataCard
+    domain_of:
+    - Entity
+    range: string
+    recommended: false
+    multivalued: true
 class_uri: nexus:benchmarkmetadatacard
 
 ````

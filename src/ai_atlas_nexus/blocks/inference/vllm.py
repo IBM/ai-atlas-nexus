@@ -89,7 +89,6 @@ class VLLMInferenceEngine(InferenceEngine):
 
             return LLM(
                 model=self.model_name_or_path,
-                trust_remote_code=True,
                 gpu_memory_utilization=self.parameters.pop(
                     "gpu_memory_utilization", 0.92
                 ),
@@ -111,7 +110,7 @@ class VLLMInferenceEngine(InferenceEngine):
         response_format=None,
         postprocessors: List[str] = None,
         verbose=True,
-    ):
+    ) -> List[TextGenerationInferenceOutput]:
         try:
             if isinstance(self.client, OpenAI):
                 return [
@@ -131,8 +130,9 @@ class VLLMInferenceEngine(InferenceEngine):
                 from vllm import SamplingParams
                 from vllm.sampling_params import StructuredOutputsParams
 
+                parameters = self.parameters.copy()
                 if response_format:
-                    self.parameters.update(
+                    parameters.update(
                         {
                             "structured_outputs": StructuredOutputsParams(
                                 json=self.format(response_format)
@@ -143,7 +143,7 @@ class VLLMInferenceEngine(InferenceEngine):
                     self._prepare_prediction_output(response)
                     for response in self.client.generate(
                         prompts=self._validate_generate_prompts(prompts),
-                        sampling_params=SamplingParams(**self.parameters),
+                        sampling_params=SamplingParams(**parameters),
                         use_tqdm=verbose,
                     )
                 ]
@@ -171,7 +171,7 @@ class VLLMInferenceEngine(InferenceEngine):
         response_format=None,
         postprocessors: List[str] = None,
         verbose=True,
-    ):
+    ) -> List[TextGenerationInferenceOutput]:
         try:
             if isinstance(self.client, OpenAI):
                 return [
@@ -195,8 +195,9 @@ class VLLMInferenceEngine(InferenceEngine):
                 from vllm import SamplingParams
                 from vllm.sampling_params import StructuredOutputsParams
 
+                parameters = self.parameters.copy()
                 if response_format:
-                    self.parameters.update(
+                    parameters.update(
                         {
                             "structured_outputs": StructuredOutputsParams(
                                 json=self.format(response_format)
@@ -210,7 +211,7 @@ class VLLMInferenceEngine(InferenceEngine):
                             self._to_openai_format(message)
                             for message in self._validate_chat_messages(messages)
                         ],
-                        sampling_params=SamplingParams(**self.parameters),
+                        sampling_params=SamplingParams(**parameters),
                         use_tqdm=verbose,
                     )
                 ]
@@ -226,23 +227,33 @@ class VLLMInferenceEngine(InferenceEngine):
             **self.parameters,
         )
 
-    def _prepare_prediction_output(self, response, offline=True):
+    def _prepare_prediction_output(
+        self, response, offline=True
+    ) -> TextGenerationInferenceOutput:
         if isinstance(response, str):
             prediction_data = {"prediction": response}
         elif offline:
+            # Offline generation reports no usage object, so count the prompt tokens
+            # from the request.
+            prompt_token_ids = getattr(response, "prompt_token_ids", None)
             prediction_data = {
                 "prediction": response.outputs[0].text,
                 "input_text": response.prompt,
+                "input_tokens": (
+                    len(prompt_token_ids) if prompt_token_ids is not None else None
+                ),
                 "output_tokens": len(response.outputs[0].token_ids),
                 "stop_reason": response.outputs[0].finish_reason,
+                "seed": getattr(self, "parameters", {}).get("seed"),
                 "logprobs": _extract_logprobs(response.outputs[0].logprobs),
             }
         else:
             prediction_data = {
                 "prediction": response.choices[0].message.content,
-                "input_tokens": response.usage.total_tokens,
+                "input_tokens": response.usage.prompt_tokens,
                 "output_tokens": response.usage.completion_tokens,
                 "stop_reason": response.choices[0].finish_reason,
+                "seed": getattr(self, "parameters", {}).get("seed"),
                 "logprobs": (
                     {
                         output.token: output.logprob

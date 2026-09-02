@@ -14,11 +14,56 @@ prefixes:
   ai: https://w3id.org/dpv/ai#
   skos: http://www.w3.org/2004/02/skos/core#
   tech: https://w3id.org/dpv/tech#
+  adms: http://www.w3.org/ns/adms#
+  adms-status: http://purl.org/adms/status/
+  pso: http://purl.org/spar/pso/
 
 default_range: string
 default_prefix: nexus
 
 enums:
+  LifecycleStatus:
+    description: >-
+      Editorial / publication state of a catalogued entity. Permissible values
+      align to the ADMS-status codelist where one exists; otherwise drawn from
+      PSO vocabulary, and failing that, minted in this nexus namespace.
+    see_also:
+      - https://semiceu.github.io/ADMS/releases/2.00/
+      - http://purl.org/adms/status/1.0 # ADMS status codelist (4 values)
+      - https://sparontologies.github.io/pso/current/pso.html # PSO, SPAR
+    permissible_values:
+      DRAFT:
+        description: Initial draft under development.
+        meaning: adms-status:UnderDevelopment
+      REVIEW:
+        description: Under editorial or technical review.
+        meaning: pso:under-review
+        comments:
+          - No ADMS equivalent. PSO covers peer review which is sufficient.
+      APPROVED:
+        description: Approved / published as authoritative.
+        meaning: adms-status:Completed
+      DEPRECATED:
+        description: Discouraged for new use but still available.
+        meaning: adms-status:Deprecated
+      SUPERSEDED:
+        description: Replaced by a newer version of this entity.
+        comments:
+          - >-
+            Neither ADMS nor PSO defines a supersession status, so this value is minted in
+            the nexus namespace rather than aligned to an external vocabulary.
+        notes:
+          - >-
+            Mapped as close_mappings, not meaning. ADMS collapses supersession into
+            Deprecated, which is already the exact meaning of DEPRECATED, and two values
+            sharing one meaning URI would be indistinguishable in RDF.
+        close_mappings:
+          - adms-status:Deprecated
+        todos:
+          - Is 'superseded' permissible value needed? Keep for now, remove later if unsure.
+      WITHDRAWN:
+        description: Removed / no longer available.
+        meaning: adms-status:Withdrawn
   Jurisdiction:
     description: >-
       ISO 3166-1 country code, sourced from the DPV Location ontology
@@ -27,6 +72,41 @@ enums:
       source_ontology: dpv-loc
       source_nodes:
         - dpv:Country
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
+
+  SupraNationalJurisdiction:
+    description: >-
+      Supra-national or intergovernmental jurisdiction, sourced from the
+      DPV Location ontology (https://w3id.org/dpv/loc). Values are
+      subclasses of dpv:SupraNationalUnion (e.g. EU, EEA).
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:SupraNationalUnion
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
+    permissible_values:
+      International:
+        description: >-
+          Explicitly global scope not attributable to any single country
+          or recognised regional body.
+        aliases:
+          - INTERNATIONAL
+          - international
+
+  SubnationalJurisdiction:
+    description: >-
+      Subnational or regional jurisdiction, sourced from the DPV Location
+      ontology (https://w3id.org/dpv/loc). Values are subclasses of
+      dpv:Region and use ISO 3166-2 subdivision codes
+      (e.g. US-CA for California, CA-QC for Quebec).
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:Region
       relationship_types:
         - rdfs:subClassOf
       include_self: false
@@ -50,6 +130,8 @@ classes:
       - narrow_mappings
       - broad_mappings
       - isCategorizedAs
+      - hasLifecycleStatus
+      - notes
 
   Organization:
     is_a: Entity
@@ -74,7 +156,7 @@ classes:
     slots:
       - hasLicense
       - hasDocumentation
-      - provider
+      - isProvidedBy
 
   Documentation:
     is_a: Entity
@@ -428,13 +510,19 @@ slots:
     multivalued: true
     inlined: false
     description: A relationship to datasets that are used.
-  producer:
+  isProducedBy:
     range: Organization
     description: A relationship to the Organization instance which produces this instance.
-  provider:
+  producer:
+    deprecated: Changed to match slot naming convention.
+    deprecated_element_has_exact_replacement: isProducedBy
+  isProvidedBy:
     slot_uri: schema:provider
     range: Organization
     description: A relationship to the Organization instance that provides this instance.
+  provider:
+    deprecated: Changed to match slot naming convention.
+    deprecated_element_has_exact_replacement: isProvidedBy
   grants_license:
     range: License
     description: A relationship from a granting entity such as an Organization to a License instance.
@@ -596,10 +684,17 @@ slots:
     slot_uri: nexus:isApplicableinLocality
   hasJurisdiction:
     description: >-
-      The legal or political jurisdiction(s) in which this concept applies,
-      expressed as ISO 3166-1 country codes.
-    range: Jurisdiction
+      The legal or regulatory jurisdiction(s) applicable to an AI system,
+      policy, risk, or obligation. Accepts ISO 3166-1 country codes,
+      supra-national bodies, or subnational jurisdictions with distinct
+      regulatory significance. Aligns with dpv:hasJurisdiction.
     multivalued: true
+    see_also:
+      - https://w3id.org/dpv#hasJurisdiction
+    any_of:
+      - range: Jurisdiction
+      - range: SupraNationalJurisdiction
+      - range: SubnationalJurisdiction
     inlined: false
     slot_uri: dpv:hasJurisdiction
   isUsedWithinLocality:
@@ -628,6 +723,23 @@ slots:
     multivalued: true
     inlined: false
     inverse: implementsCapability
+  hasLifecycleStatus:
+    slot_uri: adms:status
+    range: LifecycleStatus
+    description: >-
+      The editorial / publication lifecycle state of this entity. Distinct from
+      AiLifecyclePhase, which describes an AI system's runtime evolution rather than
+      the editorial workflow of a catalogued entry.
+    aliases:
+      - lifecycle_status
+      - doc_status
+  notes:
+    slot_uri: skos:note
+    multivalued: true
+    recommended: false
+    description: >-
+      Free-text editorial notes, source breadcrumbs, or build-time provenance
+      that do not belong in the user-facing description. Opaque to consumers.
   hasRelatedRisk:
     description: A relationship where an entity relates to a risk
     domain: Any

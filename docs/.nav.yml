@@ -18,6 +18,8 @@ nav:
           - Installation: installation/index.md
       - Usage:
           - Usage: usage/index.md
+          - "Risk explanations": usage/risk_explanations.md
+          - "Token usage metadata": usage/token_usage_metadata.md
   - Concepts:
       - Concepts: concepts/index.md
       - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md

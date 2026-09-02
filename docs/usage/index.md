@@ -1,3 +1,8 @@
+- **Guides:**
+
+  - [Risk explanations](risk_explanations.md) Pair each identified risk with an explanation
+  - [Token usage metadata](token_usage_metadata.md) Track token usage and cost, per run and per usecase
+
 - **Notebooks:**
   - [AI Atlas Nexus Quickstart](../examples/notebooks/AI_Atlas_Nexus_Quickstart.ipynb) Overview of library functionality
   - [Risk identification](../examples/notebooks/risk_identification.ipynb) Uncover risks related to your usecase

@@ -110,7 +110,7 @@ rules:
       - Opt-Out
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     hasRequirementType: PREVENTATIVE
     isDefinedByTaxonomy: aiuc1
@@ -136,7 +136,7 @@ rules:
     isDefinedByTaxonomy: aiuc1
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     type: Requirement
     hasRule:
@@ -152,7 +152,7 @@ rules:
     isDefinedByTaxonomy: aiuc1
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     type: Requirement
     hasRule:
@@ -170,7 +170,7 @@ rules:
     isDefinedByTaxonomy: aiuc1
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     type: Requirement
     hasRule:
@@ -189,7 +189,7 @@ rules:
     isDefinedByTaxonomy: aiuc1
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     type: Requirement
     hasRule:
@@ -206,7 +206,7 @@ rules:
     isDefinedByTaxonomy: aiuc1
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     type: Requirement
     hasRule:
@@ -225,7 +225,7 @@ rules:
     isDefinedByTaxonomy: aiuc1
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
       - external-facing-capability
     type: Requirement

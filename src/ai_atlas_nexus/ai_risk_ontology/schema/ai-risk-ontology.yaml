@@ -19,6 +19,16 @@ prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
   nexus: https://w3id.org/ai-atlas-nexus/
+  dpv: https://w3id.org/dpv#
+  dpv-loc: https://w3id.org/dpv/loc#
+  dpv-risk: https://w3id.org/dpv/risk#
+  ai: https://w3id.org/dpv/ai#
+  tech: https://w3id.org/dpv/tech#
+  dqv: https://www.w3.org/TR/vocab-dqv/
+  skos: http://www.w3.org/2004/02/skos/core#
+  adms: http://www.w3.org/ns/adms#
+  adms-status: http://purl.org/adms/status/
+  pso: http://purl.org/spar/pso/
 
 default_range: string
 default_prefix: nexus

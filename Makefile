@@ -51,7 +51,10 @@ regenerate_graph_output:
 	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_graph.py
 
 regenerate_owl_schema:
-	gen-owl $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml --metadata-profile 'linkml' > graph_export/owl/${LINKML_SCHEMA_NAME}_schema.ttl
+	gen-owl $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml --metadata-profile 'linkml' \
+	--no-use-native-uris \
+	--default-permissible-value-type 'http://www.w3.org/2004/02/skos/core#Concept' \
+	> graph_export/owl/${LINKML_SCHEMA_NAME}_schema.ttl
 
 regenerate_risk_atlas_as_tex:
 	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py

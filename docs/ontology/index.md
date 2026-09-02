@@ -121,7 +121,7 @@ Name: ai-risk-ontology
 | [aimodelfamilies](aimodelfamilies.md)                                                     | A list of AI model families                                                      |
 | [aimodels](aimodels.md)                                                                   | A list of AI models                                                              |
 | [aitasks](aitasks.md)                                                                     | A list of AI tasks                                                               |
-| [appliesToCapability](appliesToCapability.md)                                             | This evidence only applies to AI systems with this capability                    |
+| [appliesToCapability](appliesToCapability.md)                                             |                                                                                  |
 | [architecture](architecture.md)                                                           | A description of the architecture of an AI such as 'Decoder-only'                |
 | [author](author.md)                                                                       | The author or authors of the documentation                                       |
 | [belongsToDomain](belongsToDomain.md)                                                     | A relationship where a group belongs to a domain                                 |
@@ -190,6 +190,7 @@ Name: ai-risk-ontology
 | [hasEvaluationResults](hasEvaluationResults.md)                                           | Array of evaluation results                                                      |
 | [hasEvidenceCategory](hasEvidenceCategory.md)                                             | The evidence category, ie Technical Implementation, Operational Practices, et... |
 | [hasException](hasException.md)                                                           | Exception type                                                                   |
+| [hasExternalReference](hasExternalReference.md)                                           | External references / additional resources related to this entity, such as ar... |
 | [hasFrequency](hasFrequency.md)                                                           | The frequency                                                                    |
 | [hasGoal](hasGoal.md)                                                                     | The specific goal or primary use case the benchmark is designed for              |
 | [hasImpact](hasImpact.md)                                                                 | Indicates impact(s) possible or arising as consequences from specified concep... |
@@ -197,10 +198,11 @@ Name: ai-risk-ontology
 | [hasImplementation](hasImplementation.md)                                                 | A relationship to a implementation defining the risk evaluation                  |
 | [hasInputModality](hasInputModality.md)                                                   | A relationship indicating the input modalities supported by an AI component      |
 | [hasInterpretation](hasInterpretation.md)                                                 | How users should interpret the scores or results from the metrics                |
-| [hasJurisdiction](hasJurisdiction.md)                                                     | The legal or political jurisdiction(s) in which this concept applies, express... |
+| [hasJurisdiction](hasJurisdiction.md)                                                     | The legal or regulatory jurisdiction(s) applicable to an AI system, policy, r... |
 | [hasKeywords](hasKeywords.md)                                                             | A collection of keywords                                                         |
 | [hasLanguages](hasLanguages.md)                                                           | The languages included in the dataset used by the benchmark (e                   |
 | [hasLicense](hasLicense.md)                                                               | Indicates licenses associated with a resource                                    |
+| [hasLifecycleStatus](hasLifecycleStatus.md)                                               | The editorial / publication lifecycle state of this entity                       |
 | [hasLikelihood](hasLikelihood.md)                                                         | The likelihood or probability or chance of something taking place or occuring    |
 | [hasLimitations](hasLimitations.md)                                                       | Limitations in evaluating or addressing risks, such as gaps in demographic co... |
 | [hasMethods](hasMethods.md)                                                               | The evaluation techniques applied within the benchmark                           |
@@ -235,6 +237,7 @@ Name: ai-risk-ontology
 | [hasTasks](hasTasks.md)                                                                   | The tasks or evaluations the benchmark is intended to assess                     |
 | [hasTerm](hasTerm.md)                                                                     | Indicates terms associated with a vocabulary                                     |
 | [hasTrainingData](hasTrainingData.md)                                                     | A relationship indicating the datasets an AI model was trained on                |
+| [hasTrainingDataPreprocessing](hasTrainingDataPreprocessing.md)                           | Relationship indicating data preprocessing steps performed on training data s... |
 | [hasTypicalEvidence](hasTypicalEvidence.md)                                               | The evidence is usually found here                                               |
 | [hasTypicalLocation](hasTypicalLocation.md)                                               | The evidence is usually found here                                               |
 | [hasUnitxtCard](hasUnitxtCard.md)                                                         | A relationship to a Unitxt card defining the risk evaluation                     |
@@ -247,6 +250,7 @@ Name: ai-risk-ontology
 | [implementedByIntrinsic](implementedByIntrinsic.md)                                       | Indicates that this capability is implemented by a specific LLM intrinsic        |
 | [implementsCapability](implementsCapability.md)                                           | Indicates that this entity implements a specific capability                      |
 | [isApplicableinLocality](isApplicableinLocality.md)                                       | A relationship where an entity has is applicable in these localities             |
+| [isApplicableToCapability](isApplicableToCapability.md)                                   | This evidence only applies to AI systems with this capability                    |
 | [isAppliedWithinDomain](isAppliedWithinDomain.md)                                         | Specifies the domain an AI system is used within                                 |
 | [isCategorizedAs](isCategorizedAs.md)                                                     | A relationship where an entity has been deemed to be categorized                 |
 | [isComposedOf](isComposedOf.md)                                                           | Relationship indicating the some entity is composed of other entities (includ... |
@@ -259,10 +263,12 @@ Name: ai-risk-ontology
 | [isImportedBy](isImportedBy.md)                                                           | A relationship indicating that an entity has been imported by an organization    |
 | [isMitigatedBy](isMitigatedBy.md)                                                         | A relationship where a risk, risk source, consequence, or impact is mitigated... |
 | [isPartOf](isPartOf.md)                                                                   | A relationship where an entity is part of another entity                         |
-| [isProvidedBy](isProvidedBy.md)                                                           | Indicates provider of an AI system or component                                  |
+| [isProducedBy](isProducedBy.md)                                                           | A relationship to the Organization instance which produces this instance         |
+| [isProvidedBy](isProvidedBy.md)                                                           | A relationship to the Organization instance that provides this instance          |
 | [isResultOf](isResultOf.md)                                                               | A relationship indicating that an entity is the result of an AI evaluation       |
 | [isUsedBy](isUsedBy.md)                                                                   | Indicates user of an AI system                                                   |
 | [isUsedWithinLocality](isUsedWithinLocality.md)                                           | Specifies the domain an AI system is used within                                 |
+| [isValidatedBy](isValidatedBy.md)                                                         | A relationship indicating the model validation steps after AI model training     |
 | [licenses](licenses.md)                                                                   | A list of licenses                                                               |
 | [llmintrinsics](llmintrinsics.md)                                                         | A list of LLMIntrinsics                                                          |
 | [lower_is_better](lower_is_better.md)                                                     | Whether lower scores are better                                                  |
@@ -275,6 +281,7 @@ Name: ai-risk-ontology
 | [name](name.md)                                                                           | A text name of this instance                                                     |
 | [narrow_mappings](narrow_mappings.md)                                                     | The property is used to state a hierarchical mapping link between two concept... |
 | [narrower](narrower.md)                                                                   | Related concepts that are narrower in scope or hierarchy                         |
+| [notes](notes.md)                                                                         | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... |
 | [numParameters](numParameters.md)                                                         | A property indicating the number of parameters in a LLM                          |
 | [numTrainingTokens](numTrainingTokens.md)                                                 | The number of tokens a AI model was trained on                                   |
 | [obligations](obligations.md)                                                             | A list of Obligations                                                            |
@@ -288,9 +295,9 @@ Name: ai-risk-ontology
 | [postconditions](postconditions.md)                                                       | Conditions that result from applying the rule                                    |
 | [power_consumption_w](power_consumption_w.md)                                             | power consumption in Watts                                                       |
 | [preconditions](preconditions.md)                                                         | Conditions that must be satisfied before the rule applies                        |
-| [producer](producer.md)                                                                   | A relationship to the Organization instance which produces this instance         |
+| [producer](producer.md)                                                                   |                                                                                  |
 | [prohibitions](prohibitions.md)                                                           | A list of prohibitions                                                           |
-| [provider](provider.md)                                                                   | A relationship to the Organization instance that provides this instance          |
+| [provider](provider.md)                                                                   |                                                                                  |
 | [refersToRisk](refersToRisk.md)                                                           | Indicates the incident (subject) is a materialisation of the indicated risk (... |
 | [related_mappings](related_mappings.md)                                                   | The property skos:relatedMatch is used to state an associative mapping link b... |
 | [requiredByTask](requiredByTask.md)                                                       | Indicates that this entry is required to perform a specific AI task              |
@@ -315,27 +322,29 @@ Name: ai-risk-ontology
 | [tag](tag.md)                                                                             | A shost version of the name                                                      |
 | [taxonomies](taxonomies.md)                                                               | A list of taxonomies                                                             |
 | [text](text.md)                                                                           | The question itself                                                              |
-| [training_data_preprocessing](training_data_preprocessing.md)                             | relationship indicating data preprocessing steps performed on training data s... |
+| [training_data_preprocessing](training_data_preprocessing.md)                             |                                                                                  |
 | [type](type.md)                                                                           | The type or class designation of this entity instance                            |
 | [url](url.md)                                                                             | An optional URL associated with this instance                                    |
-| [validated_by](validated_by.md)                                                           | A relationship indicating the model validation steps after AI model training     |
 | [value](value.md)                                                                         | Some numeric or string value                                                     |
 | [version](version.md)                                                                     | The version of the entity embodied by a specified resource                       |
 | [vocabularies](vocabularies.md)                                                           | A list of vocabularies                                                           |
 
 ## Enumerations
 
-| Enumeration                                                           | Description                                                                   |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| [AdapterType](AdapterType.md)                                         |                                                                               |
-| [AiSystemType](AiSystemType.md)                                       |                                                                               |
-| [AIUC1ApplicationCategory](AIUC1ApplicationCategory.md)               | AIUC1 Application Category                                                    |
-| [AIUC1ControlApplicationCategory](AIUC1ControlApplicationCategory.md) | AIUC1 ControlApplication Category                                             |
-| [AIUC1EvidenceCategory](AIUC1EvidenceCategory.md)                     | AIUC1 Evidence Category                                                       |
-| [AIUC1Frequency](AIUC1Frequency.md)                                   | AIUC1 Frequency                                                               |
-| [AIUC1RequirementType](AIUC1RequirementType.md)                       | AIUC1 Requirement Type                                                        |
-| [EuAiRiskCategory](EuAiRiskCategory.md)                               |                                                                               |
-| [Jurisdiction](Jurisdiction.md)                                       | ISO 3166-1 country code, sourced from the DPV Location ontology (https://w3id |
+| Enumeration                                                           | Description                                                                      |
+| --------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| [AdapterType](AdapterType.md)                                         |                                                                                  |
+| [AiSystemType](AiSystemType.md)                                       |                                                                                  |
+| [AIUC1ApplicationCategory](AIUC1ApplicationCategory.md)               | AIUC1 Application Category                                                       |
+| [AIUC1ControlApplicationCategory](AIUC1ControlApplicationCategory.md) | AIUC1 ControlApplication Category                                                |
+| [AIUC1EvidenceCategory](AIUC1EvidenceCategory.md)                     | AIUC1 Evidence Category                                                          |
+| [AIUC1Frequency](AIUC1Frequency.md)                                   | AIUC1 Frequency                                                                  |
+| [AIUC1RequirementType](AIUC1RequirementType.md)                       | AIUC1 Requirement Type                                                           |
+| [EuAiRiskCategory](EuAiRiskCategory.md)                               |                                                                                  |
+| [Jurisdiction](Jurisdiction.md)                                       | ISO 3166-1 country code, sourced from the DPV Location ontology (https://w3id    |
+| [LifecycleStatus](LifecycleStatus.md)                                 | Editorial / publication state of a catalogued entity                             |
+| [SubnationalJurisdiction](SubnationalJurisdiction.md)                 | Subnational or regional jurisdiction, sourced from the DPV Location ontology ... |
+| [SupraNationalJurisdiction](SupraNationalJurisdiction.md)             | Supra-national or intergovernmental jurisdiction, sourced from the DPV Locati... |
 
 ## Types
 

@@ -107,8 +107,9 @@ class TestHFInferenceEngine(unittest.TestCase):
             mock_choice.logprobs = None
 
             mock_usage = Mock()
-            mock_usage.total_tokens = 100
+            mock_usage.prompt_tokens = 100
             mock_usage.completion_tokens = 50
+            mock_usage.total_tokens = 150
 
             mock_response = Mock()
             mock_response.choices = [mock_choice]
@@ -151,8 +152,9 @@ class TestHFInferenceEngine(unittest.TestCase):
             mock_choice.logprobs = mock_logprobs
 
             mock_usage = Mock()
-            mock_usage.total_tokens = 10
+            mock_usage.prompt_tokens = 5
             mock_usage.completion_tokens = 5
+            mock_usage.total_tokens = 10
 
             mock_response = Mock()
             mock_response.choices = [mock_choice]

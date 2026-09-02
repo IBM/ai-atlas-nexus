@@ -736,6 +736,14 @@ documents:
       promote safer AI deployment.
     url: https://arxiv.org/pdf/2503.05731
     dateCreated: 2025-02-19
+  - id: owasp-agentic-skills-top-10-whitepaper-v1
+    name: OWASP Agentic Skills Top 10 Whitepaper (V1)
+    description: The OWASP Agentic Skills Top 10 whitepaper documents ten security risks
+      affecting reusable AI agent skills and provides guidance for builders, enterprises,
+      marketplaces, and reviewers.
+    url: https://owasp.org/www-project-agentic-skills-top-10/assets/publications/ast10-top10-whitepaper-2.pdf
+    hasLicense: license-cc-by-sa-4.0
+    author: OWASP Agentic Skills Top 10 Project
   - id: doc-un-ethical-use-of-ai-principles
     name:
       Principles for the ethical use of artificial intelligence in the United Nations
@@ -890,6 +898,17 @@ documents:
       and actionable guidance for stakeholders to implement RAI."
     url: https://doi.org/10.1145/3626234
     dateCreated: 2024-04-09
+  - id: granite-4.2-blog
+    name: "Granite 4.2 LLMs: How They're Built"
+    description:
+      Technical blog post describing Granite 4.2, a family of dense, decoder-only
+      reasoning models (3B, 8B and 30B) post-trained from the Granite 4.1 base models.
+      It covers the supervised fine-tuning corpus, the multi-phase multi-environment
+      reinforcement learning stage built on GRPO, the closing preference-alignment phase,
+      and the built-in thinking, non-thinking and low-effort inference modes.
+    url: https://huggingface.co/blog/ibm-granite/granite-4-2
+    dateCreated: 2026-08-25
+    author: Yousaf Shah, Swanand Kadhe, Riddhiman Moulick, Ashish Sunil Agrawal
   - id: arxiv.org/pdf/2406.17864
     name: The AI Risk Taxonomy (AIR 2024)
     description:
@@ -2030,6 +2049,75 @@ documents:
       model available in the space. Released as open-source, Granite Guardian aims to
       promote responsible AI development across the community.
     url: https://arxiv.org/abs/2412.07724
+  - id: https://arxiv.org/abs/2310.06770
+    name: "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+    description: Introduces SWE-bench, an evaluation framework of real GitHub issues
+      and their pull requests drawn from popular Python repositories, in which a model
+      must edit a codebase so that the repository's own tests pass.
+    url: https://arxiv.org/abs/2310.06770
+    dateCreated: 2023-10-10
+  - id: https://arxiv.org/abs/2510.18941
+    name: "ProfBench: Multi-Domain Rubrics requiring Professional Knowledge to Answer
+      and Judge"
+    description: Introduces ProfBench, a benchmark of professional-level tasks across
+      physics, chemistry, finance and consulting, scored against expert-authored rubrics
+      by an LLM judge.
+    url: https://arxiv.org/abs/2510.18941
+    dateCreated: 2025-10-21
+  - id: https://arxiv.org/abs/2305.03111
+    name: Can LLM Already Serve as A Database Interface? A BIg Bench for Large-Scale
+      Database Grounded Text-to-SQLs
+    description: Introduces BIRD, a large-scale text-to-SQL benchmark grounded in 95
+      real databases spanning 37 professional domains, emphasising dirty values, external
+      knowledge and SQL execution efficiency.
+    url: https://arxiv.org/abs/2305.03111
+    dateCreated: 2023-05-04
+  - id: https://arxiv.org/abs/2605.00674
+    name: "Beyond Benchmarks: MathArena as an Evaluation Platform for Mathematics with
+      LLMs"
+    description: Describes MathArena, an evaluation platform that scores language models
+      on mathematics competitions such as AIME and HMMT immediately after they take
+      place, so the problems are uncontaminated at evaluation time.
+    url: https://arxiv.org/abs/2605.00674
+    dateCreated: 2026-05-01
+  - id: https://arxiv.org/abs/2403.07974
+    name: "LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language
+      Models for Code"
+    description: Introduces LiveCodeBench, a continuously updated code benchmark that
+      collects new competitive-programming problems over time so that evaluation stays
+      free of training-data contamination.
+    url: https://arxiv.org/abs/2403.07974
+    dateCreated: 2024-03-12
+  - id: https://arxiv.org/abs/2407.13168
+    name: "SciCode: A Research Coding Benchmark Curated by Scientists"
+    description: Introduces SciCode, a benchmark of scientific research coding problems
+      decomposed into subproblems by working scientists across mathematics, physics,
+      chemistry, biology and materials science.
+    url: https://arxiv.org/abs/2407.13168
+    dateCreated: 2024-07-18
+  - id: https://arxiv.org/abs/2503.10497
+    name: "MMLU-ProX: A Multilingual Benchmark for Advanced Large Language Model Evaluation"
+    description: Introduces MMLU-ProX, a multilingual extension of MMLU-Pro that carries
+      the reasoning-focused question set into many typologically diverse languages through
+      expert-verified translation.
+    url: https://arxiv.org/abs/2503.10497
+    dateCreated: 2025-03-13
+  - id: https://arxiv.org/abs/2507.02833
+    name: Generalizing Verifiable Instruction Following
+    description:
+      Introduces IFBench, a benchmark of held-out, programmatically verifiable
+      output constraints designed to measure whether instruction-following generalizes
+      beyond the constraint types seen during training.
+    url: https://arxiv.org/abs/2507.02833
+    dateCreated: 2025-07-03
+  - id: https://arxiv.org/abs/2404.06654
+    name: "RULER: What's the Real Context Size of Your Long-Context Language Models?"
+    description:
+      Introduces RULER, a synthetic long-context benchmark spanning retrieval,
+      multi-hop tracing, aggregation and question answering at configurable input lengths,
+      used to probe effective rather than claimed context size.
+    url: https://arxiv.org/abs/2404.06654
+    dateCreated: 2024-04-09
   - id: doc-ibms-principles-for-trust-and-transparency
     name: IBM's Principles for Trust and Transparency
     description: "For more than a century, IBM has earned the trust of our clients by
@@ -2289,7 +2377,7 @@ datasets:
     hasDocumentation:
       - https://arxiv.org/abs/2403.03218
       - repo_centerforaisafety_wmdp
-    provider: cais
+    isProvidedBy: cais
   - id: CybersecurityBenchmarks_datasets_frr
     name: False Refusal Rate (FRR)
     description: A dataset to evaluate the False Refusal Rate (FRR) of LLM models when
@@ -2349,7 +2437,7 @@ datasets:
     hasLicense: license-mit
     hasDocumentation:
       - arxiv.org/2009.03300
-    provider: cais
+    isProvidedBy: cais
   - id: TIGER-Lab/MMLU-Pro
     description: MMLU-Pro dataset is a more robust and challenging massive multi-task
       understanding dataset tailored to more rigorously benchmark large language models'
@@ -2358,7 +2446,7 @@ datasets:
     hasLicense: license-mit
     hasDocumentation:
       - https://arxiv.org/abs/2406.01574
-    provider: TIGER-lab
+    isProvidedBy: TIGER-lab
   - id: big-bench-hard-dataset
     name: BIG-Bench
     description: BIG-Bench (Srivastava et al., 2022) is a diverse evaluation suite that
@@ -2533,7 +2621,7 @@ datasets:
       2.94% of the dataset."
     url: https://huggingface.co/datasets/codeparrot/github-code-clean
     hasLicense: license-apache-2.0
-    provider: codeparrot
+    isProvidedBy: codeparrot
   - id: starcoder
     name: Star Coder Training Dataset
     description: This is the dataset used for training StarCoder and StarCoderBase.
@@ -2543,7 +2631,7 @@ datasets:
     url: https://huggingface.co/datasets/bigcode/starcoderdata
     dateCreated: 2023-03-30
     dateModified: 2023-05-16
-    provider: bigcode
+    isProvidedBy: bigcode
   - id: open-web-math
     name: OpenWebMath Dataset
     description: OpenWebMath is a dataset containing the majority of the high-quality,
@@ -2555,6 +2643,87 @@ datasets:
     dateCreated: 2023-09-06
     hasDocumentation:
       - arxiv.org/2310.06786
+  - id: SWE-bench/SWE-bench_Multilingual
+    name: SWE-bench Multilingual
+    description: "A multilingual extension of SWE-bench: 300 task instances drawn from
+      repositories across nine programming languages, each pairing a real issue with
+      the tests that verify its resolution."
+    url: https://huggingface.co/datasets/SWE-bench/SWE-bench_Multilingual
+    hasLicense: license-mit
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+  - id: ScaleAI/SWE-bench_Pro
+    name: SWE-bench Pro
+    description: A harder, contamination-resistant SWE-bench variant built from copyleft
+      and enterprise repositories, with long-horizon tasks that typically require edits
+      across multiple files.
+    url: https://huggingface.co/datasets/ScaleAI/SWE-bench_Pro
+  - id: princeton-nlp/SWE-bench_Verified
+    name: SWE-bench Verified
+    description: A 500-instance subset of SWE-bench that human annotators confirmed
+      to be solvable and correctly specified, removing under-specified problems and
+      broken test setups from the original set.
+    url: https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+  - id: nvidia/ProfBench
+    name: ProfBench
+    description:
+      Professional-knowledge tasks paired with expert-authored grading rubrics
+      across physics, chemistry, finance and consulting, for use with an LLM judge.
+    url: https://huggingface.co/datasets/nvidia/ProfBench
+    hasDocumentation:
+      - https://arxiv.org/abs/2510.18941
+  - id: openai/gdpval
+    name: GDPval
+    description: Tasks drawn from real occupational deliverables across the sectors
+      that contribute most to GDP, graded by comparison against work produced by experienced
+      professionals in each occupation.
+    url: https://huggingface.co/datasets/openai/gdpval
+  - id: MathArena/aime_2025
+    name: AIME 2025
+    description:
+      The problems and answers from the 2025 American Invitational Mathematics
+      Examination, released for evaluation immediately after the competition so that
+      they are uncontaminated.
+    url: https://huggingface.co/datasets/MathArena/aime_2025
+    hasLicense: license-cc-by-nc-sa-4.0
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+  - id: MathArena/hmmt_feb_2025
+    name: HMMT February 2025
+    description: The problems and answers from the February 2025 Harvard-MIT Mathematics
+      Tournament, released for evaluation immediately after the competition so that
+      they are uncontaminated.
+    url: https://huggingface.co/datasets/MathArena/hmmt_feb_2025
+    hasLicense: license-cc-by-nc-sa-4.0
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+  - id: livecodebench/code_generation_lite
+    name: LiveCodeBench Code Generation (lite)
+    description: The code-generation split of LiveCodeBench, published as dated releases
+      so that a model can be scored only on problems that appeared after its training
+      cutoff.
+    url: https://huggingface.co/datasets/livecodebench/code_generation_lite
+    hasDocumentation:
+      - https://arxiv.org/abs/2403.07974
+  - id: SciCode1/SciCode
+    name: SciCode
+    description:
+      Scientific research coding problems curated by scientists, each decomposed
+      into subproblems with reference solutions and numerical test cases.
+    url: https://huggingface.co/datasets/SciCode1/SciCode
+    hasLicense: license-apache-2.0
+    hasDocumentation:
+      - https://arxiv.org/abs/2407.13168
+  - id: li-lab/MMLU-ProX-Lite
+    name: MMLU-ProX-Lite
+    description:
+      A lightweight sample of MMLU-ProX providing a fixed subset of the reasoning-focused
+      MMLU-Pro questions in each supported language, for cheaper multilingual evaluation.
+    url: https://huggingface.co/datasets/li-lab/MMLU-ProX-Lite
+    hasDocumentation:
+      - https://arxiv.org/abs/2503.10497
 llmintrinsics:
   - id: ibm-factuality-intrinsic-qr
     name: Query Rewrite (QR)
@@ -3364,6 +3533,19 @@ taxonomies:
     hasDocumentation:
       - AILuminate-doc
     type: RiskTaxonomy
+  - id: owasp-ast10
+    name: OWASP Agentic Skills Top 10
+    description:
+      The OWASP Agentic Skills Top 10 documents ten security risks in reusable
+      AI agent skills. It focuses on the skill layer, where instructions, code, dependencies,
+      metadata, distribution channels, and runtime permissions combine to shape agent
+      behavior.
+    url: https://owasp.org/www-project-agentic-skills-top-10/
+    version: 1.0 (2026 Edition)
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasLicense: license-cc-by-sa-4.0
+    type: RiskTaxonomy
   - id: mit-ai-risk-repository
     name: "The AI Risk Repository: Domain Taxonomy of AI Risks"
     description:
@@ -3919,6 +4101,7 @@ entries:
       - mit-ai-causal-risk-intent-unintentional
       - mit-ai-causal-risk-timing-post-deployment
       - mit-ai-risk-subdomain-6.5
+      - ast08-poor-scanning
     broad_mappings:
       - nist-value-chain-and-component-integration
     isDefinedByTaxonomy: ibm-risk-atlas
@@ -4322,6 +4505,7 @@ entries:
     related_mappings:
       - aiuc1-req-b001
       - aiuc1-req-b002
+      - ast05-untrusted-external-instructions
     narrow_mappings:
       - atlas-prompt-injection
     broad_mappings:
@@ -4348,6 +4532,7 @@ entries:
       - aiuc1-req-e001
       - aiuc1-req-e002
       - aiuc1-req-e013
+      - ast07-update-drift
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-governance
     type: Risk
@@ -4485,6 +4670,7 @@ entries:
     related_mappings:
       - aiuc1-req-b006
       - aiuc1-req-b007
+      - ast04-insecure-metadata
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-robustness
     type: Risk
@@ -4843,6 +5029,8 @@ entries:
       - aiuc1-req-b008
       - aiuc1-req-d003
       - aiuc1-req-e009
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-robustness
     type: Risk
@@ -5053,6 +5241,7 @@ entries:
       - aiuc1-req-b008
       - aiuc1-req-d003
       - aiuc1-req-e009
+      - ast03-over-privileged-skills
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-robustness
     type: Risk
@@ -5423,6 +5612,7 @@ entries:
       - aiuc1-req-e004
     related_mappings:
       - aiuc1-req-e015
+      - ast09-no-governance
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-governance
     type: Risk
@@ -5624,6 +5814,7 @@ entries:
     dateModified: 2025-10-10
     related_mappings:
       - aiuc1-req-e015
+      - ast10-cross-platform-reuse
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-governance
     type: Risk
@@ -6067,6 +6258,8 @@ entries:
       - aiuc1-req-a003
       - aiuc1-req-a004
       - aiuc1-req-e009
+      - ast03-over-privileged-skills
+      - ast06-weak-isolation
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-privacy
     type: Risk
@@ -6501,6 +6694,8 @@ entries:
     dateModified: 2025-10-10
     close_mappings:
       - aiuc1-req-e015
+    related_mappings:
+      - ast09-no-governance
     isDefinedByTaxonomy: ibm-risk-atlas
     isPartOf: ibm-risk-atlas-explainability
     type: Risk
@@ -7736,6 +7931,162 @@ entries:
     isDefinedByTaxonomy: ailuminate-v1.0
     isPartOf: ail-contextual-hazards
     type: Risk
+  - id: ast01-malicious-skills
+    name: AST01 - Malicious Skills
+    description: Threat actors publish malicious skills through public repositories
+      and skill marketplaces, and may also distribute them through community forums
+      or trojanized or impersonated agent downloads. These skills appear legitimate
+      but contain hidden payloads - credential stealers, reverse shells, backdoors,
+      or social-engineering instructions embedded in SKILL.md prose. Because agent skills
+      execute with the host agent permissions, a malicious skill can gain access to
+      API keys, SSH credentials, wallet files, browser data, and shell capabilities.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast01.html
+    related_mappings:
+      - atlas-external-resources-attack-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: malicious-skills
+    risk_type: agentic
+  - id: ast02-supply-chain-compromise
+    name: AST02 - Supply Chain Compromise
+    description: Skill registries and distribution channels lack the provenance controls
+      common in mature package ecosystems (npm, PyPI, Cargo). Attackers exploit this
+      absence through coordinated mass uploads, dependency confusion, account takeover,
+      and repository poisoning. Configuration files that were once passive metadata
+      have become active execution paths - the CI/CD pipeline now includes skills as
+      a first-class attack surface.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast02.html
+    related_mappings:
+      - atlas-external-resources-attack-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: supply-chain-compromise
+    risk_type: agentic
+  - id: ast03-over-privileged-skills
+    name: AST03 - Over-Privileged Skills
+    description: "Skills are granted broader permissions than their stated function
+      requires - either because no permission manifest system exists, or because users
+      accept all permissions without review. This creates excessive blast radius: a
+      legitimate skill with overly permissive database access can be weaponized by a
+      downstream prompt injection attack to execute DROP TABLE commands it was never
+      meant to run."
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast03.html
+    related_mappings:
+      - atlas-sharing-info-tools-agentic
+      - atlas-unauthorized-use-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: over-privileged-skills
+    risk_type: agentic
+  - id: ast04-insecure-metadata
+    name: AST04 - Insecure Metadata
+    description: "A skill's metadata and definition files - name, description, author,
+      permissions, requires, risk_tier, and the YAML/JSON/Markdown they are written
+      in - are attacker-controlled inputs the loader reads with little or no validation.
+      This exposes two linked weaknesses: at the semantic layer, fields can impersonate
+      trusted brands, understate permissions, or misdeclare risk tiers to deceive the
+      installer; at the parsing layer, unsafe deserialization of those same files lets
+      an attacker embed executable payloads that trigger on load, before any user action."
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast04.html
+    related_mappings:
+      - atlas-exploit-trust-mismatch-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: insecure-metadata
+    risk_type: agentic
+  - id: ast05-untrusted-external-instructions
+    name: AST05 - Untrusted External Instructions
+    description: "Skills routinely reference external documentation - API references,
+      SDK guides, schemas, runbooks - pointing the agent at a URL or remote file to
+      read at runtime. In practice that content becomes part of the skill's instructions:
+      the agent loads it, trusts it as it trusts the skill, and acts on it with the
+      host agent's full permissions. Yet unlike the skill package - which can be reviewed,
+      signed, and version- or hash-pinned - this referenced content is mutable, lives
+      outside the trust boundary, and has no equivalent control; it can change at any
+      moment. It can be poisoned by an attacker who owns the external source, or rewritten
+      by the skill's own author after the skill has passed review - so the skill that
+      was audited is never the skill that actually runs."
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast05.html
+    related_mappings:
+      - atlas-indirect-instructions-attack
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: untrusted-external-instructions
+    risk_type: agentic
+  - id: ast06-weak-isolation
+    name: AST06 - Weak Isolation
+    description: Skills execute in the same security context as the host agent - with
+      full file system access, shell access, and network egress - because sandboxing
+      is either unavailable, optional, or disabled by default. This removes all containment
+      guarantees and turns every installed skill into a potential full-system compromise.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast06.html
+    related_mappings:
+      - atlas-sharing-info-tools-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: weak-isolation
+    risk_type: agentic
+  - id: ast07-update-drift
+    name: AST07 - Update Drift
+    description:
+      Skills are installed and forgotten. Without immutable pinning and automated
+      update verification, deployed skills drift out of sync with known-good versions
+      - either because patches are not applied (leaving known vulnerabilities open)
+      or because auto-update mechanisms blindly apply upstream changes that may themselves
+      be malicious.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast07.html
+    related_mappings:
+      - atlas-mitigation-maintenance-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: update-drift
+    risk_type: agentic
+  - id: ast08-poor-scanning
+    name: AST08 - Poor Scanning
+    description: Traditional code-scanning tools are often insufficient for agent skills
+      because skills combine natural-language instructions with executable content and
+      metadata. This hybrid format can evade pattern matching, regular-expression filters,
+      and signature-based detection, allowing some malicious skills to pass the checks
+      deployed by current marketplaces and development workflows.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast08.html
+    related_mappings:
+      - atlas-incorrect-risk-testing
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: poor-scanning
+    risk_type: agentic
+  - id: ast09-no-governance
+    name: AST09 - No Governance
+    description:
+      Organizations deploying AI agents lack the inventories, policies, review
+      processes, and audit trails needed to manage skills at enterprise scale. Skills
+      are installed by individual users with no SOC visibility, no approval workflow,
+      and no revocation mechanism - creating a "shadow AI" layer that security teams
+      cannot see or control.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast09.html
+    related_mappings:
+      - atlas-accountability-agentic
+      - atlas-unexplainable-untraceable-actions-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: no-governance
+    risk_type: agentic
+  - id: ast10-cross-platform-reuse
+    name: AST10 - Cross-Platform Reuse
+    description: Skills are increasingly ported across platforms (OpenClaw → Claude
+      Code → Cursor → VS Code) without translating the security properties of the source
+      format. A skill with a permission manifest on one platform is stripped of that
+      manifest on another. Security controls that exist in one ecosystem's metadata
+      format simply do not exist in others - creating exploitable gaps as skills move
+      between platforms. Porting agentic skills across platforms creates critical security
+      issues like manifest stripping, context loss, and uncontrolled execution.
+    url: https://owasp.org/www-project-agentic-skills-top-10/ast10.html
+    related_mappings:
+      - atlas-reproducibility-agentic
+    isDefinedByTaxonomy: owasp-ast10
+    type: Risk
+    tag: cross-platform-reuse
+    risk_type: agentic
   - id: principle-un-do-no-harm
     name: Do no harm
     description: Artificial intelligence systems should not be used in ways that cause
@@ -31598,7 +31949,695 @@ evaluations:
       - safety-evaluation
       - alignment
       - instruction-following
+  - id: ai_eval_swe_bench_multilingual
+    name: SWE-bench Multilingual
+    description: A multilingual extension of SWE-bench in which an agent must resolve
+      a real GitHub issue by editing a repository until its own tests pass. The 300
+      instances span nine programming languages, so the benchmark measures software-engineering
+      ability outside Python as well as within it.
+    url: https://huggingface.co/datasets/SWE-bench/SWE-bench_Multilingual
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+    hasDataset:
+      - SWE-bench/SWE-bench_Multilingual
+    hasTasks:
+      - code-editing
+      - software-engineering
+      - agentic-coding
+    hasImplementation:
+      - https://github.com/SWE-bench/SWE-bench
+    hasLicense: license-mit
+  - id: ai_eval_swe_bench_pro
+    name: SWE-bench Pro
+    description:
+      A harder, contamination-resistant variant of SWE-bench drawn from copyleft
+      and enterprise repositories. Tasks are long-horizon and usually require coordinated
+      edits across several files, so scores are substantially lower than on SWE-bench
+      Verified.
+    url: https://scale.com/leaderboard/swe_bench_pro_public
+    notes:
+      - The SWE-bench Pro technical report is published as a PDF on Scale AI's site rather
+        than as a catalogued paper, so no documentation node is referenced.
+    hasDataset:
+      - ScaleAI/SWE-bench_Pro
+    hasTasks:
+      - code-editing
+      - software-engineering
+      - agentic-coding
+    hasImplementation:
+      - https://github.com/scaleapi/SWE-bench_Pro-os
+  - id: ai_eval_swe_bench_verified
+    name: SWE-bench Verified
+    description: The 500-instance human-validated subset of SWE-bench, filtered so that
+      every task is solvable and correctly specified. It is the most widely reported
+      SWE-bench configuration and the standard measure of agentic issue-resolution ability.
+    url: https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified
+    hasDocumentation:
+      - https://arxiv.org/abs/2310.06770
+    hasDataset:
+      - princeton-nlp/SWE-bench_Verified
+    hasTasks:
+      - code-editing
+      - software-engineering
+      - agentic-coding
+    hasImplementation:
+      - https://github.com/SWE-bench/SWE-bench
+      - https://www.swebench.com/
+  - id: ai_eval_terminal_bench
+    name: Terminal-Bench
+    description: A benchmark for agents operating a real command-line shell. Each task
+      places the agent in a containerised terminal environment with an objective that
+      is verified by scripted checks, measuring end-to-end competence at multi-step
+      system administration, build and debugging work.
+    url: https://www.tbench.ai/
+    notes:
+      - Terminal-Bench is versioned and released iteratively; the specific version scored
+        is recorded on the individual evaluation results rather than in this node.
+    hasTasks:
+      - agentic-tool-use
+      - terminal-use
+      - software-engineering
+    hasImplementation:
+      - https://www.tbench.ai/
+  - id: ai_eval_tau3_bench
+    name: τ³-bench
+    description: A conversational tool-agent benchmark in which a model acts as an agent
+      in a simulated domain (retail, airline or telecom), talking to a simulated user
+      while calling domain APIs and respecting a written policy. Success requires both
+      correct tool use and a correct final database state.
+    url: https://github.com/sierra-research/tau2-bench
+    notes:
+      - Distributed as part of the sierra-research tau2-bench repository, which carries
+        the τ³ task suite; the τ³ release does not have a separate paper of its own.
+    hasTasks:
+      - agentic-tool-use
+      - function-calling
+      - dialogue
+    hasImplementation:
+      - https://github.com/sierra-research/tau2-bench
+  - id: ai_eval_bfcl_v4
+    name: BFCL v4
+    description: Version 4 of the Berkeley Function Calling Leaderboard, which evaluates
+      how accurately a model invokes functions. Beyond the earlier single, parallel
+      and multi-turn categories, v4 adds agentic web search, memory and format-sensitivity
+      evaluation.
+    url: https://gorilla.cs.berkeley.edu/leaderboard.html
+    notes:
+      - "Scores are not comparable with ai_eval_bfcl_v3: v4 changes both the category
+        mix and the scoring."
+    hasDataset:
+      - gorilla-llm/Berkeley-Function-Calling-Leaderboard
+    hasTasks:
+      - function-calling
+      - agentic-tool-use
+    hasImplementation:
+      - https://github.com/ShishirPatil/gorilla
+    hasLicense: license-apache-2.0
+  - id: ai_eval_profbench
+    name: ProfBench
+    description: A benchmark of professional-level tasks in physics, chemistry, finance
+      and consulting, each graded against an expert-authored rubric by an LLM judge.
+      It measures whether a model can produce work that meets the standards of a domain
+      professional rather than merely answering a question correctly.
+    url: https://huggingface.co/datasets/nvidia/ProfBench
+    hasDocumentation:
+      - https://arxiv.org/abs/2510.18941
+    hasDataset:
+      - nvidia/ProfBench
+    hasTasks:
+      - question-answering
+      - report-generation
+      - domain-expertise
+    hasImplementation:
+      - https://huggingface.co/datasets/nvidia/ProfBench
+  - id: ai_eval_bird_bench
+    name: BIRD-Bench
+    description:
+      A large-scale text-to-SQL benchmark grounded in 95 real databases across
+      37 professional domains. Unlike earlier text-to-SQL suites it retains dirty values
+      and requires external knowledge, so a model must reason about the data as well
+      as the schema.
+    url: https://bird-bench.github.io/
+    notes:
+      - The Hugging Face distribution is published under date-stamped dataset repositories,
+        so no dataset node is referenced here.
+    hasDocumentation:
+      - https://arxiv.org/abs/2305.03111
+    hasTasks:
+      - text-to-sql
+      - question-answering
+      - code-generation
+    hasImplementation:
+      - https://bird-bench.github.io/
+    hasLicense: license-cc-by-sa-4.0
+  - id: ai_eval_gdpval
+    name: GDPval
+    description: An evaluation built from real occupational deliverables across the
+      sectors contributing most to GDP. Model output is compared against work produced
+      by experienced professionals in the same occupation, so the reported figure is
+      a graded comparison rather than a percentage accuracy.
+    url: https://huggingface.co/datasets/openai/gdpval
+    notes:
+      - GDPval scores are not percentages. The Granite 4.2 model cards report four-digit
+        GDPval figures without stating the unit; interpret them only relative to other
+        models scored the same way.
+    hasDataset:
+      - openai/gdpval
+    hasTasks:
+      - report-generation
+      - domain-expertise
+      - agentic-tool-use
+    hasImplementation:
+      - https://huggingface.co/datasets/openai/gdpval
+  - id: ai_eval_aime25
+    name: AIME 2025
+    description:
+      The 2025 American Invitational Mathematics Examination, scored as exact-answer
+      accuracy over the competition's 30 problems. Because the problems were released
+      for evaluation immediately after the contest, they are uncontaminated by model
+      training data.
+    url: https://huggingface.co/datasets/MathArena/aime_2025
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+    hasDataset:
+      - MathArena/aime_2025
+    hasTasks:
+      - mathematical-reasoning
+      - question-answering
+    hasImplementation:
+      - https://github.com/eth-sri/matharena
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: ai_eval_hmmt_feb25
+    name: HMMT February 2025
+    description:
+      The February 2025 Harvard-MIT Mathematics Tournament, scored as exact-answer
+      accuracy. Like the other MathArena competition sets it was published for evaluation
+      directly after the contest, making it an uncontaminated measure of competition
+      mathematics ability.
+    url: https://huggingface.co/datasets/MathArena/hmmt_feb_2025
+    hasDocumentation:
+      - https://arxiv.org/abs/2605.00674
+    hasDataset:
+      - MathArena/hmmt_feb_2025
+    hasTasks:
+      - mathematical-reasoning
+      - question-answering
+    hasImplementation:
+      - https://github.com/eth-sri/matharena
+    hasLicense: license-cc-by-nc-sa-4.0
+  - id: ai_eval_livecodebench
+    name: LiveCodeBench
+    description:
+      A continuously updated code benchmark that collects new competitive-programming
+      problems over time and scores models only on problems published after their training
+      cutoff, so contamination is avoided by construction. Released in dated versions.
+    url: https://livecodebench.github.io/
+    notes:
+      - LiveCodeBench is released as dated versions; the version scored is recorded on
+        the individual evaluation results rather than in this node.
+    hasDocumentation:
+      - https://arxiv.org/abs/2403.07974
+    hasDataset:
+      - livecodebench/code_generation_lite
+    hasTasks:
+      - code-generation
+      - mathematical-reasoning
+    hasImplementation:
+      - https://github.com/LiveCodeBench/LiveCodeBench
+  - id: ai_eval_scicode
+    name: SciCode
+    description:
+      A research coding benchmark curated by working scientists across mathematics,
+      physics, chemistry, biology and materials science. Each problem is decomposed
+      into subproblems with reference solutions and numerical tests, so it measures
+      scientific reasoning expressed as executable code.
+    url: https://scicode-bench.github.io/
+    hasDocumentation:
+      - https://arxiv.org/abs/2407.13168
+    hasDataset:
+      - SciCode1/SciCode
+    hasTasks:
+      - code-generation
+      - scientific-reasoning
+    hasImplementation:
+      - https://github.com/scicode-bench/SciCode
+    hasLicense: license-apache-2.0
+  - id: ai_eval_mmlu_prox_lite
+    name: MMLU-ProX Lite
+    description:
+      A lightweight sample of MMLU-ProX, the multilingual extension of MMLU-Pro.
+      It carries the reasoning-focused MMLU-Pro question set into many typologically
+      diverse languages, providing a fixed subset per language for cheaper multilingual
+      evaluation.
+    url: https://huggingface.co/datasets/li-lab/MMLU-ProX-Lite
+    hasDocumentation:
+      - https://arxiv.org/abs/2503.10497
+    hasDataset:
+      - li-lab/MMLU-ProX-Lite
+    hasTasks:
+      - question-answering
+      - multilingual-understanding
+      - logical-reasoning
+    hasImplementation:
+      - https://huggingface.co/datasets/li-lab/MMLU-ProX-Lite
+  - id: ai_eval_arena_hard_v2
+    name: Arena-Hard v2
+    description:
+      The second generation of Arena-Hard, an automatic evaluation of open-ended
+      chat quality that scores a model's win rate against a baseline as adjudicated
+      by an LLM judge, using a refreshed and harder prompt set than the original release.
+    url: https://github.com/lmarena/arena-hard-auto
+    notes:
+      - Scores are not comparable with ai_eval_arenahard, which covers the original Arena-Hard
+        prompt set.
+    hasDocumentation:
+      - arxiv.org/2406.11939
+    hasDataset:
+      - lmarena-ai/arena-hard-auto
+    hasTasks:
+      - text-generation
+      - dialogue
+      - instruction-following
+    hasImplementation:
+      - https://github.com/lmarena/arena-hard-auto
+    hasLicense: license-apache-2.0
+  - id: ai_eval_ifbench
+    name: IFBench
+    description:
+      A benchmark of held-out, programmatically verifiable output constraints,
+      built to test whether instruction following generalizes to constraint types a
+      model was not trained on. Reported per prompt or per individual constraint.
+    url: https://github.com/allenai/IFBench
+    notes:
+      - "Distinct from ai_eval_ifeval: IFBench uses held-out constraint types specifically
+        chosen to be absent from instruction-following training data."
+    hasDocumentation:
+      - https://arxiv.org/abs/2507.02833
+    hasTasks:
+      - instruction-following
+      - text-generation
+    hasImplementation:
+      - https://github.com/allenai/IFBench
+  - id: ai_eval_ruler
+    name: RULER
+    description:
+      A synthetic long-context benchmark spanning retrieval, multi-hop variable
+      tracing, aggregation and long-context question answering. Tasks are generated
+      at configurable input lengths, so RULER measures a model's effective context size
+      rather than its advertised one.
+    url: https://github.com/NVIDIA/RULER
+    notes:
+      - RULER is evaluated at a chosen input length; the length is recorded on the individual
+        evaluation results (for example RULER 64K and RULER 128K) rather than as separate
+        benchmark nodes.
+    hasDocumentation:
+      - https://arxiv.org/abs/2404.06654
+    hasTasks:
+      - long-context-understanding
+      - retrieval
+      - question-answering
+    hasImplementation:
+      - https://github.com/NVIDIA/RULER
+    hasLicense: license-apache-2.0
 aievalresults:
+  - id: tau3-bench-avg-granite-4.2-3b
+    name: τ³-bench (AVG) result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "45.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_tau3_bench
+  - id: bfcl-v4-granite-4.2-3b
+    name: BFCL (v4) result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "52.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_bfcl_v4
+  - id: profbench-granite-4.2-3b
+    name: ProfBench result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "32.10"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_profbench
+  - id: aime25-granite-4.2-3b
+    name: AIME25 result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "78.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_aime25
+  - id: hmmt-feb25-granite-4.2-3b
+    name: HMMT Feb25 result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "66.67"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_hmmt_feb25
+  - id: gpqa-granite-4.2-3b
+    name: GPQA result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "54.80"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_gpqa
+  - id: livecodebench-v6-granite-4.2-3b
+    name: LiveCodeBench v6 result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "69.71"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_livecodebench
+  - id: scicode-granite-4.2-3b
+    name: SciCode result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "24.11"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_scicode
+  - id: mmlu-pro-granite-4.2-3b
+    name: MMLU-Pro result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "67.84"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_mmlu_pro
+  - id: mmlu-prox-lite-granite-4.2-3b
+    name: MMLU-ProX lite (IBM) result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "27.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_mmlu_prox_lite
+  - id: arena-hard-v2-granite-4.2-3b
+    name: Arena-Hard-V2 result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "34.96"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_arena_hard_v2
+  - id: ifbench-prompt-granite-4.2-3b
+    name: IFBench (prompt) result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "74.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_ifbench
+  - id: ruler-64k-granite-4.2-3b
+    name: RULER 64K result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "67.52"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_ruler
+  - id: ruler-128k-granite-4.2-3b
+    name: RULER 128K result for Granite-4.2-3B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "55.30"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-3b
+    isResultOf: ai_eval_ruler
+  - id: swe-bench-multilingual-granite-4.2-8b
+    name: SWE Bench Multilingual result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "30.78"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_swe_bench_multilingual
+  - id: swe-bench-pro-granite-4.2-8b
+    name: SWE Bench Pro result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "19.11"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_swe_bench_pro
+  - id: swe-bench-verified-granite-4.2-8b
+    name: SWE Bench Verified result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "47.67"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_swe_bench_verified
+  - id: terminal-bench-2.1-granite-4.2-8b
+    name: Terminal-Bench 2.1 result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "20.56"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_terminal_bench
+  - id: tau3-bench-avg-granite-4.2-8b
+    name: τ³-bench (AVG) result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "58.06"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_tau3_bench
+  - id: bfcl-v4-granite-4.2-8b
+    name: BFCL (v4) result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "52.39"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_bfcl_v4
+  - id: profbench-granite-4.2-8b
+    name: ProfBench result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "41.20"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_profbench
+  - id: bird-bench-granite-4.2-8b
+    name: BirdBench result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "41.07"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_bird_bench
+  - id: gdpval-granite-4.2-8b
+    name: GDPval result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "1189"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_gdpval
+  - id: aime25-granite-4.2-8b
+    name: AIME25 result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "86.67"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_aime25
+  - id: hmmt-feb25-granite-4.2-8b
+    name: HMMT Feb25 result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "78.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_hmmt_feb25
+  - id: gpqa-granite-4.2-8b
+    name: GPQA result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "64.14"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_gpqa
+  - id: livecodebench-v6-granite-4.2-8b
+    name: LiveCodeBench v6 result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "73.24"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_livecodebench
+  - id: scicode-granite-4.2-8b
+    name: SciCode result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "36.09"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_scicode
+  - id: mmlu-pro-granite-4.2-8b
+    name: MMLU-Pro result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "74.04"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_mmlu_pro
+  - id: mmlu-prox-lite-granite-4.2-8b
+    name: MMLU-ProX lite (IBM) result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "61.06"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_mmlu_prox_lite
+  - id: arena-hard-v2-granite-4.2-8b
+    name: Arena-Hard-V2 result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "65.19"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_arena_hard_v2
+  - id: ifbench-prompt-granite-4.2-8b
+    name: IFBench (prompt) result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "79.33"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_ifbench
+  - id: ruler-64k-granite-4.2-8b
+    name: RULER 64K result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "80.99"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_ruler
+  - id: ruler-128k-granite-4.2-8b
+    name: RULER 128K result for Granite-4.2-8B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "71.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-8b
+    isResultOf: ai_eval_ruler
+  - id: swe-bench-multilingual-granite-4.2-30b
+    name: SWE Bench Multilingual result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "41.89"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_swe_bench_multilingual
+  - id: swe-bench-pro-granite-4.2-30b
+    name: SWE Bench Pro result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "33.29"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_swe_bench_pro
+  - id: swe-bench-verified-granite-4.2-30b
+    name: SWE Bench Verified result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "57"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_swe_bench_verified
+  - id: terminal-bench-2.1-granite-4.2-30b
+    name: Terminal-Bench 2.1 result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "29.24"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_terminal_bench
+  - id: tau3-bench-avg-granite-4.2-30b
+    name: τ³-bench (AVG) result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "62.00"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_tau3_bench
+  - id: bfcl-v4-granite-4.2-30b
+    name: BFCL (v4) result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "61.39"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_bfcl_v4
+  - id: profbench-granite-4.2-30b
+    name: ProfBench result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "42.90"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_profbench
+  - id: bird-bench-granite-4.2-30b
+    name: BirdBench result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "41.85"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_bird_bench
+  - id: gdpval-granite-4.2-30b
+    name: GDPval result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "1225"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_gdpval
+  - id: aime25-granite-4.2-30b
+    name: AIME25 result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "89.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_aime25
+  - id: hmmt-feb25-granite-4.2-30b
+    name: HMMT Feb25 result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "89.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_hmmt_feb25
+  - id: gpqa-granite-4.2-30b
+    name: GPQA result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "66.41"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_gpqa
+  - id: livecodebench-v6-granite-4.2-30b
+    name: LiveCodeBench v6 result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "75.77"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_livecodebench
+  - id: scicode-granite-4.2-30b
+    name: SciCode result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "38.76"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_scicode
+  - id: mmlu-pro-granite-4.2-30b
+    name: MMLU-Pro result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "77.60"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_mmlu_pro
+  - id: mmlu-prox-lite-granite-4.2-30b
+    name: MMLU-ProX lite (IBM) result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "66.64"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_mmlu_prox_lite
+  - id: arena-hard-v2-granite-4.2-30b
+    name: Arena-Hard-V2 result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "67.93"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_arena_hard_v2
+  - id: ifbench-prompt-granite-4.2-30b
+    name: IFBench (prompt) result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "77.17"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_ifbench
+  - id: ruler-64k-granite-4.2-30b
+    name: RULER 64K result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "89.96"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_ruler
+  - id: ruler-128k-granite-4.2-30b
+    name: RULER 128K result for Granite-4.2-30B
+    dateCreated: 2026-08-25
+    dateModified: 2026-08-25
+    value: "81.38"
+    evidence: https://huggingface.co/ibm-granite/granite-4.2-30b
+    isResultOf: ai_eval_ruler
   - id: truthfulqa-granite-3-2b-instruct
     name: TruthfulQA result for Granite-3.0-2B-Instruct
     description: Result of the TruthfulQA evaluation for the IBM Granite-3.0-2B-Instruct
@@ -32596,6 +33635,7 @@ aimodelfamilies:
       including language, code, and other modalities, such as time series.
     url: https://huggingface.co/ibm-granite
     hasDocumentation:
+      - granite-4.2-blog
       - granite-3.0-paper
       - granite-4.1-blog
 aimodels:
@@ -32901,6 +33941,888 @@ aimodels:
     hasOutputModality:
       - modality-text
     isPartOf: shieldgemma
+  - id: granite-4.2-3b
+    name: Granite-4.2-3B
+    description:
+      "Granite-4.2-3B is a 3B parameter long-context reasoning model post-trained
+      from Granite-4.1-3B-Base. It performs chain-of-thought reasoning inside <think>
+      tags before answering, and supports three inference modes: full thinking (the
+      default), non-thinking, and low-effort thinking. It is aimed at reasoning, code
+      generation, tool calling, agentic workflows and multilingual dialog."
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-25
+    notes:
+      - The context window is 131072 tokens natively; the model card additionally documents
+        a long-context extension to 512K tokens.
+      - numParameters is the exact checkpoint parameter count; the model card states the
+        nominal size as 3B.
+      - numTrainingTokens reflects the approximately 15T-token pretraining corpus of the
+        Granite 4.1 base model this checkpoint is post-trained from. Granite 4.2 does
+        not publish a separate post-training token count.
+      - Trained on an NVIDIA GB200 NVL72 cluster hosted at CoreWeave. Evaluations were
+        run with a framework based on the NeMo Evaluator SDK.
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-3b
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - tau3-bench-avg-granite-4.2-3b
+      - bfcl-v4-granite-4.2-3b
+      - profbench-granite-4.2-3b
+      - aime25-granite-4.2-3b
+      - hmmt-feb25-granite-4.2-3b
+      - gpqa-granite-4.2-3b
+      - livecodebench-v6-granite-4.2-3b
+      - scicode-granite-4.2-3b
+      - mmlu-pro-granite-4.2-3b
+      - mmlu-prox-lite-granite-4.2-3b
+      - arena-hard-v2-granite-4.2-3b
+      - ifbench-prompt-granite-4.2-3b
+      - ruler-64k-granite-4.2-3b
+      - ruler-128k-granite-4.2-3b
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    fine_tuning:
+      Multi-stage post-training from Granite-4.1-3B-Base. Supervised fine-tuning
+      draws on permissively licensed public datasets, synthetic reasoning, tool-calling
+      and chain-of-thought data, agentic traces, and curated human-authored data. This
+      is followed by multi-phase, multi-environment reinforcement learning with Group
+      Relative Policy Optimization across math, code, science, instruction following,
+      tool use, chat and structured-output environments, most of which provide verifiable
+      rewards while open-ended prompts are scored by a generative reward model. A closing
+      preference-alignment (RLHF) phase tunes helpfulness, conversational quality and
+      safety. Reinforcement learning is carried out with NeMo RL and the environments
+      run on NeMo Gym.
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-8b
+    name: Granite-4.2-8B
+    description:
+      "Granite-4.2-8B is a 8B parameter long-context reasoning model post-trained
+      from Granite-4.1-8B-Base. It performs chain-of-thought reasoning inside <think>
+      tags before answering, and supports three inference modes: full thinking (the
+      default), non-thinking, and low-effort thinking. It is aimed at reasoning, code
+      generation, tool calling, agentic workflows and multilingual dialog."
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-25
+    notes:
+      - The context window is 131072 tokens natively; the model card additionally documents
+        a long-context extension to 512K tokens.
+      - numParameters is the exact checkpoint parameter count; the model card states the
+        nominal size as 8B.
+      - numTrainingTokens reflects the approximately 15T-token pretraining corpus of the
+        Granite 4.1 base model this checkpoint is post-trained from. Granite 4.2 does
+        not publish a separate post-training token count.
+      - Trained on an NVIDIA GB200 NVL72 cluster hosted at CoreWeave. Evaluations were
+        run with a framework based on the NeMo Evaluator SDK.
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-8b
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - swe-bench-multilingual-granite-4.2-8b
+      - swe-bench-pro-granite-4.2-8b
+      - swe-bench-verified-granite-4.2-8b
+      - terminal-bench-2.1-granite-4.2-8b
+      - tau3-bench-avg-granite-4.2-8b
+      - bfcl-v4-granite-4.2-8b
+      - profbench-granite-4.2-8b
+      - bird-bench-granite-4.2-8b
+      - gdpval-granite-4.2-8b
+      - aime25-granite-4.2-8b
+      - hmmt-feb25-granite-4.2-8b
+      - gpqa-granite-4.2-8b
+      - livecodebench-v6-granite-4.2-8b
+      - scicode-granite-4.2-8b
+      - mmlu-pro-granite-4.2-8b
+      - mmlu-prox-lite-granite-4.2-8b
+      - arena-hard-v2-granite-4.2-8b
+      - ifbench-prompt-granite-4.2-8b
+      - ruler-64k-granite-4.2-8b
+      - ruler-128k-granite-4.2-8b
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    fine_tuning:
+      Multi-stage post-training from Granite-4.1-8B-Base. Supervised fine-tuning
+      draws on permissively licensed public datasets, synthetic reasoning, tool-calling
+      and chain-of-thought data, agentic traces, and curated human-authored data. This
+      is followed by multi-phase, multi-environment reinforcement learning with Group
+      Relative Policy Optimization across math, code, science, instruction following,
+      tool use, chat and structured-output environments, most of which provide verifiable
+      rewards while open-ended prompts are scored by a generative reward model. A closing
+      preference-alignment (RLHF) phase tunes helpfulness, conversational quality and
+      safety. Reinforcement learning is carried out with NeMo RL and the environments
+      run on NeMo Gym.
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-30b
+    name: Granite-4.2-30B
+    description:
+      "Granite-4.2-30B is a 30B parameter long-context reasoning model post-trained
+      from Granite-4.1-30B-Base. It performs chain-of-thought reasoning inside <think>
+      tags before answering, and supports three inference modes: full thinking (the
+      default), non-thinking, and low-effort thinking. It is aimed at reasoning, code
+      generation, tool calling, agentic workflows and multilingual dialog."
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-25
+    notes:
+      - The context window is 131072 tokens natively; the model card additionally documents
+        a long-context extension to 512K tokens.
+      - numParameters is the exact checkpoint parameter count; the model card states the
+        nominal size as 30B.
+      - numTrainingTokens reflects the approximately 15T-token pretraining corpus of the
+        Granite 4.1 base model this checkpoint is post-trained from. Granite 4.2 does
+        not publish a separate post-training token count.
+      - Trained on an NVIDIA GB200 NVL72 cluster hosted at CoreWeave. Evaluations were
+        run with a framework based on the NeMo Evaluator SDK.
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-30b
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    hasEvaluation:
+      - swe-bench-multilingual-granite-4.2-30b
+      - swe-bench-pro-granite-4.2-30b
+      - swe-bench-verified-granite-4.2-30b
+      - terminal-bench-2.1-granite-4.2-30b
+      - tau3-bench-avg-granite-4.2-30b
+      - bfcl-v4-granite-4.2-30b
+      - profbench-granite-4.2-30b
+      - bird-bench-granite-4.2-30b
+      - gdpval-granite-4.2-30b
+      - aime25-granite-4.2-30b
+      - hmmt-feb25-granite-4.2-30b
+      - gpqa-granite-4.2-30b
+      - livecodebench-v6-granite-4.2-30b
+      - scicode-granite-4.2-30b
+      - mmlu-pro-granite-4.2-30b
+      - mmlu-prox-lite-granite-4.2-30b
+      - arena-hard-v2-granite-4.2-30b
+      - ifbench-prompt-granite-4.2-30b
+      - ruler-64k-granite-4.2-30b
+      - ruler-128k-granite-4.2-30b
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    numTrainingTokens: 15000000000000
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    fine_tuning:
+      Multi-stage post-training from Granite-4.1-30B-Base. Supervised fine-tuning
+      draws on permissively licensed public datasets, synthetic reasoning, tool-calling
+      and chain-of-thought data, agentic traces, and curated human-authored data. This
+      is followed by multi-phase, multi-environment reinforcement learning with Group
+      Relative Policy Optimization across math, code, science, instruction following,
+      tool use, chat and structured-output environments, most of which provide verifiable
+      rewards while open-ended prompts are scored by a generative reward model. A closing
+      preference-alignment (RLHF) phase tunes helpfulness, conversational quality and
+      safety. Reinforcement learning is carried out with NeMo RL and the environments
+      run on NeMo Gym.
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-3b-gguf
+    name: Granite-4.2-3B-GGUF
+    description:
+      GGUF-format conversion with multiple quantization levels, for llama.cpp-family
+      runtimes, derived from Granite-4.2-3B. The weights are quantized from the released
+      bfloat16 checkpoint, so behaviour may differ from the parent model; the published
+      Granite 4.2 benchmark results were measured on Granite-4.2-3B rather than on this
+      variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-12
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - "Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-3b-GGUF
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-3b-fp8
+    name: Granite-4.2-3B-FP8
+    description:
+      FP8 post-training quantization, for reduced-memory serving on FP8-capable
+      accelerators, derived from Granite-4.2-3B. The weights are quantized from the
+      released bfloat16 checkpoint, so behaviour may differ from the parent model; the
+      published Granite 4.2 benchmark results were measured on Granite-4.2-3B rather
+      than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - "Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-3b-fp8
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-3b-mxfp4
+    name: Granite-4.2-3B-MXFP4
+    description: MXFP4 (microscaling 4-bit floating point) post-training quantization,
+      derived from Granite-4.2-3B. The weights are quantized from the released bfloat16
+      checkpoint, so behaviour may differ from the parent model; the published Granite
+      4.2 benchmark results were measured on Granite-4.2-3B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - "Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-3b-mxfp4
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-3b-nvfp4
+    name: Granite-4.2-3B-NVFP4
+    description: NVFP4 (NVIDIA 4-bit floating point) post-training quantization, derived
+      from Granite-4.2-3B. The weights are quantized from the released bfloat16 checkpoint,
+      so behaviour may differ from the parent model; the published Granite 4.2 benchmark
+      results were measured on Granite-4.2-3B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-3b
+    notes:
+      - "Quantized variant of granite-4.2-3b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-3b-nvfp4
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 3659737600
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-8b-gguf
+    name: Granite-4.2-8B-GGUF
+    description:
+      GGUF-format conversion with multiple quantization levels, for llama.cpp-family
+      runtimes, derived from Granite-4.2-8B. The weights are quantized from the released
+      bfloat16 checkpoint, so behaviour may differ from the parent model; the published
+      Granite 4.2 benchmark results were measured on Granite-4.2-8B rather than on this
+      variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-12
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - "Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-8b-GGUF
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-8b-fp8
+    name: Granite-4.2-8B-FP8
+    description:
+      FP8 post-training quantization, for reduced-memory serving on FP8-capable
+      accelerators, derived from Granite-4.2-8B. The weights are quantized from the
+      released bfloat16 checkpoint, so behaviour may differ from the parent model; the
+      published Granite 4.2 benchmark results were measured on Granite-4.2-8B rather
+      than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - "Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-8b-fp8
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-8b-mxfp4
+    name: Granite-4.2-8B-MXFP4
+    description: MXFP4 (microscaling 4-bit floating point) post-training quantization,
+      derived from Granite-4.2-8B. The weights are quantized from the released bfloat16
+      checkpoint, so behaviour may differ from the parent model; the published Granite
+      4.2 benchmark results were measured on Granite-4.2-8B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - "Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-8b-mxfp4
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-8b-nvfp4
+    name: Granite-4.2-8B-NVFP4
+    description: NVFP4 (NVIDIA 4-bit floating point) post-training quantization, derived
+      from Granite-4.2-8B. The weights are quantized from the released bfloat16 checkpoint,
+      so behaviour may differ from the parent model; the published Granite 4.2 benchmark
+      results were measured on Granite-4.2-8B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-8b
+    notes:
+      - "Quantized variant of granite-4.2-8b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-8b-nvfp4
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 8791592960
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-30b-gguf
+    name: Granite-4.2-30B-GGUF
+    description:
+      GGUF-format conversion with multiple quantization levels, for llama.cpp-family
+      runtimes, derived from Granite-4.2-30B. The weights are quantized from the released
+      bfloat16 checkpoint, so behaviour may differ from the parent model; the published
+      Granite 4.2 benchmark results were measured on Granite-4.2-30B rather than on
+      this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-12
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - "Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-30b-GGUF
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-30b-fp8
+    name: Granite-4.2-30B-FP8
+    description:
+      FP8 post-training quantization, for reduced-memory serving on FP8-capable
+      accelerators, derived from Granite-4.2-30B. The weights are quantized from the
+      released bfloat16 checkpoint, so behaviour may differ from the parent model; the
+      published Granite 4.2 benchmark results were measured on Granite-4.2-30B rather
+      than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - "Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-30b-fp8
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-30b-mxfp4
+    name: Granite-4.2-30B-MXFP4
+    description: MXFP4 (microscaling 4-bit floating point) post-training quantization,
+      derived from Granite-4.2-30B. The weights are quantized from the released bfloat16
+      checkpoint, so behaviour may differ from the parent model; the published Granite
+      4.2 benchmark results were measured on Granite-4.2-30B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - "Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-30b-mxfp4
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
+  - id: granite-4.2-30b-nvfp4
+    name: Granite-4.2-30B-NVFP4
+    description: NVFP4 (NVIDIA 4-bit floating point) post-training quantization, derived
+      from Granite-4.2-30B. The weights are quantized from the released bfloat16 checkpoint,
+      so behaviour may differ from the parent model; the published Granite 4.2 benchmark
+      results were measured on Granite-4.2-30B rather than on this variant.
+    url: https://github.com/ibm-granite/granite-4.2-language-models
+    dateCreated: 2026-08-13
+    related_mappings:
+      - granite-4.2-30b
+    notes:
+      - "Quantized variant of granite-4.2-30b. The ontology has no base-model or quantization
+        slot, so the link to the parent checkpoint is carried by related_mappings and
+        by the shared isPartOf: ibm-granite family membership."
+      - "No evaluation results are attached: the variant's model card publishes none,
+        and inheriting the parent's scores would misstate quantized behaviour."
+    hasModelCard:
+      - https://huggingface.co/ibm-granite/granite-4.2-30b-nvfp4
+    hasDocumentation:
+      - granite-4.2-blog
+    hasLicense: license-apache-2.0
+    performsTask:
+      - question-answering
+      - summarization
+      - text-classification
+      - text-generation
+      - code-generation
+      - code-explanation
+      - code-editing
+    isProvidedBy: ibm
+    architecture: Decoder-only (dense transformer, GQA, RoPE, SwiGLU, RMSNorm, GraniteForCausalLM)
+    numParameters: 29276770304
+    contextWindowSize: 131072
+    hasInputModality:
+      - modality-text
+    hasOutputModality:
+      - modality-text
+    supported_languages:
+      - en
+      - de
+      - es
+      - fr
+      - ja
+      - pt
+      - ar
+      - cs
+      - it
+      - ko
+      - nl
+      - zh
+    isPartOf: ibm-granite
   - id: granite-3.0-2b-base
     name: Granite-3.0-2B-Base
     description:
@@ -33351,7 +35273,7 @@ rules:
       - Opt-Out
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
     hasRequirementType: PREVENTATIVE
   - id: aiuc1-req-a002
@@ -33376,7 +35298,7 @@ rules:
       - Opt-Out
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a003
     name: Limit AI agent data collection
@@ -33402,7 +35324,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a004
     name: Protect IP and trade secrets
@@ -33431,7 +35353,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a005
     name: Prevent cross-customer data exposure
@@ -33459,7 +35381,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a006
     name: Prevent PII leakage
@@ -33486,7 +35408,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
   - id: aiuc1-req-a007
     name: Prevent IP violations
@@ -33512,7 +35434,7 @@ rules:
     hasFrequency: MONTHS_12
     hasPrinciple:
       - aiuc1-principle-a
-    appliesToCapability:
+    isApplicableToCapability:
       - universal-capability
       - external-facing-capability
   - id: aiuc1-req-b001

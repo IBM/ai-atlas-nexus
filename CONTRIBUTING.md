@@ -38,6 +38,10 @@ We run a series of checks on the codebase on every commit using pre-commit. To i
 To run the checks on-demand, run:
 `pre-commit run --all-files`
 
+## AI-assisted and agentic development
+
+AI-assisted and agentic development are allowed. PR owners remain responsible for understanding, testing, and explaining every change they submit. Please do not submit bulk generated code that you cannot explain or validate.
+
 ## Secret scanning
 
 This repository uses IBM's [detect-secrets](https://github.com/ibm/detect-secrets) to scan for secrets before the code is pushed to GitHub. Follow installation instructions in their repository: https://github.com/ibm/detect-secrets?tab=readme-ov-file#example-usage

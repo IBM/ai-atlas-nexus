@@ -84,7 +84,7 @@ class RiskRelationDetector(RiskDetector):
 
     Unlike the other detectors, ``detect`` returns, for each source risk, a
     list of :class:`RiskRelation` (candidate risk + SKOS predicate) rather than
-    a bare list of risks, so the risk mapper can emit a graded ``predicate_id``
+    a just a list of risks, so the risk mapper can emit a graded ``predicate_id``
     instead of a single hardcoded value.
     """
 

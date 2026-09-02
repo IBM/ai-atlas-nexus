@@ -18,13 +18,13 @@ Alias: isDetectedBy
 
 | Name                                    | Description                                                                      | Modifies Slot |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | no            |
-| [RiskIncident](RiskIncident.md)         | An event occuring or occured which is a realised or materialised risk            | no            |
 | [Action](Action.md)                     | Action to remediate a risk                                                       | no            |
 | [RiskConcept](RiskConcept.md)           | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
 | [Impact](Impact.md)                     |                                                                                  | no            |
-| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | no            |
 | [Risk](Risk.md)                         | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [RiskIncident](RiskIncident.md)         | An event occuring or occured which is a realised or materialised risk            | no            |
+| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | no            |
+| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | no            |
 | [RiskControl](RiskControl.md)           | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
 
 ## Properties

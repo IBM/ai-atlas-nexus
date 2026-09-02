@@ -18,11 +18,11 @@ Alias: isComposedOf
 
 | Name                              | Description                                                                      | Modifies Slot |
 | --------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiEval](AiEval.md)               | An AI Evaluation, e                                                              | yes           |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions                                                 | yes           |
-| [Question](Question.md)           | An evaluation where a question has to be answered                                | no            |
 | [AiSystem](AiSystem.md)           | A compound AI System composed of one or more AI capablities                      | yes           |
+| [AiEval](AiEval.md)               | An AI Evaluation, e                                                              | yes           |
 | [AiAgent](AiAgent.md)             | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [Question](Question.md)           | An evaluation where a question has to be answered                                | no            |
 
 ## Properties
 

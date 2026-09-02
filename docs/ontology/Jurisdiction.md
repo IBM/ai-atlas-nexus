@@ -21,12 +21,6 @@ URI: [nexus:Jurisdiction](https://w3id.org/ai-atlas-nexus/Jurisdiction)
 
 _This is a dynamic enum_
 
-## Slots
-
-| Name                                  | Description                                                                      |
-| ------------------------------------- | -------------------------------------------------------------------------------- |
-| [hasJurisdiction](hasJurisdiction.md) | The legal or political jurisdiction(s) in which this concept applies, express... |
-
 ## Identifier and Mapping Information
 
 ### Schema Source

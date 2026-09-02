@@ -1,0 +1,22 @@
+# curie_map:
+#   owasp-ast10: https://owasp.org/www-project-agentic-skills-top-10/
+#   ibm-risk-atlas: https://www.ibm.com/docs/en/watsonx/saas?topic=
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_to_ibm_risk_atlas.tsv
+# mapping_set_description: Candidate related mappings from OWASP Agentic Skills Top 10 v1.0 to IBM AI Risk Atlas for maintainer review
+# license: https://www.apache.org/licenses/LICENSE-2.0.html
+# mapping_date: '2026-08-23'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	confidence	comment
+owasp-ast10:ast01-malicious-skills	AST01 - Malicious Skills	skos:relatedMatch	ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents' external resources	semapv:LLMBasedMatching			A skill is an external resource used by an agent, and AST01 covers skills intentionally created with malicious payloads.
+owasp-ast10:ast02-supply-chain-compromise	AST02 - Supply Chain Compromise	skos:relatedMatch	ibm-risk-atlas:atlas-external-resources-attack-agentic	Attack on AI agents' external resources	semapv:LLMBasedMatching			Both risks cover attacks on external components or services that an agent relies on to perform its tasks.
+owasp-ast10:ast03-over-privileged-skills	AST03 - Over-Privileged Skills	skos:relatedMatch	ibm-risk-atlas:atlas-unauthorized-use-agentic	Unauthorized use	semapv:LLMBasedMatching			Excessive skill permissions increase the actions available after an agent or skill is compromised or misused.
+owasp-ast10:ast03-over-privileged-skills	AST03 - Over-Privileged Skills	skos:relatedMatch	ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	semapv:LLMBasedMatching			Over-privileged skills can access sensitive information and expose it to tools or agents outside the intended scope.
+owasp-ast10:ast04-insecure-metadata	AST04 - Insecure Metadata	skos:relatedMatch	ibm-risk-atlas:atlas-exploit-trust-mismatch-agentic	Exploit trust mismatch	semapv:LLMBasedMatching			Deceptive or unsafe metadata exploits the trust boundary between the skill publisher, loader, agent, and installer.
+owasp-ast10:ast05-untrusted-external-instructions	AST05 - Untrusted External Instructions	skos:relatedMatch	ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	semapv:LLMBasedMatching			Both risks involve instructions embedded in external content that can cause an AI system to perform unintended actions.
+owasp-ast10:ast06-weak-isolation	AST06 - Weak Isolation	skos:relatedMatch	ibm-risk-atlas:atlas-sharing-info-tools-agentic	Sharing IP/PI/confidential information with tools	semapv:LLMBasedMatching			Missing file-system, credential, and network boundaries can expose sensitive information to a skill and its connected tools.
+owasp-ast10:ast07-update-drift	AST07 - Update Drift	skos:relatedMatch	ibm-risk-atlas:atlas-mitigation-maintenance-agentic	Mitigation and maintenance	semapv:LLMBasedMatching			Both risks concern keeping agent components and dependencies in a known, secure, and supported state.
+owasp-ast10:ast08-poor-scanning	AST08 - Poor Scanning	skos:relatedMatch	ibm-risk-atlas:atlas-incorrect-risk-testing	Incorrect risk testing	semapv:LLMBasedMatching			Traditional scanners can measure the wrong properties and miss behavior that emerges from code and natural-language instructions together.
+owasp-ast10:ast09-no-governance	AST09 - No Governance	skos:relatedMatch	ibm-risk-atlas:atlas-accountability-agentic	Accountability of AI agent actions	semapv:LLMBasedMatching			Missing ownership, approval, and audit processes make it difficult to assign responsibility for actions taken through installed skills.
+owasp-ast10:ast09-no-governance	AST09 - No Governance	skos:relatedMatch	ibm-risk-atlas:atlas-unexplainable-untraceable-actions-agentic	Unexplainable and untraceable actions	semapv:LLMBasedMatching			Missing skill-level audit trails make the source of agent actions difficult to trace.
+owasp-ast10:ast10-cross-platform-reuse	AST10 - Cross-Platform Reuse	skos:relatedMatch	ibm-risk-atlas:atlas-reproducibility-agentic	Reproducibility	semapv:LLMBasedMatching			Differences in platform metadata and control enforcement can cause the same skill to behave differently after it is ported.

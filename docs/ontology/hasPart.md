@@ -18,14 +18,14 @@ Alias: hasPart
 
 | Name                                    | Description                                                                      | Modifies Slot |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | yes           |
 | [StakeholderGroup](StakeholderGroup.md) | An AI system stakeholder grouping                                                | no            |
-| [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        | yes           |
-| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | yes           |
+| [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
 | [Group](Group.md)                       | Labelled groups of concepts                                                      | no            |
+| [CapabilityDomain](CapabilityDomain.md) | A high-level domain of AI capabilities (e                                        | yes           |
 | [AiTaskGroup](AiTaskGroup.md)           | A group of AI Tasks                                                              | yes           |
 | [AiTaskDomain](AiTaskDomain.md)         | A grouping of AI Tasks by domain                                                 | yes           |
-| [CapabilityGroup](CapabilityGroup.md)   | A group of AI capabilities that are part of a capability taxonomy, organized ... | yes           |
+| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | yes           |
+| [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | yes           |
 
 ## Properties
 
