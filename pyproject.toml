@@ -68,7 +68,7 @@ dependencies = [
 [project.optional-dependencies]
 wml = ["ibm-watsonx-ai"]
 ollama = ["ollama"]
-vllm = ["vllm>=0.2", "xgrammar"]
+vllm = ["vllm>=0.26.0", "xgrammar"]
 bedrock = ["boto3", "botocore"]
 docs = [
     "mkdocs-material",
