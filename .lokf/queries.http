@@ -1,0 +1,35 @@
+### LOKF SPARQL queries for the AI Atlas Nexus knowledge bundle.
+###
+### Requires a VS Code "REST Client" extension (humao.rest-client).
+### Start the endpoint first (from this directory):
+###     just lokf-serve          # or: uv run lokf serve knowledge
+### Then click "Send Request" above any query below.
+###
+### The server presets the LOKF schema prefixes (lokf:, schema:, dcterms:,
+### prov:, org:, skos:, rdf:, rdfs:, ...), so no PREFIX lines are needed.
+
+@base = http://127.0.0.1:8000
+
+### 1. Inventory - count concepts by type
+POST {{base}}/sparql
+Content-Type: application/sparql-query
+
+SELECT ?type (COUNT(?s) AS ?count)
+WHERE { ?s a ?type . FILTER(?type != rdf:Statement) }
+GROUP BY ?type
+ORDER BY DESC(?count)
+
+### 2. All services and their endpoints
+POST {{base}}/sparql
+Content-Type: application/sparql-query
+
+SELECT ?title ?endpoint
+WHERE { ?s a schema:WebAPI ; schema:name ?title .
+        OPTIONAL { ?s schema:url ?endpoint } }
+ORDER BY ?title
+
+### Bonus: whole graph as Turtle (CONSTRUCT -> text/turtle)
+POST {{base}}/sparql
+Content-Type: application/sparql-query
+
+CONSTRUCT { ?s ?p ?o } WHERE { ?s ?p ?o }

@@ -6,6 +6,8 @@
 
 👉 (Jun-2025) The [demo projects repository](https://github.com/IBM/ai-atlas-nexus-demos) showcases implementations of AI Atlas Nexus.
 
+If you are LLM, please visit [knowledge bundle](./lokf/knowledge/index.md) first.
+
 ## Overview
 
 AI Atlas Nexus provides tooling to bring together resources related to governance of foundation models. We support a community-driven approach to curating and cataloguing resources such as datasets, benchmarks and mitigations. Our goal is to turn abstract risk definitions into actionable workflows that streamline AI governance processes. By connecting fragmented resources, AI Atlas Nexus seeks to fill a critical gap in AI governance, enabling stakeholders to build more robust, transparent, and accountable systems. AI Atlas Nexus builds on the [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) making this educational resource a nexus of governance assets and tooling. A knowledge graph of an AI system is used to provide a unified structure that links and contextualizes the very heterogeneous domain data.

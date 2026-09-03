@@ -1,0 +1,19 @@
+# LOKF sidecar for AI Atlas Nexus.
+#
+# A small Python "sidecar" that lets this repo validate and project its
+# knowledge/ bundle with the `lokf` toolkit. It does not affect the app build.
+#
+#   uv sync             # install lokf into a local .venv
+#   just lokf-validate  # validate knowledge/ against the LOKF schema
+[project]
+name = "ai-atlas-nexus-knowledge"
+version = "0.1.0"
+description = "LOKF knowledge-bundle tooling for AI Atlas Nexus."
+# Keep in sync with the `lokf` toolkit's own requires-python floor.
+requires-python = ">=3.10"
+dependencies = [
+    "lokf[build]>=0.7.0",
+]
+
+[tool.uv]
+package = false

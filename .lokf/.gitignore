@@ -1,0 +1,5 @@
+# Python sidecar artifacts (do not commit)
+.venv/
+__pycache__/
+*.pyc
+lokf-tables/

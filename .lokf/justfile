@@ -1,0 +1,26 @@
+# LOKF knowledge-bundle recipes for AI Atlas Nexus.
+#
+# The `lokf` toolkit is a Python sidecar (see pyproject.toml); these recipes
+# drive it against the knowledge/ bundle. Run `just --list` to see them.
+
+bundle := "knowledge"
+
+# List available recipes
+default:
+    @just --list
+
+# Install the lokf sidecar toolkit into a local .venv
+lokf-install:
+    uv sync
+
+# Assemble and validate the knowledge bundle against the LOKF schema
+lokf-validate:
+    uv run lokf validate {{ bundle }}
+
+# Project the bundle (or a concept file) to RDF (Turtle) on stdout
+lokf-convert FILE=bundle:
+    uv run lokf convert --format ttl {{ FILE }}
+
+# Serve the bundle locally: SPARQL endpoint + live graph explorer
+lokf-serve:
+    uv run lokf serve {{ bundle }}
