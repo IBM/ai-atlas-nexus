@@ -722,7 +722,6 @@ slots:
     range: Any
     multivalued: true
     inlined: false
-    inverse: implementsCapability
   hasLifecycleStatus:
     slot_uri: adms:status
     range: LifecycleStatus
