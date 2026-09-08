@@ -26,6 +26,12 @@ classes:
     is_a: Entity
     abstract: true
     description: Any type of AI, be it a LLM, RL agent, SVM, etc.
+    slot_usage:
+      isProvidedBy:
+        slot_uri: airo:isProvidedBy
+        range: AiProvider
+        description: >-
+          Indicates provider of an AI system or component.
     slots:
       - isProducedBy
       - hasModelCard
@@ -337,11 +343,6 @@ slots:
     description: >-
       Indicates the developer of an AI system or component.
     range: AIDeveloper
-  isProvidedBy:
-    slot_uri: airo:isProvidedBy
-    description: >-
-      Indicates provider of an AI system or component.
-    range: AiProvider
   isUsedBy:
     slot_uri: airo:isUsedBy
     description: >-
