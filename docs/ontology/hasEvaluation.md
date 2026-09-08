@@ -10,7 +10,6 @@ _A relationship indicating that an entity has an AI evaluation result._
 <div data-search-exclude markdown="1">
 
 URI: [dqv:hasQualityMeasurement](https://www.w3.org/TR/vocab-dqv/hasQualityMeasurement)
-Alias: hasEvaluation
 
 <!-- no inheritance hierarchy -->
 
@@ -18,9 +17,9 @@ Alias: hasEvaluation
 
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
 | [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
 
 ## Properties
 
@@ -60,7 +59,6 @@ description: A relationship indicating that an entity has an AI evaluation resul
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: dqv:hasQualityMeasurement
-alias: hasEvaluation
 domain_of:
 - AiModel
 range: AiEvalResult

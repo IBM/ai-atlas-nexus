@@ -10,7 +10,6 @@ _The number of tons of carbon dioxide equivalent that are emitted during trainin
 <div data-search-exclude markdown="1">
 
 URI: [nexus:carbon_emitted](https://w3id.org/ai-atlas-nexus/carbon_emitted)
-Alias: carbon_emitted
 
 <!-- no inheritance hierarchy -->
 
@@ -18,9 +17,9 @@ Alias: carbon_emitted
 
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
 | [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
 
 ## Properties
 
@@ -75,7 +74,6 @@ description: The number of tons of carbon dioxide equivalent that are emitted du
   training
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: carbon_emitted
 domain_of:
 - AiModel
 range: float

@@ -10,7 +10,6 @@ _Version of the evaluation schema_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:schema_version](https://w3id.org/ai-atlas-nexus/schema_version)
-Alias: schema_version
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: schema_version
 description: Version of the evaluation schema
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: schema_version
 owner: EveryEvalAIResult
 domain_of:
 - EveryEvalAIResult

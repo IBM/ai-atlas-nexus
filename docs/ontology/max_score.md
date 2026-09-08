@@ -10,7 +10,6 @@ _Maximum possible score_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:max_score](https://w3id.org/ai-atlas-nexus/max_score)
-Alias: max_score
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: max_score
 description: Maximum possible score
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: max_score
 owner: MetricConfig
 domain_of:
 - MetricConfig

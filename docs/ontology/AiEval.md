@@ -330,7 +330,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
-    alias: hasDocumentation
     owner: AiEval
     domain_of:
     - Dataset
@@ -360,7 +359,6 @@ attributes:
     description: A relationship to datasets that are used.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasDataset
     owner: AiEval
     domain_of:
     - AiEval
@@ -372,7 +370,6 @@ attributes:
     description: The tasks or evaluations the benchmark is intended to assess.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasTasks
     owner: AiEval
     domain_of:
     - AiEval
@@ -387,7 +384,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: hasImplementation
     owner: AiEval
     domain_of:
     - AiEval
@@ -400,7 +396,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: hasUnitxtCard
     owner: AiEval
     domain_of:
     - AiEval
@@ -413,7 +408,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
-    alias: hasLicense
     owner: AiEval
     domain_of:
     - Dataset
@@ -434,7 +428,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: AiEval
-    alias: hasRelatedRisk
     owner: AiEval
     domain_of:
     - Term
@@ -454,7 +447,6 @@ attributes:
     description: Annotation of the best possible result of the evaluation
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: bestValue
     owner: AiEval
     domain_of:
     - AiEval
@@ -466,7 +458,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: AiEval
-    alias: hasBenchmarkMetadata
     owner: AiEval
     domain_of:
     - AiEval
@@ -480,7 +471,6 @@ attributes:
       other AI evaluations (e.g. it's an overall average of other scores).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: isComposedOf
     owner: AiEval
     domain_of:
     - AiSystem
@@ -496,7 +486,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: AiEval
     domain_of:
     - Entity
@@ -508,7 +497,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: AiEval
     domain_of:
     - Entity
@@ -520,7 +508,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: AiEval
     domain_of:
     - Entity
@@ -531,7 +518,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: AiEval
     domain_of:
     - Entity
@@ -542,7 +528,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: AiEval
     domain_of:
     - Entity
@@ -554,7 +539,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: AiEval
     domain_of:
     - Entity
@@ -568,7 +552,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: AiEval
     domain_of:
     - Entity
@@ -582,7 +565,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: AiEval
     domain_of:
     - Entity
@@ -596,7 +578,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: AiEval
     domain_of:
     - Entity
@@ -611,7 +592,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: AiEval
     domain_of:
     - Entity
@@ -626,7 +606,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: AiEval
     domain_of:
     - Entity
@@ -639,7 +618,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: AiEval
     domain_of:
     - Entity
@@ -657,7 +635,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: AiEval
     domain_of:
     - Entity
@@ -669,7 +646,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: AiEval
     domain_of:
     - Entity

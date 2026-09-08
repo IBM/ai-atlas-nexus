@@ -10,7 +10,6 @@ _A relationship indicating the input modalities supported by an AI component. Ex
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasInputModality](https://w3id.org/ai-atlas-nexus/hasInputModality)
-Alias: hasInputModality
 
 <!-- no inheritance hierarchy -->
 
@@ -58,7 +57,6 @@ description: A relationship indicating the input modalities supported by an AI c
   Examples include text, image, video.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasInputModality
 domain_of:
 - LargeLanguageModel
 range: Modality

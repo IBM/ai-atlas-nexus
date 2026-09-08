@@ -200,7 +200,6 @@ attributes:
       a License instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: grants_license
     owner: AiOffice
     domain_of:
     - Organization
@@ -213,7 +212,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: AiOffice
     domain_of:
     - Entity
@@ -225,7 +223,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: AiOffice
     domain_of:
     - Entity
@@ -237,7 +234,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: AiOffice
     domain_of:
     - Entity
@@ -248,7 +244,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: AiOffice
     domain_of:
     - Entity
@@ -259,7 +254,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: AiOffice
     domain_of:
     - Entity
@@ -271,7 +265,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: AiOffice
     domain_of:
     - Entity
@@ -285,7 +278,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: AiOffice
     domain_of:
     - Entity
@@ -299,7 +291,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: AiOffice
     domain_of:
     - Entity
@@ -313,7 +304,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: AiOffice
     domain_of:
     - Entity
@@ -328,7 +318,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: AiOffice
     domain_of:
     - Entity
@@ -343,7 +332,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: AiOffice
     domain_of:
     - Entity
@@ -356,7 +344,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: AiOffice
     domain_of:
     - Entity
@@ -374,7 +361,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: AiOffice
     domain_of:
     - Entity
@@ -386,7 +372,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: AiOffice
     domain_of:
     - Entity

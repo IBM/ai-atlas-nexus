@@ -10,7 +10,6 @@ _The way metrics are computed based on model outputs and the benchmark data._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasCalculation](https://w3id.org/ai-atlas-nexus/hasCalculation)
-Alias: hasCalculation
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: The way metrics are computed based on model outputs and the benchma
   data.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasCalculation
 domain_of:
 - BenchmarkMetadataCard
 range: string

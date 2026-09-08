@@ -10,7 +10,6 @@ _A list of vocabularies_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:vocabularies](https://w3id.org/ai-atlas-nexus/vocabularies)
-Alias: vocabularies
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: vocabularies
 description: A list of vocabularies
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: vocabularies
 owner: Container
 domain_of:
 - Container

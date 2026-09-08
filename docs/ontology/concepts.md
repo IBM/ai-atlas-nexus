@@ -10,7 +10,6 @@ _A list of concepts_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:concepts](https://w3id.org/ai-atlas-nexus/concepts)
-Alias: concepts
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: concepts
 description: A list of concepts
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: concepts
 owner: Container
 domain_of:
 - Container

@@ -10,7 +10,6 @@ _A list of groups_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:groups](https://w3id.org/ai-atlas-nexus/groups)
-Alias: groups
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: groups
 description: A list of groups
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: groups
 owner: Container
 domain_of:
 - Container

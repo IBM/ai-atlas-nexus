@@ -10,7 +10,6 @@ _Type of score (e.g., continuous)_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:score_type](https://w3id.org/ai-atlas-nexus/score_type)
-Alias: score_type
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: score_type
 description: Type of score (e.g., continuous)
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: score_type
 owner: MetricConfig
 domain_of:
 - MetricConfig

@@ -10,7 +10,6 @@ _A list of risk related actions_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:actions](https://w3id.org/ai-atlas-nexus/actions)
-Alias: actions
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: actions
 description: A list of risk related actions
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: actions
 owner: Container
 domain_of:
 - Container

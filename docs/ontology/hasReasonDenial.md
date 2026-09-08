@@ -10,7 +10,6 @@ _Reason for denial_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasReasonDenial](https://w3id.org/ai-atlas-nexus/hasReasonDenial)
-Alias: hasReasonDenial
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Reason for denial
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasReasonDenial
-alias: hasReasonDenial
 domain_of:
 - LLMQuestionPolicy
 range: string

@@ -10,7 +10,6 @@ _Compliance with relevant legal or ethical regulations (if applicable)._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasConsiderationComplianceWithRegulations](https://w3id.org/ai-atlas-nexus/hasConsiderationComplianceWithRegulations)
-Alias: hasConsiderationComplianceWithRegulations
 
 <!-- no inheritance hierarchy -->
 
@@ -56,7 +55,6 @@ name: hasConsiderationComplianceWithRegulations
 description: Compliance with relevant legal or ethical regulations (if applicable).
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasConsiderationComplianceWithRegulations
 domain_of:
 - BenchmarkMetadataCard
 range: string

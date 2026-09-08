@@ -10,7 +10,6 @@ _A list of AI model families_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:aimodelfamilies](https://w3id.org/ai-atlas-nexus/aimodelfamilies)
-Alias: aimodelfamilies
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: aimodelfamilies
 description: A list of AI model families
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: aimodelfamilies
 owner: Container
 domain_of:
 - Container

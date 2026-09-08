@@ -10,7 +10,6 @@ _The frequency_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasFrequency](https://w3id.org/ai-atlas-nexus/hasFrequency)
-Alias: hasFrequency
 
 <!-- no inheritance hierarchy -->
 
@@ -59,7 +58,6 @@ from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: Requirement
 slot_uri: nexus:hasFrequency
-alias: hasFrequency
 domain_of:
 - Requirement
 range: AIUC1Frequency

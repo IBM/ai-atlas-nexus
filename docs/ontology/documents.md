@@ -10,7 +10,6 @@ _A list of documents_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:documents](https://w3id.org/ai-atlas-nexus/documents)
-Alias: documents
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: documents
 description: A list of documents
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: documents
 owner: Container
 domain_of:
 - Container

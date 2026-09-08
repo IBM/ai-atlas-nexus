@@ -10,7 +10,6 @@ _A list of AI stakeholder groups_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:stakeholdergroups](https://w3id.org/ai-atlas-nexus/stakeholdergroups)
-Alias: stakeholdergroups
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: stakeholdergroups
 description: A list of AI stakeholder groups
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: stakeholdergroups
 owner: Container
 domain_of:
 - Container

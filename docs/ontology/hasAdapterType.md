@@ -10,7 +10,6 @@ _The Adapter type, for example: LORA, ALORA, X-LORA_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasAdapterType](https://w3id.org/ai-atlas-nexus/hasAdapterType)
-Alias: hasAdapterType
 
 <!-- no inheritance hierarchy -->
 
@@ -56,7 +55,6 @@ name: hasAdapterType
 description: 'The Adapter type, for example: LORA, ALORA, X-LORA'
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasAdapterType
 domain_of:
 - Adapter
 range: AdapterType

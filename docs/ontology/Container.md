@@ -718,7 +718,6 @@ attributes:
     description: A list of organizations
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: organizations
     owner: Container
     domain_of:
     - Container
@@ -731,7 +730,6 @@ attributes:
     description: A list of licenses
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: licenses
     owner: Container
     domain_of:
     - Container
@@ -744,7 +742,6 @@ attributes:
     description: A list of AI modalities
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: modalities
     owner: Container
     domain_of:
     - Container
@@ -757,7 +754,6 @@ attributes:
     description: A list of AI tasks
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: aitasks
     owner: Container
     domain_of:
     - Container
@@ -770,7 +766,6 @@ attributes:
     description: A list of documents
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: documents
     owner: Container
     domain_of:
     - Container
@@ -783,7 +778,6 @@ attributes:
     description: A list of data sets
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: datasets
     owner: Container
     domain_of:
     - Container
@@ -796,7 +790,6 @@ attributes:
     description: A list of LLMIntrinsics
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: llmintrinsics
     owner: Container
     domain_of:
     - Container
@@ -809,7 +802,6 @@ attributes:
     description: A list of Adapters
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: adapters
     owner: Container
     domain_of:
     - Container
@@ -822,7 +814,6 @@ attributes:
     description: A list of taxonomies
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: taxonomies
     owner: Container
     domain_of:
     - Container
@@ -835,7 +826,6 @@ attributes:
     description: A list of concepts
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: concepts
     owner: Container
     domain_of:
     - Container
@@ -848,7 +838,6 @@ attributes:
     description: A list of entries
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: entries
     owner: Container
     domain_of:
     - Container
@@ -861,7 +850,6 @@ attributes:
     description: A list of groups
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: groups
     owner: Container
     domain_of:
     - Container
@@ -874,7 +862,6 @@ attributes:
     description: A list of vocabularies
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: vocabularies
     owner: Container
     domain_of:
     - Container
@@ -887,7 +874,6 @@ attributes:
     description: A list of AI controls
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: controls
     owner: Container
     domain_of:
     - Container
@@ -900,7 +886,6 @@ attributes:
     description: A list of AI risk incidents
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: riskincidents
     owner: Container
     domain_of:
     - Container
@@ -913,7 +898,6 @@ attributes:
     description: A list of AI stakeholder groups
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: stakeholdergroups
     owner: Container
     domain_of:
     - Container
@@ -926,7 +910,6 @@ attributes:
     description: A list of stakeholders
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: stakeholders
     owner: Container
     domain_of:
     - Container
@@ -939,7 +922,6 @@ attributes:
     description: A list of risk related actions
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: actions
     owner: Container
     domain_of:
     - Container
@@ -952,7 +934,6 @@ attributes:
     description: A list of AI evaluation methods
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: evaluations
     owner: Container
     domain_of:
     - Container
@@ -965,7 +946,6 @@ attributes:
     description: A list of AI evaluation results
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: aievalresults
     owner: Container
     domain_of:
     - Container
@@ -978,7 +958,6 @@ attributes:
     description: A list of AI evaluation benchmark metadata cards
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: benchmarkmetadatacards
     owner: Container
     domain_of:
     - Container
@@ -991,7 +970,6 @@ attributes:
     description: A list of AI model families
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: aimodelfamilies
     owner: Container
     domain_of:
     - Container
@@ -1004,7 +982,6 @@ attributes:
     description: A list of AI models
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: aimodels
     owner: Container
     domain_of:
     - Container
@@ -1017,7 +994,6 @@ attributes:
     description: A list of policies
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: policies
     owner: Container
     domain_of:
     - Container
@@ -1030,7 +1006,6 @@ attributes:
     description: A list of rules
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: rules
     owner: Container
     domain_of:
     - Container
@@ -1043,7 +1018,6 @@ attributes:
     description: A list of prohibitions
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: prohibitions
     owner: Container
     domain_of:
     - Container
@@ -1056,7 +1030,6 @@ attributes:
     description: A list of Permissions
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: permissions
     owner: Container
     domain_of:
     - Container
@@ -1069,7 +1042,6 @@ attributes:
     description: A list of Obligations
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: obligations
     owner: Container
     domain_of:
     - Container

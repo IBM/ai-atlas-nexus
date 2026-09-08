@@ -10,7 +10,6 @@ _Which of the AIUC-1 ControlApplicationCategory this control activity (rule) bel
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasControlApplication](https://w3id.org/ai-atlas-nexus/hasControlApplication)
-Alias: hasControlApplication
 
 <!-- no inheritance hierarchy -->
 
@@ -18,11 +17,11 @@ Alias: hasControlApplication
 
 | Name                                                              | Description                                                                      | Modifies Slot |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [ControlActivityRecommendation](ControlActivityRecommendation.md) | A control activity (rule) describing a recommendation for performing an activ... | no            |
-| [ControlActivityObligation](ControlActivityObligation.md)         | A control activity (rule) describing an obligation for performing an activity    | no            |
+| [ControlActivity](ControlActivity.md)                             | An obligation, permission, or prohibition for AI system assurance                | no            |
 | [ControlActivityPermission](ControlActivityPermission.md)         | A control activity (rule) describing a permission to perform an activity         | no            |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | A control activity (rule) describing a prohibition to perform an activity        | no            |
-| [ControlActivity](ControlActivity.md)                             | An obligation, permission, or prohibition for AI system assurance                | no            |
+| [ControlActivityObligation](ControlActivityObligation.md)         | A control activity (rule) describing an obligation for performing an activity    | no            |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md) | A control activity (rule) describing a recommendation for performing an activ... | no            |
 
 ## Properties
 
@@ -64,7 +63,6 @@ from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: ControlActivity
 slot_uri: nexus:hasControlApplication
-alias: hasControlApplication
 domain_of:
 - ControlActivity
 range: AIUC1ControlApplicationCategory

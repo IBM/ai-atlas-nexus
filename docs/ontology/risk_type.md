@@ -10,7 +10,6 @@ _Annotation whether an AI risk occurs at input or output or is non-technical._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:risk_type](https://w3id.org/ai-atlas-nexus/risk_type)
-Alias: risk_type
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: risk_type
 description: Annotation whether an AI risk occurs at input or output or is non-technical.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: risk_type
 owner: Risk
 domain_of:
 - Risk

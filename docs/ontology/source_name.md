@@ -10,7 +10,6 @@ _Name of the evaluation source_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:source_name](https://w3id.org/ai-atlas-nexus/source_name)
-Alias: source_name
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: source_name
 description: Name of the evaluation source
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: source_name
 owner: SourceMetadata
 domain_of:
 - SourceMetadata

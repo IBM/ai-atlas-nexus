@@ -10,7 +10,6 @@ _Indicates that this entry requires a specific capability_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:requiresCapability](https://w3id.org/ai-atlas-nexus/requiresCapability)
-Alias: requiresCapability
 
 <!-- no inheritance hierarchy -->
 
@@ -18,21 +17,21 @@ Alias: requiresCapability
 
 | Name                                        | Description                                                                      | Modifies Slot |
 | ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
-| [AiTask](AiTask.md)                         | A task, such as summarization and classification, performed by an AI             | yes           |
-| [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
-| [LocalityOfUse](LocalityOfUse.md)           | The area, e                                                                      | no            |
-| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
-| [Domain](Domain.md)                         | An area, sector, or industry that is associated with economic activities         | no            |
-| [Certification](Certification.md)           | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
-| [Term](Term.md)                             | A term and its definitions                                                       | no            |
-| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [Risk](Risk.md)                             | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [Entry](Entry.md)                           | An entry and its definitions                                                     | no            |
-| [Purpose](Purpose.md)                       | The end goal for which an entity is used or an action is taken                   | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)             | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 | [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiTask](AiTask.md)                         | A task, such as summarization and classification, performed by an AI             | yes           |
+| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [Term](Term.md)                             | A term and its definitions                                                       | no            |
+| [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
+| [Certification](Certification.md)           | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [LocalityOfUse](LocalityOfUse.md)           | The area, e                                                                      | no            |
+| [Risk](Risk.md)                             | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
+| [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)                       | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [Purpose](Purpose.md)                       | The end goal for which an entity is used or an action is taken                   | no            |
+| [Domain](Domain.md)                         | An area, sector, or industry that is associated with economic activities         | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)             | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 
 ## Properties
 
@@ -81,7 +80,6 @@ description: Indicates that this entry requires a specific capability
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: Any
-alias: requiresCapability
 domain_of:
 - Entry
 - LargeLanguageModel

@@ -10,7 +10,6 @@ _The likelihood or probability or chance of something taking place or occuring_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasLikelihood](https://w3id.org/ai-atlas-nexus/hasLikelihood)
-Alias: hasLikelihood
 
 <!-- no inheritance hierarchy -->
 
@@ -58,7 +57,6 @@ description: The likelihood or probability or chance of something taking place o
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
-alias: hasLikelihood
 domain_of:
 - RiskIncident
 range: Likelihood

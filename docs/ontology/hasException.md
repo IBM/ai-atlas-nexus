@@ -10,7 +10,6 @@ _Exception type_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasException](https://w3id.org/ai-atlas-nexus/hasException)
-Alias: hasException
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Exception type
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasException
-alias: hasException
 domain_of:
 - LLMQuestionPolicy
 range: string

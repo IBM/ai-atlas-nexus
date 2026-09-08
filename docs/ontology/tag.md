@@ -10,7 +10,6 @@ _A shost version of the name_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:tag](https://w3id.org/ai-atlas-nexus/tag)
-Alias: tag
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: tag
 description: A shost version of the name
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: tag
 owner: Risk
 domain_of:
 - Risk

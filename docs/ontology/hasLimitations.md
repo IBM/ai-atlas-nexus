@@ -10,7 +10,6 @@ _Limitations in evaluating or addressing risks, such as gaps in demographic cove
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasLimitations](https://w3id.org/ai-atlas-nexus/hasLimitations)
-Alias: hasLimitations
 
 <!-- no inheritance hierarchy -->
 
@@ -18,8 +17,8 @@ Alias: hasLimitations
 
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 | [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
@@ -58,7 +57,6 @@ description: Limitations in evaluating or addressing risks, such as gaps in demo
   coverage or specific domains.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasLimitations
 domain_of:
 - EveryEvalAIResult
 - BenchmarkMetadataCard

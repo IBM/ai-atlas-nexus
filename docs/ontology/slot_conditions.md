@@ -10,7 +10,6 @@ _List of slot conditions that must be satisfied._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:slot_conditions](https://w3id.org/ai-atlas-nexus/slot_conditions)
-Alias: slot_conditions
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: slot_conditions
 description: List of slot conditions that must be satisfied.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: slot_conditions
 owner: AnonymousClassExpression
 domain_of:
 - AnonymousClassExpression

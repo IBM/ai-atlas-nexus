@@ -10,7 +10,6 @@ _Which of the AIUC-1 principles this requirement belongs to_
 <div data-search-exclude markdown="1">
 
 URI: [dpv:isPartOf](https://w3id.org/dpv#isPartOf)
-Alias: hasPrinciple
 
 <!-- no inheritance hierarchy -->
 
@@ -60,7 +59,6 @@ from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: Requirement
 slot_uri: dpv:isPartOf
-alias: hasPrinciple
 domain_of:
 - Requirement
 range: Principle

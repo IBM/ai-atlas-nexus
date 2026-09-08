@@ -10,7 +10,6 @@ _Indicates that this entity implements a specific capability_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:implementsCapability](https://w3id.org/ai-atlas-nexus/implementsCapability)
-Alias: implementsCapability
 
 <!-- no inheritance hierarchy -->
 
@@ -59,7 +58,6 @@ description: Indicates that this entity implements a specific capability
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: Any
-alias: implementsCapability
 domain_of:
 - Adapter
 - LLMIntrinsic

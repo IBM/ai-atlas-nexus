@@ -311,7 +311,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isDefinedByTaxonomy
     owner: LocalityOfUse
     domain_of:
     - Concept
@@ -339,7 +338,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isDefinedByVocabulary
     owner: LocalityOfUse
     domain_of:
     - Entry
@@ -353,7 +351,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
-    alias: hasDocumentation
     owner: LocalityOfUse
     domain_of:
     - Dataset
@@ -392,7 +389,6 @@ attributes:
     - rdfs:seeAlso
     rank: 1000
     slot_uri: nexus:hasExternalReference
-    alias: hasExternalReference
     owner: LocalityOfUse
     domain_of:
     - Control
@@ -406,7 +402,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isPartOf
     owner: LocalityOfUse
     domain_of:
     - Entry
@@ -422,7 +417,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: Entry
-    alias: requiredByTask
     owner: LocalityOfUse
     domain_of:
     - Entry
@@ -437,7 +431,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: Any
-    alias: requiresCapability
     owner: LocalityOfUse
     domain_of:
     - Entry
@@ -456,7 +449,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: Any
-    alias: implementedByAdapter
     owner: LocalityOfUse
     domain_of:
     - Entry
@@ -472,7 +464,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: dpv:hasRule
-    alias: hasRule
     owner: LocalityOfUse
     domain_of:
     - Entry
@@ -488,7 +479,6 @@ attributes:
       this is.
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
-    alias: type
     owner: LocalityOfUse
     domain_of:
     - Vocabulary
@@ -520,7 +510,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -532,7 +521,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -544,7 +532,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -555,7 +542,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -566,7 +552,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -578,7 +563,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -592,7 +576,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -606,7 +589,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -620,7 +602,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -635,7 +616,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -650,7 +630,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -663,7 +642,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -681,7 +659,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: LocalityOfUse
     domain_of:
     - Entity
@@ -693,7 +670,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: LocalityOfUse
     domain_of:
     - Entity

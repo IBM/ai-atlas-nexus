@@ -10,7 +10,6 @@ _Conditions that result from applying the rule._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:postconditions](https://w3id.org/ai-atlas-nexus/postconditions)
-Alias: postconditions
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: postconditions
 description: Conditions that result from applying the rule.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: postconditions
 owner: AttributeConditionRule
 domain_of:
 - AttributeConditionRule

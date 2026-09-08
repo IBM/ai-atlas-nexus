@@ -10,7 +10,6 @@ _Unix timestamp when the data was retrieved_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:retrieved_timestamp](https://w3id.org/ai-atlas-nexus/retrieved_timestamp)
-Alias: retrieved_timestamp
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: retrieved_timestamp
 description: Unix timestamp when the data was retrieved
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: retrieved_timestamp
 owner: EveryEvalAIResult
 domain_of:
 - EveryEvalAIResult

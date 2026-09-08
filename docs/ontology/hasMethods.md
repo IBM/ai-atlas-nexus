@@ -10,7 +10,6 @@ _The evaluation techniques applied within the benchmark._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasMethods](https://w3id.org/ai-atlas-nexus/hasMethods)
-Alias: hasMethods
 
 <!-- no inheritance hierarchy -->
 
@@ -18,8 +17,8 @@ Alias: hasMethods
 
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 | [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
@@ -57,7 +56,6 @@ name: hasMethods
 description: The evaluation techniques applied within the benchmark.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasMethods
 domain_of:
 - EveryEvalAIResult
 - BenchmarkMetadataCard

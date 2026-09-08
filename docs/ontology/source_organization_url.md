@@ -10,7 +10,6 @@ _URL of the source organization_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:source_organization_url](https://w3id.org/ai-atlas-nexus/source_organization_url)
-Alias: source_organization_url
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: source_organization_url
 description: URL of the source organization
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: source_organization_url
 owner: SourceMetadata
 domain_of:
 - SourceMetadata

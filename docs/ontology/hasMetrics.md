@@ -10,7 +10,6 @@ _The specific performance metrics used to assess models (e.g., accuracy, F1 scor
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasMetrics](https://w3id.org/ai-atlas-nexus/hasMetrics)
-Alias: hasMetrics
 
 <!-- no inheritance hierarchy -->
 
@@ -18,8 +17,8 @@ Alias: hasMetrics
 
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 | [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
@@ -58,7 +57,6 @@ description: The specific performance metrics used to assess models (e.g., accur
   F1 score, precision, recall).
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasMetrics
 domain_of:
 - EveryEvalAIResult
 - BenchmarkMetadataCard

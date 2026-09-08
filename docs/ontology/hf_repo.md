@@ -10,7 +10,6 @@ _HuggingFace repository_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hf_repo](https://w3id.org/ai-atlas-nexus/hf_repo)
-Alias: hf_repo
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: hf_repo
 description: HuggingFace repository
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hf_repo
 owner: SourceData
 domain_of:
 - SourceData

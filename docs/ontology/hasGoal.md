@@ -10,7 +10,6 @@ _The specific goal or primary use case the benchmark is designed for._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasGoal](https://w3id.org/ai-atlas-nexus/hasGoal)
-Alias: hasGoal
 
 <!-- no inheritance hierarchy -->
 
@@ -18,8 +17,8 @@ Alias: hasGoal
 
 | Name                                              | Description                                                                      | Modifies Slot |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 | [EveryEvalAIResult](EveryEvalAIResult.md)         | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 
 ## Properties
 
@@ -56,7 +55,6 @@ name: hasGoal
 description: The specific goal or primary use case the benchmark is designed for.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasGoal
 domain_of:
 - EveryEvalAIResult
 - BenchmarkMetadataCard

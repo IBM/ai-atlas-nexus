@@ -10,7 +10,6 @@ _Whether lower scores are better_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:lower_is_better](https://w3id.org/ai-atlas-nexus/lower_is_better)
-Alias: lower_is_better
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: lower_is_better
 description: Whether lower scores are better
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: lower_is_better
 owner: MetricConfig
 domain_of:
 - MetricConfig

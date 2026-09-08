@@ -10,7 +10,6 @@ _Specifies the domain an AI system is used within._
 <div data-search-exclude markdown="1">
 
 URI: [airo:isUsedWithinLocality](https://w3id.org/airo#isUsedWithinLocality)
-Alias: isUsedWithinLocality
 
 <!-- no inheritance hierarchy -->
 
@@ -18,16 +17,16 @@ Alias: isUsedWithinLocality
 
 | Name                                    | Description                                                                      | Modifies Slot |
 | --------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Action](Action.md)                     | Action to remediate a risk                                                       | no            |
-| [AiSystem](AiSystem.md)                 | A compound AI System composed of one or more AI capablities                      | no            |
 | [RiskConcept](RiskConcept.md)           | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
-| [AiAgent](AiAgent.md)                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [Impact](Impact.md)                     |                                                                                  | no            |
-| [Risk](Risk.md)                         | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [RiskIncident](RiskIncident.md)         | An event occuring or occured which is a realised or materialised risk            | no            |
-| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | no            |
+| [AiSystem](AiSystem.md)                 | A compound AI System composed of one or more AI capablities                      | no            |
 | [RiskControlGroup](RiskControlGroup.md) | A group of AI system related risk controls                                       | no            |
+| [RiskGroup](RiskGroup.md)               | A group of AI system related risks that are part of a risk taxonomy              | no            |
+| [Risk](Risk.md)                         | The state of uncertainty associated with an AI system, that has the potential... | no            |
 | [RiskControl](RiskControl.md)           | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
+| [Action](Action.md)                     | Action to remediate a risk                                                       | no            |
+| [RiskIncident](RiskIncident.md)         | An event occuring or occured which is a realised or materialised risk            | no            |
+| [Impact](Impact.md)                     |                                                                                  | no            |
+| [AiAgent](AiAgent.md)                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
 
 ## Properties
 
@@ -67,7 +66,6 @@ description: Specifies the domain an AI system is used within.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: airo:isUsedWithinLocality
-alias: isUsedWithinLocality
 domain_of:
 - RiskConcept
 - AiSystem

@@ -91,7 +91,6 @@ attributes:
     description: The name of the slot being evaluated in this condition.
     from_schema: https://w3id.org/ai-atlas-nexus/common
     rank: 1000
-    alias: slot_name
     owner: SlotCondition
     domain_of:
     - SlotCondition
@@ -101,7 +100,6 @@ attributes:
     description: The string value that the slot must equal to satisfy this condition.
     from_schema: https://w3id.org/ai-atlas-nexus/common
     rank: 1000
-    alias: equals_string
     owner: SlotCondition
     domain_of:
     - SlotCondition

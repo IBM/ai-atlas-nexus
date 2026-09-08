@@ -10,7 +10,6 @@ _A relationship indicating the model validation steps after AI model training._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:isValidatedBy](https://w3id.org/ai-atlas-nexus/isValidatedBy)
-Alias: isValidatedBy
 
 <!-- no inheritance hierarchy -->
 
@@ -49,9 +48,9 @@ name: isValidatedBy
 description: A relationship indicating the model validation steps after AI model training.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: isValidatedBy
 range: AiModelValidation
 multivalued: true
+inlined: true
 inlined_as_list: true
 
 ```

@@ -170,17 +170,11 @@ URI: [schema:Organization](http://schema.org/Organization)
 | [Container](Container.md)                   | [organizations](organizations.md) | range | [Organization](Organization.md) |
 | [Dataset](Dataset.md)                       | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
 | [BaseAi](BaseAi.md)                         | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [BaseAi](BaseAi.md)                         | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
 | [AiSystem](AiSystem.md)                     | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [AiSystem](AiSystem.md)                     | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
 | [AiAgent](AiAgent.md)                       | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [AiAgent](AiAgent.md)                       | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
 | [AiModel](AiModel.md)                       | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [AiModel](AiModel.md)                       | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
 | [LargeLanguageModel](LargeLanguageModel.md) | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
 | [Adapter](Adapter.md)                       | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [Adapter](Adapter.md)                       | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
 
 ## Identifier and Mapping Information
 
@@ -231,7 +225,6 @@ attributes:
       a License instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: grants_license
     owner: Organization
     domain_of:
     - Organization
@@ -244,7 +237,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: Organization
     domain_of:
     - Entity
@@ -256,7 +248,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: Organization
     domain_of:
     - Entity
@@ -268,7 +259,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: Organization
     domain_of:
     - Entity
@@ -279,7 +269,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: Organization
     domain_of:
     - Entity
@@ -290,7 +279,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: Organization
     domain_of:
     - Entity
@@ -302,7 +290,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: Organization
     domain_of:
     - Entity
@@ -316,7 +303,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: Organization
     domain_of:
     - Entity
@@ -330,7 +316,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: Organization
     domain_of:
     - Entity
@@ -344,7 +329,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: Organization
     domain_of:
     - Entity
@@ -359,7 +343,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: Organization
     domain_of:
     - Entity
@@ -374,7 +357,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: Organization
     domain_of:
     - Entity
@@ -387,7 +369,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: Organization
     domain_of:
     - Entity
@@ -405,7 +386,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: Organization
     domain_of:
     - Entity
@@ -417,7 +397,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: Organization
     domain_of:
     - Entity

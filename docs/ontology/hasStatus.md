@@ -10,7 +10,6 @@ _Indicates the status of specified concept_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasStatus](https://w3id.org/ai-atlas-nexus/hasStatus)
-Alias: hasStatus
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Indicates the status of specified concept
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
-alias: hasStatus
 domain_of:
 - RiskIncident
 range: IncidentStatus

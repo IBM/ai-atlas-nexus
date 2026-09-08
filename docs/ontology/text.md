@@ -10,7 +10,6 @@ _The question itself_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:text](https://w3id.org/ai-atlas-nexus/text)
-Alias: text
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: text
 description: The question itself
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: text
 owner: Question
 domain_of:
 - Question

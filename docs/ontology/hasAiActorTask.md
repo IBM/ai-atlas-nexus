@@ -10,7 +10,6 @@ _Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed w
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasAiActorTask](https://w3id.org/ai-atlas-nexus/hasAiActorTask)
-Alias: hasAiActorTask
 
 <!-- no inheritance hierarchy -->
 
@@ -58,7 +57,6 @@ description: Pertinent AI Actor Tasks for each subcategory. Not every AI Actor T
   to AI development and others apply to AI deployment).
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasAiActorTask
 domain_of:
 - Action
 range: string

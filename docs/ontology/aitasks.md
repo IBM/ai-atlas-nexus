@@ -10,7 +10,6 @@ _A list of AI tasks_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:aitasks](https://w3id.org/ai-atlas-nexus/aitasks)
-Alias: aitasks
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: aitasks
 description: A list of AI tasks
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: aitasks
 owner: Container
 domain_of:
 - Container

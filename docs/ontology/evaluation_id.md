@@ -10,7 +10,6 @@ _Unique identifier for this evaluation_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:evaluation_id](https://w3id.org/ai-atlas-nexus/evaluation_id)
-Alias: evaluation_id
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: evaluation_id
 description: Unique identifier for this evaluation
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: evaluation_id
 owner: EveryEvalAIResult
 domain_of:
 - EveryEvalAIResult

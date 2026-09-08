@@ -10,7 +10,6 @@ _A list of AI controls_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:controls](https://w3id.org/ai-atlas-nexus/controls)
-Alias: controls
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: controls
 description: A list of AI controls
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: controls
 owner: Container
 domain_of:
 - Container

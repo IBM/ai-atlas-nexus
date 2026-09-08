@@ -10,7 +10,6 @@ _A relationship where an entity relates to a term_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasRelatedTerm](https://w3id.org/ai-atlas-nexus/hasRelatedTerm)
-Alias: hasRelatedTerm
 
 <!-- no inheritance hierarchy -->
 
@@ -26,7 +25,7 @@ Alias: hasRelatedTerm
 
 | Property  | Value                                                            |
 | --------- | ---------------------------------------------------------------- |
-| Range     | [RiskConcept](RiskConcept.md)&nbsp;or&nbsp;<br />[Term](Term.md) |
+| Range     | [Term](Term.md)&nbsp;or&nbsp;<br />[RiskConcept](RiskConcept.md) |
 | Domain    | [Any](Any.md)                                                    |
 | Domain Of | [LLMIntrinsic](LLMIntrinsic.md)                                  |
 
@@ -69,7 +68,6 @@ description: A relationship where an entity relates to a term
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: Any
-alias: hasRelatedTerm
 domain_of:
 - LLMIntrinsic
 range: Term

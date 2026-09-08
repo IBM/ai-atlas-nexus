@@ -10,7 +10,6 @@ _Array of evaluation results_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasEvaluationResults](https://w3id.org/ai-atlas-nexus/hasEvaluationResults)
-Alias: hasEvaluationResults
 
 <!-- no inheritance hierarchy -->
 
@@ -58,7 +57,6 @@ description: Array of evaluation results
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: EveryEvalAIResult
-alias: hasEvaluationResults
 domain_of:
 - EveryEvalAIResult
 range: EvaluationResultRecord

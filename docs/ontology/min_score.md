@@ -10,7 +10,6 @@ _Minimum possible score_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:min_score](https://w3id.org/ai-atlas-nexus/min_score)
-Alias: min_score
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: min_score
 description: Minimum possible score
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: min_score
 owner: MetricConfig
 domain_of:
 - MetricConfig

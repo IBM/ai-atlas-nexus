@@ -10,7 +10,6 @@ _A collection of keywords_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasKeywords](https://w3id.org/ai-atlas-nexus/hasKeywords)
-Alias: hasKeywords
 
 <!-- no inheritance hierarchy -->
 
@@ -60,7 +59,6 @@ from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: Requirement
 slot_uri: nexus:hasKeywords
-alias: hasKeywords
 domain_of:
 - Requirement
 range: string

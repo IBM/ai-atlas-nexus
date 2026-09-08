@@ -10,7 +10,6 @@ _Score details_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasScoreDetails](https://w3id.org/ai-atlas-nexus/hasScoreDetails)
-Alias: hasScoreDetails
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Score details
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: EvaluationResultRecord
-alias: hasScoreDetails
 domain_of:
 - EvaluationResultRecord
 range: ScoreDetails

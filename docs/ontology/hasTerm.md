@@ -10,7 +10,6 @@ _Indicates terms associated with a vocabulary_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasTerm](https://w3id.org/ai-atlas-nexus/hasTerm)
-Alias: hasTerm
 
 <!-- no inheritance hierarchy -->
 
@@ -51,7 +50,6 @@ description: Indicates terms associated with a vocabulary
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasTerm
-alias: hasTerm
 range: Term
 multivalued: true
 inlined: false

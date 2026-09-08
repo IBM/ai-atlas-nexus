@@ -10,7 +10,6 @@ _A list of rules_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:rules](https://w3id.org/ai-atlas-nexus/rules)
-Alias: rules
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: rules
 description: A list of rules
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: rules
 owner: Container
 domain_of:
 - Container

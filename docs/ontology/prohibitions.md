@@ -10,7 +10,6 @@ _A list of prohibitions_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:prohibitions](https://w3id.org/ai-atlas-nexus/prohibitions)
-Alias: prohibitions
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: prohibitions
 description: A list of prohibitions
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: prohibitions
 owner: Container
 domain_of:
 - Container

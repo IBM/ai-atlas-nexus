@@ -10,7 +10,6 @@ _Indicates the control used for mitigating risks, risk sources, consequences, an
 <div data-search-exclude markdown="1">
 
 URI: [nexus:mitigatesRiskConcept](https://w3id.org/ai-atlas-nexus/mitigatesRiskConcept)
-Alias: mitigatesRiskConcept
 
 <!-- no inheritance hierarchy -->
 
@@ -18,8 +17,8 @@ Alias: mitigatesRiskConcept
 
 | Name                          | Description                                                       | Modifies Slot |
 | ----------------------------- | ----------------------------------------------------------------- | ------------- |
-| [Action](Action.md)           | Action to remediate a risk                                        | no            |
 | [RiskControl](RiskControl.md) | A measure that maintains and/or modifies risk (and risk concepts) | no            |
+| [Action](Action.md)           | Action to remediate a risk                                        | no            |
 
 ## Properties
 
@@ -72,7 +71,6 @@ exact_mappings:
 - airo:mitigatesRiskConcept
 rank: 1000
 domain: RiskControl
-alias: mitigatesRiskConcept
 domain_of:
 - RiskControl
 inverse: isMitigatedBy

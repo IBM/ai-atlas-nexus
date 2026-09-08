@@ -10,7 +10,6 @@ _How the benchmark evaluates performance across different demographic groups (e.
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasDemographicAnalysis](https://w3id.org/ai-atlas-nexus/hasDemographicAnalysis)
-Alias: hasDemographicAnalysis
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: How the benchmark evaluates performance across different demographi
   groups (e.g., gender, race).
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasDemographicAnalysis
 domain_of:
 - BenchmarkMetadataCard
 range: string

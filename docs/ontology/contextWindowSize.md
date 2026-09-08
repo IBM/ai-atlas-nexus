@@ -10,7 +10,6 @@ _The total length, in bytes, of an AI model's context window._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:contextWindowSize](https://w3id.org/ai-atlas-nexus/contextWindowSize)
-Alias: contextWindowSize
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: contextWindowSize
 description: The total length, in bytes, of an AI model's context window.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: contextWindowSize
 domain_of:
 - LargeLanguageModel
 range: integer

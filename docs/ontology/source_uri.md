@@ -10,7 +10,6 @@ _The uri of the incident_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:source_uri](https://w3id.org/ai-atlas-nexus/source_uri)
-Alias: source_uri
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: source_uri
 description: The uri of the incident
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: source_uri
 owner: RiskIncident
 domain_of:
 - RiskIncident

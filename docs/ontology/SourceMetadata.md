@@ -249,7 +249,6 @@ attributes:
     description: Name of the evaluation source
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     rank: 1000
-    alias: source_name
     owner: SourceMetadata
     domain_of:
     - SourceMetadata
@@ -259,7 +258,6 @@ attributes:
     description: Type of source (e.g., evaluation_run)
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     rank: 1000
-    alias: source_type
     owner: SourceMetadata
     domain_of:
     - SourceMetadata
@@ -270,7 +268,6 @@ attributes:
     description: Organization that provided the evaluation
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     rank: 1000
-    alias: source_organization_name
     owner: SourceMetadata
     domain_of:
     - SourceMetadata
@@ -280,7 +277,6 @@ attributes:
     description: URL of the source organization
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     rank: 1000
-    alias: source_organization_url
     owner: SourceMetadata
     domain_of:
     - SourceMetadata
@@ -290,7 +286,6 @@ attributes:
     description: Relationship of evaluator (e.g., first_party, third_party)
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     rank: 1000
-    alias: evaluator_relationship
     owner: SourceMetadata
     domain_of:
     - SourceMetadata
@@ -303,7 +298,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -315,7 +309,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -327,7 +320,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -338,7 +330,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -349,7 +340,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -361,7 +351,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -375,7 +364,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -389,7 +377,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -403,7 +390,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -418,7 +404,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -433,7 +418,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -446,7 +430,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -464,7 +447,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: SourceMetadata
     domain_of:
     - Entity
@@ -476,7 +458,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: SourceMetadata
     domain_of:
     - Entity

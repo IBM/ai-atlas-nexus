@@ -10,7 +10,6 @@ _Measures taken to ensure that the benchmark provides valid and reliable evaluat
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasValidation](https://w3id.org/ai-atlas-nexus/hasValidation)
-Alias: hasValidation
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Measures taken to ensure that the benchmark provides valid and reli
   evaluations.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasValidation
 domain_of:
 - BenchmarkMetadataCard
 range: string

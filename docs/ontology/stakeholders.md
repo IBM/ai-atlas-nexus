@@ -10,7 +10,6 @@ _A list of stakeholders_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:stakeholders](https://w3id.org/ai-atlas-nexus/stakeholders)
-Alias: stakeholders
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: stakeholders
 description: A list of stakeholders
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: stakeholders
 owner: Container
 domain_of:
 - Container

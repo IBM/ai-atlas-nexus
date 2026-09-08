@@ -91,7 +91,6 @@ attributes:
     description: Some numeric or string value
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: value
     owner: Fact
     domain_of:
     - Fact
@@ -103,7 +102,6 @@ attributes:
       where some value was found or how it was generated.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: evidence
     owner: Fact
     domain_of:
     - Fact

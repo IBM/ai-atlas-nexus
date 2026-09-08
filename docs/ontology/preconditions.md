@@ -10,7 +10,6 @@ _Conditions that must be satisfied before the rule applies._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:preconditions](https://w3id.org/ai-atlas-nexus/preconditions)
-Alias: preconditions
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: preconditions
 description: Conditions that must be satisfied before the rule applies.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: preconditions
 owner: AttributeConditionRule
 domain_of:
 - AttributeConditionRule

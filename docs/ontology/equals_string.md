@@ -10,7 +10,6 @@ _The string value that the slot must equal to satisfy this condition._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:equals_string](https://w3id.org/ai-atlas-nexus/equals_string)
-Alias: equals_string
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: equals_string
 description: The string value that the slot must equal to satisfy this condition.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: equals_string
 owner: SlotCondition
 domain_of:
 - SlotCondition

@@ -10,7 +10,6 @@ _Indicates child terms associated with a term_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasSubDefinition](https://w3id.org/ai-atlas-nexus/hasSubDefinition)
-Alias: hasSubDefinition
 
 <!-- no inheritance hierarchy -->
 
@@ -58,7 +57,6 @@ description: Indicates child terms associated with a term
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasSubDefinition
-alias: hasSubDefinition
 domain_of:
 - Term
 range: Term

@@ -10,7 +10,6 @@ _A list of entries_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:entries](https://w3id.org/ai-atlas-nexus/entries)
-Alias: entries
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: entries
 description: A list of entries
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: entries
 owner: Container
 domain_of:
 - Container

@@ -10,7 +10,6 @@ _Name of the dataset_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:dataset_name](https://w3id.org/ai-atlas-nexus/dataset_name)
-Alias: dataset_name
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: dataset_name
 description: Name of the dataset
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: dataset_name
 owner: SourceData
 domain_of:
 - SourceData

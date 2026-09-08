@@ -412,7 +412,6 @@ attributes:
     name: name
     description: The official name of the benchmark.
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
-    alias: name
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -423,7 +422,6 @@ attributes:
     description: A brief description of the benchmark's main goals and scope.
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     rank: 1000
-    alias: overview
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -432,7 +430,6 @@ attributes:
     name: type
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     designates_type: true
-    alias: type
     owner: BenchmarkMetadataCard
     domain_of:
     - Vocabulary
@@ -463,7 +460,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: BenchmarkMetadataCard
-    alias: describesAiEval
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -476,7 +472,6 @@ attributes:
     description: The type of data used in the benchmark (e.g., text, images, or multi-modal)
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasDataType
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -489,7 +484,6 @@ attributes:
       natural language processing, computer vision).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasDomains
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -502,7 +496,6 @@ attributes:
       English, multilingual).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasLanguages
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -514,7 +507,6 @@ attributes:
     description: Benchmarks that are closely related in terms of goals or data type.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasSimilarBenchmarks
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -526,7 +518,6 @@ attributes:
       to the benchmark.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasResources
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -538,7 +529,6 @@ attributes:
     description: The specific goal or primary use case the benchmark is designed for.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasGoal
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -550,7 +540,6 @@ attributes:
       etc.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasAudience
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -562,7 +551,6 @@ attributes:
     description: The tasks or evaluations the benchmark is intended to assess.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasTasks
     owner: BenchmarkMetadataCard
     domain_of:
     - AiEval
@@ -577,7 +565,6 @@ attributes:
       coverage or specific domains.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasLimitations
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -590,7 +577,6 @@ attributes:
       give misleading results.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasOutOfScopeUses
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -602,7 +588,6 @@ attributes:
       datasets, user submissions).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasDataSource
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -614,7 +599,6 @@ attributes:
     description: The size of the dataset, including the number of data points or examples.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasDataSize
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -626,7 +610,6 @@ attributes:
       format, tabular data).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasDataFormat
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -639,7 +622,6 @@ attributes:
       or what performed the annotations (e.g., human annotators, automated processes).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasAnnotation
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -650,7 +632,6 @@ attributes:
     description: The evaluation techniques applied within the benchmark.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasMethods
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -663,7 +644,6 @@ attributes:
       F1 score, precision, recall).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasMetrics
     owner: BenchmarkMetadataCard
     domain_of:
     - EveryEvalAIResult
@@ -676,7 +656,6 @@ attributes:
       data.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasCalculation
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -687,7 +666,6 @@ attributes:
     description: How users should interpret the scores or results from the metrics.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasInterpretation
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -699,7 +677,6 @@ attributes:
       new performance scores.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasBaselineResults
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -711,7 +688,6 @@ attributes:
       evaluations.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasValidation
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -723,7 +699,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: BenchmarkMetadataCard
-    alias: hasRelatedRisk
     owner: BenchmarkMetadataCard
     domain_of:
     - Term
@@ -744,7 +719,6 @@ attributes:
       groups (e.g., gender, race).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasDemographicAnalysis
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -756,7 +730,6 @@ attributes:
       techniques are applied.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasConsiderationPrivacyAndAnonymity
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -768,7 +741,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
-    alias: hasLicense
     owner: BenchmarkMetadataCard
     domain_of:
     - Dataset
@@ -789,7 +761,6 @@ attributes:
       for datasets involving personal data.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasConsiderationConsentProcedures
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -800,7 +771,6 @@ attributes:
     description: Compliance with relevant legal or ethical regulations (if applicable).
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasConsiderationComplianceWithRegulations
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
@@ -812,7 +782,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
-    alias: hasDocumentation
     owner: BenchmarkMetadataCard
     domain_of:
     - Dataset
@@ -845,7 +814,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -857,7 +825,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -868,7 +835,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -879,7 +845,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -891,7 +856,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -905,7 +869,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -919,7 +882,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -933,7 +895,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -948,7 +909,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -963,7 +923,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -976,7 +935,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -994,7 +952,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity
@@ -1006,7 +963,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: BenchmarkMetadataCard
     domain_of:
     - Entity

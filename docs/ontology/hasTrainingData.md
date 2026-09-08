@@ -10,7 +10,6 @@ _A relationship indicating the datasets an AI model was trained on._
 <div data-search-exclude markdown="1">
 
 URI: [airo:hasTrainingData](https://w3id.org/airo#hasTrainingData)
-Alias: hasTrainingData
 
 <!-- no inheritance hierarchy -->
 
@@ -59,7 +58,6 @@ description: A relationship indicating the datasets an AI model was trained on.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: airo:hasTrainingData
-alias: hasTrainingData
 domain_of:
 - LargeLanguageModel
 range: Dataset

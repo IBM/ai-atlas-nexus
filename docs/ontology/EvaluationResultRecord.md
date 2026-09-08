@@ -247,7 +247,6 @@ attributes:
     description: Name of the evaluation benchmark
     from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
     rank: 1000
-    alias: evaluation_name
     owner: EvaluationResultRecord
     domain_of:
     - EvaluationResultRecord
@@ -258,7 +257,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: EvaluationResultRecord
-    alias: hasSourceData
     owner: EvaluationResultRecord
     domain_of:
     - EvaluationResultRecord
@@ -270,7 +268,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: EvaluationResultRecord
-    alias: hasMetricConfig
     owner: EvaluationResultRecord
     domain_of:
     - EvaluationResultRecord
@@ -282,7 +279,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: EvaluationResultRecord
-    alias: hasScoreDetails
     owner: EvaluationResultRecord
     domain_of:
     - EvaluationResultRecord
@@ -296,7 +292,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -308,7 +303,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -320,7 +314,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -331,7 +324,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -342,7 +334,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -354,7 +345,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -368,7 +358,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -382,7 +371,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -396,7 +384,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -411,7 +398,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -426,7 +412,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -439,7 +424,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -457,7 +441,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: EvaluationResultRecord
     domain_of:
     - Entity
@@ -469,7 +452,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: EvaluationResultRecord
     domain_of:
     - Entity

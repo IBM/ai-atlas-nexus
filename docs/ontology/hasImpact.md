@@ -10,7 +10,6 @@ _Indicates impact(s) possible or arising as consequences from specified concept_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasImpact](https://w3id.org/ai-atlas-nexus/hasImpact)
-Alias: hasImpact
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ broad_mappings:
 - dpv:hasConsequence
 rank: 1000
 domain: RiskConcept
-alias: hasImpact
 domain_of:
 - RiskIncident
 range: Impact

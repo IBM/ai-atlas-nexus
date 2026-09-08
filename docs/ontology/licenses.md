@@ -10,7 +10,6 @@ _A list of licenses_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:licenses](https://w3id.org/ai-atlas-nexus/licenses)
-Alias: licenses
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: licenses
 description: A list of licenses
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: licenses
 owner: Container
 domain_of:
 - Container

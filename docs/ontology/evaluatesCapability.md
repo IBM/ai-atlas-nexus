@@ -10,7 +10,6 @@ _Indicates that this benchmark evaluates a specific capability_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:evaluatesCapability](https://w3id.org/ai-atlas-nexus/evaluatesCapability)
-Alias: evaluatesCapability
 
 <!-- no inheritance hierarchy -->
 
@@ -60,7 +59,6 @@ description: Indicates that this benchmark evaluates a specific capability
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: BenchmarkMetadataCard
-alias: evaluatesCapability
 inverse: evaluatedByBenchmark
 range: Capability
 multivalued: true

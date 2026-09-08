@@ -311,8 +311,8 @@ URI: [nexus:AiAgent](https://w3id.org/ai-atlas-nexus/AiAgent)
 
 
 
-        AiAgent --> "0..1" Organization : isProvidedBy
-        click Organization href "../Organization/"
+        AiAgent --> "0..1" AiProvider : isProvidedBy
+        click AiProvider href "../AiProvider/"
 
 
 
@@ -425,10 +425,10 @@ URI: [nexus:AiAgent](https://w3id.org/ai-atlas-nexus/AiAgent)
 | [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Risk](Risk.md)                           | A relationship where an entity relates to a risk                                 | [AiSystem](AiSystem.md)                |
 | [isProducedBy](isProducedBy.md)                   | 0..1 <br/> [Organization](Organization.md)         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)                    |
 | [hasModelCard](hasModelCard.md)                   | \* <br/> [String](String.md)                       | A relationship to model card references                                          | [BaseAi](BaseAi.md)                    |
-| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md), [Entry](Entry.md) |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [Entry](Entry.md), [BaseAi](BaseAi.md) |
 | [hasLicense](hasLicense.md)                       | 0..1 <br/> [License](License.md)                   | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md)                    |
 | [performsTask](performsTask.md)                   | \* <br/> [AiTask](AiTask.md)                       | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md)                    |
-| [isProvidedBy](isProvidedBy.md)                   | 0..1 <br/> [Organization](Organization.md)         | A relationship indicating the AI agent has been provided by an AI systems pro... | [BaseAi](BaseAi.md)                    |
+| [isProvidedBy](isProvidedBy.md)                   | 0..1 <br/> [AiProvider](AiProvider.md)             | A relationship indicating the AI agent has been provided by an AI systems pro... | [BaseAi](BaseAi.md)                    |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                 | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)                      |
 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | 0..1 <br/> [Vocabulary](Vocabulary.md)             | A relationship where a term or a term group is defined by a vocabulary           | [Entry](Entry.md)                      |
 | [hasExternalReference](hasExternalReference.md)   | \* <br/> [Documentation](Documentation.md)         | External references / additional resources related to this entity, such as ar... | [Entry](Entry.md)                      |
@@ -518,7 +518,6 @@ attributes:
       system is composed.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: isComposedOf
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -531,7 +530,6 @@ attributes:
     description: The type of system as defined by the EU AI Act.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasEuAiSystemType
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -541,7 +539,6 @@ attributes:
     description: The risk category of an AI system as defined by the EU AI Act.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasEuRiskCategory
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -555,7 +552,6 @@ attributes:
     rank: 1000
     domain: AiSystem
     slot_uri: tech:hasCapability
-    alias: hasCapability
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -571,7 +567,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isAppliedWithinDomain
-    alias: isAppliedWithinDomain
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -584,7 +579,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isUsedWithinLocality
-    alias: isUsedWithinLocality
     owner: AiAgent
     domain_of:
     - RiskConcept
@@ -598,7 +592,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasPurpose
-    alias: hasPurpose
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -611,7 +604,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasStakeholder
-    alias: hasStakeholder
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -623,7 +615,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isDeployedBy
-    alias: isDeployedBy
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -634,7 +625,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:isDevelopedBy
-    alias: isDevelopedBy
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -645,7 +635,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasAISubject
-    alias: hasAISubject
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -658,7 +647,6 @@ attributes:
     rank: 1000
     domain: AiSystem
     slot_uri: airo:hasAiUser
-    alias: hasAIUser
     owner: AiAgent
     domain_of:
     - AiSystem
@@ -670,7 +658,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: AiSystem
-    alias: hasRelatedRisk
     owner: AiAgent
     domain_of:
     - Term
@@ -690,7 +677,6 @@ attributes:
     description: A relationship to the Organization instance which produces this instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: isProducedBy
     owner: AiAgent
     domain_of:
     - BaseAi
@@ -700,7 +686,6 @@ attributes:
     description: A relationship to model card references.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasModelCard
     owner: AiAgent
     domain_of:
     - BaseAi
@@ -714,7 +699,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
-    alias: hasDocumentation
     owner: AiAgent
     domain_of:
     - Dataset
@@ -745,7 +729,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
-    alias: hasLicense
     owner: AiAgent
     domain_of:
     - Dataset
@@ -765,7 +748,6 @@ attributes:
     description: relationship indicating the AI tasks an AI model can perform.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: performsTask
     owner: AiAgent
     domain_of:
     - BaseAi
@@ -778,13 +760,12 @@ attributes:
       systems provider.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    slot_uri: schema:provider
-    alias: isProvidedBy
+    slot_uri: airo:isProvidedBy
     owner: AiAgent
     domain_of:
     - Dataset
     - BaseAi
-    range: Organization
+    range: AiProvider
   isDefinedByTaxonomy:
     name: isDefinedByTaxonomy
     description: A relationship where a concept or a concept group is defined by a
@@ -792,7 +773,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isDefinedByTaxonomy
     owner: AiAgent
     domain_of:
     - Concept
@@ -820,7 +800,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isDefinedByVocabulary
     owner: AiAgent
     domain_of:
     - Entry
@@ -842,7 +821,6 @@ attributes:
     - rdfs:seeAlso
     rank: 1000
     slot_uri: nexus:hasExternalReference
-    alias: hasExternalReference
     owner: AiAgent
     domain_of:
     - Control
@@ -856,7 +834,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isPartOf
     owner: AiAgent
     domain_of:
     - Entry
@@ -872,7 +849,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: Entry
-    alias: requiredByTask
     owner: AiAgent
     domain_of:
     - Entry
@@ -887,7 +863,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: Any
-    alias: requiresCapability
     owner: AiAgent
     domain_of:
     - Entry
@@ -906,7 +881,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     domain: Any
-    alias: implementedByAdapter
     owner: AiAgent
     domain_of:
     - Entry
@@ -922,7 +896,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: dpv:hasRule
-    alias: hasRule
     owner: AiAgent
     domain_of:
     - Entry
@@ -938,7 +911,6 @@ attributes:
       this is.
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
-    alias: type
     owner: AiAgent
     domain_of:
     - Vocabulary
@@ -970,7 +942,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: AiAgent
     domain_of:
     - Entity
@@ -982,7 +953,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: AiAgent
     domain_of:
     - Entity
@@ -994,7 +964,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: AiAgent
     domain_of:
     - Entity
@@ -1005,7 +974,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: AiAgent
     domain_of:
     - Entity
@@ -1016,7 +984,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: AiAgent
     domain_of:
     - Entity
@@ -1028,7 +995,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: AiAgent
     domain_of:
     - Entity
@@ -1042,7 +1008,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: AiAgent
     domain_of:
     - Entity
@@ -1056,7 +1021,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: AiAgent
     domain_of:
     - Entity
@@ -1070,7 +1034,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: AiAgent
     domain_of:
     - Entity
@@ -1085,7 +1048,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: AiAgent
     domain_of:
     - Entity
@@ -1100,7 +1062,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: AiAgent
     domain_of:
     - Entity
@@ -1113,7 +1074,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: AiAgent
     domain_of:
     - Entity
@@ -1131,7 +1091,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: AiAgent
     domain_of:
     - Entity
@@ -1143,7 +1102,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: AiAgent
     domain_of:
     - Entity

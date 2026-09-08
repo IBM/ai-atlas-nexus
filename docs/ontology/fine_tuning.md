@@ -10,7 +10,6 @@ _A description of the fine-tuning mechanism(s) applied to a model._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:fine_tuning](https://w3id.org/ai-atlas-nexus/fine_tuning)
-Alias: fine_tuning
 
 <!-- no inheritance hierarchy -->
 
@@ -56,7 +55,6 @@ name: fine_tuning
 description: A description of the fine-tuning mechanism(s) applied to a model.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: fine_tuning
 domain_of:
 - LargeLanguageModel
 range: string

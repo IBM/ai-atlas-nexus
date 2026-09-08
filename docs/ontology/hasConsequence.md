@@ -10,7 +10,6 @@ _Indicates consequence(s) possible or arising from specified concept_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasConsequence](https://w3id.org/ai-atlas-nexus/hasConsequence)
-Alias: hasConsequence
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Indicates consequence(s) possible or arising from specified concept
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: RiskConcept
-alias: hasConsequence
 domain_of:
 - RiskIncident
 range: Consequence

@@ -8,7 +8,6 @@ search:
 <div data-search-exclude markdown="1">
 
 URI: [nexus:training_data_preprocessing](https://w3id.org/ai-atlas-nexus/training_data_preprocessing)
-Alias: training_data_preprocessing
 
 <!-- no inheritance hierarchy -->
 
@@ -47,7 +46,6 @@ deprecated: Changed to match slot naming convention.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 deprecated_element_has_exact_replacement: hasTrainingDataPreprocessing
 rank: 1000
-alias: training_data_preprocessing
 range: string
 
 ```

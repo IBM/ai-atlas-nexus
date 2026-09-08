@@ -10,7 +10,6 @@ _A list of taxonomies_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:taxonomies](https://w3id.org/ai-atlas-nexus/taxonomies)
-Alias: taxonomies
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: taxonomies
 description: A list of taxonomies
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: taxonomies
 owner: Container
 domain_of:
 - Container

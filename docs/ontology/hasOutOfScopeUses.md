@@ -10,7 +10,6 @@ _Use cases where the benchmark is not designed to be applied and could give misl
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasOutOfScopeUses](https://w3id.org/ai-atlas-nexus/hasOutOfScopeUses)
-Alias: hasOutOfScopeUses
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Use cases where the benchmark is not designed to be applied and cou
   give misleading results.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasOutOfScopeUses
 domain_of:
 - BenchmarkMetadataCard
 range: string

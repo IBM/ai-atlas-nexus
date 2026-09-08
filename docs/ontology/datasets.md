@@ -10,7 +10,6 @@ _A list of data sets_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:datasets](https://w3id.org/ai-atlas-nexus/datasets)
-Alias: datasets
 
 <!-- no inheritance hierarchy -->
 
@@ -62,7 +61,6 @@ name: datasets
 description: A list of data sets
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: datasets
 owner: Container
 domain_of:
 - Container

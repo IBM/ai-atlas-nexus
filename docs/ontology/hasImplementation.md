@@ -10,7 +10,6 @@ _A relationship to a implementation defining the risk evaluation_
 <div data-search-exclude markdown="1">
 
 URI: [schema:url](http://schema.org/url)
-Alias: hasImplementation
 
 <!-- no inheritance hierarchy -->
 
@@ -18,8 +17,8 @@ Alias: hasImplementation
 
 | Name                              | Description                                       | Modifies Slot |
 | --------------------------------- | ------------------------------------------------- | ------------- |
-| [Question](Question.md)           | An evaluation where a question has to be answered | no            |
 | [AiEval](AiEval.md)               | An AI Evaluation, e                               | no            |
+| [Question](Question.md)           | An evaluation where a question has to be answered | no            |
 | [Questionnaire](Questionnaire.md) | A questionnaire groups questions                  | no            |
 
 ## Properties
@@ -60,7 +59,6 @@ description: A relationship to a implementation defining the risk evaluation
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: schema:url
-alias: hasImplementation
 domain_of:
 - AiEval
 range: uri

@@ -10,7 +10,6 @@ _The process used to annotate or label the dataset, including who or what perfor
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasAnnotation](https://w3id.org/ai-atlas-nexus/hasAnnotation)
-Alias: hasAnnotation
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: The process used to annotate or label the dataset, including who or
   performed the annotations (e.g., human annotators, automated processes).
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasAnnotation
 domain_of:
 - BenchmarkMetadataCard
 range: string

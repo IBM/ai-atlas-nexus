@@ -10,7 +10,6 @@ _A brief description of the benchmark's main goals and scope._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:overview](https://w3id.org/ai-atlas-nexus/overview)
-Alias: overview
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: overview
 description: A brief description of the benchmark's main goals and scope.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: overview
 owner: BenchmarkMetadataCard
 domain_of:
 - BenchmarkMetadataCard

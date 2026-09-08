@@ -10,7 +10,6 @@ _HuggingFace dataset split_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hf_split](https://w3id.org/ai-atlas-nexus/hf_split)
-Alias: hf_split
 
 <!-- no inheritance hierarchy -->
 
@@ -61,7 +60,6 @@ name: hf_split
 description: HuggingFace dataset split
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hf_split
 owner: SourceData
 domain_of:
 - SourceData

@@ -157,8 +157,8 @@ URI: [nexus:AiModel](https://w3id.org/ai-atlas-nexus/AiModel)
 
 
 
-        AiModel --> "0..1" Organization : isProvidedBy
-        click Organization href "../Organization/"
+        AiModel --> "0..1" AiProvider : isProvidedBy
+        click AiProvider href "../AiProvider/"
 
 
 
@@ -234,7 +234,7 @@ URI: [nexus:AiModel](https://w3id.org/ai-atlas-nexus/AiModel)
 | [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md) |
 | [hasLicense](hasLicense.md)                   | 0..1 <br/> [License](License.md)                 | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md) |
 | [performsTask](performsTask.md)               | \* <br/> [AiTask](AiTask.md)                     | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md) |
-| [isProvidedBy](isProvidedBy.md)               | 0..1 <br/> [Organization](Organization.md)       | A relationship to the Organization instance that provides this instance          | [BaseAi](BaseAi.md) |
+| [isProvidedBy](isProvidedBy.md)               | 0..1 <br/> [AiProvider](AiProvider.md)           | Indicates provider of an AI system or component                                  | [BaseAi](BaseAi.md) |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
@@ -314,7 +314,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: dqv:hasQualityMeasurement
-    alias: hasEvaluation
     owner: AiModel
     domain_of:
     - AiModel
@@ -325,7 +324,6 @@ attributes:
     description: A description of the architecture of an AI such as 'Decoder-only'.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: architecture
     owner: AiModel
     domain_of:
     - AiModel
@@ -335,7 +333,6 @@ attributes:
     description: GPU consumption in terms of hours
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: gpu_hours
     owner: AiModel
     domain_of:
     - AiModel
@@ -346,7 +343,6 @@ attributes:
     description: power consumption in Watts
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: power_consumption_w
     owner: AiModel
     domain_of:
     - AiModel
@@ -358,7 +354,6 @@ attributes:
       during training
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: carbon_emitted
     owner: AiModel
     domain_of:
     - AiModel
@@ -374,7 +369,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasRiskControl
-    alias: hasRiskControl
     owner: AiModel
     domain_of:
     - AiModel
@@ -385,7 +379,6 @@ attributes:
     description: A relationship to the Organization instance which produces this instance.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: isProducedBy
     owner: AiModel
     domain_of:
     - BaseAi
@@ -395,7 +388,6 @@ attributes:
     description: A relationship to model card references.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: hasModelCard
     owner: AiModel
     domain_of:
     - BaseAi
@@ -409,7 +401,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasDocumentation
-    alias: hasDocumentation
     owner: AiModel
     domain_of:
     - Dataset
@@ -440,7 +431,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: airo:hasLicense
-    alias: hasLicense
     owner: AiModel
     domain_of:
     - Dataset
@@ -460,7 +450,6 @@ attributes:
     description: relationship indicating the AI tasks an AI model can perform.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    alias: performsTask
     owner: AiModel
     domain_of:
     - BaseAi
@@ -469,16 +458,15 @@ attributes:
     inlined: false
   isProvidedBy:
     name: isProvidedBy
-    description: A relationship to the Organization instance that provides this instance.
+    description: Indicates provider of an AI system or component.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
-    slot_uri: schema:provider
-    alias: isProvidedBy
+    slot_uri: airo:isProvidedBy
     owner: AiModel
     domain_of:
     - Dataset
     - BaseAi
-    range: Organization
+    range: AiProvider
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -487,7 +475,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: AiModel
     domain_of:
     - Entity
@@ -499,7 +486,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: AiModel
     domain_of:
     - Entity
@@ -511,7 +497,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: AiModel
     domain_of:
     - Entity
@@ -522,7 +507,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: AiModel
     domain_of:
     - Entity
@@ -533,7 +517,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: AiModel
     domain_of:
     - Entity
@@ -545,7 +528,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: AiModel
     domain_of:
     - Entity
@@ -559,7 +541,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: AiModel
     domain_of:
     - Entity
@@ -573,7 +554,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: AiModel
     domain_of:
     - Entity
@@ -587,7 +567,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: AiModel
     domain_of:
     - Entity
@@ -602,7 +581,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: AiModel
     domain_of:
     - Entity
@@ -617,7 +595,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: AiModel
     domain_of:
     - Entity
@@ -630,7 +607,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: AiModel
     domain_of:
     - Entity
@@ -648,7 +624,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: AiModel
     domain_of:
     - Entity
@@ -660,7 +635,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: AiModel
     domain_of:
     - Entity

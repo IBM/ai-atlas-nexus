@@ -313,7 +313,6 @@ attributes:
     name: type
     from_schema: https://w3id.org/ai-atlas-nexus/ai_aiuc
     designates_type: true
-    alias: type
     owner: ControlActivityProhibition
     domain_of:
     - Vocabulary
@@ -345,7 +344,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasControlApplication
-    alias: hasControlApplication
     owner: ControlActivityProhibition
     domain_of:
     - ControlActivity
@@ -358,7 +356,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasEvidenceCategory
-    alias: hasEvidenceCategory
     owner: ControlActivityProhibition
     domain_of:
     - ControlActivity
@@ -372,7 +369,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasTypicalLocation
-    alias: hasTypicalLocation
     owner: ControlActivityProhibition
     domain_of:
     - ControlActivity
@@ -386,7 +382,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:isApplicableToCapability
-    alias: isApplicableToCapability
     owner: ControlActivityProhibition
     domain_of:
     - ControlActivity
@@ -401,7 +396,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasRequirement
-    alias: hasRequirement
     owner: ControlActivityProhibition
     domain_of:
     - ControlActivity
@@ -415,7 +409,6 @@ attributes:
     rank: 1000
     domain: Any
     slot_uri: nexus:hasRequirementType
-    alias: hasRequirementType
     owner: ControlActivityProhibition
     domain_of:
     - ControlActivity
@@ -428,7 +421,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasTypicalEvidence
-    alias: hasTypicalEvidence
     owner: ControlActivityProhibition
     domain_of:
     - ControlActivity
@@ -442,7 +434,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isDefinedByTaxonomy
     owner: ControlActivityProhibition
     domain_of:
     - Concept
@@ -471,7 +462,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: dpv:hasRule
-    alias: hasRule
     owner: ControlActivityProhibition
     domain_of:
     - Entry
@@ -489,7 +479,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -501,7 +490,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -513,7 +501,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -524,7 +511,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -535,7 +521,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -547,7 +532,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -561,7 +545,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -575,7 +558,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -589,7 +571,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -604,7 +585,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -619,7 +599,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -632,7 +611,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -650,7 +628,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: ControlActivityProhibition
     domain_of:
     - Entity
@@ -662,7 +639,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: ControlActivityProhibition
     domain_of:
     - Entity

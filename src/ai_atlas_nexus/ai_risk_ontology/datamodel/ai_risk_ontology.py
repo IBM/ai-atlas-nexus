@@ -19,7 +19,7 @@ from pydantic import (
 )
 
 
-metamodel_version = "1.7.0"
+metamodel_version = "1.11.0"
 version = "0.5.0"
 
 
@@ -425,7 +425,7 @@ class Dataset(Entity):
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    isProvidedBy: Optional[str] = Field(default=None, description="""Indicates provider of an AI system or component.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'airo:isProvidedBy'} })
+    isProvidedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance that provides this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset', 'BaseAi'], 'slot_uri': 'schema:provider'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -3910,7 +3910,13 @@ class BaseAi(Entity):
     """
     Any type of AI, be it a LLM, RL agent, SVM, etc.
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True, 'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
+         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system',
+         'slot_usage': {'isProvidedBy': {'description': 'Indicates provider of an AI '
+                                                        'system or component.',
+                                         'name': 'isProvidedBy',
+                                         'range': 'AiProvider',
+                                         'slot_uri': 'airo:isProvidedBy'}}})
 
     isProducedBy: Optional[str] = Field(default=None, description="""A relationship to the Organization instance which produces this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
     hasModelCard: Optional[list[str]] = Field(default=None, description="""A relationship to model card references.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })

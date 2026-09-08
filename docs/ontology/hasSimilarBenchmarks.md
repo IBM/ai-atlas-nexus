@@ -10,7 +10,6 @@ _Benchmarks that are closely related in terms of goals or data type._
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasSimilarBenchmarks](https://w3id.org/ai-atlas-nexus/hasSimilarBenchmarks)
-Alias: hasSimilarBenchmarks
 
 <!-- no inheritance hierarchy -->
 
@@ -56,7 +55,6 @@ name: hasSimilarBenchmarks
 description: Benchmarks that are closely related in terms of goals or data type.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-alias: hasSimilarBenchmarks
 domain_of:
 - BenchmarkMetadataCard
 range: string

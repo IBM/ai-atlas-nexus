@@ -315,7 +315,6 @@ attributes:
     name: type
     from_schema: https://w3id.org/ai-atlas-nexus/ai_aiuc
     designates_type: true
-    alias: type
     owner: ControlActivityRecommendation
     domain_of:
     - Vocabulary
@@ -347,7 +346,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasControlApplication
-    alias: hasControlApplication
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -360,7 +358,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasEvidenceCategory
-    alias: hasEvidenceCategory
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -374,7 +371,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasTypicalLocation
-    alias: hasTypicalLocation
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -388,7 +384,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:isApplicableToCapability
-    alias: isApplicableToCapability
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -403,7 +398,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasRequirement
-    alias: hasRequirement
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -417,7 +411,6 @@ attributes:
     rank: 1000
     domain: Any
     slot_uri: nexus:hasRequirementType
-    alias: hasRequirementType
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -430,7 +423,6 @@ attributes:
     rank: 1000
     domain: ControlActivity
     slot_uri: nexus:hasTypicalEvidence
-    alias: hasTypicalEvidence
     owner: ControlActivityRecommendation
     domain_of:
     - ControlActivity
@@ -444,7 +436,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:isPartOf
-    alias: isDefinedByTaxonomy
     owner: ControlActivityRecommendation
     domain_of:
     - Concept
@@ -473,7 +464,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: dpv:hasRule
-    alias: hasRule
     owner: ControlActivityRecommendation
     domain_of:
     - Entry
@@ -491,7 +481,6 @@ attributes:
     rank: 1000
     slot_uri: schema:identifier
     identifier: true
-    alias: id
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -503,7 +492,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:name
-    alias: name
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -515,7 +503,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:description
-    alias: description
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -526,7 +513,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:url
-    alias: url
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -537,7 +523,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateCreated
-    alias: dateCreated
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -549,7 +534,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: schema:dateModified
-    alias: dateModified
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -563,7 +547,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:exactMatch
-    alias: exact_mappings
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -577,7 +560,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:closeMatch
-    alias: close_mappings
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -591,7 +573,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:relatedMatch
-    alias: related_mappings
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -606,7 +587,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:narrowMatch
-    alias: narrow_mappings
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -621,7 +601,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:broadMatch
-    alias: broad_mappings
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -634,7 +613,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: nexus:isCategorizedAs
-    alias: isCategorizedAs
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -652,7 +630,6 @@ attributes:
     - doc_status
     rank: 1000
     slot_uri: adms:status
-    alias: hasLifecycleStatus
     owner: ControlActivityRecommendation
     domain_of:
     - Entity
@@ -664,7 +641,6 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     rank: 1000
     slot_uri: skos:note
-    alias: notes
     owner: ControlActivityRecommendation
     domain_of:
     - Entity

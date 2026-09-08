@@ -10,7 +10,6 @@ _Short reply type_
 <div data-search-exclude markdown="1">
 
 URI: [nexus:hasShortReplyType](https://w3id.org/ai-atlas-nexus/hasShortReplyType)
-Alias: hasShortReplyType
 
 <!-- no inheritance hierarchy -->
 
@@ -57,7 +56,6 @@ description: Short reply type
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 slot_uri: nexus:hasShortReplyType
-alias: hasShortReplyType
 domain_of:
 - LLMQuestionPolicy
 range: string
