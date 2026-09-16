@@ -41,6 +41,9 @@ jobs:
       - name: Run script 3 — export sigma js output
         run: make regenerate_graph_as_sigma_js_json
 
+      - name: Run script 4 — regenerate LinkML project artefacts (w3id.org redirect targets)
+        run: make regenerate_project
+
       - name: Commit and push regenerated files
         run: |
           git config user.name  "github-actions[bot]"
