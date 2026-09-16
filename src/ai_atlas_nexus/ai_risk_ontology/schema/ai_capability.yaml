@@ -8,9 +8,9 @@ default_curi_maps:
   - semweb_context
 imports:
   - linkml:types
-  - ./common
-  - ./ai_system
-  - ./ai_intrinsic
+  - common
+  - ai_system
+  - ai_intrinsic
 
 prefixes:
   linkml: https://w3id.org/linkml/
