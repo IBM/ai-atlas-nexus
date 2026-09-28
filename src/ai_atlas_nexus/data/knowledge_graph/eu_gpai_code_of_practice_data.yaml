@@ -1,0 +1,53 @@
+documents:
+  - id: eu-gpai-cop-safety-security
+    name: "General-Purpose AI Code of Practice: Safety and Security Chapter"
+    description: >-
+      Safety and Security Chapter (Final Version, 10 July 2025) of the General-Purpose AI Code of Practice, which
+      providers of general-purpose AI models with systemic risk can sign to demonstrate compliance with their
+      obligations under the EU AI Act.
+    url: https://code-of-practice.ai/?section=safety-security
+    dateCreated: 2025-07-10
+    hasJurisdiction:
+      - EU
+  - id: eu-gpai-cop-ss-measure-7-3
+    name: >-
+      EU GPAI Code of Practice, Safety and Security, Measure 7.3:
+      Documentation of systemic risk identification, analysis, and mitigation
+    description: >-
+      Signatories provide in the Model Report, among other items, all relevant model evaluation results and
+      (point (1)(g)) a description of the access and other resources provided to internal model evaluation teams
+      (Appendix 3.4) and to independent external evaluators (Appendix 3.5), or alternatively procure the
+      independent external evaluators to provide that information directly to the AI Office.
+    url: https://code-of-practice.ai/?section=safety-security#measure-7-3-documentation-of-systemic-risk-identification-analysis-and-mitigation
+    dateCreated: 2025-07-10
+    hasJurisdiction:
+      - EU
+  - id: eu-gpai-cop-ss-appendix-3-4
+    name: >-
+      EU GPAI Code of Practice, Safety and Security, Appendix 3.4:
+      Qualified model evaluation teams and adequate resources
+    description: >-
+      Model evaluation teams combine technical expertise with relevant domain knowledge of the systemic risk and are
+      provided with adequate model access (as appropriate, including activations, gradients, logits,
+      chains-of-thought, and the model version(s) with the fewest safety mitigations), information (model
+      specifications including the system prompt, relevant training data, test sets, past evaluation results),
+      time (for example, at least 20 business days for most systemic risks and evaluation methods), and adequate
+      compute, staffing, and engineering budgets and support.
+    url: https://artificialintelligenceact.eu/code-of-practice-overview/#bppb-heading-anchor-24
+    dateCreated: 2025-07-10
+    hasJurisdiction:
+      - EU
+  - id: eu-gpai-cop-ss-appendix-3-5
+    name: "EU GPAI Code of Practice, Safety and Security, Appendix 3.5: Independent external model evaluations"
+    description: >-
+      Signatories ensure that adequately qualified independent external evaluators conduct model evaluations,
+      with limited exceptions. Adequate qualification requires domain expertise and evaluation experience,
+      appropriate internal and external information security protocols, and agreement to protect commercially
+      confidential information. Signatories provide the evaluators with adequate access, information, time, and
+      other resources (pursuant to Appendix 3.4), and do not undermine the integrity of external model evaluations
+      by storing and/or analysing inputs and/or outputs from test runs without express permission from the
+      evaluators.
+    url: https://artificialintelligenceact.eu/code-of-practice-overview/#bppb-heading-anchor-24
+    dateCreated: 2025-07-10
+    hasJurisdiction:
+      - EU

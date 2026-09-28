@@ -12,9 +12,42 @@ prefixes:
   linkml: https://w3id.org/linkml/
   nexus: https://w3id.org/ai-atlas-nexus/
   dqv: https://www.w3.org/TR/vocab-dqv/
+  dpv: https://w3id.org/dpv#
+  dcterms: http://purl.org/dc/terms/
+  earl: http://www.w3.org/ns/earl#
+  prov: http://www.w3.org/ns/prov#
+  schema: http://schema.org/
   skos: http://www.w3.org/2004/02/skos/core#
 default_range: string
 default_prefix: nexus
+
+enums:
+  ConformanceOutcome:
+    description: The outcome of assessing a condition of an evaluation standard.
+    permissible_values:
+      FULFILLED:
+        meaning: earl:passed
+        description: The condition was fulfilled.
+        close_mappings:
+          - dpv:Compliant
+      NOT_FULFILLED:
+        meaning: earl:failed
+        description: The condition was not fulfilled.
+        close_mappings:
+          - dpv:NonCompliant
+      ALTERNATIVE_MEANS:
+        description: The condition was not fulfilled literally, but the same principle was achieved via alternative means.
+        related_mappings:
+          - earl:passed
+          - dpv:PartiallyCompliant
+      NOT_APPLICABLE:
+        meaning: earl:inapplicable
+        description: The condition does not apply to this engagement.
+      NOT_ASSESSED:
+        meaning: earl:untested
+        description: The condition was not assessed.
+        close_mappings:
+          - dpv:ComplianceUnknown
 
 classes:
   AiEval:
@@ -237,6 +270,78 @@ classes:
       - hasConsiderationComplianceWithRegulations
       - hasDocumentation
 
+  ThirdPartyEvaluationEngagement:
+    is_a: Entity
+    class_uri: nexus:ThirdPartyEvaluationEngagement
+    close_mappings:
+      - prov:Activity
+    related_mappings:
+      - dpv:Assessment
+    description: >-
+      A single engagement in which an independent third-party evaluator evaluates one or more AI systems of a system
+      provider, using one or more benchmarks or other evaluations, and reports the operating conditions of the
+      engagement against evaluation standards such as AEF-1.
+    slot_usage:
+      hasEvaluation:
+        description: The results produced by the engagement, across all of its evaluations.
+    slots:
+      - hasEvaluator
+      - hasSystemProvider
+      - evaluatesAi
+      - usesEvaluation
+      - hasEvaluation
+      - hasStandardConformance
+      - startDate
+      - endDate
+      - hasDocumentation
+
+  EvaluationStandardConformance:
+    class_uri: nexus:EvaluationStandardConformance
+    related_mappings:
+      - dpv:ComplianceStatus
+    description: A completed checklist reporting how an engagement addressed the conditions of an evaluation standard.
+    slot_usage:
+      conformsToStandard:
+        required: true
+    slots:
+      - conformsToStandard
+      - satisfiesAllRequirements
+      - hasConditionAssessment
+
+  ConditionAssessment:
+    class_uri: nexus:ConditionAssessment
+    close_mappings:
+      - earl:Assertion
+    related_mappings:
+      - earl:TestResult
+    description: One answer of a completed checklist, for one condition of the evaluation standard.
+    slot_usage:
+      assessesCondition:
+        required: true
+      hasConformanceOutcome:
+        required: true
+      evidence:
+        description: Notes or evidence supporting the answer, e.g. a link to a published policy.
+    slots:
+      - assessesCondition
+      - hasConformanceOutcome
+      - evidence
+      - justification
+      - disclosureAnswer
+      - appliesToEvaluation
+    rules:
+      - description: A justification is required when a condition is not fulfilled literally.
+        preconditions:
+          slot_conditions:
+            hasConformanceOutcome:
+              any_of:
+                - equals_string: NOT_FULFILLED
+                - equals_string: ALTERNATIVE_MEANS
+        postconditions:
+          slot_conditions:
+            justification:
+              required: true
+
   Question:
     is_a: AiEval
     description: An evaluation where a question has to be answered
@@ -293,6 +398,104 @@ slots:
     range: AiEval
     multivalued: false
     inlined: false
+  hasEvaluator:
+    slot_uri: nexus:hasEvaluator
+    close_mappings:
+      - prov:wasAssociatedWith
+    related_mappings:
+      - earl:assertedBy
+    description: The organization that conducted the evaluation.
+    range: Organization
+    inlined: false
+  hasSystemProvider:
+    slot_uri: nexus:hasSystemProvider
+    description: The organization which develops or operates the AI systems being evaluated.
+    range: Organization
+    inlined: false
+  evaluatesAi:
+    slot_uri: nexus:evaluatesAi
+    related_mappings:
+      - earl:subject
+    description: The AI systems or models (including specific versions) evaluated in the engagement.
+    range: BaseAi
+    multivalued: true
+    inlined: false
+  usesEvaluation:
+    slot_uri: nexus:usesEvaluation
+    close_mappings:
+      - prov:used
+    description: The benchmarks, metrics, or other AI evaluations run as part of the engagement.
+    range: AiEval
+    multivalued: true
+    inlined: false
+  hasStandardConformance:
+    slot_uri: nexus:hasStandardConformance
+    description: The completed checklist(s) of evaluation standards (e.g. AEF-1) that the engagement reports against.
+    range: EvaluationStandardConformance
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  conformsToStandard:
+    slot_uri: dcterms:conformsTo
+    description: The evaluation standard the checklist is completed against.
+    range: EvaluationStandard
+    inlined: false
+  satisfiesAllRequirements:
+    slot_uri: nexus:satisfiesAllRequirements
+    description: >-
+      The overall answer to whether the engagement satisfies all the minimum requirements of the standard.
+    range: boolean
+  hasConditionAssessment:
+    slot_uri: nexus:hasConditionAssessment
+    description: The per-condition answers of a completed checklist.
+    range: ConditionAssessment
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  assessesCondition:
+    slot_uri: earl:test
+    description: The condition of the evaluation standard that is assessed.
+    range: ControlActivity
+    inlined: false
+  hasConformanceOutcome:
+    slot_uri: earl:outcome
+    close_mappings:
+      - dpv:hasComplianceStatus
+    description: Whether the condition was fulfilled.
+    range: ConformanceOutcome
+  justification:
+    slot_uri: nexus:justification
+    related_mappings:
+      - earl:info
+    description: >-
+      Why a condition was not fulfilled, or how the same principle was achieved via alternative means.
+    range: string
+  disclosureAnswer:
+    slot_uri: nexus:disclosureAnswer
+    description: >-
+      For disclosure conditions (e.g. AEF-1 2.4.x), whether the disclosed circumstance applies,
+      e.g. true if the evaluator was paid by the system provider. Independent of whether the condition was fulfilled.
+    range: boolean
+  appliesToEvaluation:
+    slot_uri: nexus:appliesToEvaluation
+    description: >-
+      The evaluations of the engagement that this answer is specific to. When absent, the answer applies to the
+      engagement as a whole.
+    range: AiEval
+    multivalued: true
+    inlined: false
+  startDate:
+    slot_uri: schema:startDate
+    close_mappings:
+      - prov:startedAtTime
+    description: The date on which the entity started.
+    range: date
+  endDate:
+    slot_uri: schema:endDate
+    close_mappings:
+      - prov:endedAtTime
+    description: The date on which the entity ended.
+    range: date
   hasDataType:
     description: The type of data used in the benchmark (e.g., text, images, or multi-modal)
     multivalued: true

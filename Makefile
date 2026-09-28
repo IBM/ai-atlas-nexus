@@ -24,6 +24,7 @@ help: status
 	@echo "make test -- runs tests"
 	@echo "make help -- show this help"
 	@echo "make lift_mappings_from_tsv -- lift mappings from all tsv files to yaml directory."
+	@echo "make expand_jurisdictions -- list the jurisdiction enum values from the DPV Location vocabulary"
 	@echo "make compile_pydantic_model -- update pydantic classes"
 	@echo "make regenerate_documentation -- regenerate the documentation"
 	@echo "make regenerate_graph_output -- export the graph with all instances"
@@ -43,6 +44,9 @@ regenerate_documentation:
 
 lift_mappings_from_tsv:
 	python ./src/ai_atlas_nexus/ai_risk_ontology/util/lifting/import_entity_mappings.py
+
+expand_jurisdictions:
+	python ./src/ai_atlas_nexus/ai_risk_ontology/util/expand_jurisdictions.py
 
 compile_pydantic_model:
 	gen-pydantic --meta auto $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml > ${DATAMODEL_PATH}/ai_risk_ontology.py

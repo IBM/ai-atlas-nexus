@@ -6,3 +6,4 @@ The following scripts are available to convert some of the source data to LinkML
 - `nistactions2linkml.py`: Convert the NIST AI RMF actions data from CSV format (`resources\actions_extracted_from_nist.csv`) to LinkML YAML
 - `nistUpdateLinkmlWithActions.py`: Updates the existing NIST RMF data YAML by adding the related actions to each risk entity
 - `importRiskMappings.py`: Reads the SSSOM TSV files describing the risk-to-risk mappings and converts those into LinkML YAML
+- `expand_jurisdictions.py`: Lists the values of the `Jurisdiction`, `SupraNationalJurisdiction` and `SubnationalJurisdiction` enums from the DPV Location vocabulary into `schema/jurisdictions.yaml` (`make expand_jurisdictions`, then `make compile_pydantic_model`). Change `DPV_VERSION` in the script to move to a new DPV release.

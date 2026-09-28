@@ -1,0 +1,22 @@
+documents:
+  - id: ca-sb-53-2025
+    name: "California SB 53: Transparency in Frontier Artificial Intelligence Act"
+    description: >-
+      California Senate Bill 53 (2025-2026 session, Chapter 138, Statutes of 2025, approved by the Governor on
+      September 29, 2025), which adds Chapter 25.1 (commencing with Section 22757.10) to Division 8 of the Business
+      and Professions Code, imposing transparency and safety-framework requirements on frontier AI developers.
+    url: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53
+    dateCreated: 2025-09-29
+    hasJurisdiction:
+      - US-CA
+  - id: ca-sb-53-22757-12-c-2-c
+    name: "California Business and Professions Code § 22757.12(c)(2)(C) (SB 53): Third-party evaluator involvement"
+    description: >-
+      Before or concurrently with deploying a new or substantially modified frontier model, a large frontier
+      developer includes in its published transparency report summaries of its assessments of catastrophic risks
+      from the model under its frontier AI framework, the results of those assessments, and the extent to which
+      third-party evaluators were involved.
+    url: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53
+    dateCreated: 2025-09-29
+    hasJurisdiction:
+      - US-CA

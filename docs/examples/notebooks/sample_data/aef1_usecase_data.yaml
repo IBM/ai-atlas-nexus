@@ -1,0 +1,185 @@
+organizations:
+  - id: aef1-usecase-evaluator
+    name: Example Evaluation Lab
+    description: Independent third-party AI evaluator.
+    type: Organization
+  - id: aef1-usecase-provider
+    name: Example Bank
+    description: Financial services firm that develops and operates the credit risk LLM.
+    type: AiProvider
+
+evaluations:
+  - id: aef1-usecase-fairness-benchmark
+    name: Independent fairness benchmark
+    description: Third-party evaluation of the credit risk model for demographic bias in approval/denial rates.
+    hasRelatedRisk:
+      - atlas-decision-bias
+      - nist-harmful-bias-and-homogenization
+  - id: aef1-usecase-injection-benchmark
+    name: Independent prompt injection benchmark
+    description: Third-party evaluation of the credit risk model's robustness to prompt injection in applicant documents.
+    hasRelatedRisk:
+      - atlas-prompt-injection
+
+aievalresults:
+  - id: aef1-usecase-fairness-result
+    isResultOf: aef1-usecase-fairness-benchmark
+    value: "0.03"
+    evidence: Maximum demographic parity difference across protected groups, below the firm's 0.05 threshold.
+  - id: aef1-usecase-injection-result
+    isResultOf: aef1-usecase-injection-benchmark
+    value: "0.12"
+    evidence: Attack success rate across 500 injected applicant documents.
+
+aimodels:
+  - id: aef1-usecase-credit-risk-llm
+    name: Credit Risk Assessment LLM
+    description: LLM (version 2.1) used by the firm to assess credit risk for loan applicants.
+    isProvidedBy: aef1-usecase-provider
+    hasEvaluation:
+      - aef1-usecase-fairness-result
+      - aef1-usecase-injection-result
+
+thirdpartyevaluationengagements:
+  - id: aef1-usecase-engagement
+    name: Independent evaluation of the Credit Risk Assessment LLM
+    description: >-
+      Pre-deployment evaluation of version 2.1 of the credit risk LLM for demographic bias and prompt injection.
+    hasEvaluator: aef1-usecase-evaluator
+    hasSystemProvider: aef1-usecase-provider
+    evaluatesAi:
+      - aef1-usecase-credit-risk-llm
+    usesEvaluation:
+      - aef1-usecase-fairness-benchmark
+      - aef1-usecase-injection-benchmark
+    hasEvaluation:
+      - aef1-usecase-fairness-result
+      - aef1-usecase-injection-result
+    startDate: 2026-03-02
+    endDate: 2026-04-10
+    hasStandardConformance:
+      - conformsToStandard: aef1-standard
+        satisfiesAllRequirements: false
+        hasConditionAssessment:
+          # 1: Sufficient Access and Resources
+          - assessesCondition: aef1-ctrl-access-1
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-access-1-1
+            hasConformanceOutcome: FULFILLED
+            evidence: API access to version 2.1 with no rate limits beyond agreed token budget.
+          - assessesCondition: aef1-ctrl-access-1-2
+            hasConformanceOutcome: FULFILLED
+            evidence: Evaluated with the production document-ingestion pipeline and system prompt.
+          - assessesCondition: aef1-ctrl-access-1-3
+            hasConformanceOutcome: NOT_APPLICABLE
+          - assessesCondition: aef1-ctrl-access-1-4
+            hasConformanceOutcome: NOT_APPLICABLE
+          - assessesCondition: aef1-ctrl-access-1-5
+            hasConformanceOutcome: NOT_APPLICABLE
+          - assessesCondition: aef1-ctrl-access-1-6
+            hasConformanceOutcome: NOT_APPLICABLE
+          - assessesCondition: aef1-ctrl-access-1-7
+            hasConformanceOutcome: NOT_APPLICABLE
+          - assessesCondition: aef1-ctrl-access-1-8
+            hasConformanceOutcome: FULFILLED
+            evidence: Access to de-identified historical loan decisions under a data processing agreement.
+            appliesToEvaluation:
+              - aef1-usecase-fairness-benchmark
+          - assessesCondition: aef1-ctrl-access-2
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-access-3
+            hasConformanceOutcome: FULFILLED
+          # Time differed per benchmark: the injection benchmark was added late in the engagement.
+          - assessesCondition: aef1-ctrl-access-4
+            hasConformanceOutcome: FULFILLED
+            evidence: 25 business days.
+            appliesToEvaluation:
+              - aef1-usecase-fairness-benchmark
+          - assessesCondition: aef1-ctrl-access-4
+            hasConformanceOutcome: NOT_FULFILLED
+            justification: >-
+              Added to the scope with 8 business days remaining; exploratory probing of novel injection vectors was
+              not completed.
+            appliesToEvaluation:
+              - aef1-usecase-injection-benchmark
+          - assessesCondition: aef1-ctrl-access-5
+            hasConformanceOutcome: FULFILLED
+            evidence: Terms of service waiver for adversarial testing, signed 2026-02-20.
+          # 2: Minimized Conflicts of Interest
+          - assessesCondition: aef1-ctrl-coi-1
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-coi-2
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-coi-3
+            hasConformanceOutcome: FULFILLED
+            evidence: https://evaluator.example/coi-policy
+          - assessesCondition: aef1-ctrl-coi-4
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-coi-4-1
+            hasConformanceOutcome: FULFILLED
+            disclosureAnswer: true
+            evidence: Fixed-fee contract with the system provider.
+          - assessesCondition: aef1-ctrl-coi-4-2
+            hasConformanceOutcome: FULFILLED
+            disclosureAnswer: false
+          - assessesCondition: aef1-ctrl-coi-4-3
+            hasConformanceOutcome: FULFILLED
+            disclosureAnswer: false
+          - assessesCondition: aef1-ctrl-coi-4-4
+            hasConformanceOutcome: FULFILLED
+            disclosureAnswer: false
+          - assessesCondition: aef1-ctrl-coi-4-5
+            hasConformanceOutcome: FULFILLED
+            disclosureAnswer: false
+          - assessesCondition: aef1-ctrl-coi-4-6
+            hasConformanceOutcome: FULFILLED
+            disclosureAnswer: false
+          - assessesCondition: aef1-ctrl-coi-5
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-coi-6
+            hasConformanceOutcome: FULFILLED
+            evidence: No separate agreements.
+          # 3: Analytic Autonomy
+          - assessesCondition: aef1-ctrl-autonomy-1
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-autonomy-2
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-autonomy-3
+            hasConformanceOutcome: ALTERNATIVE_MEANS
+            justification: >-
+              Provider staff ran the queries over production loan data on the evaluator's behalf, under a contractual
+              guarantee not to use the evaluator's methods for other purposes.
+            appliesToEvaluation:
+              - aef1-usecase-fairness-benchmark
+          - assessesCondition: aef1-ctrl-autonomy-3
+            hasConformanceOutcome: FULFILLED
+            appliesToEvaluation:
+              - aef1-usecase-injection-benchmark
+          - assessesCondition: aef1-ctrl-autonomy-4
+            hasConformanceOutcome: FULFILLED
+          # 4: Transparent Methods and Results
+          - assessesCondition: aef1-ctrl-transparency-1
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-transparency-2
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-transparency-3
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-transparency-4
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-transparency-5
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-transparency-6
+            hasConformanceOutcome: FULFILLED
+            evidence: Provider could redact applicant personal data only; the authority was not exercised.
+          - assessesCondition: aef1-ctrl-transparency-7
+            hasConformanceOutcome: FULFILLED
+          # 5: Protection of Sensitive Information
+          - assessesCondition: aef1-ctrl-sensitive-info-1
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-sensitive-info-2
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-sensitive-info-3
+            hasConformanceOutcome: FULFILLED
+          - assessesCondition: aef1-ctrl-sensitive-info-4
+            hasConformanceOutcome: FULFILLED
+            evidence: Two novel injection vectors disclosed to the provider on 2026-04-03.

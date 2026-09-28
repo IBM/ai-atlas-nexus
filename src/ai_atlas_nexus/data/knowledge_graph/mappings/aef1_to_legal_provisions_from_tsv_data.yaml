@@ -1,0 +1,87 @@
+documents:
+  - id: eu-gpai-cop-ss-appendix-3-4
+    related_mappings:
+      - aef1-ctrl-access-1
+  - id: eu-gpai-cop-ss-appendix-3-4
+    related_mappings:
+      - aef1-ctrl-access-1-3
+  - id: eu-gpai-cop-ss-appendix-3-4
+    related_mappings:
+      - aef1-ctrl-access-1-4
+  - id: eu-gpai-cop-ss-appendix-3-4
+    related_mappings:
+      - aef1-ctrl-access-2
+  - id: eu-gpai-cop-ss-appendix-3-4
+    related_mappings:
+      - aef1-ctrl-access-3
+  - id: eu-gpai-cop-ss-appendix-3-4
+    related_mappings:
+      - aef1-ctrl-access-4
+  - id: eu-gpai-cop-ss-appendix-3-5
+    related_mappings:
+      - aef1-ctrl-sensitive-info-2
+  - id: eu-gpai-cop-ss-appendix-3-5
+    related_mappings:
+      - aef1-ctrl-sensitive-info-3
+  - id: eu-gpai-cop-ss-appendix-3-5
+    related_mappings:
+      - aef1-principle-access
+  - id: eu-gpai-cop-ss-measure-7-3
+    related_mappings:
+      - aef1-principle-access
+  - id: ca-sb-53-22757-12-c-2-c
+    related_mappings:
+      - aef1-standard
+  - id: eu-gpai-cop-ss-measure-7-3
+    related_mappings:
+      - aef1-standard
+entries:
+  - id: aef1-principle-access
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-5
+    type: Principle
+  - id: aef1-principle-access
+    related_mappings:
+      - eu-gpai-cop-ss-measure-7-3
+    type: Principle
+  - id: aef1-standard
+    related_mappings:
+      - ca-sb-53-22757-12-c-2-c
+    type: EvaluationStandard
+  - id: aef1-standard
+    related_mappings:
+      - eu-gpai-cop-ss-measure-7-3
+    type: EvaluationStandard
+rules:
+  - id: aef1-ctrl-access-1
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-4
+    type: ControlActivityObligation
+  - id: aef1-ctrl-access-1-3
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-4
+    type: ControlActivityRecommendation
+  - id: aef1-ctrl-access-1-4
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-4
+    type: ControlActivityRecommendation
+  - id: aef1-ctrl-access-2
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-4
+    type: ControlActivityRecommendation
+  - id: aef1-ctrl-access-3
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-4
+    type: ControlActivityObligation
+  - id: aef1-ctrl-access-4
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-4
+    type: ControlActivityObligation
+  - id: aef1-ctrl-sensitive-info-2
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-5
+    type: ControlActivityRecommendation
+  - id: aef1-ctrl-sensitive-info-3
+    related_mappings:
+      - eu-gpai-cop-ss-appendix-3-5
+    type: ControlActivityObligation

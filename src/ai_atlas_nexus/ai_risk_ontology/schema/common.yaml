@@ -5,6 +5,7 @@ default_curi_maps:
   - semweb_context
 imports:
   - linkml:types
+  - ./jurisdictions
 prefixes:
   linkml: https://w3id.org/linkml/
   airo: https://w3id.org/airo#
@@ -64,52 +65,6 @@ enums:
       WITHDRAWN:
         description: Removed / no longer available.
         meaning: adms-status:Withdrawn
-  Jurisdiction:
-    description: >-
-      ISO 3166-1 country code, sourced from the DPV Location ontology
-      (https://w3id.org/dpv/loc). Values are subclasses of dpv:Country.
-    reachable_from:
-      source_ontology: dpv-loc
-      source_nodes:
-        - dpv:Country
-      relationship_types:
-        - rdfs:subClassOf
-      include_self: false
-
-  SupraNationalJurisdiction:
-    description: >-
-      Supra-national or intergovernmental jurisdiction, sourced from the
-      DPV Location ontology (https://w3id.org/dpv/loc). Values are
-      subclasses of dpv:SupraNationalUnion (e.g. EU, EEA).
-    reachable_from:
-      source_ontology: dpv-loc
-      source_nodes:
-        - dpv:SupraNationalUnion
-      relationship_types:
-        - rdfs:subClassOf
-      include_self: false
-    permissible_values:
-      International:
-        description: >-
-          Explicitly global scope not attributable to any single country
-          or recognised regional body.
-        aliases:
-          - INTERNATIONAL
-          - international
-
-  SubnationalJurisdiction:
-    description: >-
-      Subnational or regional jurisdiction, sourced from the DPV Location
-      ontology (https://w3id.org/dpv/loc). Values are subclasses of
-      dpv:Region and use ISO 3166-2 subdivision codes
-      (e.g. US-CA for California, CA-QC for Quebec).
-    reachable_from:
-      source_ontology: dpv-loc
-      source_nodes:
-        - dpv:Region
-      relationship_types:
-        - rdfs:subClassOf
-      include_self: false
 
 classes:
   Entity:
@@ -137,6 +92,11 @@ classes:
     is_a: Entity
     class_uri: schema:Organization
     description: Any organizational entity such as a corporation, educational institution, consortium, government, etc.
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
     slots:
       - grants_license
 
@@ -351,6 +311,7 @@ classes:
     slots:
       - isDefinedByTaxonomy
       - hasRule
+      - hasDocumentation
 
   AttributeConditionRule:
     is_a: Rule
@@ -435,6 +396,20 @@ classes:
         designates_type: true
     description: Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
     class_uri: dpv:Certification
+
+  EvaluationStandard:
+    is_a: Entry
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    description: >-
+      A standard defining minimum conditions, processes, or independence criteria required for conducting AI
+      evaluations
+    class_uri: dpv:ManagementStandard
+    slots:
+      - hasPrinciple
 
   LocalityOfUse:
     is_a: Entry
@@ -686,7 +661,9 @@ slots:
   hasJurisdiction:
     description: >-
       The legal or regulatory jurisdiction(s) applicable to an AI system,
-      policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.
+      policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2
+      subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in
+      jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.
     multivalued: true
     see_also:
       - https://w3id.org/dpv#hasJurisdiction

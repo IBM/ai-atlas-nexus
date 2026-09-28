@@ -47,6 +47,8 @@ nav:
           - "Preparing mappings": examples/notebooks/Prepare_taxonomy_mappings.ipynb
           - "Generate crosswalks": examples/notebooks/generate_crosswalk.ipynb
           - "AIUC-1 crosswalk": examples/notebooks/Crosswalk_with_AIUC-1.ipynb
+      - Evaluation standards:
+          - "AEF-1 Minimum Operating Conditions": examples/notebooks/AEF-1_Minimum_Operating_Conditions.ipynb
       - Extensions:
           - "Risk to ARES Evaluation": examples/notebooks/risk_to_ares_evaluation.ipynb
       - Data ingestion:
