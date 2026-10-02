@@ -25,6 +25,7 @@ nav:
       - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md
       - Architecture: concepts/architecture.md
       - "Contribute your own taxonomy files": concepts/Contributing_a_taxonomy.md
+      - "Importing the schema into your project": concepts/Importing_schemas.md
       - "concepts/*"
   - Examples:
       - Examples: examples/index.md

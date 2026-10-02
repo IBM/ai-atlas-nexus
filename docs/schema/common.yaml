@@ -1,0 +1,748 @@
+id: https://w3id.org/ai-atlas-nexus/common
+name: common
+description: A core schema supporting the AI Risk Model ontology
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  airo: https://w3id.org/airo#
+  nexus: https://w3id.org/ai-atlas-nexus/
+  dpv: https://w3id.org/dpv#
+  dpv-loc: https://w3id.org/dpv/loc#
+  ai: https://w3id.org/dpv/ai#
+  skos: http://www.w3.org/2004/02/skos/core#
+  tech: https://w3id.org/dpv/tech#
+  adms: http://www.w3.org/ns/adms#
+  adms-status: http://purl.org/adms/status/
+  pso: http://purl.org/spar/pso/
+
+default_range: string
+default_prefix: nexus
+
+enums:
+  LifecycleStatus:
+    description: >-
+      Editorial / publication state of a catalogued entity. Permissible values
+      align to the ADMS-status codelist where one exists; otherwise drawn from
+      PSO vocabulary, and failing that, minted in this nexus namespace.
+    see_also:
+      - https://semiceu.github.io/ADMS/releases/2.00/
+      - http://purl.org/adms/status/1.0 # ADMS status codelist (4 values)
+      - https://sparontologies.github.io/pso/current/pso.html # PSO, SPAR
+    permissible_values:
+      DRAFT:
+        description: Initial draft under development.
+        meaning: adms-status:UnderDevelopment
+      REVIEW:
+        description: Under editorial or technical review.
+        meaning: pso:under-review
+        comments:
+          - No ADMS equivalent. PSO covers peer review which is sufficient.
+      APPROVED:
+        description: Approved / published as authoritative.
+        meaning: adms-status:Completed
+      DEPRECATED:
+        description: Discouraged for new use but still available.
+        meaning: adms-status:Deprecated
+      SUPERSEDED:
+        description: Replaced by a newer version of this entity.
+        comments:
+          - >-
+            Neither ADMS nor PSO defines a supersession status, so this value is minted in
+            the nexus namespace rather than aligned to an external vocabulary.
+        notes:
+          - >-
+            Mapped as close_mappings, not meaning. ADMS collapses supersession into
+            Deprecated, which is already the exact meaning of DEPRECATED, and two values
+            sharing one meaning URI would be indistinguishable in RDF.
+        close_mappings:
+          - adms-status:Deprecated
+        todos:
+          - Is 'superseded' permissible value needed? Keep for now, remove later if unsure.
+      WITHDRAWN:
+        description: Removed / no longer available.
+        meaning: adms-status:Withdrawn
+  Jurisdiction:
+    description: >-
+      ISO 3166-1 country code, sourced from the DPV Location ontology
+      (https://w3id.org/dpv/loc). Values are subclasses of dpv:Country.
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:Country
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
+
+  SupraNationalJurisdiction:
+    description: >-
+      Supra-national or intergovernmental jurisdiction, sourced from the
+      DPV Location ontology (https://w3id.org/dpv/loc). Values are
+      subclasses of dpv:SupraNationalUnion (e.g. EU, EEA).
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:SupraNationalUnion
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
+    permissible_values:
+      International:
+        description: >-
+          Explicitly global scope not attributable to any single country
+          or recognised regional body.
+        aliases:
+          - INTERNATIONAL
+          - international
+
+  SubnationalJurisdiction:
+    description: >-
+      Subnational or regional jurisdiction, sourced from the DPV Location
+      ontology (https://w3id.org/dpv/loc). Values are subclasses of
+      dpv:Region and use ISO 3166-2 subdivision codes
+      (e.g. US-CA for California, CA-QC for Quebec).
+    reachable_from:
+      source_ontology: dpv-loc
+      source_nodes:
+        - dpv:Region
+      relationship_types:
+        - rdfs:subClassOf
+      include_self: false
+
+classes:
+  Entity:
+    description: A generic grouping for any identifiable entity.
+    abstract: true
+    mixin: true
+    class_uri: schema:Thing
+    slots:
+      - id
+      - name
+      - description
+      - url
+      - dateCreated
+      - dateModified
+      - exact_mappings
+      - close_mappings
+      - related_mappings
+      - narrow_mappings
+      - broad_mappings
+      - isCategorizedAs
+      - hasLifecycleStatus
+      - notes
+
+  Organization:
+    is_a: Entity
+    class_uri: schema:Organization
+    description: Any organizational entity such as a corporation, educational institution, consortium, government, etc.
+    slots:
+      - grants_license
+
+  License:
+    is_a: Entity
+    class_uri: airo:License
+    description:
+      The general notion of a license which defines terms and grants permissions to users of AI systems, datasets and
+      software.
+    slots:
+      - version
+
+  Dataset:
+    is_a: Entity
+    class_uri: schema:Dataset
+    description: A body of structured information describing some topic(s) of interest.
+    slots:
+      - hasLicense
+      - hasDocumentation
+      - isProvidedBy
+
+  Documentation:
+    is_a: Entity
+    class_uri: airo:Documentation
+    description: Documented information about a concept or other topic(s) of interest.
+    aliases:
+      - ExternalReference
+    slots:
+      - hasLicense
+    slot_usage:
+      isCategorizedAs:
+        range: Term
+        description: >-
+          The category this document falls under, referenced as a catalogued Term rather
+          than repeated as free text, so grouping labels are declared in one place.
+    attributes:
+      author:
+        name: author
+        description: The author or authors of the documentation
+
+  Fact:
+    abstract: true
+    class_uri: schema:Statement
+    description: A fact about something, for example the result of a measurement. In addition to the value, evidence is provided.
+    slots:
+      - value
+      - evidence
+
+  Vocabulary:
+    is_a: Entity
+    mixin: true
+    class_uri: skos:ConceptScheme
+    description: A collection of terms, with their definitions and relationships.
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  Taxonomy:
+    is_a: Entity
+    abstract: true
+    mixin: true
+    class_uri: skos:ConceptScheme
+    description: A hierachical taxonomy of concepts, with their definitions and relationships.
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  Concept:
+    is_a: Entity
+    abstract: true
+    mixin: true
+    class_uri: skos:Concept
+    description: A concept
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    slots:
+      - isDefinedByTaxonomy
+      - hasDocumentation
+      - hasJurisdiction
+
+  Control:
+    is_a: Entity
+    abstract: true
+    mixin: true
+    class_uri: nexus:Control
+    description: A measure that maintains and/or modifies
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    slots:
+      - isDefinedByTaxonomy
+      - isApplicableinLocality
+      - hasExternalReference
+
+  Group:
+    is_a: Entity
+    abstract: true
+    mixin: true
+    class_uri: skos:Collection
+    description: Labelled groups of concepts.
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+        ifabsent: string(Group)
+      narrower:
+        description: Related concepts that are narrower in scope or hierarchy.
+        multivalued: true
+        slot_uri: skos:narrower
+      broader:
+        description: Related concepts that are broader in scope or hierarchy.
+        multivalued: true
+        slot_uri: skos:narrower
+    slots:
+      - isDefinedByTaxonomy
+      - hasDocumentation
+      - hasPart
+      - belongsToDomain
+
+  Entry:
+    is_a: Entity
+    abstract: true
+    class_uri: nexus:Entry
+    description: An entry and its definitions.
+    attributes:
+      type:
+        description: The entry type or class designation specifying what kind of entry this is.
+        range: string
+        designates_type: true
+    slots:
+      - isDefinedByTaxonomy
+      - isDefinedByVocabulary
+      - hasDocumentation
+      - hasExternalReference
+      - isPartOf
+      - requiredByTask
+      - requiresCapability
+      - implementedByAdapter
+      - hasRule
+
+  Term:
+    is_a: Entry
+    description: A term and its definitions.
+    slots:
+      - isDefinedByVocabulary
+      - hasDocumentation
+      - hasParentDefinition
+      - hasSubDefinition
+      - hasRelatedRisk
+
+  Principle:
+    is_a: Entry
+    description: A representation of values or norms that must be taken into consideration when conducting activities.
+    class_uri: dpv:Principle
+    slots:
+      - hasDocumentation
+
+  Policy:
+    is_a: Entity
+    abstract: true
+    description: "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."
+    class_uri: dpv:Policy
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    slots:
+      - isDefinedByTaxonomy
+      - isApplicableinLocality
+
+  LLMQuestionPolicy:
+    is_a: Policy
+    description: The policy guides how the language model should answer a diverse set of sensitive questions.
+    slots:
+      - hasRelatedRisk
+      - hasRule
+      - hasReasonDenial
+      - hasShortReplyType
+      - hasException
+
+  Rule:
+    is_a: Entity
+    abstract: true
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    class_uri: dpv:Rule
+    description: >-
+      A rule describing a process or control that directs or determines if and how an activity should be conducted.
+    slots:
+      - isDefinedByTaxonomy
+      - hasRule
+
+  AttributeConditionRule:
+    is_a: Rule
+    attributes:
+      preconditions:
+        description: Conditions that must be satisfied before the rule applies.
+        range: AnonymousClassExpression
+        inlined: true
+      postconditions:
+        description: Conditions that result from applying the rule.
+        range: AnonymousClassExpression
+        inlined: true
+
+  AnonymousClassExpression:
+    attributes:
+      slot_conditions:
+        description: List of slot conditions that must be satisfied.
+        range: SlotCondition
+        multivalued: true
+        inlined_as_list: true
+
+  SlotCondition:
+    attributes:
+      slot_name:
+        description: The name of the slot being evaluated in this condition.
+        range: string
+      equals_string:
+        description: The string value that the slot must equal to satisfy this condition.
+        range: string
+
+  Permission:
+    is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    description: A rule describing a permission to perform an activity
+    class_uri: dpv:Permission
+
+  Prohibition:
+    is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    description: A rule describing a prohibition to perform an activity
+    class_uri: dpv:Prohibition
+
+  Obligation:
+    is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    description: A rule describing an obligation for performing an activity
+    class_uri: dpv:Obligation
+
+  Recommendation:
+    is_a: Rule
+    abstract: true
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    description: A rule describing a recommendation for performing an activity
+    class_uri: dpv:Recommendation
+
+  Certification:
+    is_a: Entry
+    abstract: true
+    attributes:
+      type:
+        description: The type or class designation of this entity instance.
+        range: string
+        designates_type: true
+    description: Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
+    class_uri: dpv:Certification
+
+  LocalityOfUse:
+    is_a: Entry
+    class_uri: airo:LocalityOfUse
+    description: The area, e.g. facility or institution, in which an entity is used.
+
+  Any:
+    class_uri: linkml:Any
+
+slots:
+  id:
+    identifier: true
+    required: true
+    slot_uri: schema:identifier
+    description: >-
+      A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
+  isDefinedByVocabulary:
+    slot_uri: schema:isPartOf
+    description: A relationship where a term or a term group is defined by a vocabulary
+    range: Vocabulary
+  name:
+    slot_uri: schema:name
+    description: A text name of this instance.
+  description:
+    slot_uri: schema:description
+    description: The description of an entity
+  url:
+    slot_uri: schema:url
+    range: uri
+    description: An optional URL associated with this instance.
+  dateCreated:
+    slot_uri: schema:dateCreated
+    range: date
+    required: false
+    description: The date on which the entity was created.
+  dateModified:
+    slot_uri: schema:dateModified
+    range: date
+    required: false
+    description: The date on which the entity was most recently modified.
+  version:
+    slot_uri: schema:version
+    description: The version of the entity embodied by a specified resource.
+  hasDocumentation:
+    slot_uri: airo:hasDocumentation
+    range: Documentation
+    multivalued: true
+    inlined: false
+    description: Indicates documentation associated with an entity.
+  hasExternalReference:
+    slot_uri: nexus:hasExternalReference
+    close_mappings:
+      - rdfs:seeAlso
+    aliases:
+      - additional resources
+      - external_links
+    range: Documentation
+    multivalued: true
+    inlined: false
+    description: >-
+      External references / additional resources related to this entity, such as articles,
+      tools, or datasets. Distinct from hasDocumentation, which documents the entity itself.
+      External references are not necessarily curated or vetted, and quality will vary.
+  hasLicense:
+    slot_uri: airo:hasLicense
+    range: License
+    description: Indicates licenses associated with a resource
+  isComposedOf:
+    multivalued: true
+    inlined: false
+    description: Relationship indicating the some entity is composed of other entities (including some of the same type).
+  hasDataset:
+    range: Dataset
+    multivalued: true
+    inlined: false
+    description: A relationship to datasets that are used.
+  isProducedBy:
+    range: Organization
+    description: A relationship to the Organization instance which produces this instance.
+  producer:
+    deprecated: Changed to match slot naming convention.
+    deprecated_element_has_exact_replacement: isProducedBy
+  isProvidedBy:
+    slot_uri: schema:provider
+    range: Organization
+    description: A relationship to the Organization instance that provides this instance.
+  provider:
+    deprecated: Changed to match slot naming convention.
+    deprecated_element_has_exact_replacement: isProvidedBy
+  grants_license:
+    range: License
+    description: A relationship from a granting entity such as an Organization to a License instance.
+  value:
+    description: Some numeric or string value
+    required: true
+  evidence:
+    description: >-
+      Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it
+      was generated.
+  isPartOf:
+    slot_uri: schema:isPartOf
+    description: A relationship where an entity is part of another entity
+  hasPart:
+    slot_uri: skos:member
+    description: A relationship where an entity has another entity
+    multivalued: true
+  hasCapability:
+    slot_uri: tech:hasCapability
+    description: >
+      Indicates the technical capabilities this entry possesses.
+    multivalued: true
+    inlined: false
+    range: Capability
+  requiredByTask:
+    description: >-
+      Indicates that this entry is required to perform a specific AI task.
+    domain: Entry
+    range: Any
+    multivalued: true
+    inlined: false
+    inverse: requiresCapability
+  requiresCapability:
+    description: Indicates that this entry requires a specific capability
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
+    inverse: requiredByTask
+  implementsCapability:
+    description: Indicates that this entity implements a specific capability
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
+  hasTerm:
+    slot_uri: nexus:hasTerm
+    range: Term
+    description: Indicates terms associated with a vocabulary
+    multivalued: true
+    inlined: false
+  hasRelatedTerm:
+    description: A relationship where an entity relates to a term
+    domain: Any
+    any_of:
+      - range: RiskConcept
+      - range: Term
+    range: Term
+    multivalued: true
+    inlined: false
+  hasParentDefinition:
+    slot_uri: nexus:hasParentDefinition
+    range: Term
+    description: Indicates parent terms associated with a term
+    multivalued: true
+    inlined: false
+  hasSubDefinition:
+    slot_uri: nexus:hasSubDefinition
+    range: Term
+    description: Indicates child terms associated with a term
+    multivalued: true
+    inlined: false
+  hasRule:
+    slot_uri: dpv:hasRule
+    range: Rule
+    multivalued: true
+    inlined: false
+    description: Specifying applicability or inclusion of a rule within specified context.
+  hasReasonDenial:
+    slot_uri: nexus:hasReasonDenial
+    range: string
+    multivalued: false
+    inlined: true
+    description: Reason for denial
+  hasShortReplyType:
+    slot_uri: nexus:hasShortReplyType
+    range: string
+    multivalued: false
+    inlined: true
+    description: Short reply type
+  hasException:
+    slot_uri: nexus:hasException
+    range: string
+    multivalued: false
+    inlined: true
+    description: Exception type
+  isDefinedByTaxonomy:
+    slot_uri: schema:isPartOf
+    description: A relationship where a concept or a concept group is defined by a taxonomy
+    range: Taxonomy
+  close_mappings:
+    slot_uri: skos:closeMatch
+    description:
+      The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in
+      some information retrieval applications.
+    range: Any
+    multivalued: true
+    inlined: false
+  exact_mappings:
+    slot_uri: skos:exactMatch
+    description: >-
+      The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used
+      interchangeably across a wide range of information retrieval applications
+    range: Any
+    multivalued: true
+    inlined: false
+  broad_mappings:
+    slot_uri: skos:broadMatch
+    description: >-
+      The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked
+      to, is a broader concept than the originating concept.
+    range: Any
+    multivalued: true
+    inlined: false
+  narrow_mappings:
+    slot_uri: skos:narrowMatch
+    description: >-
+      The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked
+      to, is a narrower concept than the originating concept.
+    range: Any
+    multivalued: true
+    inlined: false
+  related_mappings:
+    slot_uri: skos:relatedMatch
+    description: The property skos:relatedMatch is used to state an associative mapping link between two concepts.
+    range: Any
+    multivalued: true
+    inlined: false
+  belongsToDomain:
+    description: >-
+      A relationship where a group belongs to a domain
+    range: Any
+    multivalued: false
+    inlined: false
+    slot_uri: schema:isPartOf
+  isCategorizedAs:
+    description: >-
+      A relationship where an entity has been deemed to be categorized
+    range: Any
+    multivalued: true
+    inlined: false
+    slot_uri: nexus:isCategorizedAs
+  isApplicableinLocality:
+    description: >-
+      A relationship where an entity has is applicable in these localities.
+    range: LocalityOfUse
+    multivalued: true
+    inlined: false
+    slot_uri: nexus:isApplicableinLocality
+  hasJurisdiction:
+    description: >-
+      The legal or regulatory jurisdiction(s) applicable to an AI system,
+      policy, risk, or obligation. Accepts ISO 3166-1 country codes,
+      supra-national bodies, or subnational jurisdictions with distinct
+      regulatory significance. Aligns with dpv:hasJurisdiction.
+    multivalued: true
+    see_also:
+      - https://w3id.org/dpv#hasJurisdiction
+    any_of:
+      - range: Jurisdiction
+      - range: SupraNationalJurisdiction
+      - range: SubnationalJurisdiction
+    inlined: false
+    slot_uri: dpv:hasJurisdiction
+  isUsedWithinLocality:
+    slot_uri: airo:isUsedWithinLocality
+    multivalued: true
+    inlined: false
+    description: >-
+      Specifies the domain an AI system is used within.
+    range: LocalityOfUse
+  implementedByAdapter:
+    description: >-
+      Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
+      capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
+    inverse: implementsCapability
+  implementedByIntrinsic:
+    description: >-
+      Indicates that this capability is implemented by a specific LLM intrinsic. This relationship distinguishes the abstract
+      capability (what can be done) from the technical implementation mechanism (how it is done at the model component
+      level).
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
+    inverse: implementsCapability
+  hasLifecycleStatus:
+    slot_uri: adms:status
+    range: LifecycleStatus
+    description: >-
+      The editorial / publication lifecycle state of this entity. Distinct from
+      AiLifecyclePhase, which describes an AI system's runtime evolution rather than
+      the editorial workflow of a catalogued entry.
+    aliases:
+      - lifecycle_status
+      - doc_status
+  notes:
+    slot_uri: skos:note
+    multivalued: true
+    recommended: false
+    description: >-
+      Free-text editorial notes, source breadcrumbs, or build-time provenance
+      that do not belong in the user-facing description. Opaque to consumers.
+  hasRelatedRisk:
+    description: A relationship where an entity relates to a risk
+    domain: Any
+    range: Any
+    multivalued: true
+    inlined: false
