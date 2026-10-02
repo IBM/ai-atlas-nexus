@@ -1,0 +1,76 @@
+# https://github.com/linkml/linkml-project-copier/blob/main/template/config.yaml
+# Configuration of generators (defaults illustrated)
+# The directory where the generated files are stored
+# directory: "tmp"
+
+# By default all generators are run. Specify here the ones to skip.
+# Nothing is enabled that this project did not already publish: OWL is the
+# one artefact with a precedent (graph_export/owl/). Drop a line from this
+# list to start publishing that artefact under https://w3id.org/ai-atlas-nexus/.
+excludes:
+  - markdown
+  - python    # pydantic is the supported binding
+  - excel     # binary churn
+  - shacl     # generated from the merged schema instead
+  - java
+  - graphql
+  - jsonld
+  - jsonldcontext
+  - jsonschema
+  - prefixmap
+  - proto
+  - shex
+  - sqltable
+
+# Alternatively only specify the generators to run
+# (comment out the above "excludes" section)
+# includes:
+#   - markdown
+#   - excel
+
+# Set the arguments for the generators (no matter if they run or not)
+generator_args:
+  excel:
+    mergeimports: true
+  owl:
+    mergeimports: true
+    metaclasses: false
+    type_objects: false
+    add_root_classes: true
+    mixins_as_expressions: true
+  markdown:
+    mergeimports: true
+    directory: docs/elements
+  graphql:
+    mergeimports: true
+  # gen-java is not yet supported by gen-project.
+  #   https://github.com/linkml/linkml/issues/2537
+  # java:
+  #   mergeimports: true
+  #   metadata: true
+  jsonld:
+    mergeimports: true
+  jsonschema:
+    mergeimports: true
+  jsonldcontext:
+    mergeimports: true
+  # gen-pydantic is not yet supported by gen-project.
+  #   https://github.com/linkml/linkml/issues/2537
+  # pydantic:
+  #   mergeimports: true
+  python:
+    mergeimports: true
+    # head: true  # Why does this not work?
+  prefixmap:
+    mergeimports: true
+  proto:
+    mergeimports: true
+  shacl:
+    mergeimports: true
+  shex:
+    mergeimports: true
+  sqltable:
+    mergeimports: true
+  typescript:
+    mergeimports: true
+    metadata: true
