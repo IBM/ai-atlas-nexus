@@ -268,6 +268,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -277,6 +278,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation

@@ -247,9 +247,10 @@ URI: [dpv:Principle](https://w3id.org/dpv#Principle)
 
 ## Usages
 
-| used by                       | used in                         | type  | used                      |
-| ----------------------------- | ------------------------------- | ----- | ------------------------- |
-| [Requirement](Requirement.md) | [hasPrinciple](hasPrinciple.md) | range | [Principle](Principle.md) |
+| used by                                     | used in                         | type  | used                      |
+| ------------------------------------------- | ------------------------------- | ----- | ------------------------- |
+| [EvaluationStandard](EvaluationStandard.md) | [hasPrinciple](hasPrinciple.md) | range | [Principle](Principle.md) |
+| [Requirement](Requirement.md)               | [hasPrinciple](hasPrinciple.md) | range | [Principle](Principle.md) |
 
 ## Identifier and Mapping Information
 
@@ -310,6 +311,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -319,6 +321,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -471,6 +474,7 @@ attributes:
     designates_type: true
     owner: Principle
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -484,6 +488,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission

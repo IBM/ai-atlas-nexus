@@ -15,21 +15,22 @@ URI: [dqv:hasQualityMeasurement](https://www.w3.org/TR/vocab-dqv/hasQualityMeasu
 
 ## Applicable Classes
 
-| Name                                        | Description                                                                      | Modifies Slot |
-| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [AiModel](AiModel.md)                       | A base AI Model class                                                            | no            |
-| [LargeLanguageModel](LargeLanguageModel.md) | A large language model (LLM) is an AI model which supports a range of languag... | no            |
-| [Adapter](Adapter.md)                       | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| Name                                                                | Description                                                                      | Modifies Slot |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [AiModel](AiModel.md)                                               | A base AI Model class                                                            | no            |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | A single engagement in which an independent third-party evaluator evaluates o... | yes           |
+| [LargeLanguageModel](LargeLanguageModel.md)                         | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [Adapter](Adapter.md)                                               | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                                                              |
-| --------- | ---------------------------------------------------------------------------------- |
-| Range     | [AiEvalResult](AiEvalResult.md)                                                    |
-| Domain Of | [AiModel](AiModel.md)                                                              |
-| Slot URI  | [dqv:hasQualityMeasurement](https://www.w3.org/TR/vocab-dqv/hasQualityMeasurement) |
+| Property  | Value                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------ |
+| Range     | [AiEvalResult](AiEvalResult.md)                                                            |
+| Domain Of | [AiModel](AiModel.md), [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) |
+| Slot URI  | [dqv:hasQualityMeasurement](https://www.w3.org/TR/vocab-dqv/hasQualityMeasurement)         |
 
 ### Cardinality and Requirements
 
@@ -61,6 +62,7 @@ rank: 1000
 slot_uri: dqv:hasQualityMeasurement
 domain_of:
 - AiModel
+- ThirdPartyEvaluationEngagement
 range: AiEvalResult
 multivalued: true
 

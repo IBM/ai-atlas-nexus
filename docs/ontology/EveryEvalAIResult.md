@@ -620,6 +620,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -629,6 +630,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -685,6 +687,7 @@ attributes:
     owner: EveryEvalAIResult
     domain_of:
     - Fact
+    - ConditionAssessment
     range: string
   id:
     name: id

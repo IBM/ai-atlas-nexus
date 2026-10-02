@@ -15,63 +15,77 @@ URI: [airo:hasDocumentation](https://w3id.org/airo#hasDocumentation)
 
 ## Applicable Classes
 
-| Name                                                    | Description                                                                      | Modifies Slot |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Dataset](Dataset.md)                                   | A body of structured information describing some topic(s) of interest            | no            |
-| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
-| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
-| [Concept](Concept.md)                                   | A concept                                                                        | no            |
-| [Group](Group.md)                                       | Labelled groups of concepts                                                      | no            |
-| [Entry](Entry.md)                                       | An entry and its definitions                                                     | no            |
-| [Term](Term.md)                                         | A term and its definitions                                                       | no            |
-| [Principle](Principle.md)                               | A representation of values or norms that must be taken into consideration whe... | no            |
-| [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
-| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
-| [Action](Action.md)                                     | Action to remediate a risk                                                       | no            |
-| [BaseAi](BaseAi.md)                                     | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
-| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A large language model family is a set of models that are provided by the sam... | no            |
-| [AiTaskTaxonomy](AiTaskTaxonomy.md)                     | A taxonomy of AI Tasks                                                           | no            |
-| [AiEval](AiEval.md)                                     | An AI Evaluation, e                                                              | no            |
-| [EveryEvalAIResult](EveryEvalAIResult.md)               | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
-| [Adapter](Adapter.md)                                   | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [LLMIntrinsic](LLMIntrinsic.md)                         | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
-| [Certification](Certification.md)                       | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
-| [LocalityOfUse](LocalityOfUse.md)                       | The area, e                                                                      | no            |
-| [RiskControlGroup](RiskControlGroup.md)                 | A group of AI system related risk controls                                       | no            |
-| [RiskGroup](RiskGroup.md)                               | A group of AI system related risks that are part of a risk taxonomy              | no            |
-| [Risk](Risk.md)                                         | The state of uncertainty associated with an AI system, that has the potential... | no            |
-| [RiskConcept](RiskConcept.md)                           | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
-| [RiskControl](RiskControl.md)                           | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
-| [RiskIncident](RiskIncident.md)                         | An event occuring or occured which is a realised or materialised risk            | no            |
-| [Impact](Impact.md)                                     |                                                                                  | no            |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
-| [CapabilityConcept](CapabilityConcept.md)               | An umbrella term for referring to capability domains, groups, and individual ... | no            |
-| [CapabilityDomain](CapabilityDomain.md)                 | A high-level domain of AI capabilities (e                                        | no            |
-| [CapabilityGroup](CapabilityGroup.md)                   | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
-| [Capability](Capability.md)                             | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
-| [AiSystem](AiSystem.md)                                 | A compound AI System composed of one or more AI capablities                      | no            |
-| [AiAgent](AiAgent.md)                                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [AiModel](AiModel.md)                                   | A base AI Model class                                                            | no            |
-| [LargeLanguageModel](LargeLanguageModel.md)             | A large language model (LLM) is an AI model which supports a range of languag... | no            |
-| [AiTask](AiTask.md)                                     | A task, such as summarization and classification, performed by an AI             | no            |
-| [AiTaskDomain](AiTaskDomain.md)                         | A grouping of AI Tasks by domain                                                 | no            |
-| [AiTaskGroup](AiTaskGroup.md)                           | A group of AI Tasks                                                              | no            |
-| [Purpose](Purpose.md)                                   | The end goal for which an entity is used or an action is taken                   | no            |
-| [Domain](Domain.md)                                     | An area, sector, or industry that is associated with economic activities         | no            |
-| [StakeholderGroup](StakeholderGroup.md)                 | An AI system stakeholder grouping                                                | no            |
-| [Question](Question.md)                                 | An evaluation where a question has to be answered                                | no            |
-| [Questionnaire](Questionnaire.md)                       | A questionnaire groups questions                                                 | no            |
+| Name                                                                | Description                                                                      | Modifies Slot |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Dataset](Dataset.md)                                               | A body of structured information describing some topic(s) of interest            | no            |
+| [Vocabulary](Vocabulary.md)                                         | A collection of terms, with their definitions and relationships                  | no            |
+| [Taxonomy](Taxonomy.md)                                             | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [Concept](Concept.md)                                               | A concept                                                                        | no            |
+| [Group](Group.md)                                                   | Labelled groups of concepts                                                      | no            |
+| [Entry](Entry.md)                                                   | An entry and its definitions                                                     | no            |
+| [Term](Term.md)                                                     | A term and its definitions                                                       | no            |
+| [Principle](Principle.md)                                           | A representation of values or norms that must be taken into consideration whe... | no            |
+| [Rule](Rule.md)                                                     | A rule describing a process or control that directs or determines if and how ... | no            |
+| [RiskTaxonomy](RiskTaxonomy.md)                                     | A taxonomy of AI system related risks                                            | no            |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)             | A taxonomy of AI system related risk controls groups                             | no            |
+| [Action](Action.md)                                                 | Action to remediate a risk                                                       | no            |
+| [BaseAi](BaseAi.md)                                                 | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
+| [LargeLanguageModelFamily](LargeLanguageModelFamily.md)             | A large language model family is a set of models that are provided by the sam... | no            |
+| [AiTaskTaxonomy](AiTaskTaxonomy.md)                                 | A taxonomy of AI Tasks                                                           | no            |
+| [AiEval](AiEval.md)                                                 | An AI Evaluation, e                                                              | no            |
+| [EveryEvalAIResult](EveryEvalAIResult.md)                           | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                   | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | A single engagement in which an independent third-party evaluator evaluates o... | no            |
+| [Adapter](Adapter.md)                                               | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [LLMIntrinsic](LLMIntrinsic.md)                                     | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AttributeConditionRule](AttributeConditionRule.md)                 |                                                                                  | no            |
+| [Permission](Permission.md)                                         | A rule describing a permission to perform an activity                            | no            |
+| [Prohibition](Prohibition.md)                                       | A rule describing a prohibition to perform an activity                           | no            |
+| [Obligation](Obligation.md)                                         | A rule describing an obligation for performing an activity                       | no            |
+| [Recommendation](Recommendation.md)                                 | A rule describing a recommendation for performing an activity                    | no            |
+| [Certification](Certification.md)                                   | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [EvaluationStandard](EvaluationStandard.md)                         | A standard defining minimum conditions, processes, or independence criteria r... | no            |
+| [LocalityOfUse](LocalityOfUse.md)                                   | The area, e                                                                      | no            |
+| [RiskControlGroup](RiskControlGroup.md)                             | A group of AI system related risk controls                                       | no            |
+| [RiskGroup](RiskGroup.md)                                           | A group of AI system related risks that are part of a risk taxonomy              | no            |
+| [Risk](Risk.md)                                                     | The state of uncertainty associated with an AI system, that has the potential... | no            |
+| [RiskConcept](RiskConcept.md)                                       | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
+| [RiskControl](RiskControl.md)                                       | A measure that maintains and/or modifies risk (and risk concepts)                | no            |
+| [RiskIncident](RiskIncident.md)                                     | An event occuring or occured which is a realised or materialised risk            | no            |
+| [Impact](Impact.md)                                                 |                                                                                  | no            |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)                         | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
+| [CapabilityConcept](CapabilityConcept.md)                           | An umbrella term for referring to capability domains, groups, and individual ... | no            |
+| [CapabilityDomain](CapabilityDomain.md)                             | A high-level domain of AI capabilities (e                                        | no            |
+| [CapabilityGroup](CapabilityGroup.md)                               | A group of AI capabilities that are part of a capability taxonomy, organized ... | no            |
+| [Capability](Capability.md)                                         | A specific AI capability or ability, such as reading comprehension, logical r... | no            |
+| [AiSystem](AiSystem.md)                                             | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)                                               | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiModel](AiModel.md)                                               | A base AI Model class                                                            | no            |
+| [LargeLanguageModel](LargeLanguageModel.md)                         | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [AiTask](AiTask.md)                                                 | A task, such as summarization and classification, performed by an AI             | no            |
+| [AiTaskDomain](AiTaskDomain.md)                                     | A grouping of AI Tasks by domain                                                 | no            |
+| [AiTaskGroup](AiTaskGroup.md)                                       | A group of AI Tasks                                                              | no            |
+| [Purpose](Purpose.md)                                               | The end goal for which an entity is used or an action is taken                   | no            |
+| [Domain](Domain.md)                                                 | An area, sector, or industry that is associated with economic activities         | no            |
+| [StakeholderGroup](StakeholderGroup.md)                             | An AI system stakeholder grouping                                                | no            |
+| [Question](Question.md)                                             | An evaluation where a question has to be answered                                | no            |
+| [Questionnaire](Questionnaire.md)                                   | A questionnaire groups questions                                                 | no            |
+| [ControlActivity](ControlActivity.md)                               | An obligation, permission, or prohibition for AI system assurance                | no            |
+| [ControlActivityPermission](ControlActivityPermission.md)           | A control activity (rule) describing a permission to perform an activity         | no            |
+| [ControlActivityProhibition](ControlActivityProhibition.md)         | A control activity (rule) describing a prohibition to perform an activity        | no            |
+| [ControlActivityObligation](ControlActivityObligation.md)           | A control activity (rule) describing an obligation for performing an activity    | no            |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md)   | A control activity (rule) describing a recommendation for performing an activ... | no            |
+| [Requirement](Requirement.md)                                       | A requirement representing a combination of obligation, permission, or prohib... | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Range     | [Documentation](Documentation.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Domain Of | [Dataset](Dataset.md), [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [Concept](Concept.md), [Group](Group.md), [Entry](Entry.md), [Term](Term.md), [Principle](Principle.md), [RiskTaxonomy](RiskTaxonomy.md), [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md), [Action](Action.md), [BaseAi](BaseAi.md), [LargeLanguageModelFamily](LargeLanguageModelFamily.md), [AiTaskTaxonomy](AiTaskTaxonomy.md), [AiEval](AiEval.md), [EveryEvalAIResult](EveryEvalAIResult.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [Adapter](Adapter.md), [LLMIntrinsic](LLMIntrinsic.md) |
-| Slot URI  | [airo:hasDocumentation](https://w3id.org/airo#hasDocumentation)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Property  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Range     | [Documentation](Documentation.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Domain Of | [Dataset](Dataset.md), [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [Concept](Concept.md), [Group](Group.md), [Entry](Entry.md), [Term](Term.md), [Principle](Principle.md), [Rule](Rule.md), [RiskTaxonomy](RiskTaxonomy.md), [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md), [Action](Action.md), [BaseAi](BaseAi.md), [LargeLanguageModelFamily](LargeLanguageModelFamily.md), [AiTaskTaxonomy](AiTaskTaxonomy.md), [AiEval](AiEval.md), [EveryEvalAIResult](EveryEvalAIResult.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md), [Adapter](Adapter.md), [LLMIntrinsic](LLMIntrinsic.md) |
+| Slot URI  | [airo:hasDocumentation](https://w3id.org/airo#hasDocumentation)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ### Cardinality and Requirements
 
@@ -110,6 +124,7 @@ domain_of:
 - Entry
 - Term
 - Principle
+- Rule
 - RiskTaxonomy
 - RiskControlGroupTaxonomy
 - Action
@@ -119,6 +134,7 @@ domain_of:
 - AiEval
 - EveryEvalAIResult
 - BenchmarkMetadataCard
+- ThirdPartyEvaluationEngagement
 - Adapter
 - LLMIntrinsic
 range: Documentation

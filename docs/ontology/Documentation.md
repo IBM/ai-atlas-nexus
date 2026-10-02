@@ -59,6 +59,8 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 
 
 
+      Documentation : hasJurisdiction
+
       Documentation : hasLicense
 
 
@@ -138,92 +140,108 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 
 ## Slots
 
-| Name                                        | Cardinality and Range                            | Description                                                                      | Inheritance         |
-| ------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
-| [hasLicense](hasLicense.md)                 | 0..1 <br/> [License](License.md)                 | Indicates licenses associated with a resource                                    | direct              |
-| [author](author.md)                         | 0..1 <br/> [String](String.md)                   | The author or authors of the documentation                                       | direct              |
-| [id](id.md)                                 | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
-| [name](name.md)                             | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
-| [description](description.md)               | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
-| [url](url.md)                               | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
-| [dateCreated](dateCreated.md)               | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was created                                         | [Entity](Entity.md) |
-| [dateModified](dateModified.md)             | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
-| [exact_mappings](exact_mappings.md)         | \* <br/> [Any](Any.md)                           | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
-| [close_mappings](close_mappings.md)         | \* <br/> [Any](Any.md)                           | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
-| [related_mappings](related_mappings.md)     | \* <br/> [Any](Any.md)                           | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
-| [narrow_mappings](narrow_mappings.md)       | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [broad_mappings](broad_mappings.md)         | \* <br/> [Any](Any.md)                           | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
-| [isCategorizedAs](isCategorizedAs.md)       | \* <br/> [Term](Term.md)                         | The category this document falls under, referenced as a catalogued Term rathe... | [Entity](Entity.md) |
-| [hasLifecycleStatus](hasLifecycleStatus.md) | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md) | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
-| [notes](notes.md)                           | \* <br/> [String](String.md)                     | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md) |
+| Name                                        | Cardinality and Range                                                                                                                                                                                                                 | Description                                                                      | Inheritance         |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------- |
+| [hasLicense](hasLicense.md)                 | 0..1 <br/> [License](License.md)                                                                                                                                                                                                      | Indicates licenses associated with a resource                                    | direct              |
+| [hasJurisdiction](hasJurisdiction.md)       | \* <br/> [String](String.md)&nbsp;or&nbsp;<br />[Jurisdiction](Jurisdiction.md)&nbsp;or&nbsp;<br />[SupraNationalJurisdiction](SupraNationalJurisdiction.md)&nbsp;or&nbsp;<br />[SubnationalJurisdiction](SubnationalJurisdiction.md) | The legal or regulatory jurisdiction(s) applicable to an AI system, policy, r... | direct              |
+| [author](author.md)                         | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The author or authors of the documentation                                       | direct              |
+| [id](id.md)                                 | 1 <br/> [String](String.md)                                                                                                                                                                                                           | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [name](name.md)                             | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | A text name of this instance                                                     | [Entity](Entity.md) |
+| [description](description.md)               | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The description of an entity                                                     | [Entity](Entity.md) |
+| [url](url.md)                               | 0..1 <br/> [Uri](Uri.md)                                                                                                                                                                                                              | An optional URL associated with this instance                                    | [Entity](Entity.md) |
+| [dateCreated](dateCreated.md)               | 0..1 <br/> [Date](Date.md)                                                                                                                                                                                                            | The date on which the entity was created                                         | [Entity](Entity.md) |
+| [dateModified](dateModified.md)             | 0..1 <br/> [Date](Date.md)                                                                                                                                                                                                            | The date on which the entity was most recently modified                          | [Entity](Entity.md) |
+| [exact_mappings](exact_mappings.md)         | \* <br/> [Any](Any.md)                                                                                                                                                                                                                | The property is used to link two concepts, indicating a high degree of confid... | [Entity](Entity.md) |
+| [close_mappings](close_mappings.md)         | \* <br/> [Any](Any.md)                                                                                                                                                                                                                | The property is used to link two concepts that are sufficiently similar that ... | [Entity](Entity.md) |
+| [related_mappings](related_mappings.md)     | \* <br/> [Any](Any.md)                                                                                                                                                                                                                | The property skos:relatedMatch is used to state an associative mapping link b... | [Entity](Entity.md) |
+| [narrow_mappings](narrow_mappings.md)       | \* <br/> [Any](Any.md)                                                                                                                                                                                                                | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [broad_mappings](broad_mappings.md)         | \* <br/> [Any](Any.md)                                                                                                                                                                                                                | The property is used to state a hierarchical mapping link between two concept... | [Entity](Entity.md) |
+| [isCategorizedAs](isCategorizedAs.md)       | \* <br/> [Term](Term.md)                                                                                                                                                                                                              | The category this document falls under, referenced as a catalogued Term rathe... | [Entity](Entity.md) |
+| [hasLifecycleStatus](hasLifecycleStatus.md) | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                                                                                                                                                                                      | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
+| [notes](notes.md)                           | \* <br/> [String](String.md)                                                                                                                                                                                                          | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md) |
 
 ## Usages
 
-| used by                                                 | used in                                         | type  | used                              |
-| ------------------------------------------------------- | ----------------------------------------------- | ----- | --------------------------------- |
-| [Container](Container.md)                               | [documents](documents.md)                       | range | [Documentation](Documentation.md) |
-| [Dataset](Dataset.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Vocabulary](Vocabulary.md)                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Taxonomy](Taxonomy.md)                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Concept](Concept.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Control](Control.md)                                   | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [Group](Group.md)                                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Entry](Entry.md)                                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Entry](Entry.md)                                       | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [Term](Term.md)                                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Term](Term.md)                                         | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [Principle](Principle.md)                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Principle](Principle.md)                               | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [Certification](Certification.md)                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Certification](Certification.md)                       | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [LocalityOfUse](LocalityOfUse.md)                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [LocalityOfUse](LocalityOfUse.md)                       | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [RiskTaxonomy](RiskTaxonomy.md)                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [RiskControlGroup](RiskControlGroup.md)                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [RiskGroup](RiskGroup.md)                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Risk](Risk.md)                                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Risk](Risk.md)                                         | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [RiskConcept](RiskConcept.md)                           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [RiskControl](RiskControl.md)                           | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [RiskControl](RiskControl.md)                           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Action](Action.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Action](Action.md)                                     | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [RiskIncident](RiskIncident.md)                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Impact](Impact.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [CapabilityConcept](CapabilityConcept.md)               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [CapabilityDomain](CapabilityDomain.md)                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [CapabilityGroup](CapabilityGroup.md)                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Capability](Capability.md)                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Capability](Capability.md)                             | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [BaseAi](BaseAi.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiSystem](AiSystem.md)                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiSystem](AiSystem.md)                                 | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [AiAgent](AiAgent.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiAgent](AiAgent.md)                                   | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [AiModel](AiModel.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [LargeLanguageModel](LargeLanguageModel.md)             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiTask](AiTask.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiTask](AiTask.md)                                     | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [AiTaskTaxonomy](AiTaskTaxonomy.md)                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiTaskDomain](AiTaskDomain.md)                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiTaskGroup](AiTaskGroup.md)                           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Purpose](Purpose.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Purpose](Purpose.md)                                   | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [Domain](Domain.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Domain](Domain.md)                                     | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [StakeholderGroup](StakeholderGroup.md)                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [AiEval](AiEval.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [EveryEvalAIResult](EveryEvalAIResult.md)               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Question](Question.md)                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Questionnaire](Questionnaire.md)                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Adapter](Adapter.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [Adapter](Adapter.md)                                   | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
-| [LLMIntrinsic](LLMIntrinsic.md)                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
-| [LLMIntrinsic](LLMIntrinsic.md)                         | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| used by                                                             | used in                                         | type  | used                              |
+| ------------------------------------------------------------------- | ----------------------------------------------- | ----- | --------------------------------- |
+| [Container](Container.md)                                           | [documents](documents.md)                       | range | [Documentation](Documentation.md) |
+| [Dataset](Dataset.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Vocabulary](Vocabulary.md)                                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Taxonomy](Taxonomy.md)                                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Concept](Concept.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Control](Control.md)                                               | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [Group](Group.md)                                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Entry](Entry.md)                                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Entry](Entry.md)                                                   | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [Term](Term.md)                                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Term](Term.md)                                                     | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [Principle](Principle.md)                                           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Principle](Principle.md)                                           | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [Rule](Rule.md)                                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AttributeConditionRule](AttributeConditionRule.md)                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Permission](Permission.md)                                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Prohibition](Prohibition.md)                                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Obligation](Obligation.md)                                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Recommendation](Recommendation.md)                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Certification](Certification.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Certification](Certification.md)                                   | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [EvaluationStandard](EvaluationStandard.md)                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [EvaluationStandard](EvaluationStandard.md)                         | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [LocalityOfUse](LocalityOfUse.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [LocalityOfUse](LocalityOfUse.md)                                   | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [RiskTaxonomy](RiskTaxonomy.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [RiskControlGroup](RiskControlGroup.md)                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [RiskGroup](RiskGroup.md)                                           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Risk](Risk.md)                                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Risk](Risk.md)                                                     | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [RiskConcept](RiskConcept.md)                                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [RiskControl](RiskControl.md)                                       | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [RiskControl](RiskControl.md)                                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Action](Action.md)                                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Action](Action.md)                                                 | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [RiskIncident](RiskIncident.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Impact](Impact.md)                                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [CapabilityConcept](CapabilityConcept.md)                           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [CapabilityDomain](CapabilityDomain.md)                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [CapabilityGroup](CapabilityGroup.md)                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Capability](Capability.md)                                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Capability](Capability.md)                                         | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [BaseAi](BaseAi.md)                                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiSystem](AiSystem.md)                                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiSystem](AiSystem.md)                                             | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [AiAgent](AiAgent.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiAgent](AiAgent.md)                                               | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [AiModel](AiModel.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [LargeLanguageModel](LargeLanguageModel.md)                         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [LargeLanguageModelFamily](LargeLanguageModelFamily.md)             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiTask](AiTask.md)                                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiTask](AiTask.md)                                                 | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [AiTaskTaxonomy](AiTaskTaxonomy.md)                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiTaskDomain](AiTaskDomain.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiTaskGroup](AiTaskGroup.md)                                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Purpose](Purpose.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Purpose](Purpose.md)                                               | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [Domain](Domain.md)                                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Domain](Domain.md)                                                 | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [StakeholderGroup](StakeholderGroup.md)                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiEval](AiEval.md)                                                 | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [EveryEvalAIResult](EveryEvalAIResult.md)                           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Question](Question.md)                                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Questionnaire](Questionnaire.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Adapter](Adapter.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Adapter](Adapter.md)                                               | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)                                     | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
+| [ControlActivity](ControlActivity.md)                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [ControlActivityPermission](ControlActivityPermission.md)           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [ControlActivityProhibition](ControlActivityProhibition.md)         | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [ControlActivityObligation](ControlActivityObligation.md)           | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [ControlActivityRecommendation](ControlActivityRecommendation.md)   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [Requirement](Requirement.md)                                       | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 
 ## Aliases
 
@@ -258,6 +276,7 @@ aliases:
 is_a: Entity
 slots:
 - hasLicense
+- hasJurisdiction
 slot_usage:
   isCategorizedAs:
     name: isCategorizedAs
@@ -327,6 +346,29 @@ attributes:
     - BenchmarkMetadataCard
     - Adapter
     range: License
+  hasJurisdiction:
+    name: hasJurisdiction
+    description: The legal or regulatory jurisdiction(s) applicable to an AI system,
+      policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code
+      (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union
+      (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from
+      the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    see_also:
+    - https://w3id.org/dpv#hasJurisdiction
+    rank: 1000
+    slot_uri: dpv:hasJurisdiction
+    owner: Documentation
+    domain_of:
+    - Documentation
+    - Concept
+    range: string
+    multivalued: true
+    inlined: false
+    any_of:
+    - range: Jurisdiction
+    - range: SupraNationalJurisdiction
+    - range: SubnationalJurisdiction
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example

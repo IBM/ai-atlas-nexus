@@ -5,7 +5,7 @@ search:
 
 # Slot: hasJurisdiction
 
-_The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Accepts ISO 3166-1 country codes, supra-national bodies, or subnational jurisdictions with distinct regulatory significance. Aligns with dpv:hasJurisdiction._
+_The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction._
 
 <div data-search-exclude markdown="1">
 
@@ -17,6 +17,7 @@ URI: [dpv:hasJurisdiction](https://w3id.org/dpv#hasJurisdiction)
 
 | Name                                      | Description                                                                      | Modifies Slot |
 | ----------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Documentation](Documentation.md)         | Documented information about a concept or other topic(s) of interest             | no            |
 | [Concept](Concept.md)                     | A concept                                                                        | no            |
 | [RiskControlGroup](RiskControlGroup.md)   | A group of AI system related risk controls                                       | no            |
 | [RiskGroup](RiskGroup.md)                 | A group of AI system related risks that are part of a risk taxonomy              | no            |
@@ -38,7 +39,7 @@ URI: [dpv:hasJurisdiction](https://w3id.org/dpv#hasJurisdiction)
 | Property  | Value                                                                                                                                                                                                                        |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Range     | [String](String.md)&nbsp;or&nbsp;<br />[Jurisdiction](Jurisdiction.md)&nbsp;or&nbsp;<br />[SupraNationalJurisdiction](SupraNationalJurisdiction.md)&nbsp;or&nbsp;<br />[SubnationalJurisdiction](SubnationalJurisdiction.md) |
-| Domain Of | [Concept](Concept.md)                                                                                                                                                                                                        |
+| Domain Of | [Documentation](Documentation.md), [Concept](Concept.md)                                                                                                                                                                     |
 | Slot URI  | [dpv:hasJurisdiction](https://w3id.org/dpv#hasJurisdiction)                                                                                                                                                                  |
 
 ### Cardinality and Requirements
@@ -82,14 +83,17 @@ Value must satisfy at least one of:
 ```yaml
 name: hasJurisdiction
 description: The legal or regulatory jurisdiction(s) applicable to an AI system, policy,
-  risk, or obligation. Accepts ISO 3166-1 country codes, supra-national bodies, or
-  subnational jurisdictions with distinct regulatory significance. Aligns with dpv:hasJurisdiction.
+  risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US),
+  an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA),
+  or International. Values are listed in jurisdictions.yaml from the DPV Location
+  vocabulary. Aligns with dpv:hasJurisdiction.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 see_also:
 - https://w3id.org/dpv#hasJurisdiction
 rank: 1000
 slot_uri: dpv:hasJurisdiction
 domain_of:
+- Documentation
 - Concept
 range: string
 multivalued: true

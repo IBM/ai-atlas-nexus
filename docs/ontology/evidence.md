@@ -15,20 +15,21 @@ URI: [nexus:evidence](https://w3id.org/ai-atlas-nexus/evidence)
 
 ## Applicable Classes
 
-| Name                                      | Description                                                                      | Modifies Slot |
-| ----------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Fact](Fact.md)                           | A fact about something, for example the result of a measurement                  | no            |
-| [AiEvalResult](AiEvalResult.md)           | The result of an evaluation for a specific AI model                              | no            |
-| [EveryEvalAIResult](EveryEvalAIResult.md) | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
+| Name                                          | Description                                                                      | Modifies Slot |
+| --------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Fact](Fact.md)                               | A fact about something, for example the result of a measurement                  | no            |
+| [ConditionAssessment](ConditionAssessment.md) | One answer of a completed checklist, for one condition of the evaluation stan... | yes           |
+| [AiEvalResult](AiEvalResult.md)               | The result of an evaluation for a specific AI model                              | no            |
+| [EveryEvalAIResult](EveryEvalAIResult.md)     | An evaluation result from the Every Eval Ever dataset, capturing evaluation m... | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value               |
-| --------- | ------------------- |
-| Range     | [String](String.md) |
-| Domain Of | [Fact](Fact.md)     |
+| Property  | Value                                                          |
+| --------- | -------------------------------------------------------------- |
+| Range     | [String](String.md)                                            |
+| Domain Of | [Fact](Fact.md), [ConditionAssessment](ConditionAssessment.md) |
 
 ### Cardinality and Requirements
 
@@ -59,6 +60,7 @@ from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain_of:
 - Fact
+- ConditionAssessment
 range: string
 
 ```

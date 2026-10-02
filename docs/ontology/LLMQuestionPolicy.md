@@ -363,6 +363,7 @@ attributes:
     designates_type: true
     owner: LLMQuestionPolicy
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -376,6 +377,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission

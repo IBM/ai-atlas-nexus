@@ -125,6 +125,8 @@ URI: [schema:Organization](http://schema.org/Organization)
 
 
 
+      Organization : type
+
       Organization : url
 
 
@@ -148,6 +150,7 @@ URI: [schema:Organization](http://schema.org/Organization)
 | Name                                        | Cardinality and Range                            | Description                                                                      | Inheritance         |
 | ------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
 | [grants_license](grants_license.md)         | 0..1 <br/> [License](License.md)                 | A relationship from a granting entity such as an Organization to a License in... | direct              |
+| [type](type.md)                             | 0..1 <br/> [String](String.md)                   | The type or class designation of this entity instance                            | direct              |
 | [id](id.md)                                 | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                             | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)               | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
@@ -165,16 +168,18 @@ URI: [schema:Organization](http://schema.org/Organization)
 
 ## Usages
 
-| used by                                     | used in                           | type  | used                            |
-| ------------------------------------------- | --------------------------------- | ----- | ------------------------------- |
-| [Container](Container.md)                   | [organizations](organizations.md) | range | [Organization](Organization.md) |
-| [Dataset](Dataset.md)                       | [isProvidedBy](isProvidedBy.md)   | range | [Organization](Organization.md) |
-| [BaseAi](BaseAi.md)                         | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [AiSystem](AiSystem.md)                     | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [AiAgent](AiAgent.md)                       | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [AiModel](AiModel.md)                       | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
-| [Adapter](Adapter.md)                       | [isProducedBy](isProducedBy.md)   | range | [Organization](Organization.md) |
+| used by                                                             | used in                                   | type  | used                            |
+| ------------------------------------------------------------------- | ----------------------------------------- | ----- | ------------------------------- |
+| [Container](Container.md)                                           | [organizations](organizations.md)         | range | [Organization](Organization.md) |
+| [Dataset](Dataset.md)                                               | [isProvidedBy](isProvidedBy.md)           | range | [Organization](Organization.md) |
+| [BaseAi](BaseAi.md)                                                 | [isProducedBy](isProducedBy.md)           | range | [Organization](Organization.md) |
+| [AiSystem](AiSystem.md)                                             | [isProducedBy](isProducedBy.md)           | range | [Organization](Organization.md) |
+| [AiAgent](AiAgent.md)                                               | [isProducedBy](isProducedBy.md)           | range | [Organization](Organization.md) |
+| [AiModel](AiModel.md)                                               | [isProducedBy](isProducedBy.md)           | range | [Organization](Organization.md) |
+| [LargeLanguageModel](LargeLanguageModel.md)                         | [isProducedBy](isProducedBy.md)           | range | [Organization](Organization.md) |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [hasEvaluator](hasEvaluator.md)           | range | [Organization](Organization.md) |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [hasSystemProvider](hasSystemProvider.md) | range | [Organization](Organization.md) |
+| [Adapter](Adapter.md)                                               | [isProducedBy](isProducedBy.md)           | range | [Organization](Organization.md) |
 
 ## Identifier and Mapping Information
 
@@ -204,6 +209,37 @@ from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 is_a: Entity
 slots:
 - grants_license
+attributes:
+  type:
+    name: type
+    description: The type or class designation of this entity instance.
+    from_schema: https://w3id.org/ai-atlas-nexus/common
+    rank: 1000
+    designates_type: true
+    domain_of:
+    - Organization
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Control
+    - Group
+    - Entry
+    - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - EvaluationStandard
+    - BenchmarkMetadataCard
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
+    range: string
 class_uri: schema:Organization
 
 ````
@@ -219,6 +255,37 @@ description: Any organizational entity such as a corporation, educational instit
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 is_a: Entity
 attributes:
+  type:
+    name: type
+    description: The type or class designation of this entity instance.
+    from_schema: https://w3id.org/ai-atlas-nexus/common
+    rank: 1000
+    designates_type: true
+    owner: Organization
+    domain_of:
+    - Organization
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Control
+    - Group
+    - Entry
+    - Policy
+    - Rule
+    - Permission
+    - Prohibition
+    - Obligation
+    - Recommendation
+    - Certification
+    - EvaluationStandard
+    - BenchmarkMetadataCard
+    - ControlActivity
+    - ControlActivityPermission
+    - ControlActivityProhibition
+    - ControlActivityObligation
+    - ControlActivityRecommendation
+    - Requirement
+    range: string
   grants_license:
     name: grants_license
     description: A relationship from a granting entity such as an Organization to

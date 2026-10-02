@@ -180,23 +180,24 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 
 ## Usages
 
-| used by                           | used in                                           | type  | used                        |
-| --------------------------------- | ------------------------------------------------- | ----- | --------------------------- |
-| [Container](Container.md)         | [vocabularies](vocabularies.md)                   | range | [Vocabulary](Vocabulary.md) |
-| [Entry](Entry.md)                 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Term](Term.md)                   | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Principle](Principle.md)         | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Certification](Certification.md) | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [LocalityOfUse](LocalityOfUse.md) | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Risk](Risk.md)                   | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Capability](Capability.md)       | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [AiSystem](AiSystem.md)           | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [AiAgent](AiAgent.md)             | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [AiTask](AiTask.md)               | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Purpose](Purpose.md)             | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Domain](Domain.md)               | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [Adapter](Adapter.md)             | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
-| [LLMIntrinsic](LLMIntrinsic.md)   | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| used by                                     | used in                                           | type  | used                        |
+| ------------------------------------------- | ------------------------------------------------- | ----- | --------------------------- |
+| [Container](Container.md)                   | [vocabularies](vocabularies.md)                   | range | [Vocabulary](Vocabulary.md) |
+| [Entry](Entry.md)                           | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Term](Term.md)                             | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Principle](Principle.md)                   | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Certification](Certification.md)           | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [EvaluationStandard](EvaluationStandard.md) | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [LocalityOfUse](LocalityOfUse.md)           | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Risk](Risk.md)                             | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Capability](Capability.md)                 | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [AiSystem](AiSystem.md)                     | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [AiAgent](AiAgent.md)                       | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [AiTask](AiTask.md)                         | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Purpose](Purpose.md)                       | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Domain](Domain.md)                         | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [Adapter](Adapter.md)                       | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)             | [isDefinedByVocabulary](isDefinedByVocabulary.md) | range | [Vocabulary](Vocabulary.md) |
 
 ## Identifier and Mapping Information
 
@@ -233,9 +234,9 @@ attributes:
     name: type
     description: The type or class designation of this entity instance.
     from_schema: https://w3id.org/ai-atlas-nexus/common
-    rank: 1000
     designates_type: true
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -249,6 +250,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -276,10 +278,10 @@ attributes:
     name: type
     description: The type or class designation of this entity instance.
     from_schema: https://w3id.org/ai-atlas-nexus/common
-    rank: 1000
     designates_type: true
     owner: Vocabulary
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -293,6 +295,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -332,6 +335,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -341,6 +345,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation

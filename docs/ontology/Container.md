@@ -312,6 +312,17 @@ URI: [nexus:Container](https://w3id.org/ai-atlas-nexus/Container)
 
 
 
+      Container : thirdpartyevaluationengagements
+
+
+
+
+
+        Container --> "*" ThirdPartyEvaluationEngagement : thirdpartyevaluationengagements
+        click ThirdPartyEvaluationEngagement href "../ThirdPartyEvaluationEngagement/"
+
+
+
       Container : vocabularies
 
 
@@ -336,36 +347,37 @@ URI: [nexus:Container](https://w3id.org/ai-atlas-nexus/Container)
 
 ## Slots
 
-| Name                                                | Cardinality and Range                                            | Description                                      | Inheritance |
-| --------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------ | ----------- |
-| [organizations](organizations.md)                   | \* <br/> [Organization](Organization.md)                         | A list of organizations                          | direct      |
-| [licenses](licenses.md)                             | \* <br/> [License](License.md)                                   | A list of licenses                               | direct      |
-| [modalities](modalities.md)                         | \* <br/> [Modality](Modality.md)                                 | A list of AI modalities                          | direct      |
-| [aitasks](aitasks.md)                               | \* <br/> [AiTask](AiTask.md)                                     | A list of AI tasks                               | direct      |
-| [documents](documents.md)                           | \* <br/> [Documentation](Documentation.md)                       | A list of documents                              | direct      |
-| [datasets](datasets.md)                             | \* <br/> [Dataset](Dataset.md)                                   | A list of data sets                              | direct      |
-| [llmintrinsics](llmintrinsics.md)                   | \* <br/> [LLMIntrinsic](LLMIntrinsic.md)                         | A list of LLMIntrinsics                          | direct      |
-| [adapters](adapters.md)                             | \* <br/> [Adapter](Adapter.md)                                   | A list of Adapters                               | direct      |
-| [taxonomies](taxonomies.md)                         | \* <br/> [Taxonomy](Taxonomy.md)                                 | A list of taxonomies                             | direct      |
-| [concepts](concepts.md)                             | \* <br/> [Concept](Concept.md)                                   | A list of concepts                               | direct      |
-| [entries](entries.md)                               | \* <br/> [Entry](Entry.md)                                       | A list of entries                                | direct      |
-| [groups](groups.md)                                 | \* <br/> [Group](Group.md)                                       | A list of groups                                 | direct      |
-| [vocabularies](vocabularies.md)                     | \* <br/> [Vocabulary](Vocabulary.md)                             | A list of vocabularies                           | direct      |
-| [controls](controls.md)                             | \* <br/> [Control](Control.md)                                   | A list of AI controls                            | direct      |
-| [riskincidents](riskincidents.md)                   | \* <br/> [RiskIncident](RiskIncident.md)                         | A list of AI risk incidents                      | direct      |
-| [stakeholdergroups](stakeholdergroups.md)           | \* <br/> [StakeholderGroup](StakeholderGroup.md)                 | A list of AI stakeholder groups                  | direct      |
-| [stakeholders](stakeholders.md)                     | \* <br/> [Stakeholder](Stakeholder.md)                           | A list of stakeholders                           | direct      |
-| [actions](actions.md)                               | \* <br/> [Action](Action.md)                                     | A list of risk related actions                   | direct      |
-| [evaluations](evaluations.md)                       | \* <br/> [AiEval](AiEval.md)                                     | A list of AI evaluation methods                  | direct      |
-| [aievalresults](aievalresults.md)                   | \* <br/> [AiEvalResult](AiEvalResult.md)                         | A list of AI evaluation results                  | direct      |
-| [benchmarkmetadatacards](benchmarkmetadatacards.md) | \* <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | A list of AI evaluation benchmark metadata cards | direct      |
-| [aimodelfamilies](aimodelfamilies.md)               | \* <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | A list of AI model families                      | direct      |
-| [aimodels](aimodels.md)                             | \* <br/> [LargeLanguageModel](LargeLanguageModel.md)             | A list of AI models                              | direct      |
-| [policies](policies.md)                             | \* <br/> [Policy](Policy.md)                                     | A list of policies                               | direct      |
-| [rules](rules.md)                                   | \* <br/> [Rule](Rule.md)                                         | A list of rules                                  | direct      |
-| [prohibitions](prohibitions.md)                     | \* <br/> [Prohibition](Prohibition.md)                           | A list of prohibitions                           | direct      |
-| [permissions](permissions.md)                       | \* <br/> [Permission](Permission.md)                             | A list of Permissions                            | direct      |
-| [obligations](obligations.md)                       | \* <br/> [Obligation](Obligation.md)                             | A list of Obligations                            | direct      |
+| Name                                                                  | Cardinality and Range                                                        | Description                                      | Inheritance |
+| --------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------ | ----------- |
+| [organizations](organizations.md)                                     | \* <br/> [Organization](Organization.md)                                     | A list of organizations                          | direct      |
+| [licenses](licenses.md)                                               | \* <br/> [License](License.md)                                               | A list of licenses                               | direct      |
+| [modalities](modalities.md)                                           | \* <br/> [Modality](Modality.md)                                             | A list of AI modalities                          | direct      |
+| [aitasks](aitasks.md)                                                 | \* <br/> [AiTask](AiTask.md)                                                 | A list of AI tasks                               | direct      |
+| [documents](documents.md)                                             | \* <br/> [Documentation](Documentation.md)                                   | A list of documents                              | direct      |
+| [datasets](datasets.md)                                               | \* <br/> [Dataset](Dataset.md)                                               | A list of data sets                              | direct      |
+| [llmintrinsics](llmintrinsics.md)                                     | \* <br/> [LLMIntrinsic](LLMIntrinsic.md)                                     | A list of LLMIntrinsics                          | direct      |
+| [adapters](adapters.md)                                               | \* <br/> [Adapter](Adapter.md)                                               | A list of Adapters                               | direct      |
+| [taxonomies](taxonomies.md)                                           | \* <br/> [Taxonomy](Taxonomy.md)                                             | A list of taxonomies                             | direct      |
+| [concepts](concepts.md)                                               | \* <br/> [Concept](Concept.md)                                               | A list of concepts                               | direct      |
+| [entries](entries.md)                                                 | \* <br/> [Entry](Entry.md)                                                   | A list of entries                                | direct      |
+| [groups](groups.md)                                                   | \* <br/> [Group](Group.md)                                                   | A list of groups                                 | direct      |
+| [vocabularies](vocabularies.md)                                       | \* <br/> [Vocabulary](Vocabulary.md)                                         | A list of vocabularies                           | direct      |
+| [controls](controls.md)                                               | \* <br/> [Control](Control.md)                                               | A list of AI controls                            | direct      |
+| [riskincidents](riskincidents.md)                                     | \* <br/> [RiskIncident](RiskIncident.md)                                     | A list of AI risk incidents                      | direct      |
+| [stakeholdergroups](stakeholdergroups.md)                             | \* <br/> [StakeholderGroup](StakeholderGroup.md)                             | A list of AI stakeholder groups                  | direct      |
+| [stakeholders](stakeholders.md)                                       | \* <br/> [Stakeholder](Stakeholder.md)                                       | A list of stakeholders                           | direct      |
+| [actions](actions.md)                                                 | \* <br/> [Action](Action.md)                                                 | A list of risk related actions                   | direct      |
+| [evaluations](evaluations.md)                                         | \* <br/> [AiEval](AiEval.md)                                                 | A list of AI evaluation methods                  | direct      |
+| [aievalresults](aievalresults.md)                                     | \* <br/> [AiEvalResult](AiEvalResult.md)                                     | A list of AI evaluation results                  | direct      |
+| [benchmarkmetadatacards](benchmarkmetadatacards.md)                   | \* <br/> [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                   | A list of AI evaluation benchmark metadata cards | direct      |
+| [aimodelfamilies](aimodelfamilies.md)                                 | \* <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md)             | A list of AI model families                      | direct      |
+| [aimodels](aimodels.md)                                               | \* <br/> [LargeLanguageModel](LargeLanguageModel.md)                         | A list of AI models                              | direct      |
+| [policies](policies.md)                                               | \* <br/> [Policy](Policy.md)                                                 | A list of policies                               | direct      |
+| [rules](rules.md)                                                     | \* <br/> [Rule](Rule.md)                                                     | A list of rules                                  | direct      |
+| [prohibitions](prohibitions.md)                                       | \* <br/> [Prohibition](Prohibition.md)                                       | A list of prohibitions                           | direct      |
+| [permissions](permissions.md)                                         | \* <br/> [Permission](Permission.md)                                         | A list of Permissions                            | direct      |
+| [obligations](obligations.md)                                         | \* <br/> [Obligation](Obligation.md)                                         | A list of Obligations                            | direct      |
+| [thirdpartyevaluationengagements](thirdpartyevaluationengagements.md) | \* <br/> [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | A list of third-party evaluation engagements     | direct      |
 
 ## Identifier and Mapping Information
 
@@ -697,6 +709,17 @@ attributes:
     domain_of:
     - Container
     range: Obligation
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  thirdpartyevaluationengagements:
+    name: thirdpartyevaluationengagements
+    description: A list of third-party evaluation engagements
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    domain_of:
+    - Container
+    range: ThirdPartyEvaluationEngagement
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -1046,6 +1069,18 @@ attributes:
     domain_of:
     - Container
     range: Obligation
+    multivalued: true
+    inlined: true
+    inlined_as_list: true
+  thirdpartyevaluationengagements:
+    name: thirdpartyevaluationengagements
+    description: A list of third-party evaluation engagements
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    owner: Container
+    domain_of:
+    - Container
+    range: ThirdPartyEvaluationEngagement
     multivalued: true
     inlined: true
     inlined_as_list: true

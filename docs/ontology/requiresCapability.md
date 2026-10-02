@@ -24,6 +24,7 @@ URI: [nexus:requiresCapability](https://w3id.org/ai-atlas-nexus/requiresCapabili
 | [Term](Term.md)                             | A term and its definitions                                                       | no            |
 | [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
 | [Certification](Certification.md)           | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [EvaluationStandard](EvaluationStandard.md) | A standard defining minimum conditions, processes, or independence criteria r... | no            |
 | [LocalityOfUse](LocalityOfUse.md)           | The area, e                                                                      | no            |
 | [Risk](Risk.md)                             | The state of uncertainty associated with an AI system, that has the potential... | no            |
 | [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | no            |

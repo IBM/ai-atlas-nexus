@@ -12,6 +12,7 @@ Name: ai-risk-ontology
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [AnonymousClassExpression](AnonymousClassExpression.md)                                                                                                                                                           |                                                                                  |
 | [Any](Any.md)                                                                                                                                                                                                     |                                                                                  |
+| [ConditionAssessment](ConditionAssessment.md)                                                                                                                                                                     | One answer of a completed checklist, for one condition of the evaluation stan... |
 | [Container](Container.md)                                                                                                                                                                                         | An umbrella object that holds the ontology class instances                       |
 | [Entity](Entity.md)                                                                                                                                                                                               | A generic grouping for any identifiable entity                                   |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[AIComponent](AIComponent.md)                                                                                                                                     | Component (element) of an AI system                                              |
@@ -44,6 +45,7 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Capability](Capability.md)                                                                                       | A specific AI capability or ability, such as reading comprehension, logical r... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Certification](Certification.md)                                                                                 | Certification mechanisms, seals, and marks for the purpose of demonstrating c... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Domain](Domain.md)                                                                                               | An area, sector, or industry that is associated with economic activities         |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EvaluationStandard](EvaluationStandard.md)                                                                       | A standard defining minimum conditions, processes, or independence criteria r... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LLMIntrinsic](LLMIntrinsic.md)                                                                                   | A capability that can be invoked through a well-defined API that is reasonabl... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[LocalityOfUse](LocalityOfUse.md)                                                                                 | The area, e                                                                      |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Principle](Principle.md)                                                                                         | A representation of values or norms that must be taken into consideration whe... |
@@ -106,7 +108,9 @@ Name: ai-risk-ontology
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CapabilityTaxonomy](CapabilityTaxonomy.md)                                                                       | A taxonomy of AI capabilities describing the abilities of AI systems             |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)                                                           | A taxonomy of AI system related risk controls groups                             |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[RiskTaxonomy](RiskTaxonomy.md)                                                                                   | A taxonomy of AI system related risks                                            |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md)                                                                                               | A single engagement in which an independent third-party evaluator evaluates o... |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Vocabulary](Vocabulary.md)                                                                                                                                       | A collection of terms, with their definitions and relationships                  |
+| [EvaluationStandardConformance](EvaluationStandardConformance.md)                                                                                                                                                 | A completed checklist reporting how an engagement addressed the conditions of... |
 | [Fact](Fact.md)                                                                                                                                                                                                   | A fact about something, for example the result of a measurement                  |
 | [SlotCondition](SlotCondition.md)                                                                                                                                                                                 |                                                                                  |
 
@@ -122,7 +126,9 @@ Name: ai-risk-ontology
 | [aimodels](aimodels.md)                                                                   | A list of AI models                                                              |
 | [aitasks](aitasks.md)                                                                     | A list of AI tasks                                                               |
 | [appliesToCapability](appliesToCapability.md)                                             |                                                                                  |
+| [appliesToEvaluation](appliesToEvaluation.md)                                             | The evaluations of the engagement that this answer is specific to                |
 | [architecture](architecture.md)                                                           | A description of the architecture of an AI such as 'Decoder-only'                |
+| [assessesCondition](assessesCondition.md)                                                 | The condition of the evaluation standard that is assessed                        |
 | [author](author.md)                                                                       | The author or authors of the documentation                                       |
 | [belongsToDomain](belongsToDomain.md)                                                     | A relationship where a group belongs to a domain                                 |
 | [benchmarkmetadatacards](benchmarkmetadatacards.md)                                       | A list of AI evaluation benchmark metadata cards                                 |
@@ -133,6 +139,7 @@ Name: ai-risk-ontology
 | [close_mappings](close_mappings.md)                                                       | The property is used to link two concepts that are sufficiently similar that ... |
 | [concepts](concepts.md)                                                                   | A list of concepts                                                               |
 | [concern](concern.md)                                                                     | Some explanation about the concern related to an AI risk                         |
+| [conformsToStandard](conformsToStandard.md)                                               | The evaluation standard the checklist is completed against                       |
 | [contextWindowSize](contextWindowSize.md)                                                 | The total length, in bytes, of an AI model's context window                      |
 | [controls](controls.md)                                                                   | A list of AI controls                                                            |
 | [dataset_name](dataset_name.md)                                                           | Name of the dataset                                                              |
@@ -143,10 +150,13 @@ Name: ai-risk-ontology
 | [description](description.md)                                                             | The description of an entity                                                     |
 | [descriptor](descriptor.md)                                                               | Annotates whether an AI risk is a traditional risk, specific to or amplified ... |
 | [detectsRiskConcept](detectsRiskConcept.md)                                               | The property airo:detectsRiskConcept indicates the control used for detecting... |
+| [disclosureAnswer](disclosureAnswer.md)                                                   | For disclosure conditions (e                                                     |
 | [documents](documents.md)                                                                 | A list of documents                                                              |
+| [endDate](endDate.md)                                                                     | The date on which the entity ended                                               |
 | [entries](entries.md)                                                                     | A list of entries                                                                |
 | [equals_string](equals_string.md)                                                         | The string value that the slot must equal to satisfy this condition              |
 | [evaluatedByBenchmark](evaluatedByBenchmark.md)                                           | Indicates that this capability is evaluated by a specific benchmark              |
+| [evaluatesAi](evaluatesAi.md)                                                             | The AI systems or models (including specific versions) evaluated in the engag... |
 | [evaluatesCapability](evaluatesCapability.md)                                             | Indicates that this benchmark evaluates a specific capability                    |
 | [evaluation_id](evaluation_id.md)                                                         | Unique identifier for this evaluation                                            |
 | [evaluation_name](evaluation_name.md)                                                     | Name of the evaluation benchmark                                                 |
@@ -171,6 +181,8 @@ Name: ai-risk-ontology
 | [hasBenchmarkMetadata](hasBenchmarkMetadata.md)                                           | A relationship to a Benchmark Metadata Card which contains metadata about the... |
 | [hasCalculation](hasCalculation.md)                                                       | The way metrics are computed based on model outputs and the benchmark data       |
 | [hasCapability](hasCapability.md)                                                         | Indicates the technical capabilities this entry possesses                        |
+| [hasConditionAssessment](hasConditionAssessment.md)                                       | The per-condition answers of a completed checklist                               |
+| [hasConformanceOutcome](hasConformanceOutcome.md)                                         | Whether the condition was fulfilled                                              |
 | [hasConsequence](hasConsequence.md)                                                       | Indicates consequence(s) possible or arising from specified concept              |
 | [hasConsiderationComplianceWithRegulations](hasConsiderationComplianceWithRegulations.md) | Compliance with relevant legal or ethical regulations (if applicable)            |
 | [hasConsiderationConsentProcedures](hasConsiderationConsentProcedures.md)                 | Information on how consent was obtained (if applicable), especially for datas... |
@@ -188,6 +200,7 @@ Name: ai-risk-ontology
 | [hasEuRiskCategory](hasEuRiskCategory.md)                                                 | The risk category of an AI system as defined by the EU AI Act                    |
 | [hasEvaluation](hasEvaluation.md)                                                         | A relationship indicating that an entity has an AI evaluation result             |
 | [hasEvaluationResults](hasEvaluationResults.md)                                           | Array of evaluation results                                                      |
+| [hasEvaluator](hasEvaluator.md)                                                           | The organization that conducted the evaluation                                   |
 | [hasEvidenceCategory](hasEvidenceCategory.md)                                             | The evidence category, ie Technical Implementation, Operational Practices, et... |
 | [hasException](hasException.md)                                                           | Exception type                                                                   |
 | [hasExternalReference](hasExternalReference.md)                                           | External references / additional resources related to this entity, such as ar... |
@@ -214,7 +227,7 @@ Name: ai-risk-ontology
 | [hasOutputModality](hasOutputModality.md)                                                 | A relationship indicating the output modalities supported by an AI component     |
 | [hasParentDefinition](hasParentDefinition.md)                                             | Indicates parent terms associated with a term                                    |
 | [hasPart](hasPart.md)                                                                     | A relationship where an entity has another entity                                |
-| [hasPrinciple](hasPrinciple.md)                                                           | Which of the AIUC-1 principles this requirement belongs to                       |
+| [hasPrinciple](hasPrinciple.md)                                                           | The principle(s) this entry is composed of or belongs to                         |
 | [hasPurpose](hasPurpose.md)                                                               | Indicates the purpose of an entity, e                                            |
 | [hasReasonDenial](hasReasonDenial.md)                                                     | Reason for denial                                                                |
 | [hasRelatedAction](hasRelatedAction.md)                                                   | A relationship where an entity relates to an action                              |
@@ -232,8 +245,10 @@ Name: ai-risk-ontology
 | [hasSourceData](hasSourceData.md)                                                         | Source data information                                                          |
 | [hasSourceMetadata](hasSourceMetadata.md)                                                 | Source metadata for the evaluation                                               |
 | [hasStakeholder](hasStakeholder.md)                                                       | Indicates stakeholders of an AI system or component                              |
+| [hasStandardConformance](hasStandardConformance.md)                                       | The completed checklist(s) of evaluation standards (e                            |
 | [hasStatus](hasStatus.md)                                                                 | Indicates the status of specified concept                                        |
 | [hasSubDefinition](hasSubDefinition.md)                                                   | Indicates child terms associated with a term                                     |
+| [hasSystemProvider](hasSystemProvider.md)                                                 | The organization which develops or operates the AI systems being evaluated       |
 | [hasTasks](hasTasks.md)                                                                   | The tasks or evaluations the benchmark is intended to assess                     |
 | [hasTerm](hasTerm.md)                                                                     | Indicates terms associated with a vocabulary                                     |
 | [hasTrainingData](hasTrainingData.md)                                                     | A relationship indicating the datasets an AI model was trained on                |
@@ -269,6 +284,7 @@ Name: ai-risk-ontology
 | [isUsedBy](isUsedBy.md)                                                                   | Indicates user of an AI system                                                   |
 | [isUsedWithinLocality](isUsedWithinLocality.md)                                           | Specifies the domain an AI system is used within                                 |
 | [isValidatedBy](isValidatedBy.md)                                                         | A relationship indicating the model validation steps after AI model training     |
+| [justification](justification.md)                                                         | Why a condition was not fulfilled, or how the same principle was achieved via... |
 | [licenses](licenses.md)                                                                   | A list of licenses                                                               |
 | [llmintrinsics](llmintrinsics.md)                                                         | A list of LLMIntrinsics                                                          |
 | [lower_is_better](lower_is_better.md)                                                     | Whether lower scores are better                                                  |
@@ -306,6 +322,7 @@ Name: ai-risk-ontology
 | [risk_type](risk_type.md)                                                                 | Annotation whether an AI risk occurs at input or output or is non-technical      |
 | [riskincidents](riskincidents.md)                                                         | A list of AI risk incidents                                                      |
 | [rules](rules.md)                                                                         | A list of rules                                                                  |
+| [satisfiesAllRequirements](satisfiesAllRequirements.md)                                   | The overall answer to whether the engagement satisfies all the minimum requir... |
 | [schema_version](schema_version.md)                                                       | Version of the evaluation schema                                                 |
 | [score](score.md)                                                                         | The evaluation score                                                             |
 | [score_type](score_type.md)                                                               | Type of score (e                                                                 |
@@ -318,13 +335,16 @@ Name: ai-risk-ontology
 | [source_uri](source_uri.md)                                                               | The uri of the incident                                                          |
 | [stakeholdergroups](stakeholdergroups.md)                                                 | A list of AI stakeholder groups                                                  |
 | [stakeholders](stakeholders.md)                                                           | A list of stakeholders                                                           |
+| [startDate](startDate.md)                                                                 | The date on which the entity started                                             |
 | [supported_languages](supported_languages.md)                                             | A list of languages, expressed as ISO two letter codes                           |
 | [tag](tag.md)                                                                             | A shost version of the name                                                      |
 | [taxonomies](taxonomies.md)                                                               | A list of taxonomies                                                             |
 | [text](text.md)                                                                           | The question itself                                                              |
+| [thirdpartyevaluationengagements](thirdpartyevaluationengagements.md)                     | A list of third-party evaluation engagements                                     |
 | [training_data_preprocessing](training_data_preprocessing.md)                             |                                                                                  |
 | [type](type.md)                                                                           | The type or class designation of this entity instance                            |
 | [url](url.md)                                                                             | An optional URL associated with this instance                                    |
+| [usesEvaluation](usesEvaluation.md)                                                       | The benchmarks, metrics, or other AI evaluations run as part of the engagemen... |
 | [value](value.md)                                                                         | Some numeric or string value                                                     |
 | [version](version.md)                                                                     | The version of the entity embodied by a specified resource                       |
 | [vocabularies](vocabularies.md)                                                           | A list of vocabularies                                                           |
@@ -340,11 +360,12 @@ Name: ai-risk-ontology
 | [AIUC1EvidenceCategory](AIUC1EvidenceCategory.md)                     | AIUC1 Evidence Category                                                          |
 | [AIUC1Frequency](AIUC1Frequency.md)                                   | AIUC1 Frequency                                                                  |
 | [AIUC1RequirementType](AIUC1RequirementType.md)                       | AIUC1 Requirement Type                                                           |
+| [ConformanceOutcome](ConformanceOutcome.md)                           | The outcome of assessing a condition of an evaluation standard                   |
 | [EuAiRiskCategory](EuAiRiskCategory.md)                               |                                                                                  |
-| [Jurisdiction](Jurisdiction.md)                                       | ISO 3166-1 country code, sourced from the DPV Location ontology (https://w3id    |
+| [Jurisdiction](Jurisdiction.md)                                       | ISO 3166-1 alpha-2 country code, from the DPV Location vocabulary (https://w3... |
 | [LifecycleStatus](LifecycleStatus.md)                                 | Editorial / publication state of a catalogued entity                             |
-| [SubnationalJurisdiction](SubnationalJurisdiction.md)                 | Subnational or regional jurisdiction, sourced from the DPV Location ontology ... |
-| [SupraNationalJurisdiction](SupraNationalJurisdiction.md)             | Supra-national or intergovernmental jurisdiction, sourced from the DPV Locati... |
+| [SubnationalJurisdiction](SubnationalJurisdiction.md)                 | Subnational or regional jurisdiction as an ISO 3166-2 subdivision code (e        |
+| [SupraNationalJurisdiction](SupraNationalJurisdiction.md)             | Supra-national or intergovernmental jurisdiction, from the DPV Location vocab... |
 
 ## Types
 

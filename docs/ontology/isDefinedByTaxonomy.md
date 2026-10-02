@@ -44,6 +44,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 | [Obligation](Obligation.md)                                       | A rule describing an obligation for performing an activity                       | no            |
 | [Recommendation](Recommendation.md)                               | A rule describing a recommendation for performing an activity                    | no            |
 | [Certification](Certification.md)                                 | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [EvaluationStandard](EvaluationStandard.md)                       | A standard defining minimum conditions, processes, or independence criteria r... | no            |
 | [LocalityOfUse](LocalityOfUse.md)                                 | The area, e                                                                      | no            |
 | [RiskConcept](RiskConcept.md)                                     | An umbrella term for referring to risk, risk source, consequence and impact      | no            |
 | [Impact](Impact.md)                                               |                                                                                  | no            |

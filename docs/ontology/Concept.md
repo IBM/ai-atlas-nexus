@@ -233,6 +233,7 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -246,6 +247,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -277,6 +279,7 @@ attributes:
     designates_type: true
     owner: Concept
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -290,6 +293,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -342,6 +346,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -351,6 +356,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -359,9 +365,10 @@ attributes:
   hasJurisdiction:
     name: hasJurisdiction
     description: The legal or regulatory jurisdiction(s) applicable to an AI system,
-      policy, risk, or obligation. Accepts ISO 3166-1 country codes, supra-national
-      bodies, or subnational jurisdictions with distinct regulatory significance.
-      Aligns with dpv:hasJurisdiction.
+      policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code
+      (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union
+      (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from
+      the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     see_also:
     - https://w3id.org/dpv#hasJurisdiction
@@ -369,6 +376,7 @@ attributes:
     slot_uri: dpv:hasJurisdiction
     owner: Concept
     domain_of:
+    - Documentation
     - Concept
     range: string
     multivalued: true

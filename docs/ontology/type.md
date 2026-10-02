@@ -15,6 +15,7 @@ URI: [nexus:type](https://w3id.org/ai-atlas-nexus/type)
 
 | Name                                                              | Description                                                                      | Modifies Slot |
 | ----------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Organization](Organization.md)                                   | Any organizational entity such as a corporation, educational institution, con... | no            |
 | [Vocabulary](Vocabulary.md)                                       | A collection of terms, with their definitions and relationships                  | no            |
 | [Taxonomy](Taxonomy.md)                                           | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
 | [Concept](Concept.md)                                             | A concept                                                                        | no            |
@@ -32,6 +33,7 @@ URI: [nexus:type](https://w3id.org/ai-atlas-nexus/type)
 | [Obligation](Obligation.md)                                       | A rule describing an obligation for performing an activity                       | no            |
 | [Recommendation](Recommendation.md)                               | A rule describing a recommendation for performing an activity                    | no            |
 | [Certification](Certification.md)                                 | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [EvaluationStandard](EvaluationStandard.md)                       | A standard defining minimum conditions, processes, or independence criteria r... | no            |
 | [LocalityOfUse](LocalityOfUse.md)                                 | The area, e                                                                      | no            |
 | [RiskTaxonomy](RiskTaxonomy.md)                                   | A taxonomy of AI system related risks                                            | no            |
 | [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)           | A taxonomy of AI system related risk controls groups                             | no            |
@@ -54,12 +56,14 @@ URI: [nexus:type](https://w3id.org/ai-atlas-nexus/type)
 | [AiTaskTaxonomy](AiTaskTaxonomy.md)                               | A taxonomy of AI Tasks                                                           | no            |
 | [AiTaskDomain](AiTaskDomain.md)                                   | A grouping of AI Tasks by domain                                                 | no            |
 | [AiTaskGroup](AiTaskGroup.md)                                     | A group of AI Tasks                                                              | no            |
+| [AiProvider](AiProvider.md)                                       | A provider under the AI Act is defined by Article 3(3) as a natural or legal ... | no            |
 | [Purpose](Purpose.md)                                             | The end goal for which an entity is used or an action is taken                   | no            |
 | [Domain](Domain.md)                                               | An area, sector, or industry that is associated with economic activities         | no            |
 | [StakeholderGroup](StakeholderGroup.md)                           | An AI system stakeholder grouping                                                | no            |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                 | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
 | [Adapter](Adapter.md)                                             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [LLMIntrinsic](LLMIntrinsic.md)                                   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
+| [AiOffice](AiOffice.md)                                           | The EU AI Office (https://digital-strategy                                       | no            |
 | [ControlActivity](ControlActivity.md)                             | An obligation, permission, or prohibition for AI system assurance                | no            |
 | [ControlActivityPermission](ControlActivityPermission.md)         | A control activity (rule) describing a permission to perform an activity         | no            |
 | [ControlActivityProhibition](ControlActivityProhibition.md)       | A control activity (rule) describing a prohibition to perform an activity        | no            |
@@ -71,10 +75,10 @@ URI: [nexus:type](https://w3id.org/ai-atlas-nexus/type)
 
 ### Type and Range
 
-| Property  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Range     | [String](String.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Domain Of | [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [Concept](Concept.md), [Control](Control.md), [Group](Group.md), [Entry](Entry.md), [Policy](Policy.md), [Rule](Rule.md), [Permission](Permission.md), [Prohibition](Prohibition.md), [Obligation](Obligation.md), [Recommendation](Recommendation.md), [Certification](Certification.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [ControlActivity](ControlActivity.md), [ControlActivityPermission](ControlActivityPermission.md), [ControlActivityProhibition](ControlActivityProhibition.md), [ControlActivityObligation](ControlActivityObligation.md), [ControlActivityRecommendation](ControlActivityRecommendation.md), [Requirement](Requirement.md) |
+| Property  | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Range     | [String](String.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Domain Of | [Organization](Organization.md), [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [Concept](Concept.md), [Control](Control.md), [Group](Group.md), [Entry](Entry.md), [Policy](Policy.md), [Rule](Rule.md), [Permission](Permission.md), [Prohibition](Prohibition.md), [Obligation](Obligation.md), [Recommendation](Recommendation.md), [Certification](Certification.md), [EvaluationStandard](EvaluationStandard.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [ControlActivity](ControlActivity.md), [ControlActivityPermission](ControlActivityPermission.md), [ControlActivityProhibition](ControlActivityProhibition.md), [ControlActivityObligation](ControlActivityObligation.md), [ControlActivityRecommendation](ControlActivityRecommendation.md), [Requirement](Requirement.md) |
 
 ### Cardinality and Requirements
 
@@ -96,6 +100,7 @@ URI: [nexus:type](https://w3id.org/ai-atlas-nexus/type)
 ```yaml
 name: type
 domain_of:
+- Organization
 - Vocabulary
 - Taxonomy
 - Concept
@@ -109,6 +114,7 @@ domain_of:
 - Obligation
 - Recommendation
 - Certification
+- EvaluationStandard
 - BenchmarkMetadataCard
 - ControlActivity
 - ControlActivityPermission

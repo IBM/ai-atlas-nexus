@@ -361,6 +361,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -370,6 +371,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -481,6 +483,7 @@ attributes:
     designates_type: true
     owner: LocalityOfUse
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -494,6 +497,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission

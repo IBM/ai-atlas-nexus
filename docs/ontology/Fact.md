@@ -105,6 +105,7 @@ attributes:
     owner: Fact
     domain_of:
     - Fact
+    - ConditionAssessment
     range: string
 class_uri: schema:Statement
 
