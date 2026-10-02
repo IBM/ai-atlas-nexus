@@ -55,6 +55,17 @@ URI: [nexus:AttributeConditionRule](https://w3id.org/ai-atlas-nexus/AttributeCon
 
 
 
+      AttributeConditionRule : hasDocumentation
+
+
+
+
+
+        AttributeConditionRule --> "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation/"
+
+
+
       AttributeConditionRule : hasLifecycleStatus
 
 
@@ -170,6 +181,7 @@ URI: [nexus:AttributeConditionRule](https://w3id.org/ai-atlas-nexus/AttributeCon
 | [postconditions](postconditions.md)           | 0..1 <br/> [AnonymousClassExpression](AnonymousClassExpression.md) | Conditions that result from applying the rule                                    | direct              |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)                                 | A relationship where a concept or a concept group is defined by a taxonomy       | [Rule](Rule.md)     |
 | [hasRule](hasRule.md)                         | \* <br/> [Rule](Rule.md)                                           | Specifying applicability or inclusion of a rule within specified context         | [Rule](Rule.md)     |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)                         | Indicates documentation associated with an entity                                | [Rule](Rule.md)     |
 | [type](type.md)                               | 0..1 <br/> [String](String.md)                                     | The type or class designation of this entity instance                            | [Rule](Rule.md)     |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                                        | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                                     | A text name of this instance                                                     | [Entity](Entity.md) |
@@ -305,6 +317,38 @@ attributes:
     range: Rule
     multivalued: true
     inlined: false
+  hasDocumentation:
+    name: hasDocumentation
+    description: Indicates documentation associated with an entity.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: airo:hasDocumentation
+    owner: AttributeConditionRule
+    domain_of:
+    - Dataset
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Group
+    - Entry
+    - Term
+    - Principle
+    - Rule
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - Action
+    - BaseAi
+    - LargeLanguageModelFamily
+    - AiTaskTaxonomy
+    - AiEval
+    - EveryEvalAIResult
+    - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
+    - Adapter
+    - LLMIntrinsic
+    range: Documentation
+    multivalued: true
+    inlined: false
   type:
     name: type
     description: The type or class designation of this entity instance.
@@ -312,6 +356,7 @@ attributes:
     designates_type: true
     owner: AttributeConditionRule
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -325,6 +370,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission

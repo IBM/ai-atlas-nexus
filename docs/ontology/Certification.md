@@ -281,6 +281,7 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -294,6 +295,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -325,6 +327,7 @@ attributes:
     designates_type: true
     owner: Certification
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -338,6 +341,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -403,6 +407,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -412,6 +417,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation

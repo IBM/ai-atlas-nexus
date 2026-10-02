@@ -390,6 +390,33 @@ class TestLibrary(TestCaseBase):
         document = ran_lib.get_document(id="test-ds1")
         assert document.id == "test-ds1"
 
+    def test_get_evaluation_engagements_type(self):
+        """Get third-party evaluation engagements - returns a list"""
+        ran_lib = self.ran_lib
+        self.assertIsInstance(ran_lib.get_evaluation_engagements(), list)
+
+    def test_get_evaluation_engagements_filter_not_a_str(self):
+        """Get third-party evaluation engagements - filter type is wrong"""
+        ran_lib = self.ran_lib
+        self.assertRaises(TypeError, ran_lib.get_evaluation_engagements, evaluator=123)
+        self.assertRaises(TypeError, ran_lib.get_evaluation_engagements, system_provider=123)
+        self.assertRaises(TypeError, ran_lib.get_evaluation_engagements, ai=123)
+
+    def test_get_evaluation_engagement_id_not_a_str(self):
+        """Get a third-party evaluation engagement - id type is wrong"""
+        ran_lib = self.ran_lib
+        self.assertRaises(TypeError, ran_lib.get_evaluation_engagement, id=123)
+
+    def test_check_standard_conformance_id_not_a_str(self):
+        """Check a third-party evaluation engagement - engagement_id type is wrong"""
+        ran_lib = self.ran_lib
+        self.assertRaises(TypeError, ran_lib.check_standard_conformance, 123)
+
+    def test_check_standard_conformance_unknown_engagement(self):
+        """Check a third-party evaluation engagement - no engagement with that id"""
+        ran_lib = self.ran_lib
+        self.assertRaises(ValueError, ran_lib.check_standard_conformance, "no-such-engagement")
+
     def test_get_all_datasets(self):
         """Get all dataset definitions from the LinkML"""
         ran_lib = self.ran_lib

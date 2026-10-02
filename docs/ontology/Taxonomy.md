@@ -215,6 +215,7 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 | [Obligation](Obligation.md)                                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
 | [Recommendation](Recommendation.md)                               | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
 | [Certification](Certification.md)                                 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
+| [EvaluationStandard](EvaluationStandard.md)                       | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
 | [LocalityOfUse](LocalityOfUse.md)                                 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
 | [RiskControlGroup](RiskControlGroup.md)                           | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
 | [RiskGroup](RiskGroup.md)                                         | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | range | [Taxonomy](Taxonomy.md) |
@@ -289,6 +290,7 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -302,6 +304,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -333,6 +336,7 @@ attributes:
     designates_type: true
     owner: Taxonomy
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -346,6 +350,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -385,6 +390,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -394,6 +400,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation

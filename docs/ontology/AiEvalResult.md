@@ -170,13 +170,14 @@ URI: [dqv:QualityMeasurement](https://www.w3.org/TR/vocab-dqv/QualityMeasurement
 
 ## Usages
 
-| used by                                     | used in                             | type   | used                            |
-| ------------------------------------------- | ----------------------------------- | ------ | ------------------------------- |
-| [Container](Container.md)                   | [aievalresults](aievalresults.md)   | range  | [AiEvalResult](AiEvalResult.md) |
-| [AiModel](AiModel.md)                       | [hasEvaluation](hasEvaluation.md)   | range  | [AiEvalResult](AiEvalResult.md) |
-| [LargeLanguageModel](LargeLanguageModel.md) | [hasEvaluation](hasEvaluation.md)   | range  | [AiEvalResult](AiEvalResult.md) |
-| [EveryEvalAIResult](EveryEvalAIResult.md)   | [hasRelatedRisk](hasRelatedRisk.md) | domain | [AiEvalResult](AiEvalResult.md) |
-| [Adapter](Adapter.md)                       | [hasEvaluation](hasEvaluation.md)   | range  | [AiEvalResult](AiEvalResult.md) |
+| used by                                                             | used in                             | type   | used                            |
+| ------------------------------------------------------------------- | ----------------------------------- | ------ | ------------------------------- |
+| [Container](Container.md)                                           | [aievalresults](aievalresults.md)   | range  | [AiEvalResult](AiEvalResult.md) |
+| [AiModel](AiModel.md)                                               | [hasEvaluation](hasEvaluation.md)   | range  | [AiEvalResult](AiEvalResult.md) |
+| [LargeLanguageModel](LargeLanguageModel.md)                         | [hasEvaluation](hasEvaluation.md)   | range  | [AiEvalResult](AiEvalResult.md) |
+| [EveryEvalAIResult](EveryEvalAIResult.md)                           | [hasRelatedRisk](hasRelatedRisk.md) | domain | [AiEvalResult](AiEvalResult.md) |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [hasEvaluation](hasEvaluation.md)   | range  | [AiEvalResult](AiEvalResult.md) |
+| [Adapter](Adapter.md)                                               | [hasEvaluation](hasEvaluation.md)   | range  | [AiEvalResult](AiEvalResult.md) |
 
 ## Identifier and Mapping Information
 
@@ -254,6 +255,7 @@ attributes:
     owner: AiEvalResult
     domain_of:
     - Fact
+    - ConditionAssessment
     range: string
   id:
     name: id

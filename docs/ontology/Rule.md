@@ -76,6 +76,17 @@ URI: [dpv:Rule](https://w3id.org/dpv#Rule)
 
 
 
+      Rule : hasDocumentation
+
+
+
+
+
+        Rule --> "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation/"
+
+
+
       Rule : hasLifecycleStatus
 
 
@@ -179,6 +190,7 @@ URI: [dpv:Rule](https://w3id.org/dpv#Rule)
 | --------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)               | A relationship where a concept or a concept group is defined by a taxonomy       | direct              |
 | [hasRule](hasRule.md)                         | \* <br/> [Rule](Rule.md)                         | Specifying applicability or inclusion of a rule within specified context         | direct              |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | direct              |
 | [type](type.md)                               | 0..1 <br/> [String](String.md)                   | The type or class designation of this entity instance                            | direct              |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
@@ -211,6 +223,7 @@ URI: [dpv:Rule](https://w3id.org/dpv#Rule)
 | [Obligation](Obligation.md)                                       | [hasRule](hasRule.md) | range | [Rule](Rule.md) |
 | [Recommendation](Recommendation.md)                               | [hasRule](hasRule.md) | range | [Rule](Rule.md) |
 | [Certification](Certification.md)                                 | [hasRule](hasRule.md) | range | [Rule](Rule.md) |
+| [EvaluationStandard](EvaluationStandard.md)                       | [hasRule](hasRule.md) | range | [Rule](Rule.md) |
 | [LocalityOfUse](LocalityOfUse.md)                                 | [hasRule](hasRule.md) | range | [Rule](Rule.md) |
 | [Risk](Risk.md)                                                   | [hasRule](hasRule.md) | range | [Rule](Rule.md) |
 | [Capability](Capability.md)                                       | [hasRule](hasRule.md) | range | [Rule](Rule.md) |
@@ -258,6 +271,7 @@ abstract: true
 slots:
 - isDefinedByTaxonomy
 - hasRule
+- hasDocumentation
 attributes:
   type:
     name: type
@@ -265,6 +279,7 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -278,6 +293,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -309,6 +325,7 @@ attributes:
     designates_type: true
     owner: Rule
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -322,6 +339,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -372,6 +390,38 @@ attributes:
     - Rule
     - Requirement
     range: Rule
+    multivalued: true
+    inlined: false
+  hasDocumentation:
+    name: hasDocumentation
+    description: Indicates documentation associated with an entity.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: airo:hasDocumentation
+    owner: Rule
+    domain_of:
+    - Dataset
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Group
+    - Entry
+    - Term
+    - Principle
+    - Rule
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - Action
+    - BaseAi
+    - LargeLanguageModelFamily
+    - AiTaskTaxonomy
+    - AiEval
+    - EveryEvalAIResult
+    - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
+    - Adapter
+    - LLMIntrinsic
+    range: Documentation
     multivalued: true
     inlined: false
   id:

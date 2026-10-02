@@ -26,6 +26,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 | [Term](Term.md)                             | A term and its definitions                                                       | no            |
 | [Principle](Principle.md)                   | A representation of values or norms that must be taken into consideration whe... | no            |
 | [Certification](Certification.md)           | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [EvaluationStandard](EvaluationStandard.md) | A standard defining minimum conditions, processes, or independence criteria r... | no            |
 | [LocalityOfUse](LocalityOfUse.md)           | The area, e                                                                      | no            |
 | [Capability](Capability.md)                 | A specific AI capability or ability, such as reading comprehension, logical r... | yes           |
 | [AiSystem](AiSystem.md)                     | A compound AI System composed of one or more AI capablities                      | no            |

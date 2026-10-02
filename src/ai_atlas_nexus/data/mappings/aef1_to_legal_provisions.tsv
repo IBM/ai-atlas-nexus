@@ -1,0 +1,23 @@
+#curie_map:
+#   aef1: https://aievaluatorforum.org/initiatives/minimum-operating-conditions#
+#   eu-cop: https://code-of-practice.ai/?section=safety-security#
+#   ca-sb53: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53#
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   semapv: https://w3id.org/semapv/vocab/
+#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aef1_to_legal_provisions.tsv
+#mapping_set_description: Mapping from AEF-1 Minimum Operating Conditions to the EU GPAI Code of Practice (Safety and Security Chapter) and California SB 53
+#license: https://www.apache.org/licenses/LICENSE-2.0.html
+#mapping_date: '2026-09-28'
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_id	comment
+aef1:aef1-standard	AEF-1	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-measure-7-3	EU GPAI CoP S&S Measure 7.3	semapv:ManualMappingCuration	0.9		Cited in AEF-1 footnote 1: the checklist can be used to report third-party evaluations per Measure 7.3(1)(g).
+aef1:aef1-standard	AEF-1	skos:relatedMatch	ca-sb53:ca-sb-53-22757-12-c-2-c	Cal. Bus. & Prof. Code 22757.12(c)(2)(C)	semapv:ManualMappingCuration	0.9		Cited in AEF-1 footnote 1: the checklist can be used to report the extent of third-party evaluator involvement.
+aef1:aef1-ctrl-access-4	1.4 Time	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-4	EU GPAI CoP S&S Appendix 3.4	semapv:ManualMappingCuration	0.9		Cited in AEF-1 footnote 6: both suggest at least 20 business days.
+aef1:aef1-ctrl-sensitive-info-2	5.2 Evaluation integrity	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-5	EU GPAI CoP S&S Appendix 3.5	semapv:ManualMappingCuration	0.9		Cited in AEF-1 footnote 9: providers do not store or analyse test-run inputs/outputs without evaluator permission.
+aef1:aef1-ctrl-sensitive-info-3	5.3 Protecting confidential information	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-5	EU GPAI CoP S&S Appendix 3.5	semapv:ManualMappingCuration	0.9		Cited in AEF-1 footnote 10: protecting confidential information is part of adequate evaluator qualification.
+aef1:aef1-principle-access	Principle 1: Sufficient Access and Resources	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-5	EU GPAI CoP S&S Appendix 3.5	semapv:ManualMappingCuration	0.8		Not cited by AEF-1; Appendix 3.5 requires adequate access, information, time, and other resources for independent external evaluators.
+aef1:aef1-principle-access	Principle 1: Sufficient Access and Resources	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-measure-7-3	EU GPAI CoP S&S Measure 7.3	semapv:ManualMappingCuration	0.8		Not cited by AEF-1; Measure 7.3(1)(g) requires describing the access and other resources provided to independent external evaluators.
+aef1:aef1-ctrl-access-1	1.1 Technical access	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-4	EU GPAI CoP S&S Appendix 3.4	semapv:ManualMappingCuration	0.8		Not cited by AEF-1; both address adequate model access for evaluators.
+aef1:aef1-ctrl-access-1-3	1.1.3 Safeguard exemptions	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-4	EU GPAI CoP S&S Appendix 3.4	semapv:ManualMappingCuration	0.8		Not cited by AEF-1; Appendix 3.4 includes access to the model version(s) with the fewest safety mitigations.
+aef1:aef1-ctrl-access-1-4	1.1.4 Intermediate system states	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-4	EU GPAI CoP S&S Appendix 3.4	semapv:ManualMappingCuration	0.8		Not cited by AEF-1; Appendix 3.4 includes access to activations, gradients, logits, and chains-of-thought.
+aef1:aef1-ctrl-access-2	1.2 Information	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-4	EU GPAI CoP S&S Appendix 3.4	semapv:ManualMappingCuration	0.8		Not cited by AEF-1; both list model specifications, system prompt, training data, test sets, and past evaluation results.
+aef1:aef1-ctrl-access-3	1.3 Computational resources	skos:relatedMatch	eu-cop:eu-gpai-cop-ss-appendix-3-4	EU GPAI CoP S&S Appendix 3.4	semapv:ManualMappingCuration	0.8		Not cited by AEF-1; Appendix 3.4 requires adequate compute budgets, including re-runs.

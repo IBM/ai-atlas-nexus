@@ -85,6 +85,8 @@ URI: [schema:Thing](http://schema.org/Thing)
         click EvaluationResultRecord href "../EvaluationResultRecord/"
       Entity <|-- BenchmarkMetadataCard
         click BenchmarkMetadataCard href "../BenchmarkMetadataCard/"
+      Entity <|-- ThirdPartyEvaluationEngagement
+        click ThirdPartyEvaluationEngagement href "../ThirdPartyEvaluationEngagement/"
 
       Entity : broad_mappings
 
@@ -217,6 +219,7 @@ URI: [schema:Thing](http://schema.org/Thing)
   - [ScoreDetails](ScoreDetails.md)
   - [EvaluationResultRecord](EvaluationResultRecord.md)
   - [BenchmarkMetadataCard](BenchmarkMetadataCard.md)
+  - [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md)
 
 ## Class Properties
 

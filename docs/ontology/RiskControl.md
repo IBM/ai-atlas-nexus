@@ -248,7 +248,7 @@ URI: [airo:RiskControl](https://w3id.org/airo#RiskControl)
 | [isUsedWithinLocality](isUsedWithinLocality.md)     | \* <br/> [LocalityOfUse](LocalityOfUse.md)                                                                                                                                                                                            | Specifies the domain an AI system is used within                                 | [RiskConcept](RiskConcept.md)                |
 | [isApplicableinLocality](isApplicableinLocality.md) | \* <br/> [LocalityOfUse](LocalityOfUse.md)                                                                                                                                                                                            | A relationship where an entity has is applicable in these localities             | [Control](Control.md)                        |
 | [hasExternalReference](hasExternalReference.md)     | \* <br/> [Documentation](Documentation.md)                                                                                                                                                                                            | External references / additional resources related to this entity, such as ar... | [Control](Control.md)                        |
-| [type](type.md)                                     | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The type or class designation of this entity instance                            | [Concept](Concept.md), [Control](Control.md) |
+| [type](type.md)                                     | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The type or class designation of this entity instance                            | [Control](Control.md), [Concept](Concept.md) |
 | [id](id.md)                                         | 1 <br/> [String](String.md)                                                                                                                                                                                                           | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                          |
 | [name](name.md)                                     | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | A text name of this instance                                                     | [Entity](Entity.md)                          |
 | [description](description.md)                       | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The description of an entity                                                     | [Entity](Entity.md)                          |
@@ -493,6 +493,7 @@ attributes:
     designates_type: true
     owner: RiskControl
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -506,6 +507,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -704,6 +706,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -713,6 +716,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -721,9 +725,10 @@ attributes:
   hasJurisdiction:
     name: hasJurisdiction
     description: The legal or regulatory jurisdiction(s) applicable to an AI system,
-      policy, risk, or obligation. Accepts ISO 3166-1 country codes, supra-national
-      bodies, or subnational jurisdictions with distinct regulatory significance.
-      Aligns with dpv:hasJurisdiction.
+      policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code
+      (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union
+      (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from
+      the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
     see_also:
     - https://w3id.org/dpv#hasJurisdiction
@@ -731,6 +736,7 @@ attributes:
     slot_uri: dpv:hasJurisdiction
     owner: RiskControl
     domain_of:
+    - Documentation
     - Concept
     range: string
     multivalued: true

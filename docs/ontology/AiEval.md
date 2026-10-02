@@ -237,20 +237,22 @@ URI: [dqv:Metric](https://www.w3.org/TR/vocab-dqv/Metric)
 
 ## Usages
 
-| used by                                           | used in                                         | type   | used                |
-| ------------------------------------------------- | ----------------------------------------------- | ------ | ------------------- |
-| [Container](Container.md)                         | [evaluations](evaluations.md)                   | range  | [AiEval](AiEval.md) |
-| [AiEval](AiEval.md)                               | [hasRelatedRisk](hasRelatedRisk.md)             | domain | [AiEval](AiEval.md) |
-| [AiEval](AiEval.md)                               | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
-| [AiEval](AiEval.md)                               | [isComposedOf](isComposedOf.md)                 | range  | [AiEval](AiEval.md) |
-| [AiEvalResult](AiEvalResult.md)                   | [isResultOf](isResultOf.md)                     | range  | [AiEval](AiEval.md) |
-| [EveryEvalAIResult](EveryEvalAIResult.md)         | [isResultOf](isResultOf.md)                     | range  | [AiEval](AiEval.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md) | [describesAiEval](describesAiEval.md)           | range  | [AiEval](AiEval.md) |
-| [Question](Question.md)                           | [hasRelatedRisk](hasRelatedRisk.md)             | domain | [AiEval](AiEval.md) |
-| [Question](Question.md)                           | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
-| [Question](Question.md)                           | [isComposedOf](isComposedOf.md)                 | range  | [AiEval](AiEval.md) |
-| [Questionnaire](Questionnaire.md)                 | [hasRelatedRisk](hasRelatedRisk.md)             | domain | [AiEval](AiEval.md) |
-| [Questionnaire](Questionnaire.md)                 | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
+| used by                                                             | used in                                         | type   | used                |
+| ------------------------------------------------------------------- | ----------------------------------------------- | ------ | ------------------- |
+| [Container](Container.md)                                           | [evaluations](evaluations.md)                   | range  | [AiEval](AiEval.md) |
+| [AiEval](AiEval.md)                                                 | [hasRelatedRisk](hasRelatedRisk.md)             | domain | [AiEval](AiEval.md) |
+| [AiEval](AiEval.md)                                                 | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
+| [AiEval](AiEval.md)                                                 | [isComposedOf](isComposedOf.md)                 | range  | [AiEval](AiEval.md) |
+| [AiEvalResult](AiEvalResult.md)                                     | [isResultOf](isResultOf.md)                     | range  | [AiEval](AiEval.md) |
+| [EveryEvalAIResult](EveryEvalAIResult.md)                           | [isResultOf](isResultOf.md)                     | range  | [AiEval](AiEval.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                   | [describesAiEval](describesAiEval.md)           | range  | [AiEval](AiEval.md) |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [usesEvaluation](usesEvaluation.md)             | range  | [AiEval](AiEval.md) |
+| [ConditionAssessment](ConditionAssessment.md)                       | [appliesToEvaluation](appliesToEvaluation.md)   | range  | [AiEval](AiEval.md) |
+| [Question](Question.md)                                             | [hasRelatedRisk](hasRelatedRisk.md)             | domain | [AiEval](AiEval.md) |
+| [Question](Question.md)                                             | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
+| [Question](Question.md)                                             | [isComposedOf](isComposedOf.md)                 | range  | [AiEval](AiEval.md) |
+| [Questionnaire](Questionnaire.md)                                   | [hasRelatedRisk](hasRelatedRisk.md)             | domain | [AiEval](AiEval.md) |
+| [Questionnaire](Questionnaire.md)                                   | [hasBenchmarkMetadata](hasBenchmarkMetadata.md) | domain | [AiEval](AiEval.md) |
 
 ## Identifier and Mapping Information
 
@@ -340,6 +342,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -349,6 +352,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation

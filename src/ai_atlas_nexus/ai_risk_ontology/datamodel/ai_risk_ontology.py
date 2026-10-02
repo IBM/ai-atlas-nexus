@@ -129,28 +129,30 @@ class LifecycleStatus(str, Enum):
     """
 
 
-class Jurisdiction(str):
+class ConformanceOutcome(str, Enum):
     """
-    ISO 3166-1 country code, sourced from the DPV Location ontology (https://w3id.org/dpv/loc). Values are subclasses of dpv:Country.
+    The outcome of assessing a condition of an evaluation standard.
     """
-    pass
-
-
-class SupraNationalJurisdiction(str, Enum):
+    FULFILLED = "FULFILLED"
     """
-    Supra-national or intergovernmental jurisdiction, sourced from the DPV Location ontology (https://w3id.org/dpv/loc). Values are subclasses of dpv:SupraNationalUnion (e.g. EU, EEA).
+    The condition was fulfilled.
     """
-    International = "International"
+    NOT_FULFILLED = "NOT_FULFILLED"
     """
-    Explicitly global scope not attributable to any single country or recognised regional body.
+    The condition was not fulfilled.
     """
-
-
-class SubnationalJurisdiction(str):
+    ALTERNATIVE_MEANS = "ALTERNATIVE_MEANS"
     """
-    Subnational or regional jurisdiction, sourced from the DPV Location ontology (https://w3id.org/dpv/loc). Values are subclasses of dpv:Region and use ISO 3166-2 subdivision codes (e.g. US-CA for California, CA-QC for Quebec).
+    The condition was not fulfilled literally, but the same principle was achieved via alternative means.
     """
-    pass
+    NOT_APPLICABLE = "NOT_APPLICABLE"
+    """
+    The condition does not apply to this engagement.
+    """
+    NOT_ASSESSED = "NOT_ASSESSED"
+    """
+    The condition was not assessed.
+    """
 
 
 class AdapterType(str, Enum):
@@ -165,6 +167,20076 @@ class AdapterType(str, Enum):
     X_LORA = "X-LORA"
     """
     Mixture of LoRA Experts (X-LoRA) is a mixture of experts method for LoRA which works by using dense or sparse gating to dynamically activate LoRA experts.
+    """
+
+
+class Jurisdiction(str, Enum):
+    """
+    ISO 3166-1 alpha-2 country code, from the DPV Location vocabulary (https://w3id.org/dpv/loc). Values are members of dpv:Country.
+    """
+    AD = "AD"
+    """
+    Andorra
+    """
+    AE = "AE"
+    """
+    United Arab Emirates
+    """
+    AF = "AF"
+    """
+    Afghanistan
+    """
+    AG = "AG"
+    """
+    Antigua and Barbuda
+    """
+    AI = "AI"
+    """
+    Anguilla
+    """
+    AL = "AL"
+    """
+    Albania
+    """
+    AM = "AM"
+    """
+    Armenia
+    """
+    AO = "AO"
+    """
+    Angola
+    """
+    AQ = "AQ"
+    """
+    Antarctica
+    """
+    AR = "AR"
+    """
+    Argentina
+    """
+    AS = "AS"
+    """
+    American Samoa
+    """
+    AT = "AT"
+    """
+    Austria
+    """
+    AU = "AU"
+    """
+    Australia
+    """
+    AW = "AW"
+    """
+    Aruba
+    """
+    AX = "AX"
+    """
+    Åland Islands
+    """
+    AZ = "AZ"
+    """
+    Azerbaijan
+    """
+    BA = "BA"
+    """
+    Bosnia and Herzegovina
+    """
+    BB = "BB"
+    """
+    Barbados
+    """
+    BD = "BD"
+    """
+    Bangladesh
+    """
+    BE = "BE"
+    """
+    Belgium
+    """
+    BF = "BF"
+    """
+    Burkina Faso
+    """
+    BG = "BG"
+    """
+    Bulgaria
+    """
+    BH = "BH"
+    """
+    Bahrain
+    """
+    BI = "BI"
+    """
+    Burundi
+    """
+    BJ = "BJ"
+    """
+    Benin
+    """
+    BL = "BL"
+    """
+    Saint Barthélemy
+    """
+    BM = "BM"
+    """
+    Bermuda
+    """
+    BN = "BN"
+    """
+    Brunei Darussalam
+    """
+    BO = "BO"
+    """
+    Bolivia (Plurinational State of)
+    """
+    BQ = "BQ"
+    """
+    Bonaire, Sint Eustatius and Saba
+    """
+    BR = "BR"
+    """
+    Brazil
+    """
+    BS = "BS"
+    """
+    Bahamas
+    """
+    BT = "BT"
+    """
+    Bhutan
+    """
+    BV = "BV"
+    """
+    Bouvet Island
+    """
+    BW = "BW"
+    """
+    Botswana
+    """
+    BY = "BY"
+    """
+    Belarus
+    """
+    BZ = "BZ"
+    """
+    Belize
+    """
+    CA = "CA"
+    """
+    Canada
+    """
+    CC = "CC"
+    """
+    Cocos (Keeling) Islands
+    """
+    CD = "CD"
+    """
+    Democratic Republic of the Congo
+    """
+    CF = "CF"
+    """
+    Central African Republic
+    """
+    CG = "CG"
+    """
+    Congo
+    """
+    CH = "CH"
+    """
+    Switzerland
+    """
+    CI = "CI"
+    """
+    Côte d’Ivoire
+    """
+    CK = "CK"
+    """
+    Cook Islands
+    """
+    CL = "CL"
+    """
+    Chile
+    """
+    CM = "CM"
+    """
+    Cameroon
+    """
+    CN = "CN"
+    """
+    China
+    """
+    CO = "CO"
+    """
+    Colombia
+    """
+    CR = "CR"
+    """
+    Costa Rica
+    """
+    CU = "CU"
+    """
+    Cuba
+    """
+    CV = "CV"
+    """
+    Cabo Verde
+    """
+    CW = "CW"
+    """
+    Curaçao
+    """
+    CX = "CX"
+    """
+    Christmas Island
+    """
+    CY = "CY"
+    """
+    Cyprus
+    """
+    CZ = "CZ"
+    """
+    Czechia
+    """
+    DE = "DE"
+    """
+    Germany
+    """
+    DJ = "DJ"
+    """
+    Djibouti
+    """
+    DK = "DK"
+    """
+    Denmark
+    """
+    DM = "DM"
+    """
+    Dominica
+    """
+    DO = "DO"
+    """
+    Dominican Republic
+    """
+    DZ = "DZ"
+    """
+    Algeria
+    """
+    EC = "EC"
+    """
+    Ecuador
+    """
+    EE = "EE"
+    """
+    Estonia
+    """
+    EG = "EG"
+    """
+    Egypt
+    """
+    EH = "EH"
+    """
+    Western Sahara
+    """
+    ER = "ER"
+    """
+    Eritrea
+    """
+    ES = "ES"
+    """
+    Spain
+    """
+    ET = "ET"
+    """
+    Ethiopia
+    """
+    FI = "FI"
+    """
+    Finland
+    """
+    FJ = "FJ"
+    """
+    Fiji
+    """
+    FK = "FK"
+    """
+    Falkland Islands (Malvinas)
+    """
+    FM = "FM"
+    """
+    Micronesia (Federated States of)
+    """
+    FO = "FO"
+    """
+    Faroe Islands
+    """
+    FR = "FR"
+    """
+    France
+    """
+    GA = "GA"
+    """
+    Gabon
+    """
+    GB = "GB"
+    """
+    United Kingdom of Great Britain and Northern Ireland
+    """
+    GD = "GD"
+    """
+    Grenada
+    """
+    GE = "GE"
+    """
+    Georgia
+    """
+    GF = "GF"
+    """
+    French Guiana
+    """
+    GG = "GG"
+    """
+    Guernsey
+    """
+    GH = "GH"
+    """
+    Ghana
+    """
+    GI = "GI"
+    """
+    Gibraltar
+    """
+    GL = "GL"
+    """
+    Greenland
+    """
+    GM = "GM"
+    """
+    Gambia
+    """
+    GN = "GN"
+    """
+    Guinea
+    """
+    GP = "GP"
+    """
+    Guadeloupe
+    """
+    GQ = "GQ"
+    """
+    Equatorial Guinea
+    """
+    GR = "GR"
+    """
+    Greece
+    """
+    GS = "GS"
+    """
+    South Georgia and the South Sandwich Islands
+    """
+    GT = "GT"
+    """
+    Guatemala
+    """
+    GU = "GU"
+    """
+    Guam
+    """
+    GW = "GW"
+    """
+    Guinea-Bissau
+    """
+    GY = "GY"
+    """
+    Guyana
+    """
+    HK = "HK"
+    """
+    China, Hong Kong Special Administrative Region
+    """
+    HM = "HM"
+    """
+    Heard Island and McDonald Islands
+    """
+    HN = "HN"
+    """
+    Honduras
+    """
+    HR = "HR"
+    """
+    Croatia
+    """
+    HT = "HT"
+    """
+    Haiti
+    """
+    HU = "HU"
+    """
+    Hungary
+    """
+    ID = "ID"
+    """
+    Indonesia
+    """
+    IE = "IE"
+    """
+    Ireland
+    """
+    IL = "IL"
+    """
+    Israel
+    """
+    IM = "IM"
+    """
+    Isle of Man
+    """
+    IN = "IN"
+    """
+    India
+    """
+    IO = "IO"
+    """
+    British Indian Ocean Territory
+    """
+    IQ = "IQ"
+    """
+    Iraq
+    """
+    IR = "IR"
+    """
+    Iran (Islamic Republic of)
+    """
+    IS = "IS"
+    """
+    Iceland
+    """
+    IT = "IT"
+    """
+    Italy
+    """
+    JE = "JE"
+    """
+    Jersey
+    """
+    JM = "JM"
+    """
+    Jamaica
+    """
+    JO = "JO"
+    """
+    Jordan
+    """
+    JP = "JP"
+    """
+    Japan
+    """
+    KE = "KE"
+    """
+    Kenya
+    """
+    KG = "KG"
+    """
+    Kyrgyzstan
+    """
+    KH = "KH"
+    """
+    Cambodia
+    """
+    KI = "KI"
+    """
+    Kiribati
+    """
+    KM = "KM"
+    """
+    Comoros
+    """
+    KN = "KN"
+    """
+    Saint Kitts and Nevis
+    """
+    KP = "KP"
+    """
+    Democratic People's Republic of Korea
+    """
+    KR = "KR"
+    """
+    Republic of Korea
+    """
+    KW = "KW"
+    """
+    Kuwait
+    """
+    KY = "KY"
+    """
+    Cayman Islands
+    """
+    KZ = "KZ"
+    """
+    Kazakhstan
+    """
+    LA = "LA"
+    """
+    Lao People's Democratic Republic
+    """
+    LB = "LB"
+    """
+    Lebanon
+    """
+    LC = "LC"
+    """
+    Saint Lucia
+    """
+    LI = "LI"
+    """
+    Liechtenstein
+    """
+    LK = "LK"
+    """
+    Sri Lanka
+    """
+    LR = "LR"
+    """
+    Liberia
+    """
+    LS = "LS"
+    """
+    Lesotho
+    """
+    LT = "LT"
+    """
+    Lithuania
+    """
+    LU = "LU"
+    """
+    Luxembourg
+    """
+    LV = "LV"
+    """
+    Latvia
+    """
+    LY = "LY"
+    """
+    Libya
+    """
+    MA = "MA"
+    """
+    Morocco
+    """
+    MC = "MC"
+    """
+    Monaco
+    """
+    MD = "MD"
+    """
+    Republic of Moldova
+    """
+    ME = "ME"
+    """
+    Montenegro
+    """
+    MF = "MF"
+    """
+    Saint Martin (French Part)
+    """
+    MG = "MG"
+    """
+    Madagascar
+    """
+    MH = "MH"
+    """
+    Marshall Islands
+    """
+    MK = "MK"
+    """
+    North Macedonia
+    """
+    ML = "ML"
+    """
+    Mali
+    """
+    MM = "MM"
+    """
+    Myanmar
+    """
+    MN = "MN"
+    """
+    Mongolia
+    """
+    MO = "MO"
+    """
+    China, Macao Special Administrative Region
+    """
+    MP = "MP"
+    """
+    Northern Mariana Islands
+    """
+    MQ = "MQ"
+    """
+    Martinique
+    """
+    MR = "MR"
+    """
+    Mauritania
+    """
+    MS = "MS"
+    """
+    Montserrat
+    """
+    MT = "MT"
+    """
+    Malta
+    """
+    MU = "MU"
+    """
+    Mauritius
+    """
+    MV = "MV"
+    """
+    Maldives
+    """
+    MW = "MW"
+    """
+    Malawi
+    """
+    MX = "MX"
+    """
+    Mexico
+    """
+    MY = "MY"
+    """
+    Malaysia
+    """
+    MZ = "MZ"
+    """
+    Mozambique
+    """
+    NA = "NA"
+    """
+    Namibia
+    """
+    NC = "NC"
+    """
+    New Caledonia
+    """
+    NE = "NE"
+    """
+    Niger
+    """
+    NF = "NF"
+    """
+    Norfolk Island
+    """
+    NG = "NG"
+    """
+    Nigeria
+    """
+    NI = "NI"
+    """
+    Nicaragua
+    """
+    NL = "NL"
+    """
+    Netherlands
+    """
+    NO = "NO"
+    """
+    Norway
+    """
+    NP = "NP"
+    """
+    Nepal
+    """
+    NR = "NR"
+    """
+    Nauru
+    """
+    NU = "NU"
+    """
+    Niue
+    """
+    NZ = "NZ"
+    """
+    New Zealand
+    """
+    OM = "OM"
+    """
+    Oman
+    """
+    PA = "PA"
+    """
+    Panama
+    """
+    PE = "PE"
+    """
+    Peru
+    """
+    PF = "PF"
+    """
+    French Polynesia
+    """
+    PG = "PG"
+    """
+    Papua New Guinea
+    """
+    PH = "PH"
+    """
+    Philippines
+    """
+    PK = "PK"
+    """
+    Pakistan
+    """
+    PL = "PL"
+    """
+    Poland
+    """
+    PM = "PM"
+    """
+    Saint Pierre and Miquelon
+    """
+    PN = "PN"
+    """
+    Pitcairn
+    """
+    PR = "PR"
+    """
+    Puerto Rico
+    """
+    PS = "PS"
+    """
+    State of Palestine
+    """
+    PT = "PT"
+    """
+    Portugal
+    """
+    PW = "PW"
+    """
+    Palau
+    """
+    PY = "PY"
+    """
+    Paraguay
+    """
+    QA = "QA"
+    """
+    Qatar
+    """
+    RE = "RE"
+    """
+    Réunion
+    """
+    RO = "RO"
+    """
+    Romania
+    """
+    RS = "RS"
+    """
+    Serbia
+    """
+    RU = "RU"
+    """
+    Russian Federation
+    """
+    RW = "RW"
+    """
+    Rwanda
+    """
+    SA = "SA"
+    """
+    Saudi Arabia
+    """
+    SB = "SB"
+    """
+    Solomon Islands
+    """
+    SC = "SC"
+    """
+    Seychelles
+    """
+    SD = "SD"
+    """
+    Sudan
+    """
+    SE = "SE"
+    """
+    Sweden
+    """
+    SG = "SG"
+    """
+    Singapore
+    """
+    SH = "SH"
+    """
+    Saint Helena
+    """
+    SI = "SI"
+    """
+    Slovenia
+    """
+    SJ = "SJ"
+    """
+    Svalbard and Jan Mayen Islands
+    """
+    SK = "SK"
+    """
+    Slovakia
+    """
+    SL = "SL"
+    """
+    Sierra Leone
+    """
+    SM = "SM"
+    """
+    San Marino
+    """
+    SN = "SN"
+    """
+    Senegal
+    """
+    SO = "SO"
+    """
+    Somalia
+    """
+    SR = "SR"
+    """
+    Suriname
+    """
+    SS = "SS"
+    """
+    South Sudan
+    """
+    ST = "ST"
+    """
+    Sao Tome and Principe
+    """
+    SV = "SV"
+    """
+    El Salvador
+    """
+    SX = "SX"
+    """
+    Sint Maarten (Dutch part)
+    """
+    SY = "SY"
+    """
+    Syrian Arab Republic
+    """
+    SZ = "SZ"
+    """
+    Eswatini
+    """
+    TC = "TC"
+    """
+    Turks and Caicos Islands
+    """
+    TD = "TD"
+    """
+    Chad
+    """
+    TF = "TF"
+    """
+    French Southern Territories
+    """
+    TG = "TG"
+    """
+    Togo
+    """
+    TH = "TH"
+    """
+    Thailand
+    """
+    TJ = "TJ"
+    """
+    Tajikistan
+    """
+    TK = "TK"
+    """
+    Tokelau
+    """
+    TL = "TL"
+    """
+    Timor-Leste
+    """
+    TM = "TM"
+    """
+    Turkmenistan
+    """
+    TN = "TN"
+    """
+    Tunisia
+    """
+    TO = "TO"
+    """
+    Tonga
+    """
+    TR = "TR"
+    """
+    Turkey
+    """
+    TT = "TT"
+    """
+    Trinidad and Tobago
+    """
+    TV = "TV"
+    """
+    Tuvalu
+    """
+    TW = "TW"
+    """
+    Taiwan (Province of China)
+    """
+    TZ = "TZ"
+    """
+    United Republic of Tanzania
+    """
+    UA = "UA"
+    """
+    Ukraine
+    """
+    UG = "UG"
+    """
+    Uganda
+    """
+    UM = "UM"
+    """
+    United States Minor Outlying Islands
+    """
+    US = "US"
+    """
+    United States of America
+    """
+    UY = "UY"
+    """
+    Uruguay
+    """
+    UZ = "UZ"
+    """
+    Uzbekistan
+    """
+    VA = "VA"
+    """
+    Holy See
+    """
+    VC = "VC"
+    """
+    Saint Vincent and the Grenadines
+    """
+    VE = "VE"
+    """
+    Venezuela (Bolivarian Republic of)
+    """
+    VG = "VG"
+    """
+    British Virgin Islands
+    """
+    VI = "VI"
+    """
+    United States Virgin Islands
+    """
+    VN = "VN"
+    """
+    Viet Nam
+    """
+    VU = "VU"
+    """
+    Vanuatu
+    """
+    WF = "WF"
+    """
+    Wallis and Futuna Islands
+    """
+    WS = "WS"
+    """
+    Samoa
+    """
+    YE = "YE"
+    """
+    Yemen
+    """
+    YT = "YT"
+    """
+    Mayotte
+    """
+    ZA = "ZA"
+    """
+    South Africa
+    """
+    ZM = "ZM"
+    """
+    Zambia
+    """
+    ZW = "ZW"
+    """
+    Zimbabwe
+    """
+
+
+class SupraNationalJurisdiction(str, Enum):
+    """
+    Supra-national or intergovernmental jurisdiction, from the DPV Location vocabulary (https://w3id.org/dpv/loc). Values are members of dpv:SupraNationalUnion (e.g. EU, EEA), plus International.
+    """
+    EEA = "EEA"
+    """
+    European Economic Area (EEA)
+    """
+    EEA30 = "EEA30"
+    """
+    EEA 30 Member States
+    """
+    EEA31 = "EEA31"
+    """
+    EEA 31 Member States
+    """
+    EU = "EU"
+    """
+    European Union (EU)
+    """
+    EU27 = "EU27"
+    """
+    EU 27 Member States
+    """
+    EU28 = "EU28"
+    """
+    EU 28 Member States
+    """
+    International = "International"
+    """
+    Explicitly global scope not attributable to any single country or recognised regional body.
+    """
+
+
+class SubnationalJurisdiction(str, Enum):
+    """
+    Subnational or regional jurisdiction as an ISO 3166-2 subdivision code (e.g. US-CA for California, CA-QC for Quebec), from the DPV Location vocabulary (https://w3id.org/dpv/loc). Values are members of dpv:Region.
+    """
+    AD_02 = "AD-02"
+    """
+    Canillo (parish)
+    """
+    AD_03 = "AD-03"
+    """
+    Encamp (parish)
+    """
+    AD_04 = "AD-04"
+    """
+    La Massana (parish)
+    """
+    AD_05 = "AD-05"
+    """
+    Ordino (parish)
+    """
+    AD_06 = "AD-06"
+    """
+    Sant Julià de Lòria (parish)
+    """
+    AD_07 = "AD-07"
+    """
+    Andorra la Vella
+    """
+    AD_08 = "AD-08"
+    """
+    Escaldes-Engordany
+    """
+    AE_AJ = "AE-AJ"
+    """
+    Emirate of Ajman
+    """
+    AE_AZ = "AE-AZ"
+    """
+    Emirate of Abu Dhabi
+    """
+    AE_DU = "AE-DU"
+    """
+    Emirate of Dubai
+    """
+    AE_FU = "AE-FU"
+    """
+    Emirate of Fujairah
+    """
+    AE_RK = "AE-RK"
+    """
+    Ras al-Khaimah
+    """
+    AE_SH = "AE-SH"
+    """
+    Emirate of Sharjah
+    """
+    AE_UQ = "AE-UQ"
+    """
+    Emirate of Umm al-Quwain
+    """
+    AF_BAL = "AF-BAL"
+    """
+    Balkh Province
+    """
+    AF_BAM = "AF-BAM"
+    """
+    Bamyan Province
+    """
+    AF_BDG = "AF-BDG"
+    """
+    Badghis Province
+    """
+    AF_BDS = "AF-BDS"
+    """
+    Badakhshan Province
+    """
+    AF_BGL = "AF-BGL"
+    """
+    Baghlan Province
+    """
+    AF_DAY = "AF-DAY"
+    """
+    Daykundi Province
+    """
+    AF_FRA = "AF-FRA"
+    """
+    Farah Province
+    """
+    AF_FYB = "AF-FYB"
+    """
+    Faryab Province
+    """
+    AF_GHA = "AF-GHA"
+    """
+    Ghazni Province
+    """
+    AF_GHO = "AF-GHO"
+    """
+    Ghor Province
+    """
+    AF_HEL = "AF-HEL"
+    """
+    Helmand Province
+    """
+    AF_HER = "AF-HER"
+    """
+    Herat Province
+    """
+    AF_JOW = "AF-JOW"
+    """
+    Jowzjan Province
+    """
+    AF_KAB = "AF-KAB"
+    """
+    Kabul Province
+    """
+    AF_KAN = "AF-KAN"
+    """
+    Kandahar Province
+    """
+    AF_KAP = "AF-KAP"
+    """
+    Kapisa Province
+    """
+    AF_KDZ = "AF-KDZ"
+    """
+    Kunduz Province
+    """
+    AF_KHO = "AF-KHO"
+    """
+    Khost Province
+    """
+    AF_KNR = "AF-KNR"
+    """
+    Kunar Province
+    """
+    AF_LAG = "AF-LAG"
+    """
+    Laghman Province
+    """
+    AF_LOG = "AF-LOG"
+    """
+    Logar Province
+    """
+    AF_NAN = "AF-NAN"
+    """
+    Nangarhar Province
+    """
+    AF_NIM = "AF-NIM"
+    """
+    Nimroz Province
+    """
+    AF_NUR = "AF-NUR"
+    """
+    Nuristan Province
+    """
+    AF_PAN = "AF-PAN"
+    """
+    Panjshir Province
+    """
+    AF_PAR = "AF-PAR"
+    """
+    Parwan Province
+    """
+    AF_PIA = "AF-PIA"
+    """
+    Paktia Province
+    """
+    AF_PKA = "AF-PKA"
+    """
+    Paktika Province
+    """
+    AF_SAM = "AF-SAM"
+    """
+    Samangan Province
+    """
+    AF_SAR = "AF-SAR"
+    """
+    Sar-e Pol Province
+    """
+    AF_TAK = "AF-TAK"
+    """
+    Takhar Province
+    """
+    AF_URU = "AF-URU"
+    """
+    Urozgan Province
+    """
+    AF_WAR = "AF-WAR"
+    """
+    Wardak Province
+    """
+    AF_ZAB = "AF-ZAB"
+    """
+    Zabul Province
+    """
+    AG_03 = "AG-03"
+    """
+    Saint George Parish, Antigua and Barbuda
+    """
+    AG_04 = "AG-04"
+    """
+    Saint John Parish, Antigua and Barbuda
+    """
+    AG_05 = "AG-05"
+    """
+    Saint Mary Parish, Antigua and Barbuda
+    """
+    AG_06 = "AG-06"
+    """
+    Saint Paul Parish, Antigua and Barbuda
+    """
+    AG_07 = "AG-07"
+    """
+    Saint Peter Parish, Antigua and Barbuda
+    """
+    AG_08 = "AG-08"
+    """
+    Saint Philip, Antigua and Barbuda
+    """
+    AG_10 = "AG-10"
+    """
+    Barbuda
+    """
+    AG_11 = "AG-11"
+    """
+    Redonda
+    """
+    AL_01 = "AL-01"
+    """
+    Berat County
+    """
+    AL_02 = "AL-02"
+    """
+    Durrës County
+    """
+    AL_03 = "AL-03"
+    """
+    Elbasan County
+    """
+    AL_04 = "AL-04"
+    """
+    Fier County
+    """
+    AL_05 = "AL-05"
+    """
+    Gjirokastër County
+    """
+    AL_06 = "AL-06"
+    """
+    Korçë County
+    """
+    AL_07 = "AL-07"
+    """
+    Kukës County
+    """
+    AL_08 = "AL-08"
+    """
+    Lezhë County
+    """
+    AL_09 = "AL-09"
+    """
+    Dibër County
+    """
+    AL_10 = "AL-10"
+    """
+    Shkodër County
+    """
+    AL_11 = "AL-11"
+    """
+    Tiranë County
+    """
+    AL_12 = "AL-12"
+    """
+    Vlorë County
+    """
+    AL_EL = "AL-EL"
+    """
+    Elbasan
+    """
+    AL_FR = "AL-FR"
+    """
+    Fier
+    """
+    AL_GJ = "AL-GJ"
+    """
+    Gjirokastër
+    """
+    AL_HA = "AL-HA"
+    """
+    Has District
+    """
+    AL_KA = "AL-KA"
+    """
+    Kavajë District
+    """
+    AL_KC = "AL-KC"
+    """
+    Kuçovë District
+    """
+    AL_KR = "AL-KR"
+    """
+    Krujë
+    """
+    AL_KU = "AL-KU"
+    """
+    Kukës District
+    """
+    AL_LB = "AL-LB"
+    """
+    Librazhd
+    """
+    AL_LU = "AL-LU"
+    """
+    Lushnjë
+    """
+    AL_MR = "AL-MR"
+    """
+    Mirditë
+    """
+    AL_MT = "AL-MT"
+    """
+    Mat District
+    """
+    AL_PG = "AL-PG"
+    """
+    Pogradec
+    """
+    AL_PR = "AL-PR"
+    """
+    Përmet District
+    """
+    AL_SH = "AL-SH"
+    """
+    Shkodër District
+    """
+    AL_SK = "AL-SK"
+    """
+    Skrapar District
+    """
+    AL_SR = "AL-SR"
+    """
+    Sarandë
+    """
+    AL_TE = "AL-TE"
+    """
+    Tepelenë District
+    """
+    AL_TP = "AL-TP"
+    """
+    Tropojë District
+    """
+    AM_AG = "AM-AG"
+    """
+    Aragatsotn Province
+    """
+    AM_AR = "AM-AR"
+    """
+    Ararat Province
+    """
+    AM_AV = "AM-AV"
+    """
+    Armavir Province
+    """
+    AM_ER = "AM-ER"
+    """
+    Yerevan
+    """
+    AM_GR = "AM-GR"
+    """
+    Gegharkunik Province
+    """
+    AM_KT = "AM-KT"
+    """
+    Kotayk Province
+    """
+    AM_LO = "AM-LO"
+    """
+    Lori Province
+    """
+    AM_SH = "AM-SH"
+    """
+    Shirak Province
+    """
+    AM_SU = "AM-SU"
+    """
+    Syunik Province
+    """
+    AM_TV = "AM-TV"
+    """
+    Tavush Province
+    """
+    AM_VD = "AM-VD"
+    """
+    Vayots Dzor Province
+    """
+    AO_BGO = "AO-BGO"
+    """
+    Bengo Province
+    """
+    AO_BGU = "AO-BGU"
+    """
+    Benguela Province
+    """
+    AO_BIE = "AO-BIE"
+    """
+    Bié Province
+    """
+    AO_CAB = "AO-CAB"
+    """
+    Cabinda
+    """
+    AO_CCU = "AO-CCU"
+    """
+    Cuando Cubango Province
+    """
+    AO_CNN = "AO-CNN"
+    """
+    Cunene Province
+    """
+    AO_CNO = "AO-CNO"
+    """
+    Cuanza Norte Province
+    """
+    AO_CUS = "AO-CUS"
+    """
+    Cuanza Sul Province
+    """
+    AO_HUA = "AO-HUA"
+    """
+    Huambo Province
+    """
+    AO_HUI = "AO-HUI"
+    """
+    Huila Province
+    """
+    AO_LNO = "AO-LNO"
+    """
+    Lunda Norte Province
+    """
+    AO_LSU = "AO-LSU"
+    """
+    Lunda Sul Province
+    """
+    AO_LUA = "AO-LUA"
+    """
+    Luanda Province
+    """
+    AO_MAL = "AO-MAL"
+    """
+    Malanje Province
+    """
+    AO_MOX = "AO-MOX"
+    """
+    Moxico Province
+    """
+    AO_NAM = "AO-NAM"
+    """
+    Namibe Province
+    """
+    AO_UIG = "AO-UIG"
+    """
+    Uíge Province
+    """
+    AO_ZAI = "AO-ZAI"
+    """
+    Zaire Province
+    """
+    AR_A = "AR-A"
+    """
+    Salta Province
+    """
+    AR_B = "AR-B"
+    """
+    Buenos Aires Province
+    """
+    AR_C = "AR-C"
+    """
+    Buenos Aires
+    """
+    AR_D = "AR-D"
+    """
+    San Luis Province
+    """
+    AR_E = "AR-E"
+    """
+    Entre Ríos Province
+    """
+    AR_F = "AR-F"
+    """
+    La Rioja Province, Argentina
+    """
+    AR_G = "AR-G"
+    """
+    Santiago del Estero Province
+    """
+    AR_H = "AR-H"
+    """
+    Chaco Province
+    """
+    AR_J = "AR-J"
+    """
+    San Juan Province
+    """
+    AR_K = "AR-K"
+    """
+    Catamarca Province
+    """
+    AR_L = "AR-L"
+    """
+    La Pampa Province
+    """
+    AR_M = "AR-M"
+    """
+    Mendoza Province
+    """
+    AR_N = "AR-N"
+    """
+    Misiones Province
+    """
+    AR_P = "AR-P"
+    """
+    Formosa Province
+    """
+    AR_Q = "AR-Q"
+    """
+    Neuquén Province
+    """
+    AR_R = "AR-R"
+    """
+    Río Negro Province
+    """
+    AR_S = "AR-S"
+    """
+    Santa Fe Province
+    """
+    AR_T = "AR-T"
+    """
+    Tucumán Province
+    """
+    AR_U = "AR-U"
+    """
+    Chubut Province
+    """
+    AR_V = "AR-V"
+    """
+    Tierra del Fuego, Antártida e Islas del Atlántico Sur Province
+    """
+    AR_W = "AR-W"
+    """
+    Corrientes Province
+    """
+    AR_X = "AR-X"
+    """
+    Córdoba Province, Argentina
+    """
+    AR_Y = "AR-Y"
+    """
+    Jujuy Province
+    """
+    AR_Z = "AR-Z"
+    """
+    Santa Cruz Province
+    """
+    AT_1 = "AT-1"
+    """
+    Burgenland
+    """
+    AT_2 = "AT-2"
+    """
+    Carinthia
+    """
+    AT_3 = "AT-3"
+    """
+    Lower Austria
+    """
+    AT_4 = "AT-4"
+    """
+    Upper Austria
+    """
+    AT_5 = "AT-5"
+    """
+    Salzburg (state)
+    """
+    AT_6 = "AT-6"
+    """
+    Styria
+    """
+    AT_7 = "AT-7"
+    """
+    Tyrol (state)
+    """
+    AT_8 = "AT-8"
+    """
+    Vorarlberg
+    """
+    AT_9 = "AT-9"
+    """
+    Vienna
+    """
+    AU_ACT = "AU-ACT"
+    """
+    Australian Capital Territory
+    """
+    AU_NSW = "AU-NSW"
+    """
+    New South Wales
+    """
+    AU_NT = "AU-NT"
+    """
+    Northern Territory
+    """
+    AU_QLD = "AU-QLD"
+    """
+    Queensland
+    """
+    AU_SA = "AU-SA"
+    """
+    South Australia
+    """
+    AU_TAS = "AU-TAS"
+    """
+    Tasmania
+    """
+    AU_VIC = "AU-VIC"
+    """
+    Victoria, Australia
+    """
+    AU_WA = "AU-WA"
+    """
+    Western Australia
+    """
+    AZ_ABS = "AZ-ABS"
+    """
+    Abşeron Rayon
+    """
+    AZ_AGA = "AZ-AGA"
+    """
+    Ağstafa Rayon
+    """
+    AZ_AGC = "AZ-AGC"
+    """
+    Ağcabədi Rayon
+    """
+    AZ_AGM = "AZ-AGM"
+    """
+    Ağdam Rayon
+    """
+    AZ_AGS = "AZ-AGS"
+    """
+    Ağdaş Rayon
+    """
+    AZ_AGU = "AZ-AGU"
+    """
+    Ağsu Rayon
+    """
+    AZ_AST = "AZ-AST"
+    """
+    Astara Rayon
+    """
+    AZ_BA = "AZ-BA"
+    """
+    Baku
+    """
+    AZ_BAB = "AZ-BAB"
+    """
+    Babək Rayon
+    """
+    AZ_BAL = "AZ-BAL"
+    """
+    Balakən Rayon
+    """
+    AZ_BAR = "AZ-BAR"
+    """
+    Bərdə Rayon
+    """
+    AZ_BEY = "AZ-BEY"
+    """
+    Beyləqan Rayon
+    """
+    AZ_BIL = "AZ-BIL"
+    """
+    Biləsuvar Rayon
+    """
+    AZ_CAB = "AZ-CAB"
+    """
+    Cəbrayıl Rayon
+    """
+    AZ_CAL = "AZ-CAL"
+    """
+    Cəlilabad Rayon
+    """
+    AZ_CUL = "AZ-CUL"
+    """
+    Culfa Rayon
+    """
+    AZ_DAS = "AZ-DAS"
+    """
+    Daşkəsən Rayon
+    """
+    AZ_FUZ = "AZ-FUZ"
+    """
+    Füzuli Rayon
+    """
+    AZ_GA = "AZ-GA"
+    """
+    Gəncə
+    """
+    AZ_GAD = "AZ-GAD"
+    """
+    Gədəbəy Rayon
+    """
+    AZ_GOR = "AZ-GOR"
+    """
+    Goranboy Rayon
+    """
+    AZ_GOY = "AZ-GOY"
+    """
+    Göyçay Rayon
+    """
+    AZ_GYG = "AZ-GYG"
+    """
+    Göygöl Rayon
+    """
+    AZ_HAC = "AZ-HAC"
+    """
+    Hacıqabul Rayon
+    """
+    AZ_IMI = "AZ-IMI"
+    """
+    İmişli Rayon
+    """
+    AZ_ISM = "AZ-ISM"
+    """
+    İsmayıllı Rayon
+    """
+    AZ_KAL = "AZ-KAL"
+    """
+    Kəlbəcər Rayon
+    """
+    AZ_KAN = "AZ-KAN"
+    """
+    Kəngərli Rayon
+    """
+    AZ_KUR = "AZ-KUR"
+    """
+    Kürdəmir Rayon
+    """
+    AZ_LA = "AZ-LA"
+    """
+    Lənkəran
+    """
+    AZ_LAC = "AZ-LAC"
+    """
+    Laçın Rayon
+    """
+    AZ_LAN = "AZ-LAN"
+    """
+    Lənkəran Rayon
+    """
+    AZ_LER = "AZ-LER"
+    """
+    Lerik Rayon
+    """
+    AZ_MAS = "AZ-MAS"
+    """
+    Masallı Rayon
+    """
+    AZ_MI = "AZ-MI"
+    """
+    Mingəçevir
+    """
+    AZ_NEF = "AZ-NEF"
+    """
+    Neftçala Rayon
+    """
+    AZ_NV = "AZ-NV"
+    """
+    Nakhchivan (city)
+    """
+    AZ_NX = "AZ-NX"
+    """
+    Nakhchivan Autonomous Republic
+    """
+    AZ_OGU = "AZ-OGU"
+    """
+    Oğuz Rayon
+    """
+    AZ_ORD = "AZ-ORD"
+    """
+    Ordubad Rayon
+    """
+    AZ_QAB = "AZ-QAB"
+    """
+    Qəbələ Rayon
+    """
+    AZ_QAX = "AZ-QAX"
+    """
+    Qax Rayon
+    """
+    AZ_QAZ = "AZ-QAZ"
+    """
+    Qazax Rayon
+    """
+    AZ_QBA = "AZ-QBA"
+    """
+    Quba Rayon
+    """
+    AZ_QBI = "AZ-QBI"
+    """
+    Qubadlı Rayon
+    """
+    AZ_QOB = "AZ-QOB"
+    """
+    Qobustan Rayon
+    """
+    AZ_QUS = "AZ-QUS"
+    """
+    Qusar Rayon
+    """
+    AZ_SA = "AZ-SA"
+    """
+    Şəki (city)
+    """
+    AZ_SAB = "AZ-SAB"
+    """
+    Sabirabad
+    """
+    AZ_SAD = "AZ-SAD"
+    """
+    Sədərək Rayon
+    """
+    AZ_SAH = "AZ-SAH"
+    """
+    Şahbuz Rayon
+    """
+    AZ_SAK = "AZ-SAK"
+    """
+    Şəki Rayon
+    """
+    AZ_SAL = "AZ-SAL"
+    """
+    Salyan Rayon
+    """
+    AZ_SAR = "AZ-SAR"
+    """
+    Şərur Rayon
+    """
+    AZ_SAT = "AZ-SAT"
+    """
+    Saatlı Rayon
+    """
+    AZ_SBN = "AZ-SBN"
+    """
+    Şabran Rayon
+    """
+    AZ_SIY = "AZ-SIY"
+    """
+    Siyəzən Rayon
+    """
+    AZ_SKR = "AZ-SKR"
+    """
+    Şəmkir Rayon
+    """
+    AZ_SM = "AZ-SM"
+    """
+    Sumqayıt
+    """
+    AZ_SMI = "AZ-SMI"
+    """
+    Şamaxı Rayon
+    """
+    AZ_SMX = "AZ-SMX"
+    """
+    Samux Rayon
+    """
+    AZ_SR = "AZ-SR"
+    """
+    Şirvan (city)
+    """
+    AZ_SUS = "AZ-SUS"
+    """
+    Şuşa Rayon
+    """
+    AZ_TAR = "AZ-TAR"
+    """
+    Tərtər Rayon
+    """
+    AZ_TOV = "AZ-TOV"
+    """
+    Tovuz
+    """
+    AZ_UCA = "AZ-UCA"
+    """
+    Ucar Rayon
+    """
+    AZ_XA = "AZ-XA"
+    """
+    Stepanakert
+    """
+    AZ_XAC = "AZ-XAC"
+    """
+    Xaçmaz Rayon
+    """
+    AZ_XCI = "AZ-XCI"
+    """
+    Xocalı Rayon
+    """
+    AZ_XIZ = "AZ-XIZ"
+    """
+    Xızı Rayon
+    """
+    AZ_XVD = "AZ-XVD"
+    """
+    Xocavənd Rayon
+    """
+    AZ_YAR = "AZ-YAR"
+    """
+    Yardımlı Rayon
+    """
+    AZ_YE = "AZ-YE"
+    """
+    Yevlax
+    """
+    AZ_YEV = "AZ-YEV"
+    """
+    Yevlax Rayon
+    """
+    AZ_ZAN = "AZ-ZAN"
+    """
+    Zəngilan Rayon
+    """
+    AZ_ZAQ = "AZ-ZAQ"
+    """
+    Zaqatala Rayon
+    """
+    AZ_ZAR = "AZ-ZAR"
+    """
+    Zərdab Rayon
+    """
+    BA_01 = "BA-01"
+    """
+    Una-Sana Canton
+    """
+    BA_02 = "BA-02"
+    """
+    Posavina Canton
+    """
+    BA_03 = "BA-03"
+    """
+    Tuzla Canton
+    """
+    BA_04 = "BA-04"
+    """
+    Zenica-Doboj Canton
+    """
+    BA_05 = "BA-05"
+    """
+    Bosnian-Podrinje Canton
+    """
+    BA_06 = "BA-06"
+    """
+    Central Bosnia Canton
+    """
+    BA_07 = "BA-07"
+    """
+    Herzegovina-Neretva Canton
+    """
+    BA_08 = "BA-08"
+    """
+    West Herzegovina Canton
+    """
+    BA_09 = "BA-09"
+    """
+    Sarajevo Canton
+    """
+    BA_10 = "BA-10"
+    """
+    Canton 10
+    """
+    BA_BIH = "BA-BIH"
+    """
+    Federation of Bosnia and Herzegovina
+    """
+    BA_BRC = "BA-BRC"
+    """
+    Brčko District
+    """
+    BA_SRP = "BA-SRP"
+    """
+    Republika Srpska
+    """
+    BB_01 = "BB-01"
+    """
+    Christ Church, Barbados
+    """
+    BB_02 = "BB-02"
+    """
+    Saint Andrew, Barbados
+    """
+    BB_03 = "BB-03"
+    """
+    Saint George, Barbados
+    """
+    BB_04 = "BB-04"
+    """
+    Saint James, Barbados
+    """
+    BB_05 = "BB-05"
+    """
+    Saint John, Barbados
+    """
+    BB_06 = "BB-06"
+    """
+    Saint Joseph, Barbados
+    """
+    BB_07 = "BB-07"
+    """
+    Saint Lucy, Barbados
+    """
+    BB_08 = "BB-08"
+    """
+    Saint Michael, Barbados
+    """
+    BB_09 = "BB-09"
+    """
+    Saint Peter, Barbados
+    """
+    BB_10 = "BB-10"
+    """
+    Saint Philip, Barbados
+    """
+    BB_11 = "BB-11"
+    """
+    Saint Thomas, Barbados
+    """
+    BD_01 = "BD-01"
+    """
+    Bandarban District
+    """
+    BD_02 = "BD-02"
+    """
+    Barguna District
+    """
+    BD_03 = "BD-03"
+    """
+    Bogura District
+    """
+    BD_04 = "BD-04"
+    """
+    Brahmanbaria District
+    """
+    BD_05 = "BD-05"
+    """
+    Bagerhat District
+    """
+    BD_06 = "BD-06"
+    """
+    Barishal District
+    """
+    BD_07 = "BD-07"
+    """
+    Bhola District
+    """
+    BD_08 = "BD-08"
+    """
+    Cumilla District
+    """
+    BD_09 = "BD-09"
+    """
+    Chandpur District
+    """
+    BD_10 = "BD-10"
+    """
+    Chattogram District
+    """
+    BD_11 = "BD-11"
+    """
+    Cox's Bazar District
+    """
+    BD_12 = "BD-12"
+    """
+    Chuadanga District
+    """
+    BD_13 = "BD-13"
+    """
+    Dhaka District
+    """
+    BD_14 = "BD-14"
+    """
+    Dinajpur District
+    """
+    BD_15 = "BD-15"
+    """
+    Faridpur District
+    """
+    BD_16 = "BD-16"
+    """
+    Feni District
+    """
+    BD_17 = "BD-17"
+    """
+    Gopalganj District
+    """
+    BD_18 = "BD-18"
+    """
+    Gazipur District
+    """
+    BD_19 = "BD-19"
+    """
+    Gaibandha District
+    """
+    BD_20 = "BD-20"
+    """
+    Habiganj District
+    """
+    BD_21 = "BD-21"
+    """
+    Jamalpur District
+    """
+    BD_23 = "BD-23"
+    """
+    Jhenaidah District
+    """
+    BD_24 = "BD-24"
+    """
+    Joypurhat District
+    """
+    BD_25 = "BD-25"
+    """
+    Jhalokati District
+    """
+    BD_26 = "BD-26"
+    """
+    Kishoreganj District
+    """
+    BD_27 = "BD-27"
+    """
+    Khulna District
+    """
+    BD_28 = "BD-28"
+    """
+    Kurigram District
+    """
+    BD_29 = "BD-29"
+    """
+    Khagrachhari District
+    """
+    BD_30 = "BD-30"
+    """
+    Kushtia District
+    """
+    BD_31 = "BD-31"
+    """
+    Lakshmipur District
+    """
+    BD_32 = "BD-32"
+    """
+    Lalmonirhat District
+    """
+    BD_33 = "BD-33"
+    """
+    Manikganj District
+    """
+    BD_34 = "BD-34"
+    """
+    Mymensingh District
+    """
+    BD_35 = "BD-35"
+    """
+    Munshiganj District
+    """
+    BD_36 = "BD-36"
+    """
+    Madaripur District
+    """
+    BD_37 = "BD-37"
+    """
+    Magura District
+    """
+    BD_38 = "BD-38"
+    """
+    Moulvibazar District
+    """
+    BD_39 = "BD-39"
+    """
+    Meherpur District
+    """
+    BD_40 = "BD-40"
+    """
+    Narayanganj District
+    """
+    BD_41 = "BD-41"
+    """
+    Netrokona District
+    """
+    BD_42 = "BD-42"
+    """
+    Narsingdi District
+    """
+    BD_43 = "BD-43"
+    """
+    Narail District
+    """
+    BD_44 = "BD-44"
+    """
+    Natore District
+    """
+    BD_45 = "BD-45"
+    """
+    Chapai Nawabganj District
+    """
+    BD_46 = "BD-46"
+    """
+    Nilphamari District
+    """
+    BD_47 = "BD-47"
+    """
+    Noakhali District
+    """
+    BD_48 = "BD-48"
+    """
+    Naogaon District
+    """
+    BD_49 = "BD-49"
+    """
+    Pabna District
+    """
+    BD_50 = "BD-50"
+    """
+    Pirojpur District
+    """
+    BD_51 = "BD-51"
+    """
+    Patuakhali District
+    """
+    BD_52 = "BD-52"
+    """
+    Panchagarh District
+    """
+    BD_53 = "BD-53"
+    """
+    Rajbari District
+    """
+    BD_54 = "BD-54"
+    """
+    Rajshahi
+    """
+    BD_55 = "BD-55"
+    """
+    Rangpur District
+    """
+    BD_56 = "BD-56"
+    """
+    Rangamati District
+    """
+    BD_57 = "BD-57"
+    """
+    Sherpur District
+    """
+    BD_58 = "BD-58"
+    """
+    Satkhira District
+    """
+    BD_59 = "BD-59"
+    """
+    Sirajganj District
+    """
+    BD_60 = "BD-60"
+    """
+    Sylhet District
+    """
+    BD_61 = "BD-61"
+    """
+    Sunamganj District
+    """
+    BD_62 = "BD-62"
+    """
+    Shariatpur District
+    """
+    BD_63 = "BD-63"
+    """
+    Tangail District
+    """
+    BD_64 = "BD-64"
+    """
+    Thakurgaon District
+    """
+    BD_A = "BD-A"
+    """
+    Barishal Division
+    """
+    BD_B = "BD-B"
+    """
+    Chattogram Division
+    """
+    BD_C = "BD-C"
+    """
+    Dhaka Division
+    """
+    BD_D = "BD-D"
+    """
+    Khulna Division
+    """
+    BD_E = "BD-E"
+    """
+    Rajshahi Division
+    """
+    BD_F = "BD-F"
+    """
+    Rangpur Division
+    """
+    BD_G = "BD-G"
+    """
+    Sylhet Division
+    """
+    BD_H = "BD-H"
+    """
+    Mymensingh Division
+    """
+    BE_BRU = "BE-BRU"
+    """
+    Brussels-Capital Region
+    """
+    BE_VAN = "BE-VAN"
+    """
+    Antwerp (province)
+    """
+    BE_VBR = "BE-VBR"
+    """
+    Flemish Brabant
+    """
+    BE_VLI = "BE-VLI"
+    """
+    Limburg (Belgium)
+    """
+    BE_VOV = "BE-VOV"
+    """
+    East Flanders
+    """
+    BE_VWV = "BE-VWV"
+    """
+    West Flanders
+    """
+    BE_WAL = "BE-WAL"
+    """
+    Wallonia
+    """
+    BE_WBR = "BE-WBR"
+    """
+    Walloon Brabant
+    """
+    BE_WHT = "BE-WHT"
+    """
+    Hainaut
+    """
+    BE_WLG = "BE-WLG"
+    """
+    Liège (province)
+    """
+    BE_WLX = "BE-WLX"
+    """
+    Luxembourg (province)
+    """
+    BE_WNA = "BE-WNA"
+    """
+    Namur (province)
+    """
+    BF_01 = "BF-01"
+    """
+    Boucle du Mouhoun
+    """
+    BF_02 = "BF-02"
+    """
+    Cascades (Burkina Faso)
+    """
+    BF_03 = "BF-03"
+    """
+    Centre (Burkina Faso)
+    """
+    BF_04 = "BF-04"
+    """
+    Centre-Est (Burkina Faso)
+    """
+    BF_05 = "BF-05"
+    """
+    Centre-Nord (Burkina Faso)
+    """
+    BF_06 = "BF-06"
+    """
+    Centre-Ouest (Burkina Faso)
+    """
+    BF_07 = "BF-07"
+    """
+    Centre-Sud (Burkina Faso)
+    """
+    BF_08 = "BF-08"
+    """
+    Est (Burkina Faso)
+    """
+    BF_09 = "BF-09"
+    """
+    Hauts-Bassins
+    """
+    BF_10 = "BF-10"
+    """
+    Nord (Burkina Faso)
+    """
+    BF_11 = "BF-11"
+    """
+    Plateau-Central
+    """
+    BF_12 = "BF-12"
+    """
+    Sahel (Burkina Faso)
+    """
+    BF_13 = "BF-13"
+    """
+    Sud-Ouest (Burkina Faso)
+    """
+    BF_BAL = "BF-BAL"
+    """
+    Balé Province
+    """
+    BF_BAM = "BF-BAM"
+    """
+    Bam Province
+    """
+    BF_BAN = "BF-BAN"
+    """
+    Banwa Province
+    """
+    BF_BAZ = "BF-BAZ"
+    """
+    Bazèga Province
+    """
+    BF_BGR = "BF-BGR"
+    """
+    Bougouriba Province
+    """
+    BF_BLG = "BF-BLG"
+    """
+    Boulgou Province
+    """
+    BF_BLK = "BF-BLK"
+    """
+    Boulkiemdé Province
+    """
+    BF_COM = "BF-COM"
+    """
+    Comoé Province
+    """
+    BF_GAN = "BF-GAN"
+    """
+    Ganzourgou Province
+    """
+    BF_GNA = "BF-GNA"
+    """
+    Gnagna Province
+    """
+    BF_GOU = "BF-GOU"
+    """
+    Gourma Province
+    """
+    BF_HOU = "BF-HOU"
+    """
+    Houet Province
+    """
+    BF_IOB = "BF-IOB"
+    """
+    Ioba Province
+    """
+    BF_KAD = "BF-KAD"
+    """
+    Kadiogo Province
+    """
+    BF_KEN = "BF-KEN"
+    """
+    Kénédougou Province
+    """
+    BF_KMD = "BF-KMD"
+    """
+    Komondjari Province
+    """
+    BF_KMP = "BF-KMP"
+    """
+    Kompienga Province
+    """
+    BF_KOP = "BF-KOP"
+    """
+    Koulpélogo Province
+    """
+    BF_KOS = "BF-KOS"
+    """
+    Kossi Province
+    """
+    BF_KOT = "BF-KOT"
+    """
+    Kouritenga Province
+    """
+    BF_KOW = "BF-KOW"
+    """
+    Kourwéogo Province
+    """
+    BF_LER = "BF-LER"
+    """
+    Léraba Province
+    """
+    BF_LOR = "BF-LOR"
+    """
+    Loroum Province
+    """
+    BF_MOU = "BF-MOU"
+    """
+    Mouhoun Province
+    """
+    BF_NAM = "BF-NAM"
+    """
+    Namentenga Province
+    """
+    BF_NAO = "BF-NAO"
+    """
+    Nahouri Province
+    """
+    BF_NAY = "BF-NAY"
+    """
+    Nayala Province
+    """
+    BF_NOU = "BF-NOU"
+    """
+    Noumbiel Province
+    """
+    BF_OUB = "BF-OUB"
+    """
+    Oubritenga Province
+    """
+    BF_OUD = "BF-OUD"
+    """
+    Oudalan Province
+    """
+    BF_PAS = "BF-PAS"
+    """
+    Passoré Province
+    """
+    BF_PON = "BF-PON"
+    """
+    Poni Province
+    """
+    BF_SEN = "BF-SEN"
+    """
+    Séno Province
+    """
+    BF_SIS = "BF-SIS"
+    """
+    Sissili Province
+    """
+    BF_SMT = "BF-SMT"
+    """
+    Sanmatenga Province
+    """
+    BF_SNG = "BF-SNG"
+    """
+    Sanguié Province
+    """
+    BF_SOM = "BF-SOM"
+    """
+    Soum Province
+    """
+    BF_SOR = "BF-SOR"
+    """
+    Sourou Province
+    """
+    BF_TAP = "BF-TAP"
+    """
+    Tapoa Province
+    """
+    BF_TUI = "BF-TUI"
+    """
+    Tuy Province
+    """
+    BF_YAG = "BF-YAG"
+    """
+    Yagha Province
+    """
+    BF_YAT = "BF-YAT"
+    """
+    Yatenga Province
+    """
+    BF_ZIR = "BF-ZIR"
+    """
+    Ziro Province
+    """
+    BF_ZON = "BF-ZON"
+    """
+    Zondoma Province
+    """
+    BF_ZOU = "BF-ZOU"
+    """
+    Zoundwéogo Province
+    """
+    BG_01 = "BG-01"
+    """
+    Blagoevgrad Province
+    """
+    BG_02 = "BG-02"
+    """
+    Burgas Province
+    """
+    BG_03 = "BG-03"
+    """
+    Varna Province
+    """
+    BG_04 = "BG-04"
+    """
+    Veliko Tarnovo Province
+    """
+    BG_05 = "BG-05"
+    """
+    Vidin Province
+    """
+    BG_06 = "BG-06"
+    """
+    Vratsa Province
+    """
+    BG_07 = "BG-07"
+    """
+    Gabrovo Province
+    """
+    BG_08 = "BG-08"
+    """
+    Dobrich Province
+    """
+    BG_09 = "BG-09"
+    """
+    Kardzhali Province
+    """
+    BG_10 = "BG-10"
+    """
+    Kyustendil Province
+    """
+    BG_11 = "BG-11"
+    """
+    Lovech Province
+    """
+    BG_12 = "BG-12"
+    """
+    Montana Province
+    """
+    BG_13 = "BG-13"
+    """
+    Pazardzhik Province
+    """
+    BG_14 = "BG-14"
+    """
+    Pernik Province
+    """
+    BG_15 = "BG-15"
+    """
+    Pleven Province
+    """
+    BG_16 = "BG-16"
+    """
+    Plovdiv Province
+    """
+    BG_17 = "BG-17"
+    """
+    Razgrad Province
+    """
+    BG_18 = "BG-18"
+    """
+    Ruse Province
+    """
+    BG_19 = "BG-19"
+    """
+    Silistra Province
+    """
+    BG_20 = "BG-20"
+    """
+    Sliven Province
+    """
+    BG_21 = "BG-21"
+    """
+    Smolyan Province
+    """
+    BG_22 = "BG-22"
+    """
+    Sofia City Province
+    """
+    BG_23 = "BG-23"
+    """
+    Sofia Province
+    """
+    BG_24 = "BG-24"
+    """
+    Stara Zagora Province
+    """
+    BG_25 = "BG-25"
+    """
+    Targovishte Province
+    """
+    BG_26 = "BG-26"
+    """
+    Haskovo Province
+    """
+    BG_27 = "BG-27"
+    """
+    Shumen Province
+    """
+    BG_28 = "BG-28"
+    """
+    Yambol Province
+    """
+    BH_13 = "BH-13"
+    """
+    Capital Governorate (Bahrain)
+    """
+    BH_14 = "BH-14"
+    """
+    Southern Governorate, Bahrain
+    """
+    BH_17 = "BH-17"
+    """
+    Northern Governorate, Bahrain
+    """
+    BI_BB = "BI-BB"
+    """
+    Bubanza Province
+    """
+    BI_BM = "BI-BM"
+    """
+    Bujumbura Mairie
+    """
+    BI_KI = "BI-KI"
+    """
+    Kirundo Province
+    """
+    BI_KR = "BI-KR"
+    """
+    Karuzi Province
+    """
+    BJ_AK = "BJ-AK"
+    """
+    Atakora Department
+    """
+    BJ_AL = "BJ-AL"
+    """
+    Alibori Department
+    """
+    BJ_AQ = "BJ-AQ"
+    """
+    Atlantique Department
+    """
+    BJ_BO = "BJ-BO"
+    """
+    Borgou Department
+    """
+    BJ_CO = "BJ-CO"
+    """
+    Collines Department
+    """
+    BJ_DO = "BJ-DO"
+    """
+    Donga Department
+    """
+    BJ_KO = "BJ-KO"
+    """
+    Couffo Department
+    """
+    BJ_LI = "BJ-LI"
+    """
+    Littoral Department
+    """
+    BJ_MO = "BJ-MO"
+    """
+    Mono Department
+    """
+    BJ_OU = "BJ-OU"
+    """
+    Ouémé Department
+    """
+    BJ_PL = "BJ-PL"
+    """
+    Plateau Department
+    """
+    BJ_ZO = "BJ-ZO"
+    """
+    Zou Department
+    """
+    BN_BE = "BN-BE"
+    """
+    Belait
+    """
+    BN_BM = "BN-BM"
+    """
+    Brunei-Muara
+    """
+    BN_TE = "BN-TE"
+    """
+    Temburong
+    """
+    BN_TU = "BN-TU"
+    """
+    Tutong
+    """
+    BO_B = "BO-B"
+    """
+    Beni Department
+    """
+    BO_C = "BO-C"
+    """
+    Cochabamba Department
+    """
+    BO_H = "BO-H"
+    """
+    Chuquisaca Department
+    """
+    BO_L = "BO-L"
+    """
+    La Paz Department, Bolivia
+    """
+    BO_N = "BO-N"
+    """
+    Pando Department
+    """
+    BO_O = "BO-O"
+    """
+    Oruro Department
+    """
+    BO_P = "BO-P"
+    """
+    Potosí Department
+    """
+    BO_S = "BO-S"
+    """
+    Santa Cruz Department, Bolivia
+    """
+    BO_T = "BO-T"
+    """
+    Tarija Department
+    """
+    BQ_SE = "BQ-SE"
+    """
+    Sint Eustatius
+    """
+    BR_AC = "BR-AC"
+    """
+    Acre (state)
+    """
+    BR_AL = "BR-AL"
+    """
+    Alagoas
+    """
+    BR_AM = "BR-AM"
+    """
+    Amazonas (Brazil)
+    """
+    BR_AP = "BR-AP"
+    """
+    Amapá
+    """
+    BR_BA = "BR-BA"
+    """
+    Bahia
+    """
+    BR_CE = "BR-CE"
+    """
+    Ceará
+    """
+    BR_DF = "BR-DF"
+    """
+    Distrito Federal (Brazil)
+    """
+    BR_ES = "BR-ES"
+    """
+    Espírito Santo
+    """
+    BR_GO = "BR-GO"
+    """
+    Goiás
+    """
+    BR_MA = "BR-MA"
+    """
+    Maranhão
+    """
+    BR_MG = "BR-MG"
+    """
+    Minas Gerais
+    """
+    BR_MS = "BR-MS"
+    """
+    Mato Grosso do Sul
+    """
+    BR_MT = "BR-MT"
+    """
+    Mato Grosso
+    """
+    BR_PA = "BR-PA"
+    """
+    Pará
+    """
+    BR_PB = "BR-PB"
+    """
+    Paraíba
+    """
+    BR_PE = "BR-PE"
+    """
+    Pernambuco
+    """
+    BR_PI = "BR-PI"
+    """
+    Piauí
+    """
+    BR_PR = "BR-PR"
+    """
+    Paraná
+    """
+    BR_RJ = "BR-RJ"
+    """
+    Rio de Janeiro (state)
+    """
+    BR_RN = "BR-RN"
+    """
+    Rio Grande do Norte
+    """
+    BR_RO = "BR-RO"
+    """
+    Rondônia
+    """
+    BR_RR = "BR-RR"
+    """
+    Roraima
+    """
+    BR_RS = "BR-RS"
+    """
+    Rio Grande do Sul
+    """
+    BR_SC = "BR-SC"
+    """
+    Santa Catarina
+    """
+    BR_SE = "BR-SE"
+    """
+    Sergipe
+    """
+    BR_SP = "BR-SP"
+    """
+    São Paulo (state)
+    """
+    BR_TO = "BR-TO"
+    """
+    Tocantins
+    """
+    BS_BI = "BS-BI"
+    """
+    Bimini Islands
+    """
+    BS_BY = "BS-BY"
+    """
+    Berry Islands
+    """
+    BS_CI = "BS-CI"
+    """
+    Cat Island
+    """
+    BS_CK = "BS-CK"
+    """
+    Crooked Island (Bahamas)
+    """
+    BS_FP = "BS-FP"
+    """
+    Freeport, Bahamas
+    """
+    BS_GT = "BS-GT"
+    """
+    Green Turtle Cay, Abaco (Bahamas)
+    """
+    BS_HI = "BS-HI"
+    """
+    Harbour Island, Bahamas
+    """
+    BS_HT = "BS-HT"
+    """
+    Hope Town, Elbow Cay (Bahamas)
+    """
+    BS_IN = "BS-IN"
+    """
+    Inagua Islands
+    """
+    BS_LI = "BS-LI"
+    """
+    Long Island, Bahamas
+    """
+    BS_MH = "BS-MH"
+    """
+    Marsh Harbour, Abaco (Bahamas)
+    """
+    BS_NS = "BS-NS"
+    """
+    North Andros
+    """
+    BS_RI = "BS-RI"
+    """
+    Ragged Island, Bahamas
+    """
+    BS_SA = "BS-SA"
+    """
+    South Andros
+    """
+    BS_SS = "BS-SS"
+    """
+    San Salvador Island
+    """
+    BT_11 = "BT-11"
+    """
+    Paro District
+    """
+    BT_12 = "BT-12"
+    """
+    Chukha District
+    """
+    BT_13 = "BT-13"
+    """
+    Haa District
+    """
+    BT_14 = "BT-14"
+    """
+    Samtse District
+    """
+    BT_15 = "BT-15"
+    """
+    Thimphu District
+    """
+    BT_21 = "BT-21"
+    """
+    Tsirang District
+    """
+    BT_22 = "BT-22"
+    """
+    Dagana District
+    """
+    BT_23 = "BT-23"
+    """
+    Punakha District
+    """
+    BT_24 = "BT-24"
+    """
+    Wangdue Phodrang District
+    """
+    BT_31 = "BT-31"
+    """
+    Sarpang District
+    """
+    BT_32 = "BT-32"
+    """
+    Trongsa District
+    """
+    BT_33 = "BT-33"
+    """
+    Bumthang District
+    """
+    BT_34 = "BT-34"
+    """
+    Zhemgang District
+    """
+    BT_41 = "BT-41"
+    """
+    Trashigang District
+    """
+    BT_42 = "BT-42"
+    """
+    Mongar District
+    """
+    BT_43 = "BT-43"
+    """
+    Pemagatshel District
+    """
+    BT_44 = "BT-44"
+    """
+    Lhuntse District
+    """
+    BT_45 = "BT-45"
+    """
+    Samdrup Jongkhar District
+    """
+    BT_GA = "BT-GA"
+    """
+    Gasa District
+    """
+    BT_TY = "BT-TY"
+    """
+    Trashiyangtse District
+    """
+    BW_CE = "BW-CE"
+    """
+    Central District (Botswana)
+    """
+    BW_FR = "BW-FR"
+    """
+    Francistown
+    """
+    BW_GA = "BW-GA"
+    """
+    Gaborone
+    """
+    BW_JW = "BW-JW"
+    """
+    Jwaneng
+    """
+    BW_KG = "BW-KG"
+    """
+    Kgalagadi District
+    """
+    BW_KW = "BW-KW"
+    """
+    Kweneng District
+    """
+    BW_LO = "BW-LO"
+    """
+    Lobatse
+    """
+    BW_NE = "BW-NE"
+    """
+    North-East District, Botswana
+    """
+    BW_NW = "BW-NW"
+    """
+    North-West District (Botswana)
+    """
+    BW_SE = "BW-SE"
+    """
+    South-East District (Botswana)
+    """
+    BY_BR = "BY-BR"
+    """
+    Brest Region
+    """
+    BY_HM = "BY-HM"
+    """
+    Minsk
+    """
+    BY_HO = "BY-HO"
+    """
+    Gomel Region
+    """
+    BY_HR = "BY-HR"
+    """
+    Grodno Region
+    """
+    BY_MA = "BY-MA"
+    """
+    Mogilev Region
+    """
+    BY_MI = "BY-MI"
+    """
+    Minsk Region
+    """
+    BY_VI = "BY-VI"
+    """
+    Vitebsk Region
+    """
+    BZ_BZ = "BZ-BZ"
+    """
+    Belize District
+    """
+    BZ_CY = "BZ-CY"
+    """
+    Cayo District
+    """
+    BZ_CZL = "BZ-CZL"
+    """
+    Corozal District
+    """
+    BZ_OW = "BZ-OW"
+    """
+    Orange Walk District
+    """
+    BZ_SC = "BZ-SC"
+    """
+    Stann Creek District
+    """
+    BZ_TOL = "BZ-TOL"
+    """
+    Toledo District
+    """
+    CA_AB = "CA-AB"
+    """
+    Alberta
+    """
+    CA_BC = "CA-BC"
+    """
+    British Columbia
+    """
+    CA_MB = "CA-MB"
+    """
+    Manitoba
+    """
+    CA_NB = "CA-NB"
+    """
+    New Brunswick
+    """
+    CA_NL = "CA-NL"
+    """
+    Newfoundland and Labrador
+    """
+    CA_NS = "CA-NS"
+    """
+    Nova Scotia
+    """
+    CA_NT = "CA-NT"
+    """
+    Northwest Territories
+    """
+    CA_NU = "CA-NU"
+    """
+    Nunavut
+    """
+    CA_ON = "CA-ON"
+    """
+    Ontario
+    """
+    CA_PE = "CA-PE"
+    """
+    Prince Edward Island
+    """
+    CA_QC = "CA-QC"
+    """
+    Quebec
+    """
+    CA_SK = "CA-SK"
+    """
+    Saskatchewan
+    """
+    CA_YT = "CA-YT"
+    """
+    Yukon
+    """
+    CD_BC = "CD-BC"
+    """
+    Kongo Central
+    """
+    CD_BN = "CD-BN"
+    """
+    Bandundu (province)
+    """
+    CD_EQ = "CD-EQ"
+    """
+    Équateur, Congo
+    """
+    CD_HK = "CD-HK"
+    """
+    Haut-Katanga Province
+    """
+    CD_HL = "CD-HL"
+    """
+    Haut-Lomami
+    """
+    CD_HU = "CD-HU"
+    """
+    Haut-Uele
+    """
+    CD_KA = "CD-KA"
+    """
+    Katanga
+    """
+    CD_KC = "CD-KC"
+    """
+    Kasaï-Central
+    """
+    CD_KE = "CD-KE"
+    """
+    Kasaï-Oriental
+    """
+    CD_KG = "CD-KG"
+    """
+    Kwango Province
+    """
+    CD_KL = "CD-KL"
+    """
+    Kwilu, Democratic Republic of the Congo
+    """
+    CD_KN = "CD-KN"
+    """
+    Kinshasa
+    """
+    CD_KW = "CD-KW"
+    """
+    Kasaï-Occidental
+    """
+    CD_LO = "CD-LO"
+    """
+    Lomami Province
+    """
+    CD_LU = "CD-LU"
+    """
+    Lualaba, Democratic Republic of the Congo
+    """
+    CD_MA = "CD-MA"
+    """
+    Maniema
+    """
+    CD_MN = "CD-MN"
+    """
+    Mai-Ndombe, Democratic Republic of the Congo
+    """
+    CD_MO = "CD-MO"
+    """
+    Mongala Province
+    """
+    CD_NK = "CD-NK"
+    """
+    Nord-Kivu
+    """
+    CD_NU = "CD-NU"
+    """
+    Nord-Ubangi
+    """
+    CD_SA = "CD-SA"
+    """
+    Sankuru, Democratic Republic of the Congo
+    """
+    CD_SK = "CD-SK"
+    """
+    Sud-Kivu
+    """
+    CD_TA = "CD-TA"
+    """
+    Tanganyika Province
+    """
+    CD_TO = "CD-TO"
+    """
+    Tshopo Province
+    """
+    CD_TU = "CD-TU"
+    """
+    Tshuapa, Democratic Republic of the Congo
+    """
+    CF_BGF = "CF-BGF"
+    """
+    Bangui
+    """
+    CF_NM = "CF-NM"
+    """
+    Nana-Mambéré
+    """
+    CG_11 = "CG-11"
+    """
+    Bouenza Department
+    """
+    CG_12 = "CG-12"
+    """
+    Pool Department
+    """
+    CG_13 = "CG-13"
+    """
+    Sangha Department
+    """
+    CG_14 = "CG-14"
+    """
+    Plateaux Department
+    """
+    CG_15 = "CG-15"
+    """
+    Cuvette-Ouest Department
+    """
+    CG_2 = "CG-2"
+    """
+    Lékoumou Department
+    """
+    CG_5 = "CG-5"
+    """
+    Kouilou Department
+    """
+    CG_7 = "CG-7"
+    """
+    Likouala Department
+    """
+    CG_8 = "CG-8"
+    """
+    Cuvette Department
+    """
+    CG_9 = "CG-9"
+    """
+    Niari Department
+    """
+    CH_AG = "CH-AG"
+    """
+    Canton of Aargau
+    """
+    CH_AI = "CH-AI"
+    """
+    Canton of Appenzell Innerrhoden
+    """
+    CH_AR = "CH-AR"
+    """
+    Canton of Appenzell Ausserrhoden
+    """
+    CH_BE = "CH-BE"
+    """
+    Canton of Bern
+    """
+    CH_BL = "CH-BL"
+    """
+    Canton of Basel-Landschaft
+    """
+    CH_BS = "CH-BS"
+    """
+    Canton of Basel-Stadt
+    """
+    CH_FR = "CH-FR"
+    """
+    Canton of Fribourg
+    """
+    CH_GE = "CH-GE"
+    """
+    Canton of Geneva
+    """
+    CH_GL = "CH-GL"
+    """
+    Canton of Glarus
+    """
+    CH_GR = "CH-GR"
+    """
+    Canton of Graubünden
+    """
+    CH_JU = "CH-JU"
+    """
+    Canton of Jura
+    """
+    CH_LU = "CH-LU"
+    """
+    Canton of Lucerne
+    """
+    CH_NE = "CH-NE"
+    """
+    Canton of Neuchâtel
+    """
+    CH_NW = "CH-NW"
+    """
+    Canton of Nidwalden
+    """
+    CH_OW = "CH-OW"
+    """
+    Canton of Obwalden
+    """
+    CH_SG = "CH-SG"
+    """
+    Canton of St. Gallen
+    """
+    CH_SH = "CH-SH"
+    """
+    Canton of Schaffhausen
+    """
+    CH_SO = "CH-SO"
+    """
+    Canton of Solothurn
+    """
+    CH_SZ = "CH-SZ"
+    """
+    Canton of Schwyz
+    """
+    CH_TG = "CH-TG"
+    """
+    Canton of Thurgau
+    """
+    CH_TI = "CH-TI"
+    """
+    Canton of Ticino
+    """
+    CH_UR = "CH-UR"
+    """
+    Canton of Uri
+    """
+    CH_VD = "CH-VD"
+    """
+    Canton of Vaud
+    """
+    CH_VS = "CH-VS"
+    """
+    Canton of Valais
+    """
+    CH_ZG = "CH-ZG"
+    """
+    Canton of Zug
+    """
+    CH_ZH = "CH-ZH"
+    """
+    Canton of Zürich
+    """
+    CI_05 = "CI-05"
+    """
+    Moyen-Comoé
+    """
+    CI_AB = "CI-AB"
+    """
+    Abidjan
+    """
+    CI_DN = "CI-DN"
+    """
+    Denguélé District
+    """
+    CI_YM = "CI-YM"
+    """
+    Yamoussoukro
+    """
+    CL_AI = "CL-AI"
+    """
+    Aysén Region
+    """
+    CL_AN = "CL-AN"
+    """
+    Antofagasta Region
+    """
+    CL_AP = "CL-AP"
+    """
+    Arica and Parinacota Region
+    """
+    CL_AR = "CL-AR"
+    """
+    Araucanía Region
+    """
+    CL_AT = "CL-AT"
+    """
+    Atacama Region
+    """
+    CL_BI = "CL-BI"
+    """
+    Biobío Region
+    """
+    CL_CO = "CL-CO"
+    """
+    Coquimbo Region
+    """
+    CL_LI = "CL-LI"
+    """
+    O'Higgins Region
+    """
+    CL_LL = "CL-LL"
+    """
+    Los Lagos Region
+    """
+    CL_LR = "CL-LR"
+    """
+    Los Ríos Region
+    """
+    CL_MA = "CL-MA"
+    """
+    Magallanes y Antártica Chilena Region
+    """
+    CL_ML = "CL-ML"
+    """
+    Maule Region
+    """
+    CL_NB = "CL-NB"
+    """
+    Ñuble Region
+    """
+    CL_RM = "CL-RM"
+    """
+    Santiago Metropolitan Region
+    """
+    CL_TA = "CL-TA"
+    """
+    Tarapacá Region
+    """
+    CL_VS = "CL-VS"
+    """
+    Valparaíso Region
+    """
+    CM_AD = "CM-AD"
+    """
+    Adamaoua
+    """
+    CM_CE = "CM-CE"
+    """
+    Centre Region (Cameroon)
+    """
+    CM_EN = "CM-EN"
+    """
+    Far North Region (Cameroon)
+    """
+    CM_ES = "CM-ES"
+    """
+    East Region (Cameroon)
+    """
+    CM_LT = "CM-LT"
+    """
+    Littoral Region
+    """
+    CM_NO = "CM-NO"
+    """
+    North Region, Cameroon
+    """
+    CM_NW = "CM-NW"
+    """
+    Northwest Region
+    """
+    CM_SU = "CM-SU"
+    """
+    South Region (Cameroon)
+    """
+    CM_SW = "CM-SW"
+    """
+    Southwest Region (Cameroon)
+    """
+    CN_AH = "CN-AH"
+    """
+    Anhui
+    """
+    CN_BJ = "CN-BJ"
+    """
+    Beijing
+    """
+    CN_CQ = "CN-CQ"
+    """
+    Chongqing
+    """
+    CN_FJ = "CN-FJ"
+    """
+    Fujian
+    """
+    CN_GD = "CN-GD"
+    """
+    Guangdong
+    """
+    CN_GS = "CN-GS"
+    """
+    Gansu
+    """
+    CN_GX = "CN-GX"
+    """
+    Guangxi
+    """
+    CN_GZ = "CN-GZ"
+    """
+    Guizhou
+    """
+    CN_HA = "CN-HA"
+    """
+    Henan
+    """
+    CN_HB = "CN-HB"
+    """
+    Hubei
+    """
+    CN_HE = "CN-HE"
+    """
+    Hebei
+    """
+    CN_HI = "CN-HI"
+    """
+    Hainan
+    """
+    CN_HK = "CN-HK"
+    """
+    Hong Kong
+    """
+    CN_HL = "CN-HL"
+    """
+    Heilongjiang
+    """
+    CN_HN = "CN-HN"
+    """
+    Hunan
+    """
+    CN_JL = "CN-JL"
+    """
+    Jilin
+    """
+    CN_JS = "CN-JS"
+    """
+    Jiangsu
+    """
+    CN_JX = "CN-JX"
+    """
+    Jiangxi
+    """
+    CN_LN = "CN-LN"
+    """
+    Liaoning
+    """
+    CN_MO = "CN-MO"
+    """
+    Macau
+    """
+    CN_NM = "CN-NM"
+    """
+    Inner Mongolia
+    """
+    CN_NX = "CN-NX"
+    """
+    Ningxia
+    """
+    CN_QH = "CN-QH"
+    """
+    Qinghai
+    """
+    CN_SC = "CN-SC"
+    """
+    Sichuan
+    """
+    CN_SD = "CN-SD"
+    """
+    Shandong
+    """
+    CN_SH = "CN-SH"
+    """
+    Shanghai
+    """
+    CN_SN = "CN-SN"
+    """
+    Shaanxi
+    """
+    CN_SX = "CN-SX"
+    """
+    Shanxi
+    """
+    CN_TJ = "CN-TJ"
+    """
+    Tianjin
+    """
+    CN_TW = "CN-TW"
+    """
+    Taiwan Province, People's Republic of China
+    """
+    CN_XJ = "CN-XJ"
+    """
+    Xinjiang
+    """
+    CN_XZ = "CN-XZ"
+    """
+    Tibet Autonomous Region
+    """
+    CN_YN = "CN-YN"
+    """
+    Yunnan
+    """
+    CN_ZJ = "CN-ZJ"
+    """
+    Zhejiang
+    """
+    CO_AMA = "CO-AMA"
+    """
+    Amazonas Department (Colombia)
+    """
+    CO_ANT = "CO-ANT"
+    """
+    Antioquia Department
+    """
+    CO_ARA = "CO-ARA"
+    """
+    Arauca Department
+    """
+    CO_ATL = "CO-ATL"
+    """
+    Atlántico Department
+    """
+    CO_BOL = "CO-BOL"
+    """
+    Bolívar Department
+    """
+    CO_BOY = "CO-BOY"
+    """
+    Boyacá Department
+    """
+    CO_CAL = "CO-CAL"
+    """
+    Caldas Department
+    """
+    CO_CAQ = "CO-CAQ"
+    """
+    Caquetá Department
+    """
+    CO_CAS = "CO-CAS"
+    """
+    Casanare Department
+    """
+    CO_CAU = "CO-CAU"
+    """
+    Cauca Department
+    """
+    CO_CES = "CO-CES"
+    """
+    Cesar Department
+    """
+    CO_CHO = "CO-CHO"
+    """
+    Chocó Department
+    """
+    CO_COR = "CO-COR"
+    """
+    Córdoba Department
+    """
+    CO_CUN = "CO-CUN"
+    """
+    Cundinamarca Department
+    """
+    CO_DC = "CO-DC"
+    """
+    Bogotá
+    """
+    CO_GUA = "CO-GUA"
+    """
+    Guainía Department
+    """
+    CO_GUV = "CO-GUV"
+    """
+    Guaviare Department
+    """
+    CO_HUI = "CO-HUI"
+    """
+    Huila Department
+    """
+    CO_LAG = "CO-LAG"
+    """
+    La Guajira Department
+    """
+    CO_MAG = "CO-MAG"
+    """
+    Magdalena Department
+    """
+    CO_MET = "CO-MET"
+    """
+    Meta Department
+    """
+    CO_NAR = "CO-NAR"
+    """
+    Nariño Department
+    """
+    CO_NSA = "CO-NSA"
+    """
+    Norte de Santander Department
+    """
+    CO_PUT = "CO-PUT"
+    """
+    Putumayo Department
+    """
+    CO_QUI = "CO-QUI"
+    """
+    Quindío Department
+    """
+    CO_RIS = "CO-RIS"
+    """
+    Risaralda Department
+    """
+    CO_SAN = "CO-SAN"
+    """
+    Santander Department
+    """
+    CO_SAP = "CO-SAP"
+    """
+    San Andrés, Providencia y Santa Catalina
+    """
+    CO_SUC = "CO-SUC"
+    """
+    Sucre Department
+    """
+    CO_TOL = "CO-TOL"
+    """
+    Tolima Department
+    """
+    CO_VAC = "CO-VAC"
+    """
+    Valle del Cauca Department
+    """
+    CO_VAU = "CO-VAU"
+    """
+    Vaupés Department
+    """
+    CO_VID = "CO-VID"
+    """
+    Vichada Department
+    """
+    CR_A = "CR-A"
+    """
+    Alajuela Province
+    """
+    CR_C = "CR-C"
+    """
+    Cartago Province
+    """
+    CR_G = "CR-G"
+    """
+    Guanacaste Province
+    """
+    CR_H = "CR-H"
+    """
+    Heredia Province
+    """
+    CR_L = "CR-L"
+    """
+    Limón Province
+    """
+    CR_P = "CR-P"
+    """
+    Puntarenas Province
+    """
+    CR_SJ = "CR-SJ"
+    """
+    San José Province
+    """
+    CU_01 = "CU-01"
+    """
+    Pinar del Río Province
+    """
+    CU_02 = "CU-02"
+    """
+    Province of Havana
+    """
+    CU_04 = "CU-04"
+    """
+    Matanzas Province
+    """
+    CU_05 = "CU-05"
+    """
+    Villa Clara Province
+    """
+    CU_06 = "CU-06"
+    """
+    Cienfuegos Province
+    """
+    CU_07 = "CU-07"
+    """
+    Sancti Spíritus Province
+    """
+    CU_08 = "CU-08"
+    """
+    Ciego de Ávila Province
+    """
+    CU_09 = "CU-09"
+    """
+    Camagüey Province
+    """
+    CU_10 = "CU-10"
+    """
+    Las Tunas Province
+    """
+    CU_11 = "CU-11"
+    """
+    Holguín Province
+    """
+    CU_12 = "CU-12"
+    """
+    Granma Province
+    """
+    CU_13 = "CU-13"
+    """
+    Santiago de Cuba Province
+    """
+    CU_14 = "CU-14"
+    """
+    Guantánamo Province
+    """
+    CU_15 = "CU-15"
+    """
+    Artemisa Province
+    """
+    CU_16 = "CU-16"
+    """
+    Mayabeque Province
+    """
+    CU_99 = "CU-99"
+    """
+    Isla de la Juventud
+    """
+    CV_B = "CV-B"
+    """
+    Barlavento (Cape Verde)
+    """
+    CV_BR = "CV-BR"
+    """
+    Brava (Cape Verde)
+    """
+    CV_CA = "CV-CA"
+    """
+    Santa Catarina
+    """
+    CV_CF = "CV-CF"
+    """
+    Santa Catarina do Fogo
+    """
+    CV_MA = "CV-MA"
+    """
+    Maio (Cape Verde)
+    """
+    CV_MO = "CV-MO"
+    """
+    Mosteiros Municipality
+    """
+    CV_PA = "CV-PA"
+    """
+    Paul (Cape Verde)
+    """
+    CV_PN = "CV-PN"
+    """
+    Porto Novo (Cape Verde)
+    """
+    CV_RB = "CV-RB"
+    """
+    Ribeira Brava (Cape Verde)
+    """
+    CV_RG = "CV-RG"
+    """
+    Ribeira Grande Municipality
+    """
+    CV_RS = "CV-RS"
+    """
+    Ribeira Grande de Santiago
+    """
+    CV_S = "CV-S"
+    """
+    Sotavento (Cape Verde)
+    """
+    CV_SD = "CV-SD"
+    """
+    São Domingos Municipality (Cape Verde)
+    """
+    CV_SF = "CV-SF"
+    """
+    São Filipe (Cape Verde)
+    """
+    CV_SM = "CV-SM"
+    """
+    São Miguel (Cape Verde)
+    """
+    CV_SO = "CV-SO"
+    """
+    São Lourenço dos Órgãos
+    """
+    CV_SS = "CV-SS"
+    """
+    São Salvador do Mundo
+    """
+    CV_SV = "CV-SV"
+    """
+    São Vicente Municipality
+    """
+    CV_TA = "CV-TA"
+    """
+    Tarrafal
+    """
+    CV_TS = "CV-TS"
+    """
+    Tarrafal de São Nicolau
+    """
+    CY_01 = "CY-01"
+    """
+    Nicosia District
+    """
+    CY_02 = "CY-02"
+    """
+    Limassol District
+    """
+    CY_03 = "CY-03"
+    """
+    Larnaca District
+    """
+    CY_04 = "CY-04"
+    """
+    Famagusta District
+    """
+    CY_05 = "CY-05"
+    """
+    Paphos District
+    """
+    CY_06 = "CY-06"
+    """
+    Kyrenia District
+    """
+    CZ_10 = "CZ-10"
+    """
+    Prague
+    """
+    CZ_101 = "CZ-101"
+    """
+    Prague 1
+    """
+    CZ_102 = "CZ-102"
+    """
+    Prague 2
+    """
+    CZ_103 = "CZ-103"
+    """
+    Prague 3
+    """
+    CZ_105 = "CZ-105"
+    """
+    Prague 5
+    """
+    CZ_106 = "CZ-106"
+    """
+    Prague 6
+    """
+    CZ_107 = "CZ-107"
+    """
+    Prague 7
+    """
+    CZ_108 = "CZ-108"
+    """
+    Prague 8
+    """
+    CZ_109 = "CZ-109"
+    """
+    Prague 9
+    """
+    CZ_110 = "CZ-110"
+    """
+    Prague 10
+    """
+    CZ_114 = "CZ-114"
+    """
+    Prague 14
+    """
+    CZ_115 = "CZ-115"
+    """
+    Prague 15
+    """
+    CZ_121 = "CZ-121"
+    """
+    Újezd nad Lesy
+    """
+    CZ_20 = "CZ-20"
+    """
+    Central Bohemian Region
+    """
+    CZ_201 = "CZ-201"
+    """
+    Benešov District
+    """
+    CZ_202 = "CZ-202"
+    """
+    Beroun District
+    """
+    CZ_203 = "CZ-203"
+    """
+    Kladno District
+    """
+    CZ_204 = "CZ-204"
+    """
+    Kolín District
+    """
+    CZ_205 = "CZ-205"
+    """
+    Kutná Hora District
+    """
+    CZ_206 = "CZ-206"
+    """
+    Mělník District
+    """
+    CZ_207 = "CZ-207"
+    """
+    Mladá Boleslav District
+    """
+    CZ_208 = "CZ-208"
+    """
+    Nymburk District
+    """
+    CZ_209 = "CZ-209"
+    """
+    Prague-East District
+    """
+    CZ_20A = "CZ-20A"
+    """
+    Prague-West District
+    """
+    CZ_20B = "CZ-20B"
+    """
+    Příbram District
+    """
+    CZ_20C = "CZ-20C"
+    """
+    Rakovník District
+    """
+    CZ_31 = "CZ-31"
+    """
+    South Bohemian Region
+    """
+    CZ_311 = "CZ-311"
+    """
+    České Budějovice District
+    """
+    CZ_312 = "CZ-312"
+    """
+    Český Krumlov District
+    """
+    CZ_313 = "CZ-313"
+    """
+    Jindřichův Hradec District
+    """
+    CZ_314 = "CZ-314"
+    """
+    Písek District
+    """
+    CZ_315 = "CZ-315"
+    """
+    Prachatice District
+    """
+    CZ_316 = "CZ-316"
+    """
+    Strakonice District
+    """
+    CZ_317 = "CZ-317"
+    """
+    Tábor District
+    """
+    CZ_32 = "CZ-32"
+    """
+    Plzeň Region
+    """
+    CZ_321 = "CZ-321"
+    """
+    Domažlice District
+    """
+    CZ_322 = "CZ-322"
+    """
+    Klatovy District
+    """
+    CZ_323 = "CZ-323"
+    """
+    Plzeň-City District
+    """
+    CZ_324 = "CZ-324"
+    """
+    Plzeň-South District
+    """
+    CZ_325 = "CZ-325"
+    """
+    Plzeň-North District
+    """
+    CZ_326 = "CZ-326"
+    """
+    Rokycany District
+    """
+    CZ_327 = "CZ-327"
+    """
+    Tachov District
+    """
+    CZ_41 = "CZ-41"
+    """
+    Karlovy Vary Region
+    """
+    CZ_411 = "CZ-411"
+    """
+    Cheb District
+    """
+    CZ_412 = "CZ-412"
+    """
+    Karlovy Vary District
+    """
+    CZ_413 = "CZ-413"
+    """
+    Sokolov District
+    """
+    CZ_42 = "CZ-42"
+    """
+    Ústí nad Labem Region
+    """
+    CZ_421 = "CZ-421"
+    """
+    Děčín District
+    """
+    CZ_422 = "CZ-422"
+    """
+    Chomutov District
+    """
+    CZ_423 = "CZ-423"
+    """
+    Litoměřice District
+    """
+    CZ_424 = "CZ-424"
+    """
+    Louny District
+    """
+    CZ_425 = "CZ-425"
+    """
+    Most District
+    """
+    CZ_426 = "CZ-426"
+    """
+    Teplice District
+    """
+    CZ_427 = "CZ-427"
+    """
+    Ústí nad Labem District
+    """
+    CZ_51 = "CZ-51"
+    """
+    Liberec Region
+    """
+    CZ_511 = "CZ-511"
+    """
+    Česká Lípa District
+    """
+    CZ_512 = "CZ-512"
+    """
+    Jablonec nad Nisou District
+    """
+    CZ_513 = "CZ-513"
+    """
+    Liberec District
+    """
+    CZ_514 = "CZ-514"
+    """
+    Semily District
+    """
+    CZ_52 = "CZ-52"
+    """
+    Hradec Králové Region
+    """
+    CZ_521 = "CZ-521"
+    """
+    Hradec Králové District
+    """
+    CZ_522 = "CZ-522"
+    """
+    Jičín District
+    """
+    CZ_523 = "CZ-523"
+    """
+    Náchod District
+    """
+    CZ_524 = "CZ-524"
+    """
+    Rychnov nad Kněžnou District
+    """
+    CZ_525 = "CZ-525"
+    """
+    Trutnov District
+    """
+    CZ_53 = "CZ-53"
+    """
+    Pardubice Region
+    """
+    CZ_531 = "CZ-531"
+    """
+    Chrudim District
+    """
+    CZ_532 = "CZ-532"
+    """
+    Pardubice District
+    """
+    CZ_533 = "CZ-533"
+    """
+    Svitavy District
+    """
+    CZ_534 = "CZ-534"
+    """
+    Ústí nad Orlicí District
+    """
+    CZ_63 = "CZ-63"
+    """
+    Vysočina Region
+    """
+    CZ_631 = "CZ-631"
+    """
+    Havlíčkův Brod District
+    """
+    CZ_632 = "CZ-632"
+    """
+    Jihlava District
+    """
+    CZ_633 = "CZ-633"
+    """
+    Pelhřimov District
+    """
+    CZ_634 = "CZ-634"
+    """
+    Třebíč District
+    """
+    CZ_635 = "CZ-635"
+    """
+    Žďár nad Sázavou District
+    """
+    CZ_64 = "CZ-64"
+    """
+    South Moravian Region
+    """
+    CZ_641 = "CZ-641"
+    """
+    Blansko District
+    """
+    CZ_642 = "CZ-642"
+    """
+    Brno-City District
+    """
+    CZ_643 = "CZ-643"
+    """
+    Brno-Country District
+    """
+    CZ_644 = "CZ-644"
+    """
+    Břeclav District
+    """
+    CZ_645 = "CZ-645"
+    """
+    Hodonín District
+    """
+    CZ_646 = "CZ-646"
+    """
+    Vyškov District
+    """
+    CZ_647 = "CZ-647"
+    """
+    Znojmo District
+    """
+    CZ_71 = "CZ-71"
+    """
+    Olomouc Region
+    """
+    CZ_711 = "CZ-711"
+    """
+    Jeseník District
+    """
+    CZ_712 = "CZ-712"
+    """
+    Olomouc District
+    """
+    CZ_713 = "CZ-713"
+    """
+    Prostějov District
+    """
+    CZ_714 = "CZ-714"
+    """
+    Přerov District
+    """
+    CZ_715 = "CZ-715"
+    """
+    Šumperk District
+    """
+    CZ_72 = "CZ-72"
+    """
+    Zlín Region
+    """
+    CZ_721 = "CZ-721"
+    """
+    Kroměříž District
+    """
+    CZ_722 = "CZ-722"
+    """
+    Uherské Hradiště District
+    """
+    CZ_723 = "CZ-723"
+    """
+    Vsetín District
+    """
+    CZ_724 = "CZ-724"
+    """
+    Zlín District
+    """
+    CZ_80 = "CZ-80"
+    """
+    Moravian-Silesian Region
+    """
+    CZ_801 = "CZ-801"
+    """
+    Bruntál District
+    """
+    CZ_802 = "CZ-802"
+    """
+    Frýdek-Místek District
+    """
+    CZ_803 = "CZ-803"
+    """
+    Karviná District
+    """
+    CZ_804 = "CZ-804"
+    """
+    Nový Jičín District
+    """
+    CZ_805 = "CZ-805"
+    """
+    Opava District
+    """
+    CZ_806 = "CZ-806"
+    """
+    Ostrava-City District
+    """
+    DE_BB = "DE-BB"
+    """
+    Brandenburg
+    """
+    DE_BE = "DE-BE"
+    """
+    Berlin
+    """
+    DE_BW = "DE-BW"
+    """
+    Baden-Württemberg
+    """
+    DE_BY = "DE-BY"
+    """
+    Bavaria
+    """
+    DE_HB = "DE-HB"
+    """
+    Bremen (state)
+    """
+    DE_HE = "DE-HE"
+    """
+    Hesse
+    """
+    DE_HH = "DE-HH"
+    """
+    Hamburg
+    """
+    DE_MV = "DE-MV"
+    """
+    Mecklenburg-Western Pomerania
+    """
+    DE_NI = "DE-NI"
+    """
+    Lower Saxony
+    """
+    DE_NW = "DE-NW"
+    """
+    North Rhine-Westphalia
+    """
+    DE_RP = "DE-RP"
+    """
+    Rhineland-Palatinate
+    """
+    DE_SH = "DE-SH"
+    """
+    Schleswig-Holstein
+    """
+    DE_SL = "DE-SL"
+    """
+    Saarland
+    """
+    DE_SN = "DE-SN"
+    """
+    Saxony
+    """
+    DE_ST = "DE-ST"
+    """
+    Saxony-Anhalt
+    """
+    DE_TH = "DE-TH"
+    """
+    Thuringia
+    """
+    DJ_AS = "DJ-AS"
+    """
+    Ali Sabieh Region
+    """
+    DJ_DI = "DJ-DI"
+    """
+    Dikhil Region
+    """
+    DJ_DJ = "DJ-DJ"
+    """
+    Djibouti (city)
+    """
+    DJ_OB = "DJ-OB"
+    """
+    Obock Region
+    """
+    DJ_TA = "DJ-TA"
+    """
+    Tadjoura
+    """
+    DK_81 = "DK-81"
+    """
+    Region Nordjylland
+    """
+    DK_82 = "DK-82"
+    """
+    Region Midtjylland
+    """
+    DK_83 = "DK-83"
+    """
+    Region Syddanmark
+    """
+    DK_84 = "DK-84"
+    """
+    Region Hovedstaden
+    """
+    DK_85 = "DK-85"
+    """
+    Region Sjælland
+    """
+    DK_GL = "DK-GL"
+    """
+    Greenland
+    """
+    DM_02 = "DM-02"
+    """
+    Saint Andrew Parish, Dominica
+    """
+    DM_03 = "DM-03"
+    """
+    Saint David Parish, Dominica
+    """
+    DM_04 = "DM-04"
+    """
+    Saint George Parish, Dominica
+    """
+    DM_05 = "DM-05"
+    """
+    Saint John Parish, Dominica
+    """
+    DM_06 = "DM-06"
+    """
+    Saint Joseph Parish, Dominica
+    """
+    DM_07 = "DM-07"
+    """
+    Saint Luke Parish, Dominica
+    """
+    DM_08 = "DM-08"
+    """
+    Saint Mark Parish, Dominica
+    """
+    DM_09 = "DM-09"
+    """
+    Saint Patrick Parish, Dominica
+    """
+    DM_10 = "DM-10"
+    """
+    Saint Paul Parish, Dominica
+    """
+    DM_11 = "DM-11"
+    """
+    Saint Peter Parish, Dominica
+    """
+    DO_01 = "DO-01"
+    """
+    Distrito Nacional
+    """
+    DO_02 = "DO-02"
+    """
+    Azua Province
+    """
+    DO_03 = "DO-03"
+    """
+    Bahoruco Province
+    """
+    DO_04 = "DO-04"
+    """
+    Barahona Province
+    """
+    DO_05 = "DO-05"
+    """
+    Dajabón Province
+    """
+    DO_06 = "DO-06"
+    """
+    Duarte Province
+    """
+    DO_07 = "DO-07"
+    """
+    Elías Piña Province
+    """
+    DO_08 = "DO-08"
+    """
+    El Seibo Province
+    """
+    DO_09 = "DO-09"
+    """
+    Espaillat Province
+    """
+    DO_10 = "DO-10"
+    """
+    Independencia Province
+    """
+    DO_11 = "DO-11"
+    """
+    La Altagracia Province
+    """
+    DO_12 = "DO-12"
+    """
+    La Romana Province
+    """
+    DO_13 = "DO-13"
+    """
+    La Vega Province
+    """
+    DO_14 = "DO-14"
+    """
+    María Trinidad Sánchez Province
+    """
+    DO_15 = "DO-15"
+    """
+    Monte Cristi Province
+    """
+    DO_16 = "DO-16"
+    """
+    Pedernales Province
+    """
+    DO_17 = "DO-17"
+    """
+    Peravia Province
+    """
+    DO_18 = "DO-18"
+    """
+    Puerto Plata Province
+    """
+    DO_19 = "DO-19"
+    """
+    Hermanas Mirabal Province
+    """
+    DO_20 = "DO-20"
+    """
+    Samaná Province
+    """
+    DO_21 = "DO-21"
+    """
+    San Cristóbal Province
+    """
+    DO_22 = "DO-22"
+    """
+    San Juan Province, Dominican Republic
+    """
+    DO_23 = "DO-23"
+    """
+    San Pedro de Macorís Province
+    """
+    DO_24 = "DO-24"
+    """
+    Sánchez Ramírez Province
+    """
+    DO_25 = "DO-25"
+    """
+    Santiago Province (Dominican Republic)
+    """
+    DO_26 = "DO-26"
+    """
+    Santiago Rodríguez Province
+    """
+    DO_27 = "DO-27"
+    """
+    Valverde Province
+    """
+    DO_28 = "DO-28"
+    """
+    Monseñor Nouel Province
+    """
+    DO_29 = "DO-29"
+    """
+    Monte Plata Province
+    """
+    DO_30 = "DO-30"
+    """
+    Hato Mayor Province
+    """
+    DO_31 = "DO-31"
+    """
+    San José de Ocoa Province
+    """
+    DO_32 = "DO-32"
+    """
+    Santo Domingo Province
+    """
+    DZ_01 = "DZ-01"
+    """
+    Adrar Province
+    """
+    DZ_02 = "DZ-02"
+    """
+    Chlef Province
+    """
+    DZ_03 = "DZ-03"
+    """
+    Laghouat Province
+    """
+    DZ_04 = "DZ-04"
+    """
+    Oum El Bouaghi Province
+    """
+    DZ_05 = "DZ-05"
+    """
+    Batna Province
+    """
+    DZ_06 = "DZ-06"
+    """
+    Béjaïa Province
+    """
+    DZ_07 = "DZ-07"
+    """
+    Biskra Province
+    """
+    DZ_08 = "DZ-08"
+    """
+    Béchar Province
+    """
+    DZ_09 = "DZ-09"
+    """
+    Blida Province
+    """
+    DZ_10 = "DZ-10"
+    """
+    Bouira Province
+    """
+    DZ_11 = "DZ-11"
+    """
+    Tamanrasset Province
+    """
+    DZ_12 = "DZ-12"
+    """
+    Tébessa Province
+    """
+    DZ_13 = "DZ-13"
+    """
+    Tlemcen Province
+    """
+    DZ_14 = "DZ-14"
+    """
+    Tiaret Province
+    """
+    DZ_15 = "DZ-15"
+    """
+    Tizi Ouzou Province
+    """
+    DZ_16 = "DZ-16"
+    """
+    Algiers Province
+    """
+    DZ_17 = "DZ-17"
+    """
+    Djelfa Province
+    """
+    DZ_18 = "DZ-18"
+    """
+    Jijel Province
+    """
+    DZ_19 = "DZ-19"
+    """
+    Sétif Province
+    """
+    DZ_20 = "DZ-20"
+    """
+    Saïda Province
+    """
+    DZ_21 = "DZ-21"
+    """
+    Skikda Province
+    """
+    DZ_22 = "DZ-22"
+    """
+    Sidi Bel Abbès Province
+    """
+    DZ_23 = "DZ-23"
+    """
+    Annaba Province
+    """
+    DZ_24 = "DZ-24"
+    """
+    Guelma Province
+    """
+    DZ_25 = "DZ-25"
+    """
+    Constantine Province
+    """
+    DZ_26 = "DZ-26"
+    """
+    Médéa Province
+    """
+    DZ_27 = "DZ-27"
+    """
+    Mostaganem Province
+    """
+    DZ_28 = "DZ-28"
+    """
+    M'Sila Province
+    """
+    DZ_29 = "DZ-29"
+    """
+    Mascara Province
+    """
+    DZ_30 = "DZ-30"
+    """
+    Ouargla Province
+    """
+    DZ_31 = "DZ-31"
+    """
+    Oran Province
+    """
+    DZ_32 = "DZ-32"
+    """
+    El Bayadh Province
+    """
+    DZ_33 = "DZ-33"
+    """
+    Illizi Province
+    """
+    DZ_34 = "DZ-34"
+    """
+    Bordj Bou Arréridj Province
+    """
+    DZ_35 = "DZ-35"
+    """
+    Boumerdès Province
+    """
+    DZ_36 = "DZ-36"
+    """
+    El Tarf Province
+    """
+    DZ_37 = "DZ-37"
+    """
+    Tindouf Province
+    """
+    DZ_38 = "DZ-38"
+    """
+    Tissemsilt Province
+    """
+    DZ_39 = "DZ-39"
+    """
+    El Oued Province
+    """
+    DZ_40 = "DZ-40"
+    """
+    Khenchela Province
+    """
+    DZ_41 = "DZ-41"
+    """
+    Souk Ahras Province
+    """
+    DZ_42 = "DZ-42"
+    """
+    Tipaza Province
+    """
+    DZ_43 = "DZ-43"
+    """
+    Mila Province
+    """
+    DZ_44 = "DZ-44"
+    """
+    Aïn Defla Province
+    """
+    DZ_45 = "DZ-45"
+    """
+    Naâma Province
+    """
+    DZ_46 = "DZ-46"
+    """
+    Aïn Témouchent Province
+    """
+    DZ_47 = "DZ-47"
+    """
+    Ghardaïa Province
+    """
+    DZ_48 = "DZ-48"
+    """
+    Relizane Province
+    """
+    DZ_49 = "DZ-49"
+    """
+    Timimoun Province
+    """
+    DZ_50 = "DZ-50"
+    """
+    Bordj Baji Mokhtar Province
+    """
+    DZ_51 = "DZ-51"
+    """
+    Ouled Djellal Province
+    """
+    DZ_52 = "DZ-52"
+    """
+    Béni Abbès Province
+    """
+    DZ_53 = "DZ-53"
+    """
+    In Salah Province
+    """
+    DZ_55 = "DZ-55"
+    """
+    Touggourt Province
+    """
+    DZ_56 = "DZ-56"
+    """
+    Djanet Province
+    """
+    DZ_58 = "DZ-58"
+    """
+    El Menia Province
+    """
+    EC_A = "EC-A"
+    """
+    Azuay Province
+    """
+    EC_B = "EC-B"
+    """
+    Bolívar Province
+    """
+    EC_C = "EC-C"
+    """
+    Carchi Province
+    """
+    EC_D = "EC-D"
+    """
+    Orellana Province
+    """
+    EC_E = "EC-E"
+    """
+    Esmeraldas Province
+    """
+    EC_F = "EC-F"
+    """
+    Cañar Province
+    """
+    EC_G = "EC-G"
+    """
+    Guayas Province
+    """
+    EC_H = "EC-H"
+    """
+    Chimborazo Province
+    """
+    EC_I = "EC-I"
+    """
+    Imbabura Province
+    """
+    EC_L = "EC-L"
+    """
+    Loja Province
+    """
+    EC_M = "EC-M"
+    """
+    Manabí Province
+    """
+    EC_N = "EC-N"
+    """
+    Napo Province
+    """
+    EC_O = "EC-O"
+    """
+    El Oro Province
+    """
+    EC_P = "EC-P"
+    """
+    Pichincha Province
+    """
+    EC_R = "EC-R"
+    """
+    Los Ríos Province
+    """
+    EC_S = "EC-S"
+    """
+    Morona-Santiago Province
+    """
+    EC_SD = "EC-SD"
+    """
+    Santo Domingo de los Tsáchilas Province
+    """
+    EC_SE = "EC-SE"
+    """
+    Santa Elena Province
+    """
+    EC_T = "EC-T"
+    """
+    Tungurahua Province
+    """
+    EC_U = "EC-U"
+    """
+    Sucumbíos Province
+    """
+    EC_W = "EC-W"
+    """
+    Galápagos Province
+    """
+    EC_X = "EC-X"
+    """
+    Cotopaxi Province
+    """
+    EC_Y = "EC-Y"
+    """
+    Pastaza Province
+    """
+    EC_Z = "EC-Z"
+    """
+    Zamora-Chinchipe Province
+    """
+    EE_130 = "EE-130"
+    """
+    Alutaguse Parish
+    """
+    EE_141 = "EE-141"
+    """
+    Anija Parish
+    """
+    EE_142 = "EE-142"
+    """
+    Antsla Parish
+    """
+    EE_171 = "EE-171"
+    """
+    Elva Parish
+    """
+    EE_205 = "EE-205"
+    """
+    Hiiumaa Parish
+    """
+    EE_214 = "EE-214"
+    """
+    Häädemeeste Parish
+    """
+    EE_245 = "EE-245"
+    """
+    Jõelähtme Parish
+    """
+    EE_247 = "EE-247"
+    """
+    Jõgeva Parish
+    """
+    EE_251 = "EE-251"
+    """
+    Jõhvi Parish
+    """
+    EE_255 = "EE-255"
+    """
+    Järva Parish
+    """
+    EE_321 = "EE-321"
+    """
+    Kohtla-Järve
+    """
+    EE_37 = "EE-37"
+    """
+    Harju County
+    """
+    EE_39 = "EE-39"
+    """
+    Hiiu County
+    """
+    EE_430 = "EE-430"
+    """
+    Lääneranna Parish
+    """
+    EE_431 = "EE-431"
+    """
+    Lääne-Harju Parish
+    """
+    EE_441 = "EE-441"
+    """
+    Lääne-Nigula Parish
+    """
+    EE_442 = "EE-442"
+    """
+    Lüganuse Parish
+    """
+    EE_45 = "EE-45"
+    """
+    Ida-Viru County
+    """
+    EE_50 = "EE-50"
+    """
+    Jõgeva County
+    """
+    EE_514 = "EE-514"
+    """
+    Narva-Jõesuu City
+    """
+    EE_52 = "EE-52"
+    """
+    Järva County
+    """
+    EE_557 = "EE-557"
+    """
+    Otepää Parish
+    """
+    EE_56 = "EE-56"
+    """
+    Lääne County
+    """
+    EE_586 = "EE-586"
+    """
+    Peipsiääre Parish
+    """
+    EE_60 = "EE-60"
+    """
+    Lääne-Viru County
+    """
+    EE_615 = "EE-615"
+    """
+    Põhja-Sakala Parish
+    """
+    EE_618 = "EE-618"
+    """
+    Põltsamaa Parish
+    """
+    EE_638 = "EE-638"
+    """
+    Põhja-Pärnumaa Parish
+    """
+    EE_64 = "EE-64"
+    """
+    Põlva County
+    """
+    EE_68 = "EE-68"
+    """
+    Pärnu County
+    """
+    EE_698 = "EE-698"
+    """
+    Rõuge Parish
+    """
+    EE_71 = "EE-71"
+    """
+    Rapla County
+    """
+    EE_735 = "EE-735"
+    """
+    Sillamäe
+    """
+    EE_74 = "EE-74"
+    """
+    Saare County
+    """
+    EE_79 = "EE-79"
+    """
+    Tartu County
+    """
+    EE_809 = "EE-809"
+    """
+    Tori Parish
+    """
+    EE_81 = "EE-81"
+    """
+    Valga County
+    """
+    EE_834 = "EE-834"
+    """
+    Türi Parish
+    """
+    EE_84 = "EE-84"
+    """
+    Viljandi County
+    """
+    EE_87 = "EE-87"
+    """
+    Võru County
+    """
+    EE_928 = "EE-928"
+    """
+    Väike-Maarja Parish
+    """
+    EG_ALX = "EG-ALX"
+    """
+    Alexandria Governorate
+    """
+    EG_ASN = "EG-ASN"
+    """
+    Aswan Governorate
+    """
+    EG_AST = "EG-AST"
+    """
+    Asyut Governorate
+    """
+    EG_BA = "EG-BA"
+    """
+    Red Sea Governorate
+    """
+    EG_BH = "EG-BH"
+    """
+    Beheira Governorate
+    """
+    EG_BNS = "EG-BNS"
+    """
+    Beni Suef Governorate
+    """
+    EG_C = "EG-C"
+    """
+    Cairo Governorate
+    """
+    EG_DK = "EG-DK"
+    """
+    Dakahlia Governorate
+    """
+    EG_DT = "EG-DT"
+    """
+    Damietta Governorate
+    """
+    EG_FYM = "EG-FYM"
+    """
+    Faiyum Governorate
+    """
+    EG_GH = "EG-GH"
+    """
+    Gharbia Governorate
+    """
+    EG_GZ = "EG-GZ"
+    """
+    Giza Governorate
+    """
+    EG_HU = "EG-HU"
+    """
+    Helwan Governorate
+    """
+    EG_IS = "EG-IS"
+    """
+    Ismailia Governorate
+    """
+    EG_JS = "EG-JS"
+    """
+    South Sinai Governorate
+    """
+    EG_KB = "EG-KB"
+    """
+    Qalyubia Governorate
+    """
+    EG_KFS = "EG-KFS"
+    """
+    Kafr el-Sheikh Governorate
+    """
+    EG_KN = "EG-KN"
+    """
+    Qena Governorate
+    """
+    EG_LX = "EG-LX"
+    """
+    Luxor Governorate
+    """
+    EG_MN = "EG-MN"
+    """
+    Minya Governorate
+    """
+    EG_MNF = "EG-MNF"
+    """
+    Monufia Governorate
+    """
+    EG_MT = "EG-MT"
+    """
+    Matrouh Governorate
+    """
+    EG_PTS = "EG-PTS"
+    """
+    Port Said Governorate
+    """
+    EG_SHG = "EG-SHG"
+    """
+    Sohag Governorate
+    """
+    EG_SHR = "EG-SHR"
+    """
+    Sharqia Governorate
+    """
+    EG_SIN = "EG-SIN"
+    """
+    North Sinai Governorate
+    """
+    EG_SU = "EG-SU"
+    """
+    6th of October Governorate
+    """
+    EG_SUZ = "EG-SUZ"
+    """
+    Suez Governorate
+    """
+    EG_WAD = "EG-WAD"
+    """
+    New Valley Governorate
+    """
+    ER_AN = "ER-AN"
+    """
+    Anseba Region
+    """
+    ER_DK = "ER-DK"
+    """
+    Southern Red Sea Region
+    """
+    ES_A = "ES-A"
+    """
+    Province of Alicante
+    """
+    ES_AB = "ES-AB"
+    """
+    Province of Albacete
+    """
+    ES_AL = "ES-AL"
+    """
+    Province of Almería
+    """
+    ES_AN = "ES-AN"
+    """
+    Andalusia
+    """
+    ES_AR = "ES-AR"
+    """
+    Aragon
+    """
+    ES_AS = "ES-AS"
+    """
+    Asturias
+    """
+    ES_AV = "ES-AV"
+    """
+    Province of Ávila
+    """
+    ES_B = "ES-B"
+    """
+    Province of Barcelona
+    """
+    ES_BA = "ES-BA"
+    """
+    Province of Badajoz
+    """
+    ES_BI = "ES-BI"
+    """
+    Biscay
+    """
+    ES_BU = "ES-BU"
+    """
+    Province of Burgos
+    """
+    ES_C = "ES-C"
+    """
+    Province of A Coruña
+    """
+    ES_CA = "ES-CA"
+    """
+    Province of Cádiz
+    """
+    ES_CB = "ES-CB"
+    """
+    Cantabria
+    """
+    ES_CC = "ES-CC"
+    """
+    Province of Cáceres
+    """
+    ES_CE = "ES-CE"
+    """
+    Ceuta
+    """
+    ES_CL = "ES-CL"
+    """
+    Castile and León
+    """
+    ES_CM = "ES-CM"
+    """
+    Castile-La Mancha
+    """
+    ES_CN = "ES-CN"
+    """
+    Canary Islands
+    """
+    ES_CO = "ES-CO"
+    """
+    Province of Córdoba, Spain
+    """
+    ES_CR = "ES-CR"
+    """
+    Province of Ciudad Real
+    """
+    ES_CS = "ES-CS"
+    """
+    Province of Castellón
+    """
+    ES_CT = "ES-CT"
+    """
+    Catalonia
+    """
+    ES_CU = "ES-CU"
+    """
+    Province of Cuenca
+    """
+    ES_EX = "ES-EX"
+    """
+    Extremadura
+    """
+    ES_GA = "ES-GA"
+    """
+    Galicia (Spain)
+    """
+    ES_GC = "ES-GC"
+    """
+    Province of Las Palmas
+    """
+    ES_GI = "ES-GI"
+    """
+    Province of Girona
+    """
+    ES_GR = "ES-GR"
+    """
+    Province of Granada
+    """
+    ES_GU = "ES-GU"
+    """
+    Province of Guadalajara
+    """
+    ES_H = "ES-H"
+    """
+    Province of Huelva
+    """
+    ES_HU = "ES-HU"
+    """
+    Province of Huesca
+    """
+    ES_IB = "ES-IB"
+    """
+    Balearic Islands
+    """
+    ES_J = "ES-J"
+    """
+    Province of Jaén
+    """
+    ES_L = "ES-L"
+    """
+    Province of Lleida
+    """
+    ES_LE = "ES-LE"
+    """
+    Province of León
+    """
+    ES_LU = "ES-LU"
+    """
+    Province of Lugo
+    """
+    ES_M = "ES-M"
+    """
+    Province of Madrid
+    """
+    ES_MA = "ES-MA"
+    """
+    Province of Málaga
+    """
+    ES_MC = "ES-MC"
+    """
+    Region of Murcia
+    """
+    ES_MD = "ES-MD"
+    """
+    Community of Madrid
+    """
+    ES_ML = "ES-ML"
+    """
+    Melilla
+    """
+    ES_NC = "ES-NC"
+    """
+    Navarre
+    """
+    ES_OR = "ES-OR"
+    """
+    Province of Ourense
+    """
+    ES_P = "ES-P"
+    """
+    Province of Palencia
+    """
+    ES_PO = "ES-PO"
+    """
+    Province of Pontevedra
+    """
+    ES_PV = "ES-PV"
+    """
+    Basque Autonomous Community
+    """
+    ES_RI = "ES-RI"
+    """
+    La Rioja (Spain)
+    """
+    ES_SA = "ES-SA"
+    """
+    Province of Salamanca
+    """
+    ES_SE = "ES-SE"
+    """
+    Province of Seville
+    """
+    ES_SG = "ES-SG"
+    """
+    Province of Segovia
+    """
+    ES_SO = "ES-SO"
+    """
+    Province of Soria
+    """
+    ES_SS = "ES-SS"
+    """
+    Gipuzkoa
+    """
+    ES_T = "ES-T"
+    """
+    Province of Tarragona
+    """
+    ES_TE = "ES-TE"
+    """
+    Province of Teruel
+    """
+    ES_TF = "ES-TF"
+    """
+    Province of Santa Cruz de Tenerife
+    """
+    ES_TO = "ES-TO"
+    """
+    Province of Toledo
+    """
+    ES_V = "ES-V"
+    """
+    Province of Valencia
+    """
+    ES_VA = "ES-VA"
+    """
+    Province of Valladolid
+    """
+    ES_VC = "ES-VC"
+    """
+    Land of Valencia
+    """
+    ES_VI = "ES-VI"
+    """
+    Álava-Araba
+    """
+    ES_Z = "ES-Z"
+    """
+    Province of Zaragoza
+    """
+    ES_ZA = "ES-ZA"
+    """
+    Province of Zamora
+    """
+    ET_AA = "ET-AA"
+    """
+    Addis Ababa
+    """
+    ET_AF = "ET-AF"
+    """
+    Afar Region
+    """
+    ET_AM = "ET-AM"
+    """
+    Amhara Region
+    """
+    ET_BE = "ET-BE"
+    """
+    Benishangul-Gumuz Region
+    """
+    ET_DD = "ET-DD"
+    """
+    Dire Dawa
+    """
+    ET_GA = "ET-GA"
+    """
+    Gambela Region
+    """
+    ET_HA = "ET-HA"
+    """
+    Harari Region
+    """
+    ET_OR = "ET-OR"
+    """
+    Oromia Region
+    """
+    ET_SI = "ET-SI"
+    """
+    Sidama Region
+    """
+    ET_SN = "ET-SN"
+    """
+    Southern Nations, Nationalities, and Peoples' Region
+    """
+    ET_SO = "ET-SO"
+    """
+    Somali Region
+    """
+    ET_SW = "ET-SW"
+    """
+    South West Ethiopia People's Region
+    """
+    ET_TI = "ET-TI"
+    """
+    Tigray Region
+    """
+    FI_01 = "FI-01"
+    """
+    Åland
+    """
+    FI_02 = "FI-02"
+    """
+    South Karelia
+    """
+    FI_03 = "FI-03"
+    """
+    South Ostrobothnia
+    """
+    FI_04 = "FI-04"
+    """
+    Southern Savonia
+    """
+    FI_05 = "FI-05"
+    """
+    Kainuu
+    """
+    FI_06 = "FI-06"
+    """
+    Tavastia Proper
+    """
+    FI_07 = "FI-07"
+    """
+    Central Ostrobothnia
+    """
+    FI_08 = "FI-08"
+    """
+    Central Finland
+    """
+    FI_09 = "FI-09"
+    """
+    Kymenlaakso
+    """
+    FI_10 = "FI-10"
+    """
+    Lapland, Finland
+    """
+    FI_11 = "FI-11"
+    """
+    Pirkanmaa
+    """
+    FI_12 = "FI-12"
+    """
+    Ostrobothnia
+    """
+    FI_13 = "FI-13"
+    """
+    North Karelia
+    """
+    FI_14 = "FI-14"
+    """
+    Northern Ostrobothnia
+    """
+    FI_15 = "FI-15"
+    """
+    Northern Savonia
+    """
+    FI_16 = "FI-16"
+    """
+    Päijänne Tavastia
+    """
+    FI_17 = "FI-17"
+    """
+    Satakunta
+    """
+    FI_18 = "FI-18"
+    """
+    Uusimaa
+    """
+    FI_19 = "FI-19"
+    """
+    Finland Proper
+    """
+    FI_IS = "FI-IS"
+    """
+    Eastern Finland
+    """
+    FI_LL = "FI-LL"
+    """
+    Lapland, Finland
+    """
+    FI_LS = "FI-LS"
+    """
+    Western Finland
+    """
+    FI_OL = "FI-OL"
+    """
+    Oulu Province
+    """
+    FJ_04 = "FJ-04"
+    """
+    Kadavu
+    """
+    FJ_R = "FJ-R"
+    """
+    Rotuma
+    """
+    FM_PNI = "FM-PNI"
+    """
+    Pohnpei
+    """
+    FM_TRK = "FM-TRK"
+    """
+    Chuuk
+    """
+    FM_YAP = "FM-YAP"
+    """
+    Yap
+    """
+    FR_01 = "FR-01"
+    """
+    Ain
+    """
+    FR_02 = "FR-02"
+    """
+    Aisne
+    """
+    FR_03 = "FR-03"
+    """
+    Allier
+    """
+    FR_04 = "FR-04"
+    """
+    Alpes-de-Haute-Provence
+    """
+    FR_05 = "FR-05"
+    """
+    Hautes-Alpes
+    """
+    FR_06 = "FR-06"
+    """
+    Alpes-Maritimes
+    """
+    FR_07 = "FR-07"
+    """
+    Ardèche
+    """
+    FR_08 = "FR-08"
+    """
+    Ardennes (department)
+    """
+    FR_09 = "FR-09"
+    """
+    Ariège (department)
+    """
+    FR_10 = "FR-10"
+    """
+    Aube
+    """
+    FR_11 = "FR-11"
+    """
+    Aude
+    """
+    FR_12 = "FR-12"
+    """
+    Aveyron
+    """
+    FR_13 = "FR-13"
+    """
+    Bouches-du-Rhône
+    """
+    FR_14 = "FR-14"
+    """
+    Calvados
+    """
+    FR_15 = "FR-15"
+    """
+    Cantal
+    """
+    FR_16 = "FR-16"
+    """
+    Charente
+    """
+    FR_17 = "FR-17"
+    """
+    Charente-Maritime
+    """
+    FR_18 = "FR-18"
+    """
+    Cher (department)
+    """
+    FR_19 = "FR-19"
+    """
+    Corrèze
+    """
+    FR_20R = "FR-20R"
+    """
+    Corsica
+    """
+    FR_21 = "FR-21"
+    """
+    Côte-d'Or
+    """
+    FR_22 = "FR-22"
+    """
+    Côtes-d'Armor
+    """
+    FR_23 = "FR-23"
+    """
+    Creuse (department)
+    """
+    FR_24 = "FR-24"
+    """
+    Dordogne
+    """
+    FR_25 = "FR-25"
+    """
+    Doubs
+    """
+    FR_26 = "FR-26"
+    """
+    Drôme
+    """
+    FR_27 = "FR-27"
+    """
+    Eure
+    """
+    FR_28 = "FR-28"
+    """
+    Eure-et-Loir
+    """
+    FR_29 = "FR-29"
+    """
+    Finistère
+    """
+    FR_2A = "FR-2A"
+    """
+    Corse-du-Sud
+    """
+    FR_2B = "FR-2B"
+    """
+    Haute-Corse
+    """
+    FR_30 = "FR-30"
+    """
+    Gard
+    """
+    FR_31 = "FR-31"
+    """
+    Haute-Garonne
+    """
+    FR_32 = "FR-32"
+    """
+    Gers (department)
+    """
+    FR_33 = "FR-33"
+    """
+    Gironde
+    """
+    FR_34 = "FR-34"
+    """
+    Hérault
+    """
+    FR_35 = "FR-35"
+    """
+    Ille-et-Vilaine
+    """
+    FR_36 = "FR-36"
+    """
+    Indre (department)
+    """
+    FR_37 = "FR-37"
+    """
+    Indre-et-Loire
+    """
+    FR_38 = "FR-38"
+    """
+    Isère (department)
+    """
+    FR_39 = "FR-39"
+    """
+    Jura (department)
+    """
+    FR_40 = "FR-40"
+    """
+    Landes (department)
+    """
+    FR_41 = "FR-41"
+    """
+    Loir-et-Cher
+    """
+    FR_42 = "FR-42"
+    """
+    Loire (department)
+    """
+    FR_43 = "FR-43"
+    """
+    Haute-Loire
+    """
+    FR_44 = "FR-44"
+    """
+    Loire-Atlantique
+    """
+    FR_45 = "FR-45"
+    """
+    Loiret
+    """
+    FR_46 = "FR-46"
+    """
+    Lot (department)
+    """
+    FR_47 = "FR-47"
+    """
+    Lot-et-Garonne
+    """
+    FR_48 = "FR-48"
+    """
+    Lozère
+    """
+    FR_49 = "FR-49"
+    """
+    Maine-et-Loire
+    """
+    FR_50 = "FR-50"
+    """
+    Manche
+    """
+    FR_51 = "FR-51"
+    """
+    Marne (department)
+    """
+    FR_52 = "FR-52"
+    """
+    Haute-Marne
+    """
+    FR_53 = "FR-53"
+    """
+    Mayenne
+    """
+    FR_54 = "FR-54"
+    """
+    Meurthe-et-Moselle
+    """
+    FR_55 = "FR-55"
+    """
+    Meuse (department)
+    """
+    FR_56 = "FR-56"
+    """
+    Morbihan
+    """
+    FR_57 = "FR-57"
+    """
+    Moselle (department)
+    """
+    FR_58 = "FR-58"
+    """
+    Nièvre
+    """
+    FR_59 = "FR-59"
+    """
+    Nord (French department)
+    """
+    FR_60 = "FR-60"
+    """
+    Oise (department)
+    """
+    FR_61 = "FR-61"
+    """
+    Orne
+    """
+    FR_62 = "FR-62"
+    """
+    Pas-de-Calais
+    """
+    FR_63 = "FR-63"
+    """
+    Puy-de-Dôme
+    """
+    FR_64 = "FR-64"
+    """
+    Pyrénées-Atlantiques
+    """
+    FR_65 = "FR-65"
+    """
+    Hautes-Pyrénées
+    """
+    FR_66 = "FR-66"
+    """
+    Pyrénées-Orientales
+    """
+    FR_67 = "FR-67"
+    """
+    Bas-Rhin
+    """
+    FR_68 = "FR-68"
+    """
+    Haut-Rhin
+    """
+    FR_69 = "FR-69"
+    """
+    Rhône
+    """
+    FR_6AE = "FR-6AE"
+    """
+    Alsace
+    """
+    FR_70 = "FR-70"
+    """
+    Haute-Saône
+    """
+    FR_71 = "FR-71"
+    """
+    Saône-et-Loire
+    """
+    FR_72 = "FR-72"
+    """
+    Sarthe
+    """
+    FR_73 = "FR-73"
+    """
+    Savoie
+    """
+    FR_74 = "FR-74"
+    """
+    Haute-Savoie
+    """
+    FR_75C = "FR-75C"
+    """
+    Paris
+    """
+    FR_76 = "FR-76"
+    """
+    Seine-Maritime
+    """
+    FR_77 = "FR-77"
+    """
+    Seine-et-Marne
+    """
+    FR_78 = "FR-78"
+    """
+    Yvelines
+    """
+    FR_79 = "FR-79"
+    """
+    Deux-Sèvres
+    """
+    FR_80 = "FR-80"
+    """
+    Somme (department)
+    """
+    FR_81 = "FR-81"
+    """
+    Tarn (department)
+    """
+    FR_82 = "FR-82"
+    """
+    Tarn-et-Garonne
+    """
+    FR_83 = "FR-83"
+    """
+    Var (department)
+    """
+    FR_84 = "FR-84"
+    """
+    Vaucluse
+    """
+    FR_85 = "FR-85"
+    """
+    Vendée (department)
+    """
+    FR_86 = "FR-86"
+    """
+    Vienne
+    """
+    FR_87 = "FR-87"
+    """
+    Haute-Vienne
+    """
+    FR_88 = "FR-88"
+    """
+    Vosges (department)
+    """
+    FR_89 = "FR-89"
+    """
+    Yonne
+    """
+    FR_90 = "FR-90"
+    """
+    Territoire de Belfort
+    """
+    FR_91 = "FR-91"
+    """
+    Essonne (department)
+    """
+    FR_92 = "FR-92"
+    """
+    Hauts-de-Seine
+    """
+    FR_93 = "FR-93"
+    """
+    Seine-Saint-Denis
+    """
+    FR_94 = "FR-94"
+    """
+    Val-de-Marne
+    """
+    FR_95 = "FR-95"
+    """
+    Val-d'Oise
+    """
+    FR_971 = "FR-971"
+    """
+    Guadeloupe
+    """
+    FR_972 = "FR-972"
+    """
+    Martinique
+    """
+    FR_973 = "FR-973"
+    """
+    French Guiana
+    """
+    FR_974 = "FR-974"
+    """
+    Réunion
+    """
+    FR_ARA = "FR-ARA"
+    """
+    Auvergne-Rhône-Alpes
+    """
+    FR_B = "FR-B"
+    """
+    Aquitaine
+    """
+    FR_BFC = "FR-BFC"
+    """
+    Bourgogne-Franche-Comté
+    """
+    FR_BL = "FR-BL"
+    """
+    Saint-Barthélemy
+    """
+    FR_BRE = "FR-BRE"
+    """
+    Région Bretagne
+    """
+    FR_C = "FR-C"
+    """
+    Auvergne
+    """
+    FR_CP = "FR-CP"
+    """
+    Clipperton Island
+    """
+    FR_CVL = "FR-CVL"
+    """
+    Centre-Val de Loire
+    """
+    FR_D = "FR-D"
+    """
+    Bourgogne
+    """
+    FR_G = "FR-G"
+    """
+    Champagne-Ardenne
+    """
+    FR_GES = "FR-GES"
+    """
+    Grand Est
+    """
+    FR_HDF = "FR-HDF"
+    """
+    Hauts-de-France
+    """
+    FR_IDF = "FR-IDF"
+    """
+    Île-de-France
+    """
+    FR_K = "FR-K"
+    """
+    Languedoc-Roussillon
+    """
+    FR_L = "FR-L"
+    """
+    Limousin
+    """
+    FR_M = "FR-M"
+    """
+    Lorraine
+    """
+    FR_MF = "FR-MF"
+    """
+    Saint-Martin (France)
+    """
+    FR_N = "FR-N"
+    """
+    Midi-Pyrénées
+    """
+    FR_NAQ = "FR-NAQ"
+    """
+    Nouvelle-Aquitaine
+    """
+    FR_NC = "FR-NC"
+    """
+    New Caledonia
+    """
+    FR_NOR = "FR-NOR"
+    """
+    Normandie
+    """
+    FR_O = "FR-O"
+    """
+    Nord-Pas-de-Calais
+    """
+    FR_OCC = "FR-OCC"
+    """
+    Occitanie
+    """
+    FR_P = "FR-P"
+    """
+    Basse-Normandie
+    """
+    FR_PAC = "FR-PAC"
+    """
+    Provence-Alpes-Côte d'Azur
+    """
+    FR_PDL = "FR-PDL"
+    """
+    Pays de la Loire
+    """
+    FR_PF = "FR-PF"
+    """
+    French Polynesia
+    """
+    FR_PM = "FR-PM"
+    """
+    Saint-Pierre and Miquelon
+    """
+    FR_Q = "FR-Q"
+    """
+    Haute-Normandie
+    """
+    FR_S = "FR-S"
+    """
+    Picardie
+    """
+    FR_T = "FR-T"
+    """
+    Poitou-Charentes
+    """
+    FR_TF = "FR-TF"
+    """
+    French Southern and Antarctic Lands
+    """
+    FR_V = "FR-V"
+    """
+    Rhône-Alpes
+    """
+    FR_WF = "FR-WF"
+    """
+    Wallis and Futuna
+    """
+    GA_1 = "GA-1"
+    """
+    Estuaire Province
+    """
+    GA_2 = "GA-2"
+    """
+    Haut-Ogooué Province
+    """
+    GA_3 = "GA-3"
+    """
+    Moyen-Ogooué Province
+    """
+    GA_4 = "GA-4"
+    """
+    Ngounié Province
+    """
+    GA_5 = "GA-5"
+    """
+    Nyanga Province
+    """
+    GA_6 = "GA-6"
+    """
+    Ogooué-Ivindo Province
+    """
+    GA_7 = "GA-7"
+    """
+    Ogooué-Lolo Province
+    """
+    GA_8 = "GA-8"
+    """
+    Ogooué-Maritime Province
+    """
+    GA_9 = "GA-9"
+    """
+    Woleu-Ntem Province
+    """
+    GB_ABC = "GB-ABC"
+    """
+    Armagh, Banbridge and Craigavon
+    """
+    GB_ABD = "GB-ABD"
+    """
+    Aberdeenshire
+    """
+    GB_ABE = "GB-ABE"
+    """
+    Aberdeen
+    """
+    GB_AGB = "GB-AGB"
+    """
+    Argyll and Bute
+    """
+    GB_AGY = "GB-AGY"
+    """
+    Anglesey
+    """
+    GB_AND = "GB-AND"
+    """
+    Ards and North Down
+    """
+    GB_ANN = "GB-ANN"
+    """
+    Antrim and Newtownabbey
+    """
+    GB_ANS = "GB-ANS"
+    """
+    Angus
+    """
+    GB_ANT = "GB-ANT"
+    """
+    Derry City Council
+    """
+    GB_ARM = "GB-ARM"
+    """
+    Armagh City and District Council
+    """
+    GB_BAS = "GB-BAS"
+    """
+    Bath and North East Somerset District
+    """
+    GB_BBD = "GB-BBD"
+    """
+    Borough of Blackburn with Darwen
+    """
+    GB_BCP = "GB-BCP"
+    """
+    Bournemouth, Christchurch and Poole
+    """
+    GB_BDF = "GB-BDF"
+    """
+    Borough of Bedford
+    """
+    GB_BDG = "GB-BDG"
+    """
+    London Borough of Barking and Dagenham
+    """
+    GB_BEN = "GB-BEN"
+    """
+    London Borough of Brent
+    """
+    GB_BEX = "GB-BEX"
+    """
+    London Borough of Bexley
+    """
+    GB_BGE = "GB-BGE"
+    """
+    Bridgend County Borough
+    """
+    GB_BGW = "GB-BGW"
+    """
+    Blaenau Gwent County Borough
+    """
+    GB_BIR = "GB-BIR"
+    """
+    City of Birmingham
+    """
+    GB_BKM = "GB-BKM"
+    """
+    Buckinghamshire
+    """
+    GB_BLA = "GB-BLA"
+    """
+    Ballymena Borough Council
+    """
+    GB_BMH = "GB-BMH"
+    """
+    Borough of Bournemouth
+    """
+    GB_BNB = "GB-BNB"
+    """
+    Banbridge (district)
+    """
+    GB_BNE = "GB-BNE"
+    """
+    London Borough of Barnet
+    """
+    GB_BNH = "GB-BNH"
+    """
+    Brighton and Hove
+    """
+    GB_BNS = "GB-BNS"
+    """
+    Metropolitan Borough of Barnsley
+    """
+    GB_BOL = "GB-BOL"
+    """
+    Metropolitan Borough of Bolton
+    """
+    GB_BPL = "GB-BPL"
+    """
+    Blackpool
+    """
+    GB_BRC = "GB-BRC"
+    """
+    Borough of Bracknell Forest
+    """
+    GB_BRD = "GB-BRD"
+    """
+    City of Bradford
+    """
+    GB_BRY = "GB-BRY"
+    """
+    London Borough of Bromley
+    """
+    GB_BST = "GB-BST"
+    """
+    Bristol
+    """
+    GB_BUR = "GB-BUR"
+    """
+    Metropolitan Borough of Bury
+    """
+    GB_CAM = "GB-CAM"
+    """
+    Cambridgeshire
+    """
+    GB_CAY = "GB-CAY"
+    """
+    Caerphilly County Borough
+    """
+    GB_CBF = "GB-CBF"
+    """
+    Central Bedfordshire District
+    """
+    GB_CCG = "GB-CCG"
+    """
+    Causeway Coast and Glens
+    """
+    GB_CGN = "GB-CGN"
+    """
+    Ceredigion
+    """
+    GB_CGV = "GB-CGV"
+    """
+    Craigavon Borough Council
+    """
+    GB_CHE = "GB-CHE"
+    """
+    Borough of Cheshire East
+    """
+    GB_CHS = "GB-CHS"
+    """
+    Cheshire
+    """
+    GB_CHW = "GB-CHW"
+    """
+    Cheshire West and Chester
+    """
+    GB_CKF = "GB-CKF"
+    """
+    Carrickfergus Borough Council
+    """
+    GB_CLD = "GB-CLD"
+    """
+    Metropolitan Borough of Calderdale
+    """
+    GB_CLK = "GB-CLK"
+    """
+    Clackmannanshire
+    """
+    GB_CLR = "GB-CLR"
+    """
+    Coleraine (district)
+    """
+    GB_CMA = "GB-CMA"
+    """
+    Cumbria
+    """
+    GB_CMD = "GB-CMD"
+    """
+    London Borough of Camden
+    """
+    GB_CMN = "GB-CMN"
+    """
+    Carmarthenshire
+    """
+    GB_CON = "GB-CON"
+    """
+    Cornwall (district)
+    """
+    GB_COV = "GB-COV"
+    """
+    City of Coventry
+    """
+    GB_CRF = "GB-CRF"
+    """
+    Cardiff
+    """
+    GB_CRY = "GB-CRY"
+    """
+    London Borough of Croydon
+    """
+    GB_CSR = "GB-CSR"
+    """
+    Castlereagh
+    """
+    GB_CWY = "GB-CWY"
+    """
+    Conwy County Borough
+    """
+    GB_DAL = "GB-DAL"
+    """
+    Borough of Darlington
+    """
+    GB_DBY = "GB-DBY"
+    """
+    Derbyshire
+    """
+    GB_DEN = "GB-DEN"
+    """
+    Denbighshire
+    """
+    GB_DER = "GB-DER"
+    """
+    Derby
+    """
+    GB_DEV = "GB-DEV"
+    """
+    Devon
+    """
+    GB_DGN = "GB-DGN"
+    """
+    Dungannon and South Tyrone Borough Council
+    """
+    GB_DGY = "GB-DGY"
+    """
+    Dumfries and Galloway
+    """
+    GB_DNC = "GB-DNC"
+    """
+    Metropolitan Borough of Doncaster
+    """
+    GB_DND = "GB-DND"
+    """
+    Dundee
+    """
+    GB_DOR = "GB-DOR"
+    """
+    Dorset (district)
+    """
+    GB_DOW = "GB-DOW"
+    """
+    Down District Council
+    """
+    GB_DRS = "GB-DRS"
+    """
+    Derry and Strabane
+    """
+    GB_DRY = "GB-DRY"
+    """
+    Derry City Council
+    """
+    GB_DUD = "GB-DUD"
+    """
+    Metropolitan Borough of Dudley
+    """
+    GB_DUR = "GB-DUR"
+    """
+    County Durham (district)
+    """
+    GB_EAL = "GB-EAL"
+    """
+    London Borough of Ealing
+    """
+    GB_EAW = "GB-EAW"
+    """
+    England and Wales
+    """
+    GB_EAY = "GB-EAY"
+    """
+    East Ayrshire
+    """
+    GB_EDH = "GB-EDH"
+    """
+    Edinburgh
+    """
+    GB_EDU = "GB-EDU"
+    """
+    East Dunbartonshire
+    """
+    GB_ELN = "GB-ELN"
+    """
+    East Lothian
+    """
+    GB_ELS = "GB-ELS"
+    """
+    Outer Hebrides
+    """
+    GB_ENF = "GB-ENF"
+    """
+    London Borough of Enfield
+    """
+    GB_ENG = "GB-ENG"
+    """
+    England
+    """
+    GB_ERW = "GB-ERW"
+    """
+    East Renfrewshire
+    """
+    GB_ERY = "GB-ERY"
+    """
+    East Riding of Yorkshire (district)
+    """
+    GB_ESS = "GB-ESS"
+    """
+    Essex
+    """
+    GB_ESX = "GB-ESX"
+    """
+    East Sussex
+    """
+    GB_FAL = "GB-FAL"
+    """
+    Falkirk (council area)
+    """
+    GB_FIF = "GB-FIF"
+    """
+    Fife
+    """
+    GB_FLN = "GB-FLN"
+    """
+    Flintshire
+    """
+    GB_FMO = "GB-FMO"
+    """
+    Fermanagh and Omagh
+    """
+    GB_GAT = "GB-GAT"
+    """
+    Metropolitan Borough of Gateshead
+    """
+    GB_GLG = "GB-GLG"
+    """
+    Glasgow
+    """
+    GB_GLS = "GB-GLS"
+    """
+    Gloucestershire
+    """
+    GB_GRE = "GB-GRE"
+    """
+    Royal Borough of Greenwich
+    """
+    GB_GWN = "GB-GWN"
+    """
+    Gwynedd
+    """
+    GB_HAL = "GB-HAL"
+    """
+    Borough of Halton
+    """
+    GB_HAM = "GB-HAM"
+    """
+    Hampshire
+    """
+    GB_HAV = "GB-HAV"
+    """
+    London Borough of Havering
+    """
+    GB_HCK = "GB-HCK"
+    """
+    London Borough of Hackney
+    """
+    GB_HEF = "GB-HEF"
+    """
+    Herefordshire
+    """
+    GB_HIL = "GB-HIL"
+    """
+    London Borough of Hillingdon
+    """
+    GB_HLD = "GB-HLD"
+    """
+    Highland (council area)
+    """
+    GB_HMF = "GB-HMF"
+    """
+    London Borough of Hammersmith and Fulham
+    """
+    GB_HNS = "GB-HNS"
+    """
+    London Borough of Hounslow
+    """
+    GB_HPL = "GB-HPL"
+    """
+    Borough of Hartlepool
+    """
+    GB_HRT = "GB-HRT"
+    """
+    Hertfordshire
+    """
+    GB_HRW = "GB-HRW"
+    """
+    London Borough of Harrow
+    """
+    GB_HRY = "GB-HRY"
+    """
+    London Borough of Haringey
+    """
+    GB_IOS = "GB-IOS"
+    """
+    Isles of Scilly
+    """
+    GB_IOW = "GB-IOW"
+    """
+    Isle of Wight
+    """
+    GB_ISL = "GB-ISL"
+    """
+    London Borough of Islington
+    """
+    GB_IVC = "GB-IVC"
+    """
+    Inverclyde
+    """
+    GB_JSY = "GB-JSY"
+    """
+    Jersey
+    """
+    GB_KEC = "GB-KEC"
+    """
+    Royal Borough of Kensington and Chelsea
+    """
+    GB_KEN = "GB-KEN"
+    """
+    Kent
+    """
+    GB_KHL = "GB-KHL"
+    """
+    Kingston upon Hull
+    """
+    GB_KIR = "GB-KIR"
+    """
+    Metropolitan Borough of Kirklees
+    """
+    GB_KTT = "GB-KTT"
+    """
+    Royal Borough of Kingston upon Thames
+    """
+    GB_KWL = "GB-KWL"
+    """
+    Metropolitan Borough of Knowsley
+    """
+    GB_LAN = "GB-LAN"
+    """
+    Lancashire
+    """
+    GB_LBC = "GB-LBC"
+    """
+    Lisburn and Castlereagh
+    """
+    GB_LBH = "GB-LBH"
+    """
+    London Borough of Lambeth
+    """
+    GB_LCE = "GB-LCE"
+    """
+    Leicester
+    """
+    GB_LDS = "GB-LDS"
+    """
+    City of Leeds
+    """
+    GB_LEC = "GB-LEC"
+    """
+    Leicestershire
+    """
+    GB_LEW = "GB-LEW"
+    """
+    London Borough of Lewisham
+    """
+    GB_LIN = "GB-LIN"
+    """
+    Lincolnshire
+    """
+    GB_LIV = "GB-LIV"
+    """
+    Liverpool
+    """
+    GB_LND = "GB-LND"
+    """
+    City of London
+    """
+    GB_LSB = "GB-LSB"
+    """
+    Lisburn City Council
+    """
+    GB_LUT = "GB-LUT"
+    """
+    Luton
+    """
+    GB_MAN = "GB-MAN"
+    """
+    City of Manchester
+    """
+    GB_MDB = "GB-MDB"
+    """
+    Borough of Middlesbrough
+    """
+    GB_MDW = "GB-MDW"
+    """
+    Borough of Medway
+    """
+    GB_MEA = "GB-MEA"
+    """
+    Mid and East Antrim
+    """
+    GB_MFT = "GB-MFT"
+    """
+    Magherafelt (district)
+    """
+    GB_MIK = "GB-MIK"
+    """
+    Borough of Milton Keynes
+    """
+    GB_MLN = "GB-MLN"
+    """
+    Midlothian
+    """
+    GB_MON = "GB-MON"
+    """
+    Monmouthshire
+    """
+    GB_MRT = "GB-MRT"
+    """
+    London Borough of Merton
+    """
+    GB_MRY = "GB-MRY"
+    """
+    Moray
+    """
+    GB_MTY = "GB-MTY"
+    """
+    Merthyr Tydfil County Borough
+    """
+    GB_MUL = "GB-MUL"
+    """
+    Mid Ulster
+    """
+    GB_MYL = "GB-MYL"
+    """
+    Moyle District Council
+    """
+    GB_NAY = "GB-NAY"
+    """
+    North Ayrshire
+    """
+    GB_NBL = "GB-NBL"
+    """
+    Northumberland
+    """
+    GB_NDN = "GB-NDN"
+    """
+    North Down Borough Council
+    """
+    GB_NEL = "GB-NEL"
+    """
+    Borough of North East Lincolnshire
+    """
+    GB_NET = "GB-NET"
+    """
+    City of Newcastle upon Tyne
+    """
+    GB_NFK = "GB-NFK"
+    """
+    Norfolk, England
+    """
+    GB_NGM = "GB-NGM"
+    """
+    Nottingham
+    """
+    GB_NIR = "GB-NIR"
+    """
+    Northern Ireland
+    """
+    GB_NLK = "GB-NLK"
+    """
+    North Lanarkshire
+    """
+    GB_NLN = "GB-NLN"
+    """
+    Borough of North Lincolnshire
+    """
+    GB_NMD = "GB-NMD"
+    """
+    Newry, Mourne and Down
+    """
+    GB_NSM = "GB-NSM"
+    """
+    North Somerset District
+    """
+    GB_NTA = "GB-NTA"
+    """
+    Newtownabbey Borough Council
+    """
+    GB_NTH = "GB-NTH"
+    """
+    Northamptonshire
+    """
+    GB_NTL = "GB-NTL"
+    """
+    Neath Port Talbot County Borough
+    """
+    GB_NTT = "GB-NTT"
+    """
+    Nottinghamshire
+    """
+    GB_NTY = "GB-NTY"
+    """
+    Metropolitan Borough of North Tyneside
+    """
+    GB_NWM = "GB-NWM"
+    """
+    London Borough of Newham
+    """
+    GB_NWP = "GB-NWP"
+    """
+    Newport, Wales
+    """
+    GB_NYK = "GB-NYK"
+    """
+    North Yorkshire (district)
+    """
+    GB_NYM = "GB-NYM"
+    """
+    Newry and Mourne District Council
+    """
+    GB_OLD = "GB-OLD"
+    """
+    Metropolitan Borough of Oldham
+    """
+    GB_OMH = "GB-OMH"
+    """
+    Omagh District Council
+    """
+    GB_ORK = "GB-ORK"
+    """
+    Orkney Islands
+    """
+    GB_OXF = "GB-OXF"
+    """
+    Oxfordshire
+    """
+    GB_PEM = "GB-PEM"
+    """
+    Pembrokeshire
+    """
+    GB_PKN = "GB-PKN"
+    """
+    Perth and Kinross
+    """
+    GB_PLY = "GB-PLY"
+    """
+    Plymouth
+    """
+    GB_POL = "GB-POL"
+    """
+    Borough of Poole
+    """
+    GB_POR = "GB-POR"
+    """
+    Portsmouth
+    """
+    GB_POW = "GB-POW"
+    """
+    Powys
+    """
+    GB_PTE = "GB-PTE"
+    """
+    City of Peterborough
+    """
+    GB_RCC = "GB-RCC"
+    """
+    Redcar and Cleveland
+    """
+    GB_RCH = "GB-RCH"
+    """
+    Metropolitan Borough of Rochdale
+    """
+    GB_RCT = "GB-RCT"
+    """
+    Rhondda Cynon Taf
+    """
+    GB_RDB = "GB-RDB"
+    """
+    London Borough of Redbridge
+    """
+    GB_RDG = "GB-RDG"
+    """
+    Reading, Berkshire
+    """
+    GB_RFW = "GB-RFW"
+    """
+    Renfrewshire
+    """
+    GB_RIC = "GB-RIC"
+    """
+    London Borough of Richmond upon Thames
+    """
+    GB_ROT = "GB-ROT"
+    """
+    Metropolitan Borough of Rotherham
+    """
+    GB_RUT = "GB-RUT"
+    """
+    Rutland
+    """
+    GB_SAW = "GB-SAW"
+    """
+    Metropolitan Borough of Sandwell
+    """
+    GB_SAY = "GB-SAY"
+    """
+    South Ayrshire
+    """
+    GB_SCB = "GB-SCB"
+    """
+    Scottish Borders
+    """
+    GB_SCT = "GB-SCT"
+    """
+    Scotland
+    """
+    GB_SFK = "GB-SFK"
+    """
+    Suffolk
+    """
+    GB_SFT = "GB-SFT"
+    """
+    Metropolitan Borough of Sefton
+    """
+    GB_SGC = "GB-SGC"
+    """
+    South Gloucestershire District
+    """
+    GB_SHF = "GB-SHF"
+    """
+    City of Sheffield
+    """
+    GB_SHN = "GB-SHN"
+    """
+    Metropolitan Borough of St Helens
+    """
+    GB_SHR = "GB-SHR"
+    """
+    Shropshire (district)
+    """
+    GB_SKP = "GB-SKP"
+    """
+    Metropolitan Borough of Stockport
+    """
+    GB_SLF = "GB-SLF"
+    """
+    City of Salford
+    """
+    GB_SLG = "GB-SLG"
+    """
+    Borough of Slough
+    """
+    GB_SLK = "GB-SLK"
+    """
+    South Lanarkshire
+    """
+    GB_SND = "GB-SND"
+    """
+    City of Sunderland
+    """
+    GB_SOL = "GB-SOL"
+    """
+    Metropolitan Borough of Solihull
+    """
+    GB_SOM = "GB-SOM"
+    """
+    Somerset
+    """
+    GB_SOS = "GB-SOS"
+    """
+    Borough of Southend-on-Sea
+    """
+    GB_SRY = "GB-SRY"
+    """
+    Surrey
+    """
+    GB_STB = "GB-STB"
+    """
+    Strabane District Council
+    """
+    GB_STE = "GB-STE"
+    """
+    Stoke-on-Trent
+    """
+    GB_STG = "GB-STG"
+    """
+    Stirling (council area)
+    """
+    GB_STH = "GB-STH"
+    """
+    Southampton
+    """
+    GB_STN = "GB-STN"
+    """
+    London Borough of Sutton
+    """
+    GB_STS = "GB-STS"
+    """
+    Staffordshire
+    """
+    GB_STT = "GB-STT"
+    """
+    Borough of Stockton-on-Tees
+    """
+    GB_STY = "GB-STY"
+    """
+    Metropolitan Borough of South Tyneside
+    """
+    GB_SWA = "GB-SWA"
+    """
+    Swansea
+    """
+    GB_SWD = "GB-SWD"
+    """
+    Borough of Swindon
+    """
+    GB_SWK = "GB-SWK"
+    """
+    London Borough of Southwark
+    """
+    GB_TAM = "GB-TAM"
+    """
+    Metropolitan Borough of Tameside
+    """
+    GB_TFW = "GB-TFW"
+    """
+    Telford and Wrekin
+    """
+    GB_THR = "GB-THR"
+    """
+    Thurrock
+    """
+    GB_TOB = "GB-TOB"
+    """
+    Borough of Torbay
+    """
+    GB_TOF = "GB-TOF"
+    """
+    Torfaen
+    """
+    GB_TRF = "GB-TRF"
+    """
+    Metropolitan Borough of Trafford
+    """
+    GB_TWH = "GB-TWH"
+    """
+    London Borough of Tower Hamlets
+    """
+    GB_UKM = "GB-UKM"
+    """
+    United Kingdom
+    """
+    GB_VGL = "GB-VGL"
+    """
+    Vale of Glamorgan County Borough
+    """
+    GB_WAR = "GB-WAR"
+    """
+    Warwickshire
+    """
+    GB_WBK = "GB-WBK"
+    """
+    West Berkshire District
+    """
+    GB_WDU = "GB-WDU"
+    """
+    West Dunbartonshire
+    """
+    GB_WFT = "GB-WFT"
+    """
+    London Borough of Waltham Forest
+    """
+    GB_WGN = "GB-WGN"
+    """
+    Metropolitan Borough of Wigan
+    """
+    GB_WIL = "GB-WIL"
+    """
+    Wiltshire
+    """
+    GB_WKF = "GB-WKF"
+    """
+    City of Wakefield
+    """
+    GB_WLL = "GB-WLL"
+    """
+    Metropolitan Borough of Walsall
+    """
+    GB_WLN = "GB-WLN"
+    """
+    West Lothian
+    """
+    GB_WLS = "GB-WLS"
+    """
+    Wales
+    """
+    GB_WLV = "GB-WLV"
+    """
+    Wolverhampton
+    """
+    GB_WND = "GB-WND"
+    """
+    London Borough of Wandsworth
+    """
+    GB_WNM = "GB-WNM"
+    """
+    Royal Borough of Windsor and Maidenhead
+    """
+    GB_WOK = "GB-WOK"
+    """
+    Borough of Wokingham
+    """
+    GB_WOR = "GB-WOR"
+    """
+    Worcestershire
+    """
+    GB_WRL = "GB-WRL"
+    """
+    Metropolitan Borough of Wirral
+    """
+    GB_WRT = "GB-WRT"
+    """
+    Borough of Warrington
+    """
+    GB_WRX = "GB-WRX"
+    """
+    Wrexham County Borough
+    """
+    GB_WSM = "GB-WSM"
+    """
+    City of Westminster
+    """
+    GB_WSX = "GB-WSX"
+    """
+    West Sussex
+    """
+    GB_YOR = "GB-YOR"
+    """
+    City of York
+    """
+    GB_ZET = "GB-ZET"
+    """
+    Shetland Islands
+    """
+    GD_01 = "GD-01"
+    """
+    Saint Andrew Parish, Grenada
+    """
+    GD_02 = "GD-02"
+    """
+    Saint David Parish, Grenada
+    """
+    GD_03 = "GD-03"
+    """
+    Saint George Parish, Grenada
+    """
+    GD_04 = "GD-04"
+    """
+    Saint John Parish, Grenada
+    """
+    GD_05 = "GD-05"
+    """
+    Saint Mark Parish, Grenada
+    """
+    GD_06 = "GD-06"
+    """
+    Saint Patrick Parish, Grenada
+    """
+    GD_10 = "GD-10"
+    """
+    Carriacou and Petite Martinique
+    """
+    GE_25 = "GE-25"
+    """
+    Kaspi Municipality
+    """
+    GE_29 = "GE-29"
+    """
+    Khelvachauri Municipality
+    """
+    GE_37 = "GE-37"
+    """
+    Marneuli Municipality
+    """
+    GE_44 = "GE-44"
+    """
+    Ozurgeti Municipality
+    """
+    GE_50 = "GE-50"
+    """
+    Senaki Municipality
+    """
+    GE_AJ = "GE-AJ"
+    """
+    Adjara
+    """
+    GE_GU = "GE-GU"
+    """
+    Guria
+    """
+    GE_IM = "GE-IM"
+    """
+    Imereti
+    """
+    GE_KA = "GE-KA"
+    """
+    Kakheti
+    """
+    GE_KK = "GE-KK"
+    """
+    Kvemo Kartli
+    """
+    GE_MM = "GE-MM"
+    """
+    Mtskheta-Mtianeti
+    """
+    GE_RL = "GE-RL"
+    """
+    Racha-Lechkhumi and Kvemo Svaneti
+    """
+    GE_SJ = "GE-SJ"
+    """
+    Samtskhe-Javakheti
+    """
+    GE_SK = "GE-SK"
+    """
+    Shida Kartli
+    """
+    GE_SZ = "GE-SZ"
+    """
+    Samegrelo-Zemo Svaneti
+    """
+    GE_TB = "GE-TB"
+    """
+    Tbilisi
+    """
+    GH_AA = "GH-AA"
+    """
+    Greater Accra Region
+    """
+    GH_AH = "GH-AH"
+    """
+    Ashanti Region
+    """
+    GH_BA = "GH-BA"
+    """
+    Brong Ahafo Region
+    """
+    GH_CP = "GH-CP"
+    """
+    Central Region (Ghana)
+    """
+    GH_EP = "GH-EP"
+    """
+    Eastern Region (Ghana)
+    """
+    GH_NP = "GH-NP"
+    """
+    Northern Region (Ghana)
+    """
+    GH_SV = "GH-SV"
+    """
+    Savannah Region
+    """
+    GH_TV = "GH-TV"
+    """
+    Volta Region
+    """
+    GH_UE = "GH-UE"
+    """
+    Upper East Region (Ghana)
+    """
+    GH_UW = "GH-UW"
+    """
+    Upper West Region (Ghana)
+    """
+    GH_WN = "GH-WN"
+    """
+    Western North Region
+    """
+    GH_WP = "GH-WP"
+    """
+    Western Region (Ghana)
+    """
+    GL_AV = "GL-AV"
+    """
+    Avannaata
+    """
+    GL_KU = "GL-KU"
+    """
+    Kujalleq
+    """
+    GL_QA = "GL-QA"
+    """
+    Qaasuitsup
+    """
+    GL_QE = "GL-QE"
+    """
+    Qeqqata
+    """
+    GL_QT = "GL-QT"
+    """
+    Qeqertalik
+    """
+    GL_SM = "GL-SM"
+    """
+    Sermersooq
+    """
+    GM_B = "GM-B"
+    """
+    Banjul
+    """
+    GN_B = "GN-B"
+    """
+    Boké Region
+    """
+    GN_C = "GN-C"
+    """
+    Conakry
+    """
+    GN_DB = "GN-DB"
+    """
+    Dabola Prefecture
+    """
+    GN_DI = "GN-DI"
+    """
+    Dinguiraye Prefecture
+    """
+    GN_FO = "GN-FO"
+    """
+    Forécariah
+    """
+    GN_GA = "GN-GA"
+    """
+    Gaoual Prefecture
+    """
+    GN_GU = "GN-GU"
+    """
+    Guéckédou Prefecture
+    """
+    GN_KE = "GN-KE"
+    """
+    Kérouané Prefecture
+    """
+    GN_LE = "GN-LE"
+    """
+    Lélouma Prefecture
+    """
+    GN_ML = "GN-ML"
+    """
+    Préfecture de Mali
+    """
+    GN_SI = "GN-SI"
+    """
+    Siguiri Prefecture
+    """
+    GN_YO = "GN-YO"
+    """
+    Yomou
+    """
+    GQ_AN = "GQ-AN"
+    """
+    Annobón
+    """
+    GQ_BN = "GQ-BN"
+    """
+    Bioko Norte
+    """
+    GQ_BS = "GQ-BS"
+    """
+    Bioko Sur
+    """
+    GQ_C = "GQ-C"
+    """
+    Río Muni
+    """
+    GQ_CS = "GQ-CS"
+    """
+    Centro Sur
+    """
+    GQ_DJ = "GQ-DJ"
+    """
+    Djibloho
+    """
+    GQ_KN = "GQ-KN"
+    """
+    Kié-Ntem Province
+    """
+    GQ_LI = "GQ-LI"
+    """
+    Litoral
+    """
+    GQ_WN = "GQ-WN"
+    """
+    Wele-Nzas
+    """
+    GR_01 = "GR-01"
+    """
+    Aetolia-Acarnania
+    """
+    GR_03 = "GR-03"
+    """
+    Boeotia
+    """
+    GR_04 = "GR-04"
+    """
+    Euboea Regional Unit
+    """
+    GR_05 = "GR-05"
+    """
+    Evrytania
+    """
+    GR_06 = "GR-06"
+    """
+    Phthiotis
+    """
+    GR_07 = "GR-07"
+    """
+    Phocis
+    """
+    GR_11 = "GR-11"
+    """
+    Argolis
+    """
+    GR_12 = "GR-12"
+    """
+    Arcadia, Peloponnese
+    """
+    GR_13 = "GR-13"
+    """
+    Achaea
+    """
+    GR_14 = "GR-14"
+    """
+    Elis Regional Unit
+    """
+    GR_15 = "GR-15"
+    """
+    Corinthia
+    """
+    GR_16 = "GR-16"
+    """
+    Laconia
+    """
+    GR_17 = "GR-17"
+    """
+    Messenia
+    """
+    GR_21 = "GR-21"
+    """
+    Zakynthos
+    """
+    GR_22 = "GR-22"
+    """
+    Corfu
+    """
+    GR_24 = "GR-24"
+    """
+    Lefkada Regional Unit
+    """
+    GR_31 = "GR-31"
+    """
+    Arta Prefecture
+    """
+    GR_32 = "GR-32"
+    """
+    Thesprotia Prefecture
+    """
+    GR_33 = "GR-33"
+    """
+    Ioannina Prefecture
+    """
+    GR_34 = "GR-34"
+    """
+    Preveza Prefecture
+    """
+    GR_41 = "GR-41"
+    """
+    Karditsa Prefecture
+    """
+    GR_42 = "GR-42"
+    """
+    Larissa Prefecture
+    """
+    GR_43 = "GR-43"
+    """
+    Magnesia Prefecture, Greece
+    """
+    GR_44 = "GR-44"
+    """
+    Trikala Prefecture
+    """
+    GR_51 = "GR-51"
+    """
+    Grevena Prefecture
+    """
+    GR_52 = "GR-52"
+    """
+    Drama Prefecture
+    """
+    GR_53 = "GR-53"
+    """
+    Imathia
+    """
+    GR_54 = "GR-54"
+    """
+    Thessaloniki Prefecture
+    """
+    GR_55 = "GR-55"
+    """
+    Kavala Prefecture
+    """
+    GR_56 = "GR-56"
+    """
+    Kastoria
+    """
+    GR_57 = "GR-57"
+    """
+    Kilkis Prefecture
+    """
+    GR_58 = "GR-58"
+    """
+    Kozani Regional Unit
+    """
+    GR_59 = "GR-59"
+    """
+    Pella Prefecture
+    """
+    GR_61 = "GR-61"
+    """
+    Pieria
+    """
+    GR_62 = "GR-62"
+    """
+    Serres Prefecture
+    """
+    GR_63 = "GR-63"
+    """
+    Florina Prefecture
+    """
+    GR_64 = "GR-64"
+    """
+    Chalkidiki
+    """
+    GR_71 = "GR-71"
+    """
+    Evros (regional unit)
+    """
+    GR_72 = "GR-72"
+    """
+    Xanthi Prefecture
+    """
+    GR_73 = "GR-73"
+    """
+    Rhodope Prefecture
+    """
+    GR_82 = "GR-82"
+    """
+    Cyclades Prefecture
+    """
+    GR_83 = "GR-83"
+    """
+    Lesbos
+    """
+    GR_84 = "GR-84"
+    """
+    Samos Island
+    """
+    GR_85 = "GR-85"
+    """
+    Chios
+    """
+    GR_91 = "GR-91"
+    """
+    Heraklion Prefecture
+    """
+    GR_92 = "GR-92"
+    """
+    Lasithi Prefecture
+    """
+    GR_93 = "GR-93"
+    """
+    Rethymno Prefecture
+    """
+    GR_94 = "GR-94"
+    """
+    Chania Regional Unit
+    """
+    GR_A = "GR-A"
+    """
+    Eastern Macedonia and Thrace
+    """
+    GR_A2 = "GR-A2"
+    """
+    East Attica
+    """
+    GR_B = "GR-B"
+    """
+    Central Macedonia
+    """
+    GR_C = "GR-C"
+    """
+    West Macedonia
+    """
+    GR_D = "GR-D"
+    """
+    Epirus (region)
+    """
+    GR_E = "GR-E"
+    """
+    Thessalia
+    """
+    GR_F = "GR-F"
+    """
+    Ionian Islands
+    """
+    GR_G = "GR-G"
+    """
+    Western Greece
+    """
+    GR_H = "GR-H"
+    """
+    Central Greece Region
+    """
+    GR_I = "GR-I"
+    """
+    Attica
+    """
+    GR_J = "GR-J"
+    """
+    Peloponnese Region
+    """
+    GR_K = "GR-K"
+    """
+    North Aegean
+    """
+    GR_L = "GR-L"
+    """
+    South Aegean
+    """
+    GT_01 = "GT-01"
+    """
+    Guatemala Department
+    """
+    GT_02 = "GT-02"
+    """
+    El Progreso Department
+    """
+    GT_03 = "GT-03"
+    """
+    Sacatepéquez Department
+    """
+    GT_04 = "GT-04"
+    """
+    Chimaltenango Department
+    """
+    GT_05 = "GT-05"
+    """
+    Escuintla Department
+    """
+    GT_06 = "GT-06"
+    """
+    Santa Rosa Department (Guatemala)
+    """
+    GT_07 = "GT-07"
+    """
+    Sololá Department
+    """
+    GT_08 = "GT-08"
+    """
+    Totonicapán Department
+    """
+    GT_09 = "GT-09"
+    """
+    Quetzaltenango Department
+    """
+    GT_10 = "GT-10"
+    """
+    Suchitepéquez Department
+    """
+    GT_11 = "GT-11"
+    """
+    Retalhuleu Department
+    """
+    GT_12 = "GT-12"
+    """
+    San Marcos Department
+    """
+    GT_13 = "GT-13"
+    """
+    Huehuetenango Department
+    """
+    GT_14 = "GT-14"
+    """
+    Quiché Department
+    """
+    GT_15 = "GT-15"
+    """
+    Baja Verapaz Department
+    """
+    GT_16 = "GT-16"
+    """
+    Alta Verapaz Department
+    """
+    GT_17 = "GT-17"
+    """
+    Petén Department
+    """
+    GT_18 = "GT-18"
+    """
+    Izabal Department
+    """
+    GT_19 = "GT-19"
+    """
+    Zacapa Department
+    """
+    GT_20 = "GT-20"
+    """
+    Chiquimula Department
+    """
+    GT_21 = "GT-21"
+    """
+    Jalapa Department
+    """
+    GT_22 = "GT-22"
+    """
+    Jutiapa Department
+    """
+    GW_BA = "GW-BA"
+    """
+    Bafatá Region
+    """
+    GW_BM = "GW-BM"
+    """
+    Biombo Region
+    """
+    GW_BS = "GW-BS"
+    """
+    Bissau
+    """
+    GW_CA = "GW-CA"
+    """
+    Cacheu Region
+    """
+    GW_GA = "GW-GA"
+    """
+    Gabú Region
+    """
+    GW_L = "GW-L"
+    """
+    Eastern Province (Guinea-Bissau)
+    """
+    GW_N = "GW-N"
+    """
+    Northern Province (Guinea-Bissau)
+    """
+    GW_OI = "GW-OI"
+    """
+    Oio Region
+    """
+    GW_QU = "GW-QU"
+    """
+    Quinara Region
+    """
+    GW_S = "GW-S"
+    """
+    Southern Province (Guinea-Bissau)
+    """
+    GW_TO = "GW-TO"
+    """
+    Tombali Region
+    """
+    GY_BA = "GY-BA"
+    """
+    Barima-Waini
+    """
+    GY_CU = "GY-CU"
+    """
+    Cuyuni-Mazaruni
+    """
+    GY_DE = "GY-DE"
+    """
+    Demerara-Mahaica
+    """
+    GY_EB = "GY-EB"
+    """
+    East Berbice-Corentyne
+    """
+    GY_ES = "GY-ES"
+    """
+    Essequibo Islands-West Demerara
+    """
+    GY_MA = "GY-MA"
+    """
+    Mahaica-Berbice
+    """
+    GY_PM = "GY-PM"
+    """
+    Pomeroon-Supenaam
+    """
+    GY_PT = "GY-PT"
+    """
+    Potaro-Siparuni
+    """
+    GY_UD = "GY-UD"
+    """
+    Upper Demerara-Berbice
+    """
+    GY_UT = "GY-UT"
+    """
+    Upper Takutu-Upper Essequibo
+    """
+    HN_AT = "HN-AT"
+    """
+    Atlántida Department
+    """
+    HN_CH = "HN-CH"
+    """
+    Choluteca Department
+    """
+    HN_CL = "HN-CL"
+    """
+    Colón Department
+    """
+    HN_CM = "HN-CM"
+    """
+    Comayagua Department
+    """
+    HN_CP = "HN-CP"
+    """
+    Copán Department
+    """
+    HN_CR = "HN-CR"
+    """
+    Cortés Department
+    """
+    HN_EP = "HN-EP"
+    """
+    El Paraíso Department
+    """
+    HN_FM = "HN-FM"
+    """
+    Francisco Morazán Department
+    """
+    HN_GD = "HN-GD"
+    """
+    Gracias a Dios Department
+    """
+    HN_IB = "HN-IB"
+    """
+    Bay Islands Department
+    """
+    HN_IN = "HN-IN"
+    """
+    Intibucá Department
+    """
+    HN_LE = "HN-LE"
+    """
+    Lempira Department
+    """
+    HN_LP = "HN-LP"
+    """
+    La Paz Department, Honduras
+    """
+    HN_OC = "HN-OC"
+    """
+    Ocotepeque Department
+    """
+    HN_OL = "HN-OL"
+    """
+    Olancho Department
+    """
+    HN_SB = "HN-SB"
+    """
+    Santa Bárbara Department, Honduras
+    """
+    HN_VA = "HN-VA"
+    """
+    Valle Department
+    """
+    HN_YO = "HN-YO"
+    """
+    Yoro Department
+    """
+    HR_01 = "HR-01"
+    """
+    Zagreb County
+    """
+    HR_02 = "HR-02"
+    """
+    Krapina-Zagorje County
+    """
+    HR_03 = "HR-03"
+    """
+    Sisak-Moslavina County
+    """
+    HR_04 = "HR-04"
+    """
+    Karlovac County
+    """
+    HR_05 = "HR-05"
+    """
+    Varaždin County
+    """
+    HR_06 = "HR-06"
+    """
+    Koprivnica-Križevci County
+    """
+    HR_07 = "HR-07"
+    """
+    Bjelovar-Bilogora County
+    """
+    HR_08 = "HR-08"
+    """
+    Primorje-Gorski Kotar County
+    """
+    HR_09 = "HR-09"
+    """
+    Lika-Senj County
+    """
+    HR_10 = "HR-10"
+    """
+    Virovitica-Podravina County
+    """
+    HR_11 = "HR-11"
+    """
+    Požega-Slavonia County
+    """
+    HR_12 = "HR-12"
+    """
+    Brod-Posavina County
+    """
+    HR_13 = "HR-13"
+    """
+    Zadar County
+    """
+    HR_14 = "HR-14"
+    """
+    Osijek-Baranja County
+    """
+    HR_15 = "HR-15"
+    """
+    Šibenik-Knin County
+    """
+    HR_16 = "HR-16"
+    """
+    Vukovar-Syrmia County
+    """
+    HR_17 = "HR-17"
+    """
+    Split-Dalmatia County
+    """
+    HR_18 = "HR-18"
+    """
+    Istria County
+    """
+    HR_19 = "HR-19"
+    """
+    Dubrovnik-Neretva County
+    """
+    HR_20 = "HR-20"
+    """
+    Međimurje County
+    """
+    HR_21 = "HR-21"
+    """
+    Zagreb
+    """
+    HT_AR = "HT-AR"
+    """
+    Artibonite (department)
+    """
+    HT_CE = "HT-CE"
+    """
+    Centre (department)
+    """
+    HT_GA = "HT-GA"
+    """
+    Grand'Anse (department)
+    """
+    HT_ND = "HT-ND"
+    """
+    Nord (Haitian department)
+    """
+    HT_NE = "HT-NE"
+    """
+    Nord-Est (department)
+    """
+    HT_NI = "HT-NI"
+    """
+    Nippes (department)
+    """
+    HT_NO = "HT-NO"
+    """
+    Nord-Ouest (department)
+    """
+    HT_OU = "HT-OU"
+    """
+    Ouest (department)
+    """
+    HT_SD = "HT-SD"
+    """
+    Sud (department)
+    """
+    HT_SE = "HT-SE"
+    """
+    Sud-Est (department)
+    """
+    HU_BA = "HU-BA"
+    """
+    Baranya County
+    """
+    HU_BC = "HU-BC"
+    """
+    Békéscsaba
+    """
+    HU_BE = "HU-BE"
+    """
+    Békés County
+    """
+    HU_BK = "HU-BK"
+    """
+    Bács-Kiskun County
+    """
+    HU_BU = "HU-BU"
+    """
+    Budapest
+    """
+    HU_BZ = "HU-BZ"
+    """
+    Borsod-Abaúj-Zemplén County
+    """
+    HU_CS = "HU-CS"
+    """
+    Csongrád-Csanád County
+    """
+    HU_DE = "HU-DE"
+    """
+    Debrecen
+    """
+    HU_DU = "HU-DU"
+    """
+    Dunaújváros
+    """
+    HU_EG = "HU-EG"
+    """
+    Eger
+    """
+    HU_ER = "HU-ER"
+    """
+    Érd
+    """
+    HU_FE = "HU-FE"
+    """
+    Fejér County
+    """
+    HU_GS = "HU-GS"
+    """
+    Győr-Moson-Sopron County
+    """
+    HU_GY = "HU-GY"
+    """
+    Győr
+    """
+    HU_HB = "HU-HB"
+    """
+    Hajdú-Bihar County
+    """
+    HU_HE = "HU-HE"
+    """
+    Heves County
+    """
+    HU_HV = "HU-HV"
+    """
+    Hódmezővásárhely
+    """
+    HU_JN = "HU-JN"
+    """
+    Jász-Nagykun-Szolnok County
+    """
+    HU_KE = "HU-KE"
+    """
+    Komárom-Esztergom County
+    """
+    HU_KM = "HU-KM"
+    """
+    Kecskemét
+    """
+    HU_KV = "HU-KV"
+    """
+    Kaposvár
+    """
+    HU_MI = "HU-MI"
+    """
+    Miskolc
+    """
+    HU_NK = "HU-NK"
+    """
+    Nagykanizsa
+    """
+    HU_NO = "HU-NO"
+    """
+    Nógrád County
+    """
+    HU_NY = "HU-NY"
+    """
+    Nyíregyháza
+    """
+    HU_PE = "HU-PE"
+    """
+    Pest County
+    """
+    HU_PS = "HU-PS"
+    """
+    Pécs
+    """
+    HU_SD = "HU-SD"
+    """
+    Szeged
+    """
+    HU_SF = "HU-SF"
+    """
+    Székesfehérvár
+    """
+    HU_SH = "HU-SH"
+    """
+    Szombathely
+    """
+    HU_SK = "HU-SK"
+    """
+    Szolnok
+    """
+    HU_SN = "HU-SN"
+    """
+    Sopron
+    """
+    HU_SO = "HU-SO"
+    """
+    Somogy County
+    """
+    HU_SS = "HU-SS"
+    """
+    Szekszárd
+    """
+    HU_ST = "HU-ST"
+    """
+    Salgótarján
+    """
+    HU_SZ = "HU-SZ"
+    """
+    Szabolcs-Szatmár-Bereg County
+    """
+    HU_TB = "HU-TB"
+    """
+    Tatabánya
+    """
+    HU_TO = "HU-TO"
+    """
+    Tolna County
+    """
+    HU_VA = "HU-VA"
+    """
+    Vas County
+    """
+    HU_VE = "HU-VE"
+    """
+    Veszprém County
+    """
+    HU_VM = "HU-VM"
+    """
+    Veszprém
+    """
+    HU_ZA = "HU-ZA"
+    """
+    Zala County
+    """
+    HU_ZE = "HU-ZE"
+    """
+    Zalaegerszeg
+    """
+    ID_AC = "ID-AC"
+    """
+    Aceh
+    """
+    ID_BA = "ID-BA"
+    """
+    Bali
+    """
+    ID_BB = "ID-BB"
+    """
+    Bangka Belitung Islands
+    """
+    ID_BE = "ID-BE"
+    """
+    Bengkulu
+    """
+    ID_BT = "ID-BT"
+    """
+    Banten
+    """
+    ID_GO = "ID-GO"
+    """
+    Gorontalo
+    """
+    ID_JA = "ID-JA"
+    """
+    Jambi
+    """
+    ID_JB = "ID-JB"
+    """
+    West Java
+    """
+    ID_JI = "ID-JI"
+    """
+    East Java
+    """
+    ID_JK = "ID-JK"
+    """
+    Jakarta
+    """
+    ID_JT = "ID-JT"
+    """
+    Central Java
+    """
+    ID_KA = "ID-KA"
+    """
+    Kalimantan
+    """
+    ID_KB = "ID-KB"
+    """
+    West Kalimantan
+    """
+    ID_KI = "ID-KI"
+    """
+    East Kalimantan
+    """
+    ID_KR = "ID-KR"
+    """
+    Riau Islands
+    """
+    ID_KS = "ID-KS"
+    """
+    South Kalimantan
+    """
+    ID_KT = "ID-KT"
+    """
+    Central Kalimantan
+    """
+    ID_KU = "ID-KU"
+    """
+    North Kalimantan
+    """
+    ID_LA = "ID-LA"
+    """
+    Lampung
+    """
+    ID_MA = "ID-MA"
+    """
+    Maluku
+    """
+    ID_ML = "ID-ML"
+    """
+    Moluccas
+    """
+    ID_MU = "ID-MU"
+    """
+    North Maluku
+    """
+    ID_NB = "ID-NB"
+    """
+    West Nusa Tenggara
+    """
+    ID_NT = "ID-NT"
+    """
+    East Nusa Tenggara
+    """
+    ID_NU = "ID-NU"
+    """
+    Lesser Sunda Islands
+    """
+    ID_PA = "ID-PA"
+    """
+    Papua (province)
+    """
+    ID_PB = "ID-PB"
+    """
+    West Papua (province)
+    """
+    ID_PD = "ID-PD"
+    """
+    Southwest Papua
+    """
+    ID_PP = "ID-PP"
+    """
+    Western New Guinea
+    """
+    ID_RI = "ID-RI"
+    """
+    Riau
+    """
+    ID_SA = "ID-SA"
+    """
+    North Sulawesi
+    """
+    ID_SB = "ID-SB"
+    """
+    West Sumatra
+    """
+    ID_SG = "ID-SG"
+    """
+    Southeast Sulawesi
+    """
+    ID_SL = "ID-SL"
+    """
+    Sulawesi
+    """
+    ID_SM = "ID-SM"
+    """
+    Sumatra
+    """
+    ID_SN = "ID-SN"
+    """
+    South Sulawesi
+    """
+    ID_SR = "ID-SR"
+    """
+    West Sulawesi
+    """
+    ID_SS = "ID-SS"
+    """
+    South Sumatra
+    """
+    ID_ST = "ID-ST"
+    """
+    Central Sulawesi
+    """
+    ID_SU = "ID-SU"
+    """
+    North Sumatra
+    """
+    ID_YO = "ID-YO"
+    """
+    Yogyakarta (Special Region)
+    """
+    IE_C = "IE-C"
+    """
+    Connacht
+    """
+    IE_CE = "IE-CE"
+    """
+    County Clare
+    """
+    IE_CN = "IE-CN"
+    """
+    County Cavan
+    """
+    IE_CO = "IE-CO"
+    """
+    County Cork
+    """
+    IE_CW = "IE-CW"
+    """
+    County Carlow
+    """
+    IE_D = "IE-D"
+    """
+    County Dublin
+    """
+    IE_DL = "IE-DL"
+    """
+    County Donegal
+    """
+    IE_G = "IE-G"
+    """
+    County Galway
+    """
+    IE_KE = "IE-KE"
+    """
+    County Kildare
+    """
+    IE_KK = "IE-KK"
+    """
+    County Kilkenny
+    """
+    IE_KY = "IE-KY"
+    """
+    County Kerry
+    """
+    IE_L = "IE-L"
+    """
+    Leinster
+    """
+    IE_LD = "IE-LD"
+    """
+    County Longford
+    """
+    IE_LH = "IE-LH"
+    """
+    County Louth
+    """
+    IE_LK = "IE-LK"
+    """
+    County Limerick
+    """
+    IE_LM = "IE-LM"
+    """
+    County Leitrim
+    """
+    IE_LS = "IE-LS"
+    """
+    County Laois
+    """
+    IE_M = "IE-M"
+    """
+    Munster, Ireland
+    """
+    IE_MH = "IE-MH"
+    """
+    County Meath
+    """
+    IE_MN = "IE-MN"
+    """
+    County Monaghan
+    """
+    IE_MO = "IE-MO"
+    """
+    County Mayo
+    """
+    IE_OY = "IE-OY"
+    """
+    County Offaly
+    """
+    IE_RN = "IE-RN"
+    """
+    County Roscommon
+    """
+    IE_SO = "IE-SO"
+    """
+    County Sligo
+    """
+    IE_TA = "IE-TA"
+    """
+    County Tipperary
+    """
+    IE_U = "IE-U"
+    """
+    Ulster
+    """
+    IE_WD = "IE-WD"
+    """
+    County Waterford
+    """
+    IE_WH = "IE-WH"
+    """
+    County Westmeath
+    """
+    IE_WW = "IE-WW"
+    """
+    County Wicklow
+    """
+    IE_WX = "IE-WX"
+    """
+    County Wexford
+    """
+    IL_D = "IL-D"
+    """
+    South District (Israel)
+    """
+    IL_HA = "IL-HA"
+    """
+    Haifa District
+    """
+    IL_JM = "IL-JM"
+    """
+    Jerusalem District
+    """
+    IL_M = "IL-M"
+    """
+    Central District (Israel)
+    """
+    IL_TA = "IL-TA"
+    """
+    Tel Aviv District
+    """
+    IL_Z = "IL-Z"
+    """
+    North District (Israel)
+    """
+    IN_AN = "IN-AN"
+    """
+    Andaman and Nicobar Islands
+    """
+    IN_AP = "IN-AP"
+    """
+    Andhra Pradesh
+    """
+    IN_AR = "IN-AR"
+    """
+    Arunachal Pradesh
+    """
+    IN_AS = "IN-AS"
+    """
+    Assam
+    """
+    IN_BR = "IN-BR"
+    """
+    Bihar
+    """
+    IN_CG = "IN-CG"
+    """
+    Chhattisgarh
+    """
+    IN_CH = "IN-CH"
+    """
+    Chandigarh
+    """
+    IN_DD = "IN-DD"
+    """
+    Daman and Diu
+    """
+    IN_DH = "IN-DH"
+    """
+    Dadra and Nagar Haveli and Daman and Diu
+    """
+    IN_DN = "IN-DN"
+    """
+    Dadra and Nagar Haveli district
+    """
+    IN_GA = "IN-GA"
+    """
+    Goa
+    """
+    IN_GJ = "IN-GJ"
+    """
+    Gujarat
+    """
+    IN_HP = "IN-HP"
+    """
+    Himachal Pradesh
+    """
+    IN_HR = "IN-HR"
+    """
+    Haryana
+    """
+    IN_JH = "IN-JH"
+    """
+    Jharkhand
+    """
+    IN_JK = "IN-JK"
+    """
+    Jammu and Kashmir (union territory)
+    """
+    IN_KA = "IN-KA"
+    """
+    Karnataka
+    """
+    IN_KL = "IN-KL"
+    """
+    Kerala
+    """
+    IN_LA = "IN-LA"
+    """
+    Ladakh
+    """
+    IN_LD = "IN-LD"
+    """
+    Lakshadweep
+    """
+    IN_MH = "IN-MH"
+    """
+    Maharashtra
+    """
+    IN_ML = "IN-ML"
+    """
+    Meghalaya
+    """
+    IN_MN = "IN-MN"
+    """
+    Manipur
+    """
+    IN_MP = "IN-MP"
+    """
+    Madhya Pradesh
+    """
+    IN_MZ = "IN-MZ"
+    """
+    Mizoram
+    """
+    IN_NL = "IN-NL"
+    """
+    Nagaland
+    """
+    IN_OD = "IN-OD"
+    """
+    Odisha
+    """
+    IN_PB = "IN-PB"
+    """
+    Punjab, India
+    """
+    IN_PY = "IN-PY"
+    """
+    Puducherry (union territory)
+    """
+    IN_RJ = "IN-RJ"
+    """
+    Rajasthan
+    """
+    IN_SK = "IN-SK"
+    """
+    Sikkim
+    """
+    IN_TN = "IN-TN"
+    """
+    Tamil Nadu
+    """
+    IN_TR = "IN-TR"
+    """
+    Tripura
+    """
+    IN_TS = "IN-TS"
+    """
+    Telangana
+    """
+    IN_UK = "IN-UK"
+    """
+    Uttarakhand
+    """
+    IN_UP = "IN-UP"
+    """
+    Uttar Pradesh
+    """
+    IN_WB = "IN-WB"
+    """
+    West Bengal
+    """
+    IQ_AN = "IQ-AN"
+    """
+    Al Anbar Governorate
+    """
+    IQ_AR = "IQ-AR"
+    """
+    Arbil Governorate
+    """
+    IQ_BA = "IQ-BA"
+    """
+    Basra Governorate
+    """
+    IQ_BB = "IQ-BB"
+    """
+    Babylon Governorate
+    """
+    IQ_BG = "IQ-BG"
+    """
+    Baghdad Governorate
+    """
+    IQ_DA = "IQ-DA"
+    """
+    Dohuk Governorate
+    """
+    IQ_DI = "IQ-DI"
+    """
+    Diyala Governorate
+    """
+    IQ_DQ = "IQ-DQ"
+    """
+    Dhi Qar Governorate
+    """
+    IQ_HA = "IQ-HA"
+    """
+    Halabja Governorate
+    """
+    IQ_KA = "IQ-KA"
+    """
+    Karbala Governorate
+    """
+    IQ_KI = "IQ-KI"
+    """
+    Kirkuk Governorate
+    """
+    IQ_MA = "IQ-MA"
+    """
+    Maysan Governorate
+    """
+    IQ_MU = "IQ-MU"
+    """
+    Muthanna Governorate
+    """
+    IQ_NA = "IQ-NA"
+    """
+    Najaf Governorate
+    """
+    IQ_NI = "IQ-NI"
+    """
+    Nineveh Governorate
+    """
+    IQ_QA = "IQ-QA"
+    """
+    Qadisiyyah Governorate
+    """
+    IQ_SD = "IQ-SD"
+    """
+    Saladin Governorate
+    """
+    IQ_SU = "IQ-SU"
+    """
+    Sulaymaniyah Governorate
+    """
+    IQ_WA = "IQ-WA"
+    """
+    Wasit Governorate
+    """
+    IR_00 = "IR-00"
+    """
+    Markazi Province
+    """
+    IR_01 = "IR-01"
+    """
+    Gilan Province
+    """
+    IR_02 = "IR-02"
+    """
+    Mazandaran Province
+    """
+    IR_03 = "IR-03"
+    """
+    East Azerbaijan Province
+    """
+    IR_04 = "IR-04"
+    """
+    West Azerbaijan Province
+    """
+    IR_05 = "IR-05"
+    """
+    Kermanshah Province
+    """
+    IR_06 = "IR-06"
+    """
+    Khuzestan Province
+    """
+    IR_07 = "IR-07"
+    """
+    Fars Province
+    """
+    IR_08 = "IR-08"
+    """
+    Kerman Province
+    """
+    IR_09 = "IR-09"
+    """
+    Razavi Khorasan Province
+    """
+    IR_10 = "IR-10"
+    """
+    Isfahan Province
+    """
+    IR_11 = "IR-11"
+    """
+    Sistan and Baluchestan Province
+    """
+    IR_12 = "IR-12"
+    """
+    Kurdistan Province
+    """
+    IR_13 = "IR-13"
+    """
+    Hamadan Province
+    """
+    IR_14 = "IR-14"
+    """
+    Chaharmahal and Bakhtiari Province
+    """
+    IR_15 = "IR-15"
+    """
+    Lorestan Province
+    """
+    IR_16 = "IR-16"
+    """
+    Ilam Province
+    """
+    IR_17 = "IR-17"
+    """
+    Kohgiluyeh and Boyer-Ahmad Province
+    """
+    IR_18 = "IR-18"
+    """
+    Bushehr Province
+    """
+    IR_19 = "IR-19"
+    """
+    Zanjan Province
+    """
+    IR_20 = "IR-20"
+    """
+    Semnan Province
+    """
+    IR_21 = "IR-21"
+    """
+    Yazd Province
+    """
+    IR_22 = "IR-22"
+    """
+    Hormozgan Province
+    """
+    IR_23 = "IR-23"
+    """
+    Tehran Province
+    """
+    IR_24 = "IR-24"
+    """
+    Ardabil Province
+    """
+    IR_25 = "IR-25"
+    """
+    Qom Province
+    """
+    IR_26 = "IR-26"
+    """
+    Qazvin Province
+    """
+    IR_27 = "IR-27"
+    """
+    Golestan Province
+    """
+    IR_28 = "IR-28"
+    """
+    North Khorasan Province
+    """
+    IR_29 = "IR-29"
+    """
+    South Khorasan Province
+    """
+    IR_30 = "IR-30"
+    """
+    Alborz Province
+    """
+    IS_0 = "IS-0"
+    """
+    Reykjavík
+    """
+    IS_2 = "IS-2"
+    """
+    Suðurnes
+    """
+    IS_3 = "IS-3"
+    """
+    Vesturland
+    """
+    IS_4 = "IS-4"
+    """
+    Vestfirðir
+    """
+    IS_5 = "IS-5"
+    """
+    Norðurland vestra
+    """
+    IS_6 = "IS-6"
+    """
+    Norðurland eystra
+    """
+    IS_7 = "IS-7"
+    """
+    Austurland
+    """
+    IS_8 = "IS-8"
+    """
+    Suðurland
+    """
+    IS_AKH = "IS-AKH"
+    """
+    Akrahreppur
+    """
+    IS_AKN = "IS-AKN"
+    """
+    Akranes
+    """
+    IS_AKU = "IS-AKU"
+    """
+    Akureyri
+    """
+    IS_ARN = "IS-ARN"
+    """
+    Árneshreppur
+    """
+    IS_ASA = "IS-ASA"
+    """
+    Ásahreppur
+    """
+    IS_BLA = "IS-BLA"
+    """
+    Bláskógabyggð
+    """
+    IS_BLO = "IS-BLO"
+    """
+    Blönduós
+    """
+    IS_BOG = "IS-BOG"
+    """
+    Borgarbyggð
+    """
+    IS_BOL = "IS-BOL"
+    """
+    Bolungarvíkurkaupstaður
+    """
+    IS_DAB = "IS-DAB"
+    """
+    Dalabyggð
+    """
+    IS_DAV = "IS-DAV"
+    """
+    Dalvíkurbyggð
+    """
+    IS_DJU = "IS-DJU"
+    """
+    Djúpivogur
+    """
+    IS_EOM = "IS-EOM"
+    """
+    Eyja- og Miklaholtshreppur
+    """
+    IS_EYF = "IS-EYF"
+    """
+    Eyjafjarðarsveit
+    """
+    IS_FJD = "IS-FJD"
+    """
+    Fjarðabyggð
+    """
+    IS_FJL = "IS-FJL"
+    """
+    Fjallabyggð
+    """
+    IS_FLA = "IS-FLA"
+    """
+    Flóahreppur
+    """
+    IS_FLD = "IS-FLD"
+    """
+    Fljótsdalshérað
+    """
+    IS_FLR = "IS-FLR"
+    """
+    Fljótsdalshreppur
+    """
+    IS_GAR = "IS-GAR"
+    """
+    Garðabær
+    """
+    IS_GRN = "IS-GRN"
+    """
+    Grindavíkurbær
+    """
+    IS_GRU = "IS-GRU"
+    """
+    Grundarfjarðarbær
+    """
+    IS_HAF = "IS-HAF"
+    """
+    Hafnarfjörður
+    """
+    IS_HUG = "IS-HUG"
+    """
+    Húnabyggð
+    """
+    IS_HUV = "IS-HUV"
+    """
+    Húnaþing vestra
+    """
+    IS_HVE = "IS-HVE"
+    """
+    Hveragerði
+    """
+    IS_KOP = "IS-KOP"
+    """
+    Kópavogur (city)
+    """
+    IS_MUL = "IS-MUL"
+    """
+    Múlaþing
+    """
+    IS_RGE = "IS-RGE"
+    """
+    Rangárþing eystra
+    """
+    IS_RGY = "IS-RGY"
+    """
+    Rangárþing ytra
+    """
+    IS_RKV = "IS-RKV"
+    """
+    Reykjavík
+    """
+    IS_SDN = "IS-SDN"
+    """
+    Suðurnesjabær
+    """
+    IS_SDV = "IS-SDV"
+    """
+    Súðavíkurhreppur
+    """
+    IS_SEL = "IS-SEL"
+    """
+    Seltjarnarnes
+    """
+    IS_SFA = "IS-SFA"
+    """
+    Árborg
+    """
+    IS_SKR = "IS-SKR"
+    """
+    Sveitarfélagið Skagafjörður
+    """
+    IS_SOL = "IS-SOL"
+    """
+    Sveitarfélagið Ölfus
+    """
+    IS_SSS = "IS-SSS"
+    """
+    Sveitarfélagið Skagaströnd
+    """
+    IS_STR = "IS-STR"
+    """
+    Strandabyggð
+    """
+    IS_SVG = "IS-SVG"
+    """
+    Sveitarfélagið Vogar
+    """
+    IS_TJO = "IS-TJO"
+    """
+    Tjörneshreppur
+    """
+    IS_VEM = "IS-VEM"
+    """
+    Vestmannaeyjar
+    """
+    IT_21 = "IT-21"
+    """
+    Piedmont
+    """
+    IT_23 = "IT-23"
+    """
+    Aosta Valley
+    """
+    IT_25 = "IT-25"
+    """
+    Lombardy
+    """
+    IT_32 = "IT-32"
+    """
+    Trentino-South Tyrol
+    """
+    IT_34 = "IT-34"
+    """
+    Veneto
+    """
+    IT_36 = "IT-36"
+    """
+    Friuli-Venezia Giulia
+    """
+    IT_42 = "IT-42"
+    """
+    Liguria
+    """
+    IT_45 = "IT-45"
+    """
+    Emilia-Romagna
+    """
+    IT_52 = "IT-52"
+    """
+    Tuscany
+    """
+    IT_55 = "IT-55"
+    """
+    Umbria
+    """
+    IT_57 = "IT-57"
+    """
+    Marche
+    """
+    IT_62 = "IT-62"
+    """
+    Lazio
+    """
+    IT_65 = "IT-65"
+    """
+    Abruzzo
+    """
+    IT_67 = "IT-67"
+    """
+    Molise
+    """
+    IT_72 = "IT-72"
+    """
+    Campania
+    """
+    IT_75 = "IT-75"
+    """
+    Apulia
+    """
+    IT_77 = "IT-77"
+    """
+    Basilicata
+    """
+    IT_78 = "IT-78"
+    """
+    Calabria
+    """
+    IT_82 = "IT-82"
+    """
+    Sicily
+    """
+    IT_88 = "IT-88"
+    """
+    Sardinia
+    """
+    IT_AG = "IT-AG"
+    """
+    Province of Agrigento
+    """
+    IT_AL = "IT-AL"
+    """
+    Province of Alessandria
+    """
+    IT_AN = "IT-AN"
+    """
+    Province of Ancona
+    """
+    IT_AO = "IT-AO"
+    """
+    Province of Aosta
+    """
+    IT_AP = "IT-AP"
+    """
+    Province of Ascoli Piceno
+    """
+    IT_AQ = "IT-AQ"
+    """
+    Province of L'Aquila
+    """
+    IT_AR = "IT-AR"
+    """
+    Province of Arezzo
+    """
+    IT_AT = "IT-AT"
+    """
+    Province of Asti
+    """
+    IT_AV = "IT-AV"
+    """
+    Province of Avellino
+    """
+    IT_BA = "IT-BA"
+    """
+    Metropolitan city of Bari
+    """
+    IT_BG = "IT-BG"
+    """
+    Province of Bergamo
+    """
+    IT_BI = "IT-BI"
+    """
+    Province of Biella
+    """
+    IT_BL = "IT-BL"
+    """
+    Province of Belluno
+    """
+    IT_BN = "IT-BN"
+    """
+    Province of Benevento
+    """
+    IT_BO = "IT-BO"
+    """
+    Metropolitan city of Bologna
+    """
+    IT_BR = "IT-BR"
+    """
+    Province of Brindisi
+    """
+    IT_BS = "IT-BS"
+    """
+    Province of Brescia
+    """
+    IT_BT = "IT-BT"
+    """
+    Province of Barletta-Andria-Trani
+    """
+    IT_BZ = "IT-BZ"
+    """
+    South Tyrol
+    """
+    IT_CA = "IT-CA"
+    """
+    Metropolitan city of Cagliari
+    """
+    IT_CB = "IT-CB"
+    """
+    Province of Campobasso
+    """
+    IT_CE = "IT-CE"
+    """
+    Province of Caserta
+    """
+    IT_CH = "IT-CH"
+    """
+    Province of Chieti
+    """
+    IT_CI = "IT-CI"
+    """
+    Province of Carbonia-Iglesias
+    """
+    IT_CL = "IT-CL"
+    """
+    Province of Caltanissetta
+    """
+    IT_CN = "IT-CN"
+    """
+    Province of Cuneo
+    """
+    IT_CO = "IT-CO"
+    """
+    Province of Como
+    """
+    IT_CR = "IT-CR"
+    """
+    Province of Cremona
+    """
+    IT_CS = "IT-CS"
+    """
+    Province of Cosenza
+    """
+    IT_CT = "IT-CT"
+    """
+    Metropolitan city of Catania
+    """
+    IT_CZ = "IT-CZ"
+    """
+    Province of Catanzaro
+    """
+    IT_EN = "IT-EN"
+    """
+    Province of Enna
+    """
+    IT_FC = "IT-FC"
+    """
+    Province of Forlì-Cesena
+    """
+    IT_FE = "IT-FE"
+    """
+    Province of Ferrara
+    """
+    IT_FG = "IT-FG"
+    """
+    Province of Foggia
+    """
+    IT_FI = "IT-FI"
+    """
+    Metropolitan city of Florence
+    """
+    IT_FM = "IT-FM"
+    """
+    Province of Fermo
+    """
+    IT_FR = "IT-FR"
+    """
+    Province of Frosinone
+    """
+    IT_GE = "IT-GE"
+    """
+    Metropolitan city of Genoa
+    """
+    IT_GO = "IT-GO"
+    """
+    Province of Gorizia
+    """
+    IT_GR = "IT-GR"
+    """
+    Province of Grosseto
+    """
+    IT_IM = "IT-IM"
+    """
+    Province of Imperia
+    """
+    IT_IS = "IT-IS"
+    """
+    Province of Isernia
+    """
+    IT_KR = "IT-KR"
+    """
+    Province of Crotone
+    """
+    IT_LC = "IT-LC"
+    """
+    Province of Lecco
+    """
+    IT_LE = "IT-LE"
+    """
+    Province of Lecce
+    """
+    IT_LI = "IT-LI"
+    """
+    Province of Livorno
+    """
+    IT_LO = "IT-LO"
+    """
+    Province of Lodi
+    """
+    IT_LT = "IT-LT"
+    """
+    Province of Latina
+    """
+    IT_LU = "IT-LU"
+    """
+    Province of Lucca
+    """
+    IT_MB = "IT-MB"
+    """
+    Province of Monza and Brianza
+    """
+    IT_MC = "IT-MC"
+    """
+    Province of Macerata
+    """
+    IT_ME = "IT-ME"
+    """
+    Metropolitan city of Messina
+    """
+    IT_MI = "IT-MI"
+    """
+    Metropolitan city of Milan
+    """
+    IT_MN = "IT-MN"
+    """
+    Province of Mantua
+    """
+    IT_MO = "IT-MO"
+    """
+    Province of Modena
+    """
+    IT_MS = "IT-MS"
+    """
+    Province of Massa‑Carrara
+    """
+    IT_MT = "IT-MT"
+    """
+    Province of Matera
+    """
+    IT_NA = "IT-NA"
+    """
+    Metropolitan city of Naples
+    """
+    IT_NO = "IT-NO"
+    """
+    Province of Novara
+    """
+    IT_NU = "IT-NU"
+    """
+    Province of Nuoro
+    """
+    IT_OG = "IT-OG"
+    """
+    Province of Ogliastra
+    """
+    IT_OR = "IT-OR"
+    """
+    Province of Oristano
+    """
+    IT_OT = "IT-OT"
+    """
+    Province of Olbia-Tempio
+    """
+    IT_PA = "IT-PA"
+    """
+    Metropolitan city of Palermo
+    """
+    IT_PC = "IT-PC"
+    """
+    Province of Piacenza
+    """
+    IT_PD = "IT-PD"
+    """
+    Province of Padua
+    """
+    IT_PE = "IT-PE"
+    """
+    Province of Pescara
+    """
+    IT_PG = "IT-PG"
+    """
+    Province of Perugia
+    """
+    IT_PI = "IT-PI"
+    """
+    Province of Pisa
+    """
+    IT_PN = "IT-PN"
+    """
+    Province of Pordenone
+    """
+    IT_PO = "IT-PO"
+    """
+    Province of Prato
+    """
+    IT_PR = "IT-PR"
+    """
+    Province of Parma
+    """
+    IT_PT = "IT-PT"
+    """
+    Province of Pistoia
+    """
+    IT_PU = "IT-PU"
+    """
+    Province of Pesaro and Urbino
+    """
+    IT_PV = "IT-PV"
+    """
+    Province of Pavia
+    """
+    IT_PZ = "IT-PZ"
+    """
+    Province of Potenza
+    """
+    IT_RA = "IT-RA"
+    """
+    Province of Ravenna
+    """
+    IT_RC = "IT-RC"
+    """
+    Metropolitan city of Reggio Calabria
+    """
+    IT_RE = "IT-RE"
+    """
+    Province of Reggio Emilia
+    """
+    IT_RG = "IT-RG"
+    """
+    Province of Ragusa
+    """
+    IT_RI = "IT-RI"
+    """
+    Province of Rieti
+    """
+    IT_RM = "IT-RM"
+    """
+    Metropolitan city of Rome
+    """
+    IT_RN = "IT-RN"
+    """
+    Province of Rimini
+    """
+    IT_RO = "IT-RO"
+    """
+    Province of Rovigo
+    """
+    IT_SA = "IT-SA"
+    """
+    Province of Salerno
+    """
+    IT_SI = "IT-SI"
+    """
+    Province of Siena
+    """
+    IT_SO = "IT-SO"
+    """
+    Province of Sondrio
+    """
+    IT_SP = "IT-SP"
+    """
+    Province of La Spezia
+    """
+    IT_SR = "IT-SR"
+    """
+    Province of Syracuse
+    """
+    IT_SS = "IT-SS"
+    """
+    Province of Sassari
+    """
+    IT_SU = "IT-SU"
+    """
+    Province of South Sardinia
+    """
+    IT_SV = "IT-SV"
+    """
+    Province of Savona
+    """
+    IT_TA = "IT-TA"
+    """
+    Province of Taranto
+    """
+    IT_TE = "IT-TE"
+    """
+    Province of Teramo
+    """
+    IT_TN = "IT-TN"
+    """
+    Province of Trento
+    """
+    IT_TO = "IT-TO"
+    """
+    Metropolitan city of Turin
+    """
+    IT_TP = "IT-TP"
+    """
+    Province of Trapani
+    """
+    IT_TR = "IT-TR"
+    """
+    Province of Terni
+    """
+    IT_TS = "IT-TS"
+    """
+    Province of Trieste
+    """
+    IT_TV = "IT-TV"
+    """
+    Province of Treviso
+    """
+    IT_UD = "IT-UD"
+    """
+    Province of Udine
+    """
+    IT_VA = "IT-VA"
+    """
+    Province of Varese
+    """
+    IT_VB = "IT-VB"
+    """
+    Province of Verbano-Cusio-Ossola
+    """
+    IT_VC = "IT-VC"
+    """
+    Province of Vercelli
+    """
+    IT_VE = "IT-VE"
+    """
+    Metropolitan city of Venice
+    """
+    IT_VI = "IT-VI"
+    """
+    Province of Vicenza
+    """
+    IT_VR = "IT-VR"
+    """
+    Province of Verona
+    """
+    IT_VS = "IT-VS"
+    """
+    Province of Medio Campidano
+    """
+    IT_VT = "IT-VT"
+    """
+    Province of Viterbo
+    """
+    IT_VV = "IT-VV"
+    """
+    Province of Vibo Valentia
+    """
+    JM_02 = "JM-02"
+    """
+    Saint Andrew Parish, Jamaica
+    """
+    JM_03 = "JM-03"
+    """
+    Saint Thomas Parish, Jamaica
+    """
+    JM_04 = "JM-04"
+    """
+    Portland Parish
+    """
+    JM_05 = "JM-05"
+    """
+    Saint Mary Parish, Jamaica
+    """
+    JM_06 = "JM-06"
+    """
+    Saint Ann Parish
+    """
+    JM_07 = "JM-07"
+    """
+    Trelawny Parish
+    """
+    JM_08 = "JM-08"
+    """
+    Saint James Parish, Jamaica
+    """
+    JM_09 = "JM-09"
+    """
+    Hanover Parish
+    """
+    JM_10 = "JM-10"
+    """
+    Westmoreland Parish
+    """
+    JM_11 = "JM-11"
+    """
+    Saint Elizabeth Parish, Jamaica
+    """
+    JM_13 = "JM-13"
+    """
+    Clarendon Parish
+    """
+    JM_14 = "JM-14"
+    """
+    Saint Catherine Parish, Jamaica
+    """
+    JO_AM = "JO-AM"
+    """
+    Amman Governorate
+    """
+    JO_AQ = "JO-AQ"
+    """
+    Aqaba Governorate
+    """
+    JO_AT = "JO-AT"
+    """
+    Tafilah Governorate
+    """
+    JO_AZ = "JO-AZ"
+    """
+    Az Zarqa
+    """
+    JO_BA = "JO-BA"
+    """
+    Balqa Governorate
+    """
+    JO_IR = "JO-IR"
+    """
+    Irbid Governorate
+    """
+    JO_JA = "JO-JA"
+    """
+    Jerash
+    """
+    JO_KA = "JO-KA"
+    """
+    Karak Governorate
+    """
+    JO_MA = "JO-MA"
+    """
+    Mafraq Governorate
+    """
+    JO_MD = "JO-MD"
+    """
+    Madaba Governorate
+    """
+    JO_MN = "JO-MN"
+    """
+    Ma'an Governorate
+    """
+    JP_01 = "JP-01"
+    """
+    Hokkaido
+    """
+    JP_02 = "JP-02"
+    """
+    Aomori prefecture
+    """
+    JP_03 = "JP-03"
+    """
+    Iwate prefecture
+    """
+    JP_04 = "JP-04"
+    """
+    Miyagi prefecture
+    """
+    JP_05 = "JP-05"
+    """
+    Akita prefecture
+    """
+    JP_06 = "JP-06"
+    """
+    Yamagata prefecture
+    """
+    JP_07 = "JP-07"
+    """
+    Fukushima prefecture
+    """
+    JP_08 = "JP-08"
+    """
+    Ibaraki prefecture
+    """
+    JP_09 = "JP-09"
+    """
+    Tochigi prefecture
+    """
+    JP_10 = "JP-10"
+    """
+    Gunma prefecture
+    """
+    JP_11 = "JP-11"
+    """
+    Saitama prefecture
+    """
+    JP_12 = "JP-12"
+    """
+    Chiba prefecture
+    """
+    JP_13 = "JP-13"
+    """
+    Tokyo
+    """
+    JP_14 = "JP-14"
+    """
+    Kanagawa prefecture
+    """
+    JP_15 = "JP-15"
+    """
+    Niigata prefecture
+    """
+    JP_16 = "JP-16"
+    """
+    Toyama prefecture
+    """
+    JP_17 = "JP-17"
+    """
+    Ishikawa prefecture
+    """
+    JP_18 = "JP-18"
+    """
+    Fukui prefecture
+    """
+    JP_19 = "JP-19"
+    """
+    Yamanashi prefecture
+    """
+    JP_20 = "JP-20"
+    """
+    Nagano prefecture
+    """
+    JP_21 = "JP-21"
+    """
+    Gifu prefecture
+    """
+    JP_22 = "JP-22"
+    """
+    Shizuoka prefecture
+    """
+    JP_23 = "JP-23"
+    """
+    Aichi prefecture
+    """
+    JP_24 = "JP-24"
+    """
+    Mie prefecture
+    """
+    JP_25 = "JP-25"
+    """
+    Shiga prefecture
+    """
+    JP_26 = "JP-26"
+    """
+    Kyoto prefecture
+    """
+    JP_27 = "JP-27"
+    """
+    Osaka prefecture
+    """
+    JP_28 = "JP-28"
+    """
+    Hyōgo prefecture
+    """
+    JP_29 = "JP-29"
+    """
+    Nara prefecture
+    """
+    JP_30 = "JP-30"
+    """
+    Wakayama prefecture
+    """
+    JP_31 = "JP-31"
+    """
+    Tottori prefecture
+    """
+    JP_32 = "JP-32"
+    """
+    Shimane prefecture
+    """
+    JP_33 = "JP-33"
+    """
+    Okayama prefecture
+    """
+    JP_34 = "JP-34"
+    """
+    Hiroshima prefecture
+    """
+    JP_35 = "JP-35"
+    """
+    Yamaguchi prefecture
+    """
+    JP_36 = "JP-36"
+    """
+    Tokushima prefecture
+    """
+    JP_37 = "JP-37"
+    """
+    Kagawa prefecture
+    """
+    JP_38 = "JP-38"
+    """
+    Ehime prefecture
+    """
+    JP_39 = "JP-39"
+    """
+    Kōchi prefecture
+    """
+    JP_40 = "JP-40"
+    """
+    Fukuoka prefecture
+    """
+    JP_41 = "JP-41"
+    """
+    Saga prefecture
+    """
+    JP_42 = "JP-42"
+    """
+    Nagasaki prefecture
+    """
+    JP_43 = "JP-43"
+    """
+    Kumamoto prefecture
+    """
+    JP_44 = "JP-44"
+    """
+    Ōita prefecture
+    """
+    JP_45 = "JP-45"
+    """
+    Miyazaki prefecture
+    """
+    JP_46 = "JP-46"
+    """
+    Kagoshima prefecture
+    """
+    JP_47 = "JP-47"
+    """
+    Okinawa prefecture
+    """
+    KE_01 = "KE-01"
+    """
+    Baringo County
+    """
+    KE_02 = "KE-02"
+    """
+    Bomet County
+    """
+    KE_03 = "KE-03"
+    """
+    Bungoma County
+    """
+    KE_04 = "KE-04"
+    """
+    Busia County
+    """
+    KE_05 = "KE-05"
+    """
+    Elgeyo-Marakwet County
+    """
+    KE_06 = "KE-06"
+    """
+    Embu County
+    """
+    KE_07 = "KE-07"
+    """
+    Garissa County
+    """
+    KE_08 = "KE-08"
+    """
+    Homa Bay County
+    """
+    KE_09 = "KE-09"
+    """
+    Isiolo County
+    """
+    KE_10 = "KE-10"
+    """
+    Kajiado County
+    """
+    KE_11 = "KE-11"
+    """
+    Kakamega County
+    """
+    KE_110 = "KE-110"
+    """
+    Nairobi
+    """
+    KE_12 = "KE-12"
+    """
+    Kericho County
+    """
+    KE_13 = "KE-13"
+    """
+    Kiambu County
+    """
+    KE_14 = "KE-14"
+    """
+    Kilifi County
+    """
+    KE_15 = "KE-15"
+    """
+    Kirinyaga County
+    """
+    KE_16 = "KE-16"
+    """
+    Kisii County
+    """
+    KE_17 = "KE-17"
+    """
+    Kisumu County
+    """
+    KE_18 = "KE-18"
+    """
+    Kitui County
+    """
+    KE_19 = "KE-19"
+    """
+    Kwale County
+    """
+    KE_20 = "KE-20"
+    """
+    Laikipia County
+    """
+    KE_200 = "KE-200"
+    """
+    Central Province (Kenya)
+    """
+    KE_21 = "KE-21"
+    """
+    Lamu County
+    """
+    KE_22 = "KE-22"
+    """
+    Machakos County
+    """
+    KE_23 = "KE-23"
+    """
+    Makueni County
+    """
+    KE_24 = "KE-24"
+    """
+    Mandera County
+    """
+    KE_25 = "KE-25"
+    """
+    Marsabit County
+    """
+    KE_26 = "KE-26"
+    """
+    Meru County
+    """
+    KE_27 = "KE-27"
+    """
+    Migori County
+    """
+    KE_28 = "KE-28"
+    """
+    Mombasa County
+    """
+    KE_29 = "KE-29"
+    """
+    Muranga County
+    """
+    KE_30 = "KE-30"
+    """
+    Nairobi County
+    """
+    KE_300 = "KE-300"
+    """
+    Coast Province (Kenya)
+    """
+    KE_31 = "KE-31"
+    """
+    Nakuru County
+    """
+    KE_32 = "KE-32"
+    """
+    Nandi County
+    """
+    KE_33 = "KE-33"
+    """
+    Narok County
+    """
+    KE_34 = "KE-34"
+    """
+    Nyamira County
+    """
+    KE_35 = "KE-35"
+    """
+    Nyandarua County
+    """
+    KE_36 = "KE-36"
+    """
+    Nyeri County
+    """
+    KE_37 = "KE-37"
+    """
+    Samburu County
+    """
+    KE_38 = "KE-38"
+    """
+    Siaya County
+    """
+    KE_39 = "KE-39"
+    """
+    Taita Taveta County
+    """
+    KE_40 = "KE-40"
+    """
+    Tana River County
+    """
+    KE_400 = "KE-400"
+    """
+    Eastern Province (Kenya)
+    """
+    KE_41 = "KE-41"
+    """
+    Tharaka-Nithi County
+    """
+    KE_42 = "KE-42"
+    """
+    Trans-Nzoia County
+    """
+    KE_43 = "KE-43"
+    """
+    Turkana County
+    """
+    KE_44 = "KE-44"
+    """
+    Uasin-Gishu County
+    """
+    KE_45 = "KE-45"
+    """
+    Vihiga County
+    """
+    KE_46 = "KE-46"
+    """
+    Wajir County
+    """
+    KE_47 = "KE-47"
+    """
+    West Pokot County
+    """
+    KE_500 = "KE-500"
+    """
+    North Eastern Province (Kenya)
+    """
+    KE_600 = "KE-600"
+    """
+    Nyanza Province
+    """
+    KE_700 = "KE-700"
+    """
+    Rift Valley Province
+    """
+    KE_800 = "KE-800"
+    """
+    Western Province (Kenya)
+    """
+    KG_B = "KG-B"
+    """
+    Batken Region
+    """
+    KG_C = "KG-C"
+    """
+    Chüy Region
+    """
+    KG_GB = "KG-GB"
+    """
+    Bishkek
+    """
+    KG_GO = "KG-GO"
+    """
+    Osh
+    """
+    KG_J = "KG-J"
+    """
+    Jalal-Abad Region
+    """
+    KG_N = "KG-N"
+    """
+    Naryn Region
+    """
+    KG_O = "KG-O"
+    """
+    Osh Region
+    """
+    KG_T = "KG-T"
+    """
+    Talas Region
+    """
+    KG_Y = "KG-Y"
+    """
+    Issyk-Kul Region
+    """
+    KH_1 = "KH-1"
+    """
+    Banteay Meanchey Province
+    """
+    KH_10 = "KH-10"
+    """
+    Kratié Province
+    """
+    KH_11 = "KH-11"
+    """
+    Mondulkiri Province
+    """
+    KH_12 = "KH-12"
+    """
+    Phnom Penh
+    """
+    KH_13 = "KH-13"
+    """
+    Preah Vihear Province
+    """
+    KH_14 = "KH-14"
+    """
+    Prey Veng Province
+    """
+    KH_15 = "KH-15"
+    """
+    Pursat Province
+    """
+    KH_16 = "KH-16"
+    """
+    Ratanakiri Province
+    """
+    KH_17 = "KH-17"
+    """
+    Siem Reap Province
+    """
+    KH_18 = "KH-18"
+    """
+    Sihanoukville Province
+    """
+    KH_19 = "KH-19"
+    """
+    Stung Treng Province
+    """
+    KH_2 = "KH-2"
+    """
+    Battambang Province
+    """
+    KH_20 = "KH-20"
+    """
+    Svay Rieng Province
+    """
+    KH_21 = "KH-21"
+    """
+    Takeo Province
+    """
+    KH_22 = "KH-22"
+    """
+    Oddar Meancheay Province
+    """
+    KH_23 = "KH-23"
+    """
+    Kep
+    """
+    KH_24 = "KH-24"
+    """
+    Pailin
+    """
+    KH_25 = "KH-25"
+    """
+    Tbong Khmum Province
+    """
+    KH_3 = "KH-3"
+    """
+    Kampong Cham Province
+    """
+    KH_4 = "KH-4"
+    """
+    Kampong Chhnang Province
+    """
+    KH_5 = "KH-5"
+    """
+    Kampong Speu Province
+    """
+    KH_6 = "KH-6"
+    """
+    Kampong Thom Province
+    """
+    KH_7 = "KH-7"
+    """
+    Kampot Province
+    """
+    KH_8 = "KH-8"
+    """
+    Kandal Province
+    """
+    KH_9 = "KH-9"
+    """
+    Koh Kong Province
+    """
+    KI_G = "KI-G"
+    """
+    Gilbert Islands
+    """
+    KI_L = "KI-L"
+    """
+    Line Islands
+    """
+    KI_P = "KI-P"
+    """
+    Phoenix Islands
+    """
+    KM_A = "KM-A"
+    """
+    Anjouan
+    """
+    KM_G = "KM-G"
+    """
+    Grande Comore
+    """
+    KM_M = "KM-M"
+    """
+    Mohéli
+    """
+    KN_02 = "KN-02"
+    """
+    Saint Anne Sandy Point
+    """
+    KN_03 = "KN-03"
+    """
+    Saint George Basseterre
+    """
+    KN_04 = "KN-04"
+    """
+    Saint George Gingerland
+    """
+    KN_05 = "KN-05"
+    """
+    Saint James Windward
+    """
+    KN_06 = "KN-06"
+    """
+    Saint John Capisterre
+    """
+    KN_07 = "KN-07"
+    """
+    Saint John Figtree
+    """
+    KN_08 = "KN-08"
+    """
+    Saint Mary Cayon
+    """
+    KN_09 = "KN-09"
+    """
+    Saint Paul Capisterre
+    """
+    KN_10 = "KN-10"
+    """
+    Saint Paul Charlestown
+    """
+    KN_11 = "KN-11"
+    """
+    Saint Peter Basseterre
+    """
+    KN_12 = "KN-12"
+    """
+    Saint Thomas Lowland
+    """
+    KN_13 = "KN-13"
+    """
+    Saint Thomas Middle Island
+    """
+    KN_15 = "KN-15"
+    """
+    Trinity Palmetto Point
+    """
+    KN_K = "KN-K"
+    """
+    Saint Kitts
+    """
+    KN_N = "KN-N"
+    """
+    Nevis
+    """
+    KP_01 = "KP-01"
+    """
+    Pyongyang
+    """
+    KP_02 = "KP-02"
+    """
+    Pyongannam-do
+    """
+    KP_03 = "KP-03"
+    """
+    Pyonganbuk-to
+    """
+    KP_04 = "KP-04"
+    """
+    Chagang-do
+    """
+    KP_05 = "KP-05"
+    """
+    Hwanghaenam-do
+    """
+    KP_06 = "KP-06"
+    """
+    Hwanghaebuk-to
+    """
+    KP_07 = "KP-07"
+    """
+    Kangwon-do
+    """
+    KP_08 = "KP-08"
+    """
+    Hamgyongnam-do
+    """
+    KP_09 = "KP-09"
+    """
+    Hamgyongbuk-to
+    """
+    KP_10 = "KP-10"
+    """
+    Ryanggang-do
+    """
+    KP_13 = "KP-13"
+    """
+    Rason
+    """
+    KP_14 = "KP-14"
+    """
+    Nampo
+    """
+    KP_15 = "KP-15"
+    """
+    Kaesong
+    """
+    KR_11 = "KR-11"
+    """
+    Seoul
+    """
+    KR_26 = "KR-26"
+    """
+    Busan
+    """
+    KR_27 = "KR-27"
+    """
+    Daegu
+    """
+    KR_28 = "KR-28"
+    """
+    Incheon
+    """
+    KR_29 = "KR-29"
+    """
+    Gwangju
+    """
+    KR_30 = "KR-30"
+    """
+    Daejeon
+    """
+    KR_31 = "KR-31"
+    """
+    Ulsan
+    """
+    KR_41 = "KR-41"
+    """
+    Gyeonggi-do
+    """
+    KR_42 = "KR-42"
+    """
+    Gangwon-do
+    """
+    KR_43 = "KR-43"
+    """
+    Chungcheongbuk-do
+    """
+    KR_44 = "KR-44"
+    """
+    Chungcheongnam-do
+    """
+    KR_45 = "KR-45"
+    """
+    Jeollabuk-do
+    """
+    KR_46 = "KR-46"
+    """
+    Jeollanam-do
+    """
+    KR_47 = "KR-47"
+    """
+    Gyeongsangbuk-do
+    """
+    KR_48 = "KR-48"
+    """
+    Gyeongsangnam-do
+    """
+    KR_49 = "KR-49"
+    """
+    Jeju-do
+    """
+    KR_50 = "KR-50"
+    """
+    Sejong City
+    """
+    KW_AH = "KW-AH"
+    """
+    Ahmadi Governorate
+    """
+    KW_FA = "KW-FA"
+    """
+    Farwaniya Governorate
+    """
+    KW_HA = "KW-HA"
+    """
+    Hawalli Governorate
+    """
+    KW_JA = "KW-JA"
+    """
+    Al Jahra Governorate
+    """
+    KW_KU = "KW-KU"
+    """
+    Capital Governorate (Kuwait)
+    """
+    KW_MU = "KW-MU"
+    """
+    Mubarak Al-Kabeer Governorate
+    """
+    KZ_10 = "KZ-10"
+    """
+    Abai Region
+    """
+    KZ_11 = "KZ-11"
+    """
+    Akmola Region
+    """
+    KZ_15 = "KZ-15"
+    """
+    Aktobe Region
+    """
+    KZ_19 = "KZ-19"
+    """
+    Almaty Region
+    """
+    KZ_23 = "KZ-23"
+    """
+    Atyrau Region
+    """
+    KZ_27 = "KZ-27"
+    """
+    West Kazakhstan Region
+    """
+    KZ_31 = "KZ-31"
+    """
+    Jambyl Region
+    """
+    KZ_33 = "KZ-33"
+    """
+    Zhetysu Region
+    """
+    KZ_35 = "KZ-35"
+    """
+    Karaganda Region
+    """
+    KZ_39 = "KZ-39"
+    """
+    Qostanay Province
+    """
+    KZ_43 = "KZ-43"
+    """
+    Kyzylorda Region
+    """
+    KZ_47 = "KZ-47"
+    """
+    Mangystau Region
+    """
+    KZ_55 = "KZ-55"
+    """
+    Pavlodar Region
+    """
+    KZ_59 = "KZ-59"
+    """
+    North Kazakhstan Region
+    """
+    KZ_61 = "KZ-61"
+    """
+    Turkistan Region
+    """
+    KZ_62 = "KZ-62"
+    """
+    Ulytau Region
+    """
+    KZ_63 = "KZ-63"
+    """
+    East Kazakhstan Region
+    """
+    KZ_71 = "KZ-71"
+    """
+    Astana
+    """
+    KZ_75 = "KZ-75"
+    """
+    Almaty
+    """
+    KZ_79 = "KZ-79"
+    """
+    Shymkent
+    """
+    LA_AT = "LA-AT"
+    """
+    Attapeu Province
+    """
+    LA_BK = "LA-BK"
+    """
+    Bokeo Province
+    """
+    LA_BL = "LA-BL"
+    """
+    Bolikhamsai Province
+    """
+    LA_CH = "LA-CH"
+    """
+    Champasak Province
+    """
+    LA_HO = "LA-HO"
+    """
+    Houaphan Province
+    """
+    LA_KH = "LA-KH"
+    """
+    Khammouane Province
+    """
+    LA_LM = "LA-LM"
+    """
+    Luang Namtha Province
+    """
+    LA_LP = "LA-LP"
+    """
+    Luang Prabang Province
+    """
+    LA_OU = "LA-OU"
+    """
+    Oudomxay Province
+    """
+    LA_PH = "LA-PH"
+    """
+    Phongsali
+    """
+    LA_SL = "LA-SL"
+    """
+    Salavan Province
+    """
+    LA_SV = "LA-SV"
+    """
+    Savannakhet Province
+    """
+    LA_VI = "LA-VI"
+    """
+    Vientiane Province
+    """
+    LA_VT = "LA-VT"
+    """
+    Vientiane Prefecture
+    """
+    LA_XA = "LA-XA"
+    """
+    Sainyabuli Province
+    """
+    LA_XE = "LA-XE"
+    """
+    Sekong Province
+    """
+    LA_XI = "LA-XI"
+    """
+    Xiangkhouang Province
+    """
+    LB_AK = "LB-AK"
+    """
+    Akkar Governorate
+    """
+    LB_AS = "LB-AS"
+    """
+    North Governorate
+    """
+    LB_BA = "LB-BA"
+    """
+    Beirut Governorate
+    """
+    LB_BH = "LB-BH"
+    """
+    Baalbek-Hermel Governorate
+    """
+    LB_BI = "LB-BI"
+    """
+    Beqaa Governorate
+    """
+    LB_JA = "LB-JA"
+    """
+    South Governorate
+    """
+    LB_JL = "LB-JL"
+    """
+    Mount Lebanon Governorate
+    """
+    LB_NA = "LB-NA"
+    """
+    Nabatieh Governorate
+    """
+    LC_01 = "LC-01"
+    """
+    Anse La Raye Quarter
+    """
+    LC_02 = "LC-02"
+    """
+    Castries Quarter
+    """
+    LC_03 = "LC-03"
+    """
+    Choiseul Quarter
+    """
+    LC_04 = "LC-04"
+    """
+    Dauphin Quarter
+    """
+    LC_05 = "LC-05"
+    """
+    Dennery Quarter
+    """
+    LC_06 = "LC-06"
+    """
+    Gros Islet Quarter
+    """
+    LC_07 = "LC-07"
+    """
+    Laborie Quarter
+    """
+    LC_08 = "LC-08"
+    """
+    Micoud Quarter
+    """
+    LC_09 = "LC-09"
+    """
+    Praslin Quarter
+    """
+    LC_10 = "LC-10"
+    """
+    Soufrière Quarter
+    """
+    LC_11 = "LC-11"
+    """
+    Vieux-Fort
+    """
+    LC_12 = "LC-12"
+    """
+    Canaries, Saint Lucia
+    """
+    LI_01 = "LI-01"
+    """
+    Balzers
+    """
+    LI_02 = "LI-02"
+    """
+    Eschen
+    """
+    LI_03 = "LI-03"
+    """
+    Gamprin
+    """
+    LI_04 = "LI-04"
+    """
+    Mauren
+    """
+    LI_05 = "LI-05"
+    """
+    Planken
+    """
+    LI_06 = "LI-06"
+    """
+    Ruggell
+    """
+    LI_07 = "LI-07"
+    """
+    Schaan
+    """
+    LI_08 = "LI-08"
+    """
+    Schellenberg
+    """
+    LI_09 = "LI-09"
+    """
+    Triesen
+    """
+    LI_10 = "LI-10"
+    """
+    Triesenberg
+    """
+    LI_11 = "LI-11"
+    """
+    Vaduz
+    """
+    LK_1 = "LK-1"
+    """
+    Western Province, Sri Lanka
+    """
+    LK_11 = "LK-11"
+    """
+    Colombo District
+    """
+    LK_12 = "LK-12"
+    """
+    Gampaha District
+    """
+    LK_13 = "LK-13"
+    """
+    Kalutara District
+    """
+    LK_2 = "LK-2"
+    """
+    Central Province, Sri Lanka
+    """
+    LK_21 = "LK-21"
+    """
+    Kandy District
+    """
+    LK_22 = "LK-22"
+    """
+    Matale District
+    """
+    LK_23 = "LK-23"
+    """
+    Nuwara Eliya District
+    """
+    LK_3 = "LK-3"
+    """
+    Southern Province, Sri Lanka
+    """
+    LK_31 = "LK-31"
+    """
+    Galle District
+    """
+    LK_32 = "LK-32"
+    """
+    Matara District
+    """
+    LK_33 = "LK-33"
+    """
+    Hambantota District
+    """
+    LK_4 = "LK-4"
+    """
+    Northern Province, Sri Lanka
+    """
+    LK_41 = "LK-41"
+    """
+    Jaffna District
+    """
+    LK_42 = "LK-42"
+    """
+    Kilinochchi District
+    """
+    LK_43 = "LK-43"
+    """
+    Mannar District
+    """
+    LK_44 = "LK-44"
+    """
+    Vavuniya District
+    """
+    LK_45 = "LK-45"
+    """
+    Mullaitivu District
+    """
+    LK_5 = "LK-5"
+    """
+    Eastern Province, Sri Lanka
+    """
+    LK_51 = "LK-51"
+    """
+    Batticaloa District
+    """
+    LK_52 = "LK-52"
+    """
+    Ampara District
+    """
+    LK_53 = "LK-53"
+    """
+    Trincomalee District
+    """
+    LK_6 = "LK-6"
+    """
+    North Western Province, Sri Lanka
+    """
+    LK_61 = "LK-61"
+    """
+    Kurunegala District
+    """
+    LK_62 = "LK-62"
+    """
+    Puttalam District
+    """
+    LK_7 = "LK-7"
+    """
+    North Central Province, Sri Lanka
+    """
+    LK_71 = "LK-71"
+    """
+    Anuradhapura District
+    """
+    LK_72 = "LK-72"
+    """
+    Polonnaruwa District
+    """
+    LK_8 = "LK-8"
+    """
+    Uva Province
+    """
+    LK_81 = "LK-81"
+    """
+    Badulla District
+    """
+    LK_82 = "LK-82"
+    """
+    Monaragala District
+    """
+    LK_9 = "LK-9"
+    """
+    Sabaragamuwa Province
+    """
+    LK_91 = "LK-91"
+    """
+    Ratnapura District
+    """
+    LK_92 = "LK-92"
+    """
+    Kegalle District
+    """
+    LR_BG = "LR-BG"
+    """
+    Bong County
+    """
+    LR_BM = "LR-BM"
+    """
+    Bomi County
+    """
+    LR_CM = "LR-CM"
+    """
+    Grand Cape Mount County
+    """
+    LR_GB = "LR-GB"
+    """
+    Grand Bassa County
+    """
+    LR_GG = "LR-GG"
+    """
+    Grand Gedeh
+    """
+    LR_GP = "LR-GP"
+    """
+    Gbarpolu County
+    """
+    LR_LO = "LR-LO"
+    """
+    Lofa County
+    """
+    LR_MG = "LR-MG"
+    """
+    Margibi County
+    """
+    LR_MO = "LR-MO"
+    """
+    Montserrado County
+    """
+    LR_MY = "LR-MY"
+    """
+    Maryland County
+    """
+    LR_NI = "LR-NI"
+    """
+    Nimba County
+    """
+    LR_RG = "LR-RG"
+    """
+    River Gee County
+    """
+    LS_A = "LS-A"
+    """
+    Maseru District
+    """
+    LS_B = "LS-B"
+    """
+    Butha-Buthe District
+    """
+    LS_C = "LS-C"
+    """
+    Leribe District
+    """
+    LS_D = "LS-D"
+    """
+    Berea District
+    """
+    LS_E = "LS-E"
+    """
+    Mafeteng District
+    """
+    LS_F = "LS-F"
+    """
+    Mohale's Hoek District
+    """
+    LS_G = "LS-G"
+    """
+    Quthing District
+    """
+    LS_H = "LS-H"
+    """
+    Qacha's Nek District
+    """
+    LS_J = "LS-J"
+    """
+    Mokhotlong District
+    """
+    LS_K = "LS-K"
+    """
+    Thaba-Tseka District
+    """
+    LT_01 = "LT-01"
+    """
+    Akmenė District Municipality
+    """
+    LT_02 = "LT-02"
+    """
+    Alytus City Municipality
+    """
+    LT_03 = "LT-03"
+    """
+    Alytus District Municipality
+    """
+    LT_04 = "LT-04"
+    """
+    Anykščiai District Municipality
+    """
+    LT_05 = "LT-05"
+    """
+    Birštonas Municipality
+    """
+    LT_06 = "LT-06"
+    """
+    Biržai District Municipality
+    """
+    LT_07 = "LT-07"
+    """
+    Druskininkai Municipality
+    """
+    LT_08 = "LT-08"
+    """
+    Elektrėnai Municipality
+    """
+    LT_09 = "LT-09"
+    """
+    Ignalina District Municipality
+    """
+    LT_10 = "LT-10"
+    """
+    Jonava District Municipality
+    """
+    LT_11 = "LT-11"
+    """
+    Joniškis District Municipality
+    """
+    LT_12 = "LT-12"
+    """
+    Jurbarkas District Municipality
+    """
+    LT_13 = "LT-13"
+    """
+    Kaišiadorys District Municipality
+    """
+    LT_14 = "LT-14"
+    """
+    Kalvarija Municipality
+    """
+    LT_15 = "LT-15"
+    """
+    Kaunas City Municipality
+    """
+    LT_16 = "LT-16"
+    """
+    Kaunas District Municipality
+    """
+    LT_17 = "LT-17"
+    """
+    Kazlų Rūda Municipality
+    """
+    LT_18 = "LT-18"
+    """
+    Kėdainiai District Municipality
+    """
+    LT_19 = "LT-19"
+    """
+    Kelmė District Municipality
+    """
+    LT_20 = "LT-20"
+    """
+    Klaipėda City Municipality
+    """
+    LT_21 = "LT-21"
+    """
+    Klaipėda District Municipality
+    """
+    LT_22 = "LT-22"
+    """
+    Kretinga District Municipality
+    """
+    LT_23 = "LT-23"
+    """
+    Kupiškis District Municipality
+    """
+    LT_24 = "LT-24"
+    """
+    Lazdijai District Municipality
+    """
+    LT_25 = "LT-25"
+    """
+    Marijampolė Municipality
+    """
+    LT_26 = "LT-26"
+    """
+    Mažeikiai District Municipality
+    """
+    LT_27 = "LT-27"
+    """
+    Molėtai District Municipality
+    """
+    LT_28 = "LT-28"
+    """
+    Neringa Municipality
+    """
+    LT_29 = "LT-29"
+    """
+    Pagėgiai Municipality
+    """
+    LT_30 = "LT-30"
+    """
+    Pakruojis District Municipality
+    """
+    LT_31 = "LT-31"
+    """
+    Palanga City Municipality
+    """
+    LT_32 = "LT-32"
+    """
+    Panevėžys City Municipality
+    """
+    LT_33 = "LT-33"
+    """
+    Panevėžys District Municipality
+    """
+    LT_34 = "LT-34"
+    """
+    Pasvalys District Municipality
+    """
+    LT_35 = "LT-35"
+    """
+    Plungė District Municipality
+    """
+    LT_36 = "LT-36"
+    """
+    Prienai District Municipality
+    """
+    LT_37 = "LT-37"
+    """
+    Radviliškis District Municipality
+    """
+    LT_38 = "LT-38"
+    """
+    Raseiniai District Municipality
+    """
+    LT_39 = "LT-39"
+    """
+    Rietavas Municipality
+    """
+    LT_40 = "LT-40"
+    """
+    Rokiškis District Municipality
+    """
+    LT_41 = "LT-41"
+    """
+    Šakiai District Municipality
+    """
+    LT_42 = "LT-42"
+    """
+    Šalčininkai District Municipality
+    """
+    LT_43 = "LT-43"
+    """
+    Šiauliai City Municipality
+    """
+    LT_44 = "LT-44"
+    """
+    Šiauliai District Municipality
+    """
+    LT_45 = "LT-45"
+    """
+    Šilalė District Municipality
+    """
+    LT_46 = "LT-46"
+    """
+    Šilutė District Municipality
+    """
+    LT_47 = "LT-47"
+    """
+    Širvintos District Municipality
+    """
+    LT_48 = "LT-48"
+    """
+    Skuodas District Municipality
+    """
+    LT_49 = "LT-49"
+    """
+    Švenčionys District Municipality
+    """
+    LT_50 = "LT-50"
+    """
+    Tauragė District Municipality
+    """
+    LT_51 = "LT-51"
+    """
+    Telšiai District Municipality
+    """
+    LT_52 = "LT-52"
+    """
+    Trakai District Municipality
+    """
+    LT_53 = "LT-53"
+    """
+    Ukmergė District Municipality
+    """
+    LT_54 = "LT-54"
+    """
+    Utena District Municipality
+    """
+    LT_55 = "LT-55"
+    """
+    Varėna District Municipality
+    """
+    LT_56 = "LT-56"
+    """
+    Vilkaviškis District Municipality
+    """
+    LT_57 = "LT-57"
+    """
+    Vilnius City Municipality
+    """
+    LT_58 = "LT-58"
+    """
+    Vilnius District Municipality
+    """
+    LT_59 = "LT-59"
+    """
+    Visaginas Municipality
+    """
+    LT_60 = "LT-60"
+    """
+    Zarasai District Municipality
+    """
+    LT_AL = "LT-AL"
+    """
+    Alytus County
+    """
+    LT_KL = "LT-KL"
+    """
+    Klaipėda County
+    """
+    LT_KU = "LT-KU"
+    """
+    Kaunas County
+    """
+    LT_MR = "LT-MR"
+    """
+    Marijampolė County
+    """
+    LT_PN = "LT-PN"
+    """
+    Panevėžys County
+    """
+    LT_SA = "LT-SA"
+    """
+    Šiauliai County
+    """
+    LT_TA = "LT-TA"
+    """
+    Tauragė County
+    """
+    LT_TE = "LT-TE"
+    """
+    Telšiai County
+    """
+    LT_UT = "LT-UT"
+    """
+    Utena County
+    """
+    LT_VL = "LT-VL"
+    """
+    Vilnius County
+    """
+    LU_CA = "LU-CA"
+    """
+    Canton of Capellen
+    """
+    LU_CL = "LU-CL"
+    """
+    Canton of Clervaux
+    """
+    LU_D = "LU-D"
+    """
+    Former Diekirch District
+    """
+    LU_DI = "LU-DI"
+    """
+    Canton of Diekirch
+    """
+    LU_EC = "LU-EC"
+    """
+    Canton of Echternach
+    """
+    LU_ES = "LU-ES"
+    """
+    Canton of Esch-sur-Alzette
+    """
+    LU_G = "LU-G"
+    """
+    Former Grevenmacher District
+    """
+    LU_GR = "LU-GR"
+    """
+    Canton of Grevenmacher
+    """
+    LU_L = "LU-L"
+    """
+    Former Luxembourg District
+    """
+    LU_LU = "LU-LU"
+    """
+    Canton of Luxembourg
+    """
+    LU_ME = "LU-ME"
+    """
+    Canton of Mersch
+    """
+    LU_RD = "LU-RD"
+    """
+    Canton of Redange
+    """
+    LU_RM = "LU-RM"
+    """
+    Canton of Remich
+    """
+    LU_VD = "LU-VD"
+    """
+    Canton of Vianden
+    """
+    LU_WI = "LU-WI"
+    """
+    Canton of Wiltz
+    """
+    LV_001 = "LV-001"
+    """
+    Aglona Municipality
+    """
+    LV_002 = "LV-002"
+    """
+    Aizkraukle Municipality
+    """
+    LV_003 = "LV-003"
+    """
+    Aizpute Municipality
+    """
+    LV_004 = "LV-004"
+    """
+    Aknīste Municipality
+    """
+    LV_005 = "LV-005"
+    """
+    Aloja Municipality
+    """
+    LV_006 = "LV-006"
+    """
+    Alsunga Municipality
+    """
+    LV_007 = "LV-007"
+    """
+    Alūksne Municipality
+    """
+    LV_008 = "LV-008"
+    """
+    Amata Municipality
+    """
+    LV_009 = "LV-009"
+    """
+    Ape Municipality
+    """
+    LV_010 = "LV-010"
+    """
+    Auce Municipality
+    """
+    LV_011 = "LV-011"
+    """
+    Ādaži Municipality
+    """
+    LV_012 = "LV-012"
+    """
+    Babīte Municipality
+    """
+    LV_013 = "LV-013"
+    """
+    Baldone Municipality
+    """
+    LV_014 = "LV-014"
+    """
+    Baltinava Municipality
+    """
+    LV_015 = "LV-015"
+    """
+    Balvi Municipality
+    """
+    LV_016 = "LV-016"
+    """
+    Bauska Municipality
+    """
+    LV_017 = "LV-017"
+    """
+    Beverīna Municipality
+    """
+    LV_018 = "LV-018"
+    """
+    Brocēni Municipality
+    """
+    LV_019 = "LV-019"
+    """
+    Burtnieki Municipality
+    """
+    LV_020 = "LV-020"
+    """
+    Carnikava Municipality
+    """
+    LV_021 = "LV-021"
+    """
+    Cesvaine Municipality
+    """
+    LV_022 = "LV-022"
+    """
+    Cēsis Municipality
+    """
+    LV_023 = "LV-023"
+    """
+    Cibla Municipality
+    """
+    LV_024 = "LV-024"
+    """
+    Dagda Municipality
+    """
+    LV_025 = "LV-025"
+    """
+    Daugavpils Municipality
+    """
+    LV_026 = "LV-026"
+    """
+    Dobele Municipality
+    """
+    LV_027 = "LV-027"
+    """
+    Dundaga Municipality
+    """
+    LV_028 = "LV-028"
+    """
+    Durbe Municipality
+    """
+    LV_029 = "LV-029"
+    """
+    Engure Municipality
+    """
+    LV_030 = "LV-030"
+    """
+    Ērgļi Municipality
+    """
+    LV_031 = "LV-031"
+    """
+    Garkalne Municipality
+    """
+    LV_032 = "LV-032"
+    """
+    Grobiņa Municipality
+    """
+    LV_033 = "LV-033"
+    """
+    Gulbene Municipality
+    """
+    LV_034 = "LV-034"
+    """
+    Iecava Municipality
+    """
+    LV_035 = "LV-035"
+    """
+    Ikšķile Municipality
+    """
+    LV_036 = "LV-036"
+    """
+    Ilūkste Municipality
+    """
+    LV_037 = "LV-037"
+    """
+    Inčukalns Municipality
+    """
+    LV_038 = "LV-038"
+    """
+    Jaunjelgava Municipality
+    """
+    LV_039 = "LV-039"
+    """
+    Jaunpiebalga Municipality
+    """
+    LV_040 = "LV-040"
+    """
+    Jaunpils Municipality
+    """
+    LV_041 = "LV-041"
+    """
+    Jelgava Municipality
+    """
+    LV_042 = "LV-042"
+    """
+    Jēkabpils Municipality
+    """
+    LV_043 = "LV-043"
+    """
+    Kandava Municipality
+    """
+    LV_044 = "LV-044"
+    """
+    Kārsava Municipality
+    """
+    LV_045 = "LV-045"
+    """
+    Kocēni Municipality
+    """
+    LV_046 = "LV-046"
+    """
+    Koknese Municipality
+    """
+    LV_047 = "LV-047"
+    """
+    Krāslava Municipality
+    """
+    LV_048 = "LV-048"
+    """
+    Krimulda Municipality
+    """
+    LV_049 = "LV-049"
+    """
+    Krustpils Municipality
+    """
+    LV_050 = "LV-050"
+    """
+    Kuldīga Municipality
+    """
+    LV_051 = "LV-051"
+    """
+    Ķegums Municipality
+    """
+    LV_052 = "LV-052"
+    """
+    Ķekava Municipality
+    """
+    LV_053 = "LV-053"
+    """
+    Lielvārde Municipality
+    """
+    LV_054 = "LV-054"
+    """
+    Limbaži Municipality
+    """
+    LV_055 = "LV-055"
+    """
+    Līgatne Municipality
+    """
+    LV_056 = "LV-056"
+    """
+    Līvāni Municipality
+    """
+    LV_057 = "LV-057"
+    """
+    Lubāna Municipality
+    """
+    LV_058 = "LV-058"
+    """
+    Ludza Municipality
+    """
+    LV_059 = "LV-059"
+    """
+    Madona Municipality
+    """
+    LV_060 = "LV-060"
+    """
+    Mazsalaca Municipality
+    """
+    LV_061 = "LV-061"
+    """
+    Mālpils Municipality
+    """
+    LV_062 = "LV-062"
+    """
+    Mārupe Municipality
+    """
+    LV_063 = "LV-063"
+    """
+    Mērsrags Municipality
+    """
+    LV_064 = "LV-064"
+    """
+    Naukšēni Municipality
+    """
+    LV_065 = "LV-065"
+    """
+    Nereta Municipality
+    """
+    LV_066 = "LV-066"
+    """
+    Nīca Municipality
+    """
+    LV_067 = "LV-067"
+    """
+    Ogre Municipality
+    """
+    LV_068 = "LV-068"
+    """
+    Olaine Municipality
+    """
+    LV_069 = "LV-069"
+    """
+    Ozolnieki Municipality
+    """
+    LV_070 = "LV-070"
+    """
+    Pārgauja Municipality
+    """
+    LV_071 = "LV-071"
+    """
+    Pāvilosta Municipality
+    """
+    LV_072 = "LV-072"
+    """
+    Pļaviņas Municipality
+    """
+    LV_073 = "LV-073"
+    """
+    Preiļi Municipality
+    """
+    LV_074 = "LV-074"
+    """
+    Priekule Municipality
+    """
+    LV_075 = "LV-075"
+    """
+    Priekuļi Municipality
+    """
+    LV_076 = "LV-076"
+    """
+    Rauna Municipality
+    """
+    LV_077 = "LV-077"
+    """
+    Rēzekne Municipality
+    """
+    LV_078 = "LV-078"
+    """
+    Riebiņi Municipality
+    """
+    LV_079 = "LV-079"
+    """
+    Roja Municipality
+    """
+    LV_080 = "LV-080"
+    """
+    Ropaži Municipality
+    """
+    LV_081 = "LV-081"
+    """
+    Rucava Municipality
+    """
+    LV_082 = "LV-082"
+    """
+    Rugāji Municipality
+    """
+    LV_083 = "LV-083"
+    """
+    Rundāle municipality
+    """
+    LV_084 = "LV-084"
+    """
+    Rūjiena Municipality
+    """
+    LV_085 = "LV-085"
+    """
+    Sala Municipality, Latvia
+    """
+    LV_086 = "LV-086"
+    """
+    Salacgrīva Municipality
+    """
+    LV_087 = "LV-087"
+    """
+    Salaspils Municipality
+    """
+    LV_088 = "LV-088"
+    """
+    Saldus Municipality
+    """
+    LV_089 = "LV-089"
+    """
+    Saulkrasti Municipality
+    """
+    LV_090 = "LV-090"
+    """
+    Sēja Municipality
+    """
+    LV_091 = "LV-091"
+    """
+    Sigulda Municipality
+    """
+    LV_092 = "LV-092"
+    """
+    Skrīveri Municipality
+    """
+    LV_093 = "LV-093"
+    """
+    Skrunda Municipality
+    """
+    LV_094 = "LV-094"
+    """
+    Smiltene Municipality
+    """
+    LV_095 = "LV-095"
+    """
+    Stopiņi Municipality
+    """
+    LV_096 = "LV-096"
+    """
+    Strenči Municipality
+    """
+    LV_097 = "LV-097"
+    """
+    Talsi Municipality
+    """
+    LV_098 = "LV-098"
+    """
+    Tērvete Municipality
+    """
+    LV_099 = "LV-099"
+    """
+    Tukums Municipality
+    """
+    LV_100 = "LV-100"
+    """
+    Vaiņode Municipality
+    """
+    LV_101 = "LV-101"
+    """
+    Valka Municipality
+    """
+    LV_102 = "LV-102"
+    """
+    Varakļāni Municipality
+    """
+    LV_103 = "LV-103"
+    """
+    Vārkava Municipality
+    """
+    LV_104 = "LV-104"
+    """
+    Vecpiebalga Municipality
+    """
+    LV_105 = "LV-105"
+    """
+    Vecumnieki Municipality
+    """
+    LV_106 = "LV-106"
+    """
+    Ventspils Municipality
+    """
+    LV_107 = "LV-107"
+    """
+    Viesīte Municipality
+    """
+    LV_108 = "LV-108"
+    """
+    Viļaka Municipality
+    """
+    LV_109 = "LV-109"
+    """
+    Viļāni Municipality
+    """
+    LV_110 = "LV-110"
+    """
+    Zilupe Municipality
+    """
+    LV_111 = "LV-111"
+    """
+    Augšdaugava Municipality
+    """
+    LV_112 = "LV-112"
+    """
+    South Kurzeme Municipality
+    """
+    LV_113 = "LV-113"
+    """
+    Valmiera Municipality
+    """
+    LV_DGV = "LV-DGV"
+    """
+    Daugavpils
+    """
+    LV_JEL = "LV-JEL"
+    """
+    Jelgava
+    """
+    LV_JKB = "LV-JKB"
+    """
+    Jēkabpils
+    """
+    LV_JUR = "LV-JUR"
+    """
+    Jūrmala
+    """
+    LV_LPX = "LV-LPX"
+    """
+    Liepāja
+    """
+    LV_REZ = "LV-REZ"
+    """
+    Rēzekne
+    """
+    LV_RIX = "LV-RIX"
+    """
+    Riga
+    """
+    LV_VEN = "LV-VEN"
+    """
+    Ventspils
+    """
+    LV_VMR = "LV-VMR"
+    """
+    Valmiera
+    """
+    LY_BA = "LY-BA"
+    """
+    Benghazi
+    """
+    LY_JA = "LY-JA"
+    """
+    Jabal al Akhdar district (Libya)
+    """
+    LY_WD = "LY-WD"
+    """
+    Wadi Al Hayaa
+    """
+    MA_01 = "MA-01"
+    """
+    Tanger-Tetouan-Al Hoceima
+    """
+    MA_02 = "MA-02"
+    """
+    Oriental Region
+    """
+    MA_03 = "MA-03"
+    """
+    Fès-Meknès
+    """
+    MA_04 = "MA-04"
+    """
+    Rabat-Salé-Kénitra
+    """
+    MA_05 = "MA-05"
+    """
+    Béni Mellal-Khénifra
+    """
+    MA_06 = "MA-06"
+    """
+    Casablanca-Settat
+    """
+    MA_07 = "MA-07"
+    """
+    Marrakech-Safi
+    """
+    MA_08 = "MA-08"
+    """
+    Drâa-Tafilalet
+    """
+    MA_09 = "MA-09"
+    """
+    Souss-Massa
+    """
+    MA_10 = "MA-10"
+    """
+    Guelmim-Oued Noun
+    """
+    MA_11 = "MA-11"
+    """
+    Marrakech-Tensift-El Haouz
+    """
+    MA_12 = "MA-12"
+    """
+    Dakhla-Oued Ed Dahab
+    """
+    MA_AGD = "MA-AGD"
+    """
+    Agadir Ida-Outanane Prefecture
+    """
+    MA_ASZ = "MA-ASZ"
+    """
+    Assa-Zag Province
+    """
+    MA_AZI = "MA-AZI"
+    """
+    Azilal Province
+    """
+    MA_BEM = "MA-BEM"
+    """
+    Béni Mellal Province
+    """
+    MA_BER = "MA-BER"
+    """
+    Berkane Province
+    """
+    MA_BOM = "MA-BOM"
+    """
+    Boulemane Province
+    """
+    MA_CAS = "MA-CAS"
+    """
+    Casablanca
+    """
+    MA_CHE = "MA-CHE"
+    """
+    Chefchaouen Province
+    """
+    MA_CHI = "MA-CHI"
+    """
+    Chichaoua
+    """
+    MA_CHT = "MA-CHT"
+    """
+    Chtouka-Aït Baha Province
+    """
+    MA_DRI = "MA-DRI"
+    """
+    Driouch Province
+    """
+    MA_ESI = "MA-ESI"
+    """
+    Essaouira Province
+    """
+    MA_FES = "MA-FES"
+    """
+    Fes
+    """
+    MA_FIG = "MA-FIG"
+    """
+    Figuig Province
+    """
+    MA_FQH = "MA-FQH"
+    """
+    Fquih Ben Salah Province
+    """
+    MA_GUE = "MA-GUE"
+    """
+    Guelmim
+    """
+    MA_GUF = "MA-GUF"
+    """
+    Guercif
+    """
+    MA_HAJ = "MA-HAJ"
+    """
+    El Hajeb Province
+    """
+    MA_HAO = "MA-HAO"
+    """
+    Al Haouz Province
+    """
+    MA_HOC = "MA-HOC"
+    """
+    Al Hoceima Province
+    """
+    MA_IFR = "MA-IFR"
+    """
+    Ifrane Province
+    """
+    MA_JDI = "MA-JDI"
+    """
+    El Jadida Province
+    """
+    MA_KEN = "MA-KEN"
+    """
+    Kenitra Province
+    """
+    MA_KES = "MA-KES"
+    """
+    El Kelâa des Sraghna Province
+    """
+    MA_KHE = "MA-KHE"
+    """
+    Khémisset Province
+    """
+    MA_KHN = "MA-KHN"
+    """
+    Khenifra Province
+    """
+    MA_KHO = "MA-KHO"
+    """
+    Khouribga Province
+    """
+    MA_LAR = "MA-LAR"
+    """
+    Larache Province
+    """
+    MA_MAR = "MA-MAR"
+    """
+    Marrakech
+    """
+    MA_MDF = "MA-MDF"
+    """
+    M'diq-Fnideq Prefecture
+    """
+    MA_MEK = "MA-MEK"
+    """
+    Meknes Prefecture
+    """
+    MA_MID = "MA-MID"
+    """
+    Midelt Province
+    """
+    MA_MOU = "MA-MOU"
+    """
+    Moulay Yaâcoub Province
+    """
+    MA_NAD = "MA-NAD"
+    """
+    Nador Province
+    """
+    MA_OUA = "MA-OUA"
+    """
+    Ouarzazate Province
+    """
+    MA_OUJ = "MA-OUJ"
+    """
+    Oujda
+    """
+    MA_OUZ = "MA-OUZ"
+    """
+    Ouezzane Province
+    """
+    MA_RAB = "MA-RAB"
+    """
+    Rabat Prefecture
+    """
+    MA_SAF = "MA-SAF"
+    """
+    Safi Province
+    """
+    MA_SAL = "MA-SAL"
+    """
+    Salé
+    """
+    MA_SEF = "MA-SEF"
+    """
+    Sefrou Province
+    """
+    MA_SIB = "MA-SIB"
+    """
+    Sidi Bennour Province
+    """
+    MA_SIF = "MA-SIF"
+    """
+    Sidi Ifni Province
+    """
+    MA_SIK = "MA-SIK"
+    """
+    Sidi Kacem Province
+    """
+    MA_SIL = "MA-SIL"
+    """
+    Sidi Slimane Province
+    """
+    MA_SKH = "MA-SKH"
+    """
+    Skhirate-Témara Prefecture
+    """
+    MA_TAI = "MA-TAI"
+    """
+    Taourirt Province
+    """
+    MA_TAO = "MA-TAO"
+    """
+    Taounate Province
+    """
+    MA_TAR = "MA-TAR"
+    """
+    Taroudant Province
+    """
+    MA_TAT = "MA-TAT"
+    """
+    Tata Province
+    """
+    MA_TAZ = "MA-TAZ"
+    """
+    Taza Province
+    """
+    MA_TET = "MA-TET"
+    """
+    Tetouan Province
+    """
+    MA_TIZ = "MA-TIZ"
+    """
+    Tiznit Province
+    """
+    MA_TNG = "MA-TNG"
+    """
+    Tangier-Assilah Prefecture
+    """
+    MA_TNT = "MA-TNT"
+    """
+    Tan-Tan Province
+    """
+    MA_YUS = "MA-YUS"
+    """
+    Youssoufia Province
+    """
+    MA_ZAG = "MA-ZAG"
+    """
+    Zagora Province
+    """
+    MC_CO = "MC-CO"
+    """
+    La Condamine
+    """
+    MC_FO = "MC-FO"
+    """
+    Fontvieille (Monaco)
+    """
+    MC_JE = "MC-JE"
+    """
+    Jardin Exotique (district)
+    """
+    MC_LA = "MC-LA"
+    """
+    Larvotto (Monaco)
+    """
+    MC_MC = "MC-MC"
+    """
+    Monte Carlo
+    """
+    MC_MG = "MC-MG"
+    """
+    Moneghetti
+    """
+    MC_MO = "MC-MO"
+    """
+    Monaco-Ville
+    """
+    MC_PH = "MC-PH"
+    """
+    Port Hercule
+    """
+    MC_SD = "MC-SD"
+    """
+    Ravin de Sainte-Dévote
+    """
+    MD_AN = "MD-AN"
+    """
+    Anenii Noi District
+    """
+    MD_BA = "MD-BA"
+    """
+    Bălți Municipality
+    """
+    MD_BR = "MD-BR"
+    """
+    Briceni District
+    """
+    MD_BS = "MD-BS"
+    """
+    Basarabeasca District
+    """
+    MD_CA = "MD-CA"
+    """
+    Cahul District
+    """
+    MD_CL = "MD-CL"
+    """
+    Călărași District
+    """
+    MD_CM = "MD-CM"
+    """
+    Cimișlia District
+    """
+    MD_CR = "MD-CR"
+    """
+    Criuleni District
+    """
+    MD_CS = "MD-CS"
+    """
+    Căușeni District
+    """
+    MD_CT = "MD-CT"
+    """
+    Cantemir District
+    """
+    MD_CU = "MD-CU"
+    """
+    Chișinău Municipality
+    """
+    MD_DO = "MD-DO"
+    """
+    Dondușeni District
+    """
+    MD_DR = "MD-DR"
+    """
+    Drochia District
+    """
+    MD_DU = "MD-DU"
+    """
+    Dubăsari District
+    """
+    MD_ED = "MD-ED"
+    """
+    Edineț District
+    """
+    MD_FA = "MD-FA"
+    """
+    Fălești District
+    """
+    MD_FL = "MD-FL"
+    """
+    Florești District
+    """
+    MD_GA = "MD-GA"
+    """
+    Gagauzia
+    """
+    MD_GL = "MD-GL"
+    """
+    Glodeni District
+    """
+    MD_HI = "MD-HI"
+    """
+    Hîncești District
+    """
+    MD_IA = "MD-IA"
+    """
+    Ialoveni District
+    """
+    MD_LE = "MD-LE"
+    """
+    Leova District
+    """
+    MD_NI = "MD-NI"
+    """
+    Nisporeni District
+    """
+    MD_OC = "MD-OC"
+    """
+    Ocnița District
+    """
+    MD_OR = "MD-OR"
+    """
+    Orhei District
+    """
+    MD_RE = "MD-RE"
+    """
+    Rezina District
+    """
+    MD_RI = "MD-RI"
+    """
+    Rîșcani District
+    """
+    MD_SD = "MD-SD"
+    """
+    Șoldănești District
+    """
+    MD_SI = "MD-SI"
+    """
+    Sîngerei District
+    """
+    MD_SN = "MD-SN"
+    """
+    Transnistria
+    """
+    MD_SO = "MD-SO"
+    """
+    Soroca District
+    """
+    MD_ST = "MD-ST"
+    """
+    Strășeni District
+    """
+    MD_SV = "MD-SV"
+    """
+    Ștefan Vodă District
+    """
+    MD_TA = "MD-TA"
+    """
+    Taraclia District
+    """
+    MD_TE = "MD-TE"
+    """
+    Telenești District
+    """
+    MD_UN = "MD-UN"
+    """
+    Ungheni District
+    """
+    ME_01 = "ME-01"
+    """
+    Andrijevica
+    """
+    ME_02 = "ME-02"
+    """
+    Bar, Montenegro
+    """
+    ME_03 = "ME-03"
+    """
+    Berane
+    """
+    ME_05 = "ME-05"
+    """
+    Budva
+    """
+    ME_06 = "ME-06"
+    """
+    Cetinje
+    """
+    ME_07 = "ME-07"
+    """
+    Danilovgrad
+    """
+    ME_11 = "ME-11"
+    """
+    Mojkovac
+    """
+    ME_12 = "ME-12"
+    """
+    Nikšić Municipality
+    """
+    ME_13 = "ME-13"
+    """
+    Plav
+    """
+    ME_14 = "ME-14"
+    """
+    Pljevlja Municipality
+    """
+    ME_17 = "ME-17"
+    """
+    Rožaje
+    """
+    ME_18 = "ME-18"
+    """
+    Šavnik Municipality
+    """
+    ME_19 = "ME-19"
+    """
+    Tivat
+    """
+    ME_22 = "ME-22"
+    """
+    Gusinje Municipality
+    """
+    MG_A = "MG-A"
+    """
+    Toamasina
+    """
+    MG_D = "MG-D"
+    """
+    Antsiranana
+    """
+    MG_F = "MG-F"
+    """
+    Fianarantsoa
+    """
+    MG_M = "MG-M"
+    """
+    Mahajanga Province
+    """
+    MG_T = "MG-T"
+    """
+    Antananarivo
+    """
+    MH_ALK = "MH-ALK"
+    """
+    Ailuk Atoll
+    """
+    MH_ALL = "MH-ALL"
+    """
+    Ailinglaplap Atoll
+    """
+    MH_ARN = "MH-ARN"
+    """
+    Arno Atoll
+    """
+    MH_EBO = "MH-EBO"
+    """
+    Ebon Atoll
+    """
+    MH_ENI = "MH-ENI"
+    """
+    Enewetak
+    """
+    MH_JAL = "MH-JAL"
+    """
+    Jaluit
+    """
+    MH_KWA = "MH-KWA"
+    """
+    Kwajalein
+    """
+    MH_LIK = "MH-LIK"
+    """
+    Likiep Atoll
+    """
+    MH_MAJ = "MH-MAJ"
+    """
+    Majuro
+    """
+    MH_MAL = "MH-MAL"
+    """
+    Maloelap Atoll
+    """
+    MH_NMK = "MH-NMK"
+    """
+    Namorik Atoll
+    """
+    MH_RON = "MH-RON"
+    """
+    Rongelap Atoll
+    """
+    MH_UTI = "MH-UTI"
+    """
+    Utirik
+    """
+    MH_WTJ = "MH-WTJ"
+    """
+    Wotje Atoll
+    """
+    MK_101 = "MK-101"
+    """
+    Veles Municipality
+    """
+    MK_102 = "MK-102"
+    """
+    Gradsko Municipality
+    """
+    MK_103 = "MK-103"
+    """
+    Demir Kapija Municipality
+    """
+    MK_104 = "MK-104"
+    """
+    Kavadarci Municipality
+    """
+    MK_105 = "MK-105"
+    """
+    Lozovo Municipality
+    """
+    MK_106 = "MK-106"
+    """
+    Negotino Municipality
+    """
+    MK_107 = "MK-107"
+    """
+    Rosoman Municipality
+    """
+    MK_108 = "MK-108"
+    """
+    Sveti Nikole Municipality
+    """
+    MK_109 = "MK-109"
+    """
+    Čaška Municipality
+    """
+    MK_15 = "MK-15"
+    """
+    Vraneštica Municipality
+    """
+    MK_201 = "MK-201"
+    """
+    Berovo Municipality
+    """
+    MK_202 = "MK-202"
+    """
+    Vinica Municipality
+    """
+    MK_203 = "MK-203"
+    """
+    Delčevo Municipality
+    """
+    MK_204 = "MK-204"
+    """
+    Zrnovci Municipality
+    """
+    MK_205 = "MK-205"
+    """
+    Karbinci Municipality
+    """
+    MK_206 = "MK-206"
+    """
+    Kočani Municipality
+    """
+    MK_207 = "MK-207"
+    """
+    Makedonska Kamenica Municipality
+    """
+    MK_208 = "MK-208"
+    """
+    Pehčevo Municipality
+    """
+    MK_209 = "MK-209"
+    """
+    Probištip Municipality
+    """
+    MK_210 = "MK-210"
+    """
+    Češinovo-Obleševo Municipality
+    """
+    MK_211 = "MK-211"
+    """
+    Štip Municipality
+    """
+    MK_28 = "MK-28"
+    """
+    Drugovo Municipality
+    """
+    MK_301 = "MK-301"
+    """
+    Vevčani Municipality
+    """
+    MK_303 = "MK-303"
+    """
+    Debar Municipality
+    """
+    MK_304 = "MK-304"
+    """
+    Debarca Municipality
+    """
+    MK_307 = "MK-307"
+    """
+    Kičevo Municipality
+    """
+    MK_308 = "MK-308"
+    """
+    Makedonski Brod Municipality
+    """
+    MK_31 = "MK-31"
+    """
+    Zajas Municipality
+    """
+    MK_310 = "MK-310"
+    """
+    Ohrid Municipality
+    """
+    MK_311 = "MK-311"
+    """
+    Plasnica Municipality
+    """
+    MK_312 = "MK-312"
+    """
+    Struga Municipality
+    """
+    MK_313 = "MK-313"
+    """
+    Centar Župa Municipality
+    """
+    MK_401 = "MK-401"
+    """
+    Bogdanci Municipality
+    """
+    MK_402 = "MK-402"
+    """
+    Bosilovo Municipality
+    """
+    MK_403 = "MK-403"
+    """
+    Valandovo Municipality
+    """
+    MK_404 = "MK-404"
+    """
+    Vasilevo Municipality
+    """
+    MK_405 = "MK-405"
+    """
+    Gevgelija Municipality
+    """
+    MK_406 = "MK-406"
+    """
+    Dojran Municipality
+    """
+    MK_407 = "MK-407"
+    """
+    Konče Municipality
+    """
+    MK_408 = "MK-408"
+    """
+    Novo Selo Municipality
+    """
+    MK_409 = "MK-409"
+    """
+    Radoviš Municipality
+    """
+    MK_410 = "MK-410"
+    """
+    Strumica Municipality
+    """
+    MK_47 = "MK-47"
+    """
+    Kumanovo
+    """
+    MK_501 = "MK-501"
+    """
+    Bitola Municipality
+    """
+    MK_502 = "MK-502"
+    """
+    Demir Hisar Municipality
+    """
+    MK_503 = "MK-503"
+    """
+    Dolneni Municipality
+    """
+    MK_504 = "MK-504"
+    """
+    Krivogaštani Municipality
+    """
+    MK_505 = "MK-505"
+    """
+    Kruševo Municipality
+    """
+    MK_506 = "MK-506"
+    """
+    Mogila Municipality
+    """
+    MK_507 = "MK-507"
+    """
+    Novaci Municipality
+    """
+    MK_508 = "MK-508"
+    """
+    Prilep Municipality
+    """
+    MK_509 = "MK-509"
+    """
+    Resen Municipality
+    """
+    MK_57 = "MK-57"
+    """
+    Oslomej Municipality
+    """
+    MK_601 = "MK-601"
+    """
+    Bogovinje Municipality
+    """
+    MK_602 = "MK-602"
+    """
+    Brvenica Municipality
+    """
+    MK_603 = "MK-603"
+    """
+    Vrapčište Municipality
+    """
+    MK_604 = "MK-604"
+    """
+    Gostivar Municipality
+    """
+    MK_605 = "MK-605"
+    """
+    Želino Municipality
+    """
+    MK_606 = "MK-606"
+    """
+    Jegunovce Municipality
+    """
+    MK_607 = "MK-607"
+    """
+    Mavrovo and Rostuša Municipality
+    """
+    MK_608 = "MK-608"
+    """
+    Tearce Municipality
+    """
+    MK_609 = "MK-609"
+    """
+    Tetovo Municipality
+    """
+    MK_701 = "MK-701"
+    """
+    Kratovo Municipality
+    """
+    MK_702 = "MK-702"
+    """
+    Kriva Palanka Municipality
+    """
+    MK_703 = "MK-703"
+    """
+    Kumanovo Municipality
+    """
+    MK_704 = "MK-704"
+    """
+    Lipkovo Municipality
+    """
+    MK_705 = "MK-705"
+    """
+    Rankovce Municipality
+    """
+    MK_706 = "MK-706"
+    """
+    Staro Nagoričane Municipality
+    """
+    MK_801 = "MK-801"
+    """
+    Aerodrom Municipality
+    """
+    MK_802 = "MK-802"
+    """
+    Aračinovo Municipality
+    """
+    MK_803 = "MK-803"
+    """
+    Butel Municipality
+    """
+    MK_804 = "MK-804"
+    """
+    Gazi Baba Municipality
+    """
+    MK_805 = "MK-805"
+    """
+    Ǵorče Petrov Municipality
+    """
+    MK_806 = "MK-806"
+    """
+    Zelenikovo Municipality
+    """
+    MK_807 = "MK-807"
+    """
+    Ilinden Municipality
+    """
+    MK_808 = "MK-808"
+    """
+    Karpoš Municipality
+    """
+    MK_809 = "MK-809"
+    """
+    Kisela Voda Municipality
+    """
+    MK_810 = "MK-810"
+    """
+    Petrovec Municipality
+    """
+    MK_811 = "MK-811"
+    """
+    Saraj Municipality
+    """
+    MK_812 = "MK-812"
+    """
+    Sopište Municipality
+    """
+    MK_813 = "MK-813"
+    """
+    Studeničani Municipality
+    """
+    MK_814 = "MK-814"
+    """
+    Centar Municipality
+    """
+    MK_815 = "MK-815"
+    """
+    Čair Municipality
+    """
+    MK_816 = "MK-816"
+    """
+    Čučer Sandevo Municipality
+    """
+    MK_817 = "MK-817"
+    """
+    Šuto Orizari Municipality
+    """
+    ML_1 = "ML-1"
+    """
+    Kayes Region
+    """
+    ML_10 = "ML-10"
+    """
+    Taoudénit Region
+    """
+    ML_2 = "ML-2"
+    """
+    Koulikoro Region
+    """
+    ML_3 = "ML-3"
+    """
+    Sikasso Region
+    """
+    ML_4 = "ML-4"
+    """
+    Ségou Region
+    """
+    ML_5 = "ML-5"
+    """
+    Mopti Region
+    """
+    ML_6 = "ML-6"
+    """
+    Tombouctou Region
+    """
+    ML_7 = "ML-7"
+    """
+    Gao Region
+    """
+    ML_8 = "ML-8"
+    """
+    Kidal Region
+    """
+    ML_BKO = "ML-BKO"
+    """
+    Bamako
+    """
+    MM_01 = "MM-01"
+    """
+    Sagaing Region
+    """
+    MM_02 = "MM-02"
+    """
+    Bago Region
+    """
+    MM_03 = "MM-03"
+    """
+    Magway Region
+    """
+    MM_04 = "MM-04"
+    """
+    Mandalay Region
+    """
+    MM_05 = "MM-05"
+    """
+    Tanintharyi Region
+    """
+    MM_06 = "MM-06"
+    """
+    Yangon
+    """
+    MM_07 = "MM-07"
+    """
+    Ayeyarwady Region
+    """
+    MM_11 = "MM-11"
+    """
+    Kachin State
+    """
+    MM_12 = "MM-12"
+    """
+    Kayah State
+    """
+    MM_13 = "MM-13"
+    """
+    Kayin State
+    """
+    MM_14 = "MM-14"
+    """
+    Chin State
+    """
+    MM_15 = "MM-15"
+    """
+    Mon State
+    """
+    MM_16 = "MM-16"
+    """
+    Rakhine State
+    """
+    MM_17 = "MM-17"
+    """
+    Shan State
+    """
+    MM_18 = "MM-18"
+    """
+    Naypyidaw Union Territory
+    """
+    MN_035 = "MN-035"
+    """
+    Orkhon Aimag
+    """
+    MN_037 = "MN-037"
+    """
+    Darkhan-Uul Aimag
+    """
+    MN_039 = "MN-039"
+    """
+    Khentii Aimag
+    """
+    MN_041 = "MN-041"
+    """
+    Khövsgöl Aimag
+    """
+    MN_043 = "MN-043"
+    """
+    Khovd Aimag
+    """
+    MN_046 = "MN-046"
+    """
+    Uvs Aimag
+    """
+    MN_047 = "MN-047"
+    """
+    Töv Aimag
+    """
+    MN_049 = "MN-049"
+    """
+    Selenge Aimag
+    """
+    MN_051 = "MN-051"
+    """
+    Sükhbaatar Aimag
+    """
+    MN_053 = "MN-053"
+    """
+    Ömnögovi Aimag
+    """
+    MN_055 = "MN-055"
+    """
+    Övörkhangai Aimag
+    """
+    MN_057 = "MN-057"
+    """
+    Zavkhan Aimag
+    """
+    MN_059 = "MN-059"
+    """
+    Dundgovi Aimag
+    """
+    MN_061 = "MN-061"
+    """
+    Dornod Aimag
+    """
+    MN_063 = "MN-063"
+    """
+    Dornogovi Aimag
+    """
+    MN_064 = "MN-064"
+    """
+    Govisümber Aimag
+    """
+    MN_065 = "MN-065"
+    """
+    Govi-Altai Aimag
+    """
+    MN_067 = "MN-067"
+    """
+    Bulgan Aimag
+    """
+    MN_069 = "MN-069"
+    """
+    Bayankhongor Aimag
+    """
+    MN_071 = "MN-071"
+    """
+    Bayan-Ölgii Aimag
+    """
+    MN_073 = "MN-073"
+    """
+    Arkhangai Aimag
+    """
+    MN_1 = "MN-1"
+    """
+    Ulaanbaatar
+    """
+    MR_01 = "MR-01"
+    """
+    Hodh Ech Chargui
+    """
+    MR_02 = "MR-02"
+    """
+    Hodh El Gharbi
+    """
+    MR_03 = "MR-03"
+    """
+    Assaba
+    """
+    MR_04 = "MR-04"
+    """
+    Gorgol
+    """
+    MR_05 = "MR-05"
+    """
+    Brakna
+    """
+    MR_06 = "MR-06"
+    """
+    Trarza
+    """
+    MR_07 = "MR-07"
+    """
+    Adrar Region
+    """
+    MR_08 = "MR-08"
+    """
+    Dakhlet Nouadhibou
+    """
+    MR_09 = "MR-09"
+    """
+    Tagant
+    """
+    MR_10 = "MR-10"
+    """
+    Guidimaka
+    """
+    MR_11 = "MR-11"
+    """
+    Tiris Zemmour Region
+    """
+    MR_12 = "MR-12"
+    """
+    Inchiri Region
+    """
+    MR_NKC = "MR-NKC"
+    """
+    Nouakchott
+    """
+    MT_01 = "MT-01"
+    """
+    Attard
+    """
+    MT_02 = "MT-02"
+    """
+    Balzan
+    """
+    MT_03 = "MT-03"
+    """
+    Birgu
+    """
+    MT_04 = "MT-04"
+    """
+    Birkirkara
+    """
+    MT_05 = "MT-05"
+    """
+    Birżebbuġa
+    """
+    MT_06 = "MT-06"
+    """
+    Cospicua
+    """
+    MT_07 = "MT-07"
+    """
+    Dingli
+    """
+    MT_08 = "MT-08"
+    """
+    Fgura
+    """
+    MT_09 = "MT-09"
+    """
+    Floriana
+    """
+    MT_10 = "MT-10"
+    """
+    Fontana, Gozo
+    """
+    MT_11 = "MT-11"
+    """
+    Gudja
+    """
+    MT_12 = "MT-12"
+    """
+    Gżira
+    """
+    MT_13 = "MT-13"
+    """
+    Għajnsielem
+    """
+    MT_14 = "MT-14"
+    """
+    Għarb
+    """
+    MT_15 = "MT-15"
+    """
+    Għargħur
+    """
+    MT_16 = "MT-16"
+    """
+    Għasri
+    """
+    MT_17 = "MT-17"
+    """
+    Għaxaq
+    """
+    MT_18 = "MT-18"
+    """
+    Ħamrun
+    """
+    MT_19 = "MT-19"
+    """
+    Iklin
+    """
+    MT_20 = "MT-20"
+    """
+    Senglea
+    """
+    MT_21 = "MT-21"
+    """
+    Kalkara
+    """
+    MT_22 = "MT-22"
+    """
+    Kerċem
+    """
+    MT_23 = "MT-23"
+    """
+    Kirkop
+    """
+    MT_24 = "MT-24"
+    """
+    Lija
+    """
+    MT_25 = "MT-25"
+    """
+    Luqa
+    """
+    MT_26 = "MT-26"
+    """
+    Marsa (Malta)
+    """
+    MT_27 = "MT-27"
+    """
+    Marsaskala
+    """
+    MT_28 = "MT-28"
+    """
+    Marsaxlokk
+    """
+    MT_29 = "MT-29"
+    """
+    Mdina
+    """
+    MT_30 = "MT-30"
+    """
+    Mellieħa
+    """
+    MT_31 = "MT-31"
+    """
+    Mġarr
+    """
+    MT_32 = "MT-32"
+    """
+    Mosta
+    """
+    MT_33 = "MT-33"
+    """
+    Mqabba
+    """
+    MT_34 = "MT-34"
+    """
+    Msida
+    """
+    MT_35 = "MT-35"
+    """
+    Mtarfa
+    """
+    MT_36 = "MT-36"
+    """
+    Munxar
+    """
+    MT_37 = "MT-37"
+    """
+    Nadur
+    """
+    MT_38 = "MT-38"
+    """
+    Naxxar
+    """
+    MT_39 = "MT-39"
+    """
+    Paola, Malta
+    """
+    MT_40 = "MT-40"
+    """
+    Pembroke, Malta
+    """
+    MT_41 = "MT-41"
+    """
+    Pietà, Malta
+    """
+    MT_42 = "MT-42"
+    """
+    Qala
+    """
+    MT_43 = "MT-43"
+    """
+    Qormi
+    """
+    MT_44 = "MT-44"
+    """
+    Qrendi
+    """
+    MT_45 = "MT-45"
+    """
+    Victoria, Gozo
+    """
+    MT_46 = "MT-46"
+    """
+    Rabat, Malta
+    """
+    MT_47 = "MT-47"
+    """
+    Safi (Malta)
+    """
+    MT_48 = "MT-48"
+    """
+    St. Julian's
+    """
+    MT_49 = "MT-49"
+    """
+    San Ġwann
+    """
+    MT_50 = "MT-50"
+    """
+    San Lawrenz
+    """
+    MT_51 = "MT-51"
+    """
+    St. Paul's Bay
+    """
+    MT_52 = "MT-52"
+    """
+    Sannat
+    """
+    MT_53 = "MT-53"
+    """
+    Santa Luċija
+    """
+    MT_54 = "MT-54"
+    """
+    Santa Venera
+    """
+    MT_55 = "MT-55"
+    """
+    Siġġiewi
+    """
+    MT_56 = "MT-56"
+    """
+    Sliema
+    """
+    MT_57 = "MT-57"
+    """
+    Swieqi
+    """
+    MT_58 = "MT-58"
+    """
+    Ta' Xbiex
+    """
+    MT_59 = "MT-59"
+    """
+    Tarxien
+    """
+    MT_60 = "MT-60"
+    """
+    Valletta
+    """
+    MT_61 = "MT-61"
+    """
+    Xagħra
+    """
+    MT_62 = "MT-62"
+    """
+    Xewkija
+    """
+    MT_63 = "MT-63"
+    """
+    Xgħajra
+    """
+    MT_64 = "MT-64"
+    """
+    Żabbar
+    """
+    MT_65 = "MT-65"
+    """
+    Żebbuġ, Gozo
+    """
+    MT_66 = "MT-66"
+    """
+    Żebbuġ, Malta
+    """
+    MT_67 = "MT-67"
+    """
+    Żejtun
+    """
+    MT_68 = "MT-68"
+    """
+    Żurrieq
+    """
+    MU_AG = "MU-AG"
+    """
+    Agalega Islands
+    """
+    MU_BL = "MU-BL"
+    """
+    Rivière Noire District
+    """
+    MU_CC = "MU-CC"
+    """
+    Cargados Carajos Shoals
+    """
+    MU_FL = "MU-FL"
+    """
+    Flacq District
+    """
+    MU_GP = "MU-GP"
+    """
+    Grand Port District
+    """
+    MU_MO = "MU-MO"
+    """
+    Moka District
+    """
+    MU_PA = "MU-PA"
+    """
+    Pamplemousses District
+    """
+    MU_PL = "MU-PL"
+    """
+    Port Louis District
+    """
+    MU_PW = "MU-PW"
+    """
+    Plaines Wilhems District
+    """
+    MU_RO = "MU-RO"
+    """
+    Rodrigues
+    """
+    MU_RR = "MU-RR"
+    """
+    Rivière du Rempart District
+    """
+    MU_SA = "MU-SA"
+    """
+    Savanne District
+    """
+    MV_00 = "MV-00"
+    """
+    Alif Dhaalu-South Ari Atoll
+    """
+    MV_01 = "MV-01"
+    """
+    Addu Atoll
+    """
+    MV_02 = "MV-02"
+    """
+    Alif Alif-North Ari Atoll
+    """
+    MV_05 = "MV-05"
+    """
+    Laamu-Haddhunmathi Atoll
+    """
+    MV_13 = "MV-13"
+    """
+    Raa-North Maalhosmadulu Atoll
+    """
+    MV_24 = "MV-24"
+    """
+    Shaviyani-North Miladhunmadulu Atoll
+    """
+    MV_25 = "MV-25"
+    """
+    Noonu-South Miladhunmadulu Atoll
+    """
+    MV_26 = "MV-26"
+    """
+    Kaafu-Malé Atoll
+    """
+    MV_MLE = "MV-MLE"
+    """
+    Malé
+    """
+    MW_KS = "MW-KS"
+    """
+    Kasungu district
+    """
+    MW_MG = "MW-MG"
+    """
+    Mangochi District
+    """
+    MW_MH = "MW-MH"
+    """
+    Machinga district
+    """
+    MW_MZ = "MW-MZ"
+    """
+    Mzimba district
+    """
+    MW_NB = "MW-NB"
+    """
+    Nkhata Bay
+    """
+    MW_PH = "MW-PH"
+    """
+    Phalombe District
+    """
+    MW_RU = "MW-RU"
+    """
+    Rumphi District
+    """
+    MW_SA = "MW-SA"
+    """
+    Salima District
+    """
+    MX_AGU = "MX-AGU"
+    """
+    Aguascalientes
+    """
+    MX_BCN = "MX-BCN"
+    """
+    Baja California
+    """
+    MX_BCS = "MX-BCS"
+    """
+    Baja California Sur
+    """
+    MX_CAM = "MX-CAM"
+    """
+    Campeche
+    """
+    MX_CHH = "MX-CHH"
+    """
+    Chihuahua (state)
+    """
+    MX_CHP = "MX-CHP"
+    """
+    Chiapas
+    """
+    MX_CMX = "MX-CMX"
+    """
+    Mexico City
+    """
+    MX_COA = "MX-COA"
+    """
+    Coahuila
+    """
+    MX_COL = "MX-COL"
+    """
+    Colima
+    """
+    MX_DUR = "MX-DUR"
+    """
+    Durango
+    """
+    MX_GRO = "MX-GRO"
+    """
+    Guerrero
+    """
+    MX_GUA = "MX-GUA"
+    """
+    Guanajuato
+    """
+    MX_HID = "MX-HID"
+    """
+    Hidalgo
+    """
+    MX_JA_GDL = "MX-JA-GDL"
+    """
+    Guadalajara, Mexico
+    """
+    MX_JAL = "MX-JAL"
+    """
+    Jalisco
+    """
+    MX_MEX = "MX-MEX"
+    """
+    Mexico (state)
+    """
+    MX_MIC = "MX-MIC"
+    """
+    Michoacán
+    """
+    MX_MOR = "MX-MOR"
+    """
+    Morelos
+    """
+    MX_NAY = "MX-NAY"
+    """
+    Nayarit
+    """
+    MX_NLE = "MX-NLE"
+    """
+    Nuevo León
+    """
+    MX_OAX = "MX-OAX"
+    """
+    Oaxaca
+    """
+    MX_PUE = "MX-PUE"
+    """
+    Puebla
+    """
+    MX_QUE = "MX-QUE"
+    """
+    Querétaro
+    """
+    MX_ROO = "MX-ROO"
+    """
+    Quintana Roo
+    """
+    MX_SIN = "MX-SIN"
+    """
+    Sinaloa
+    """
+    MX_SLP = "MX-SLP"
+    """
+    San Luis Potosí
+    """
+    MX_SON = "MX-SON"
+    """
+    Sonora
+    """
+    MX_TAB = "MX-TAB"
+    """
+    Tabasco
+    """
+    MX_TAM = "MX-TAM"
+    """
+    Tamaulipas
+    """
+    MX_TLA = "MX-TLA"
+    """
+    Tlaxcala
+    """
+    MX_VER = "MX-VER"
+    """
+    Veracruz
+    """
+    MX_YUC = "MX-YUC"
+    """
+    Yucatán
+    """
+    MX_ZAC = "MX-ZAC"
+    """
+    Zacatecas
+    """
+    MY_01 = "MY-01"
+    """
+    Johor
+    """
+    MY_02 = "MY-02"
+    """
+    Kedah
+    """
+    MY_03 = "MY-03"
+    """
+    Kelantan
+    """
+    MY_04 = "MY-04"
+    """
+    Melaka
+    """
+    MY_05 = "MY-05"
+    """
+    Negeri Sembilan
+    """
+    MY_06 = "MY-06"
+    """
+    Pahang
+    """
+    MY_07 = "MY-07"
+    """
+    Penang
+    """
+    MY_08 = "MY-08"
+    """
+    Perak
+    """
+    MY_09 = "MY-09"
+    """
+    Perlis
+    """
+    MY_10 = "MY-10"
+    """
+    Selangor
+    """
+    MY_11 = "MY-11"
+    """
+    Terengganu
+    """
+    MY_12 = "MY-12"
+    """
+    Sabah
+    """
+    MY_13 = "MY-13"
+    """
+    Sarawak
+    """
+    MY_14 = "MY-14"
+    """
+    Kuala Lumpur
+    """
+    MY_15 = "MY-15"
+    """
+    Labuan
+    """
+    MY_16 = "MY-16"
+    """
+    Putrajaya
+    """
+    MZ_A = "MZ-A"
+    """
+    Niassa Province
+    """
+    MZ_B = "MZ-B"
+    """
+    Manica Province
+    """
+    MZ_G = "MZ-G"
+    """
+    Gaza Province
+    """
+    MZ_I = "MZ-I"
+    """
+    Inhambane Province
+    """
+    MZ_L = "MZ-L"
+    """
+    Maputo Province
+    """
+    MZ_MPM = "MZ-MPM"
+    """
+    Maputo
+    """
+    MZ_N = "MZ-N"
+    """
+    Nampula Province
+    """
+    MZ_P = "MZ-P"
+    """
+    Cabo Delgado Province
+    """
+    MZ_Q = "MZ-Q"
+    """
+    Zambézia Province
+    """
+    MZ_S = "MZ-S"
+    """
+    Sofala Province
+    """
+    MZ_T = "MZ-T"
+    """
+    Tete Province
+    """
+    NA_CA = "NA-CA"
+    """
+    Zambezi, Namibia
+    """
+    NA_ER = "NA-ER"
+    """
+    Erongo
+    """
+    NA_HA = "NA-HA"
+    """
+    Hardap
+    """
+    NA_KA = "NA-KA"
+    """
+    Karas
+    """
+    NA_KH = "NA-KH"
+    """
+    Khomas
+    """
+    NA_KU = "NA-KU"
+    """
+    Kunene
+    """
+    NA_OD = "NA-OD"
+    """
+    Otjozondjupa
+    """
+    NA_OH = "NA-OH"
+    """
+    Omaheke
+    """
+    NA_OK = "NA-OK"
+    """
+    Kavango
+    """
+    NA_ON = "NA-ON"
+    """
+    Oshana
+    """
+    NA_OS = "NA-OS"
+    """
+    Omusati
+    """
+    NA_OT = "NA-OT"
+    """
+    Oshikoto
+    """
+    NA_OW = "NA-OW"
+    """
+    Ohangwena
+    """
+    NE_1 = "NE-1"
+    """
+    Agadez Region
+    """
+    NE_2 = "NE-2"
+    """
+    Diffa Region
+    """
+    NE_3 = "NE-3"
+    """
+    Dosso Region
+    """
+    NE_4 = "NE-4"
+    """
+    Maradi Region
+    """
+    NE_5 = "NE-5"
+    """
+    Tahoua Region
+    """
+    NE_6 = "NE-6"
+    """
+    Tillabéri Region
+    """
+    NE_7 = "NE-7"
+    """
+    Zinder Region
+    """
+    NE_8 = "NE-8"
+    """
+    Niamey
+    """
+    NG_AB = "NG-AB"
+    """
+    Abia State, Nigeria
+    """
+    NG_AD = "NG-AD"
+    """
+    Adamawa State
+    """
+    NG_AK = "NG-AK"
+    """
+    Akwa Ibom State
+    """
+    NG_AN = "NG-AN"
+    """
+    Anambra State
+    """
+    NG_BA = "NG-BA"
+    """
+    Bauchi State
+    """
+    NG_BE = "NG-BE"
+    """
+    Benue State
+    """
+    NG_BO = "NG-BO"
+    """
+    Borno State
+    """
+    NG_BY = "NG-BY"
+    """
+    Bayelsa State
+    """
+    NG_CR = "NG-CR"
+    """
+    Cross River State
+    """
+    NG_DE = "NG-DE"
+    """
+    Delta State, Nigeria
+    """
+    NG_ED = "NG-ED"
+    """
+    Edo State
+    """
+    NG_EK = "NG-EK"
+    """
+    Ekiti State
+    """
+    NG_EN = "NG-EN"
+    """
+    Enugu State
+    """
+    NG_FC = "NG-FC"
+    """
+    Federal Capital Territory (Nigeria)
+    """
+    NG_GO = "NG-GO"
+    """
+    Gombe State
+    """
+    NG_JI = "NG-JI"
+    """
+    Jigawa State
+    """
+    NG_KD = "NG-KD"
+    """
+    Kaduna State
+    """
+    NG_KN = "NG-KN"
+    """
+    Kano State
+    """
+    NG_KO = "NG-KO"
+    """
+    Kogi State
+    """
+    NG_KT = "NG-KT"
+    """
+    Katsina State
+    """
+    NG_LA = "NG-LA"
+    """
+    Lagos State, Nigeria
+    """
+    NG_NA = "NG-NA"
+    """
+    Nasarawa State
+    """
+    NG_NI = "NG-NI"
+    """
+    Niger State
+    """
+    NG_OG = "NG-OG"
+    """
+    Ogun State
+    """
+    NG_ON = "NG-ON"
+    """
+    Ondo State
+    """
+    NG_OS = "NG-OS"
+    """
+    Osun State
+    """
+    NG_OY = "NG-OY"
+    """
+    Oyo State
+    """
+    NG_PL = "NG-PL"
+    """
+    Plateau State
+    """
+    NG_RI = "NG-RI"
+    """
+    Rivers State
+    """
+    NG_SO = "NG-SO"
+    """
+    Sokoto State
+    """
+    NG_TA = "NG-TA"
+    """
+    Taraba State
+    """
+    NG_ZA = "NG-ZA"
+    """
+    Zamfara State
+    """
+    NI_AN = "NI-AN"
+    """
+    North Caribbean Coast Autonomous Region
+    """
+    NI_AS = "NI-AS"
+    """
+    South Caribbean Coast Autonomous Region
+    """
+    NI_BO = "NI-BO"
+    """
+    Boaco Department
+    """
+    NI_CA = "NI-CA"
+    """
+    Carazo Department
+    """
+    NI_CI = "NI-CI"
+    """
+    Chinandega Department
+    """
+    NI_CO = "NI-CO"
+    """
+    Chontales Department
+    """
+    NI_ES = "NI-ES"
+    """
+    Estelí Department
+    """
+    NI_GR = "NI-GR"
+    """
+    Granada Department
+    """
+    NI_JI = "NI-JI"
+    """
+    Jinotega Department
+    """
+    NI_LE = "NI-LE"
+    """
+    León Department
+    """
+    NI_MD = "NI-MD"
+    """
+    Madriz Department
+    """
+    NI_MN = "NI-MN"
+    """
+    Managua Department
+    """
+    NI_MS = "NI-MS"
+    """
+    Masaya Department
+    """
+    NI_MT = "NI-MT"
+    """
+    Matagalpa Department
+    """
+    NI_NS = "NI-NS"
+    """
+    Nueva Segovia Department
+    """
+    NI_RI = "NI-RI"
+    """
+    Rivas Department
+    """
+    NI_SJ = "NI-SJ"
+    """
+    Río San Juan Department
+    """
+    NL_AW = "NL-AW"
+    """
+    Aruba
+    """
+    NL_BQ1 = "NL-BQ1"
+    """
+    Bonaire
+    """
+    NL_BQ2 = "NL-BQ2"
+    """
+    Saba
+    """
+    NL_CW = "NL-CW"
+    """
+    Curaçao
+    """
+    NL_DR = "NL-DR"
+    """
+    Drenthe
+    """
+    NL_FL = "NL-FL"
+    """
+    Flevoland
+    """
+    NL_FR = "NL-FR"
+    """
+    Friesland
+    """
+    NL_GE = "NL-GE"
+    """
+    Gelderland
+    """
+    NL_GR = "NL-GR"
+    """
+    Groningen (province)
+    """
+    NL_LI = "NL-LI"
+    """
+    Limburg (Netherlands)
+    """
+    NL_NB = "NL-NB"
+    """
+    North Brabant
+    """
+    NL_NH = "NL-NH"
+    """
+    North Holland
+    """
+    NL_OV = "NL-OV"
+    """
+    Overijssel
+    """
+    NL_SX = "NL-SX"
+    """
+    Sint Maarten, Dutch Caribbean
+    """
+    NL_UT = "NL-UT"
+    """
+    Utrecht (province)
+    """
+    NL_ZE = "NL-ZE"
+    """
+    Zeeland
+    """
+    NL_ZH = "NL-ZH"
+    """
+    South Holland
+    """
+    NO_03 = "NO-03"
+    """
+    Oslo
+    """
+    NO_04 = "NO-04"
+    """
+    Hedmark
+    """
+    NO_05 = "NO-05"
+    """
+    Oppland
+    """
+    NO_09 = "NO-09"
+    """
+    Aust-Agder
+    """
+    NO_10 = "NO-10"
+    """
+    Vest-Agder
+    """
+    NO_11 = "NO-11"
+    """
+    Rogaland
+    """
+    NO_12 = "NO-12"
+    """
+    Hordaland
+    """
+    NO_14 = "NO-14"
+    """
+    Sogn og Fjordane
+    """
+    NO_15 = "NO-15"
+    """
+    Møre og Romsdal
+    """
+    NO_16 = "NO-16"
+    """
+    Sør-Trøndelag
+    """
+    NO_17 = "NO-17"
+    """
+    Nord-Trøndelag
+    """
+    NO_18 = "NO-18"
+    """
+    Nordland
+    """
+    NO_21 = "NO-21"
+    """
+    Svalbard
+    """
+    NO_22 = "NO-22"
+    """
+    Jan Mayen
+    """
+    NO_30 = "NO-30"
+    """
+    Viken (county)
+    """
+    NO_31 = "NO-31"
+    """
+    Østfold
+    """
+    NO_32 = "NO-32"
+    """
+    Akershus
+    """
+    NO_33 = "NO-33"
+    """
+    Buskerud
+    """
+    NO_34 = "NO-34"
+    """
+    Innlandet
+    """
+    NO_38 = "NO-38"
+    """
+    Vestfold og Telemark
+    """
+    NO_39 = "NO-39"
+    """
+    Vestfold
+    """
+    NO_3905 = "NO-3905"
+    """
+    Tønsberg
+    """
+    NO_40 = "NO-40"
+    """
+    Telemark
+    """
+    NO_42 = "NO-42"
+    """
+    Agder
+    """
+    NO_46 = "NO-46"
+    """
+    Vestland
+    """
+    NO_50 = "NO-50"
+    """
+    Trøndelag
+    """
+    NO_54 = "NO-54"
+    """
+    Troms og Finnmark
+    """
+    NO_55 = "NO-55"
+    """
+    Troms
+    """
+    NO_56 = "NO-56"
+    """
+    Finnmark
+    """
+    NP_1 = "NP-1"
+    """
+    Central Development Region, Nepal
+    """
+    NP_2 = "NP-2"
+    """
+    Mid-Western Development Region, Nepal
+    """
+    NP_3 = "NP-3"
+    """
+    Western Development Region, Nepal
+    """
+    NP_4 = "NP-4"
+    """
+    Eastern Development Region, Nepal
+    """
+    NP_5 = "NP-5"
+    """
+    Far-Western Development Region, Nepal
+    """
+    NP_BA = "NP-BA"
+    """
+    Bagmati Zone
+    """
+    NP_BH = "NP-BH"
+    """
+    Bheri Zone
+    """
+    NP_DH = "NP-DH"
+    """
+    Dhawalagiri Zone
+    """
+    NP_GA = "NP-GA"
+    """
+    Gandaki Zone
+    """
+    NP_JA = "NP-JA"
+    """
+    Janakpur Zone
+    """
+    NP_KA = "NP-KA"
+    """
+    Karnali Zone
+    """
+    NP_KO = "NP-KO"
+    """
+    Kosi Zone
+    """
+    NP_LU = "NP-LU"
+    """
+    Lumbini Zone
+    """
+    NP_MA = "NP-MA"
+    """
+    Mahakali Zone
+    """
+    NP_ME = "NP-ME"
+    """
+    Mechi Zone
+    """
+    NP_NA = "NP-NA"
+    """
+    Narayani Zone
+    """
+    NP_P1 = "NP-P1"
+    """
+    Koshi Pradesh
+    """
+    NP_P2 = "NP-P2"
+    """
+    Madhesh Province
+    """
+    NP_P5 = "NP-P5"
+    """
+    Lumbini Pradesh
+    """
+    NP_P6 = "NP-P6"
+    """
+    Karnali Pradesh
+    """
+    NP_P7 = "NP-P7"
+    """
+    Sudurpashchim Pradesh
+    """
+    NP_RA = "NP-RA"
+    """
+    Rapti Zone
+    """
+    NP_SA = "NP-SA"
+    """
+    Sagarmatha Zone
+    """
+    NP_SE = "NP-SE"
+    """
+    Seti Zone
+    """
+    NR_01 = "NR-01"
+    """
+    Aiwo
+    """
+    NR_02 = "NR-02"
+    """
+    Anabar
+    """
+    NR_03 = "NR-03"
+    """
+    Anetan
+    """
+    NR_04 = "NR-04"
+    """
+    Anibare
+    """
+    NR_05 = "NR-05"
+    """
+    Baiti
+    """
+    NR_06 = "NR-06"
+    """
+    Boe
+    """
+    NR_07 = "NR-07"
+    """
+    Buada
+    """
+    NR_08 = "NR-08"
+    """
+    Denigomodu
+    """
+    NR_09 = "NR-09"
+    """
+    Ewa District, Nauru
+    """
+    NR_10 = "NR-10"
+    """
+    Ijuw
+    """
+    NR_11 = "NR-11"
+    """
+    Meneng
+    """
+    NR_12 = "NR-12"
+    """
+    Nibok
+    """
+    NR_13 = "NR-13"
+    """
+    Uaboe
+    """
+    NR_14 = "NR-14"
+    """
+    Yaren
+    """
+    NZ_AUK = "NZ-AUK"
+    """
+    Auckland Region
+    """
+    NZ_BOP = "NZ-BOP"
+    """
+    Bay of Plenty Region
+    """
+    NZ_CAN = "NZ-CAN"
+    """
+    Canterbury Region
+    """
+    NZ_CIT = "NZ-CIT"
+    """
+    Chatham Islands
+    """
+    NZ_GIS = "NZ-GIS"
+    """
+    Gisborne District
+    """
+    NZ_HKB = "NZ-HKB"
+    """
+    Hawke's Bay Region
+    """
+    NZ_MBH = "NZ-MBH"
+    """
+    Marlborough District
+    """
+    NZ_MWT = "NZ-MWT"
+    """
+    Manawatū-Whanganui Region
+    """
+    NZ_N = "NZ-N"
+    """
+    North Island, New Zealand
+    """
+    NZ_NSN = "NZ-NSN"
+    """
+    Nelson Region
+    """
+    NZ_NTL = "NZ-NTL"
+    """
+    Northland Region
+    """
+    NZ_OTA = "NZ-OTA"
+    """
+    Otago Region
+    """
+    NZ_S = "NZ-S"
+    """
+    South Island, New Zealand
+    """
+    NZ_STL = "NZ-STL"
+    """
+    Southland Region
+    """
+    NZ_TAS = "NZ-TAS"
+    """
+    Tasman Region
+    """
+    NZ_TKI = "NZ-TKI"
+    """
+    Taranaki Region
+    """
+    NZ_WGN = "NZ-WGN"
+    """
+    Wellington Region
+    """
+    NZ_WKO = "NZ-WKO"
+    """
+    Waikato Region
+    """
+    NZ_WTC = "NZ-WTC"
+    """
+    West Coast Region
+    """
+    OM_BA = "OM-BA"
+    """
+    Al-Batinah Region, Oman
+    """
+    OM_DA = "OM-DA"
+    """
+    Ad-Dakhiliyyah Governorate, Oman
+    """
+    OM_MA = "OM-MA"
+    """
+    Muscat Governorate
+    """
+    OM_MU = "OM-MU"
+    """
+    Musandam
+    """
+    OM_SH = "OM-SH"
+    """
+    Ash-Sharqiyyah Region, Oman
+    """
+    OM_WU = "OM-WU"
+    """
+    Al-Wusta Governorate, Oman
+    """
+    OM_ZU = "OM-ZU"
+    """
+    Dhofar
+    """
+    PA_1 = "PA-1"
+    """
+    Bocas del Toro Province
+    """
+    PA_10 = "PA-10"
+    """
+    Panamá Oeste Province
+    """
+    PA_2 = "PA-2"
+    """
+    Coclé Province
+    """
+    PA_3 = "PA-3"
+    """
+    Colón Province
+    """
+    PA_4 = "PA-4"
+    """
+    Chiriquí Province
+    """
+    PA_5 = "PA-5"
+    """
+    Darién Province
+    """
+    PA_6 = "PA-6"
+    """
+    Herrera Province
+    """
+    PA_7 = "PA-7"
+    """
+    Los Santos Province
+    """
+    PA_8 = "PA-8"
+    """
+    Panamá Province
+    """
+    PA_9 = "PA-9"
+    """
+    Veraguas Province
+    """
+    PA_EM = "PA-EM"
+    """
+    Embera
+    """
+    PA_KY = "PA-KY"
+    """
+    Kuna Yala
+    """
+    PA_NB = "PA-NB"
+    """
+    Ngöbe Buglé
+    """
+    PA_NT = "PA-NT"
+    """
+    Naso Tjër Di
+    """
+    PE_AMA = "PE-AMA"
+    """
+    Amazonas Region
+    """
+    PE_ANC = "PE-ANC"
+    """
+    Ancash Region
+    """
+    PE_APU = "PE-APU"
+    """
+    Apurímac Region
+    """
+    PE_ARE = "PE-ARE"
+    """
+    Arequipa Region
+    """
+    PE_AYA = "PE-AYA"
+    """
+    Ayacucho Region
+    """
+    PE_CAJ = "PE-CAJ"
+    """
+    Cajamarca Region
+    """
+    PE_CAL = "PE-CAL"
+    """
+    Callao Region
+    """
+    PE_CUS = "PE-CUS"
+    """
+    Cusco Region
+    """
+    PE_HUC = "PE-HUC"
+    """
+    Huánuco Region
+    """
+    PE_HUV = "PE-HUV"
+    """
+    Huancavelica Region
+    """
+    PE_ICA = "PE-ICA"
+    """
+    Ica Region
+    """
+    PE_JUN = "PE-JUN"
+    """
+    Junín Region
+    """
+    PE_LAL = "PE-LAL"
+    """
+    La Libertad Region
+    """
+    PE_LAM = "PE-LAM"
+    """
+    Lambayeque Region
+    """
+    PE_LIM = "PE-LIM"
+    """
+    Lima Region
+    """
+    PE_LMA = "PE-LMA"
+    """
+    Lima Province
+    """
+    PE_LOR = "PE-LOR"
+    """
+    Loreto Region
+    """
+    PE_MDD = "PE-MDD"
+    """
+    Madre de Dios Region
+    """
+    PE_MOQ = "PE-MOQ"
+    """
+    Moquegua Region
+    """
+    PE_PAS = "PE-PAS"
+    """
+    Pasco Region
+    """
+    PE_PIU = "PE-PIU"
+    """
+    Piura Region
+    """
+    PE_PUN = "PE-PUN"
+    """
+    Puno Region
+    """
+    PE_SAM = "PE-SAM"
+    """
+    San Martín Region
+    """
+    PE_TAC = "PE-TAC"
+    """
+    Tacna Region
+    """
+    PE_TUM = "PE-TUM"
+    """
+    Tumbes Region
+    """
+    PE_UCA = "PE-UCA"
+    """
+    Ucayali Region
+    """
+    PG_CPK = "PG-CPK"
+    """
+    Chimbu Province
+    """
+    PG_CPM = "PG-CPM"
+    """
+    Central Province (Papua New Guinea)
+    """
+    PG_EBR = "PG-EBR"
+    """
+    East New Britain Province
+    """
+    PG_EHG = "PG-EHG"
+    """
+    Eastern Highlands Province
+    """
+    PG_EPW = "PG-EPW"
+    """
+    Enga Province
+    """
+    PG_ESW = "PG-ESW"
+    """
+    East Sepik Province (Papua New Guinea)
+    """
+    PG_GPK = "PG-GPK"
+    """
+    Gulf Province
+    """
+    PG_MBA = "PG-MBA"
+    """
+    Milne Bay Province
+    """
+    PG_MPL = "PG-MPL"
+    """
+    Morobe Province
+    """
+    PG_MPM = "PG-MPM"
+    """
+    Madang Province
+    """
+    PG_MRL = "PG-MRL"
+    """
+    Manus Province
+    """
+    PG_NCD = "PG-NCD"
+    """
+    Port Moresby
+    """
+    PG_NIK = "PG-NIK"
+    """
+    New Ireland Province
+    """
+    PG_NSB = "PG-NSB"
+    """
+    Autonomous Region of Bougainville
+    """
+    PG_SAN = "PG-SAN"
+    """
+    West Sepik Province (Papua New Guinea)
+    """
+    PG_SHM = "PG-SHM"
+    """
+    Southern Highlands Province
+    """
+    PG_WPD = "PG-WPD"
+    """
+    Western Province (Papua New Guinea)
+    """
+    PH_00 = "PH-00"
+    """
+    Metro Manila
+    """
+    PH_01 = "PH-01"
+    """
+    Ilocos Region
+    """
+    PH_02 = "PH-02"
+    """
+    Cagayan Valley
+    """
+    PH_03 = "PH-03"
+    """
+    Central Luzon
+    """
+    PH_05 = "PH-05"
+    """
+    Bicol Region
+    """
+    PH_06 = "PH-06"
+    """
+    Western Visayas
+    """
+    PH_07 = "PH-07"
+    """
+    Central Visayas
+    """
+    PH_08 = "PH-08"
+    """
+    Eastern Visayas
+    """
+    PH_09 = "PH-09"
+    """
+    Zamboanga Peninsula
+    """
+    PH_10 = "PH-10"
+    """
+    Northern Mindanao
+    """
+    PH_11 = "PH-11"
+    """
+    Davao Region
+    """
+    PH_12 = "PH-12"
+    """
+    Soccsksargen
+    """
+    PH_13 = "PH-13"
+    """
+    Caraga Region
+    """
+    PH_14 = "PH-14"
+    """
+    Autonomous Region in Muslim Mindanao
+    """
+    PH_15 = "PH-15"
+    """
+    Cordillera Administrative Region
+    """
+    PH_40 = "PH-40"
+    """
+    Calabarzon
+    """
+    PH_41 = "PH-41"
+    """
+    Mimaropa
+    """
+    PH_ABR = "PH-ABR"
+    """
+    Abra (province)
+    """
+    PH_AGN = "PH-AGN"
+    """
+    Agusan del Norte
+    """
+    PH_AGS = "PH-AGS"
+    """
+    Agusan del Sur
+    """
+    PH_AKL = "PH-AKL"
+    """
+    Aklan
+    """
+    PH_ALB = "PH-ALB"
+    """
+    Albay
+    """
+    PH_ANT = "PH-ANT"
+    """
+    Antique (province)
+    """
+    PH_APA = "PH-APA"
+    """
+    Apayao (province)
+    """
+    PH_AUR = "PH-AUR"
+    """
+    Aurora (province)
+    """
+    PH_BAN = "PH-BAN"
+    """
+    Bataan
+    """
+    PH_BAS = "PH-BAS"
+    """
+    Basilan
+    """
+    PH_BEN = "PH-BEN"
+    """
+    Benguet
+    """
+    PH_BIL = "PH-BIL"
+    """
+    Biliran
+    """
+    PH_BOH = "PH-BOH"
+    """
+    Bohol (province)
+    """
+    PH_BTG = "PH-BTG"
+    """
+    Batangas
+    """
+    PH_BTN = "PH-BTN"
+    """
+    Batanes
+    """
+    PH_BUK = "PH-BUK"
+    """
+    Bukidnon
+    """
+    PH_BUL = "PH-BUL"
+    """
+    Bulacan
+    """
+    PH_CAG = "PH-CAG"
+    """
+    Cagayan (province)
+    """
+    PH_CAM = "PH-CAM"
+    """
+    Camiguin
+    """
+    PH_CAN = "PH-CAN"
+    """
+    Camarines Norte
+    """
+    PH_CAP = "PH-CAP"
+    """
+    Capiz
+    """
+    PH_CAS = "PH-CAS"
+    """
+    Camarines Sur
+    """
+    PH_CAT = "PH-CAT"
+    """
+    Catanduanes
+    """
+    PH_CAV = "PH-CAV"
+    """
+    Cavite
+    """
+    PH_CEB = "PH-CEB"
+    """
+    Cebu (province)
+    """
+    PH_COM = "PH-COM"
+    """
+    Davao de Oro
+    """
+    PH_DAO = "PH-DAO"
+    """
+    Davao Oriental
+    """
+    PH_DAS = "PH-DAS"
+    """
+    Davao del Sur
+    """
+    PH_DAV = "PH-DAV"
+    """
+    Davao del Norte
+    """
+    PH_DIN = "PH-DIN"
+    """
+    Dinagat Islands
+    """
+    PH_DVO = "PH-DVO"
+    """
+    Davao Occidental
+    """
+    PH_EAS = "PH-EAS"
+    """
+    Eastern Samar
+    """
+    PH_GUI = "PH-GUI"
+    """
+    Guimaras
+    """
+    PH_IFU = "PH-IFU"
+    """
+    Ifugao
+    """
+    PH_ILI = "PH-ILI"
+    """
+    Iloilo (province)
+    """
+    PH_ILN = "PH-ILN"
+    """
+    Ilocos Norte
+    """
+    PH_ILS = "PH-ILS"
+    """
+    Ilocos Sur
+    """
+    PH_ISA = "PH-ISA"
+    """
+    Isabela (province)
+    """
+    PH_KAL = "PH-KAL"
+    """
+    Kalinga (province)
+    """
+    PH_LAG = "PH-LAG"
+    """
+    Laguna (province)
+    """
+    PH_LAN = "PH-LAN"
+    """
+    Lanao del Norte
+    """
+    PH_LAS = "PH-LAS"
+    """
+    Lanao del Sur
+    """
+    PH_LEY = "PH-LEY"
+    """
+    Leyte (province)
+    """
+    PH_LUN = "PH-LUN"
+    """
+    La Union
+    """
+    PH_MAD = "PH-MAD"
+    """
+    Marinduque
+    """
+    PH_MAG = "PH-MAG"
+    """
+    Maguindanao (province)
+    """
+    PH_MAS = "PH-MAS"
+    """
+    Masbate
+    """
+    PH_MDC = "PH-MDC"
+    """
+    Occidental Mindoro
+    """
+    PH_MDR = "PH-MDR"
+    """
+    Oriental Mindoro
+    """
+    PH_MGN = "PH-MGN"
+    """
+    Maguindanao del Norte
+    """
+    PH_MGS = "PH-MGS"
+    """
+    Maguindanao del Sur
+    """
+    PH_MOU = "PH-MOU"
+    """
+    Mountain Province
+    """
+    PH_MSC = "PH-MSC"
+    """
+    Misamis Occidental
+    """
+    PH_MSR = "PH-MSR"
+    """
+    Misamis Oriental
+    """
+    PH_NCO = "PH-NCO"
+    """
+    Cotabato
+    """
+    PH_NEC = "PH-NEC"
+    """
+    Negros Occidental
+    """
+    PH_NER = "PH-NER"
+    """
+    Negros Oriental
+    """
+    PH_NSA = "PH-NSA"
+    """
+    Northern Samar
+    """
+    PH_NUE = "PH-NUE"
+    """
+    Nueva Ecija
+    """
+    PH_NUV = "PH-NUV"
+    """
+    Nueva Vizcaya
+    """
+    PH_PAM = "PH-PAM"
+    """
+    Pampanga
+    """
+    PH_PAN = "PH-PAN"
+    """
+    Pangasinan
+    """
+    PH_PLW = "PH-PLW"
+    """
+    Palawan (province)
+    """
+    PH_QUE = "PH-QUE"
+    """
+    Quezon (province)
+    """
+    PH_QUI = "PH-QUI"
+    """
+    Quirino (province)
+    """
+    PH_RIZ = "PH-RIZ"
+    """
+    Rizal (province)
+    """
+    PH_ROM = "PH-ROM"
+    """
+    Romblon (province)
+    """
+    PH_SAR = "PH-SAR"
+    """
+    Sarangani
+    """
+    PH_SCO = "PH-SCO"
+    """
+    South Cotabato
+    """
+    PH_SIG = "PH-SIG"
+    """
+    Siquijor
+    """
+    PH_SLE = "PH-SLE"
+    """
+    Southern Leyte
+    """
+    PH_SLU = "PH-SLU"
+    """
+    Sulu (province)
+    """
+    PH_SOR = "PH-SOR"
+    """
+    Sorsogon
+    """
+    PH_SUK = "PH-SUK"
+    """
+    Sultan Kudarat
+    """
+    PH_SUN = "PH-SUN"
+    """
+    Surigao del Norte
+    """
+    PH_SUR = "PH-SUR"
+    """
+    Surigao del Sur
+    """
+    PH_TAR = "PH-TAR"
+    """
+    Tarlac
+    """
+    PH_TAW = "PH-TAW"
+    """
+    Tawi-Tawi
+    """
+    PH_WSA = "PH-WSA"
+    """
+    Samar (province)
+    """
+    PH_ZAN = "PH-ZAN"
+    """
+    Zamboanga del Norte
+    """
+    PH_ZAS = "PH-ZAS"
+    """
+    Zamboanga del Sur
+    """
+    PH_ZMB = "PH-ZMB"
+    """
+    Zambales
+    """
+    PH_ZSI = "PH-ZSI"
+    """
+    Zamboanga Sibugay
+    """
+    PK_BA = "PK-BA"
+    """
+    Balochistan (Pakistan)
+    """
+    PK_GB = "PK-GB"
+    """
+    Gilgit-Baltistan
+    """
+    PK_IS = "PK-IS"
+    """
+    Islamabad Capital Territory
+    """
+    PK_JK = "PK-JK"
+    """
+    Azad Kashmir
+    """
+    PK_KP = "PK-KP"
+    """
+    Khyber Pakhtunkhwa
+    """
+    PK_PB = "PK-PB"
+    """
+    Punjab, Pakistan
+    """
+    PK_SD = "PK-SD"
+    """
+    Sindh
+    """
+    PK_TA = "PK-TA"
+    """
+    Federally Administered Tribal Areas
+    """
+    PL_02 = "PL-02"
+    """
+    Lower Silesian Voivodeship
+    """
+    PL_04 = "PL-04"
+    """
+    Kuyavian-Pomeranian Voivodeship
+    """
+    PL_06 = "PL-06"
+    """
+    Lublin Voivodeship
+    """
+    PL_08 = "PL-08"
+    """
+    Lubusz Voivodeship
+    """
+    PL_10 = "PL-10"
+    """
+    Łódź Voivodeship
+    """
+    PL_12 = "PL-12"
+    """
+    Lesser Poland Voivodeship
+    """
+    PL_14 = "PL-14"
+    """
+    Masovian Voivodeship
+    """
+    PL_16 = "PL-16"
+    """
+    Opole Voivodeship
+    """
+    PL_18 = "PL-18"
+    """
+    Subcarpathian Voivodeship
+    """
+    PL_20 = "PL-20"
+    """
+    Podlaskie Voivodeship
+    """
+    PL_22 = "PL-22"
+    """
+    Pomeranian Voivodeship
+    """
+    PL_24 = "PL-24"
+    """
+    Silesian Voivodeship
+    """
+    PL_26 = "PL-26"
+    """
+    Świętokrzyskie Voivodeship
+    """
+    PL_28 = "PL-28"
+    """
+    Warmian-Masurian Voivodeship
+    """
+    PL_30 = "PL-30"
+    """
+    Greater Poland Voivodeship
+    """
+    PL_32 = "PL-32"
+    """
+    West Pomeranian Voivodeship
+    """
+    PL_KI = "PL-KI"
+    """
+    Kielce
+    """
+    PS_BTH = "PS-BTH"
+    """
+    Bethlehem Governorate
+    """
+    PS_HBN = "PS-HBN"
+    """
+    Hebron Governorate
+    """
+    PS_JEM = "PS-JEM"
+    """
+    Jerusalem Governorate
+    """
+    PS_JEN = "PS-JEN"
+    """
+    Jenin Governorate
+    """
+    PS_JRH = "PS-JRH"
+    """
+    Jericho Governorate
+    """
+    PS_KYS = "PS-KYS"
+    """
+    Khan Yunis
+    """
+    PS_NBS = "PS-NBS"
+    """
+    Nablus Governorate
+    """
+    PS_QQA = "PS-QQA"
+    """
+    Qalqilya Governorate
+    """
+    PS_RBH = "PS-RBH"
+    """
+    Ramallah and al-Bireh Governorate
+    """
+    PS_SLT = "PS-SLT"
+    """
+    Salfit Governorate
+    """
+    PS_TBS = "PS-TBS"
+    """
+    Tubas Governorate
+    """
+    PS_TKM = "PS-TKM"
+    """
+    Tulkarm Governorate
+    """
+    PT_01 = "PT-01"
+    """
+    Aveiro (district)
+    """
+    PT_02 = "PT-02"
+    """
+    Beja (district)
+    """
+    PT_03 = "PT-03"
+    """
+    Braga (district)
+    """
+    PT_04 = "PT-04"
+    """
+    Bragança (district)
+    """
+    PT_05 = "PT-05"
+    """
+    Castelo Branco (district)
+    """
+    PT_06 = "PT-06"
+    """
+    Coimbra (district)
+    """
+    PT_07 = "PT-07"
+    """
+    Évora (district)
+    """
+    PT_08 = "PT-08"
+    """
+    Faro (district)
+    """
+    PT_09 = "PT-09"
+    """
+    Guarda (district)
+    """
+    PT_10 = "PT-10"
+    """
+    Leiria (district)
+    """
+    PT_11 = "PT-11"
+    """
+    Lisbon (district)
+    """
+    PT_12 = "PT-12"
+    """
+    Portalegre (district)
+    """
+    PT_13 = "PT-13"
+    """
+    Porto (district)
+    """
+    PT_14 = "PT-14"
+    """
+    Santarém (district)
+    """
+    PT_15 = "PT-15"
+    """
+    Setúbal (district)
+    """
+    PT_16 = "PT-16"
+    """
+    Viana do Castelo (district)
+    """
+    PT_17 = "PT-17"
+    """
+    Vila Real (district)
+    """
+    PT_18 = "PT-18"
+    """
+    Viseu (district)
+    """
+    PT_20 = "PT-20"
+    """
+    Azores
+    """
+    PT_30 = "PT-30"
+    """
+    Madeira
+    """
+    PW_002 = "PW-002"
+    """
+    Aimeliik
+    """
+    PW_004 = "PW-004"
+    """
+    Airai
+    """
+    PW_010 = "PW-010"
+    """
+    Angaur
+    """
+    PW_050 = "PW-050"
+    """
+    Hatohobei
+    """
+    PW_100 = "PW-100"
+    """
+    Kayangel
+    """
+    PW_150 = "PW-150"
+    """
+    Koror
+    """
+    PW_212 = "PW-212"
+    """
+    Melekeok
+    """
+    PW_214 = "PW-214"
+    """
+    Ngaraard
+    """
+    PW_218 = "PW-218"
+    """
+    Ngarchelong
+    """
+    PW_222 = "PW-222"
+    """
+    Ngardmau
+    """
+    PW_224 = "PW-224"
+    """
+    Ngatpang
+    """
+    PW_226 = "PW-226"
+    """
+    Ngchesar
+    """
+    PW_227 = "PW-227"
+    """
+    Ngeremlengui
+    """
+    PW_228 = "PW-228"
+    """
+    Ngiwal
+    """
+    PW_350 = "PW-350"
+    """
+    Peleliu
+    """
+    PW_370 = "PW-370"
+    """
+    Sonsorol
+    """
+    PY_1 = "PY-1"
+    """
+    Concepción Department
+    """
+    PY_10 = "PY-10"
+    """
+    Alto Paraná Department
+    """
+    PY_11 = "PY-11"
+    """
+    Central Department
+    """
+    PY_12 = "PY-12"
+    """
+    Ñeembucú Department
+    """
+    PY_13 = "PY-13"
+    """
+    Amambay Department
+    """
+    PY_14 = "PY-14"
+    """
+    Canindeyú Department
+    """
+    PY_15 = "PY-15"
+    """
+    Presidente Hayes Department
+    """
+    PY_16 = "PY-16"
+    """
+    Alto Paraguay Department
+    """
+    PY_19 = "PY-19"
+    """
+    Boquerón Department
+    """
+    PY_2 = "PY-2"
+    """
+    San Pedro Department, Paraguay
+    """
+    PY_3 = "PY-3"
+    """
+    Cordillera Department
+    """
+    PY_4 = "PY-4"
+    """
+    Guairá Department
+    """
+    PY_5 = "PY-5"
+    """
+    Caaguazú Department
+    """
+    PY_6 = "PY-6"
+    """
+    Caazapá Department
+    """
+    PY_7 = "PY-7"
+    """
+    Itapúa Department
+    """
+    PY_8 = "PY-8"
+    """
+    Misiones Department
+    """
+    PY_9 = "PY-9"
+    """
+    Paraguarí Department
+    """
+    PY_ASU = "PY-ASU"
+    """
+    Asunción
+    """
+    QA_DA = "QA-DA"
+    """
+    Doha
+    """
+    QA_KH = "QA-KH"
+    """
+    Al Khor
+    """
+    QA_MS = "QA-MS"
+    """
+    Al Shamal
+    """
+    QA_RA = "QA-RA"
+    """
+    Al Rayyan
+    """
+    QA_SH = "QA-SH"
+    """
+    Al-Shahaniya
+    """
+    QA_US = "QA-US"
+    """
+    Umm Salal
+    """
+    QA_WA = "QA-WA"
+    """
+    Al Wakrah
+    """
+    QA_ZA = "QA-ZA"
+    """
+    Al Daayen
+    """
+    RO_AB = "RO-AB"
+    """
+    Alba County
+    """
+    RO_AG = "RO-AG"
+    """
+    Argeș County
+    """
+    RO_AR = "RO-AR"
+    """
+    Arad County
+    """
+    RO_B = "RO-B"
+    """
+    Bucharest
+    """
+    RO_BC = "RO-BC"
+    """
+    Bacău County
+    """
+    RO_BH = "RO-BH"
+    """
+    Bihor County
+    """
+    RO_BN = "RO-BN"
+    """
+    Bistrița-Năsăud County
+    """
+    RO_BR = "RO-BR"
+    """
+    Brăila County
+    """
+    RO_BT = "RO-BT"
+    """
+    Botoșani County
+    """
+    RO_BV = "RO-BV"
+    """
+    Brașov County
+    """
+    RO_BZ = "RO-BZ"
+    """
+    Buzău County
+    """
+    RO_CJ = "RO-CJ"
+    """
+    Cluj County
+    """
+    RO_CL = "RO-CL"
+    """
+    Călărași County
+    """
+    RO_CS = "RO-CS"
+    """
+    Caraș-Severin County
+    """
+    RO_CT = "RO-CT"
+    """
+    Constanța County
+    """
+    RO_CV = "RO-CV"
+    """
+    Covasna County
+    """
+    RO_DB = "RO-DB"
+    """
+    Dâmbovița County
+    """
+    RO_DJ = "RO-DJ"
+    """
+    Dolj County
+    """
+    RO_GJ = "RO-GJ"
+    """
+    Gorj County
+    """
+    RO_GL = "RO-GL"
+    """
+    Galați County
+    """
+    RO_GR = "RO-GR"
+    """
+    Giurgiu County
+    """
+    RO_HD = "RO-HD"
+    """
+    Hunedoara County
+    """
+    RO_HR = "RO-HR"
+    """
+    Harghita County
+    """
+    RO_IF = "RO-IF"
+    """
+    Ilfov County
+    """
+    RO_IL = "RO-IL"
+    """
+    Ialomița County
+    """
+    RO_IS = "RO-IS"
+    """
+    Iași County
+    """
+    RO_MH = "RO-MH"
+    """
+    Mehedinți County
+    """
+    RO_MM = "RO-MM"
+    """
+    Maramureș County
+    """
+    RO_MS = "RO-MS"
+    """
+    Mureș County
+    """
+    RO_NT = "RO-NT"
+    """
+    Neamț County
+    """
+    RO_OT = "RO-OT"
+    """
+    Olt County
+    """
+    RO_PH = "RO-PH"
+    """
+    Prahova County
+    """
+    RO_SB = "RO-SB"
+    """
+    Sibiu County
+    """
+    RO_SJ = "RO-SJ"
+    """
+    Sălaj County
+    """
+    RO_SM = "RO-SM"
+    """
+    Satu Mare County
+    """
+    RO_SV = "RO-SV"
+    """
+    Suceava County
+    """
+    RO_TL = "RO-TL"
+    """
+    Tulcea County
+    """
+    RO_TM = "RO-TM"
+    """
+    Timiș County
+    """
+    RO_TR = "RO-TR"
+    """
+    Teleorman County
+    """
+    RO_VL = "RO-VL"
+    """
+    Vâlcea County
+    """
+    RO_VN = "RO-VN"
+    """
+    Vrancea County
+    """
+    RO_VS = "RO-VS"
+    """
+    Vaslui County
+    """
+    RS_00 = "RS-00"
+    """
+    Belgrade
+    """
+    RS_01 = "RS-01"
+    """
+    North Bačka District
+    """
+    RS_02 = "RS-02"
+    """
+    Central Banat District
+    """
+    RS_03 = "RS-03"
+    """
+    North Banat District
+    """
+    RS_04 = "RS-04"
+    """
+    South Banat District
+    """
+    RS_05 = "RS-05"
+    """
+    West Bačka District
+    """
+    RS_06 = "RS-06"
+    """
+    South Bačka District
+    """
+    RS_07 = "RS-07"
+    """
+    Syrmia District
+    """
+    RS_08 = "RS-08"
+    """
+    Mačva District
+    """
+    RS_09 = "RS-09"
+    """
+    Kolubara District
+    """
+    RS_10 = "RS-10"
+    """
+    Podunavlje District
+    """
+    RS_11 = "RS-11"
+    """
+    Braničevo District
+    """
+    RS_12 = "RS-12"
+    """
+    Šumadija District
+    """
+    RS_13 = "RS-13"
+    """
+    Pomoravlje District
+    """
+    RS_14 = "RS-14"
+    """
+    Bor District
+    """
+    RS_15 = "RS-15"
+    """
+    Zaječar District
+    """
+    RS_16 = "RS-16"
+    """
+    Zlatibor District
+    """
+    RS_17 = "RS-17"
+    """
+    Moravica District
+    """
+    RS_18 = "RS-18"
+    """
+    Raška District
+    """
+    RS_19 = "RS-19"
+    """
+    Rasina District
+    """
+    RS_20 = "RS-20"
+    """
+    Nišava District
+    """
+    RS_21 = "RS-21"
+    """
+    Toplica District
+    """
+    RS_22 = "RS-22"
+    """
+    Pirot District
+    """
+    RS_23 = "RS-23"
+    """
+    Jablanica District
+    """
+    RS_24 = "RS-24"
+    """
+    Pčinja District
+    """
+    RS_25 = "RS-25"
+    """
+    Kosovo District
+    """
+    RS_27 = "RS-27"
+    """
+    Prizren District
+    """
+    RS_KM = "RS-KM"
+    """
+    Kosovo
+    """
+    RS_VO = "RS-VO"
+    """
+    Vojvodina
+    """
+    RU_AD = "RU-AD"
+    """
+    Adygea
+    """
+    RU_AL = "RU-AL"
+    """
+    Altai Republic
+    """
+    RU_ALT = "RU-ALT"
+    """
+    Altai Krai
+    """
+    RU_AMU = "RU-AMU"
+    """
+    Amur Oblast
+    """
+    RU_ARK = "RU-ARK"
+    """
+    Arkhangelsk Oblast
+    """
+    RU_AST = "RU-AST"
+    """
+    Astrakhan Oblast
+    """
+    RU_BA = "RU-BA"
+    """
+    Bashkortostan
+    """
+    RU_BEL = "RU-BEL"
+    """
+    Belgorod Oblast
+    """
+    RU_BRY = "RU-BRY"
+    """
+    Bryansk Oblast
+    """
+    RU_BU = "RU-BU"
+    """
+    Buryatia
+    """
+    RU_CE = "RU-CE"
+    """
+    Chechnya
+    """
+    RU_CHE = "RU-CHE"
+    """
+    Chelyabinsk Oblast
+    """
+    RU_CHU = "RU-CHU"
+    """
+    Chukotka
+    """
+    RU_CU = "RU-CU"
+    """
+    Chuvashia
+    """
+    RU_DA = "RU-DA"
+    """
+    Dagestan
+    """
+    RU_IN = "RU-IN"
+    """
+    Ingushetia
+    """
+    RU_IRK = "RU-IRK"
+    """
+    Irkutsk Oblast
+    """
+    RU_IVA = "RU-IVA"
+    """
+    Ivanovo Oblast
+    """
+    RU_KAM = "RU-KAM"
+    """
+    Kamchatka Krai
+    """
+    RU_KB = "RU-KB"
+    """
+    Kabardino-Balkaria
+    """
+    RU_KC = "RU-KC"
+    """
+    Karachay-Cherkessia
+    """
+    RU_KDA = "RU-KDA"
+    """
+    Krasnodar Krai
+    """
+    RU_KEM = "RU-KEM"
+    """
+    Kemerovo Oblast
+    """
+    RU_KGD = "RU-KGD"
+    """
+    Kaliningrad Oblast
+    """
+    RU_KGN = "RU-KGN"
+    """
+    Kurgan Oblast
+    """
+    RU_KHA = "RU-KHA"
+    """
+    Khabarovsk Krai
+    """
+    RU_KHM = "RU-KHM"
+    """
+    Khantia-Mansia
+    """
+    RU_KIR = "RU-KIR"
+    """
+    Kirov Oblast
+    """
+    RU_KK = "RU-KK"
+    """
+    Khakassia
+    """
+    RU_KL = "RU-KL"
+    """
+    Kalmykia
+    """
+    RU_KLU = "RU-KLU"
+    """
+    Kaluga Oblast
+    """
+    RU_KO = "RU-KO"
+    """
+    Komi
+    """
+    RU_KOS = "RU-KOS"
+    """
+    Kostroma Oblast
+    """
+    RU_KR = "RU-KR"
+    """
+    Republic of Karelia
+    """
+    RU_KRS = "RU-KRS"
+    """
+    Kursk Oblast
+    """
+    RU_KYA = "RU-KYA"
+    """
+    Krasnoyarsk Krai
+    """
+    RU_LEN = "RU-LEN"
+    """
+    Leningrad Oblast
+    """
+    RU_LIP = "RU-LIP"
+    """
+    Lipetsk Oblast
+    """
+    RU_MAG = "RU-MAG"
+    """
+    Magadan Oblast
+    """
+    RU_ME = "RU-ME"
+    """
+    Mari El
+    """
+    RU_MO = "RU-MO"
+    """
+    Mordovia
+    """
+    RU_MOS = "RU-MOS"
+    """
+    Moscow Oblast
+    """
+    RU_MOW = "RU-MOW"
+    """
+    Moscow
+    """
+    RU_MUR = "RU-MUR"
+    """
+    Murmansk Oblast
+    """
+    RU_NEN = "RU-NEN"
+    """
+    Nenetsia
+    """
+    RU_NGR = "RU-NGR"
+    """
+    Novgorod Oblast
+    """
+    RU_NIZ = "RU-NIZ"
+    """
+    Nizhny Novgorod Oblast
+    """
+    RU_NVS = "RU-NVS"
+    """
+    Novosibirsk Oblast
+    """
+    RU_OMS = "RU-OMS"
+    """
+    Omsk Oblast
+    """
+    RU_ORE = "RU-ORE"
+    """
+    Orenburg Oblast
+    """
+    RU_ORL = "RU-ORL"
+    """
+    Oryol Oblast
+    """
+    RU_PER = "RU-PER"
+    """
+    Perm Krai
+    """
+    RU_PNZ = "RU-PNZ"
+    """
+    Penza Oblast
+    """
+    RU_PRI = "RU-PRI"
+    """
+    Primorsky Krai
+    """
+    RU_PSK = "RU-PSK"
+    """
+    Pskov Oblast
+    """
+    RU_ROS = "RU-ROS"
+    """
+    Rostov Oblast
+    """
+    RU_RYA = "RU-RYA"
+    """
+    Ryazan Oblast
+    """
+    RU_SA = "RU-SA"
+    """
+    Sakha Republic
+    """
+    RU_SAK = "RU-SAK"
+    """
+    Sakhalin Oblast
+    """
+    RU_SAM = "RU-SAM"
+    """
+    Samara Oblast
+    """
+    RU_SAR = "RU-SAR"
+    """
+    Saratov Oblast
+    """
+    RU_SE = "RU-SE"
+    """
+    North Ossetia – Alania
+    """
+    RU_SMO = "RU-SMO"
+    """
+    Smolensk Oblast
+    """
+    RU_SPE = "RU-SPE"
+    """
+    Saint Petersburg
+    """
+    RU_STA = "RU-STA"
+    """
+    Stavropol Krai
+    """
+    RU_SVE = "RU-SVE"
+    """
+    Sverdlovsk Oblast
+    """
+    RU_TA = "RU-TA"
+    """
+    Tatarstan
+    """
+    RU_TAM = "RU-TAM"
+    """
+    Tambov Oblast
+    """
+    RU_TOM = "RU-TOM"
+    """
+    Tomsk Oblast
+    """
+    RU_TUL = "RU-TUL"
+    """
+    Tula Oblast
+    """
+    RU_TVE = "RU-TVE"
+    """
+    Tver Oblast
+    """
+    RU_TY = "RU-TY"
+    """
+    Tyva
+    """
+    RU_TYU = "RU-TYU"
+    """
+    Tyumen Oblast
+    """
+    RU_UD = "RU-UD"
+    """
+    Udmurtia
+    """
+    RU_ULY = "RU-ULY"
+    """
+    Ulyanovsk Oblast
+    """
+    RU_VGG = "RU-VGG"
+    """
+    Volgograd Oblast
+    """
+    RU_VLA = "RU-VLA"
+    """
+    Vladimir Oblast
+    """
+    RU_VLG = "RU-VLG"
+    """
+    Vologda Oblast
+    """
+    RU_VOR = "RU-VOR"
+    """
+    Voronezh Oblast
+    """
+    RU_YAN = "RU-YAN"
+    """
+    Yamalo-Nenets Autonomous Okrug
+    """
+    RU_YAR = "RU-YAR"
+    """
+    Yaroslavl Oblast
+    """
+    RU_YEV = "RU-YEV"
+    """
+    Jewish Autonomous Oblast
+    """
+    RU_ZAB = "RU-ZAB"
+    """
+    Zabaykalsky Krai
+    """
+    RW_01 = "RW-01"
+    """
+    Kigali
+    """
+    RW_02 = "RW-02"
+    """
+    East Province, Rwanda
+    """
+    RW_03 = "RW-03"
+    """
+    North Province, Rwanda
+    """
+    RW_04 = "RW-04"
+    """
+    West Province, Rwanda
+    """
+    RW_05 = "RW-05"
+    """
+    South Province, Rwanda
+    """
+    SA_01 = "SA-01"
+    """
+    Riyadh Province
+    """
+    SA_02 = "SA-02"
+    """
+    Makkah Province
+    """
+    SA_03 = "SA-03"
+    """
+    Al Madinah Province
+    """
+    SA_04 = "SA-04"
+    """
+    Eastern Province, Saudi Arabia
+    """
+    SA_05 = "SA-05"
+    """
+    Al-Qassim Province
+    """
+    SA_06 = "SA-06"
+    """
+    Ha'il province
+    """
+    SA_07 = "SA-07"
+    """
+    Tabuk Province
+    """
+    SA_08 = "SA-08"
+    """
+    Northern Borders Province
+    """
+    SA_09 = "SA-09"
+    """
+    Jazan Province
+    """
+    SA_10 = "SA-10"
+    """
+    Najran Province
+    """
+    SA_11 = "SA-11"
+    """
+    Al-Baha Province
+    """
+    SA_12 = "SA-12"
+    """
+    Al-Jowf Province
+    """
+    SA_14 = "SA-14"
+    """
+    Asir Province
+    """
+    SB_CT = "SB-CT"
+    """
+    Honiara
+    """
+    SB_MK = "SB-MK"
+    """
+    Makira
+    """
+    SB_WE = "SB-WE"
+    """
+    Western Province, Solomon Islands
+    """
+    SC_05 = "SC-05"
+    """
+    Anse Royale
+    """
+    SC_08 = "SC-08"
+    """
+    Beau Vallon
+    """
+    SC_10 = "SC-10"
+    """
+    Bel-Ombre, Mauritius
+    """
+    SC_14 = "SC-14"
+    """
+    Grand'Anse Praslin
+    """
+    SC_15 = "SC-15"
+    """
+    La Digue
+    """
+    SC_24 = "SC-24"
+    """
+    Les Mamelles
+    """
+    SD_DW = "SD-DW"
+    """
+    West Darfur
+    """
+    SD_GZ = "SD-GZ"
+    """
+    Gezira (state)
+    """
+    SD_KH = "SD-KH"
+    """
+    Khartoum (state)
+    """
+    SD_KN = "SD-KN"
+    """
+    North Kurdufan
+    """
+    SD_KS = "SD-KS"
+    """
+    South Kurdufan state
+    """
+    SD_NW = "SD-NW"
+    """
+    White Nile (state)
+    """
+    SD_SI = "SD-SI"
+    """
+    Sennar (state)
+    """
+    SE_AB = "SE-AB"
+    """
+    Stockholm County
+    """
+    SE_AC = "SE-AC"
+    """
+    Västerbotten County
+    """
+    SE_BD = "SE-BD"
+    """
+    Norrbotten County
+    """
+    SE_C = "SE-C"
+    """
+    Uppsala County
+    """
+    SE_D = "SE-D"
+    """
+    Södermanland County
+    """
+    SE_E = "SE-E"
+    """
+    Östergötland County
+    """
+    SE_F = "SE-F"
+    """
+    Jönköping County
+    """
+    SE_G = "SE-G"
+    """
+    Kronoberg County
+    """
+    SE_H = "SE-H"
+    """
+    Kalmar County
+    """
+    SE_I = "SE-I"
+    """
+    Gotland
+    """
+    SE_K = "SE-K"
+    """
+    Blekinge
+    """
+    SE_M = "SE-M"
+    """
+    Skåne County
+    """
+    SE_N = "SE-N"
+    """
+    Halland County
+    """
+    SE_O = "SE-O"
+    """
+    Västra Götaland County
+    """
+    SE_S = "SE-S"
+    """
+    Värmland County
+    """
+    SE_T = "SE-T"
+    """
+    Örebro County
+    """
+    SE_U = "SE-U"
+    """
+    Västmanland County
+    """
+    SE_W = "SE-W"
+    """
+    Dalarna County
+    """
+    SE_X = "SE-X"
+    """
+    Gävleborg County
+    """
+    SE_Y = "SE-Y"
+    """
+    Västernorrland County
+    """
+    SE_Z = "SE-Z"
+    """
+    Jämtland County
+    """
+    SH_AC = "SH-AC"
+    """
+    Ascension Island
+    """
+    SH_HL = "SH-HL"
+    """
+    Saint Helena Island
+    """
+    SH_TA = "SH-TA"
+    """
+    Tristan da Cunha
+    """
+    SI_001 = "SI-001"
+    """
+    Municipality of Ajdovščina
+    """
+    SI_002 = "SI-002"
+    """
+    Municipality of Beltinci
+    """
+    SI_003 = "SI-003"
+    """
+    Municipality of Bled
+    """
+    SI_004 = "SI-004"
+    """
+    Municipality of Bohinj
+    """
+    SI_005 = "SI-005"
+    """
+    Municipality of Borovnica
+    """
+    SI_006 = "SI-006"
+    """
+    Municipality of Bovec
+    """
+    SI_007 = "SI-007"
+    """
+    Municipality of Brda
+    """
+    SI_008 = "SI-008"
+    """
+    Municipality of Brezovica
+    """
+    SI_009 = "SI-009"
+    """
+    Municipality of Brežice
+    """
+    SI_010 = "SI-010"
+    """
+    Municipality of Tišina
+    """
+    SI_011 = "SI-011"
+    """
+    City Municipality of Celje
+    """
+    SI_012 = "SI-012"
+    """
+    Municipality of Cerklje na Gorenjskem
+    """
+    SI_013 = "SI-013"
+    """
+    Municipality of Cerknica
+    """
+    SI_014 = "SI-014"
+    """
+    Municipality of Cerkno
+    """
+    SI_015 = "SI-015"
+    """
+    Municipality of Črenšovci
+    """
+    SI_016 = "SI-016"
+    """
+    Municipality of Črna na Koroškem
+    """
+    SI_017 = "SI-017"
+    """
+    Municipality of Črnomelj
+    """
+    SI_018 = "SI-018"
+    """
+    Municipality of Destrnik
+    """
+    SI_019 = "SI-019"
+    """
+    Municipality of Divača
+    """
+    SI_020 = "SI-020"
+    """
+    Municipality of Dobrepolje
+    """
+    SI_021 = "SI-021"
+    """
+    Municipality of Dobrova–Polhov Gradec
+    """
+    SI_022 = "SI-022"
+    """
+    Municipality of Dol pri Ljubljani
+    """
+    SI_023 = "SI-023"
+    """
+    Municipality of Domžale
+    """
+    SI_024 = "SI-024"
+    """
+    Municipality of Dornava
+    """
+    SI_025 = "SI-025"
+    """
+    Municipality of Dravograd
+    """
+    SI_026 = "SI-026"
+    """
+    Municipality of Duplek
+    """
+    SI_027 = "SI-027"
+    """
+    Municipality of Gorenja Vas–Poljane
+    """
+    SI_028 = "SI-028"
+    """
+    Municipality of Gorišnica
+    """
+    SI_029 = "SI-029"
+    """
+    Municipality of Gornja Radgona
+    """
+    SI_030 = "SI-030"
+    """
+    Municipality of Gornji Grad
+    """
+    SI_031 = "SI-031"
+    """
+    Municipality of Gornji Petrovci
+    """
+    SI_032 = "SI-032"
+    """
+    Municipality of Grosuplje
+    """
+    SI_033 = "SI-033"
+    """
+    Municipality of Šalovci
+    """
+    SI_034 = "SI-034"
+    """
+    Municipality of Hrastnik
+    """
+    SI_035 = "SI-035"
+    """
+    Municipality of Hrpelje-Kozina
+    """
+    SI_036 = "SI-036"
+    """
+    Municipality of Idrija
+    """
+    SI_037 = "SI-037"
+    """
+    Municipality of Ig
+    """
+    SI_038 = "SI-038"
+    """
+    Municipality of Ilirska Bistrica
+    """
+    SI_039 = "SI-039"
+    """
+    Municipality of Ivančna Gorica
+    """
+    SI_040 = "SI-040"
+    """
+    Municipality of Izola
+    """
+    SI_041 = "SI-041"
+    """
+    Jesenice municipality
+    """
+    SI_042 = "SI-042"
+    """
+    Municipality of Juršinci
+    """
+    SI_043 = "SI-043"
+    """
+    Municipality of Kamnik
+    """
+    SI_044 = "SI-044"
+    """
+    Municipality of Kanal
+    """
+    SI_045 = "SI-045"
+    """
+    Municipality of Kidričevo
+    """
+    SI_046 = "SI-046"
+    """
+    Municipality of Kobarid
+    """
+    SI_047 = "SI-047"
+    """
+    Municipality of Kobilje
+    """
+    SI_048 = "SI-048"
+    """
+    Municipality of Kočevje
+    """
+    SI_049 = "SI-049"
+    """
+    Municipality of Komen
+    """
+    SI_050 = "SI-050"
+    """
+    City Municipality of Koper
+    """
+    SI_051 = "SI-051"
+    """
+    Municipality of Kozje
+    """
+    SI_052 = "SI-052"
+    """
+    City Municipality of Kranj
+    """
+    SI_053 = "SI-053"
+    """
+    Municipality of Kranjska Gora
+    """
+    SI_054 = "SI-054"
+    """
+    City Municipality of Krško
+    """
+    SI_055 = "SI-055"
+    """
+    Municipality of Kungota
+    """
+    SI_056 = "SI-056"
+    """
+    Municipality of Kuzma
+    """
+    SI_057 = "SI-057"
+    """
+    Municipality of Laško
+    """
+    SI_058 = "SI-058"
+    """
+    Municipality of Lenart
+    """
+    SI_059 = "SI-059"
+    """
+    Municipality of Lendava
+    """
+    SI_060 = "SI-060"
+    """
+    Municipality of Litija
+    """
+    SI_061 = "SI-061"
+    """
+    City Municipality of Ljubljana
+    """
+    SI_062 = "SI-062"
+    """
+    Municipality of Ljubno
+    """
+    SI_063 = "SI-063"
+    """
+    Municipality of Ljutomer
+    """
+    SI_064 = "SI-064"
+    """
+    Municipality of Logatec
+    """
+    SI_065 = "SI-065"
+    """
+    Municipality of Loška Dolina
+    """
+    SI_066 = "SI-066"
+    """
+    Municipality of Loški Potok
+    """
+    SI_067 = "SI-067"
+    """
+    Municipality of Luče
+    """
+    SI_068 = "SI-068"
+    """
+    Municipality of Lukovica
+    """
+    SI_069 = "SI-069"
+    """
+    Municipality of Majšperk
+    """
+    SI_070 = "SI-070"
+    """
+    City Municipality of Maribor
+    """
+    SI_071 = "SI-071"
+    """
+    Municipality of Medvode
+    """
+    SI_072 = "SI-072"
+    """
+    Municipality of Mengeš
+    """
+    SI_073 = "SI-073"
+    """
+    Metlika municipality
+    """
+    SI_074 = "SI-074"
+    """
+    Municipality of Mežica
+    """
+    SI_075 = "SI-075"
+    """
+    Municipality of Miren–Kostanjevica
+    """
+    SI_076 = "SI-076"
+    """
+    Municipality of Mislinja
+    """
+    SI_077 = "SI-077"
+    """
+    Municipality of Moravče
+    """
+    SI_078 = "SI-078"
+    """
+    Municipality of Moravske Toplice
+    """
+    SI_079 = "SI-079"
+    """
+    Municipality of Mozirje
+    """
+    SI_080 = "SI-080"
+    """
+    City Municipality of Murska Sobota
+    """
+    SI_081 = "SI-081"
+    """
+    Municipality of Muta
+    """
+    SI_082 = "SI-082"
+    """
+    Municipality of Naklo
+    """
+    SI_083 = "SI-083"
+    """
+    Municipality of Nazarje
+    """
+    SI_084 = "SI-084"
+    """
+    City Municipality of Nova Gorica
+    """
+    SI_085 = "SI-085"
+    """
+    City Municipality of Novo Mesto
+    """
+    SI_086 = "SI-086"
+    """
+    Municipality of Odranci
+    """
+    SI_087 = "SI-087"
+    """
+    Municipality of Ormož
+    """
+    SI_088 = "SI-088"
+    """
+    Osilnica municipality
+    """
+    SI_089 = "SI-089"
+    """
+    Municipality of Pesnica
+    """
+    SI_090 = "SI-090"
+    """
+    Municipality of Piran
+    """
+    SI_091 = "SI-091"
+    """
+    Municipality of Pivka
+    """
+    SI_092 = "SI-092"
+    """
+    Municipality of Podčetrtek
+    """
+    SI_093 = "SI-093"
+    """
+    Municipality of Podvelka
+    """
+    SI_094 = "SI-094"
+    """
+    Postojna
+    """
+    SI_095 = "SI-095"
+    """
+    Municipality of Preddvor
+    """
+    SI_096 = "SI-096"
+    """
+    Ptuj
+    """
+    SI_097 = "SI-097"
+    """
+    Municipality of Puconci
+    """
+    SI_098 = "SI-098"
+    """
+    Municipality of Rače-Fram
+    """
+    SI_099 = "SI-099"
+    """
+    Municipality of Radeče
+    """
+    SI_100 = "SI-100"
+    """
+    Municipality of Radenci
+    """
+    SI_101 = "SI-101"
+    """
+    Municipality of Radlje ob Dravi
+    """
+    SI_102 = "SI-102"
+    """
+    Municipality of Radovljica
+    """
+    SI_103 = "SI-103"
+    """
+    Municipality of Ravne na Koroškem
+    """
+    SI_104 = "SI-104"
+    """
+    Ribnica municipality
+    """
+    SI_105 = "SI-105"
+    """
+    Municipality of Rogašovci
+    """
+    SI_106 = "SI-106"
+    """
+    Municipality of Rogaška Slatina
+    """
+    SI_107 = "SI-107"
+    """
+    Municipality of Rogatec
+    """
+    SI_108 = "SI-108"
+    """
+    Municipality of Ruše
+    """
+    SI_109 = "SI-109"
+    """
+    Municipality of Semič
+    """
+    SI_110 = "SI-110"
+    """
+    Municipality of Sevnica
+    """
+    SI_111 = "SI-111"
+    """
+    Municipality of Sežana
+    """
+    SI_112 = "SI-112"
+    """
+    City Municipality of Slovenj Gradec
+    """
+    SI_113 = "SI-113"
+    """
+    Municipality of Slovenska Bistrica
+    """
+    SI_114 = "SI-114"
+    """
+    Municipality of Slovenske Konjice
+    """
+    SI_115 = "SI-115"
+    """
+    Municipality of Starše
+    """
+    SI_116 = "SI-116"
+    """
+    Municipality of Sveti Jurij ob Ščavnici
+    """
+    SI_117 = "SI-117"
+    """
+    Municipality of Šenčur
+    """
+    SI_118 = "SI-118"
+    """
+    Municipality of Šentilj
+    """
+    SI_119 = "SI-119"
+    """
+    Šentjernej municipality
+    """
+    SI_120 = "SI-120"
+    """
+    Municipality of Šentjur
+    """
+    SI_121 = "SI-121"
+    """
+    Municipality of Škocjan
+    """
+    SI_122 = "SI-122"
+    """
+    Municipality of Škofja Loka
+    """
+    SI_123 = "SI-123"
+    """
+    Municipality of Škofljica
+    """
+    SI_124 = "SI-124"
+    """
+    Municipality of Šmarje pri Jelšah
+    """
+    SI_125 = "SI-125"
+    """
+    Municipality of Šmartno ob Paki
+    """
+    SI_126 = "SI-126"
+    """
+    Municipality of Šoštanj
+    """
+    SI_127 = "SI-127"
+    """
+    Municipality of Štore
+    """
+    SI_128 = "SI-128"
+    """
+    Municipality of Tolmin
+    """
+    SI_129 = "SI-129"
+    """
+    Municipality of Trbovlje
+    """
+    SI_130 = "SI-130"
+    """
+    Municipality of Trebnje
+    """
+    SI_131 = "SI-131"
+    """
+    Municipality of Tržič
+    """
+    SI_132 = "SI-132"
+    """
+    Municipality of Turnišče
+    """
+    SI_133 = "SI-133"
+    """
+    City Municipality of Velenje
+    """
+    SI_134 = "SI-134"
+    """
+    Municipality of Velike Lašče
+    """
+    SI_135 = "SI-135"
+    """
+    Municipality of Videm
+    """
+    SI_136 = "SI-136"
+    """
+    Vipava
+    """
+    SI_137 = "SI-137"
+    """
+    Municipality of Vitanje
+    """
+    SI_138 = "SI-138"
+    """
+    Municipality of Vodice
+    """
+    SI_139 = "SI-139"
+    """
+    Municipality of Vojnik
+    """
+    SI_140 = "SI-140"
+    """
+    Municipality of Vrhnika
+    """
+    SI_141 = "SI-141"
+    """
+    Municipality of Vuzenica
+    """
+    SI_142 = "SI-142"
+    """
+    Municipality of Zagorje ob Savi
+    """
+    SI_143 = "SI-143"
+    """
+    Municipality of Zavrč
+    """
+    SI_144 = "SI-144"
+    """
+    Municipality of Zreče
+    """
+    SI_146 = "SI-146"
+    """
+    Municipality of Železniki
+    """
+    SI_147 = "SI-147"
+    """
+    Municipality of Žiri
+    """
+    SI_148 = "SI-148"
+    """
+    Municipality of Benedikt
+    """
+    SI_149 = "SI-149"
+    """
+    Municipality of Bistrica ob Sotli
+    """
+    SI_150 = "SI-150"
+    """
+    Municipality of Bloke
+    """
+    SI_151 = "SI-151"
+    """
+    Municipality of Braslovče
+    """
+    SI_152 = "SI-152"
+    """
+    Municipality of Cankova
+    """
+    SI_153 = "SI-153"
+    """
+    Municipality of Cerkvenjak
+    """
+    SI_154 = "SI-154"
+    """
+    Municipality of Dobje
+    """
+    SI_155 = "SI-155"
+    """
+    Municipality of Dobrna
+    """
+    SI_156 = "SI-156"
+    """
+    Municipality of Dobrovnik
+    """
+    SI_157 = "SI-157"
+    """
+    Municipality of Dolenjske Toplice
+    """
+    SI_158 = "SI-158"
+    """
+    Municipality of Grad
+    """
+    SI_159 = "SI-159"
+    """
+    Municipality of Hajdina
+    """
+    SI_160 = "SI-160"
+    """
+    Municipality of Hoče-Slivnica
+    """
+    SI_161 = "SI-161"
+    """
+    Municipality of Hodoš
+    """
+    SI_162 = "SI-162"
+    """
+    Municipality of Horjul
+    """
+    SI_163 = "SI-163"
+    """
+    Municipality of Jezersko
+    """
+    SI_164 = "SI-164"
+    """
+    Municipality of Komenda
+    """
+    SI_165 = "SI-165"
+    """
+    Municipality of Kostel
+    """
+    SI_166 = "SI-166"
+    """
+    Municipality of Križevci
+    """
+    SI_167 = "SI-167"
+    """
+    Municipality of Lovrenc na Pohorju
+    """
+    SI_168 = "SI-168"
+    """
+    Municipality of Markovci
+    """
+    SI_169 = "SI-169"
+    """
+    Municipality of Miklavž na Dravskem Polju
+    """
+    SI_170 = "SI-170"
+    """
+    Municipality of Mirna Peč
+    """
+    SI_171 = "SI-171"
+    """
+    Municipality of Oplotnica
+    """
+    SI_172 = "SI-172"
+    """
+    Municipality of Podlehnik
+    """
+    SI_173 = "SI-173"
+    """
+    Municipality of Polzela
+    """
+    SI_174 = "SI-174"
+    """
+    Municipality of Prebold
+    """
+    SI_175 = "SI-175"
+    """
+    Municipality of Prevalje
+    """
+    SI_176 = "SI-176"
+    """
+    Municipality of Razkrižje
+    """
+    SI_177 = "SI-177"
+    """
+    Municipality of Ribnica na Pohorju
+    """
+    SI_178 = "SI-178"
+    """
+    Municipality of Selnica ob Dravi
+    """
+    SI_179 = "SI-179"
+    """
+    Sodražica municipality
+    """
+    SI_180 = "SI-180"
+    """
+    Municipality of Solčava
+    """
+    SI_181 = "SI-181"
+    """
+    Municipality of Sveta Ana
+    """
+    SI_182 = "SI-182"
+    """
+    Municipality of Sveti Andraž v Slovenskih Goricah
+    """
+    SI_183 = "SI-183"
+    """
+    Municipality of Šempeter-Vrtojba
+    """
+    SI_184 = "SI-184"
+    """
+    Municipality of Tabor
+    """
+    SI_185 = "SI-185"
+    """
+    Municipality of Trnovska Vas
+    """
+    SI_186 = "SI-186"
+    """
+    Trzin
+    """
+    SI_187 = "SI-187"
+    """
+    Municipality of Velika Polana
+    """
+    SI_188 = "SI-188"
+    """
+    Municipality of Veržej
+    """
+    SI_189 = "SI-189"
+    """
+    Municipality of Vransko
+    """
+    SI_190 = "SI-190"
+    """
+    Municipality of Žalec
+    """
+    SI_191 = "SI-191"
+    """
+    Municipality of Žetale
+    """
+    SI_192 = "SI-192"
+    """
+    Žirovnica
+    """
+    SI_193 = "SI-193"
+    """
+    Žužemberk municipality
+    """
+    SI_194 = "SI-194"
+    """
+    Šmartno pri Litiji municipality
+    """
+    SI_195 = "SI-195"
+    """
+    Municipality of Apače
+    """
+    SI_196 = "SI-196"
+    """
+    Municipality of Cirkulane
+    """
+    SI_197 = "SI-197"
+    """
+    Municipality of Kostanjevica na Krki
+    """
+    SI_198 = "SI-198"
+    """
+    Municipality of Makole
+    """
+    SI_199 = "SI-199"
+    """
+    Municipality of Mokronog–Trebelno
+    """
+    SI_200 = "SI-200"
+    """
+    Municipality of Poljčane
+    """
+    SI_201 = "SI-201"
+    """
+    Municipality of Renče-Vogrsko
+    """
+    SI_202 = "SI-202"
+    """
+    Municipality of Središče ob Dravi
+    """
+    SI_203 = "SI-203"
+    """
+    Straža municipality
+    """
+    SI_204 = "SI-204"
+    """
+    Municipality of Sveta Trojica v Slovenskih Goricah
+    """
+    SI_205 = "SI-205"
+    """
+    Municipality of Sveti Tomaž
+    """
+    SI_206 = "SI-206"
+    """
+    Šmarješke Toplice municipality
+    """
+    SI_207 = "SI-207"
+    """
+    Municipality of Gorje
+    """
+    SI_208 = "SI-208"
+    """
+    Municipality of Log-Dragomer
+    """
+    SI_209 = "SI-209"
+    """
+    Municipality of Rečica ob Savinji
+    """
+    SI_210 = "SI-210"
+    """
+    Municipality of Sveti Jurij v Slovenskih Goricah
+    """
+    SI_211 = "SI-211"
+    """
+    Šentrupert municipality
+    """
+    SI_212 = "SI-212"
+    """
+    Municipality of Mirna
+    """
+    SI_213 = "SI-213"
+    """
+    Municipality of Ankaran
+    """
+    SK_BC = "SK-BC"
+    """
+    Banská Bystrica Region
+    """
+    SK_BL = "SK-BL"
+    """
+    Bratislava Region
+    """
+    SK_KI = "SK-KI"
+    """
+    Košice Region
+    """
+    SK_NI = "SK-NI"
+    """
+    Nitra Region
+    """
+    SK_PV = "SK-PV"
+    """
+    Prešov Region
+    """
+    SK_TA = "SK-TA"
+    """
+    Trnava Region
+    """
+    SK_TC = "SK-TC"
+    """
+    Trenčín Region
+    """
+    SK_ZI = "SK-ZI"
+    """
+    Žilina Region
+    """
+    SL_E = "SL-E"
+    """
+    Eastern Province, Sierra Leone
+    """
+    SL_N = "SL-N"
+    """
+    Provinces of Sierra Leone
+    """
+    SL_NW = "SL-NW"
+    """
+    North West Province, Sierra Leone
+    """
+    SL_S = "SL-S"
+    """
+    Provinces of Sierra Leone
+    """
+    SL_W = "SL-W"
+    """
+    Provinces of Sierra Leone
+    """
+    SM_01 = "SM-01"
+    """
+    Acquaviva
+    """
+    SM_02 = "SM-02"
+    """
+    Chiesanuova (San Marino)
+    """
+    SM_03 = "SM-03"
+    """
+    Domagnano
+    """
+    SM_04 = "SM-04"
+    """
+    Faetano
+    """
+    SM_05 = "SM-05"
+    """
+    Fiorentino
+    """
+    SM_06 = "SM-06"
+    """
+    Borgo Maggiore
+    """
+    SM_07 = "SM-07"
+    """
+    San Marino (city)
+    """
+    SM_08 = "SM-08"
+    """
+    Montegiardino
+    """
+    SM_09 = "SM-09"
+    """
+    Serravalle (San Marino)
+    """
+    SN_DB = "SN-DB"
+    """
+    Diourbel Region
+    """
+    SN_DK = "SN-DK"
+    """
+    Dakar Region
+    """
+    SN_FK = "SN-FK"
+    """
+    Fatick Region
+    """
+    SN_KA = "SN-KA"
+    """
+    Kaffrine Region
+    """
+    SN_KD = "SN-KD"
+    """
+    Kolda Region
+    """
+    SN_KE = "SN-KE"
+    """
+    Kédougou Region
+    """
+    SN_KL = "SN-KL"
+    """
+    Kaolack Region
+    """
+    SN_LG = "SN-LG"
+    """
+    Louga Region
+    """
+    SN_MT = "SN-MT"
+    """
+    Matam Region
+    """
+    SN_SE = "SN-SE"
+    """
+    Sédhiou Region
+    """
+    SN_SL = "SN-SL"
+    """
+    Saint-Louis Region
+    """
+    SN_TC = "SN-TC"
+    """
+    Tambacounda Region
+    """
+    SN_TH = "SN-TH"
+    """
+    Thiès Region
+    """
+    SN_ZG = "SN-ZG"
+    """
+    Ziguinchor Region
+    """
+    SO_AW = "SO-AW"
+    """
+    Awdal Region
+    """
+    SO_BK = "SO-BK"
+    """
+    Bakool Region
+    """
+    SO_BN = "SO-BN"
+    """
+    Banaadir Region
+    """
+    SO_BR = "SO-BR"
+    """
+    Bari Region
+    """
+    SO_BY = "SO-BY"
+    """
+    Bay Region
+    """
+    SO_GA = "SO-GA"
+    """
+    Galguduud Region
+    """
+    SO_GE = "SO-GE"
+    """
+    Gedo Region
+    """
+    SO_JD = "SO-JD"
+    """
+    Middle Juba Region
+    """
+    SO_JH = "SO-JH"
+    """
+    Lower Juba Region
+    """
+    SO_MU = "SO-MU"
+    """
+    Mudug Region
+    """
+    SO_NU = "SO-NU"
+    """
+    Nugal Region
+    """
+    SO_SA = "SO-SA"
+    """
+    Sanaag Region (Somaliland)
+    """
+    SO_SD = "SO-SD"
+    """
+    Middle Shabele Region
+    """
+    SO_SH = "SO-SH"
+    """
+    Lower Shabele Region
+    """
+    SO_SO = "SO-SO"
+    """
+    Sool Region
+    """
+    SO_WO = "SO-WO"
+    """
+    Maroodi Jeeh Region
+    """
+    SR_BR = "SR-BR"
+    """
+    Brokopondo District
+    """
+    SR_CM = "SR-CM"
+    """
+    Commewijne District
+    """
+    SR_CR = "SR-CR"
+    """
+    Coronie District
+    """
+    SR_MA = "SR-MA"
+    """
+    Marowijne District
+    """
+    SR_NI = "SR-NI"
+    """
+    Nickerie District
+    """
+    SR_PM = "SR-PM"
+    """
+    Paramaribo District
+    """
+    SR_PR = "SR-PR"
+    """
+    Para District
+    """
+    SR_SA = "SR-SA"
+    """
+    Saramacca District
+    """
+    SR_SI = "SR-SI"
+    """
+    Sipaliwini District
+    """
+    SR_WA = "SR-WA"
+    """
+    Wanica District
+    """
+    SS_EC = "SS-EC"
+    """
+    Central Equatoria state
+    """
+    SS_JG = "SS-JG"
+    """
+    Jonglei state
+    """
+    SS_NU = "SS-NU"
+    """
+    Upper Nile
+    """
+    ST_04 = "ST-04"
+    """
+    Lembá District
+    """
+    ST_05 = "ST-05"
+    """
+    Lobata District
+    """
+    ST_P = "ST-P"
+    """
+    Príncipe
+    """
+    SV_AH = "SV-AH"
+    """
+    Ahuachapán Department
+    """
+    SV_CA = "SV-CA"
+    """
+    Cabañas Department
+    """
+    SV_CH = "SV-CH"
+    """
+    Chalatenango Department
+    """
+    SV_CU = "SV-CU"
+    """
+    Cuscatlán Department
+    """
+    SV_LI = "SV-LI"
+    """
+    La Libertad Department
+    """
+    SV_MO = "SV-MO"
+    """
+    Morazán Department
+    """
+    SV_PA = "SV-PA"
+    """
+    La Paz Department, El Salvador
+    """
+    SV_SA = "SV-SA"
+    """
+    Santa Ana Department
+    """
+    SV_SM = "SV-SM"
+    """
+    San Miguel Department, El Salvador
+    """
+    SV_SO = "SV-SO"
+    """
+    Sonsonate Department
+    """
+    SV_SS = "SV-SS"
+    """
+    San Salvador Department
+    """
+    SV_SV = "SV-SV"
+    """
+    San Vicente Department
+    """
+    SV_UN = "SV-UN"
+    """
+    La Unión Department
+    """
+    SV_US = "SV-US"
+    """
+    Usulután Department
+    """
+    SY_DI = "SY-DI"
+    """
+    Damascus Governorate
+    """
+    SY_DR = "SY-DR"
+    """
+    Daraa Governorate
+    """
+    SY_DY = "SY-DY"
+    """
+    Dayr az-Zawr
+    """
+    SY_HA = "SY-HA"
+    """
+    Al-Hasakah Governorate
+    """
+    SY_HI = "SY-HI"
+    """
+    Homs Governorate
+    """
+    SY_HL = "SY-HL"
+    """
+    Aleppo Governorate
+    """
+    SY_HM = "SY-HM"
+    """
+    Hama Governorate
+    """
+    SY_ID = "SY-ID"
+    """
+    Idlib Governorate
+    """
+    SY_LA = "SY-LA"
+    """
+    Latakia Governorate
+    """
+    SY_QU = "SY-QU"
+    """
+    Quneitra Governorate
+    """
+    SY_RA = "SY-RA"
+    """
+    Raqqa Governorate
+    """
+    SY_RD = "SY-RD"
+    """
+    Rif-Dimashq Governorate
+    """
+    SY_SU = "SY-SU"
+    """
+    As-Suwayda Governorate
+    """
+    SY_TA = "SY-TA"
+    """
+    Tartus Governorate
+    """
+    SZ_HH = "SZ-HH"
+    """
+    Hhohho Region
+    """
+    SZ_LU = "SZ-LU"
+    """
+    Lubombo Region
+    """
+    SZ_MA = "SZ-MA"
+    """
+    Manzini Region
+    """
+    SZ_SH = "SZ-SH"
+    """
+    Shiselweni Region
+    """
+    TD_BA = "TD-BA"
+    """
+    Batha Region
+    """
+    TD_BG = "TD-BG"
+    """
+    Barh El Gazel
+    """
+    TD_BO = "TD-BO"
+    """
+    Borkou
+    """
+    TD_CB = "TD-CB"
+    """
+    Chari-Baguirmi
+    """
+    TD_EO = "TD-EO"
+    """
+    Ennedi Ouest
+    """
+    TD_GR = "TD-GR"
+    """
+    Guéra
+    """
+    TD_HL = "TD-HL"
+    """
+    Hadjer-Lamis
+    """
+    TD_KA = "TD-KA"
+    """
+    Kanem Region
+    """
+    TD_LC = "TD-LC"
+    """
+    Lac region
+    """
+    TD_LO = "TD-LO"
+    """
+    Logone Occidental
+    """
+    TD_LR = "TD-LR"
+    """
+    Logone Oriental
+    """
+    TD_MA = "TD-MA"
+    """
+    Mandoul
+    """
+    TD_MO = "TD-MO"
+    """
+    Mayo-Kebbi Ouest
+    """
+    TD_ND = "TD-ND"
+    """
+    N'Djamena
+    """
+    TD_SA = "TD-SA"
+    """
+    Salamat
+    """
+    TD_TI = "TD-TI"
+    """
+    Tibesti
+    """
+    TD_WF = "TD-WF"
+    """
+    Wadi Fira
+    """
+    TG_K = "TG-K"
+    """
+    Kara Region
+    """
+    TG_M = "TG-M"
+    """
+    Maritime Region
+    """
+    TG_P = "TG-P"
+    """
+    Plateaux Region
+    """
+    TH_10 = "TH-10"
+    """
+    Bangkok
+    """
+    TH_11 = "TH-11"
+    """
+    Samut Prakan Province
+    """
+    TH_12 = "TH-12"
+    """
+    Nonthaburi Province
+    """
+    TH_13 = "TH-13"
+    """
+    Pathum Thani Province
+    """
+    TH_14 = "TH-14"
+    """
+    Phra Nakhon Si Ayutthaya Province
+    """
+    TH_15 = "TH-15"
+    """
+    Ang Thong Province
+    """
+    TH_16 = "TH-16"
+    """
+    Lopburi Province
+    """
+    TH_17 = "TH-17"
+    """
+    Sing Buri Province
+    """
+    TH_18 = "TH-18"
+    """
+    Chainat Province
+    """
+    TH_19 = "TH-19"
+    """
+    Saraburi Province
+    """
+    TH_20 = "TH-20"
+    """
+    Chonburi Province
+    """
+    TH_21 = "TH-21"
+    """
+    Rayong Province
+    """
+    TH_22 = "TH-22"
+    """
+    Chanthaburi Province
+    """
+    TH_23 = "TH-23"
+    """
+    Trat Province
+    """
+    TH_24 = "TH-24"
+    """
+    Chachoengsao Province
+    """
+    TH_25 = "TH-25"
+    """
+    Prachinburi Province
+    """
+    TH_26 = "TH-26"
+    """
+    Nakhon Nayok Province
+    """
+    TH_27 = "TH-27"
+    """
+    Sa Kaeo Province
+    """
+    TH_30 = "TH-30"
+    """
+    Nakhon Ratchasima Province
+    """
+    TH_31 = "TH-31"
+    """
+    Buriram Province
+    """
+    TH_32 = "TH-32"
+    """
+    Surin Province
+    """
+    TH_33 = "TH-33"
+    """
+    Sisaket Province
+    """
+    TH_34 = "TH-34"
+    """
+    Ubon Ratchathani Province
+    """
+    TH_35 = "TH-35"
+    """
+    Yasothon Province
+    """
+    TH_36 = "TH-36"
+    """
+    Chaiyaphum Province
+    """
+    TH_37 = "TH-37"
+    """
+    Amnat Charoen Province
+    """
+    TH_38 = "TH-38"
+    """
+    Bueng Kan Province
+    """
+    TH_39 = "TH-39"
+    """
+    Nongbua Lamphu Province
+    """
+    TH_40 = "TH-40"
+    """
+    Khon Kaen Province
+    """
+    TH_41 = "TH-41"
+    """
+    Udon Thani Province
+    """
+    TH_42 = "TH-42"
+    """
+    Loei Province
+    """
+    TH_43 = "TH-43"
+    """
+    Nong Khai Province
+    """
+    TH_44 = "TH-44"
+    """
+    Maha Sarakham Province
+    """
+    TH_45 = "TH-45"
+    """
+    Roi Et Province
+    """
+    TH_46 = "TH-46"
+    """
+    Kalasin Province
+    """
+    TH_47 = "TH-47"
+    """
+    Sakon Nakhon Province
+    """
+    TH_48 = "TH-48"
+    """
+    Nakhon Phanom Province
+    """
+    TH_49 = "TH-49"
+    """
+    Mukdahan Province
+    """
+    TH_50 = "TH-50"
+    """
+    Chiang Mai Province
+    """
+    TH_51 = "TH-51"
+    """
+    Lamphun Province
+    """
+    TH_52 = "TH-52"
+    """
+    Lampang Province
+    """
+    TH_53 = "TH-53"
+    """
+    Uttaradit Province
+    """
+    TH_54 = "TH-54"
+    """
+    Phrae Province
+    """
+    TH_55 = "TH-55"
+    """
+    Nan Province
+    """
+    TH_56 = "TH-56"
+    """
+    Phayao Province
+    """
+    TH_57 = "TH-57"
+    """
+    Chiang Rai Province
+    """
+    TH_58 = "TH-58"
+    """
+    Mae Hong Son Province
+    """
+    TH_60 = "TH-60"
+    """
+    Nakhon Sawan Province
+    """
+    TH_61 = "TH-61"
+    """
+    Uthai Thani Province
+    """
+    TH_62 = "TH-62"
+    """
+    Kamphaeng Phet Province
+    """
+    TH_63 = "TH-63"
+    """
+    Tak Province
+    """
+    TH_64 = "TH-64"
+    """
+    Sukhothai Province
+    """
+    TH_65 = "TH-65"
+    """
+    Phitsanulok Province
+    """
+    TH_66 = "TH-66"
+    """
+    Phichit Province
+    """
+    TH_67 = "TH-67"
+    """
+    Phetchabun Province
+    """
+    TH_70 = "TH-70"
+    """
+    Ratchaburi Province
+    """
+    TH_71 = "TH-71"
+    """
+    Kanchanaburi Province
+    """
+    TH_72 = "TH-72"
+    """
+    Suphanburi Province
+    """
+    TH_73 = "TH-73"
+    """
+    Nakhon Pathom Province
+    """
+    TH_74 = "TH-74"
+    """
+    Samut Sakhon Province
+    """
+    TH_75 = "TH-75"
+    """
+    Samut Songkhram Province
+    """
+    TH_76 = "TH-76"
+    """
+    Phetchaburi Province
+    """
+    TH_77 = "TH-77"
+    """
+    Prachuap Khiri Khan Province
+    """
+    TH_80 = "TH-80"
+    """
+    Nakhon Si Thammarat Province
+    """
+    TH_81 = "TH-81"
+    """
+    Krabi Province
+    """
+    TH_82 = "TH-82"
+    """
+    Phang Nga Province
+    """
+    TH_83 = "TH-83"
+    """
+    Phuket Province
+    """
+    TH_84 = "TH-84"
+    """
+    Surat Thani Province
+    """
+    TH_85 = "TH-85"
+    """
+    Ranong Province
+    """
+    TH_86 = "TH-86"
+    """
+    Chumphon Province
+    """
+    TH_90 = "TH-90"
+    """
+    Songkhla Province
+    """
+    TH_91 = "TH-91"
+    """
+    Satun Province
+    """
+    TH_92 = "TH-92"
+    """
+    Trang Province
+    """
+    TH_93 = "TH-93"
+    """
+    Phatthalung Province
+    """
+    TH_94 = "TH-94"
+    """
+    Pattani Province
+    """
+    TH_95 = "TH-95"
+    """
+    Yala Province
+    """
+    TH_96 = "TH-96"
+    """
+    Narathiwat Province
+    """
+    TH_S = "TH-S"
+    """
+    Pattaya
+    """
+    TJ_DU = "TJ-DU"
+    """
+    Dushanbe
+    """
+    TJ_GB = "TJ-GB"
+    """
+    Gorno-Badakhshan Autonomous Province
+    """
+    TJ_KT = "TJ-KT"
+    """
+    Khatlon Province
+    """
+    TJ_RA = "TJ-RA"
+    """
+    Region of Republican Subordination
+    """
+    TJ_SU = "TJ-SU"
+    """
+    Sughd province
+    """
+    TL_AL = "TL-AL"
+    """
+    Aileu (Municipality)
+    """
+    TL_AN = "TL-AN"
+    """
+    Ainaro (Municipality)
+    """
+    TL_BA = "TL-BA"
+    """
+    Baucau (Municipality)
+    """
+    TL_BO = "TL-BO"
+    """
+    Bobonaro (Municipality)
+    """
+    TL_CO = "TL-CO"
+    """
+    Cova Lima
+    """
+    TL_DI = "TL-DI"
+    """
+    Dili (Municipality)
+    """
+    TL_ER = "TL-ER"
+    """
+    Ermera (Municipality)
+    """
+    TL_LA = "TL-LA"
+    """
+    Lautém (Municipality)
+    """
+    TL_LI = "TL-LI"
+    """
+    Liquiçá (Municipality)
+    """
+    TL_MF = "TL-MF"
+    """
+    Manufahi
+    """
+    TL_MT = "TL-MT"
+    """
+    Manatuto (Municipality)
+    """
+    TL_OE = "TL-OE"
+    """
+    Oe-Cusse Ambeno
+    """
+    TL_VI = "TL-VI"
+    """
+    Viqueque (Municipality)
+    """
+    TM_A = "TM-A"
+    """
+    Ahal Province
+    """
+    TM_B = "TM-B"
+    """
+    Balkan Province
+    """
+    TM_D = "TM-D"
+    """
+    Daşoguz Province
+    """
+    TM_L = "TM-L"
+    """
+    Lebap Province
+    """
+    TM_M = "TM-M"
+    """
+    Mary Province
+    """
+    TM_S = "TM-S"
+    """
+    Aşgabat
+    """
+    TN_11 = "TN-11"
+    """
+    Tunis Governorate
+    """
+    TN_12 = "TN-12"
+    """
+    Ariana Governorate
+    """
+    TN_13 = "TN-13"
+    """
+    Ben Arous Governorate
+    """
+    TN_14 = "TN-14"
+    """
+    Manouba Governorate
+    """
+    TN_21 = "TN-21"
+    """
+    Nabeul Governorate
+    """
+    TN_22 = "TN-22"
+    """
+    Zaghouan Governorate
+    """
+    TN_23 = "TN-23"
+    """
+    Bizerte Governorate
+    """
+    TN_31 = "TN-31"
+    """
+    Béja Governorate
+    """
+    TN_32 = "TN-32"
+    """
+    Jendouba Governorate
+    """
+    TN_33 = "TN-33"
+    """
+    Kef Governorate
+    """
+    TN_34 = "TN-34"
+    """
+    Siliana Governorate
+    """
+    TN_41 = "TN-41"
+    """
+    Kairouan Governorate
+    """
+    TN_42 = "TN-42"
+    """
+    Kasserine Governorate
+    """
+    TN_43 = "TN-43"
+    """
+    Sidi Bouzid Governorate
+    """
+    TN_51 = "TN-51"
+    """
+    Sousse Governorate
+    """
+    TN_52 = "TN-52"
+    """
+    Monastir Governorate
+    """
+    TN_53 = "TN-53"
+    """
+    Mahdia Governorate
+    """
+    TN_61 = "TN-61"
+    """
+    Sfax Governorate
+    """
+    TN_71 = "TN-71"
+    """
+    Gafsa Governorate
+    """
+    TN_72 = "TN-72"
+    """
+    Tozeur Governorate
+    """
+    TN_73 = "TN-73"
+    """
+    Kebili Governorate
+    """
+    TN_81 = "TN-81"
+    """
+    Gabès Governorate
+    """
+    TN_82 = "TN-82"
+    """
+    Medenine Governorate
+    """
+    TN_83 = "TN-83"
+    """
+    Tataouine Governorate
+    """
+    TO_03 = "TO-03"
+    """
+    Niua Islands
+    """
+    TR_01 = "TR-01"
+    """
+    Adana Province
+    """
+    TR_02 = "TR-02"
+    """
+    Adıyaman Province
+    """
+    TR_03 = "TR-03"
+    """
+    Afyonkarahisar Province
+    """
+    TR_04 = "TR-04"
+    """
+    Ağrı Province
+    """
+    TR_05 = "TR-05"
+    """
+    Amasya Province
+    """
+    TR_06 = "TR-06"
+    """
+    Ankara
+    """
+    TR_07 = "TR-07"
+    """
+    Antalya Province
+    """
+    TR_08 = "TR-08"
+    """
+    Artvin Province
+    """
+    TR_09 = "TR-09"
+    """
+    Aydın Province
+    """
+    TR_10 = "TR-10"
+    """
+    Balıkesir Province
+    """
+    TR_11 = "TR-11"
+    """
+    Bilecik Province
+    """
+    TR_12 = "TR-12"
+    """
+    Bingöl Province
+    """
+    TR_13 = "TR-13"
+    """
+    Bitlis Province
+    """
+    TR_14 = "TR-14"
+    """
+    Bolu Province
+    """
+    TR_15 = "TR-15"
+    """
+    Burdur Province
+    """
+    TR_16 = "TR-16"
+    """
+    Bursa Province
+    """
+    TR_17 = "TR-17"
+    """
+    Çanakkale Province
+    """
+    TR_18 = "TR-18"
+    """
+    Çankırı Province
+    """
+    TR_19 = "TR-19"
+    """
+    Çorum Province
+    """
+    TR_20 = "TR-20"
+    """
+    Denizli Province
+    """
+    TR_21 = "TR-21"
+    """
+    Diyarbakır Province
+    """
+    TR_22 = "TR-22"
+    """
+    Edirne Province
+    """
+    TR_23 = "TR-23"
+    """
+    Elâzığ Province
+    """
+    TR_24 = "TR-24"
+    """
+    Erzincan Province
+    """
+    TR_25 = "TR-25"
+    """
+    Erzurum Province
+    """
+    TR_26 = "TR-26"
+    """
+    Eskişehir Province
+    """
+    TR_27 = "TR-27"
+    """
+    Gaziantep Province
+    """
+    TR_28 = "TR-28"
+    """
+    Giresun Province
+    """
+    TR_29 = "TR-29"
+    """
+    Gümüşhane Province
+    """
+    TR_30 = "TR-30"
+    """
+    Hakkâri Province
+    """
+    TR_31 = "TR-31"
+    """
+    Hatay Province
+    """
+    TR_32 = "TR-32"
+    """
+    Isparta Province
+    """
+    TR_33 = "TR-33"
+    """
+    Mersin Province
+    """
+    TR_34 = "TR-34"
+    """
+    Istanbul Province
+    """
+    TR_35 = "TR-35"
+    """
+    İzmir Province
+    """
+    TR_36 = "TR-36"
+    """
+    Kars Province
+    """
+    TR_37 = "TR-37"
+    """
+    Kastamonu Province
+    """
+    TR_38 = "TR-38"
+    """
+    Kayseri Province
+    """
+    TR_39 = "TR-39"
+    """
+    Kırklareli Province
+    """
+    TR_40 = "TR-40"
+    """
+    Kırşehir Province
+    """
+    TR_41 = "TR-41"
+    """
+    Kocaeli Province
+    """
+    TR_42 = "TR-42"
+    """
+    Konya Province
+    """
+    TR_43 = "TR-43"
+    """
+    Kütahya Province
+    """
+    TR_44 = "TR-44"
+    """
+    Malatya Province
+    """
+    TR_45 = "TR-45"
+    """
+    Manisa Province
+    """
+    TR_46 = "TR-46"
+    """
+    Kahramanmaraş Province
+    """
+    TR_47 = "TR-47"
+    """
+    Mardin Province
+    """
+    TR_48 = "TR-48"
+    """
+    Muğla Province
+    """
+    TR_49 = "TR-49"
+    """
+    Muş Province
+    """
+    TR_50 = "TR-50"
+    """
+    Nevşehir Province
+    """
+    TR_51 = "TR-51"
+    """
+    Niğde Province
+    """
+    TR_52 = "TR-52"
+    """
+    Ordu Province
+    """
+    TR_53 = "TR-53"
+    """
+    Rize Province
+    """
+    TR_54 = "TR-54"
+    """
+    Sakarya Province
+    """
+    TR_55 = "TR-55"
+    """
+    Samsun Province
+    """
+    TR_56 = "TR-56"
+    """
+    Siirt Province
+    """
+    TR_57 = "TR-57"
+    """
+    Sinop Province
+    """
+    TR_58 = "TR-58"
+    """
+    Sivas Province
+    """
+    TR_59 = "TR-59"
+    """
+    Tekirdağ Province
+    """
+    TR_60 = "TR-60"
+    """
+    Tokat Province
+    """
+    TR_61 = "TR-61"
+    """
+    Trabzon Province
+    """
+    TR_62 = "TR-62"
+    """
+    Tunceli Province
+    """
+    TR_63 = "TR-63"
+    """
+    Şanlıurfa Province
+    """
+    TR_64 = "TR-64"
+    """
+    Uşak Province
+    """
+    TR_65 = "TR-65"
+    """
+    Van Province
+    """
+    TR_66 = "TR-66"
+    """
+    Yozgat Province
+    """
+    TR_67 = "TR-67"
+    """
+    Zonguldak Province
+    """
+    TR_68 = "TR-68"
+    """
+    Aksaray
+    """
+    TR_69 = "TR-69"
+    """
+    Bayburt Province
+    """
+    TR_70 = "TR-70"
+    """
+    Karaman Province
+    """
+    TR_71 = "TR-71"
+    """
+    Kırıkkale Province
+    """
+    TR_72 = "TR-72"
+    """
+    Batman Province
+    """
+    TR_73 = "TR-73"
+    """
+    Şırnak Province
+    """
+    TR_74 = "TR-74"
+    """
+    Bartın Province
+    """
+    TR_75 = "TR-75"
+    """
+    Ardahan Province
+    """
+    TR_76 = "TR-76"
+    """
+    Iğdır
+    """
+    TR_77 = "TR-77"
+    """
+    Yalova Province
+    """
+    TR_78 = "TR-78"
+    """
+    Karabük Province
+    """
+    TR_79 = "TR-79"
+    """
+    Kilis Province
+    """
+    TR_80 = "TR-80"
+    """
+    Osmaniye Province
+    """
+    TR_81 = "TR-81"
+    """
+    Düzce Province
+    """
+    TT_ARI = "TT-ARI"
+    """
+    Arima, Trinidad and Tobago
+    """
+    TT_CHA = "TT-CHA"
+    """
+    Chaguanas
+    """
+    TT_CTT = "TT-CTT"
+    """
+    Couva-Tabaquite-Talparo Regional Corporation
+    """
+    TT_DMN = "TT-DMN"
+    """
+    Diego Martin Regional Corporation
+    """
+    TT_MRC = "TT-MRC"
+    """
+    Mayaro-Rio Claro Regional Corporation
+    """
+    TT_PED = "TT-PED"
+    """
+    Penal-Debe
+    """
+    TT_POS = "TT-POS"
+    """
+    Port of Spain
+    """
+    TT_PRT = "TT-PRT"
+    """
+    Princes Town Regional Corporation
+    """
+    TT_PTF = "TT-PTF"
+    """
+    Point Fortin
+    """
+    TT_SFO = "TT-SFO"
+    """
+    San Fernando, Trinidad and Tobago
+    """
+    TT_SGE = "TT-SGE"
+    """
+    Sangre Grande Regional Corporation
+    """
+    TT_SIP = "TT-SIP"
+    """
+    Siparia Regional Corporation
+    """
+    TT_SJL = "TT-SJL"
+    """
+    San Juan-Laventille
+    """
+    TT_TUP = "TT-TUP"
+    """
+    Tunapuna-Piarco Regional Corporation
+    """
+    TV_FUN = "TV-FUN"
+    """
+    Funafuti
+    """
+    TV_NIT = "TV-NIT"
+    """
+    Niutao
+    """
+    TV_NKF = "TV-NKF"
+    """
+    Nukufetau
+    """
+    TV_NKL = "TV-NKL"
+    """
+    Nukulaelae
+    """
+    TV_NMA = "TV-NMA"
+    """
+    Nanumea
+    """
+    TV_NMG = "TV-NMG"
+    """
+    Nanumanga
+    """
+    TV_NUI = "TV-NUI"
+    """
+    Nui
+    """
+    TV_VAI = "TV-VAI"
+    """
+    Vaitupu
+    """
+    TW_CHA = "TW-CHA"
+    """
+    Changhua County
+    """
+    TW_CYI = "TW-CYI"
+    """
+    Chiayi City
+    """
+    TW_CYQ = "TW-CYQ"
+    """
+    Chiayi County
+    """
+    TW_HSQ = "TW-HSQ"
+    """
+    Hsinchu County
+    """
+    TW_HSZ = "TW-HSZ"
+    """
+    Hsinchu City
+    """
+    TW_HUA = "TW-HUA"
+    """
+    Hualien County
+    """
+    TW_ILA = "TW-ILA"
+    """
+    Yilan County
+    """
+    TW_KEE = "TW-KEE"
+    """
+    Keelung
+    """
+    TW_KHH = "TW-KHH"
+    """
+    Kaohsiung
+    """
+    TW_KHQ = "TW-KHQ"
+    """
+    Kaohsiung County
+    """
+    TW_KIN = "TW-KIN"
+    """
+    Kinmen
+    """
+    TW_LIE = "TW-LIE"
+    """
+    Lienchiang County
+    """
+    TW_MIA = "TW-MIA"
+    """
+    Miaoli County
+    """
+    TW_NAN = "TW-NAN"
+    """
+    Nantou County
+    """
+    TW_NWT = "TW-NWT"
+    """
+    New Taipei
+    """
+    TW_PEN = "TW-PEN"
+    """
+    Penghu County
+    """
+    TW_PIF = "TW-PIF"
+    """
+    Pingtung County
+    """
+    TW_TAO = "TW-TAO"
+    """
+    Taoyuan City
+    """
+    TW_TNN = "TW-TNN"
+    """
+    Tainan
+    """
+    TW_TNQ = "TW-TNQ"
+    """
+    Tainan County
+    """
+    TW_TPE = "TW-TPE"
+    """
+    Taipei
+    """
+    TW_TTT = "TW-TTT"
+    """
+    Taitung County
+    """
+    TW_TXG = "TW-TXG"
+    """
+    Taichung City
+    """
+    TW_TXQ = "TW-TXQ"
+    """
+    Taichung County
+    """
+    TW_YUN = "TW-YUN"
+    """
+    Yunlin County
+    """
+    TZ_01 = "TZ-01"
+    """
+    Arusha Region
+    """
+    TZ_02 = "TZ-02"
+    """
+    Dar es Salaam Region
+    """
+    TZ_03 = "TZ-03"
+    """
+    Dodoma Region
+    """
+    TZ_04 = "TZ-04"
+    """
+    Iringa Region
+    """
+    TZ_05 = "TZ-05"
+    """
+    Kagera Region
+    """
+    TZ_06 = "TZ-06"
+    """
+    Pemba North Region
+    """
+    TZ_07 = "TZ-07"
+    """
+    Unguja North Region
+    """
+    TZ_08 = "TZ-08"
+    """
+    Kigoma Region
+    """
+    TZ_09 = "TZ-09"
+    """
+    Kilimanjaro Region
+    """
+    TZ_10 = "TZ-10"
+    """
+    Pemba South Region
+    """
+    TZ_11 = "TZ-11"
+    """
+    Unguja Central South Region
+    """
+    TZ_12 = "TZ-12"
+    """
+    Lindi Region
+    """
+    TZ_13 = "TZ-13"
+    """
+    Mara Region
+    """
+    TZ_14 = "TZ-14"
+    """
+    Mbeya Region
+    """
+    TZ_15 = "TZ-15"
+    """
+    Unguja Urban West Region
+    """
+    TZ_16 = "TZ-16"
+    """
+    Morogoro Region
+    """
+    TZ_17 = "TZ-17"
+    """
+    Mtwara Region
+    """
+    TZ_18 = "TZ-18"
+    """
+    Mwanza Region
+    """
+    TZ_19 = "TZ-19"
+    """
+    Pwani Region
+    """
+    TZ_20 = "TZ-20"
+    """
+    Rukwa Region
+    """
+    TZ_21 = "TZ-21"
+    """
+    Ruvuma Region
+    """
+    TZ_22 = "TZ-22"
+    """
+    Shinyanga Region
+    """
+    TZ_23 = "TZ-23"
+    """
+    Singida Region
+    """
+    TZ_24 = "TZ-24"
+    """
+    Tabora Region
+    """
+    TZ_25 = "TZ-25"
+    """
+    Tanga Region
+    """
+    TZ_26 = "TZ-26"
+    """
+    Manyara Region
+    """
+    TZ_27 = "TZ-27"
+    """
+    Geita Region
+    """
+    TZ_28 = "TZ-28"
+    """
+    Katavi Region
+    """
+    TZ_29 = "TZ-29"
+    """
+    Njombe Region
+    """
+    TZ_30 = "TZ-30"
+    """
+    Simiyu Region
+    """
+    UA_05 = "UA-05"
+    """
+    Vinnytsia Oblast
+    """
+    UA_07 = "UA-07"
+    """
+    Volyn Oblast
+    """
+    UA_09 = "UA-09"
+    """
+    Luhansk Oblast
+    """
+    UA_12 = "UA-12"
+    """
+    Dnipropetrovsk Oblast
+    """
+    UA_14 = "UA-14"
+    """
+    Donetsk Oblast
+    """
+    UA_18 = "UA-18"
+    """
+    Zhytomyr Oblast
+    """
+    UA_21 = "UA-21"
+    """
+    Zakarpattia Oblast
+    """
+    UA_23 = "UA-23"
+    """
+    Zaporizhzhia Oblast
+    """
+    UA_26 = "UA-26"
+    """
+    Ivano-Frankivsk Oblast
+    """
+    UA_30 = "UA-30"
+    """
+    Kyiv
+    """
+    UA_32 = "UA-32"
+    """
+    Kyiv Oblast
+    """
+    UA_35 = "UA-35"
+    """
+    Kirovohrad Oblast
+    """
+    UA_40 = "UA-40"
+    """
+    Sevastopol
+    """
+    UA_43 = "UA-43"
+    """
+    Autonomous Republic of Crimea
+    """
+    UA_46 = "UA-46"
+    """
+    Lviv Oblast
+    """
+    UA_48 = "UA-48"
+    """
+    Mykolaiv Oblast
+    """
+    UA_51 = "UA-51"
+    """
+    Odesa Oblast
+    """
+    UA_53 = "UA-53"
+    """
+    Poltava Oblast
+    """
+    UA_56 = "UA-56"
+    """
+    Rivne Oblast
+    """
+    UA_59 = "UA-59"
+    """
+    Sumy Oblast
+    """
+    UA_61 = "UA-61"
+    """
+    Ternopil Oblast
+    """
+    UA_63 = "UA-63"
+    """
+    Kharkiv Oblast
+    """
+    UA_65 = "UA-65"
+    """
+    Kherson Oblast
+    """
+    UA_68 = "UA-68"
+    """
+    Khmelnytskyi Oblast
+    """
+    UA_71 = "UA-71"
+    """
+    Cherkasy Oblast
+    """
+    UA_74 = "UA-74"
+    """
+    Chernihiv Oblast
+    """
+    UA_77 = "UA-77"
+    """
+    Chernivtsi Oblast
+    """
+    UG_105 = "UG-105"
+    """
+    Masaka District
+    """
+    UG_107 = "UG-107"
+    """
+    Mubende District
+    """
+    UG_113 = "UG-113"
+    """
+    Wakiso District
+    """
+    UG_202 = "UG-202"
+    """
+    Busia District
+    """
+    UG_204 = "UG-204"
+    """
+    Jinja District
+    """
+    UG_207 = "UG-207"
+    """
+    Katakwi District
+    """
+    UG_208 = "UG-208"
+    """
+    Kumi District
+    """
+    UG_212 = "UG-212"
+    """
+    Tororo District
+    """
+    UG_220 = "UG-220"
+    """
+    Bukwo District
+    """
+    UG_225 = "UG-225"
+    """
+    Bulambuli District
+    """
+    UG_303 = "UG-303"
+    """
+    Arua District, Uganda
+    """
+    UG_304 = "UG-304"
+    """
+    Gulu
+    """
+    UG_305 = "UG-305"
+    """
+    Kitgum District
+    """
+    UG_307 = "UG-307"
+    """
+    Lira, Uganda
+    """
+    UG_310 = "UG-310"
+    """
+    Nebbi District
+    """
+    UG_315 = "UG-315"
+    """
+    Amolatar District
+    """
+    UG_316 = "UG-316"
+    """
+    Amuru District
+    """
+    UG_317 = "UG-317"
+    """
+    Dokolo District
+    """
+    UG_318 = "UG-318"
+    """
+    Kaabong District
+    """
+    UG_321 = "UG-321"
+    """
+    Oyam District
+    """
+    UG_401 = "UG-401"
+    """
+    Bundibugyo District
+    """
+    UG_406 = "UG-406"
+    """
+    Kasese District
+    """
+    UG_408 = "UG-408"
+    """
+    Kisoro District
+    """
+    UG_409 = "UG-409"
+    """
+    Masindi District
+    """
+    UG_412 = "UG-412"
+    """
+    Rukungiri District
+    """
+    UG_414 = "UG-414"
+    """
+    Kanungu District
+    """
+    UG_416 = "UG-416"
+    """
+    Buliisa District
+    """
+    UG_417 = "UG-417"
+    """
+    Ibanda District
+    """
+    UG_418 = "UG-418"
+    """
+    Isingiro District, Uganda
+    """
+    UG_422 = "UG-422"
+    """
+    Kyegegwa District
+    """
+    UG_423 = "UG-423"
+    """
+    Mitooma District
+    """
+    UG_429 = "UG-429"
+    """
+    Rubanda District
+    """
+    UG_435 = "UG-435"
+    """
+    Rwampara District
+    """
+    UG_E = "UG-E"
+    """
+    Eastern Region, Uganda
+    """
+    UG_N = "UG-N"
+    """
+    Northern Region, Uganda
+    """
+    UM_67 = "UM-67"
+    """
+    Johnston Atoll
+    """
+    UM_71 = "UM-71"
+    """
+    Midway Atoll
+    """
+    UM_76 = "UM-76"
+    """
+    Navassa Island
+    """
+    UM_79 = "UM-79"
+    """
+    Wake Island
+    """
+    UM_81 = "UM-81"
+    """
+    Baker Island
+    """
+    UM_84 = "UM-84"
+    """
+    Howland Island
+    """
+    UM_86 = "UM-86"
+    """
+    Jarvis Island
+    """
+    UM_89 = "UM-89"
+    """
+    Kingman Reef
+    """
+    UM_95 = "UM-95"
+    """
+    Palmyra Atoll
+    """
+    US_AK = "US-AK"
+    """
+    Alaska
+    """
+    US_AL = "US-AL"
+    """
+    Alabama
+    """
+    US_AR = "US-AR"
+    """
+    Arkansas
+    """
+    US_AS = "US-AS"
+    """
+    American Samoa
+    """
+    US_AZ = "US-AZ"
+    """
+    Arizona
+    """
+    US_CA = "US-CA"
+    """
+    California
+    """
+    US_CO = "US-CO"
+    """
+    Colorado
+    """
+    US_CT = "US-CT"
+    """
+    Connecticut
+    """
+    US_DC = "US-DC"
+    """
+    District of Columbia
+    """
+    US_DE = "US-DE"
+    """
+    Delaware
+    """
+    US_FL = "US-FL"
+    """
+    Florida
+    """
+    US_GA = "US-GA"
+    """
+    Georgia (U.S. state)
+    """
+    US_GU = "US-GU"
+    """
+    Guam
+    """
+    US_HI = "US-HI"
+    """
+    Hawaii
+    """
+    US_IA = "US-IA"
+    """
+    Iowa
+    """
+    US_ID = "US-ID"
+    """
+    Idaho
+    """
+    US_IL = "US-IL"
+    """
+    Illinois
+    """
+    US_IN = "US-IN"
+    """
+    Indiana
+    """
+    US_KS = "US-KS"
+    """
+    Kansas
+    """
+    US_KY = "US-KY"
+    """
+    Kentucky
+    """
+    US_LA = "US-LA"
+    """
+    Louisiana
+    """
+    US_MA = "US-MA"
+    """
+    Massachusetts
+    """
+    US_MD = "US-MD"
+    """
+    Maryland
+    """
+    US_ME = "US-ME"
+    """
+    Maine
+    """
+    US_MI = "US-MI"
+    """
+    Michigan
+    """
+    US_MN = "US-MN"
+    """
+    Minnesota
+    """
+    US_MO = "US-MO"
+    """
+    Missouri
+    """
+    US_MP = "US-MP"
+    """
+    Northern Mariana Islands
+    """
+    US_MS = "US-MS"
+    """
+    Mississippi (state)
+    """
+    US_MT = "US-MT"
+    """
+    Montana
+    """
+    US_NC = "US-NC"
+    """
+    North Carolina
+    """
+    US_ND = "US-ND"
+    """
+    North Dakota
+    """
+    US_NE = "US-NE"
+    """
+    Nebraska
+    """
+    US_NH = "US-NH"
+    """
+    New Hampshire
+    """
+    US_NJ = "US-NJ"
+    """
+    New Jersey
+    """
+    US_NM = "US-NM"
+    """
+    New Mexico
+    """
+    US_NV = "US-NV"
+    """
+    Nevada
+    """
+    US_NY = "US-NY"
+    """
+    New York (state)
+    """
+    US_OH = "US-OH"
+    """
+    Ohio
+    """
+    US_OK = "US-OK"
+    """
+    Oklahoma
+    """
+    US_OR = "US-OR"
+    """
+    Oregon
+    """
+    US_PA = "US-PA"
+    """
+    Pennsylvania
+    """
+    US_PR = "US-PR"
+    """
+    Puerto Rico
+    """
+    US_RI = "US-RI"
+    """
+    Rhode Island
+    """
+    US_SC = "US-SC"
+    """
+    South Carolina
+    """
+    US_SD = "US-SD"
+    """
+    South Dakota
+    """
+    US_TN = "US-TN"
+    """
+    Tennessee
+    """
+    US_TX = "US-TX"
+    """
+    Texas
+    """
+    US_UM = "US-UM"
+    """
+    United States Minor Outlying Islands
+    """
+    US_UT = "US-UT"
+    """
+    Utah
+    """
+    US_VA = "US-VA"
+    """
+    Virginia
+    """
+    US_VT = "US-VT"
+    """
+    Vermont
+    """
+    US_WA = "US-WA"
+    """
+    Washington (state)
+    """
+    US_WI = "US-WI"
+    """
+    Wisconsin
+    """
+    US_WV = "US-WV"
+    """
+    West Virginia
+    """
+    US_WY = "US-WY"
+    """
+    Wyoming
+    """
+    UY_AR = "UY-AR"
+    """
+    Artigas Department
+    """
+    UY_CA = "UY-CA"
+    """
+    Canelones Department
+    """
+    UY_CL = "UY-CL"
+    """
+    Cerro Largo Department
+    """
+    UY_CO = "UY-CO"
+    """
+    Colonia Department
+    """
+    UY_DU = "UY-DU"
+    """
+    Durazno Department
+    """
+    UY_FD = "UY-FD"
+    """
+    Florida Department
+    """
+    UY_FS = "UY-FS"
+    """
+    Flores Department
+    """
+    UY_LA = "UY-LA"
+    """
+    Lavalleja Department
+    """
+    UY_MA = "UY-MA"
+    """
+    Maldonado Department
+    """
+    UY_MO = "UY-MO"
+    """
+    Montevideo Department
+    """
+    UY_PA = "UY-PA"
+    """
+    Paysandú Department
+    """
+    UY_RN = "UY-RN"
+    """
+    Río Negro Department
+    """
+    UY_RO = "UY-RO"
+    """
+    Rocha Department
+    """
+    UY_RV = "UY-RV"
+    """
+    Rivera Department
+    """
+    UY_SA = "UY-SA"
+    """
+    Salto Department
+    """
+    UY_SJ = "UY-SJ"
+    """
+    San José Department
+    """
+    UY_SO = "UY-SO"
+    """
+    Soriano Department
+    """
+    UY_TA = "UY-TA"
+    """
+    Tacuarembó Department
+    """
+    UY_TT = "UY-TT"
+    """
+    Treinta y Tres Department
+    """
+    UZ_AN = "UZ-AN"
+    """
+    Andijan Region
+    """
+    UZ_BU = "UZ-BU"
+    """
+    Bukhara Region
+    """
+    UZ_FA = "UZ-FA"
+    """
+    Fergana Region
+    """
+    UZ_JI = "UZ-JI"
+    """
+    Jizzakh Region
+    """
+    UZ_NG = "UZ-NG"
+    """
+    Namangan Region
+    """
+    UZ_NW = "UZ-NW"
+    """
+    Navoiy Region
+    """
+    UZ_QA = "UZ-QA"
+    """
+    Qashqadaryo Region
+    """
+    UZ_QR = "UZ-QR"
+    """
+    Karakalpakstan
+    """
+    UZ_SA = "UZ-SA"
+    """
+    Samarqand Region
+    """
+    UZ_SI = "UZ-SI"
+    """
+    Sirdaryo Region
+    """
+    UZ_SU = "UZ-SU"
+    """
+    Surxondaryo Region
+    """
+    UZ_TK = "UZ-TK"
+    """
+    Tashkent
+    """
+    UZ_TO = "UZ-TO"
+    """
+    Tashkent Region
+    """
+    UZ_XO = "UZ-XO"
+    """
+    Xorazm Region
+    """
+    VC_01 = "VC-01"
+    """
+    Charlotte Parish, Saint Vincent and the Grenadines
+    """
+    VC_02 = "VC-02"
+    """
+    Saint Andrew Parish, Saint Vincent and the Grenadines
+    """
+    VC_03 = "VC-03"
+    """
+    Saint David Parish, Saint Vincent and the Grenadines
+    """
+    VC_04 = "VC-04"
+    """
+    Saint George Parish, Saint Vincent and the Grenadines
+    """
+    VC_05 = "VC-05"
+    """
+    Saint Patrick Parish, Saint Vincent and the Grenadines
+    """
+    VE_A = "VE-A"
+    """
+    Distrito Capital (Venezuela)
+    """
+    VE_B = "VE-B"
+    """
+    Anzoátegui
+    """
+    VE_C = "VE-C"
+    """
+    Apure (state)
+    """
+    VE_D = "VE-D"
+    """
+    Aragua
+    """
+    VE_E = "VE-E"
+    """
+    Barinas (state)
+    """
+    VE_F = "VE-F"
+    """
+    Bolívar (state)
+    """
+    VE_G = "VE-G"
+    """
+    Carabobo
+    """
+    VE_H = "VE-H"
+    """
+    Cojedes
+    """
+    VE_I = "VE-I"
+    """
+    Falcón
+    """
+    VE_J = "VE-J"
+    """
+    Guárico
+    """
+    VE_K = "VE-K"
+    """
+    Lara (state)
+    """
+    VE_L = "VE-L"
+    """
+    Mérida (state)
+    """
+    VE_M = "VE-M"
+    """
+    Miranda (state)
+    """
+    VE_N = "VE-N"
+    """
+    Monagas
+    """
+    VE_O = "VE-O"
+    """
+    Nueva Esparta
+    """
+    VE_P = "VE-P"
+    """
+    Portuguesa (state)
+    """
+    VE_R = "VE-R"
+    """
+    Sucre (state)
+    """
+    VE_S = "VE-S"
+    """
+    Táchira
+    """
+    VE_T = "VE-T"
+    """
+    Trujillo (state)
+    """
+    VE_U = "VE-U"
+    """
+    Yaracuy
+    """
+    VE_V = "VE-V"
+    """
+    Zulia (state)
+    """
+    VE_W = "VE-W"
+    """
+    Federal dependencies of Venezuela
+    """
+    VE_X = "VE-X"
+    """
+    La Guaira (state)
+    """
+    VE_Y = "VE-Y"
+    """
+    Delta Amacuro
+    """
+    VE_Z = "VE-Z"
+    """
+    Amazonas (Venezuela)
+    """
+    VN_01 = "VN-01"
+    """
+    Lai Chau
+    """
+    VN_02 = "VN-02"
+    """
+    Lao Cai
+    """
+    VN_03 = "VN-03"
+    """
+    Ha Giang
+    """
+    VN_04 = "VN-04"
+    """
+    Cao Bang
+    """
+    VN_05 = "VN-05"
+    """
+    Son La
+    """
+    VN_06 = "VN-06"
+    """
+    Yen Bai
+    """
+    VN_07 = "VN-07"
+    """
+    Tuyen Quang
+    """
+    VN_09 = "VN-09"
+    """
+    Lang Son
+    """
+    VN_13 = "VN-13"
+    """
+    Quang Ninh
+    """
+    VN_14 = "VN-14"
+    """
+    Hoa Binh
+    """
+    VN_15 = "VN-15"
+    """
+    Hanoi
+    """
+    VN_18 = "VN-18"
+    """
+    Ninh Binh
+    """
+    VN_20 = "VN-20"
+    """
+    Thai Binh
+    """
+    VN_21 = "VN-21"
+    """
+    Thanh Hoa
+    """
+    VN_22 = "VN-22"
+    """
+    Nghe An
+    """
+    VN_23 = "VN-23"
+    """
+    Ha Tinh
+    """
+    VN_24 = "VN-24"
+    """
+    Quang Binh
+    """
+    VN_25 = "VN-25"
+    """
+    Quang Tri
+    """
+    VN_26 = "VN-26"
+    """
+    Thua Thien Hue
+    """
+    VN_27 = "VN-27"
+    """
+    Quang Nam
+    """
+    VN_28 = "VN-28"
+    """
+    Kon Tum
+    """
+    VN_29 = "VN-29"
+    """
+    Quang Ngai
+    """
+    VN_30 = "VN-30"
+    """
+    Gia Lai
+    """
+    VN_31 = "VN-31"
+    """
+    Binh Dinh
+    """
+    VN_32 = "VN-32"
+    """
+    Phu Yen
+    """
+    VN_33 = "VN-33"
+    """
+    Dak Lak
+    """
+    VN_34 = "VN-34"
+    """
+    Khanh Hoa
+    """
+    VN_35 = "VN-35"
+    """
+    Lam Dong
+    """
+    VN_36 = "VN-36"
+    """
+    Ninh Thuan
+    """
+    VN_37 = "VN-37"
+    """
+    Tay Ninh
+    """
+    VN_39 = "VN-39"
+    """
+    Dong Nai
+    """
+    VN_40 = "VN-40"
+    """
+    Binh Thuan
+    """
+    VN_41 = "VN-41"
+    """
+    Long An
+    """
+    VN_43 = "VN-43"
+    """
+    Ba Ria-Vung Tau
+    """
+    VN_44 = "VN-44"
+    """
+    An Giang
+    """
+    VN_45 = "VN-45"
+    """
+    Dong Thap
+    """
+    VN_46 = "VN-46"
+    """
+    Tien Giang
+    """
+    VN_47 = "VN-47"
+    """
+    Kien Giang
+    """
+    VN_49 = "VN-49"
+    """
+    Vinh Long
+    """
+    VN_50 = "VN-50"
+    """
+    Ben Tre
+    """
+    VN_51 = "VN-51"
+    """
+    Tra Vinh
+    """
+    VN_52 = "VN-52"
+    """
+    Soc Trang
+    """
+    VN_53 = "VN-53"
+    """
+    Bac Kan
+    """
+    VN_54 = "VN-54"
+    """
+    Bac Giang
+    """
+    VN_55 = "VN-55"
+    """
+    Bac Lieu
+    """
+    VN_56 = "VN-56"
+    """
+    Bac Ninh
+    """
+    VN_57 = "VN-57"
+    """
+    Binh Duong
+    """
+    VN_58 = "VN-58"
+    """
+    Binh Phuoc
+    """
+    VN_59 = "VN-59"
+    """
+    Ca Mau
+    """
+    VN_61 = "VN-61"
+    """
+    Hai Duong
+    """
+    VN_63 = "VN-63"
+    """
+    Ha Nam
+    """
+    VN_66 = "VN-66"
+    """
+    Hung Yen
+    """
+    VN_67 = "VN-67"
+    """
+    Nam Dinh
+    """
+    VN_68 = "VN-68"
+    """
+    Phu Tho
+    """
+    VN_69 = "VN-69"
+    """
+    Thai Nguyen
+    """
+    VN_70 = "VN-70"
+    """
+    Vinh Phuc
+    """
+    VN_71 = "VN-71"
+    """
+    Dien Bien
+    """
+    VN_72 = "VN-72"
+    """
+    Dak Nong
+    """
+    VN_73 = "VN-73"
+    """
+    Hau Giang
+    """
+    VN_CT = "VN-CT"
+    """
+    Can Tho
+    """
+    VN_DN = "VN-DN"
+    """
+    Da Nang
+    """
+    VN_HN = "VN-HN"
+    """
+    Hanoi
+    """
+    VN_HP = "VN-HP"
+    """
+    Haiphong
+    """
+    VN_SG = "VN-SG"
+    """
+    Ho Chi Minh City
+    """
+    VU_PAM = "VU-PAM"
+    """
+    Penama Province
+    """
+    VU_SAM = "VU-SAM"
+    """
+    Sanma
+    """
+    VU_TAE = "VU-TAE"
+    """
+    Tafea Province
+    """
+    VU_TOB = "VU-TOB"
+    """
+    Torba Province
+    """
+    WF_AL = "WF-AL"
+    """
+    Alo
+    """
+    WF_SG = "WF-SG"
+    """
+    Sigave
+    """
+    WF_UV = "WF-UV"
+    """
+    Uvea
+    """
+    YE_AB = "YE-AB"
+    """
+    Abyan Governorate
+    """
+    YE_AD = "YE-AD"
+    """
+    Aden Governorate
+    """
+    YE_AM = "YE-AM"
+    """
+    Amran Governorate
+    """
+    YE_BA = "YE-BA"
+    """
+    Al Bayda' Governorate
+    """
+    YE_DA = "YE-DA"
+    """
+    Dhale Governorate
+    """
+    YE_DH = "YE-DH"
+    """
+    Dhamar Governorate
+    """
+    YE_HD = "YE-HD"
+    """
+    Hadhramaut Governorate
+    """
+    YE_HJ = "YE-HJ"
+    """
+    Hajjah Governorate
+    """
+    YE_HU = "YE-HU"
+    """
+    Al Hudaydah Governorate
+    """
+    YE_IB = "YE-IB"
+    """
+    Ibb Governorate
+    """
+    YE_LA = "YE-LA"
+    """
+    Lahij Governorate
+    """
+    YE_MA = "YE-MA"
+    """
+    Ma'rib Governorate
+    """
+    YE_MR = "YE-MR"
+    """
+    Mahra Governorate
+    """
+    YE_MW = "YE-MW"
+    """
+    Al Mahwit Governorate
+    """
+    YE_RA = "YE-RA"
+    """
+    Raymah Governorate
+    """
+    YE_SD = "YE-SD"
+    """
+    Saada Governorate
+    """
+    YE_SH = "YE-SH"
+    """
+    Shabwah Governorate
+    """
+    YE_SN = "YE-SN"
+    """
+    Sanaa Governorate
+    """
+    YE_SU = "YE-SU"
+    """
+    Socotra Governorate
+    """
+    YE_TA = "YE-TA"
+    """
+    Taiz Governorate
+    """
+    ZA_EC = "ZA-EC"
+    """
+    Eastern Cape
+    """
+    ZA_FS = "ZA-FS"
+    """
+    Free State
+    """
+    ZA_GP = "ZA-GP"
+    """
+    Gauteng
+    """
+    ZA_KZN = "ZA-KZN"
+    """
+    KwaZulu-Natal
+    """
+    ZA_LP = "ZA-LP"
+    """
+    Limpopo
+    """
+    ZA_MP = "ZA-MP"
+    """
+    Mpumalanga
+    """
+    ZA_NC = "ZA-NC"
+    """
+    Northern Cape
+    """
+    ZA_NW = "ZA-NW"
+    """
+    North West (South Africa)
+    """
+    ZA_WC = "ZA-WC"
+    """
+    Western Cape
+    """
+    ZM_02 = "ZM-02"
+    """
+    Central Province (Zambia)
+    """
+    ZM_03 = "ZM-03"
+    """
+    Eastern Province (Zambia)
+    """
+    ZM_04 = "ZM-04"
+    """
+    Luapula Province
+    """
+    ZM_05 = "ZM-05"
+    """
+    Northern Province (Zambia)
+    """
+    ZM_06 = "ZM-06"
+    """
+    North Western Province (Zambia)
+    """
+    ZM_07 = "ZM-07"
+    """
+    Southern Province (Zambia)
+    """
+    ZM_08 = "ZM-08"
+    """
+    Copperbelt Province
+    """
+    ZM_09 = "ZM-09"
+    """
+    Lusaka Province
+    """
+    ZM_10 = "ZM-10"
+    """
+    Muchinga Province
+    """
+    ZW_MA = "ZW-MA"
+    """
+    Manicaland Province
+    """
+    ZW_MC = "ZW-MC"
+    """
+    Mashonaland Central Province
+    """
+    ZW_ME = "ZW-ME"
+    """
+    Mashonaland East
+    """
+    ZW_MI = "ZW-MI"
+    """
+    Midlands Province
+    """
+    ZW_MN = "ZW-MN"
+    """
+    Matabeleland North
+    """
+    ZW_MS = "ZW-MS"
+    """
+    Matabeleland South
+    """
+    ZW_MV = "ZW-MV"
+    """
+    Masvingo Province
+    """
+    ZW_MW = "ZW-MW"
+    """
+    Mashonaland West
     """
 
 
@@ -336,6 +20408,29 @@ class Organization(Entity):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
+    type: Literal["Organization"] = Field(default="Organization", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Organization',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'EvaluationStandard',
+                       'BenchmarkMetadataCard',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -413,6 +20508,7 @@ class Dataset(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -422,6 +20518,7 @@ class Dataset(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -472,7 +20569,7 @@ class Documentation(Entity):
                        'BenchmarkMetadataCard',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -506,7 +20603,7 @@ class Fact(ConfiguredBaseModel):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     value: str = Field(default=..., description="""Some numeric or string value""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
-    evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
+    evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact', 'ConditionAssessment']} })
 
 
 class Vocabulary(Entity):
@@ -532,6 +20629,7 @@ class Vocabulary(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -541,6 +20639,7 @@ class Vocabulary(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -557,7 +20656,8 @@ class Vocabulary(Entity):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["Vocabulary"] = Field(default="Vocabulary", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -570,6 +20670,7 @@ class Vocabulary(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -619,6 +20720,7 @@ class Taxonomy(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -628,6 +20730,7 @@ class Taxonomy(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -644,7 +20747,8 @@ class Taxonomy(Entity):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["Taxonomy"] = Field(default="Taxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -657,6 +20761,7 @@ class Taxonomy(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -718,6 +20823,7 @@ class Concept(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -727,17 +20833,19 @@ class Concept(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
          'see_also': ['https://w3id.org/dpv#hasJurisdiction'],
          'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["Concept"] = Field(default="Concept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -750,6 +20858,7 @@ class Concept(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -809,7 +20918,8 @@ class Control(Entity):
          'domain_of': ['Control', 'Entry'],
          'slot_uri': 'nexus:hasExternalReference'} })
     type: Literal["Control"] = Field(default="Control", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -822,6 +20932,7 @@ class Control(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -883,6 +20994,7 @@ class Group(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -892,6 +21004,7 @@ class Group(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -904,7 +21017,8 @@ class Group(Entity):
          'slot_uri': 'skos:member'} })
     belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
     type: Literal["Group"] = Field(default="Group", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -917,6 +21031,7 @@ class Group(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -982,6 +21097,7 @@ class Entry(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -991,6 +21107,7 @@ class Entry(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -1017,7 +21134,8 @@ class Entry(Entity):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Entry"] = Field(default="Entry", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1030,6 +21148,7 @@ class Entry(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1071,6 +21190,7 @@ class Term(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -1080,6 +21200,7 @@ class Term(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -1137,7 +21258,8 @@ class Term(Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Term"] = Field(default="Term", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1150,6 +21272,7 @@ class Term(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1190,6 +21313,7 @@ class Principle(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -1199,6 +21323,7 @@ class Principle(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -1246,7 +21371,8 @@ class Principle(Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Principle"] = Field(default="Principle", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1259,6 +21385,7 @@ class Principle(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1313,7 +21440,8 @@ class Policy(Entity):
          'slot_uri': 'schema:isPartOf'} })
     isApplicableinLocality: Optional[list[str]] = Field(default=None, description="""A relationship where an entity has is applicable in these localities.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Control', 'Policy'], 'slot_uri': 'nexus:isApplicableinLocality'} })
     type: Literal["Policy"] = Field(default="Policy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1326,6 +21454,7 @@ class Policy(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1393,7 +21522,8 @@ class LLMQuestionPolicy(Policy):
          'slot_uri': 'schema:isPartOf'} })
     isApplicableinLocality: Optional[list[str]] = Field(default=None, description="""A relationship where an entity has is applicable in these localities.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Control', 'Policy'], 'slot_uri': 'nexus:isApplicableinLocality'} })
     type: Literal["LLMQuestionPolicy"] = Field(default="LLMQuestionPolicy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1406,6 +21536,7 @@ class LLMQuestionPolicy(Policy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1460,8 +21591,31 @@ class Rule(Entity):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     type: Literal["Rule"] = Field(default="Rule", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1474,6 +21628,7 @@ class Rule(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1525,8 +21680,31 @@ class AttributeConditionRule(Rule):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     type: Literal["AttributeConditionRule"] = Field(default="AttributeConditionRule", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1539,6 +21717,7 @@ class AttributeConditionRule(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1586,7 +21765,8 @@ class Permission(Rule):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     type: Literal["Permission"] = Field(default="Permission", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1599,6 +21779,7 @@ class Permission(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1627,6 +21808,28 @@ class Permission(Rule):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1654,7 +21857,8 @@ class Prohibition(Rule):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     type: Literal["Prohibition"] = Field(default="Prohibition", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1667,6 +21871,7 @@ class Prohibition(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1695,6 +21900,28 @@ class Prohibition(Rule):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1722,7 +21949,8 @@ class Obligation(Rule):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     type: Literal["Obligation"] = Field(default="Obligation", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1735,6 +21963,7 @@ class Obligation(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1763,6 +21992,28 @@ class Obligation(Rule):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1790,7 +22041,8 @@ class Recommendation(Rule):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     type: Literal["Recommendation"] = Field(default="Recommendation", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1803,6 +22055,7 @@ class Recommendation(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1831,6 +22084,28 @@ class Recommendation(Rule):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -1858,7 +22133,8 @@ class Certification(Entry):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     type: Literal["Certification"] = Field(default="Certification", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -1871,6 +22147,7 @@ class Certification(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -1907,6 +22184,7 @@ class Certification(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -1916,6 +22194,123 @@ class Certification(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    hasExternalReference: Optional[list[str]] = Field(default=None, description="""External references / additional resources related to this entity, such as articles, tools, or datasets. Distinct from hasDocumentation, which documents the entity itself. External references are not necessarily curated or vetted, and quality will vary.""", json_schema_extra = { "linkml_meta": {'aliases': ['additional resources', 'external_links'],
+         'close_mappings': ['rdfs:seeAlso'],
+         'domain_of': ['Control', 'Entry'],
+         'slot_uri': 'nexus:hasExternalReference'} })
+    isPartOf: Optional[str] = Field(default=None, description="""A relationship where an entity is part of another entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry',
+                       'Risk',
+                       'CapabilityGroup',
+                       'LargeLanguageModel',
+                       'AiTaskGroup',
+                       'Stakeholder'],
+         'slot_uri': 'schema:isPartOf'} })
+    requiredByTask: Optional[list[Any]] = Field(default=None, description="""Indicates that this entry is required to perform a specific AI task.""", json_schema_extra = { "linkml_meta": {'domain': 'Entry',
+         'domain_of': ['Entry', 'Capability'],
+         'inverse': 'requiresCapability'} })
+    requiresCapability: Optional[list[Any]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+         'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
+         'inverse': 'requiredByTask'} })
+    implementedByAdapter: Optional[list[Any]] = Field(default=None, description="""Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
+         'domain_of': ['Entry', 'Capability'],
+         'inverse': 'implementsCapability'} })
+    hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
+         'slot_uri': 'dpv:hasRule'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
+    notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+
+
+class EvaluationStandard(Entry):
+    """
+    A standard defining minimum conditions, processes, or independence criteria required for conducting AI evaluations
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:ManagementStandard',
+         'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
+
+    hasPrinciple: Optional[list[str]] = Field(default=None, description="""The principle(s) this entry is composed of or belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'Entry',
+         'domain_of': ['EvaluationStandard', 'Requirement'],
+         'slot_uri': 'dpv:isPartOf'} })
+    type: Literal["EvaluationStandard"] = Field(default="EvaluationStandard", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Organization',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'EvaluationStandard',
+                       'BenchmarkMetadataCard',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
+    isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'RiskControlGroup',
+                       'RiskGroup',
+                       'Risk',
+                       'RiskControl',
+                       'Action',
+                       'RiskIncident',
+                       'CapabilityGroup',
+                       'AiTaskDomain',
+                       'AiTaskGroup',
+                       'Stakeholder',
+                       'StakeholderGroup',
+                       'Requirement'],
+         'slot_uri': 'schema:isPartOf'} })
+    isDefinedByVocabulary: Optional[str] = Field(default=None, description="""A relationship where a term or a term group is defined by a vocabulary""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'Term', 'Adapter', 'LLMIntrinsic'],
+         'slot_uri': 'schema:isPartOf'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -1995,6 +22390,7 @@ class LocalityOfUse(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2004,6 +22400,7 @@ class LocalityOfUse(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -2030,7 +22427,8 @@ class LocalityOfUse(Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["LocalityOfUse"] = Field(default="LocalityOfUse", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2043,6 +22441,7 @@ class LocalityOfUse(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2089,6 +22488,7 @@ class RiskTaxonomy(Taxonomy):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2098,6 +22498,7 @@ class RiskTaxonomy(Taxonomy):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -2114,7 +22515,8 @@ class RiskTaxonomy(Taxonomy):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["RiskTaxonomy"] = Field(default="RiskTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2127,6 +22529,7 @@ class RiskTaxonomy(Taxonomy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2173,6 +22576,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2182,6 +22586,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -2198,7 +22603,8 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["RiskControlGroupTaxonomy"] = Field(default="RiskControlGroupTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2211,6 +22617,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2279,6 +22686,7 @@ class RiskConcept(Concept):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2288,17 +22696,19 @@ class RiskConcept(Concept):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
          'see_also': ['https://w3id.org/dpv#hasJurisdiction'],
          'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["RiskConcept"] = Field(default="RiskConcept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2311,6 +22721,7 @@ class RiskConcept(Concept):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2390,6 +22801,7 @@ class RiskControlGroup(RiskConcept, Group):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2399,12 +22811,14 @@ class RiskControlGroup(RiskConcept, Group):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
     type: Literal["RiskControlGroup"] = Field(default="RiskControlGroup", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2417,6 +22831,7 @@ class RiskControlGroup(RiskConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2443,7 +22858,7 @@ class RiskControlGroup(RiskConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -2504,6 +22919,7 @@ class RiskGroup(RiskConcept, Group):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2513,12 +22929,14 @@ class RiskGroup(RiskConcept, Group):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
     type: Literal["RiskGroup"] = Field(default="RiskGroup", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2531,6 +22949,7 @@ class RiskGroup(RiskConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2557,7 +22976,7 @@ class RiskGroup(RiskConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -2631,6 +23050,7 @@ class Risk(RiskConcept, Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2640,6 +23060,7 @@ class Risk(RiskConcept, Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -2659,7 +23080,8 @@ class Risk(RiskConcept, Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Risk"] = Field(default="Risk", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2672,6 +23094,7 @@ class Risk(RiskConcept, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2695,7 +23118,7 @@ class Risk(RiskConcept, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -2753,7 +23176,8 @@ class RiskControl(RiskConcept, Control):
          'domain_of': ['Control', 'Entry'],
          'slot_uri': 'nexus:hasExternalReference'} })
     type: Literal["RiskControl"] = Field(default="RiskControl", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2766,6 +23190,7 @@ class RiskControl(RiskConcept, Control):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2797,6 +23222,7 @@ class RiskControl(RiskConcept, Control):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2806,10 +23232,11 @@ class RiskControl(RiskConcept, Control):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -2844,6 +23271,7 @@ class Action(RiskControl):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -2853,6 +23281,7 @@ class Action(RiskControl):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -2898,7 +23327,8 @@ class Action(RiskControl):
          'domain_of': ['Control', 'Entry'],
          'slot_uri': 'nexus:hasExternalReference'} })
     type: Literal["Action"] = Field(default="Action", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -2911,6 +23341,7 @@ class Action(RiskControl):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -2934,7 +23365,7 @@ class Action(RiskControl):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -3017,6 +23448,7 @@ class RiskIncident(RiskConcept, Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3026,17 +23458,19 @@ class RiskIncident(RiskConcept, Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
          'see_also': ['https://w3id.org/dpv#hasJurisdiction'],
          'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["RiskIncident"] = Field(default="RiskIncident", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -3049,6 +23483,7 @@ class RiskIncident(RiskConcept, Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -3114,6 +23549,7 @@ class Impact(RiskConcept, Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3123,17 +23559,19 @@ class Impact(RiskConcept, Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
          'see_also': ['https://w3id.org/dpv#hasJurisdiction'],
          'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["Impact"] = Field(default="Impact", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -3146,6 +23584,7 @@ class Impact(RiskConcept, Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -3375,6 +23814,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3384,6 +23824,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -3400,7 +23841,8 @@ class CapabilityTaxonomy(Taxonomy):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["CapabilityTaxonomy"] = Field(default="CapabilityTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -3413,6 +23855,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -3473,6 +23916,7 @@ class CapabilityConcept(Concept):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3482,17 +23926,19 @@ class CapabilityConcept(Concept):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
          'see_also': ['https://w3id.org/dpv#hasJurisdiction'],
          'slot_uri': 'dpv:hasJurisdiction'} })
     type: Literal["CapabilityConcept"] = Field(default="CapabilityConcept", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -3505,6 +23951,7 @@ class CapabilityConcept(Concept):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -3569,6 +24016,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3578,6 +24026,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -3590,7 +24039,8 @@ class CapabilityDomain(CapabilityConcept, Group):
          'slot_uri': 'skos:member'} })
     belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
     type: Literal["CapabilityDomain"] = Field(default="CapabilityDomain", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -3603,6 +24053,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -3629,7 +24080,7 @@ class CapabilityDomain(CapabilityConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -3700,6 +24151,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3709,11 +24161,13 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     type: Literal["CapabilityGroup"] = Field(default="CapabilityGroup", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -3726,6 +24180,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -3752,7 +24207,7 @@ class CapabilityGroup(CapabilityConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -3839,6 +24294,7 @@ class Capability(CapabilityConcept, Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3848,6 +24304,7 @@ class Capability(CapabilityConcept, Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -3868,7 +24325,8 @@ class Capability(CapabilityConcept, Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Capability"] = Field(default="Capability", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -3881,6 +24339,7 @@ class Capability(CapabilityConcept, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -3904,7 +24363,7 @@ class Capability(CapabilityConcept, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation. Indicates applicability of specified jurisdictions, expressed as ISO 3166-1 country codes. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
+    hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
          'domain_of': ['Documentation', 'Concept'],
@@ -3934,6 +24393,7 @@ class BaseAi(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -3943,6 +24403,7 @@ class BaseAi(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -4036,6 +24497,7 @@ class AiSystem(BaseAi, Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4045,6 +24507,7 @@ class AiSystem(BaseAi, Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -4106,7 +24569,8 @@ class AiSystem(BaseAi, Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiSystem"] = Field(default="AiSystem", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -4119,6 +24583,7 @@ class AiSystem(BaseAi, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -4192,6 +24657,7 @@ class AiAgent(AiSystem):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4201,6 +24667,7 @@ class AiAgent(AiSystem):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -4262,7 +24729,8 @@ class AiAgent(AiSystem):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiAgent"] = Field(default="AiAgent", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -4275,6 +24743,7 @@ class AiAgent(AiSystem):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -4314,6 +24783,7 @@ class LargeLanguageModelFamily(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4323,6 +24793,7 @@ class LargeLanguageModelFamily(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -4386,6 +24857,7 @@ class AiTask(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4395,6 +24867,7 @@ class AiTask(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -4418,7 +24891,8 @@ class AiTask(Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["AiTask"] = Field(default="AiTask", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -4431,6 +24905,7 @@ class AiTask(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -4477,6 +24952,7 @@ class AiTaskTaxonomy(Taxonomy):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4486,6 +24962,7 @@ class AiTaskTaxonomy(Taxonomy):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -4502,7 +24979,8 @@ class AiTaskTaxonomy(Taxonomy):
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["AiTaskTaxonomy"] = Field(default="AiTaskTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -4515,6 +24993,7 @@ class AiTaskTaxonomy(Taxonomy):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -4585,6 +25064,7 @@ class AiTaskDomain(Group):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4594,12 +25074,14 @@ class AiTaskDomain(Group):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
     type: Literal["AiTaskDomain"] = Field(default="AiTaskDomain", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -4612,6 +25094,7 @@ class AiTaskDomain(Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -4693,6 +25176,7 @@ class AiTaskGroup(Group):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4702,12 +25186,14 @@ class AiTaskGroup(Group):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
     type: Literal["AiTaskGroup"] = Field(default="AiTaskGroup", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -4720,6 +25206,7 @@ class AiTaskGroup(Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -4830,6 +25317,29 @@ class AiProvider(Organization):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
 
     grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
+    type: Literal["AiProvider"] = Field(default="AiProvider", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Organization',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'EvaluationStandard',
+                       'BenchmarkMetadataCard',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -4934,6 +25444,7 @@ class Purpose(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -4943,6 +25454,7 @@ class Purpose(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -4969,7 +25481,8 @@ class Purpose(Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Purpose"] = Field(default="Purpose", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -4982,6 +25495,7 @@ class Purpose(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -5043,6 +25557,7 @@ class Domain(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -5052,6 +25567,7 @@ class Domain(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -5078,7 +25594,8 @@ class Domain(Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Domain"] = Field(default="Domain", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -5091,6 +25608,7 @@ class Domain(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -5149,7 +25667,8 @@ class AiModel(AIComponent, BaseAi):
          'mixin': True,
          'mixins': ['AIComponent']})
 
-    hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'], 'slot_uri': 'dqv:hasQualityMeasurement'} })
+    hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel', 'ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'dqv:hasQualityMeasurement'} })
     architecture: Optional[str] = Field(default=None, description="""A description of the architecture of an AI such as 'Decoder-only'.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
     gpu_hours: Optional[int] = Field(default=None, description="""GPU consumption in terms of hours""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
     power_consumption_w: Optional[int] = Field(default=None, description="""power consumption in Watts""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
@@ -5166,6 +25685,7 @@ class AiModel(AIComponent, BaseAi):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -5175,6 +25695,7 @@ class AiModel(AIComponent, BaseAi):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -5241,7 +25762,8 @@ class LargeLanguageModel(AiModel):
     requiresCapability: Optional[list[Any]] = Field(default=None, description="""Indicates that this entry requires a specific capability""", json_schema_extra = { "linkml_meta": {'domain': 'Any',
          'domain_of': ['Entry', 'LargeLanguageModel', 'AiTask', 'Adapter'],
          'inverse': 'requiredByTask'} })
-    hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'], 'slot_uri': 'dqv:hasQualityMeasurement'} })
+    hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel', 'ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'dqv:hasQualityMeasurement'} })
     architecture: Optional[str] = Field(default=None, description="""A description of the architecture of an AI such as 'Decoder-only'.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
     gpu_hours: Optional[int] = Field(default=None, description="""GPU consumption in terms of hours""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
     power_consumption_w: Optional[int] = Field(default=None, description="""power consumption in Watts""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
@@ -5258,6 +25780,7 @@ class LargeLanguageModel(AiModel):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -5267,6 +25790,7 @@ class LargeLanguageModel(AiModel):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -5646,6 +26170,7 @@ class StakeholderGroup(Group):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -5655,6 +26180,7 @@ class StakeholderGroup(Group):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -5667,7 +26193,8 @@ class StakeholderGroup(Group):
          'slot_uri': 'skos:member'} })
     belongsToDomain: Optional[Any] = Field(default=None, description="""A relationship where a group belongs to a domain""", json_schema_extra = { "linkml_meta": {'domain_of': ['Group', 'CapabilityGroup'], 'slot_uri': 'schema:isPartOf'} })
     type: Literal["StakeholderGroup"] = Field(default="StakeholderGroup", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -5680,6 +26207,7 @@ class StakeholderGroup(Group):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -5734,6 +26262,7 @@ class AiEval(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -5743,6 +26272,7 @@ class AiEval(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -5803,7 +26333,7 @@ class AiEvalResult(Fact, Entity):
 
     isResultOf: Optional[str] = Field(default=None, description="""A relationship indicating that an entity is the result of an AI evaluation.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEvalResult'], 'slot_uri': 'dqv:isMeasurementOf'} })
     value: str = Field(default=..., description="""Some numeric or string value""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
-    evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
+    evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact', 'ConditionAssessment']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -6026,6 +26556,7 @@ class EveryEvalAIResult(AiEvalResult):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -6035,6 +26566,7 @@ class EveryEvalAIResult(AiEvalResult):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -6054,7 +26586,7 @@ class EveryEvalAIResult(AiEvalResult):
     retrieved_timestamp: Optional[str] = Field(default=None, description="""Unix timestamp when the data was retrieved""", json_schema_extra = { "linkml_meta": {'domain_of': ['EveryEvalAIResult']} })
     isResultOf: Optional[str] = Field(default=None, description="""A relationship indicating that an entity is the result of an AI evaluation.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEvalResult'], 'slot_uri': 'dqv:isMeasurementOf'} })
     value: str = Field(default=..., description="""Some numeric or string value""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
-    evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact']} })
+    evidence: Optional[str] = Field(default=None, description="""Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it was generated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact', 'ConditionAssessment']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -6140,6 +26672,7 @@ class BenchmarkMetadataCard(Entity):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -6149,13 +26682,15 @@ class BenchmarkMetadataCard(Entity):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
     name: Optional[str] = Field(default=None, description="""The official name of the benchmark.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard']} })
     overview: Optional[str] = Field(default=None, description="""A brief description of the benchmark's main goals and scope.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
     type: Literal["BenchmarkMetadataCard"] = Field(default="BenchmarkMetadataCard", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -6168,6 +26703,7 @@ class BenchmarkMetadataCard(Entity):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -6192,6 +26728,135 @@ class BenchmarkMetadataCard(Entity):
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
 
 
+class ThirdPartyEvaluationEngagement(Entity):
+    """
+    A single engagement in which an independent third-party evaluator evaluates one or more AI systems of a system provider, using one or more benchmarks or other evaluations, and reports the operating conditions of the engagement against evaluation standards such as AEF-1.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ThirdPartyEvaluationEngagement',
+         'close_mappings': ['prov:Activity'],
+         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval',
+         'related_mappings': ['dpv:Assessment'],
+         'slot_usage': {'hasEvaluation': {'description': 'The results produced by the '
+                                                         'engagement, across all of '
+                                                         'its evaluations.',
+                                          'name': 'hasEvaluation'}}})
+
+    hasEvaluator: Optional[str] = Field(default=None, description="""The organization that conducted the evaluation.""", json_schema_extra = { "linkml_meta": {'close_mappings': ['prov:wasAssociatedWith'],
+         'domain_of': ['ThirdPartyEvaluationEngagement'],
+         'related_mappings': ['earl:assertedBy'],
+         'slot_uri': 'nexus:hasEvaluator'} })
+    hasSystemProvider: Optional[str] = Field(default=None, description="""The organization which develops or operates the AI systems being evaluated.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'nexus:hasSystemProvider'} })
+    evaluatesAi: Optional[list[str]] = Field(default=None, description="""The AI systems or models (including specific versions) evaluated in the engagement.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ThirdPartyEvaluationEngagement'],
+         'related_mappings': ['earl:subject'],
+         'slot_uri': 'nexus:evaluatesAi'} })
+    usesEvaluation: Optional[list[str]] = Field(default=None, description="""The benchmarks, metrics, or other AI evaluations run as part of the engagement.""", json_schema_extra = { "linkml_meta": {'close_mappings': ['prov:used'],
+         'domain_of': ['ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'nexus:usesEvaluation'} })
+    hasEvaluation: Optional[list[str]] = Field(default=None, description="""The results produced by the engagement, across all of its evaluations.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel', 'ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'dqv:hasQualityMeasurement'} })
+    hasStandardConformance: Optional[list[EvaluationStandardConformance]] = Field(default=None, description="""The completed checklist(s) of evaluation standards (e.g. AEF-1) that the engagement reports against.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'nexus:hasStandardConformance'} })
+    startDate: Optional[date] = Field(default=None, description="""The date on which the entity started.""", json_schema_extra = { "linkml_meta": {'close_mappings': ['prov:startedAtTime'],
+         'domain_of': ['ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'schema:startDate'} })
+    endDate: Optional[date] = Field(default=None, description="""The date on which the entity ended.""", json_schema_extra = { "linkml_meta": {'close_mappings': ['prov:endedAtTime'],
+         'domain_of': ['ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'schema:endDate'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
+    notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+
+
+class EvaluationStandardConformance(ConfiguredBaseModel):
+    """
+    A completed checklist reporting how an engagement addressed the conditions of an evaluation standard.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:EvaluationStandardConformance',
+         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval',
+         'related_mappings': ['dpv:ComplianceStatus'],
+         'slot_usage': {'conformsToStandard': {'name': 'conformsToStandard',
+                                               'required': True}}})
+
+    conformsToStandard: str = Field(default=..., description="""The evaluation standard the checklist is completed against.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EvaluationStandardConformance'],
+         'slot_uri': 'dcterms:conformsTo'} })
+    satisfiesAllRequirements: Optional[bool] = Field(default=None, description="""The overall answer to whether the engagement satisfies all the minimum requirements of the standard.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EvaluationStandardConformance'],
+         'slot_uri': 'nexus:satisfiesAllRequirements'} })
+    hasConditionAssessment: Optional[list[ConditionAssessment]] = Field(default=None, description="""The per-condition answers of a completed checklist.""", json_schema_extra = { "linkml_meta": {'domain_of': ['EvaluationStandardConformance'],
+         'slot_uri': 'nexus:hasConditionAssessment'} })
+
+
+class ConditionAssessment(ConfiguredBaseModel):
+    """
+    One answer of a completed checklist, for one condition of the evaluation standard.
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'nexus:ConditionAssessment',
+         'close_mappings': ['earl:Assertion'],
+         'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval',
+         'related_mappings': ['earl:TestResult'],
+         'rules': [{'description': 'A justification is required when a condition is '
+                                   'not fulfilled literally.',
+                    'postconditions': {'slot_conditions': {'justification': {'name': 'justification',
+                                                                             'required': True}}},
+                    'preconditions': {'slot_conditions': {'hasConformanceOutcome': {'any_of': [{'equals_string': 'NOT_FULFILLED'},
+                                                                                               {'equals_string': 'ALTERNATIVE_MEANS'}],
+                                                                                    'name': 'hasConformanceOutcome'}}}}],
+         'slot_usage': {'assessesCondition': {'name': 'assessesCondition',
+                                              'required': True},
+                        'evidence': {'description': 'Notes or evidence supporting the '
+                                                    'answer, e.g. a link to a '
+                                                    'published policy.',
+                                     'name': 'evidence'},
+                        'hasConformanceOutcome': {'name': 'hasConformanceOutcome',
+                                                  'required': True}}})
+
+    assessesCondition: str = Field(default=..., description="""The condition of the evaluation standard that is assessed.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ConditionAssessment'], 'slot_uri': 'earl:test'} })
+    hasConformanceOutcome: ConformanceOutcome = Field(default=..., description="""Whether the condition was fulfilled.""", json_schema_extra = { "linkml_meta": {'close_mappings': ['dpv:hasComplianceStatus'],
+         'domain_of': ['ConditionAssessment'],
+         'slot_uri': 'earl:outcome'} })
+    evidence: Optional[str] = Field(default=None, description="""Notes or evidence supporting the answer, e.g. a link to a published policy.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Fact', 'ConditionAssessment']} })
+    justification: Optional[str] = Field(default=None, description="""Why a condition was not fulfilled, or how the same principle was achieved via alternative means.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ConditionAssessment'],
+         'related_mappings': ['earl:info'],
+         'slot_uri': 'nexus:justification'} })
+    disclosureAnswer: Optional[bool] = Field(default=None, description="""For disclosure conditions (e.g. AEF-1 2.4.x), whether the disclosed circumstance applies, e.g. true if the evaluator was paid by the system provider. Independent of whether the condition was fulfilled.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ConditionAssessment'], 'slot_uri': 'nexus:disclosureAnswer'} })
+    appliesToEvaluation: Optional[list[str]] = Field(default=None, description="""The evaluations of the engagement that this answer is specific to. When absent, the answer applies to the engagement as a whole.""", json_schema_extra = { "linkml_meta": {'domain_of': ['ConditionAssessment'], 'slot_uri': 'nexus:appliesToEvaluation'} })
+
+
 class Question(AiEval):
     """
     An evaluation where a question has to be answered
@@ -6207,6 +26872,7 @@ class Question(AiEval):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -6216,6 +26882,7 @@ class Question(AiEval):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -6281,6 +26948,7 @@ class Questionnaire(AiEval):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -6290,6 +26958,7 @@ class Questionnaire(AiEval):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -6368,6 +27037,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -6377,6 +27047,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -6459,7 +27130,8 @@ class Adapter(LargeLanguageModel, Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Adapter"] = Field(default="Adapter", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -6472,6 +27144,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -6495,7 +27168,8 @@ class Adapter(LargeLanguageModel, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
-    hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel'], 'slot_uri': 'dqv:hasQualityMeasurement'} })
+    hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel', 'ThirdPartyEvaluationEngagement'],
+         'slot_uri': 'dqv:hasQualityMeasurement'} })
     architecture: Optional[str] = Field(default=None, description="""A description of the architecture of an AI such as 'Decoder-only'.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
     gpu_hours: Optional[int] = Field(default=None, description="""GPU consumption in terms of hours""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
     power_consumption_w: Optional[int] = Field(default=None, description="""power consumption in Watts""", ge=0, json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
@@ -6543,6 +27217,7 @@ class LLMIntrinsic(Entry):
                        'Entry',
                        'Term',
                        'Principle',
+                       'Rule',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
                        'Action',
@@ -6552,6 +27227,7 @@ class LLMIntrinsic(Entry):
                        'AiEval',
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -6606,7 +27282,8 @@ class LLMIntrinsic(Entry):
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["LLMIntrinsic"] = Field(default="LLMIntrinsic", description="""The entry type or class designation specifying what kind of entry this is.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -6619,6 +27296,7 @@ class LLMIntrinsic(Entry):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -6652,6 +27330,29 @@ class AiOffice(Organization):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/eu_ai_act'})
 
     grants_license: Optional[str] = Field(default=None, description="""A relationship from a granting entity such as an Organization to a License instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Organization']} })
+    type: Literal["AiOffice"] = Field(default="AiOffice", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Organization',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'EvaluationStandard',
+                       'BenchmarkMetadataCard',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -6698,7 +27399,8 @@ class ControlActivity(Rule):
          'domain_of': ['ControlActivity'],
          'slot_uri': 'nexus:hasTypicalEvidence'} })
     type: Literal["ControlActivity"] = Field(default="ControlActivity", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -6711,6 +27413,7 @@ class ControlActivity(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -6739,6 +27442,28 @@ class ControlActivity(Rule):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -6766,7 +27491,8 @@ class ControlActivityPermission(ControlActivity, Permission):
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityPermission"] = Field(default="ControlActivityPermission", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -6779,6 +27505,7 @@ class ControlActivityPermission(ControlActivity, Permission):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -6828,6 +27555,28 @@ class ControlActivityPermission(ControlActivity, Permission):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -6855,7 +27604,8 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityProhibition"] = Field(default="ControlActivityProhibition", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -6868,6 +27618,7 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -6917,6 +27668,28 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -6944,7 +27717,8 @@ class ControlActivityObligation(ControlActivity, Obligation):
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityObligation"] = Field(default="ControlActivityObligation", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -6957,6 +27731,7 @@ class ControlActivityObligation(ControlActivity, Obligation):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -7006,6 +27781,28 @@ class ControlActivityObligation(ControlActivity, Obligation):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -7033,7 +27830,8 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
          'mixins': ['ControlActivity']})
 
     type: Literal["ControlActivityRecommendation"] = Field(default="ControlActivityRecommendation", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -7046,6 +27844,7 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -7095,6 +27894,28 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
          'slot_uri': 'schema:isPartOf'} })
     hasRule: Optional[list[str]] = Field(default=None, description="""Specifying applicability or inclusion of a rule within specified context.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -7133,8 +27954,8 @@ class Requirement(Rule):
     hasKeywords: Optional[list[str]] = Field(default=None, description="""A collection of keywords""", json_schema_extra = { "linkml_meta": {'domain': 'Requirement',
          'domain_of': ['Requirement'],
          'slot_uri': 'nexus:hasKeywords'} })
-    hasPrinciple: Optional[list[str]] = Field(default=None, description="""Which of the AIUC-1 principles this requirement belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'Requirement',
-         'domain_of': ['Requirement'],
+    hasPrinciple: Optional[list[str]] = Field(default=None, description="""The principle(s) this entry is composed of or belongs to""", json_schema_extra = { "linkml_meta": {'domain': 'Entry',
+         'domain_of': ['EvaluationStandard', 'Requirement'],
          'slot_uri': 'dpv:isPartOf'} })
     isApplicableToCapability: Optional[list[str]] = Field(default=None, description="""This evidence only applies to AI systems with this capability""", json_schema_extra = { "linkml_meta": {'domain': 'ControlActivity',
          'domain_of': ['ControlActivity', 'Requirement'],
@@ -7164,7 +27985,8 @@ class Requirement(Rule):
     hasRule: Optional[list[str]] = Field(default=None, description="""Relationship indicating the control activities (rules) of which the requirement is composed.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entry', 'LLMQuestionPolicy', 'Rule', 'Requirement'],
          'slot_uri': 'dpv:hasRule'} })
     type: Literal["Requirement"] = Field(default="Requirement", json_schema_extra = { "linkml_meta": {'designates_type': True,
-         'domain_of': ['Vocabulary',
+         'domain_of': ['Organization',
+                       'Vocabulary',
                        'Taxonomy',
                        'Concept',
                        'Control',
@@ -7177,6 +27999,7 @@ class Requirement(Rule):
                        'Obligation',
                        'Recommendation',
                        'Certification',
+                       'EvaluationStandard',
                        'BenchmarkMetadataCard',
                        'ControlActivity',
                        'ControlActivityPermission',
@@ -7184,6 +28007,28 @@ class Requirement(Rule):
                        'ControlActivityObligation',
                        'ControlActivityRecommendation',
                        'Requirement']} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -7209,7 +28054,7 @@ class Container(ConfiguredBaseModel):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai-risk-ontology',
          'tree_root': True})
 
-    organizations: Optional[list[Organization]] = Field(default=None, description="""A list of organizations""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    organizations: Optional[list[Union[Organization,AiProvider,AiOffice]]] = Field(default=None, description="""A list of organizations""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     licenses: Optional[list[License]] = Field(default=None, description="""A list of licenses""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     modalities: Optional[list[Modality]] = Field(default=None, description="""A list of AI modalities""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     aitasks: Optional[list[AiTask]] = Field(default=None, description="""A list of AI tasks""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
@@ -7219,7 +28064,7 @@ class Container(ConfiguredBaseModel):
     adapters: Optional[list[Adapter]] = Field(default=None, description="""A list of Adapters""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     taxonomies: Optional[list[Union[Taxonomy,RiskTaxonomy,RiskControlGroupTaxonomy,CapabilityTaxonomy,AiTaskTaxonomy]]] = Field(default=None, description="""A list of taxonomies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     concepts: Optional[list[Union[Concept,RiskConcept,CapabilityConcept,CapabilityDomain,CapabilityGroup,Capability,RiskControlGroup,RiskGroup,Risk,RiskControl,RiskIncident,Impact,Action]]] = Field(default=None, description="""A list of concepts""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    entries: Optional[list[Union[Entry,Term,Principle,Certification,LocalityOfUse,Risk,Capability,AiSystem,AiTask,Purpose,Domain,Adapter,LLMIntrinsic,AiAgent]]] = Field(default=None, description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    entries: Optional[list[Union[Entry,Term,Principle,Certification,EvaluationStandard,LocalityOfUse,Risk,Capability,AiSystem,AiTask,Purpose,Domain,Adapter,LLMIntrinsic,AiAgent]]] = Field(default=None, description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     groups: Optional[list[Union[Group,RiskControlGroup,RiskGroup,CapabilityDomain,CapabilityGroup,AiTaskDomain,AiTaskGroup,StakeholderGroup]]] = Field(default=None, description="""A list of groups""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     vocabularies: Optional[list[Vocabulary]] = Field(default=None, description="""A list of vocabularies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     controls: Optional[list[Union[Control,RiskControl,Action]]] = Field(default=None, description="""A list of AI controls""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
@@ -7237,6 +28082,7 @@ class Container(ConfiguredBaseModel):
     prohibitions: Optional[list[Union[Prohibition,ControlActivityProhibition]]] = Field(default=None, description="""A list of prohibitions""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     permissions: Optional[list[Union[Permission,ControlActivityPermission]]] = Field(default=None, description="""A list of Permissions""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     obligations: Optional[list[Union[Obligation,ControlActivityObligation]]] = Field(default=None, description="""A list of Obligations""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    thirdpartyevaluationengagements: Optional[list[ThirdPartyEvaluationEngagement]] = Field(default=None, description="""A list of third-party evaluation engagements""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
 
 
 # Model rebuild
@@ -7266,6 +28112,7 @@ Prohibition.model_rebuild()
 Obligation.model_rebuild()
 Recommendation.model_rebuild()
 Certification.model_rebuild()
+EvaluationStandard.model_rebuild()
 LocalityOfUse.model_rebuild()
 RiskTaxonomy.model_rebuild()
 RiskControlGroupTaxonomy.model_rebuild()
@@ -7327,6 +28174,9 @@ ScoreDetails.model_rebuild()
 EvaluationResultRecord.model_rebuild()
 EveryEvalAIResult.model_rebuild()
 BenchmarkMetadataCard.model_rebuild()
+ThirdPartyEvaluationEngagement.model_rebuild()
+EvaluationStandardConformance.model_rebuild()
+ConditionAssessment.model_rebuild()
 Question.model_rebuild()
 Questionnaire.model_rebuild()
 Adapter.model_rebuild()

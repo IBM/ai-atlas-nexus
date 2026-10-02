@@ -29,6 +29,7 @@ URI: [dpv:hasRule](https://w3id.org/dpv#hasRule)
 | [Obligation](Obligation.md)                                       | A rule describing an obligation for performing an activity                       | no            |
 | [Recommendation](Recommendation.md)                               | A rule describing a recommendation for performing an activity                    | no            |
 | [Certification](Certification.md)                                 | Certification mechanisms, seals, and marks for the purpose of demonstrating c... | no            |
+| [EvaluationStandard](EvaluationStandard.md)                       | A standard defining minimum conditions, processes, or independence criteria r... | no            |
 | [LocalityOfUse](LocalityOfUse.md)                                 | The area, e                                                                      | no            |
 | [Risk](Risk.md)                                                   | The state of uncertainty associated with an AI system, that has the potential... | no            |
 | [Capability](Capability.md)                                       | A specific AI capability or ability, such as reading comprehension, logical r... | no            |

@@ -174,11 +174,11 @@ slots:
     description: A collection of keywords
   hasPrinciple:
     slot_uri: dpv:isPartOf
-    domain: Requirement
+    domain: Entry
     range: Principle
     multivalued: true
     inlined: false
-    description: Which of the AIUC-1 principles this requirement belongs to
+    description: The principle(s) this entry is composed of or belongs to
   hasRequirementType:
     slot_uri: nexus:hasRequirementType
     domain: Any

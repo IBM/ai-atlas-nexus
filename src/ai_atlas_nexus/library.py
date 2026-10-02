@@ -32,7 +32,9 @@ from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     RiskTaxonomy,
     Rule,
     Stakeholder,
+    ThirdPartyEvaluationEngagement,
 )
+from ai_atlas_nexus.blocks.evaluation_conformance import check_engagement_conformance
 from ai_atlas_nexus.blocks.graph_explorer import AtlasExplorer
 from ai_atlas_nexus.blocks.graph_explorer.pyoxigraph import PyoxigraphExplorer
 from ai_atlas_nexus.blocks.shacl import SHACLEngine
@@ -2089,6 +2091,98 @@ class AIAtlasNexus:
             "principles", identifier=id
         )
         return principle
+
+    def get_evaluation_engagements(
+        cls,
+        evaluator: Optional[str] = None,
+        system_provider: Optional[str] = None,
+        ai: Optional[str] = None,
+    ):
+        """Get third-party evaluation engagements, optionally filtered by who evaluated whose system
+
+        Args:
+            evaluator: str
+                (Optional) The id of the evaluator organization
+            system_provider: str
+                (Optional) The id of the system provider organization
+            ai: str
+                (Optional) The id of an evaluated AI system or model
+
+        Returns:
+            list[ThirdPartyEvaluationEngagement]
+                Result containing a list of ThirdPartyEvaluationEngagement
+        """
+        type_check(
+            "<RAN73920518E>",
+            str,
+            allow_none=True,
+            evaluator=evaluator,
+            system_provider=system_provider,
+            ai=ai,
+        )
+
+        engagements: list[ThirdPartyEvaluationEngagement] = cls._atlas_explorer.get_all(
+            "thirdpartyevaluationengagements"
+        )
+        return [
+            e
+            for e in engagements
+            if (evaluator is None or e.hasEvaluator == evaluator)
+            and (system_provider is None or e.hasSystemProvider == system_provider)
+            and (ai is None or ai in (e.evaluatesAi or []))
+        ]
+
+    def get_evaluation_engagement(cls, id=str):
+        """Get a third-party evaluation engagement from the LinkML, filtered by id
+
+        Args:
+            id: str
+                The string id identifying the engagement
+
+        Returns:
+            ThirdPartyEvaluationEngagement
+                Result containing a ThirdPartyEvaluationEngagement.
+        """
+        type_check("<RAN73920519E>", str, allow_none=False, id=id)
+
+        engagement = cls._atlas_explorer.get_by_id(
+            "thirdpartyevaluationengagements", identifier=id
+        )
+        # The explorer's id cache spans all classes, so check the type
+        if not isinstance(engagement, ThirdPartyEvaluationEngagement):
+            return None
+        return engagement
+
+    def check_standard_conformance(cls, engagement_id: str):
+        """Check a third-party evaluation engagement and its completed checklists
+
+        For each completed checklist (e.g. AEF-1), derives whether all requirements of
+        the standard are satisfied from the per-condition answers, and reports unmet or
+        unanswered requirements (per evaluation where answers are scoped to specific
+        evaluations), answers missing a required justification, and references to
+        unknown conditions or evaluations. Also checks that the evaluator is a third
+        party to the system provider, and that the engagement's results belong to its
+        evaluations.
+
+        Args:
+            engagement_id: str
+                The string id identifying the ThirdPartyEvaluationEngagement
+
+        Returns:
+            EngagementConformanceCheck
+                Result of the check, with one StandardConformanceCheck per checklist.
+        """
+        type_check("<RAN73920520E>", str, allow_none=False, engagement_id=engagement_id)
+
+        engagement = cls.get_evaluation_engagement(id=engagement_id)
+        value_check(
+            "<RAN73920521E>",
+            engagement is not None,
+            f"No third-party evaluation engagement found with id {engagement_id}",
+        )
+        return check_engagement_conformance(
+            engagement, lambda identifier: cls._atlas_explorer.get_by_id(None, identifier)
+        )
 
     def get_instances(
         cls, target_class, taxonomy: Optional[Union[str, List[str]]] = None

@@ -27,6 +27,8 @@ URI: [nexus:Entry](https://w3id.org/ai-atlas-nexus/Entry)
         click Principle href "../Principle/"
       Entry <|-- Certification
         click Certification href "../Certification/"
+      Entry <|-- EvaluationStandard
+        click EvaluationStandard href "../EvaluationStandard/"
       Entry <|-- LocalityOfUse
         click LocalityOfUse href "../LocalityOfUse/"
       Entry <|-- Risk
@@ -240,6 +242,7 @@ URI: [nexus:Entry](https://w3id.org/ai-atlas-nexus/Entry)
     - [Term](Term.md)
     - [Principle](Principle.md)
     - [Certification](Certification.md)
+    - [EvaluationStandard](EvaluationStandard.md)
     - [LocalityOfUse](LocalityOfUse.md)
     - [Risk](Risk.md) [ [RiskConcept](RiskConcept.md)]
     - [Capability](Capability.md) [ [CapabilityConcept](CapabilityConcept.md)]
@@ -287,22 +290,25 @@ URI: [nexus:Entry](https://w3id.org/ai-atlas-nexus/Entry)
 
 ## Usages
 
-| used by                           | used in                             | type   | used              |
-| --------------------------------- | ----------------------------------- | ------ | ----------------- |
-| [Container](Container.md)         | [entries](entries.md)               | range  | [Entry](Entry.md) |
-| [Entry](Entry.md)                 | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [Term](Term.md)                   | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [Principle](Principle.md)         | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [Certification](Certification.md) | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [LocalityOfUse](LocalityOfUse.md) | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [Risk](Risk.md)                   | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [AiSystem](AiSystem.md)           | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [AiAgent](AiAgent.md)             | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [AiTask](AiTask.md)               | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [Purpose](Purpose.md)             | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [Domain](Domain.md)               | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [Adapter](Adapter.md)             | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
-| [LLMIntrinsic](LLMIntrinsic.md)   | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| used by                                     | used in                             | type   | used              |
+| ------------------------------------------- | ----------------------------------- | ------ | ----------------- |
+| [Container](Container.md)                   | [entries](entries.md)               | range  | [Entry](Entry.md) |
+| [Entry](Entry.md)                           | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Term](Term.md)                             | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Principle](Principle.md)                   | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Certification](Certification.md)           | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [EvaluationStandard](EvaluationStandard.md) | [hasPrinciple](hasPrinciple.md)     | domain | [Entry](Entry.md) |
+| [EvaluationStandard](EvaluationStandard.md) | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [LocalityOfUse](LocalityOfUse.md)           | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Risk](Risk.md)                             | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [AiSystem](AiSystem.md)                     | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [AiAgent](AiAgent.md)                       | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [AiTask](AiTask.md)                         | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Purpose](Purpose.md)                       | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Domain](Domain.md)                         | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Adapter](Adapter.md)                       | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [LLMIntrinsic](LLMIntrinsic.md)             | [requiredByTask](requiredByTask.md) | domain | [Entry](Entry.md) |
+| [Requirement](Requirement.md)               | [hasPrinciple](hasPrinciple.md)     | domain | [Entry](Entry.md) |
 
 ## Identifier and Mapping Information
 
@@ -348,6 +354,7 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -361,6 +368,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -392,6 +400,7 @@ attributes:
     designates_type: true
     owner: Entry
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -405,6 +414,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -470,6 +480,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -479,6 +490,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation

@@ -64,6 +64,17 @@ URI: [dpv:Recommendation](https://w3id.org/dpv#Recommendation)
 
 
 
+      Recommendation : hasDocumentation
+
+
+
+
+
+        Recommendation --> "*" Documentation : hasDocumentation
+        click Documentation href "../Documentation/"
+
+
+
       Recommendation : hasLifecycleStatus
 
 
@@ -163,6 +174,7 @@ URI: [dpv:Recommendation](https://w3id.org/dpv#Recommendation)
 | [type](type.md)                               | 0..1 <br/> [String](String.md)                   | The type or class designation of this entity instance                            | direct              |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)               | A relationship where a concept or a concept group is defined by a taxonomy       | [Rule](Rule.md)     |
 | [hasRule](hasRule.md)                         | \* <br/> [Rule](Rule.md)                         | Specifying applicability or inclusion of a rule within specified context         | [Rule](Rule.md)     |
+| [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Rule](Rule.md)     |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
@@ -211,6 +223,7 @@ attributes:
     from_schema: https://w3id.org/ai-atlas-nexus/common
     designates_type: true
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -224,6 +237,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -254,6 +268,7 @@ attributes:
     designates_type: true
     owner: Recommendation
     domain_of:
+    - Organization
     - Vocabulary
     - Taxonomy
     - Concept
@@ -267,6 +282,7 @@ attributes:
     - Obligation
     - Recommendation
     - Certification
+    - EvaluationStandard
     - BenchmarkMetadataCard
     - ControlActivity
     - ControlActivityPermission
@@ -317,6 +333,38 @@ attributes:
     - Rule
     - Requirement
     range: Rule
+    multivalued: true
+    inlined: false
+  hasDocumentation:
+    name: hasDocumentation
+    description: Indicates documentation associated with an entity.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: airo:hasDocumentation
+    owner: Recommendation
+    domain_of:
+    - Dataset
+    - Vocabulary
+    - Taxonomy
+    - Concept
+    - Group
+    - Entry
+    - Term
+    - Principle
+    - Rule
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - Action
+    - BaseAi
+    - LargeLanguageModelFamily
+    - AiTaskTaxonomy
+    - AiEval
+    - EveryEvalAIResult
+    - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
+    - Adapter
+    - LLMIntrinsic
+    range: Documentation
     multivalued: true
     inlined: false
   id:

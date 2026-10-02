@@ -5,7 +5,7 @@ search:
 
 # Slot: hasPrinciple
 
-_Which of the AIUC-1 principles this requirement belongs to_
+_The principle(s) this entry is composed of or belongs to_
 
 <div data-search-exclude markdown="1">
 
@@ -15,20 +15,21 @@ URI: [dpv:isPartOf](https://w3id.org/dpv#isPartOf)
 
 ## Applicable Classes
 
-| Name                          | Description                                                                      | Modifies Slot |
-| ----------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Requirement](Requirement.md) | A requirement representing a combination of obligation, permission, or prohib... | no            |
+| Name                                        | Description                                                                      | Modifies Slot |
+| ------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [EvaluationStandard](EvaluationStandard.md) | A standard defining minimum conditions, processes, or independence criteria r... | no            |
+| [Requirement](Requirement.md)               | A requirement representing a combination of obligation, permission, or prohib... | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                         |
-| --------- | --------------------------------------------- |
-| Range     | [Principle](Principle.md)                     |
-| Domain    | [Requirement](Requirement.md)                 |
-| Domain Of | [Requirement](Requirement.md)                 |
-| Slot URI  | [dpv:isPartOf](https://w3id.org/dpv#isPartOf) |
+| Property  | Value                                                                      |
+| --------- | -------------------------------------------------------------------------- |
+| Range     | [Principle](Principle.md)                                                  |
+| Domain    | [Entry](Entry.md)                                                          |
+| Domain Of | [EvaluationStandard](EvaluationStandard.md), [Requirement](Requirement.md) |
+| Slot URI  | [dpv:isPartOf](https://w3id.org/dpv#isPartOf)                              |
 
 ### Cardinality and Requirements
 
@@ -54,12 +55,13 @@ URI: [dpv:isPartOf](https://w3id.org/dpv#isPartOf)
 <details>
 ```yaml
 name: hasPrinciple
-description: Which of the AIUC-1 principles this requirement belongs to
+description: The principle(s) this entry is composed of or belongs to
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-domain: Requirement
+domain: Entry
 slot_uri: dpv:isPartOf
 domain_of:
+- EvaluationStandard
 - Requirement
 range: Principle
 multivalued: true

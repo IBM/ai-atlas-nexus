@@ -211,10 +211,11 @@ URI: [nexus:BaseAi](https://w3id.org/ai-atlas-nexus/BaseAi)
 
 ## Usages
 
-| used by                 | used in                         | type  | used                |
-| ----------------------- | ------------------------------- | ----- | ------------------- |
-| [AiSystem](AiSystem.md) | [isComposedOf](isComposedOf.md) | range | [BaseAi](BaseAi.md) |
-| [AiAgent](AiAgent.md)   | [isComposedOf](isComposedOf.md) | range | [BaseAi](BaseAi.md) |
+| used by                                                             | used in                         | type  | used                |
+| ------------------------------------------------------------------- | ------------------------------- | ----- | ------------------- |
+| [AiSystem](AiSystem.md)                                             | [isComposedOf](isComposedOf.md) | range | [BaseAi](BaseAi.md) |
+| [AiAgent](AiAgent.md)                                               | [isComposedOf](isComposedOf.md) | range | [BaseAi](BaseAi.md) |
+| [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [evaluatesAi](evaluatesAi.md)   | range | [BaseAi](BaseAi.md) |
 
 ## Identifier and Mapping Information
 
@@ -312,6 +313,7 @@ attributes:
     - Entry
     - Term
     - Principle
+    - Rule
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - Action
@@ -321,6 +323,7 @@ attributes:
     - AiEval
     - EveryEvalAIResult
     - BenchmarkMetadataCard
+    - ThirdPartyEvaluationEngagement
     - Adapter
     - LLMIntrinsic
     range: Documentation

@@ -1,0 +1,592 @@
+documents:
+  - id: AEF-1-Dec-2025
+    name: "AEF-1: Minimum Operating Conditions for Independent Third Party AI Evaluations"
+    description: >-
+      AEF-1 (Version 1, updated December 4, 2025) is the AI Evaluator Forum's voluntary standard
+      and checklist that third-party evaluators can use to demonstrate how they achieved a baseline
+      set of operating conditions for the independence, access, and transparency of a particular
+      third-party AI evaluation. It covers evaluations where the third party maintains the freedom
+      to define the evaluation's methodology (an independent audit), as opposed to validating,
+      replicating, or supporting the execution of a provider's own evaluation.
+    url: https://aievaluatorforum.org/AEF_1_Minimum_Operating_Conditions_for_Independent_Third_Party_AI_Evaluations.pdf
+    dateCreated: 2025-12-04
+
+taxonomies:
+  - id: aef-1
+    name: AEF-1 Minimum Operating Conditions
+    description: >-
+      Voluntary standard defining the minimum operating conditions for independent third-party AI
+      evaluations, organized into five principles, each accompanied by conditions that are either
+      required to comply with the standard or recommended but not applicable in all cases.
+    dateCreated: 2025-12-04
+    url: https://aievaluatorforum.org/initiatives/minimum-operating-conditions
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    type: Taxonomy
+
+entries:
+  - id: aef1-standard
+    name: AEF-1
+    description: >-
+      Checklist standard for independent third-party AI evaluators covering 5 principles and 26
+      minimum operating conditions (15 requirements, 11 recommendations). Evaluators demonstrate
+      adherence by filling out the checklist (Appendix A) and including it alongside the evaluation
+      results. For any requirement that cannot be fulfilled literally, justification should be
+      provided for how the same principle was achieved via alternative means.
+    isDefinedByTaxonomy: aef-1
+    type: EvaluationStandard
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasPrinciple:
+      - aef1-principle-access
+      - aef1-principle-coi
+      - aef1-principle-autonomy
+      - aef1-principle-transparency
+      - aef1-principle-sensitive-info
+
+  - id: aef1-principle-access
+    name: "Principle 1: Sufficient Access and Resources"
+    description: >-
+      Third-party evaluators must secure access to the right systems and information from system
+      providers if they are to conduct a thorough, trustworthy evaluation. Evaluation results also
+      often rely heavily on how much the evaluators are able to interact with the evaluated systems,
+      as well as the time, resources, and tools they can apply in the evaluation.
+    isDefinedByTaxonomy: aef-1
+    type: Principle
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasRule:
+      - aef1-ctrl-access-1
+      - aef1-ctrl-access-2
+      - aef1-ctrl-access-3
+      - aef1-ctrl-access-4
+      - aef1-ctrl-access-5
+  - id: aef1-principle-coi
+    name: "Principle 2: Minimized Conflicts of Interest"
+    description: >-
+      If an evaluator faces a financial incentive or related pressures to produce findings that are
+      not accurate or that are not reasonably complete, that is a conflict of interest that can
+      undermine both independent judgment and external trust. The appearance of a conflict of
+      interest, or appearing to conceal one, can also degrade external trust, so organizations should
+      both take concrete steps to minimize conflicts and provide broader transparency about their
+      relationships.
+    isDefinedByTaxonomy: aef-1
+    type: Principle
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasRule:
+      - aef1-ctrl-coi-1
+      - aef1-ctrl-coi-2
+      - aef1-ctrl-coi-3
+      - aef1-ctrl-coi-4
+      - aef1-ctrl-coi-5
+      - aef1-ctrl-coi-6
+  - id: aef1-principle-autonomy
+    name: "Principle 3: Analytic Autonomy"
+    description: >-
+      To maximize the robustness and independence of an evaluation, third-party evaluators must
+      control the methodology, which heavily impacts results and how trustworthy they are, as well
+      as retaining the ability to present their results accurately and free from undue influence
+      from system providers.
+    isDefinedByTaxonomy: aef-1
+    type: Principle
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasRule:
+      - aef1-ctrl-autonomy-1
+      - aef1-ctrl-autonomy-2
+      - aef1-ctrl-autonomy-3
+      - aef1-ctrl-autonomy-4
+  - id: aef1-principle-transparency
+    name: "Principle 4: Transparent Methods and Results"
+    description: >-
+      For evaluations to serve their purpose in informing governance, their results must not be
+      misrepresented, unduly delayed, or selectively withheld depending on the findings, and they
+      must be provided in sufficient detail to demonstrate their scientific validity and to enable
+      replicability and critique.
+    isDefinedByTaxonomy: aef-1
+    type: Principle
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasRule:
+      - aef1-ctrl-transparency-1
+      - aef1-ctrl-transparency-2
+      - aef1-ctrl-transparency-3
+      - aef1-ctrl-transparency-4
+      - aef1-ctrl-transparency-5
+      - aef1-ctrl-transparency-6
+      - aef1-ctrl-transparency-7
+  - id: aef1-principle-sensitive-info
+    name: "Principle 5: Protection of Sensitive Information"
+    description: >-
+      Both system providers and evaluators possess significant sensitive information, including
+      intellectual property and potentially hazardous information, improper disclosure of which
+      could harm their own and/or public interests. Adequately protecting sensitive information
+      shared or obtained in the course of an evaluation is both an ethical responsibility and a
+      practical precondition for third parties to maintain the integrity of their evaluation methods
+      and sufficient system access to carry out meaningful evaluations.
+    isDefinedByTaxonomy: aef-1
+    type: Principle
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasRule:
+      - aef1-ctrl-sensitive-info-1
+      - aef1-ctrl-sensitive-info-2
+      - aef1-ctrl-sensitive-info-3
+      - aef1-ctrl-sensitive-info-4
+
+# Conditions. Requirements are ControlActivityObligation (or ControlActivityProhibition where
+# the requirement is phrased as something that must not happen); recommendations are
+# ControlActivityRecommendation.
+rules:
+  # 1: Sufficient Access and Resources
+  - id: aef1-ctrl-access-1
+    name: 1.1 Technical access
+    description: >-
+      Requirement: The evaluator secured sufficient technical access to assess the specific system
+      characteristics being evaluated. Of the sub-elements, only query access (1.1.1) is required;
+      the rest may be important to a valid evaluation but depend on the nature of the evaluation
+      methods.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasRule:
+      - aef1-ctrl-access-1-1
+      - aef1-ctrl-access-1-2
+      - aef1-ctrl-access-1-3
+      - aef1-ctrl-access-1-4
+      - aef1-ctrl-access-1-5
+      - aef1-ctrl-access-1-6
+      - aef1-ctrl-access-1-7
+      - aef1-ctrl-access-1-8
+  - id: aef1-ctrl-access-1-1
+    name: 1.1.1 Query access
+    description: >-
+      The evaluator had query access. At a minimum, evaluators must have open-ended black-box access
+      (via a web UI, an API or both, depending on the requirements of the evaluation) that provides
+      timely and flexible queries.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-1-2
+    name: 1.1.2 Scaffolding
+    description: >-
+      The evaluator had access to the system's scaffolding, i.e. the tools, safeguards, and other
+      configurations that will be in place for a realistic end user, to conduct a realistic,
+      externally valid evaluation.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-1-3
+    name: 1.1.3 Safeguard exemptions
+    description: >-
+      The evaluator had exemptions from system safeguards. Providers should consider disabling,
+      removing, or minimizing any technical safeguards that would unduly hinder evaluators from
+      producing trustworthy results, e.g. when evaluating worst-case misuse of dangerous
+      capabilities.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-1-4
+    name: 1.1.4 Intermediate system states
+    description: >-
+      The evaluator had access to intermediate system states, such as model activations and
+      reasoning traces, either to observe them or, for some methods, to directly modify them.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-1-5
+    name: 1.1.5 Finetuning
+    description: >-
+      The evaluator had finetuning access, where the use case or threat model involves users with
+      the ability to finetune the model.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-1-6
+    name: 1.1.6 Model weights
+    description: >-
+      The evaluator had access to model weights, particularly when evaluating a model whose weights
+      are or will be shared externally.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-1-7
+    name: 1.1.7 Other tools
+    description: >-
+      The evaluator was granted access to other tools for elicitation or otherwise supporting
+      external validity.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-1-8
+    name: 1.1.8 User data
+    description: >-
+      The evaluator had access to relevant user data, subject to careful legal, security, and
+      privacy guardrails, to ground the evaluation in realistic deployment conditions.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-2
+    name: 1.2 Information
+    description: >-
+      Recommendation: The system provider shared with the evaluator information relevant to
+      carrying out a trustworthy and useful evaluation. At a minimum this includes clear
+      identification of the systems and specific versions being tested; it may also include the
+      model's intended behavior, training process and data, information needed to fully elicit
+      capabilities, preexisting internal evaluation results, generalization factors, real-world
+      usage patterns, propensity to produce misleading results, known vulnerabilities, and
+      information that might contradict the evaluation result.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-3
+    name: 1.3 Computational resources
+    description: >-
+      Requirement: The evaluator had access to sufficient computational resources to complete a
+      thorough evaluation, such as multiple runs for statistical robustness, exploratory probing,
+      and sufficient query and token limits to elicit high performance from the model.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-4
+    name: 1.4 Time
+    description: >-
+      Requirement: The evaluator had adequate time to carry out a thorough evaluation, proportionate
+      to the confidence needed and the novelty of the system. At least 20 business days are often
+      necessary when assessing substantially novel systems or system characteristics. An agreed
+      timeline should be set sufficiently in advance, allow for each necessary evaluation stage, and
+      allow the provider time to act on feedback before major decisions such as release.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-access-5
+    name: 1.5 Safe harbor
+    description: >-
+      Recommendation: The system provider provided legal safe harbor for actions by the evaluator
+      that are within the agreed-upon scope of the evaluation, so the evaluator can carry out the
+      evaluation thoroughly and in good faith without fear of adverse legal action or retaliation
+      over the content or presentation of the results.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+
+  # 2: Minimized Conflicts of Interest
+  - id: aef1-ctrl-coi-1
+    name: 2.1 Contingent compensation
+    description: >-
+      Requirement: The evaluator did not receive compensation contingent on the results of the
+      evaluation.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityProhibition
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-2
+    name: 2.2 Organizational control
+    description: >-
+      Requirement: The system provider did not exercise organizational or financial control over
+      the evaluator. At least, the system provider does not own voting shares or a large proportion
+      of shares overall in the evaluator organization, and does not control any of the evaluator's
+      board seats.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityProhibition
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-3
+    name: 2.3 CoI policy
+    description: >-
+      Requirement: The evaluator has published a conflict of interest policy, and it was applied to
+      the evaluation. The policy should cover reporting requirements for factors that could
+      contribute to a conflict of interest, the circumstances under which individuals,
+      subcontractors, or other entities would be recused, and any restrictions on funding or payment
+      received from relevant system providers.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-4
+    name: 2.4 CoI disclosure
+    description: >-
+      Requirement: The evaluator clearly disclosed potential conflicts of interest relevant to the
+      evaluation. For each sub-element, the evaluator indicates whether the answer is yes or no and
+      adds accompanying information if yes. Disclosures should be included whenever the evaluator
+      disseminates the results, via private reports or public release.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+    hasRule:
+      - aef1-ctrl-coi-4-1
+      - aef1-ctrl-coi-4-2
+      - aef1-ctrl-coi-4-3
+      - aef1-ctrl-coi-4-4
+      - aef1-ctrl-coi-4-5
+      - aef1-ctrl-coi-4-6
+  - id: aef1-ctrl-coi-4-1
+    name: 2.4.1 Paid by provider or competitor
+    description: >-
+      Disclose whether the evaluator was paid by the system provider or its direct competitors to
+      conduct the evaluation.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-4-2
+    name: 2.4.2 Funding from provider or competitor
+    description: >-
+      Disclose whether a meaningful fraction of the evaluator's funding (either revenue or
+      donations) comes from the system provider, its employees, or its direct competitors.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-4-3
+    name: 2.4.3 Provider equity in evaluator
+    description: >-
+      Disclose whether the system provider, its employees, or its direct competitors own equity in
+      the evaluator organization.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-4-4
+    name: 2.4.4 Evaluator staff equity in provider
+    description: >-
+      Disclose whether evaluator staff who carried out the evaluation own equity in the system
+      provider or its direct competitors.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-4-5
+    name: 2.4.5 Dual employment
+    description: >-
+      Disclose whether any individuals involved with the evaluation (staff, their management chain,
+      or others with influence over its methods, design, execution, review, approval, or
+      presentation) simultaneously serve as an employee, contractor, board member, or advisor to the
+      system provider or its direct competitors.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-4-6
+    name: 2.4.6 Other conflicts of interest
+    description: >-
+      Disclose whether the evaluator had any other conflicts of interest relevant to the evaluation.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-5
+    name: 2.5 Recusals
+    description: >-
+      Requirement: The evaluator recused any individuals with a significant financial interest in
+      the system provider from carrying out the evaluation. Recused staff must not define or carry
+      out evaluations of the provider's systems or modify or approve relevant findings. At a
+      minimum, individuals must recuse themselves if they hold direct equity in the provider,
+      personally or through a spouse, spousal equivalent, or dependent. This excludes indirect
+      holdings not directly managed by the individual, and staff limited to overseen support
+      services.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-coi-6
+    name: 2.6 Agreements
+    description: >-
+      Recommendation: The evaluator disclosed any separate agreements with the system provider that
+      significantly impact the independence and trustworthiness of the evaluation, covering at least
+      the nature of the agreements and how they could impact the evaluation.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+
+  # 3: Analytic Autonomy
+  - id: aef1-ctrl-autonomy-1
+    name: 3.1 Scoping
+    description: >-
+      Recommendation: The evaluator retained flexibility to define which specific properties of the
+      system to evaluate, including which subcategories of an agreed general category are most
+      meaningful to evaluate, and the ability to adjust focus throughout the evaluation.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-autonomy-2
+    name: 3.2 Evaluation autonomy
+    description: >-
+      Requirement: The evaluator had autonomy in deciding the methods of the evaluation, including
+      at least determining the appropriate metrics and sampling strategies, how best to elicit the
+      target properties (inputs, agent scaffolding, tools, jailbreaking), and defining task
+      completion, scoring rubrics, and other definitions of success or failure.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-autonomy-3
+    name: 3.3 Direct access
+    description: >-
+      Recommendation: The evaluator ran the evaluations themselves via direct system access, rather
+      than relying on staff of the system provider as intermediaries. Where this is not justified
+      (e.g. production user data or proprietary weights), evaluators may seek other ways to validate
+      that evaluations are carried out consistent with their intent.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-autonomy-4
+    name: 3.4 Editorial control
+    description: >-
+      Requirement: The evaluator retained editorial control over how they present the results of
+      their evaluation, whenever they disclose results to any audience. This includes freedom to
+      characterize what was evaluated and how; describe observed performance and supporting
+      evidence; relate results to red-lines or rule-out thresholds; make baseline comparisons;
+      comment on scope and the conclusions that can be drawn; describe how lack of access limits
+      conclusions; and describe the general nature of any redactions.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+
+  # 4: Transparent Methods and Results
+  - id: aef1-ctrl-transparency-1
+    name: 4.1 Methodological transparency
+    description: >-
+      Requirement: The evaluator shared sufficient methodological details to allow for independent
+      review of the results, ideally allowing direct replication. Evaluators may withhold testing
+      datasets to maintain evaluation integrity but should release representative examples at a
+      minimum, and should limit disclosure of information hazards in line with a responsible
+      disclosure policy (5.4).
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-transparency-2
+    name: 4.2 Disclosure rights
+    description: >-
+      Recommendation: The system provider granted upfront any necessary rights to disclose results
+      to the evaluation's intended audiences. For evaluations of risk, target audiences should
+      generally include at least the provider's governance staff or affiliates (e.g. board of
+      directors or safety board) and any recipients mandated by applicable regulations.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-transparency-3
+    name: 4.3 No contingent release
+    description: >-
+      Recommendation: The intended audiences for an evaluation were not narrowed based on the
+      results. The system provider should not withhold results from intended audiences, even if they
+      indicate poor performance, unmitigated risks, or other concerning findings, except to follow
+      pre-defined responsible disclosure practices (5.4).
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-transparency-4
+    name: 4.4 No misrepresentation
+    description: >-
+      Recommendation: The system provider did not misrepresent the evaluation's findings, including
+      directly misstating what the evaluator found, or using the fact of the evaluation or partial
+      results as evidence of a system's capabilities or risks without making the full scope of the
+      methodology and results available to the same audience.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-transparency-5
+    name: 4.5 Timely disclosure
+    description: >-
+      Recommendation: The system provider or other external parties did not unduly delay the
+      evaluation from being disclosed based on the content of the results, except to follow
+      pre-defined responsible disclosure practices (5.4).
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-transparency-6
+    name: 4.6 Redactions
+    description: >-
+      Requirement: The system provider did not have authority to redact results to conceal
+      concerning findings. Any authority to review, redact, or block reporting must only be used as
+      necessary to protect privacy, ethical restrictions, trade secrets, or information hazards, or
+      to ensure factual accuracy about the terms of the agreement or the provider's actions.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityProhibition
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-transparency-7
+    name: 4.7 Redaction disclaimer
+    description: >-
+      Recommendation: The evaluator clearly disclosed the redaction authorities granted to the
+      system provider or other external entities, in a disclaimer that is always included, specifies
+      whether the authorities were exercised, and describes what was redacted and why where possible.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+
+  # 5: Protection of Sensitive Information
+  - id: aef1-ctrl-sensitive-info-1
+    name: 5.1 Publication terms
+    description: >-
+      Requirement: The evaluator had the system provider's permission prior to releasing any results
+      based on non-public information or systems. Where evaluations are based only on publicly
+      available information and access, evaluators often need not consult the provider, except
+      where methods reveal particularly sensitive information or vulnerabilities (5.4).
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-sensitive-info-2
+    name: 5.2 Evaluation integrity
+    description: >-
+      Recommendation: The evaluation methods were not gamed or leaked. The evaluator should minimize
+      information the provider might use to game evaluations; the provider should protect
+      confidential evaluation information, not view, retain, share, use, or train on interactions
+      containing held-out evaluation data without written consent, and align the evaluated version
+      with real-world deployments; and both should cooperate to address overfitting,
+      reward-hacking, or sandbagging. Evaluators should also consider adding canaries to evaluation
+      data.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityRecommendation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-sensitive-info-3
+    name: 5.3 Protecting confidential information
+    description: >-
+      Requirement: The evaluator implemented measures to protect any confidential information they
+      received from the system provider, such as staff non-disclosure agreements, access controls,
+      cybersecurity protections, and agreements to withhold publishing results from a non-public
+      system until it is released.
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025
+  - id: aef1-ctrl-sensitive-info-4
+    name: 5.4 Responsible disclosure policy
+    description: >-
+      Requirement: The evaluator established and followed a responsible disclosure policy. This
+      includes first disclosing novel system vulnerabilities to the system provider (and other
+      providers known to be vulnerable, where feasible) before making them public, generally not
+      withholding vulnerabilities in publicly available systems for longer than 60 days after
+      disclosure to the provider, and redacting particularly sensitive details such as sensitive
+      personal information and severe information hazards (e.g. CBRN or CSAM).
+    isDefinedByTaxonomy: aef-1
+    type: ControlActivityObligation
+    hasDocumentation:
+      - AEF-1-Dec-2025

@@ -209,3 +209,9 @@ classes:
         range: Obligation
         inlined: true
         inlined_as_list: true
+      thirdpartyevaluationengagements:
+        description: A list of third-party evaluation engagements
+        multivalued: true
+        range: ThirdPartyEvaluationEngagement
+        inlined: true
+        inlined_as_list: true
