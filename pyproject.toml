@@ -83,6 +83,16 @@ docs = [
 [project.scripts]
 ran-extension = "ai_atlas_nexus.extension:app"
 
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.uv]
+package = true
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
 [tool.isort]
 skip_glob = ["v-ai-atlas-nexus/*"]
 profile = "black"
