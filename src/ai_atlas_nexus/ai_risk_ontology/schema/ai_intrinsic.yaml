@@ -107,16 +107,23 @@ enums:
 
 slots:
   hasAdapter:
+    in_subset:
+      - core
     description: The Adapter for the intrinsic
     domain: LLMIntrinsic
     range: Adapter
     multivalued: true
     inlined: false
   hasAdapterType:
+    in_subset:
+      - core
+      - summary
     multivalued: true
     description: "The Adapter type, for example: LORA, ALORA, X-LORA"
     range: AdapterType
   adaptsModel:
+    in_subset:
+      - core
     multivalued: true
     description: The LargeLanguageModel being adapted
     range: LargeLanguageModel

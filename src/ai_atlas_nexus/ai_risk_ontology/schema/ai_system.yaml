@@ -314,12 +314,16 @@ slots:
     range: string
     description: A description of the architecture of an AI such as 'Decoder-only'.
   hasInputModality:
+    in_subset:
+      - core
     multivalued: true
     inlined: false
     description: >-
       A relationship indicating the input modalities supported by an AI component. Examples include text, image, video.
     range: Modality
   hasOutputModality:
+    in_subset:
+      - core
     multivalued: true
     inlined: false
     description: >-
@@ -377,6 +381,8 @@ slots:
       A relationship indicating the model validation steps after AI model training.
     range: AiModelValidation
   performsTask:
+    in_subset:
+      - core
     multivalued: true
     inlined: false
     description: relationship indicating the AI tasks an AI model can perform.
@@ -395,6 +401,8 @@ slots:
     inlined_as_list: true
     description: A relationship to model card references.
   hasRiskControl:
+    in_subset:
+      - core
     slot_uri: airo:hasRiskControl
     description: Indicates the control measures associated with a system or component to modify risks.
     multivalued: true

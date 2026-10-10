@@ -162,6 +162,8 @@ classes:
 
 slots:
   hasApplication:
+    in_subset:
+      - core
     slot_uri: nexus:hasApplication
     domain: Requirement
     range: AIUC1ApplicationCategory
@@ -169,6 +171,8 @@ slots:
     inlined: false
     description: The application category, Optional or Mandatory.
   hasFrequency:
+    in_subset:
+      - core
     slot_uri: nexus:hasFrequency
     domain: Requirement
     range: AIUC1Frequency
@@ -188,16 +192,22 @@ slots:
     inlined: false
     description: The principle(s) this entry is composed of or belongs to
   hasRequirementType:
+    in_subset:
+      - core
     slot_uri: nexus:hasRequirementType
     domain: Any
     range: AIUC1RequirementType
     description: The requirement type of whether this is preventive, detective, etc.
   hasControlApplication:
+    in_subset:
+      - core
     slot_uri: nexus:hasControlApplication
     domain: ControlActivity
     range: AIUC1ControlApplicationCategory
     description: Which of the AIUC-1 ControlApplicationCategory this control activity (rule) belongs to
   hasEvidenceCategory:
+    in_subset:
+      - core
     slot_uri: nexus:hasEvidenceCategory
     domain: ControlActivity
     range: AIUC1EvidenceCategory
@@ -205,6 +215,8 @@ slots:
     multivalued: true
     inlined: false
   hasTypicalLocation:
+    in_subset:
+      - core
     slot_uri: nexus:hasTypicalLocation
     domain: ControlActivity
     range: string
@@ -229,6 +241,8 @@ slots:
     deprecated: Changed to match slot naming convention.
     deprecated_element_has_exact_replacement: isApplicableToCapability
   hasRequirement:
+    in_subset:
+      - core
     slot_uri: nexus:hasRequirement
     domain: ControlActivity
     range: Requirement

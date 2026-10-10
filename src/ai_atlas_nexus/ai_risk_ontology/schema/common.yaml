@@ -467,19 +467,28 @@ classes:
 
 slots:
   id:
+    in_subset:
+      - summary
     identifier: true
     required: true
     slot_uri: schema:identifier
     description: >-
       A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
   isDefinedByVocabulary:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:isPartOf
     description: A relationship where a term or a term group is defined by a vocabulary
     range: Vocabulary
   name:
+    in_subset:
+      - summary
     slot_uri: schema:name
     description: A text name of this instance.
   description:
+    in_subset:
+      - summary
     slot_uri: schema:description
     description: The description of an entity
   url:
@@ -500,6 +509,8 @@ slots:
     slot_uri: schema:version
     description: The version of the entity embodied by a specified resource.
   hasDocumentation:
+    in_subset:
+      - core
     slot_uri: airo:hasDocumentation
     range: Documentation
     multivalued: true
@@ -520,6 +531,8 @@ slots:
       tools, or datasets. Distinct from hasDocumentation, which documents the entity itself.
       External references are not necessarily curated or vetted, and quality will vary.
   hasLicense:
+    in_subset:
+      - core
     slot_uri: airo:hasLicense
     range: License
     description: Indicates licenses associated with a resource
@@ -528,6 +541,8 @@ slots:
     inlined: false
     description: Relationship indicating the some entity is composed of other entities (including some of the same type).
   hasDataset:
+    in_subset:
+      - core
     range: Dataset
     multivalued: true
     inlined: false
@@ -539,6 +554,9 @@ slots:
     deprecated: Changed to match slot naming convention.
     deprecated_element_has_exact_replacement: isProducedBy
   isProvidedBy:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:provider
     range: Organization
     description: A relationship to the Organization instance that provides this instance.
@@ -556,6 +574,9 @@ slots:
       Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it
       was generated.
   isPartOf:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:isPartOf
     description: A relationship where an entity is part of another entity
   hasPart:
@@ -570,6 +591,8 @@ slots:
     inlined: false
     range: Capability
   requiredByTask:
+    in_subset:
+      - core
     description: >-
       Indicates that this entry is required to perform a specific AI task.
     domain: Entry
@@ -578,6 +601,8 @@ slots:
     inlined: false
     inverse: requiresCapability
   requiresCapability:
+    in_subset:
+      - core
     description: Indicates that this entry requires a specific capability
     domain: Any
     range: Any
@@ -585,6 +610,8 @@ slots:
     inlined: false
     inverse: requiredByTask
   implementsCapability:
+    in_subset:
+      - core
     description: Indicates that this entity implements a specific capability
     domain: Any
     range: Any
@@ -618,6 +645,8 @@ slots:
     multivalued: true
     inlined: false
   hasRule:
+    in_subset:
+      - core
     slot_uri: dpv:hasRule
     range: Rule
     multivalued: true
@@ -642,6 +671,9 @@ slots:
     inlined: true
     description: Exception type
   isDefinedByTaxonomy:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:isPartOf
     description: A relationship where a concept or a concept group is defined by a taxonomy
     range: Taxonomy
@@ -684,6 +716,8 @@ slots:
     multivalued: true
     inlined: false
   belongsToDomain:
+    in_subset:
+      - core
     description: >-
       A relationship where a group belongs to a domain
     range: Any
@@ -691,6 +725,8 @@ slots:
     inlined: false
     slot_uri: schema:isPartOf
   isCategorizedAs:
+    in_subset:
+      - core
     description: >-
       A relationship where an entity has been deemed to be categorized
     range: Any
@@ -727,6 +763,8 @@ slots:
       Specifies the domain an AI system is used within.
     range: LocalityOfUse
   implementedByAdapter:
+    in_subset:
+      - core
     description: >-
       Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
       capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
@@ -745,6 +783,8 @@ slots:
     multivalued: true
     inlined: false
   hasLifecycleStatus:
+    in_subset:
+      - core
     slot_uri: adms:status
     range: LifecycleStatus
     description: >-
@@ -762,6 +802,8 @@ slots:
       Free-text editorial notes, source breadcrumbs, or build-time provenance
       that do not belong in the user-facing description. Opaque to consumers.
   hasRelatedRisk:
+    in_subset:
+      - core
     description: A relationship where an entity relates to a risk
     domain: Any
     range: Any

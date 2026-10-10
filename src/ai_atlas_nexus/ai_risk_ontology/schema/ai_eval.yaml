@@ -522,6 +522,8 @@ slots:
     description: The intended audience, such as researchers, developers, policymakers, etc.
     multivalued: true
   hasTasks:
+    in_subset:
+      - core
     description: The tasks or evaluations the benchmark is intended to assess.
     multivalued: true
     inlined: false
