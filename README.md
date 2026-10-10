@@ -170,7 +170,7 @@ ran query risk --id atlas-toxic-output --format yaml
 ran query action --hasRelatedRisk credo-risk-036
 ```
 
-The option of a multivalued slot can be repeated, and a record must then hold every value. `ran query --help` lists the commands, and `ran query risk --help` lists the options of one command.
+The option of a multivalued slot can be repeated, and a record must then hold every value. `--base-dir`, given before the command, adds the records in a directory of YAML files to the packaged ones, as `AIAtlasNexus(base_dir)` does. `ran query --help` lists the commands, and `ran query risk --help` lists the options of one command.
 
 ## AI Atlas Nexus Extensions
 

@@ -12,6 +12,7 @@ import json
 import os
 from enum import Enum
 from functools import lru_cache
+from pathlib import Path
 from typing import Any, Callable, Optional
 
 import typer
@@ -53,6 +54,7 @@ Examples:
   ran query risk --isDefinedByTaxonomy ibm-risk-atlas
   ran query risk --id atlas-toxic-output --format yaml
   ran query action --hasRelatedRisk credo-risk-036
+  ran query --base-dir my-taxonomy risk
 """
 
 
@@ -102,6 +104,22 @@ def build_query_app(view: SchemaView) -> typer.Typer:
         no_args_is_help=True,
         rich_markup_mode=None,
     )
+
+    @query.callback()
+    def options(
+        ctx: typer.Context,
+        base_dir: Optional[Path] = typer.Option(
+            None,
+            "--base-dir",
+            exists=True,
+            file_okay=False,
+            help="A directory of YAML files whose records are read beside the "
+            "packaged ones, as AIAtlasNexus(base_dir) reads them.",
+        ),
+    ) -> None:
+        """Pass --base-dir on to the command, which reads the records when it runs."""
+        ctx.obj = str(base_dir) if base_dir is not None else None
+
     enums = {
         name: Enum(
             name, {value: value for value in definition.permissible_values}, type=str
@@ -124,10 +142,16 @@ def _query_command(
     """The function behind the command of one class.
 
     typer reads the options of a command from the signature of its function and
-    their types from the function's annotations, so both are set here: one
-    keyword parameter for each slot that can filter, and one for the format.
+    their types from the function's annotations, so both are set here: the
+    context, which carries --base-dir from the group, one keyword parameter for
+    each slot that can filter, and one for the format.
     """
     parameters = [
+        inspect.Parameter(
+            "ctx", inspect.Parameter.KEYWORD_ONLY, annotation=typer.Context
+        )
+    ]
+    parameters += [
         _option(view, slot, enums)
         for slot in view.class_induced_slots(class_name)
         if _can_filter(view, slot)
@@ -144,10 +168,12 @@ def _query_command(
     )
     identifier = view.get_identifier_slot(class_name)
 
-    def command(format: OutputFormat, **filters: Any) -> None:
+    def command(ctx: typer.Context, format: OutputFormat, **filters: Any) -> None:
         filters = {name: value for name, value in filters.items() if value is not None}
         records = [
-            record for record in _records(class_name) if _matches(record, filters)
+            record
+            for record in _records(class_name, ctx.obj)
+            if _matches(record, filters)
         ]
         if identifier is None or identifier.name not in filters:
             _print([_data(record) for record in records], format)
@@ -205,15 +231,16 @@ def _paragraph(text: Optional[str]) -> Optional[str]:
 
 
 @lru_cache(maxsize=1)
-def _container() -> ai_risk_ontology.Container:
-    """The packaged records, read once with the loader ``AIAtlasNexus`` uses."""
-    return load_yamls_to_container(None)
+def _container(base_dir: Optional[str]) -> ai_risk_ontology.Container:
+    """The packaged records, with those under ``base_dir`` when it is given, read
+    once by the loader that ``AIAtlasNexus(base_dir)`` calls."""
+    return load_yamls_to_container(base_dir)
 
 
-def _records(class_name: str) -> list:
+def _records(class_name: str, base_dir: Optional[str]) -> list:
     """The records of a class and of its subclasses, from every slot of the container."""
     model = getattr(ai_risk_ontology, class_name)
-    container = _container()
+    container = _container(base_dir)
     return [
         record
         for collection in type(container).model_fields
