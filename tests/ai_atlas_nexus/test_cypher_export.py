@@ -29,6 +29,15 @@ def test_lists_are_cypher_lists(cypher):
     assert re.search(r'hasTypicalLocation: \["', cypher)
 
 
+def test_edges_use_the_label_of_their_target(cypher):
+    nodes = set(re.findall(r"^MERGE \(node:(\w+) \{id: (\"[^\"]*\")\}", cypher, re.M))
+    ids = {node_id for _, node_id in nodes}
+    targets = re.findall(r"MATCH \(dst: (\w+) \{id: (\"[^\"]*\")\}\)", cypher)
+    # A target id that is not a node at all is a gap in the data, not in the export.
+    missing = [t for t in targets if t[1] in ids and t not in nodes]
+    assert targets and not missing, f"{len(missing)} edges match no node: {missing[:3]}"
+
+
 def test_enum_values_are_properties(cypher):
     assert "MATCH (dst: AdapterType " not in cypher
     assert re.search(r'hasAdapterType: \["LORA"', cypher)

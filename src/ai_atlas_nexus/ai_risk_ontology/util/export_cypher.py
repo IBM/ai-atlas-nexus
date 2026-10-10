@@ -288,6 +288,14 @@ def export_data_to_cypher(container: Container) -> str:
                 ]
             )
 
+    # An edge names its target by the slot's range, which may be an ancestor of the
+    # target's class, or Any, while each node is labelled with its own class only.
+    # Use the label the target node is created with, so that the edge finds it.
+    node_labels = {graph_node.id: graph_node.label for graph_node in graph_nodes}
+    for graph_node in graph_nodes:
+        for edge in graph_node.edges:
+            edge.target_label = node_labels.get(edge.target_id, edge.target_label)
+
     # First pass: Generate Cypher code for creation of the nodes
     cypher_code = ";\n".join(
         [graph_node.to_cypher(with_relations=False) for graph_node in graph_nodes]
