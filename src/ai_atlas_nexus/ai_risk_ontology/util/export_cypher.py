@@ -46,6 +46,11 @@ def to_cypher_literal(value: Any) -> str:
     return json.dumps(str(value), ensure_ascii=False)
 
 
+def has_value(value: Any) -> bool:
+    """An empty list is as absent as None, so neither becomes a property."""
+    return value is not None and value != []
+
+
 class GraphEdge:
     label: str
     source_id: str
@@ -166,7 +171,7 @@ def convert_entity_to_graph_node(
         item: entity.__getattribute__(item)
         for item in entity.model_dump(exclude={"id"}).keys()
         if not is_relationship(schema_view, label, item, linkml_types)
-        and entity.__getattribute__(item) is not None
+        and has_value(entity.__getattribute__(item))
     }
 
     # Extract relationships, namely slots that don't have a generic LinkML type as range
@@ -209,7 +214,7 @@ def convert_entity_to_graph_node(
                                     prop_name,
                                     linkml_types,
                                 )
-                                and item.__getattribute__(prop_name) is not None
+                                and has_value(item.__getattribute__(prop_name))
                             },
                             [],
                         )
@@ -295,7 +300,12 @@ def export_data_to_cypher(container: Container, schema_dir: str = SCHEMA_DIR) ->
     node_labels = {graph_node.id: graph_node.label for graph_node in graph_nodes}
     for graph_node in graph_nodes:
         for edge in graph_node.edges:
-            edge.target_label = node_labels.get(edge.target_id, edge.target_label)
+            if edge.target_id in node_labels:
+                edge.target_label = node_labels[edge.target_id]
+            else:
+                # The MATCH below creates nothing, so the edge is lost; say so, because
+                # the cause is a typo or a missing entity in the data.
+                _log.warning("No node for the target of %s", edge)
 
     # First pass: Generate Cypher code for creation of the nodes
     cypher_code = ";\n".join(

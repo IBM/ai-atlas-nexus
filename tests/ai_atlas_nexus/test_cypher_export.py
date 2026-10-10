@@ -27,6 +27,7 @@ def test_strings_are_escaped():
 def test_lists_are_cypher_lists(cypher):
     assert not re.search(r"\w+: \"\['", cypher), "a list was written as a Python repr"
     assert re.search(r'hasTypicalLocation: \["', cypher)
+    assert ": []" not in cypher, "an empty list became a property"
 
 
 def test_edges_use_the_label_of_their_target(cypher):
@@ -36,6 +37,14 @@ def test_edges_use_the_label_of_their_target(cypher):
     # A target id that is not a node at all is a gap in the data, not in the export.
     missing = [t for t in targets if t[1] in ids and t not in nodes]
     assert targets and not missing, f"{len(missing)} edges match no node: {missing[:3]}"
+
+
+def test_missing_targets_are_logged(caplog):
+    from ai_atlas_nexus.ai_risk_ontology.util import export_cypher
+
+    with caplog.at_level("WARNING", logger=export_cypher._log.name):
+        export_cypher.export_data_to_cypher(load_yamls_to_container(None))
+    assert any("No node for the target" in r.message for r in caplog.records)
 
 
 def test_enum_values_are_properties(cypher):
