@@ -31,8 +31,8 @@ SCHEMA_PATH = os.path.join(
 )
 
 # The Python type of an option, chosen by the LinkML type at the root of the
-# slot's range. Every other type, a reference to another record and an enum
-# without values are given as text.
+# slot's range. Options take text for every other type, for a reference to
+# another record and for an enum without values.
 OPTION_TYPES = {
     "integer": int,
     "float": float,
@@ -67,7 +67,7 @@ class OutputFormat(str, Enum):
 
 @lru_cache(maxsize=1)
 def schema_view() -> SchemaView:
-    """The schema that ships with the package, found as ``AIAtlasNexus`` finds it."""
+    """The schema that the package includes, found as ``AIAtlasNexus`` finds it."""
     return SchemaView(SCHEMA_PATH)
 
 
@@ -79,9 +79,9 @@ def command_name(class_name: str) -> str:
 def query_classes(view: SchemaView) -> list[str]:
     """The classes that get a command, in the order of their command names.
 
-    A class gets a command when the schema's tree root can hold its records,
-    which means that it is the range of one of the root's slots or a subclass of
-    one, and when it is not abstract.
+    A class gets a command when the schema's tree root can hold its records and
+    the class is not abstract. The tree root can hold the records of a class that
+    is the range of one of the root's slots, or a subclass of such a class.
     """
     classes = view.all_classes()
     root = next(name for name, definition in classes.items() if definition.tree_root)
@@ -113,8 +113,8 @@ def build_query_app(view: SchemaView) -> typer.Typer:
             "--base-dir",
             exists=True,
             file_okay=False,
-            help="A directory of YAML files whose records are read beside the "
-            "packaged ones, as AIAtlasNexus(base_dir) reads them.",
+            help="A directory of YAML files whose records are read along with "
+            "the packaged ones, as AIAtlasNexus(base_dir) reads them.",
         ),
     ) -> None:
         """Pass --base-dir on to the command, which reads the records when it runs."""
@@ -141,10 +141,11 @@ def _query_command(
 ) -> Callable[..., None]:
     """The function behind the command of one class.
 
+    This function sets the signature and the annotations of the command, because
     typer reads the options of a command from the signature of its function and
-    their types from the function's annotations, so both are set here: the
-    context, which carries --base-dir from the group, one keyword parameter for
-    each slot that can filter, and one for the format.
+    their types from its annotations. The signature holds the context, which
+    carries --base-dir from the group, one keyword parameter for each slot that
+    can filter, and one for the format.
     """
     parameters = [
         inspect.Parameter(
@@ -232,8 +233,10 @@ def _paragraph(text: Optional[str]) -> Optional[str]:
 
 @lru_cache(maxsize=1)
 def _container(base_dir: Optional[str]) -> ai_risk_ontology.Container:
-    """The packaged records, with those under ``base_dir`` when it is given, read
-    once by the loader that ``AIAtlasNexus(base_dir)`` calls."""
+    """The packaged records, and the records under ``base_dir`` when it is given.
+
+    The loader that ``AIAtlasNexus(base_dir)`` calls reads them once.
+    """
     return load_yamls_to_container(base_dir)
 
 
@@ -250,8 +253,10 @@ def _records(class_name: str, base_dir: Optional[str]) -> list:
 
 
 def _matches(record: Any, filters: dict[str, Any]) -> bool:
-    """A single value must equal the record's value, and the values of a
-    repeated option must all be in the record's list."""
+    """A single value must equal the record's value.
+
+    The values of a repeated option must all be in the record's list.
+    """
     for name, wanted in filters.items():
         value = to_jsonable_python(getattr(record, name, None))
         if isinstance(wanted, list):
