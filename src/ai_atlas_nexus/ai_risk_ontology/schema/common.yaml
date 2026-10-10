@@ -22,6 +22,38 @@ prefixes:
 default_range: string
 default_prefix: nexus
 
+subsets:
+  summary:
+    rank: 0
+    title: summary subset
+    description: |-
+      The slots a reader needs to recognise a record: its identifier, its name, its
+      description, and the one or two references that place it, such as the taxonomy
+      that defines it or the group it belongs to.
+
+      A one-line or card view of any record can be built from the summary slots alone.
+      The subset holds slots only.
+  core:
+    rank: 1
+    title: core subset
+    description: |-
+      The classes a consumer needs to make sense of the data, and the slots worth
+      filtering or navigating by.
+
+      A core class carries the records most readers come for, or is the target of
+      references from such records. A core slot is a reference between classes or a
+      controlled value that a reader would filter a listing by. A consumer that shows
+      only the core subset shows a coherent model.
+  extended:
+    rank: 2
+    title: extended subset
+    description: |-
+      The concrete classes beyond the core that carry records in the packaged data.
+
+      A consumer that adds the extended subset to the core shows every populated class.
+      Classes in neither subset are abstract, serve only as mixins, or have no records
+      yet. Membership has no effect on validation and says nothing about deprecation.
+
 enums:
   LifecycleStatus:
     description: >-
