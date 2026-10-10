@@ -4,7 +4,7 @@ entries:
       - llm01-prompt-injection
     type: Risk
   - id: llm01-prompt-injection
-    broad_mappings:
+    narrow_mappings:
       - asi01-agent-goal-hijack
     type: Risk
   - id: asi01-agent-goal-hijack
@@ -20,7 +20,7 @@ entries:
       - llm062025-excessive-agency
     type: Risk
   - id: llm062025-excessive-agency
-    narrow_mappings:
+    broad_mappings:
       - asi02-tool-misuse-and-exploitation
     type: Risk
   - id: asi03-identity-and-privilege-abuse
@@ -28,7 +28,7 @@ entries:
       - llm062025-excessive-agency
     type: Risk
   - id: llm062025-excessive-agency
-    narrow_mappings:
+    broad_mappings:
       - asi03-identity-and-privilege-abuse
     type: Risk
   - id: asi03-identity-and-privilege-abuse
@@ -52,7 +52,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    narrow_mappings:
+    broad_mappings:
       - asi04-agentic-supply-chain-vulnerabilities
     type: Risk
   - id: asi05-unexpected-code-execution
@@ -60,7 +60,7 @@ entries:
       - llm052025-improper-output-handling
     type: Risk
   - id: llm052025-improper-output-handling
-    narrow_mappings:
+    broad_mappings:
       - asi05-unexpected-code-execution
     type: Risk
   - id: asi05-unexpected-code-execution
@@ -76,7 +76,7 @@ entries:
       - llm042025-data-and-model-poisoning
     type: Risk
   - id: llm042025-data-and-model-poisoning
-    broad_mappings:
+    narrow_mappings:
       - asi06-memory-and-context-poisoning
     type: Risk
   - id: asi06-memory-and-context-poisoning
@@ -140,7 +140,7 @@ entries:
       - llm092025-misinformation
     type: Risk
   - id: llm092025-misinformation
-    broad_mappings:
+    narrow_mappings:
       - asi09-human-agent-trust-exploitation
     type: Risk
   - id: asi09-human-agent-trust-exploitation
