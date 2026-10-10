@@ -81,6 +81,7 @@ docs = [
 ]
 
 [project.scripts]
+ran = "ai_atlas_nexus.cli:app"
 ran-extension = "ai_atlas_nexus.extension:app"
 
 [tool.isort]
