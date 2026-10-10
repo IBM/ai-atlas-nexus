@@ -12,7 +12,6 @@ from pathlib import Path
 from typing import Any
 
 # Third Party
-from cymple import QueryBuilder
 from linkml_runtime.utils.schemaview import SchemaView
 from pydantic import BaseModel
 
