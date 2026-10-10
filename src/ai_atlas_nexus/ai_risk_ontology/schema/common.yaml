@@ -22,6 +22,38 @@ prefixes:
 default_range: string
 default_prefix: nexus
 
+subsets:
+  summary:
+    rank: 0
+    title: summary subset
+    description: |-
+      The slots a reader needs to recognise a record: its identifier, its name, its
+      description, and the one or two references that place it, such as the taxonomy
+      that defines it or the group it belongs to.
+
+      A one-line or card view of any record can be built from the summary slots alone.
+      The subset holds slots only.
+  core:
+    rank: 1
+    title: core subset
+    description: |-
+      The classes a consumer needs to make sense of the data, and the slots worth
+      filtering or navigating by.
+
+      A core class carries the records most readers come for, or is the target of
+      references from such records. A core slot is a reference between classes or a
+      controlled value that a reader would filter a listing by. A consumer that shows
+      only the core subset shows a coherent model.
+  extended:
+    rank: 2
+    title: extended subset
+    description: |-
+      The concrete classes beyond the core that carry records in the packaged data.
+
+      A consumer that adds the extended subset to the core shows every populated class.
+      Classes in neither subset are abstract, serve only as mixins, or have no records
+      yet. Membership has no effect on validation and says nothing about deprecation.
+
 enums:
   LifecycleStatus:
     description: >-
@@ -89,6 +121,8 @@ classes:
       - notes
 
   Organization:
+    in_subset:
+      - core
     is_a: Entity
     class_uri: schema:Organization
     description: Any organizational entity such as a corporation, educational institution, consortium, government, etc.
@@ -101,6 +135,8 @@ classes:
       - grants_license
 
   License:
+    in_subset:
+      - extended
     is_a: Entity
     class_uri: airo:License
     description:
@@ -110,6 +146,8 @@ classes:
       - version
 
   Dataset:
+    in_subset:
+      - core
     is_a: Entity
     class_uri: schema:Dataset
     description: A body of structured information describing some topic(s) of interest.
@@ -119,6 +157,8 @@ classes:
       - isProvidedBy
 
   Documentation:
+    in_subset:
+      - core
     is_a: Entity
     class_uri: airo:Documentation
     description: Documented information about a concept or other topic(s) of interest.
@@ -147,6 +187,8 @@ classes:
       - evidence
 
   Vocabulary:
+    in_subset:
+      - core
     is_a: Entity
     mixin: true
     class_uri: skos:ConceptScheme
@@ -267,6 +309,8 @@ classes:
       - hasRelatedRisk
 
   Principle:
+    in_subset:
+      - core
     is_a: Entry
     description: A representation of values or norms that must be taken into consideration when conducting activities.
     class_uri: dpv:Principle
@@ -398,6 +442,8 @@ classes:
     class_uri: dpv:Certification
 
   EvaluationStandard:
+    in_subset:
+      - extended
     is_a: Entry
     attributes:
       type:
@@ -421,19 +467,28 @@ classes:
 
 slots:
   id:
+    in_subset:
+      - summary
     identifier: true
     required: true
     slot_uri: schema:identifier
     description: >-
       A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
   isDefinedByVocabulary:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:isPartOf
     description: A relationship where a term or a term group is defined by a vocabulary
     range: Vocabulary
   name:
+    in_subset:
+      - summary
     slot_uri: schema:name
     description: A text name of this instance.
   description:
+    in_subset:
+      - summary
     slot_uri: schema:description
     description: The description of an entity
   url:
@@ -454,6 +509,8 @@ slots:
     slot_uri: schema:version
     description: The version of the entity embodied by a specified resource.
   hasDocumentation:
+    in_subset:
+      - core
     slot_uri: airo:hasDocumentation
     range: Documentation
     multivalued: true
@@ -474,6 +531,8 @@ slots:
       tools, or datasets. Distinct from hasDocumentation, which documents the entity itself.
       External references are not necessarily curated or vetted, and quality will vary.
   hasLicense:
+    in_subset:
+      - core
     slot_uri: airo:hasLicense
     range: License
     description: Indicates licenses associated with a resource
@@ -482,6 +541,8 @@ slots:
     inlined: false
     description: Relationship indicating the some entity is composed of other entities (including some of the same type).
   hasDataset:
+    in_subset:
+      - core
     range: Dataset
     multivalued: true
     inlined: false
@@ -493,6 +554,9 @@ slots:
     deprecated: Changed to match slot naming convention.
     deprecated_element_has_exact_replacement: isProducedBy
   isProvidedBy:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:provider
     range: Organization
     description: A relationship to the Organization instance that provides this instance.
@@ -510,6 +574,9 @@ slots:
       Evidence provides a source (typical a chunk, paragraph or link) describing where some value was found or how it
       was generated.
   isPartOf:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:isPartOf
     description: A relationship where an entity is part of another entity
   hasPart:
@@ -524,6 +591,8 @@ slots:
     inlined: false
     range: Capability
   requiredByTask:
+    in_subset:
+      - core
     description: >-
       Indicates that this entry is required to perform a specific AI task.
     domain: Entry
@@ -532,6 +601,8 @@ slots:
     inlined: false
     inverse: requiresCapability
   requiresCapability:
+    in_subset:
+      - core
     description: Indicates that this entry requires a specific capability
     domain: Any
     range: Any
@@ -539,6 +610,8 @@ slots:
     inlined: false
     inverse: requiredByTask
   implementsCapability:
+    in_subset:
+      - core
     description: Indicates that this entity implements a specific capability
     domain: Any
     range: Any
@@ -572,6 +645,8 @@ slots:
     multivalued: true
     inlined: false
   hasRule:
+    in_subset:
+      - core
     slot_uri: dpv:hasRule
     range: Rule
     multivalued: true
@@ -596,6 +671,9 @@ slots:
     inlined: true
     description: Exception type
   isDefinedByTaxonomy:
+    in_subset:
+      - core
+      - summary
     slot_uri: schema:isPartOf
     description: A relationship where a concept or a concept group is defined by a taxonomy
     range: Taxonomy
@@ -638,6 +716,8 @@ slots:
     multivalued: true
     inlined: false
   belongsToDomain:
+    in_subset:
+      - core
     description: >-
       A relationship where a group belongs to a domain
     range: Any
@@ -645,6 +725,8 @@ slots:
     inlined: false
     slot_uri: schema:isPartOf
   isCategorizedAs:
+    in_subset:
+      - core
     description: >-
       A relationship where an entity has been deemed to be categorized
     range: Any
@@ -681,6 +763,8 @@ slots:
       Specifies the domain an AI system is used within.
     range: LocalityOfUse
   implementedByAdapter:
+    in_subset:
+      - core
     description: >-
       Indicates that this capability is implemented by a specific adapter. This relationship distinguishes the abstract
       capability (what can be done) from the technical implementation mechanism (how it is added/extended via adapters).
@@ -699,6 +783,8 @@ slots:
     multivalued: true
     inlined: false
   hasLifecycleStatus:
+    in_subset:
+      - core
     slot_uri: adms:status
     range: LifecycleStatus
     description: >-
@@ -716,6 +802,8 @@ slots:
       Free-text editorial notes, source breadcrumbs, or build-time provenance
       that do not belong in the user-facing description. Opaque to consumers.
   hasRelatedRisk:
+    in_subset:
+      - core
     description: A relationship where an entity relates to a risk
     domain: Any
     range: Any
