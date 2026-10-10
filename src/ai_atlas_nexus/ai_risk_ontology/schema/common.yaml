@@ -121,6 +121,8 @@ classes:
       - notes
 
   Organization:
+    in_subset:
+      - core
     is_a: Entity
     class_uri: schema:Organization
     description: Any organizational entity such as a corporation, educational institution, consortium, government, etc.
@@ -133,6 +135,8 @@ classes:
       - grants_license
 
   License:
+    in_subset:
+      - extended
     is_a: Entity
     class_uri: airo:License
     description:
@@ -142,6 +146,8 @@ classes:
       - version
 
   Dataset:
+    in_subset:
+      - core
     is_a: Entity
     class_uri: schema:Dataset
     description: A body of structured information describing some topic(s) of interest.
@@ -151,6 +157,8 @@ classes:
       - isProvidedBy
 
   Documentation:
+    in_subset:
+      - core
     is_a: Entity
     class_uri: airo:Documentation
     description: Documented information about a concept or other topic(s) of interest.
@@ -179,6 +187,8 @@ classes:
       - evidence
 
   Vocabulary:
+    in_subset:
+      - core
     is_a: Entity
     mixin: true
     class_uri: skos:ConceptScheme
@@ -299,6 +309,8 @@ classes:
       - hasRelatedRisk
 
   Principle:
+    in_subset:
+      - core
     is_a: Entry
     description: A representation of values or norms that must be taken into consideration when conducting activities.
     class_uri: dpv:Principle
@@ -430,6 +442,8 @@ classes:
     class_uri: dpv:Certification
 
   EvaluationStandard:
+    in_subset:
+      - extended
     is_a: Entry
     attributes:
       type:

@@ -98,6 +98,8 @@ classes:
     class_uri: nexus:ControlActivityPermission
 
   ControlActivityProhibition:
+    in_subset:
+      - extended
     is_a: Prohibition
     mixins:
       - ControlActivity
@@ -109,6 +111,8 @@ classes:
     class_uri: nexus:ControlActivityProhibition
 
   ControlActivityObligation:
+    in_subset:
+      - core
     is_a: Obligation
     mixins:
       - ControlActivity
@@ -120,6 +124,8 @@ classes:
     class_uri: nexus:ControlActivityObligation
 
   ControlActivityRecommendation:
+    in_subset:
+      - core
     is_a: Recommendation
     mixins:
       - ControlActivity
@@ -131,6 +137,8 @@ classes:
     class_uri: nexus:ControlActivityRecommendation
 
   Requirement:
+    in_subset:
+      - core
     is_a: Rule
     description: >-
       A requirement representing a combination of obligation, permission, or prohibition for AI system assurance.

@@ -18,6 +18,8 @@ default_prefix: nexus
 
 classes:
   RiskTaxonomy:
+    in_subset:
+      - core
     is_a: Taxonomy
     description: A taxonomy of AI system related risks
     slots:
@@ -26,6 +28,8 @@ classes:
       - hasLicense
 
   RiskControlGroupTaxonomy:
+    in_subset:
+      - extended
     is_a: Taxonomy
     description: A taxonomy of AI system related risk controls groups
     slots:
@@ -34,6 +38,8 @@ classes:
       - hasLicense
 
   RiskControlGroup:
+    in_subset:
+      - extended
     is_a: Group
     description: A group of AI system related risk controls.
     mixins:
@@ -47,6 +53,8 @@ classes:
       - hasPart
 
   RiskGroup:
+    in_subset:
+      - core
     is_a: Group
     description: A group of AI system related risks that are part of a risk taxonomy.
     mixins:
@@ -60,6 +68,8 @@ classes:
       - hasPart
 
   Risk:
+    in_subset:
+      - core
     is_a: Entry
     mixins:
       - RiskConcept
@@ -98,6 +108,8 @@ classes:
       - isUsedWithinLocality
 
   RiskControl:
+    in_subset:
+      - core
     is_a: Control
     mixin: true
     mixins:
@@ -110,6 +122,8 @@ classes:
       - isDefinedByTaxonomy
 
   Action:
+    in_subset:
+      - core
     is_a: RiskControl
     description: Action to remediate a risk
     attributes:
@@ -124,6 +138,8 @@ classes:
       - hasAiActorTask
 
   RiskIncident:
+    in_subset:
+      - core
     is_a: Entity
     mixins:
       - RiskConcept

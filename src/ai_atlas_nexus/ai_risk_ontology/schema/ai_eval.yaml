@@ -51,6 +51,8 @@ enums:
 
 classes:
   AiEval:
+    in_subset:
+      - core
     is_a: Entity
     class_uri: dqv:Metric
     description: >-
@@ -77,6 +79,8 @@ classes:
       - isComposedOf
 
   AiEvalResult:
+    in_subset:
+      - extended
     is_a: Entity
     class_uri: dqv:QualityMeasurement
     description: The result of an evaluation for a specific AI model.
