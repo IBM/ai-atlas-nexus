@@ -3,13 +3,15 @@ Generate Cypher code from linkml instance specifications.
 """
 
 # Standard Library
+import argparse
+import json
+from enum import Enum
 from os import listdir, makedirs
-from os.path import isfile, join
+from os.path import dirname, isfile, join
 from pathlib import Path
 from typing import Any
 
 # Third Party
-from cymple import QueryBuilder
 from linkml_runtime.utils.schemaview import SchemaView
 from pydantic import BaseModel
 
@@ -19,11 +21,34 @@ from ai_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
-MAPPING_DIR = "src/ai_atlas_nexus/data/mappings/"
-OUTPUT_DIR = "graph_export/cypher/"
-SCHEMA_DIR = "src/ai_atlas_nexus/ai_risk_ontology/schema/"
+# The schema ships inside the package, so this default works from a clone and from an
+# installed package alike.
+SCHEMA_DIR = str(Path(__file__).resolve().parents[1] / "schema")
 SCHEMA_FILE = "ai-risk-ontology.yaml"
+OUTPUT_FILE = "graph_export/cypher/ai-risk-ontology.cypher"
 _log = configure_logger("ExportCypher")
+
+
+def to_cypher_literal(value: Any) -> str:
+    """Write a value as a Cypher literal: a string, number, boolean or list of them.
+
+    Strings are escaped the way JSON escapes them, which Cypher reads the same way, so
+    quotes, backslashes and line breaks in the data cannot break a statement.
+    """
+    if isinstance(value, Enum):
+        value = value.value
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return repr(value)
+    if isinstance(value, (list, tuple)):
+        return "[" + ", ".join(to_cypher_literal(item) for item in value) + "]"
+    return json.dumps(str(value), ensure_ascii=False)
+
+
+def has_value(value: Any) -> bool:
+    """An empty list is as absent as None, so neither becomes a property."""
+    return value is not None and value != []
 
 
 class GraphEdge:
@@ -51,7 +76,7 @@ class GraphEdge:
         return f"{self.label}: {self.source_id}/{self.source_label} -> {self.target_id}/{self.target_label}"
 
     def to_cypher(self) -> str:
-        return f'MATCH (src: {self.source_label} {{id: "{self.source_id}"}}) MATCH (dst: {self.target_label} {{id: "{self.target_id}"}}) MERGE (src)-[: {self.label}]->(dst);\n'
+        return f"MATCH (src: {self.source_label} {{id: {to_cypher_literal(self.source_id)}}}) MATCH (dst: {self.target_label} {{id: {to_cypher_literal(self.target_id)}}}) MERGE (src)-[: {self.label}]->(dst);\n"
 
 
 class GraphNode:
@@ -73,12 +98,15 @@ class GraphNode:
         self.edges = relations
 
     def to_cypher(self, with_relations: bool = True) -> str:
-        merge_node = "MERGE (node:" + self.label + ' {id: "' + self.id + '"})'
+        merge_node = (
+            "MERGE (node:" + self.label + " {id: " + to_cypher_literal(self.id) + "})"
+        )
         if self.properties:
             merge_node += (
                 " ON CREATE SET node += {"
                 + ",".join(
-                    f'{key}: "{value}"' for key, value in self.properties.items()
+                    f"{key}: {to_cypher_literal(value)}"
+                    for key, value in self.properties.items()
                 )
                 + "}"
             )
@@ -120,7 +148,11 @@ def is_relationship(
     slot_defs = [slot for slot in class_slots if slot.name == linkml_slot]
     if slot_defs:
         slot_def = slot_defs.pop()
-        if slot_def.range not in linkml_types:
+        # Enum values have no nodes of their own, so they are properties, like types.
+        if (
+            slot_def.range not in linkml_types
+            and slot_def.range not in schema_view.all_enums()
+        ):
             return True
     return False
 
@@ -139,7 +171,7 @@ def convert_entity_to_graph_node(
         item: entity.__getattribute__(item)
         for item in entity.model_dump(exclude={"id"}).keys()
         if not is_relationship(schema_view, label, item, linkml_types)
-        and entity.__getattribute__(item) is not None
+        and has_value(entity.__getattribute__(item))
     }
 
     # Extract relationships, namely slots that don't have a generic LinkML type as range
@@ -182,7 +214,7 @@ def convert_entity_to_graph_node(
                                     prop_name,
                                     linkml_types,
                                 )
-                                and item.__getattribute__(prop_name) is not None
+                                and has_value(item.__getattribute__(prop_name))
                             },
                             [],
                         )
@@ -230,18 +262,18 @@ def convert_entity_to_graph_node(
     return return_list
 
 
-def export_data_to_cypher(container: Container) -> str:
+def export_data_to_cypher(container: Container, schema_dir: str = SCHEMA_DIR) -> str:
     file_list = [
         file_name
-        for file_name in listdir(SCHEMA_DIR)
-        if isfile(join(SCHEMA_DIR, file_name)) and file_name.endswith('.yaml')
+        for file_name in listdir(schema_dir)
+        if isfile(join(schema_dir, file_name)) and file_name.endswith('.yaml')
     ]
     # LinkML auto-appends .yaml to importmap paths, so remove the extension
     importmap = {
-        Path(item).stem: str(Path(join(SCHEMA_DIR, Path(item).stem)).resolve())
+        Path(item).stem: str(Path(join(schema_dir, Path(item).stem)).resolve())
         for item in file_list
     }
-    schema_path = str(Path(join(SCHEMA_DIR, SCHEMA_FILE)).resolve())
+    schema_path = str(Path(join(schema_dir, SCHEMA_FILE)).resolve())
     schema_view = SchemaView(schema_path, merge_imports=True, importmap=importmap)
     linkml_types = get_linkml_types(schema_view)
 
@@ -262,6 +294,19 @@ def export_data_to_cypher(container: Container) -> str:
                 ]
             )
 
+    # An edge names its target by the slot's range, which may be an ancestor of the
+    # target's class, or Any, while each node is labelled with its own class only.
+    # Use the label the target node is created with, so that the edge finds it.
+    node_labels = {graph_node.id: graph_node.label for graph_node in graph_nodes}
+    for graph_node in graph_nodes:
+        for edge in graph_node.edges:
+            if edge.target_id in node_labels:
+                edge.target_label = node_labels[edge.target_id]
+            else:
+                # The MATCH below creates nothing, so the edge is lost; say so, because
+                # the cause is a typo or a missing entity in the data.
+                _log.warning("No node for the target of %s", edge)
+
     # First pass: Generate Cypher code for creation of the nodes
     cypher_code = ";\n".join(
         [graph_node.to_cypher(with_relations=False) for graph_node in graph_nodes]
@@ -277,10 +322,22 @@ def export_data_to_cypher(container: Container) -> str:
 
 
 if __name__ == "__main__":
-    ontology = load_yamls_to_container(MAPPING_DIR)
-    makedirs(OUTPUT_DIR, exist_ok=True)
-    with open(
-        OUTPUT_DIR + "ai-risk-ontology.cypher", "+tw", encoding="utf-8"
-    ) as output_file:
-        print(export_data_to_cypher(ontology), file=output_file)
-        output_file.close()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--schema-dir",
+        default=SCHEMA_DIR,
+        help="directory holding ai-risk-ontology.yaml and the modules it imports",
+    )
+    parser.add_argument(
+        "--data-dir",
+        default=None,
+        help="directory of extra YAML data to load beside the packaged knowledge graph",
+    )
+    parser.add_argument(
+        "--output", default=OUTPUT_FILE, help="Cypher file to write (default: %(default)s)"
+    )
+    args = parser.parse_args()
+    ontology = load_yamls_to_container(args.data_dir)
+    makedirs(dirname(args.output) or ".", exist_ok=True)
+    with open(args.output, "w", encoding="utf-8") as output_file:
+        print(export_data_to_cypher(ontology, args.schema_dir), file=output_file)
