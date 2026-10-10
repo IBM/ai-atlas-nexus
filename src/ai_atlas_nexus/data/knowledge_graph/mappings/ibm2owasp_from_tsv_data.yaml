@@ -28,7 +28,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-acquisition
     type: Risk
   - id: atlas-data-contamination
@@ -36,7 +36,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-contamination
     type: Risk
   - id: atlas-data-curation
@@ -44,7 +44,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-curation
     type: Risk
   - id: atlas-data-poisoning
@@ -52,7 +52,7 @@ entries:
       - llm042025-data-and-model-poisoning
     type: Risk
   - id: llm042025-data-and-model-poisoning
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-poisoning
     type: Risk
   - id: atlas-data-provenance
@@ -60,7 +60,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-provenance
     type: Risk
   - id: atlas-data-usage-rights
@@ -68,7 +68,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-usage-rights
     type: Risk
   - id: atlas-data-usage-rights
@@ -76,7 +76,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-usage-rights
     type: Risk
   - id: atlas-exposing-personal-information
@@ -84,7 +84,7 @@ entries:
       - llm022025-sensitive-information-disclosure
     type: Risk
   - id: llm022025-sensitive-information-disclosure
-    broad_mappings:
+    narrow_mappings:
       - atlas-exposing-personal-information
     type: Risk
   - id: atlas-hallucination
@@ -124,7 +124,7 @@ entries:
       - llm092025-misinformation
     type: Risk
   - id: llm092025-misinformation
-    broad_mappings:
+    narrow_mappings:
       - atlas-incomplete-advice
     type: Risk
   - id: atlas-ip-information-in-prompt
@@ -140,7 +140,7 @@ entries:
       - llm01-prompt-injection
     type: Risk
   - id: llm01-prompt-injection
-    broad_mappings:
+    narrow_mappings:
       - atlas-jailbreaking
     type: Risk
   - id: atlas-lack-of-data-transparency
@@ -148,7 +148,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-lack-of-data-transparency
     type: Risk
   - id: atlas-membership-inference-attack
@@ -164,7 +164,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-model-usage-rights
     type: Risk
   - id: atlas-over-or-under-reliance
@@ -212,7 +212,7 @@ entries:
       - llm022025-sensitive-information-disclosure
     type: Risk
   - id: llm022025-sensitive-information-disclosure
-    broad_mappings:
+    narrow_mappings:
       - atlas-prompt-leaking
     type: Risk
   - id: atlas-prompt-priming
@@ -220,7 +220,7 @@ entries:
       - llm01-prompt-injection
     type: Risk
   - id: llm01-prompt-injection
-    broad_mappings:
+    narrow_mappings:
       - atlas-prompt-priming
     type: Risk
   - id: atlas-reidentification
@@ -236,7 +236,7 @@ entries:
       - llm022025-sensitive-information-disclosure
     type: Risk
   - id: llm022025-sensitive-information-disclosure
-    broad_mappings:
+    narrow_mappings:
       - atlas-revealing-confidential-information
     type: Risk
   - id: atlas-spreading-disinformation
@@ -244,7 +244,7 @@ entries:
       - llm092025-misinformation
     type: Risk
   - id: llm092025-misinformation
-    broad_mappings:
+    narrow_mappings:
       - atlas-spreading-disinformation
     type: Risk
   - id: atlas-untraceable-attribution
@@ -252,6 +252,6 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    broad_mappings:
+    narrow_mappings:
       - atlas-untraceable-attribution
     type: Risk

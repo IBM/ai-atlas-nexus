@@ -13,7 +13,17 @@ from typing import Any, Type
 # Third Party
 from linkml_runtime.dumpers import YAMLDumper
 from pydantic import BaseModel
+from sssom.constants import (
+    NO_TERM_FOUND,
+    OBJECT_ID,
+    PREDICATE_ID,
+    PREDICATE_INVERT_DICTIONARY,
+    PREDICATE_MODIFIER,
+    PREDICATE_MODIFIER_NOT,
+    SUBJECT_ID,
+)
 from sssom.parsers import parse_sssom_table
+from sssom.util import invert_mappings
 
 from ai_atlas_nexus import AIAtlasNexus
 
@@ -45,26 +55,54 @@ class EntityMap(BaseModel):
             relationship=relationship,
         )
 
+def inverse_predicates():
+    """
+    Map each predicate to its inverse: the SKOS and OWL inverses sssom-py knows,
+    and the inverse that a slot of the schema declares.
+    """
+    declared = {
+        view.get_uri(slot_name, expand=False): view.get_uri(slot.inverse, expand=False)
+        for slot_name, slot in view.all_slots().items()
+        if slot.inverse
+    }
+    return {**declared, **PREDICATE_INVERT_DICTIONARY}
+
+
+INVERSE_PREDICATES = inverse_predicates()
+
+
 def process_mapping_from_tsv_to_entity_mapping(file_name):
     """
-    TSV to entity mapping from the file
+    TSV to entity mappings from the file, each paired with its inverse.
+    sssom-py inverts a mapping by swapping subject and object and replacing the
+    predicate with its inverse, so A skos:broadMatch B becomes B skos:narrowMatch A.
+    A mapping whose predicate has no inverse is paired with None.
     Note this doesn't check validity of the mapping
     """
     tsv_file_name = join(MAP_DIR, file_name)
-    mapping_set_df = parse_sssom_table(file_path=tsv_file_name)
-    ms = mapping_set_df.to_mapping_set()
-    entity_maps = [
-        EntityMap(
-            **{
-                "src_entity_id": item["subject_id"],
-                "target_entity_id": item["object_id"],
-                "relationship": item["predicate_id"],
-            }
-        )
-        for item in ms.mappings
-        if item["predicate_id"] != "noMatch"
+    df = parse_sssom_table(file_path=tsv_file_name).df
+    # A negated mapping, or one to sssom:NoTermFound, records that there is no
+    # match, so it adds nothing to the graph.
+    keep = (df[SUBJECT_ID] != NO_TERM_FOUND) & (df[OBJECT_ID] != NO_TERM_FOUND)
+    if PREDICATE_MODIFIER in df.columns:
+        keep &= df[PREDICATE_MODIFIER] != PREDICATE_MODIFIER_NOT
+    triples = df.loc[keep, [SUBJECT_ID, PREDICATE_ID, OBJECT_ID]]
+
+    # Each distinct triple is inverted once, so a repeated row gets its inverse too.
+    invertible = triples[triples[PREDICATE_ID].isin(INVERSE_PREDICATES)].drop_duplicates()
+    inverted = invert_mappings(
+        invertible,
+        merge_inverted=False,
+        predicate_invert_dictionary=INVERSE_PREDICATES,
+    )
+    inverse_of = {
+        tuple(invertible.loc[i]): EntityMap(row[SUBJECT_ID], row[OBJECT_ID], row[PREDICATE_ID])
+        for i, row in inverted.iterrows()
+    }
+    return [
+        (EntityMap(s, o, p), inverse_of.get((s, p, o)))
+        for s, p, o in triples.itertuples(index=False, name=None)
     ]
-    return entity_maps
 
 def find_by_id(identifier):
     """
@@ -95,14 +133,14 @@ def process_mappings_to_entities(entity_maps):
     """
     Processing an entity map into the linkml class output and include the inverse of the relationships.
     Args:
-        entity_maps
+        entity_maps: pairs of an entity map and its inverse, or None if it has none
     Returns:
         list
     """
     output_entities = []
     invalid_relationships = []
 
-    for em in entity_maps:
+    for em, inverse in entity_maps:
 
         s_id = em.src_entity_id
         o_id = em.target_entity_id
@@ -127,10 +165,11 @@ def process_mappings_to_entities(entity_maps):
             slot, slot_name = find_slot_by_curie(relationship)
             object.__setattr__(new_instance_entity, slot_name, [o_id])
 
-            if relationship in ["skos:closeMatch", "skos:exactMatch", "skos:broadMatch", "skos:narrowMatch", "skos:relatedMatch"]:
-                object.__setattr__(new_instance_entity_inverse, slot_name, [s_id])
-            elif hasattr(slot, "inverse") and slot.inverse is not None:
-                object.__setattr__(new_instance_entity_inverse, slot.inverse, [s_id])
+            inverse_slot = find_slot_by_curie(inverse.relationship) if inverse else None
+            if inverse_slot:
+                object.__setattr__(new_instance_entity_inverse, inverse_slot[1], [inverse.target_entity_id])
+            elif inverse:
+                logger.info("No slot for inverse predicate_id: %s", inverse.relationship)
         except:
             logger.info("Unparseable predicate_id: %s", relationship)
             invalid_relationships.append(relationship)

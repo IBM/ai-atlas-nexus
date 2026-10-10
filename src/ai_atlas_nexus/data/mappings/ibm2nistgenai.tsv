@@ -7,7 +7,7 @@
 #mapping_set_description: Mapping from IBM AI Risk Atlas to NIST RMF Gen AI Profile
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: "2025-01-29"
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	confidence	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_label	confidence	comment
 ibmairisk:atlas-toxic-output	toxic output	skos:closeMatch	nistai:nist-dangerous-violent-or-hateful-content	"Dangerous, Violent, or Hateful Content"	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-toxic-output	toxic output	skos:closeMatch	nistai:nist-obscene-degrading-and-or-abusive-content	"Obscene, Degrading, and/or Abusive Content"	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-data-poisoning	data poisoning	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
@@ -46,12 +46,12 @@ ibmairisk:atlas-data-usage-rights	data usage restrictions	skos:broadMatch	nistai
 ibmairisk:atlas-data-usage-rights	data usage restrictions	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-lack-of-system-transparency	lack system transparency	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-impact-on-cultural-diversity	impact cultural diversity	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-plagiarism	impact education plagiarism	noMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
+ibmairisk:atlas-plagiarism	impact education plagiarism	skos:relatedMatch	sssom:NoTermFound		semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
 ibmairisk:atlas-improper-usage	improper usage	skos:broadMatch	nistai:nist-human-ai-configuration	Human-AI Configuration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	Defining the intended use of an AI system is not specifically addressed by NIST Gen AI Profile
 ibmairisk:atlas-personal-information-in-data	personal information in data	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-jailbreaking	jailbreaking	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-extraction-attack	extraction attack	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-impact-on-jobs	impact jobs	noMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
+ibmairisk:atlas-impact-on-jobs	impact jobs	skos:relatedMatch	sssom:NoTermFound		semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
 ibmairisk:atlas-data-acquisition	data acquisition restrictions	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-prompt-priming	prompt priming	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-reidentification	reidentification	skos:broadMatch	nistai:nist-data-privacy	Data Privacy	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
@@ -84,7 +84,7 @@ ibmairisk:atlas-impact-on-affected-communities	impact affected communities	skos:
 ibmairisk:atlas-spreading-toxicity	spreading toxicity	skos:broadMatch	nistai:nist-harmful-bias-and-homogenization	Harmful Bias and Homogenization	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-improper-retraining	improper retraining	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-inaccessible-training-data	inaccessible training data	skos:broadMatch	nistai:nist-value-chain-and-component-integration	Value Chain and Component Integration	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
-ibmairisk:atlas-bypassing-learning	impact education bypassing learning	noMatch			semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
+ibmairisk:atlas-bypassing-learning	impact education bypassing learning	skos:relatedMatch	sssom:NoTermFound		semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95	All social implications of AI do not map clearly to a specific NIST Gen AI risk
 ibmairisk:atlas-untraceable-attribution	untraceable attribution	skos:broadMatch	nistai:nist-information-integrity	Information Integrity	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-evasion-attack	evasion attack	skos:broadMatch	nistai:nist-information-security	Information Security	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
 ibmairisk:atlas-impact-on-the-environment	impact environment	skos:exactMatch	nistai:nist-environmental-impacts	Environmental Impacts	semapv:ManualMappingCuration	cgi@zurich.ibm.com	0.95
