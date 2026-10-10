@@ -32,6 +32,10 @@ def _ids(*args):
     return {record["id"] for record in _json(*args)}
 
 
+def _fail_to_load(*args):
+    raise AssertionError("the records were loaded")
+
+
 def test_help_lists_one_command_per_class():
     result = _run("query", "--help")
     assert result.exit_code == 0, result.output
@@ -43,10 +47,7 @@ def test_help_lists_one_command_per_class():
 
 
 def test_help_and_usage_errors_do_not_load_the_records(monkeypatch):
-    def fail():
-        raise AssertionError("the records were loaded")
-
-    monkeypatch.setattr(cli, "_container", fail)
+    monkeypatch.setattr(cli, "_container", _fail_to_load)
     assert _run("query", "--help").exit_code == 0
     assert _run("query", "risk", "--help").exit_code == 0
     assert _run("query", "risk", "--hasLifecycleStatus", "bogus").exit_code == 2
@@ -120,6 +121,25 @@ def test_query_by_id_that_finds_no_record_says_why(library):
     assert result.stderr == (
         f"The Risk with the id {risk.id} does not match --hasLifecycleStatus.\n"
     )
+
+
+def test_base_dir_adds_its_records_to_the_packaged_ones(tmp_path):
+    (tmp_path / "terms.yaml").write_text(
+        "entries:\n- id: example-term\n  name: Example term\n  type: Term\n"
+    )
+    base_dir = str(tmp_path)
+    assert _ids("--base-dir", base_dir, "term") == _ids("term") | {"example-term"}
+    assert _ids("--base-dir", base_dir, "risk") == _ids("risk")
+
+
+def test_base_dir_must_be_a_directory(tmp_path, monkeypatch):
+    monkeypatch.setattr(cli, "_container", _fail_to_load)
+    a_file = tmp_path / "terms.yaml"
+    a_file.write_text("entries: []\n")
+    for path in (tmp_path / "missing", a_file):
+        result = _run("query", "--base-dir", str(path), "risk")
+        assert result.exit_code == 2
+        assert "Invalid value for '--base-dir'" in result.output
 
 
 def test_bad_enum_value_exits_2():
