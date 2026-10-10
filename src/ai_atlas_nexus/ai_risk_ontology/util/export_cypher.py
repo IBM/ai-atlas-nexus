@@ -3,10 +3,11 @@ Generate Cypher code from linkml instance specifications.
 """
 
 # Standard Library
+import argparse
 import json
 from enum import Enum
 from os import listdir, makedirs
-from os.path import isfile, join
+from os.path import dirname, isfile, join
 from pathlib import Path
 from typing import Any
 
@@ -21,10 +22,11 @@ from ai_atlas_nexus.toolkit.data_utils import load_yamls_to_container
 from ai_atlas_nexus.toolkit.logging import configure_logger
 
 
-MAPPING_DIR = "src/ai_atlas_nexus/data/mappings/"
-OUTPUT_DIR = "graph_export/cypher/"
-SCHEMA_DIR = "src/ai_atlas_nexus/ai_risk_ontology/schema/"
+# The schema ships inside the package, so this default works from a clone and from an
+# installed package alike.
+SCHEMA_DIR = str(Path(__file__).resolve().parents[1] / "schema")
 SCHEMA_FILE = "ai-risk-ontology.yaml"
+OUTPUT_FILE = "graph_export/cypher/ai-risk-ontology.cypher"
 _log = configure_logger("ExportCypher")
 
 
@@ -256,18 +258,18 @@ def convert_entity_to_graph_node(
     return return_list
 
 
-def export_data_to_cypher(container: Container) -> str:
+def export_data_to_cypher(container: Container, schema_dir: str = SCHEMA_DIR) -> str:
     file_list = [
         file_name
-        for file_name in listdir(SCHEMA_DIR)
-        if isfile(join(SCHEMA_DIR, file_name)) and file_name.endswith('.yaml')
+        for file_name in listdir(schema_dir)
+        if isfile(join(schema_dir, file_name)) and file_name.endswith('.yaml')
     ]
     # LinkML auto-appends .yaml to importmap paths, so remove the extension
     importmap = {
-        Path(item).stem: str(Path(join(SCHEMA_DIR, Path(item).stem)).resolve())
+        Path(item).stem: str(Path(join(schema_dir, Path(item).stem)).resolve())
         for item in file_list
     }
-    schema_path = str(Path(join(SCHEMA_DIR, SCHEMA_FILE)).resolve())
+    schema_path = str(Path(join(schema_dir, SCHEMA_FILE)).resolve())
     schema_view = SchemaView(schema_path, merge_imports=True, importmap=importmap)
     linkml_types = get_linkml_types(schema_view)
 
@@ -311,10 +313,22 @@ def export_data_to_cypher(container: Container) -> str:
 
 
 if __name__ == "__main__":
-    ontology = load_yamls_to_container(MAPPING_DIR)
-    makedirs(OUTPUT_DIR, exist_ok=True)
-    with open(
-        OUTPUT_DIR + "ai-risk-ontology.cypher", "+tw", encoding="utf-8"
-    ) as output_file:
-        print(export_data_to_cypher(ontology), file=output_file)
-        output_file.close()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--schema-dir",
+        default=SCHEMA_DIR,
+        help="directory holding ai-risk-ontology.yaml and the modules it imports",
+    )
+    parser.add_argument(
+        "--data-dir",
+        default=None,
+        help="directory of extra YAML data to load beside the packaged knowledge graph",
+    )
+    parser.add_argument(
+        "--output", default=OUTPUT_FILE, help="Cypher file to write (default: %(default)s)"
+    )
+    args = parser.parse_args()
+    ontology = load_yamls_to_container(args.data_dir)
+    makedirs(dirname(args.output) or ".", exist_ok=True)
+    with open(args.output, "w", encoding="utf-8") as output_file:
+        print(export_data_to_cypher(ontology, args.schema_dir), file=output_file)
