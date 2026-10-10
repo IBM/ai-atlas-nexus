@@ -3,6 +3,8 @@ Generate Cypher code from linkml instance specifications.
 """
 
 # Standard Library
+import json
+from enum import Enum
 from os import listdir, makedirs
 from os.path import isfile, join
 from pathlib import Path
@@ -24,6 +26,23 @@ OUTPUT_DIR = "graph_export/cypher/"
 SCHEMA_DIR = "src/ai_atlas_nexus/ai_risk_ontology/schema/"
 SCHEMA_FILE = "ai-risk-ontology.yaml"
 _log = configure_logger("ExportCypher")
+
+
+def to_cypher_literal(value: Any) -> str:
+    """Write a value as a Cypher literal: a string, number, boolean or list of them.
+
+    Strings are escaped the way JSON escapes them, which Cypher reads the same way, so
+    quotes, backslashes and line breaks in the data cannot break a statement.
+    """
+    if isinstance(value, Enum):
+        value = value.value
+    if isinstance(value, bool):
+        return "true" if value else "false"
+    if isinstance(value, (int, float)):
+        return repr(value)
+    if isinstance(value, (list, tuple)):
+        return "[" + ", ".join(to_cypher_literal(item) for item in value) + "]"
+    return json.dumps(str(value), ensure_ascii=False)
 
 
 class GraphEdge:
@@ -51,7 +70,7 @@ class GraphEdge:
         return f"{self.label}: {self.source_id}/{self.source_label} -> {self.target_id}/{self.target_label}"
 
     def to_cypher(self) -> str:
-        return f'MATCH (src: {self.source_label} {{id: "{self.source_id}"}}) MATCH (dst: {self.target_label} {{id: "{self.target_id}"}}) MERGE (src)-[: {self.label}]->(dst);\n'
+        return f"MATCH (src: {self.source_label} {{id: {to_cypher_literal(self.source_id)}}}) MATCH (dst: {self.target_label} {{id: {to_cypher_literal(self.target_id)}}}) MERGE (src)-[: {self.label}]->(dst);\n"
 
 
 class GraphNode:
@@ -73,12 +92,15 @@ class GraphNode:
         self.edges = relations
 
     def to_cypher(self, with_relations: bool = True) -> str:
-        merge_node = "MERGE (node:" + self.label + ' {id: "' + self.id + '"})'
+        merge_node = (
+            "MERGE (node:" + self.label + " {id: " + to_cypher_literal(self.id) + "})"
+        )
         if self.properties:
             merge_node += (
                 " ON CREATE SET node += {"
                 + ",".join(
-                    f'{key}: "{value}"' for key, value in self.properties.items()
+                    f"{key}: {to_cypher_literal(value)}"
+                    for key, value in self.properties.items()
                 )
                 + "}"
             )
