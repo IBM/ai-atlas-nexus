@@ -20,6 +20,7 @@ from ai_atlas_nexus import AIAtlasNexus
 # Local
 from ai_atlas_nexus.ai_risk_ontology import Container
 from ai_atlas_nexus.toolkit.logging import configure_logger
+from ai_atlas_nexus.toolkit.mapping_utils import drop_no_match_rows
 
 
 MAP_DIR = "src/ai_atlas_nexus/data/mappings/"
@@ -51,7 +52,8 @@ def process_mapping_from_tsv_to_entity_mapping(file_name):
     Note this doesn't check validity of the mapping
     """
     tsv_file_name = join(MAP_DIR, file_name)
-    mapping_set_df = parse_sssom_table(file_path=tsv_file_name)
+    # A row that records no match adds nothing to the graph.
+    mapping_set_df = drop_no_match_rows(parse_sssom_table(file_path=tsv_file_name))
     ms = mapping_set_df.to_mapping_set()
     entity_maps = [
         EntityMap(
@@ -62,7 +64,6 @@ def process_mapping_from_tsv_to_entity_mapping(file_name):
             }
         )
         for item in ms.mappings
-        if item["predicate_id"] != "noMatch"
     ]
     return entity_maps
 

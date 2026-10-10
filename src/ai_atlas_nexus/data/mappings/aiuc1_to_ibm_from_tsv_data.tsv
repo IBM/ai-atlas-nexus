@@ -7,7 +7,7 @@
 #mapping_set_description: Mapping from AIUC-1 Framework to IBM Risk Atlas
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: '2026-02-12'
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_id	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_label	comment
 aiuc1:aiuc1-req-a001	Establish input data policy	skos:relatedMatch	ibm-risk-atlas:atlas-data-acquisition	Data acquisition restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
 aiuc1:aiuc1-req-a001	Establish input data policy	skos:relatedMatch	ibm-risk-atlas:atlas-data-privacy-rights	Data privacy rights alignment	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com
 aiuc1:aiuc1-req-a001	Establish input data policy	skos:relatedMatch	ibm-risk-atlas:atlas-data-usage	Data usage restrictions	semapv:ManualMappingCuration	0.8	elizabeth.daly@ie.ibm.com

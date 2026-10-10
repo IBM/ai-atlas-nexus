@@ -34,16 +34,18 @@ def load_curated_mappings(
             factors or requirements, that some curated files also mix in.
 
     Returns:
-        list[Mapping]: the curated mappings, with noMatch rows removed.
+        list[Mapping]: the curated mappings, without the rows that record no
+        match: negated mappings and mappings to sssom:NoTermFound.
     """
     from sssom.parsers import parse_sssom_table
 
+    from ai_atlas_nexus.toolkit.mapping_utils import drop_no_match_rows
+
     path = _MAPPINGS_DIR / filename
-    mapping_set = parse_sssom_table(file_path=str(path)).to_mapping_set()
+    msdf = drop_no_match_rows(parse_sssom_table(file_path=str(path)))
+    mapping_set = msdf.to_mapping_set()
     mappings = [
-        m
-        for m in mapping_set.mappings
-        if m.mapping_justification == justification and m.predicate_id != "noMatch"
+        m for m in mapping_set.mappings if m.mapping_justification == justification
     ]
     if risk_ids is not None:
         mappings = [

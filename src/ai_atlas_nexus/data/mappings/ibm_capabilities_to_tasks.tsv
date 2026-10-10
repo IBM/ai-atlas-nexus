@@ -9,7 +9,7 @@
 #mapping_set_description: Mapping from IBM AI Capabilities to AI Tasks
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: "2025-11-26"
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	confidence	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_label	confidence	comment
 ibm-ai-capabilities:ibm-cap-reading-comprehension	Reading Comprehension	nexus:requiredByTask	hf-ml-tasks:question-answering	Question Answering	semapv:ManualMappingCuration	elizabeth.daly@ie.ibm.com	0.95	Essential for understanding questions and context
 ibm-ai-capabilities:ibm-cap-contextual-understanding	Contextual Understanding	nexus:requiredByTask	hf-ml-tasks:question-answering	Question Answering	semapv:ManualMappingCuration	elizabeth.daly@ie.ibm.com	0.95	Critical for multi-turn QA and context-dependent questions
 ibm-ai-capabilities:ibm-cap-logical-reasoning	Logical Reasoning	nexus:requiredByTask	hf-ml-tasks:question-answering	Question Answering	semapv:ManualMappingCuration	elizabeth.daly@ie.ibm.com	0.85	Required for inference-based and reasoning questions
