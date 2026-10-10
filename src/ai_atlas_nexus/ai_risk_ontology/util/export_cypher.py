@@ -142,7 +142,11 @@ def is_relationship(
     slot_defs = [slot for slot in class_slots if slot.name == linkml_slot]
     if slot_defs:
         slot_def = slot_defs.pop()
-        if slot_def.range not in linkml_types:
+        # Enum values have no nodes of their own, so they are properties, like types.
+        if (
+            slot_def.range not in linkml_types
+            and slot_def.range not in schema_view.all_enums()
+        ):
             return True
     return False
 

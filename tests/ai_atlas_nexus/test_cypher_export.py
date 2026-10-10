@@ -27,3 +27,8 @@ def test_strings_are_escaped():
 def test_lists_are_cypher_lists(cypher):
     assert not re.search(r"\w+: \"\['", cypher), "a list was written as a Python repr"
     assert re.search(r'hasTypicalLocation: \["', cypher)
+
+
+def test_enum_values_are_properties(cypher):
+    assert "MATCH (dst: AdapterType " not in cypher
+    assert re.search(r'hasAdapterType: \["LORA"', cypher)
