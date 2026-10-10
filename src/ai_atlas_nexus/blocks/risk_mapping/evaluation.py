@@ -34,8 +34,10 @@ def load_curated_mappings(
             factors or requirements, that some curated files also mix in.
 
     Returns:
-        list[Mapping]: the curated mappings, with noMatch rows removed.
+        list[Mapping]: the curated mappings, without the rows that record no
+        match: negated mappings and mappings to sssom:NoTermFound.
     """
+    from sssom.constants import NO_TERM_FOUND, PREDICATE_MODIFIER_NOT
     from sssom.parsers import parse_sssom_table
 
     path = _MAPPINGS_DIR / filename
@@ -43,7 +45,9 @@ def load_curated_mappings(
     mappings = [
         m
         for m in mapping_set.mappings
-        if m.mapping_justification == justification and m.predicate_id != "noMatch"
+        if m.mapping_justification == justification
+        and m.predicate_modifier != PREDICATE_MODIFIER_NOT
+        and NO_TERM_FOUND not in (m.subject_id, m.object_id)
     ]
     if risk_ids is not None:
         mappings = [

@@ -122,9 +122,12 @@ class TestLoadCuratedMappings:
         )
 
     def test_drops_no_match_rows(self):
+        # this file records "no match" both ways: a negated mapping to the
+        # candidate it rejected, and a mapping to sssom:NoTermFound
         mappings = load_curated_mappings("ibm2owasp.tsv")
         assert mappings  # file has manual rows
-        assert all(m.predicate_id != "noMatch" for m in mappings)
+        assert all(m.predicate_modifier is None for m in mappings)
+        assert all(m.object_id != "sssom:NoTermFound" for m in mappings)
 
     def test_risk_ids_filters_out_non_risk_targets(self):
         # this subject also maps to MIT causal factors (not risks), which

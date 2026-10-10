@@ -13,6 +13,7 @@ from typing import Any, Type
 # Third Party
 from linkml_runtime.dumpers import YAMLDumper
 from pydantic import BaseModel
+from sssom.constants import NO_TERM_FOUND, PREDICATE_MODIFIER_NOT
 from sssom.parsers import parse_sssom_table
 
 from ai_atlas_nexus import AIAtlasNexus
@@ -62,7 +63,10 @@ def process_mapping_from_tsv_to_entity_mapping(file_name):
             }
         )
         for item in ms.mappings
-        if item["predicate_id"] != "noMatch"
+        # A negated mapping, or one to sssom:NoTermFound, records that there is no
+        # match, so it adds nothing to the graph.
+        if item["predicate_modifier"] != PREDICATE_MODIFIER_NOT
+        and NO_TERM_FOUND not in (item["subject_id"], item["object_id"])
     ]
     return entity_maps
 
