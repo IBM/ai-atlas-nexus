@@ -38,7 +38,6 @@ version = "1.2.5"
 source = { virtual = "." }
 dependencies = [
     { name = "chardet" },
-    { name = "cymple" },
     { name = "datasets" },
     { name = "inflect" },
     { name = "isort" },
@@ -91,7 +90,6 @@ requires-dist = [
     { name = "boto3", marker = "extra == 'bedrock'" },
     { name = "botocore", marker = "extra == 'bedrock'" },
     { name = "chardet", specifier = "==5.2.0" },
-    { name = "cymple" },
     { name = "datasets" },
     { name = "griffe-inherited-docstrings", marker = "extra == 'docs'" },
     { name = "griffe-pydantic", marker = "extra == 'docs'" },
@@ -1194,15 +1192,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/ab/c7/9f82321225b2554ffa22877e75905501589f89a6856ec460421cbefb0ecf/curies-0.15.0.tar.gz", hash = "sha256:969cbc7aa6668ee2a6d2be8f3b036c1d9c66d4860644fb517cfd80b7232626b2", size = 73297, upload-time = "2026-08-10T10:40:06.012Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/55/62/3bcf988945065eb9f6ce91d8f5ecdcab59093a539549c3d0d9ec777d75e5/curies-0.15.0-py3-none-any.whl", hash = "sha256:cea20aa3f9911aeb2c955ad03112dfe1df658a8c8b260336bb84595df6838001", size = 82584, upload-time = "2026-08-10T10:40:04.504Z" },
-]
-
-[[package]]
-name = "cymple"
-version = "0.12.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/03/ec/337f30befe8bffca9c82df7fa65e10f4ed93380e18d8b1d6910a7fbea930/cymple-0.12.0.tar.gz", hash = "sha256:25fffe86e723b369f2fb15a00a4f1fdc3962f2bb43fbe7a51e622b676a8dcf3d", size = 14749, upload-time = "2024-11-06T13:53:56.741Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/25/10/6b255e08be93b41242048d6ce267ee10dc2db15a524e0cef7c8d8bbd9e20/cymple-0.12.0-py2.py3-none-any.whl", hash = "sha256:783b21242accd4db320623afad7acf366cf84129f15125c2f5112f231c17ba7a", size = 11990, upload-time = "2024-11-06T13:53:55.266Z" },
 ]
 
 [[package]]
