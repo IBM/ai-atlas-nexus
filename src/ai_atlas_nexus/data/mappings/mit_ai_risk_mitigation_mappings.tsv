@@ -9,7 +9,7 @@
 # mapping_date: '2026-02-23'
 # mapping_set_description: Mapping from Draft AI Risk Mitigation Taxonomy to a set of controls
 # mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/mit-ai-risk-repository_ibm-risk-atlas.tsv
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_date	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_label	mapping_date	comment
 nexus:A0086_Future_of_Life_Institute2024	AI Safety Team	nexus:isCategorizedAs	mit-draft-ai-risk-mitigation:mit-draft-ai-risk-mitigation-group-1.1	Board Structure & Oversight	semapv:ManualMappingCuration	airisk@mit.edu	2026-02-23
 nexus:A0089_Future_of_Life_Institute2024	Board of directors	nexus:isCategorizedAs	mit-draft-ai-risk-mitigation:mit-draft-ai-risk-mitigation-group-1.1	Board Structure & Oversight	semapv:ManualMappingCuration	airisk@mit.edu	2026-02-23
 nexus:A0091_Future_of_Life_Institute2024	BOD formal risk committee	nexus:isCategorizedAs	mit-draft-ai-risk-mitigation:mit-draft-ai-risk-mitigation-group-1.1	Board Structure & Oversight	semapv:ManualMappingCuration	airisk@mit.edu	2026-02-23

@@ -4,11 +4,13 @@
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
 #   mit-ai-risk-repository: https://airisk.mit.edu/
+#   eticas-ai-risk-taxonomy: https://taxonomy.eticas.ai/
+#   orcid: https://orcid.org/
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_set_id: https://taxonomy.eticas.ai/mappings/eticas2atlas_nexus
 # mapping_set_title: Eticas AI Risk Taxonomy to IBM AI Atlas Nexus
 # mapping_set_version: 1.5.0
-# creator_id: https://eticas.ai
+# creator_label: Eticas (https://eticas.ai)
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	comment
 eticas-ai-risk-taxonomy:eticas-bias-fairness	bias fairness	skos:closeMatch	mit-ai-risk-repository:mit-ai-risk-domain-1		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928
 eticas-ai-risk-taxonomy:eticas-bias-fairness	bias fairness	skos:closeMatch	nist-ai-rmf:nist-harmful-bias-and-homogenization		semapv:ManualMappingCuration	orcid:0009-0001-8859-4928

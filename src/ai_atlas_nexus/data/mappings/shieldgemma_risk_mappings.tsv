@@ -8,7 +8,7 @@
 # mapping_date: '2025-10-15'
 # mapping_set_description: Mappings between ShieldGemma safety categories and IBM AI Risk Atlas risks
 # mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/shieldgemma-to-risk-atlas.tsv
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_id	mapping_date	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_label	mapping_date	comment
 shieldgemma-taxonomy:shieldgemma-sexually-explicit	Sexually Explicit Content	skos:relatedMatch	ibm-risk-atlas:atlas-harmful-output	Harmful output	semapv:ManualMappingCuration	0.90	elizabeth.daly@ie.ibm.com	2025-01-15	ShieldGemma sexually explicit content is a specific type of harmful output. Atlas harmful-output is broader (includes violence, dangerous statements). Related but not exact match.
 shieldgemma-taxonomy:shieldgemma-sexually-explicit	Sexually Explicit Content	skos:relatedMatch	ibm-risk-atlas:atlas-toxic-output	Toxic output	semapv:ManualMappingCuration	0.75	elizabeth.daly@ie.ibm.com	2025-01-15	Sexually explicit content can be considered toxic depending on context. Overlap exists but toxic output includes profanity, hate speech beyond sexual content.
 shieldgemma-taxonomy:shieldgemma-sexually-explicit	Sexually Explicit Content	skos:relatedMatch	ibm-risk-atlas:atlas-nonconsensual-use	Nonconsensual use	semapv:ManualMappingCuration	0.65	elizabeth.daly@ie.ibm.com	2025-01-15	ShieldGemma can detect explicit content used in deepfakes or nonconsensual generation contexts.
