@@ -7,6 +7,7 @@ MAKEFLAGS += --warn-undefined-variables
 SCHEMA_NAME = ai-risk-ontology
 LINKML_SCHEMA_NAME = ai-risk-ontology
 SOURCE_SCHEMA_PATH = src/ai_atlas_nexus/ai_risk_ontology/schema
+LINKML_GENERATORS = .linkml/generators.yaml
 KG_DATA_PATH = src/ai_atlas_nexus/data/knowledge_graph
 DATAMODEL_PATH = src/ai_atlas_nexus/ai_risk_ontology/datamodel
 
@@ -29,6 +30,7 @@ help: status
 	@echo "make regenerate_documentation -- regenerate the documentation"
 	@echo "make regenerate_graph_output -- export the graph with all instances"
 	@echo "make regenerate_owl_schema -- export the schema as OWL"
+	@echo "make regenerate_project -- regenerate the LinkML project artefacts in project/ (targets of https://w3id.org/ai-atlas-nexus)"
 	@echo "make regenerate_risk_atlas_as_tex -- export the IBM AI risk atlas as .tex"
 	@echo "make regenerate_cypher_code -- export the graph with all instances to Cypher queries"
 	@echo "make regenerate_graph_as_sigma_js_json -- export the graph with all instances to a Sigma js JSON"
@@ -59,6 +61,16 @@ regenerate_owl_schema:
 	--no-use-native-uris \
 	--default-permissible-value-type 'http://www.w3.org/2004/02/skos/core#Concept' \
 	> graph_export/owl/${LINKML_SCHEMA_NAME}_schema.ttl
+
+# LinkML project artefacts in project/: the redirect targets of the persistent
+# identifiers under https://w3id.org/ai-atlas-nexus/. Which generators run is
+# configured in ${LINKML_GENERATORS}; add one there to publish it.
+# The merged schema is what downstream projects import as nexus:ai-risk-ontology.
+regenerate_project:
+	mkdir -p project/linkml project/shacl
+	gen-linkml --mergeimports -f yaml -o project/linkml/${LINKML_SCHEMA_NAME}.merged.linkml.yaml $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
+	gen-project --config-file ${LINKML_GENERATORS} -d project $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
+	gen-shacl project/linkml/${LINKML_SCHEMA_NAME}.merged.linkml.yaml > project/shacl/${LINKML_SCHEMA_NAME}.shacl.ttl
 
 regenerate_risk_atlas_as_tex:
 	python ./src/ai_atlas_nexus/ai_risk_ontology/util/export_risk_atlas_tex.py
