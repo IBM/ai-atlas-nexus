@@ -4,6 +4,7 @@ ignore: |
   .pre-commit-config.yaml
   docs/.nav.yml
   mkdocs.yml
+  project/
 
 extends: relaxed
 
