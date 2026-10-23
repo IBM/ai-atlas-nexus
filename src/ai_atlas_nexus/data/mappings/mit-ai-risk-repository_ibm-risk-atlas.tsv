@@ -3,11 +3,12 @@
 #   mit-ai-risk-repository: https://airisk.mit.edu/
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
+#   mit-ai-risk-repository-causal: https://airisk.mit.edu/#
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2025-07-07'
 # mapping_set_description: Mapping from IBM AI Risk Atlas to MIT AI risk repository
 # mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/mit-ai-risk-repository_ibm-risk-atlas.tsv
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_id	mapping_date	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_label	mapping_date	comment
 ibm-risk-atlas:atlas-attribute-inference-attack	Attribute inference attack	skos:relatedMatch	mit-ai-risk-repository-causal:mit-ai-causal-risk-entity-human	Human	semapv:ManualMappingCuration	pslat@mit.edu	2025-03-31	Mapping extracted from MIT AI risk repository
 ibm-risk-atlas:atlas-attribute-inference-attack	Attribute inference attack	skos:relatedMatch	mit-ai-risk-repository-causal:mit-ai-causal-risk-intent-intentional	Intentional	semapv:ManualMappingCuration	pslat@mit.edu	2025-03-31	Mapping extracted from MIT AI risk repository
 ibm-risk-atlas:atlas-attribute-inference-attack	Attribute inference attack	skos:relatedMatch	mit-ai-risk-repository-causal:mit-ai-causal-risk-timing-post-deployment	Post -deployment	semapv:ManualMappingCuration	pslat@mit.edu	2025-03-31	Mapping extracted from MIT AI risk repository

@@ -1,0 +1,47 @@
+name: Validate SSSOM mapping files
+
+on:
+  pull_request:
+    paths:
+      - src/ai_atlas_nexus/data/mappings/**
+      - src/ai_atlas_nexus/ai_risk_ontology/util/lifting/check_mapping_prefixes.py
+      - .github/workflows/validate-mappings.yaml
+  push:
+    branches:
+      - main
+    paths:
+      - src/ai_atlas_nexus/data/mappings/**
+      - src/ai_atlas_nexus/ai_risk_ontology/util/lifting/check_mapping_prefixes.py
+      - .github/workflows/validate-mappings.yaml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install sssom
+        run: pip install "sssom==0.4.21"
+
+      - name: Validate each mapping file with sssom
+        run: |
+          status=0
+          for f in src/ai_atlas_nexus/data/mappings/*.tsv; do
+            echo "::group::$f"
+            sssom validate "$f" || status=1
+            echo "::endgroup::"
+          done
+          exit $status
+
+      - name: Check that every identifier is a CURIE with a declared prefix
+        run: python src/ai_atlas_nexus/ai_risk_ontology/util/lifting/check_mapping_prefixes.py

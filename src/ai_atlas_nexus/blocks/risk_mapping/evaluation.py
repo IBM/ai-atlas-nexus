@@ -34,16 +34,22 @@ def load_curated_mappings(
             factors or requirements, that some curated files also mix in.
 
     Returns:
-        list[Mapping]: the curated mappings, with noMatch rows removed.
+        list[Mapping]: the curated mappings, without the rows that record no
+        match: negated mappings and mappings to sssom:NoTermFound.
     """
+    from sssom.constants import NO_TERM_FOUND, PREDICATE_MODIFIER_NOT
     from sssom.parsers import parse_sssom_table
 
     path = _MAPPINGS_DIR / filename
     mapping_set = parse_sssom_table(file_path=str(path)).to_mapping_set()
+    # predicate_modifier is a PredicateModifierEnum, which linkml-runtime
+    # before 1.12 never counts as equal to a string, so compare its text
     mappings = [
         m
         for m in mapping_set.mappings
-        if m.mapping_justification == justification and m.predicate_id != "noMatch"
+        if m.mapping_justification == justification
+        and str(m.predicate_modifier) != PREDICATE_MODIFIER_NOT
+        and NO_TERM_FOUND not in (m.subject_id, m.object_id)
     ]
     if risk_ids is not None:
         mappings = [
