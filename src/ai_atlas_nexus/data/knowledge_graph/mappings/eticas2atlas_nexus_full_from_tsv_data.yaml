@@ -88,7 +88,7 @@ entries:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   - id: mit-ai-risk-subdomain-2.2
-    narrow_mappings:
+    broad_mappings:
       - eticas-data-poisoning
     type: Risk
   - id: eticas-data-poisoning
@@ -96,7 +96,7 @@ entries:
       - nist-information-security
     type: Risk
   - id: nist-information-security
-    narrow_mappings:
+    broad_mappings:
       - eticas-data-poisoning
     type: Risk
   - id: eticas-disparate-impact-protected-groups
@@ -208,7 +208,7 @@ entries:
       - nist-environmental-impacts
     type: Risk
   - id: nist-environmental-impacts
-    narrow_mappings:
+    broad_mappings:
       - eticas-hardware-efficiency
     type: Risk
   - id: eticas-harmful-content-toxicity
@@ -288,7 +288,7 @@ entries:
       - mit-ai-risk-subdomain-6.6
     type: Risk
   - id: mit-ai-risk-subdomain-6.6
-    narrow_mappings:
+    broad_mappings:
       - eticas-inference-energy-consumption
     type: Risk
   - id: eticas-inference-energy-consumption
@@ -296,7 +296,7 @@ entries:
       - nist-environmental-impacts
     type: Risk
   - id: nist-environmental-impacts
-    narrow_mappings:
+    broad_mappings:
       - eticas-inference-energy-consumption
     type: Risk
   - id: eticas-jailbreaking
@@ -312,7 +312,7 @@ entries:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   - id: mit-ai-risk-subdomain-2.2
-    narrow_mappings:
+    broad_mappings:
       - eticas-jailbreaking
     type: Risk
   - id: eticas-limited-auditability
@@ -356,7 +356,7 @@ entries:
       - nist-cbrn-information-or-capabilities
     type: Risk
   - id: nist-cbrn-information-or-capabilities
-    narrow_mappings:
+    broad_mappings:
       - eticas-misuse-beyond-intended-purpose
     type: Risk
   - id: eticas-model-extraction
@@ -372,7 +372,7 @@ entries:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   - id: mit-ai-risk-subdomain-2.2
-    narrow_mappings:
+    broad_mappings:
       - eticas-model-extraction
     type: Risk
   - id: eticas-model-extraction
@@ -380,7 +380,7 @@ entries:
       - nist-information-security
     type: Risk
   - id: nist-information-security
-    narrow_mappings:
+    broad_mappings:
       - eticas-model-extraction
     type: Risk
   - id: eticas-output-drift
@@ -388,7 +388,7 @@ entries:
       - mit-ai-risk-subdomain-7.3
     type: Risk
   - id: mit-ai-risk-subdomain-7.3
-    narrow_mappings:
+    broad_mappings:
       - eticas-output-drift
     type: Risk
   - id: eticas-output-inconsistency
@@ -396,7 +396,7 @@ entries:
       - mit-ai-risk-subdomain-7.3
     type: Risk
   - id: mit-ai-risk-subdomain-7.3
-    narrow_mappings:
+    broad_mappings:
       - eticas-output-inconsistency
     type: Risk
   - id: eticas-performance-equity
@@ -484,7 +484,7 @@ entries:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   - id: mit-ai-risk-subdomain-2.2
-    narrow_mappings:
+    broad_mappings:
       - eticas-prompt-injection
     type: Risk
   - id: eticas-prompt-injection
@@ -492,7 +492,7 @@ entries:
       - nist-information-security
     type: Risk
   - id: nist-information-security
-    narrow_mappings:
+    broad_mappings:
       - eticas-prompt-injection
     type: Risk
   - id: eticas-re-identification
@@ -532,7 +532,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
     type: Risk
   - id: mit-ai-risk-subdomain-7.4
-    narrow_mappings:
+    broad_mappings:
       - eticas-right-to-explanation-contestation
     type: Risk
   - id: eticas-scope-creep-goal-misalignment
@@ -556,7 +556,7 @@ entries:
       - mit-ai-risk-subdomain-1.1
     type: Risk
   - id: mit-ai-risk-subdomain-1.1
-    narrow_mappings:
+    broad_mappings:
       - eticas-sentiment-fairness
     type: Risk
   - id: eticas-stakeholder-communication
@@ -636,7 +636,7 @@ entries:
       - mit-ai-risk-subdomain-6.6
     type: Risk
   - id: mit-ai-risk-subdomain-6.6
-    narrow_mappings:
+    broad_mappings:
       - eticas-training-resource-consumption
     type: Risk
   - id: eticas-training-resource-consumption
@@ -644,7 +644,7 @@ entries:
       - nist-environmental-impacts
     type: Risk
   - id: nist-environmental-impacts
-    narrow_mappings:
+    broad_mappings:
       - eticas-training-resource-consumption
     type: Risk
   - id: atlas-unexplainable-output
