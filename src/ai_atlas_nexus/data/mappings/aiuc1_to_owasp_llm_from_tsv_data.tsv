@@ -7,7 +7,7 @@
 #mapping_set_description: Mapping from AIUC-1 Framework to OWASP Top 10 for LLM Applications 2025
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: '2026-02-16'
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_id	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_label	comment
 aiuc1:aiuc1-req-b001	Third-party testing of adversarial robustness	skos:relatedMatch	owasp-llm-2.0:llm01-prompt-injection	Prompt Injection	semapv:ManualMappingCuration	0.85	elizabeth.daly@ie.ibm.com
 aiuc1:aiuc1-req-b002	Detect adversarial input	skos:relatedMatch	owasp-llm-2.0:llm01-prompt-injection	Prompt Injection	semapv:ManualMappingCuration	0.85	elizabeth.daly@ie.ibm.com
 aiuc1:aiuc1-req-b005	Implement real-time input filtering	skos:relatedMatch	owasp-llm-2.0:llm01-prompt-injection	Prompt Injection	semapv:ManualMappingCuration	0.85	elizabeth.daly@ie.ibm.com

@@ -3,6 +3,7 @@
 #   owasp-llm-2.0: https://genai.owasp.org/llmrisk/
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
+#   orcid: https://orcid.org/
 # mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/owasp_asi2owasp_llm.tsv
 # mapping_set_description: Mapping of OWASP Top 10 for Agentic Applications 2026 to OWASP Top 10 for LLM Applications 2025
 # license: https://www.apache.org/licenses/LICENSE-2.0.html

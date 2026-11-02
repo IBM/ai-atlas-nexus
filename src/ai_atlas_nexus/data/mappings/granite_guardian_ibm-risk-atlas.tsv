@@ -7,7 +7,7 @@
 # mapping_date: '2025-07-22'
 # mapping_set_description: Mappings between IBM Granite Guardian dimensions and IBM AI Risk Atlas risks
 # mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/granite_guardian_risk_mappings.tsv
-subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_id	mapping_date	comment
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	author_label	mapping_date	comment
 ibm-granite-guardian:granite-guardian-harm	Harm	skos:relatedMatch	ibm-risk-atlas:atlas-harmful-output	Harmful output	semapv:ManualMappingCuration		ingevejs@ie.ibm.com
 ibm-granite-guardian:granite-social-bias	Social Bias	skos:relatedMatch	ibm-risk-atlas:atlas-output-bias	Output bias	semapv:ManualMappingCuration		ingevejs@ie.ibm.com
 ibm-granite-guardian:granite-profanity	Profanity	skos:relatedMatch	ibm-risk-atlas:atlas-toxic-output	Toxic output	semapv:ManualMappingCuration		ingevejs@ie.ibm.com
