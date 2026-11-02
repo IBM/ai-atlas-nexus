@@ -1,0 +1,145 @@
+entries:
+  - id: ast01-malicious-skills
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast01-malicious-skills
+    isCategorizedAs:
+      - csa-maestro-layer-4-deployment-and-infrastructure
+    type: Risk
+  - id: ast01-malicious-skills
+    isCategorizedAs:
+      - csa-maestro-layer-5-evaluation-and-observability
+    type: Risk
+  - id: ast01-malicious-skills
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast01-malicious-skills
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    isCategorizedAs:
+      - csa-maestro-layer-4-deployment-and-infrastructure
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk
+  - id: ast03-over-privileged-skills
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast03-over-privileged-skills
+    isCategorizedAs:
+      - csa-maestro-layer-4-deployment-and-infrastructure
+    type: Risk
+  - id: ast03-over-privileged-skills
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast03-over-privileged-skills
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk
+  - id: ast04-insecure-metadata
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast04-insecure-metadata
+    isCategorizedAs:
+      - csa-maestro-layer-4-deployment-and-infrastructure
+    type: Risk
+  - id: ast04-insecure-metadata
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast04-insecure-metadata
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    isCategorizedAs:
+      - csa-maestro-layer-2-data-operations
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk
+  - id: ast06-weak-isolation
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast06-weak-isolation
+    isCategorizedAs:
+      - csa-maestro-layer-4-deployment-and-infrastructure
+    type: Risk
+  - id: ast06-weak-isolation
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast07-update-drift
+    isCategorizedAs:
+      - csa-maestro-layer-4-deployment-and-infrastructure
+    type: Risk
+  - id: ast07-update-drift
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast07-update-drift
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk
+  - id: ast08-poor-scanning
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast08-poor-scanning
+    isCategorizedAs:
+      - csa-maestro-layer-5-evaluation-and-observability
+    type: Risk
+  - id: ast08-poor-scanning
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-5-evaluation-and-observability
+    type: Risk
+  - id: ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    isCategorizedAs:
+      - csa-maestro-layer-6-security-and-compliance
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    isCategorizedAs:
+      - csa-maestro-layer-7-agent-ecosystem
+    type: Risk

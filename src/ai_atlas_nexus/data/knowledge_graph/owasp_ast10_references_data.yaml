@@ -1,0 +1,760 @@
+# External references cited by the OWASP Agentic Skills Top 10 whitepaper (V1)
+documents:
+  # --- Bibliography: References sections, AST01-AST10 ---
+  - id: owasp-ast10-ref-snyk-toxicskills
+    name: "ToxicSkills: malicious AI agent skills on ClawHub"
+    description: >-
+      Snyk research corpus on malicious agent skills published to public skill
+      marketplaces. Cited by nine of the ten AST risks.
+    author: Snyk
+    url: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+
+  - id: owasp-ast10-ref-checkpoint-caught-in-the-hook
+    name: "Caught in the Hook: RCE and API token exfiltration through Claude Code project files"
+    description: >-
+      Analysis of repository configuration files as execution paths, covering
+      CVE-2025-59536 and CVE-2026-21852.
+    author: Check Point Research
+    url: https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files/
+
+  - id: owasp-ast10-ref-antiy-clawhavoc
+    name: ClawHavoc campaign analysis
+    description: >-
+      Antiy CERT analysis of a large-scale poisoning campaign targeting the OpenClaw skill
+      market for AI agents.
+    author: Antiy CERT
+    url: https://www.antiy.net/Download/clawhavoc-analysis-of-large-scale-poisoning-campaign-targeting-the-openclaw-skill-market-for-ai-agents.pdf
+
+  - id: owasp-ast10-ref-dirf-arxiv-2508-01997
+    name: "DIRF: A Framework for Digital Identity Protection and Clone Governance in Agentic AI Systems"
+    description: Framework for protecting agent identity artifacts against cloning and impersonation.
+    author: Atta et al.
+    url: https://arxiv.org/abs/2508.01997
+
+  - id: owasp-ast10-ref-csa-dirf
+    name: "Introducing DIRF: A Comprehensive Framework for Protecting Digital Identities in Agentic AI Systems"
+    description: Cloud Security Alliance introduction to the DIRF framework.
+    author: Cloud Security Alliance
+    url: https://cloudsecurityalliance.org/blog/2025/08/27/introducing-dirf-a-comprehensive-framework-for-protecting-digital-identities-in-agentic-ai-systems
+
+  - id: owasp-ast10-ref-usenix-2026-malicious-agent-skills
+    name: '"Do Not Mention This to the User": Detecting and Understanding Malicious Agent Skills in the Wild'
+    description: >-
+      USENIX Security 2026 measurement study of 98,380 skills across public marketplaces.
+    author: Liu et al.
+    url: https://arxiv.org/abs/2602.06547
+
+  - id: owasp-ast10-ref-usenix-2025-package-hallucinations
+    name: We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs
+    description: USENIX Security 2025 study underpinning the slopsquatting attack pattern.
+    author: Spracklen et al.
+    url: https://www.usenix.org/conference/usenixsecurity25/presentation/spracklen
+
+  - id: owasp-ast10-ref-docker-running-containers
+    name: "Docker Docs: Running containers"
+    description: Reference for the container-isolation flags used in the behavioral sandboxing example.
+    author: Docker
+    url: https://docs.docker.com/engine/containers/run/
+
+  - id: owasp-ast10-ref-qsaf-arxiv-2507-15330
+    name: "QSAF: A Novel Mitigation Framework for Cognitive Degradation in Agentic AI"
+    description: >-
+      Framework documenting cognitive degradation as a six-stage internal breakdown in
+      agentic systems.
+    author: Atta, H. et al.
+    url: https://arxiv.org/abs/2507.15330
+
+  - id: owasp-ast10-ref-csa-cdr
+    name: "Introducing Cognitive Degradation Resilience (CDR): A Framework for Safeguarding Agentic AI Systems from Systemic Collapse"
+    description: Cloud Security Alliance introduction to the CDR framework.
+    author: Cloud Security Alliance
+    url: https://cloudsecurityalliance.org/blog/2025/11/10/introducing-cognitive-degradation-resilience-cdr-a-framework-for-safeguarding-agentic-ai-systems-from-systemic-collapse
+
+  - id: owasp-ast10-ref-openapi-x-agent-trust
+    name: "OpenAPI Extensions Registry: x-agent-trust"
+    description: Registered OpenAPI extension for declaring agent trust metadata.
+    author: OpenAPI Initiative
+    url: https://spec.openapis.org/registry/extension/x-agent-trust.html
+
+  - id: owasp-ast10-ref-ietf-agent-payment-trust
+    name: "IETF Internet-Draft: draft-sharif-agent-payment-trust"
+    description: Internet-Draft on trust establishment for agent payments.
+    author: IETF
+    url: https://datatracker.ietf.org/doc/draft-sharif-agent-payment-trust/
+
+  - id: owasp-ast10-ref-rfc-7518-es256
+    name: "JSON Web Algorithms: ES256 (RFC 7518 section 3.1)"
+    description: Signature algorithm reference for skill provenance signing.
+    author: IETF
+    url: https://datatracker.ietf.org/doc/html/rfc7518#section-3.1
+
+  - id: owasp-ast10-ref-trail-of-bits-skill-distribution
+    name: The Sorry State of Skill Distribution
+    description: >-
+      Trail of Bits research bypassing every skill scanner tested and arguing that
+      automated scanning cannot replace supply-chain judgment.
+    author: Trail of Bits
+    url: https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/
+
+  - id: owasp-ast10-ref-trail-of-bits-attack-code
+    name: "trailofbits/overtly-malicious-skills"
+    description: Attack code accompanying the Trail of Bits skill distribution research.
+    author: Trail of Bits
+    url: https://github.com/trailofbits/overtly-malicious-skills
+
+  - id: owasp-ast10-ref-snyk-leaky-skills
+    name: "Snyk: 280+ leaky skills"
+    description: >-
+      Research on OpenClaw skills leaking credentials and personally identifiable
+      information beyond their declared function.
+    author: Snyk
+    url: https://snyk.io/blog/openclaw-skills-credential-leaks-research/
+
+  - id: owasp-ast10-ref-cisco-state-of-ai-security-2026
+    name: Cisco State of AI Security 2026
+    description: >-
+      Survey reporting that 83% of organizations planned to deploy agentic AI while only
+      29% felt ready to use those technologies securely.
+    author: Cisco
+    url: https://blogs.cisco.com/ai/cisco-state-of-ai-security-2026-report
+
+  - id: owasp-ast10-ref-lpci-arxiv-2507-10457
+    name: "Logic-layer Prompt Control Injection (LPCI): A Novel Security Vulnerability Class in Agentic Systems"
+    description: >-
+      Research on encoded, delayed, and conditionally-triggered payloads planted in memory,
+      vector stores, or tool outputs and treated as operator-level instructions.
+    author: Atta et al.
+    url: https://arxiv.org/abs/2507.10457
+
+  - id: owasp-ast10-ref-laaf-arxiv-2603-17239
+    name: "LAAF: Logic-layer Automated Attack Framework"
+    description: >-
+      A systematic red-teaming methodology for LPCI vulnerabilities in agentic large
+      language model systems.
+    author: Atta et al.
+    url: https://arxiv.org/pdf/2603.17239
+
+  - id: owasp-ast10-ref-microsoft-hidden-boundaries
+    name: The hidden boundaries of modern AI
+    description: Microsoft developer blog post cited in the AST03 references.
+    author: Microsoft Tech Community
+    url: https://techcommunity.microsoft.com/blog/educatordeveloperblog/the-hidden-boundaries-of-modern-ai/4522995
+
+  - id: owasp-ast10-ref-hf-genai-incidents
+    name: "genai-incidents dataset"
+    description: Public dataset of generative-AI incidents cited in the AST03 references.
+    author: emmanuelgjr
+    url: https://huggingface.co/datasets/emmanuelgjr/genai-incidents
+
+  - id: owasp-ast10-ref-snyk-toxicskills-goof
+    name: "snyk-labs/toxicskills-goof"
+    description: >-
+      Deliberately vulnerable skill repository documenting ASCII smuggling, base64-encoded
+      payloads, and cross-runtime malicious SKILL.md proofs-of-concept.
+    author: Snyk Labs
+    url: https://github.com/snyk-labs/toxicskills-goof
+
+  - id: owasp-ast10-ref-snyk-skill-md-to-shell-access
+    name: From SKILL.md to Shell Access
+    description: Snyk write-up of shell access obtained through SKILL.md prose alone.
+    author: Snyk
+    url: https://snyk.io/articles/skill-md-shell-access/
+
+  - id: owasp-ast10-ref-anthropic-agent-skills
+    name: "Agent Skills: security considerations"
+    description: >-
+      Vendor security guidance warning that skills fetching data from external URLs pose
+      particular risk and that even trustworthy skills can be compromised if their external
+      dependencies change over time.
+    author: Anthropic
+    url: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
+
+  - id: owasp-ast10-ref-air-security-story-of-skills
+    name: The Story of Skills
+    description: >-
+      Proof-of-concept showing how a skill pointing to malicious external instructions can
+      lead to full agent compromise.
+    author: Air Security
+    url: https://www.air.security/blog-posts/the-story-of-skills
+
+  - id: owasp-ast10-ref-securityscorecard-exposed-openclaw
+    name: How Exposed OpenClaw Deployments Turn Agentic AI Into an Attack Surface
+    description: >-
+      Exposure study reporting more than 40,000 exposed instances in 24 hours, 35.4% of them
+      vulnerable to remote code execution at publication.
+    author: SecurityScorecard
+    url: https://securityscorecard.com/blog/how-exposed-openclaw-deployments-turn-agentic-ai-into-an-attack-surface/
+
+  - id: owasp-ast10-ref-microsoft-defender-openclaw
+    name: "Running OpenClaw Safely: Identity, Isolation, and Runtime Risk"
+    description: >-
+      Advisory warning that the agent should be treated as untrusted code execution with
+      persistent credentials and is not appropriate to run on a standard personal or
+      enterprise workstation.
+    author: Microsoft Security
+    url: https://www.microsoft.com/en-us/security/blog/2026/02/19/running-openclaw-safely-identity-isolation-runtime-risk/
+
+  - id: owasp-ast10-ref-nvd-cve-2026-32025
+    name: "CVE-2026-32025: agent gateway WebSocket origin-check and authentication-throttling bypass"
+    description: National Vulnerability Database record for the ClawJacked vulnerability (CVSS 7.5).
+    author: NVD
+    url: https://nvd.nist.gov/vuln/detail/CVE-2026-32025
+
+  - id: owasp-ast10-ref-bitdefender-135k-exposed
+    name: 135,000+ OpenClaw AI Agents Exposed Online as Misconfiguration Fuels Takeover Risk
+    description: Report on internet-facing agent instances exposed through misconfiguration.
+    author: Bitdefender
+    url: https://www.bitdefender.com/en-gb/blog/hotforsecurity/135k-openclaw-ai-agents-exposed-online
+
+  - id: owasp-ast10-ref-bitdefender-enterprise-advisory
+    name: "Technical Advisory: OpenClaw Exploitation in Enterprise Networks"
+    description: >-
+      Advisory reporting hundreds of agent deployments on corporate machines and more than
+      800 malicious skills identified.
+    author: Bitdefender
+    url: https://www.bitdefender.com/en-gb/blog/businessinsights/technical-advisory-openclaw-exploitation-enterprise-networks
+
+  - id: owasp-ast10-ref-agent-threat-rules
+    name: "Agent Threat Rules: open detection standard for AI-agent threats"
+    description: Shareable rule format for agent-specific behaviors and indicators.
+    author: Agent Threat Rules project
+    url: https://github.com/Agent-Threat-Rule/agent-threat-rules
+
+  - id: owasp-ast10-ref-snyk-scanner-false-security
+    name: Why Your Skill Scanner Is Just False Security
+    description: >-
+      Reports that 13.4% of the ToxicSkills corpus contained critical security issues, most
+      of which simple pattern matching did not catch.
+    author: Snyk
+    url: https://snyk.io/blog/skill-scanner-false-security/
+
+  - id: owasp-ast10-ref-nvidia-skillspector
+    name: NVIDIA SkillSpector
+    description: >-
+      Open-source, agent-skill-aware security scanner combining AST-based dangerous-code
+      detection, taint tracking, and YARA with optional LLM semantic evaluation across 64
+      patterns in 16 categories.
+    author: NVIDIA
+    url: https://github.com/NVIDIA/SkillSpector
+
+  - id: owasp-ast10-ref-adversa-scanner-bypass
+    name: "A Hole in Every One: Bypassing the Open Source AI Skill Scanners"
+    description: >-
+      Security analysis finding that open-source skill scanners are often bypassed by simple
+      obfuscation such as non-standard encoding in SKILL.md.
+    author: Adversa AI
+    url: https://adversa.ai/blog/agent-skill-scanners-bypass-eight-tested/
+
+  - id: owasp-ast10-ref-alice-poisoned-python-bytes
+    name: Poisoned Python Bytes and Malicious Caches
+    description: Analysis of malicious logic hidden in compiled Python bytecode caches.
+    author: Alice
+    url: https://alice.io/blog/poisoned-python-bytes-malicious-caches
+
+  - id: owasp-ast10-ref-python-cached-bytecode
+    name: "Python documentation: cached bytecode invalidation"
+    description: Reference for how the Python import system validates cached bytecode.
+    author: Python Software Foundation
+    url: https://docs.python.org/3/reference/import.html#cached-bytecode-invalidation
+
+  - id: owasp-ast10-ref-hofer-prompt-injection-arxiv-2606-10525
+    name: Assessing Automated Prompt Injection Attacks in Agentic Environments
+    description: Study of automated prompt injection attacks against agentic environments.
+    author: Hofer, Debenedetti, and Tramer
+    url: https://arxiv.org/abs/2606.10525
+
+  - id: owasp-ast10-ref-carlini-wagner-2017
+    name: "Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods"
+    description: >-
+      AISec 2017 result underpinning the requirement to evaluate detectors against an
+      adaptive adversary.
+    author: Carlini and Wagner
+    url: https://arxiv.org/abs/1705.07263
+
+  - id: owasp-ast10-ref-tramer-adaptive-attacks-2020
+    name: On Adaptive Attacks to Adversarial Example Defenses
+    description: >-
+      NeurIPS 2020 result showing that non-adaptive evaluation overstates a detector's
+      robustness.
+    author: Tramer, Carlini, Brendel, and Madry
+    url: https://arxiv.org/abs/2002.08347
+
+  - id: owasp-ast10-ref-nist-ai-rmf
+    name: NIST AI Risk Management Framework
+    description: Cited under AST09 for the GOVERN function.
+    author: NIST
+    url: https://www.nist.gov/itl/ai-risk-management-framework
+
+  - id: owasp-ast10-ref-eu-ai-act-2024-1689
+    name: "Regulation (EU) 2024/1689, Articles 12 and 113"
+    description: >-
+      Article 12 requires high-risk AI systems to support automatic event logging over the
+      system's lifetime. Under Article 113 most of the Regulation applies from 2 August
+      2026, while Article 6(1) systems and corresponding obligations apply from 2 August
+      2027. Cited in the AST09 audit-logging guidance.
+    author: European Union
+    url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+
+  - id: owasp-ast10-ref-ast10-issue-44
+    name: "OWASP Agentic Skills Top 10 issue #44: cross-execution chain linkage for admission receipts"
+    description: >-
+      Proposed extension adding parent_action_ref to admission receipts, including fan-in
+      join handling. A proposal, not a finalized project requirement.
+    author: OWASP Agentic Skills Top 10 Project
+    url: https://github.com/OWASP/www-project-agentic-skills-top-10/issues/44
+
+  - id: owasp-ast10-ref-owasp-mcp-top-10
+    name: OWASP MCP Top 10
+    description: OWASP project covering Model Context Protocol server risks.
+    author: OWASP
+    url: https://owasp.org/www-project-mcp-top-10/
+
+  - id: owasp-ast10-ref-owasp-top-ten-project
+    name: OWASP Top Ten
+    description: Cited under AST08 for A6 Security Misconfiguration.
+    author: OWASP
+    url: https://owasp.org/www-project-top-ten/
+
+  - id: owasp-ast10-ref-owasp-top-10-a08-2021
+    name: "A08:2021 Software and Data Integrity Failures"
+    description: >-
+      OWASP Top 10 (2021) category mapped from AST04, covering integrity failures in
+      software and data updates and critical data.
+    author: OWASP
+    url: https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/
+
+  # --- OWASP AISVS v1.0 controls cited in the OWASP Mapping blocks ---
+  - id: owasp-aisvs-v1.0-c2.1.2
+    name: AISVS v1.0-C2.1.2
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C2.1.2 (canonicalization and smuggling defenses), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c2.1.3
+    name: AISVS v1.0-C2.1.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C2.1.3 (screen untrusted inputs), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c2.1.6
+    name: AISVS v1.0-C2.1.6
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C2.1.6 (instruction hierarchy), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c3.1.2
+    name: AISVS v1.0-C3.1.2
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C3.1.2 (signed artifacts), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c3.1.3
+    name: AISVS v1.0-C3.1.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C3.1.3 (signature verification at admission or load), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c3.2.3
+    name: AISVS v1.0-C3.2.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C3.2.3 (re-evaluate provider, version, or routing changes), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c4.1.1
+    name: AISVS v1.0-C4.1.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C4.1.1 (sandboxing), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c4.3.3
+    name: AISVS v1.0-C4.3.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C4.3.3 (process, memory, and file isolation), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c5.2.1
+    name: AISVS v1.0-C5.2.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C5.2.1 (default-deny resource authorization), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c6.1.1
+    name: AISVS v1.0-C6.1.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C6.1.1 (malicious-code scanning), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c6.1.2
+    name: AISVS v1.0-C6.1.2
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C6.1.2 (approved sources), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c6.1.3
+    name: AISVS v1.0-C6.1.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C6.1.3 (artifact integrity), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c6.2.2
+    name: AISVS v1.0-C6.2.2
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C6.2.2 (signed AI BOMs), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c6.2.3
+    name: AISVS v1.0-C6.2.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C6.2.3 (metadata completeness), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c7.3.4
+    name: AISVS v1.0-C7.3.4
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C7.3.4 (hidden or encoded output detection), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.2.1
+    name: AISVS v1.0-C9.2.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.2.1 (approval for high-impact actions), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.2.10
+    name: AISVS v1.0-C9.2.10
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.2.10 (highest-impact control across chains), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.3.1
+    name: AISVS v1.0-C9.3.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.3.1 (least-privilege tool isolation), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.3.3
+    name: AISVS v1.0-C9.3.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.3.3 (manifest-declared privileges and limits), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.3.4
+    name: AISVS v1.0-C9.3.4
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.3.4 (runtime enforcement of declared requirements), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.3.5
+    name: AISVS v1.0-C9.3.5
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.3.5 (isolate untrusted-data processing from tool calls), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.3.7
+    name: AISVS v1.0-C9.3.7
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.3.7 (approved external resources), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.4.2
+    name: AISVS v1.0-C9.4.2
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.4.2 (cryptographic action-chain binding), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c9.5.1
+    name: AISVS v1.0-C9.5.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C9.5.1 (fine-grained tool and action policy), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c11.1.3
+    name: AISVS v1.0-C11.1.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C11.1.3 (adversarial testing), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c11.4.1
+    name: AISVS v1.0-C11.4.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C11.4.1 (anomaly detection for untrusted inputs), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c12.2.1
+    name: AISVS v1.0-C12.2.1
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C12.2.1 (prompt-injection and adversarial-input detection), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c12.2.3
+    name: AISVS v1.0-C12.2.3
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C12.2.3 (custom AI-threat rules), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  - id: owasp-aisvs-v1.0-c12.4.2
+    name: AISVS v1.0-C12.4.2
+    description: >-
+      OWASP AI Security Verification Standard v1.0 control C12.4.2 (audit proactive actions and decisions), cited
+      as a verification requirement by the OWASP Agentic Skills Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+
+  # --- OWASP ASVS chapters cited in the OWASP Mapping blocks ---
+  - id: owasp-asvs-v4
+    name: ASVS V4 (Access Control)
+    description: >-
+      OWASP Application Security Verification Standard chapter V4, covering
+      access control, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-application-security-verification-standard/
+
+  - id: owasp-asvs-v5
+    name: ASVS V5 (Validation, Sanitization and Encoding)
+    description: >-
+      OWASP Application Security Verification Standard chapter V5, covering
+      validation, sanitization and encoding, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-application-security-verification-standard/
+
+  - id: owasp-asvs-v5.5
+    name: ASVS V5.5 (Deserialization)
+    description: >-
+      OWASP Application Security Verification Standard chapter V5.5, covering
+      deserialization, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-application-security-verification-standard/
+
+  - id: owasp-asvs-v12
+    name: ASVS V12 (File and Resource)
+    description: >-
+      OWASP Application Security Verification Standard chapter V12, covering
+      file and resource, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-application-security-verification-standard/
+
+  - id: owasp-asvs-v14
+    name: ASVS V14 (Configuration)
+    description: >-
+      OWASP Application Security Verification Standard chapter V14, covering
+      configuration, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-application-security-verification-standard/
+
+  - id: owasp-asvs-v14.2
+    name: ASVS V14.2 (Dependency)
+    description: >-
+      OWASP Application Security Verification Standard chapter V14.2, covering
+      dependency, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-application-security-verification-standard/
+
+  - id: owasp-asvs-v14.3
+    name: ASVS V14.3 (Unintended Information Disclosure)
+    description: >-
+      OWASP Application Security Verification Standard chapter V14.3, covering
+      unintended information disclosure, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    author: OWASP
+    url: https://owasp.org/www-project-application-security-verification-standard/
+
+  # --- Other OWASP references cited in the OWASP Mapping blocks ---
+  - id: owasp-samm-v3
+    name: SAMM v3 (Operational Enablement)
+    description: >-
+      OWASP Software Assurance Maturity Model v3, Operational Enablement practice, cited by
+      AST09 as the maturity reference for skill governance.
+    author: OWASP
+    url: https://owaspsamm.org/
+
+  # --- CWE weaknesses cited in the Other Mappings blocks ---
+  - id: cwe-250
+    name: CWE-250 (Execution with Unnecessary Privileges)
+    description: >-
+      Common Weakness Enumeration entry CWE-250, execution with unnecessary privileges, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/250.html
+
+  - id: cwe-345
+    name: CWE-345 (Insufficient Verification of Data Authenticity)
+    description: >-
+      Common Weakness Enumeration entry CWE-345, insufficient verification of data authenticity, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/345.html
+
+  - id: cwe-494
+    name: CWE-494 (Download of Code Without Integrity Check)
+    description: >-
+      Common Weakness Enumeration entry CWE-494, download of code without integrity check, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/494.html
+
+  - id: cwe-502
+    name: CWE-502 (Deserialization of Untrusted Data)
+    description: >-
+      Common Weakness Enumeration entry CWE-502, deserialization of untrusted data, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/502.html
+
+  - id: cwe-653
+    name: CWE-653 (Insufficient Compartmentalization)
+    description: >-
+      Common Weakness Enumeration entry CWE-653, insufficient compartmentalization, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/653.html
+
+  - id: cwe-693
+    name: CWE-693 (Protection Mechanism Failure)
+    description: >-
+      Common Weakness Enumeration entry CWE-693, protection mechanism failure, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/693.html
+
+  - id: cwe-829
+    name: CWE-829 (Inclusion of Functionality from Untrusted Control Sphere)
+    description: >-
+      Common Weakness Enumeration entry CWE-829, inclusion of functionality from untrusted control sphere, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/829.html
+
+  - id: cwe-1329
+    name: CWE-1329 (Reliance on Component Without Verification)
+    description: >-
+      Common Weakness Enumeration entry CWE-1329, reliance on component without verification, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/1329.html
+
+  - id: cwe-1357
+    name: CWE-1357 (Reliance on Insufficiently Trustworthy Component)
+    description: >-
+      Common Weakness Enumeration entry CWE-1357, reliance on insufficiently trustworthy component, mapped from the OWASP
+      Agentic Skills Top 10.
+    author: MITRE
+    url: https://cwe.mitre.org/data/definitions/1357.html
+
+  # --- ISO/IEC 42001 Annex A controls from the mapping table in the AST03 section ---
+  - id: iso-iec-42001-a.2.2
+    name: ISO/IEC 42001 Annex A A.2.2 (AI policy)
+    description: >-
+      ISO/IEC 42001 Annex A control A.2.2, ai policy. Governance absence starts with absent policy (AST09).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
+
+  - id: iso-iec-42001-a.4.5
+    name: ISO/IEC 42001 Annex A A.4.5 (System and computing resources)
+    description: >-
+      ISO/IEC 42001 Annex A control A.4.5, system and computing resources. Isolation is a property of the computing environment (AST06).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
+
+  - id: iso-iec-42001-a.6.2.4
+    name: ISO/IEC 42001 Annex A A.6.2.4 (Verification and validation)
+    description: >-
+      ISO/IEC 42001 Annex A control A.6.2.4, verification and validation. Skills must be validated before use (AST01); scanning is part of the V&V toolchain (AST08).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
+
+  - id: iso-iec-42001-a.6.2.5
+    name: ISO/IEC 42001 Annex A A.6.2.5 (Deployment)
+    description: >-
+      ISO/IEC 42001 Annex A control A.6.2.5, deployment. Least privilege is set at deployment (AST03).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
+
+  - id: iso-iec-42001-a.6.2.6
+    name: ISO/IEC 42001 Annex A A.6.2.6 (Operation and monitoring)
+    description: >-
+      ISO/IEC 42001 Annex A control A.6.2.6, operation and monitoring. External references need monitoring in operation (AST05); updates are post-deployment change control (AST07).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
+
+  - id: iso-iec-42001-a.6.2.7
+    name: ISO/IEC 42001 Annex A A.6.2.7 (Technical documentation)
+    description: >-
+      ISO/IEC 42001 Annex A control A.6.2.7, technical documentation. Metadata is documentation that must be accurate (AST04).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
+
+  - id: iso-iec-42001-a.8.2
+    name: ISO/IEC 42001 Annex A A.8.2 (Documentation for users)
+    description: >-
+      ISO/IEC 42001 Annex A control A.8.2, documentation for users. Security properties must survive platform translation (AST10).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
+
+  - id: iso-iec-42001-a.10.3
+    name: ISO/IEC 42001 Annex A A.10.3 (Suppliers)
+    description: >-
+      ISO/IEC 42001 Annex A control A.10.3, suppliers. Registries and dependencies are supplier relationships (AST02).
+    author: ISO/IEC
+    url: https://www.iso.org/standard/42001
