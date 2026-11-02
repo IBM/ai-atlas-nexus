@@ -160,6 +160,18 @@ RITS_API_URL=<RITS url key goes here>
 pip install -e ".[rits]"
 ```
 
+## Command line
+
+`ran query` lists the records of the AI Atlas Nexus knowledge graph from a terminal. It has one command for each class of the ontology that holds records, named after the class in lower case, so `RiskControl` is `riskcontrol`. Each command lists the records of its class and of its subclasses. It has one option for each slot of the class, named as in the schema. The commands and options are built from the LinkML schema, so they change when the schema changes. The output is JSON, or YAML with `--format yaml`.
+
+```command
+ran query risk --isDefinedByTaxonomy ibm-risk-atlas
+ran query risk --id atlas-toxic-output --format yaml
+ran query action --hasRelatedRisk credo-risk-036
+```
+
+The option of a multivalued slot can be repeated. A record must then hold every value. `--base-dir`, given before the command, adds the records in a directory of YAML files to the packaged ones, as `AIAtlasNexus(base_dir)` does. `ran query --help` lists the commands, and `ran query risk --help` lists the options of one command.
+
 ## AI Atlas Nexus Extensions
 
 Install AI Atlas Nexus extension using the below command
