@@ -200,10 +200,18 @@ class JSONGraphDumper(Dumper):
                                     "attributes": {},
                                 }
                             obj_dict = item.dict()
-                            # Add simple attributes (non-relational data)
+                            # Add simple attributes, including lists of scalars
+                            # (multivalued slots such as isCategorizedAs)
                             for key, value in obj_dict.items():
                                 if (
-                                    not isinstance(value, (dict, list))
+                                    not isinstance(value, dict)
+                                    and not (
+                                        isinstance(value, list)
+                                        and not all(
+                                            isinstance(v, (str, int, float, bool))
+                                            for v in value
+                                        )
+                                    )
                                     and not key.startswith("_")
                                     and not isinstance(value, (date, datetime))
                                 ):
