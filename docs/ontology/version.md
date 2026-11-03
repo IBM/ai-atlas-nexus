@@ -15,25 +15,26 @@ URI: [schema:version](http://schema.org/version)
 
 ## Applicable Classes
 
-| Name                                                    | Description                                                                      | Modifies Slot |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [License](License.md)                                   | The general notion of a license which defines terms and grants permissions to... | no            |
-| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
-| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
-| [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
-| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
-| [AiTaskTaxonomy](AiTaskTaxonomy.md)                     | A taxonomy of AI Tasks                                                           | no            |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
+| Name                                                            | Description                                                                      | Modifies Slot |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [License](License.md)                                           | The general notion of a license which defines terms and grants permissions to... | no            |
+| [Vocabulary](Vocabulary.md)                                     | A collection of terms, with their definitions and relationships                  | no            |
+| [Taxonomy](Taxonomy.md)                                         | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [RiskTaxonomy](RiskTaxonomy.md)                                 | A taxonomy of AI system related risks                                            | no            |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)         | A taxonomy of AI system related risk controls groups                             | no            |
+| [AiTaskTaxonomy](AiTaskTaxonomy.md)                             | A taxonomy of AI Tasks                                                           | no            |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md) | A taxonomy of Ai Evaluation Standards                                            | no            |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)                     | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                                                                                                                                                                                      |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Range     | [String](String.md)                                                                                                                                                                                        |
-| Domain Of | [License](License.md), [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [RiskTaxonomy](RiskTaxonomy.md), [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md), [AiTaskTaxonomy](AiTaskTaxonomy.md) |
-| Slot URI  | [schema:version](http://schema.org/version)                                                                                                                                                                |
+| Property  | Value                                                                                                                                                                                                                                                                       |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Range     | [String](String.md)                                                                                                                                                                                                                                                         |
+| Domain Of | [License](License.md), [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [RiskTaxonomy](RiskTaxonomy.md), [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md), [AiTaskTaxonomy](AiTaskTaxonomy.md), [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md) |
+| Slot URI  | [schema:version](http://schema.org/version)                                                                                                                                                                                                                                 |
 
 ### Cardinality and Requirements
 
@@ -69,6 +70,7 @@ domain_of:
 - RiskTaxonomy
 - RiskControlGroupTaxonomy
 - AiTaskTaxonomy
+- AiEvaluationStandardTaxonomy
 range: string
 
 ```

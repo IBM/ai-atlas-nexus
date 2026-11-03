@@ -250,6 +250,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   hasDocumentation:
@@ -279,6 +280,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation

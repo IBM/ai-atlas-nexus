@@ -9,8 +9,6 @@ _Certification mechanisms, seals, and marks for the purpose of demonstrating com
 
 <div data-search-exclude markdown="1">
 
-- **NOTE**: this is an abstract class and should not be instantiated directly
-
 URI: [dpv:Certification](https://w3id.org/dpv#Certification)
 
 ```mermaid
@@ -273,7 +271,6 @@ description: Certification mechanisms, seals, and marks for the purpose of demon
   compliance
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 is_a: Entry
-abstract: true
 attributes:
   type:
     name: type
@@ -318,7 +315,6 @@ description: Certification mechanisms, seals, and marks for the purpose of demon
   compliance
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 is_a: Entry
-abstract: true
 attributes:
   type:
     name: type
@@ -418,6 +414,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
