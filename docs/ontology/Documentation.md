@@ -232,6 +232,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Question](Question.md)                                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Questionnaire](Questionnaire.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Adapter](Adapter.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Adapter](Adapter.md)                                               | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
 | [LLMIntrinsic](LLMIntrinsic.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
@@ -344,6 +345,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   hasJurisdiction:

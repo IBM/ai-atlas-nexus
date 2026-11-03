@@ -433,7 +433,7 @@ URI: [airo:AISystem](https://w3id.org/airo#AISystem)
 | [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Risk](Risk.md)                           | A relationship where an entity relates to a risk                                 | direct                                 |
 | [isProducedBy](isProducedBy.md)                   | 0..1 <br/> [Organization](Organization.md)         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)                    |
 | [hasModelCard](hasModelCard.md)                   | \* <br/> [String](String.md)                       | A relationship to model card references                                          | [BaseAi](BaseAi.md)                    |
-| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [Entry](Entry.md), [BaseAi](BaseAi.md) |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md), [Entry](Entry.md) |
 | [hasLicense](hasLicense.md)                       | 0..1 <br/> [License](License.md)                   | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md)                    |
 | [performsTask](performsTask.md)                   | \* <br/> [AiTask](AiTask.md)                       | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md)                    |
 | [isProvidedBy](isProvidedBy.md)                   | 0..1 <br/> [AiProvider](AiProvider.md)             | Indicates provider of an AI system or component                                  | [BaseAi](BaseAi.md)                    |
@@ -774,6 +774,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -797,6 +798,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   performsTask:

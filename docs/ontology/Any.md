@@ -627,6 +627,12 @@ URI: [linkml:Any](https://w3id.org/linkml/Any)
 | [Questionnaire](Questionnaire.md)                                   | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
 | [Questionnaire](Questionnaire.md)                                   | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
 | [Questionnaire](Questionnaire.md)                                   | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [exact_mappings](exact_mappings.md)             | range  | [Any](Any.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [close_mappings](close_mappings.md)             | range  | [Any](Any.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [related_mappings](related_mappings.md)         | range  | [Any](Any.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [narrow_mappings](narrow_mappings.md)           | range  | [Any](Any.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [broad_mappings](broad_mappings.md)             | range  | [Any](Any.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [isCategorizedAs](isCategorizedAs.md)           | range  | [Any](Any.md) |
 | [Adapter](Adapter.md)                                               | [requiresCapability](requiresCapability.md)     | domain | [Any](Any.md) |
 | [Adapter](Adapter.md)                                               | [requiresCapability](requiresCapability.md)     | range  | [Any](Any.md) |
 | [Adapter](Adapter.md)                                               | [requiredByTask](requiredByTask.md)             | range  | [Any](Any.md) |

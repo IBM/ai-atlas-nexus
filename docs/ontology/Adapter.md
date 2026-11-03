@@ -416,7 +416,7 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 | [hasTrainingData](hasTrainingData.md)             | \* <br/> [Dataset](Dataset.md)                                     | A relationship indicating the datasets an AI model was trained on                | [LargeLanguageModel](LargeLanguageModel.md)                    |
 | [fine_tuning](fine_tuning.md)                     | 0..1 <br/> [String](String.md)                                     | A description of the fine-tuning mechanism(s) applied to a model                 | [LargeLanguageModel](LargeLanguageModel.md)                    |
 | [supported_languages](supported_languages.md)     | \* <br/> [String](String.md)                                       | A list of languages, expressed as ISO two letter codes                           | [LargeLanguageModel](LargeLanguageModel.md)                    |
-| [isPartOf](isPartOf.md)                           | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models             | [Entry](Entry.md), [LargeLanguageModel](LargeLanguageModel.md) |
+| [isPartOf](isPartOf.md)                           | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models             | [LargeLanguageModel](LargeLanguageModel.md), [Entry](Entry.md) |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                                 | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)                                              |
 | [hasExternalReference](hasExternalReference.md)   | \* <br/> [Documentation](Documentation.md)                         | External references / additional resources related to this entity, such as ar... | [Entry](Entry.md)                                              |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [Any](Any.md)                                             | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)                                              |
@@ -590,6 +590,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -613,6 +614,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   hasRelatedRisk:
