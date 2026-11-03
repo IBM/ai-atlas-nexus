@@ -22,7 +22,7 @@ taxonomies:
     url: https://aievaluatorforum.org/initiatives/minimum-operating-conditions
     hasDocumentation:
       - AEF-1-Dec-2025
-    type: Taxonomy
+    type: AiEvaluationStandardTaxonomy
 
 entries:
   - id: aef1-standard

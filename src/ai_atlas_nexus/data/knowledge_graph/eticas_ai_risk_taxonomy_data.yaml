@@ -6,6 +6,7 @@ taxonomies:
       & Misuse, Transparency & Explainability, Governance, Environmental Impact, Autonomy
       & Agency, Organisational Readiness, and Agentic AI. Designed for operationalisation
       in third-party AI audits.
+    type: RiskTaxonomy
     url: https://taxonomy.eticas.ai
     version: 2.0.0
 groups:

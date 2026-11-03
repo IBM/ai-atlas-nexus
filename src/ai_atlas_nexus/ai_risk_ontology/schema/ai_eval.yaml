@@ -357,6 +357,14 @@ classes:
       isComposedOf:
         range: Question
 
+  AiEvaluationStandardTaxonomy:
+    is_a: Taxonomy
+    description: A taxonomy of Ai Evaluation Standards
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
 slots:
   hasImplementation:
     slot_uri: schema:url

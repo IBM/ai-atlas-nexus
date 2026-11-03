@@ -388,7 +388,6 @@ classes:
 
   Certification:
     is_a: Entry
-    abstract: true
     attributes:
       type:
         description: The type or class designation of this entity instance.
