@@ -757,6 +757,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   hasConsiderationConsentProcedures:
@@ -807,6 +808,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation

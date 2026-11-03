@@ -223,6 +223,7 @@ attributes:
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
     range: string
   hasDocumentation:
     name: hasDocumentation
@@ -251,6 +252,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -274,6 +276,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   type:

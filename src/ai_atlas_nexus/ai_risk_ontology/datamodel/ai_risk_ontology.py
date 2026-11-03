@@ -20461,7 +20461,8 @@ class License(Entity):
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -20498,6 +20499,7 @@ class Dataset(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
@@ -20519,6 +20521,7 @@ class Dataset(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -20567,6 +20570,7 @@ class Documentation(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
@@ -20619,7 +20623,8 @@ class Vocabulary(Entity):
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -20640,6 +20645,7 @@ class Vocabulary(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -20653,6 +20659,7 @@ class Vocabulary(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["Vocabulary"] = Field(default="Vocabulary", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -20710,7 +20717,8 @@ class Taxonomy(Entity):
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -20731,6 +20739,7 @@ class Taxonomy(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -20744,6 +20753,7 @@ class Taxonomy(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["Taxonomy"] = Field(default="Taxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -20834,6 +20844,7 @@ class Concept(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21005,6 +21016,7 @@ class Group(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21108,6 +21120,7 @@ class Entry(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21201,6 +21214,7 @@ class Term(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21324,6 +21338,7 @@ class Principle(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21610,6 +21625,7 @@ class Rule(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21699,6 +21715,7 @@ class AttributeConditionRule(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21827,6 +21844,7 @@ class Permission(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21919,6 +21937,7 @@ class Prohibition(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22011,6 +22030,7 @@ class Obligation(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22103,6 +22123,7 @@ class Recommendation(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22128,8 +22149,7 @@ class Certification(Entry):
     """
     Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
-         'class_uri': 'dpv:Certification',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Certification',
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     type: Literal["Certification"] = Field(default="Certification", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -22195,6 +22215,7 @@ class Certification(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22311,6 +22332,7 @@ class EvaluationStandard(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22401,6 +22423,7 @@ class LocalityOfUse(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22478,7 +22501,8 @@ class RiskTaxonomy(Taxonomy):
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -22499,6 +22523,7 @@ class RiskTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22512,6 +22537,7 @@ class RiskTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["RiskTaxonomy"] = Field(default="RiskTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -22566,7 +22592,8 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -22587,6 +22614,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22600,6 +22628,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["RiskControlGroupTaxonomy"] = Field(default="RiskControlGroupTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -22697,6 +22726,7 @@ class RiskConcept(Concept):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22812,6 +22842,7 @@ class RiskControlGroup(RiskConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22930,6 +22961,7 @@ class RiskGroup(RiskConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23061,6 +23093,7 @@ class Risk(RiskConcept, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23233,6 +23266,7 @@ class RiskControl(RiskConcept, Control):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23282,6 +23316,7 @@ class Action(RiskControl):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23459,6 +23494,7 @@ class RiskIncident(RiskConcept, Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23560,6 +23596,7 @@ class Impact(RiskConcept, Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23804,7 +23841,8 @@ class CapabilityTaxonomy(Taxonomy):
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -23825,6 +23863,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23838,6 +23877,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["CapabilityTaxonomy"] = Field(default="CapabilityTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -23927,6 +23967,7 @@ class CapabilityConcept(Concept):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24027,6 +24068,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24162,6 +24204,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24305,6 +24348,7 @@ class Capability(CapabilityConcept, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24404,6 +24448,7 @@ class BaseAi(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24417,6 +24462,7 @@ class BaseAi(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -24508,6 +24554,7 @@ class AiSystem(BaseAi, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24521,6 +24568,7 @@ class AiSystem(BaseAi, Entry):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -24668,6 +24716,7 @@ class AiAgent(AiSystem):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24681,6 +24730,7 @@ class AiAgent(AiSystem):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -24794,6 +24844,7 @@ class LargeLanguageModelFamily(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24868,6 +24919,7 @@ class AiTask(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24942,7 +24994,8 @@ class AiTaskTaxonomy(Taxonomy):
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -24963,6 +25016,7 @@ class AiTaskTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24976,6 +25030,7 @@ class AiTaskTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["AiTaskTaxonomy"] = Field(default="AiTaskTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -25075,6 +25130,7 @@ class AiTaskDomain(Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25187,6 +25243,7 @@ class AiTaskGroup(Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25455,6 +25512,7 @@ class Purpose(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25568,6 +25626,7 @@ class Domain(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25696,6 +25755,7 @@ class AiModel(AIComponent, BaseAi):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25709,6 +25769,7 @@ class AiModel(AIComponent, BaseAi):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -25791,6 +25852,7 @@ class LargeLanguageModel(AiModel):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25804,6 +25866,7 @@ class LargeLanguageModel(AiModel):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -26181,6 +26244,7 @@ class StakeholderGroup(Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26273,6 +26337,7 @@ class AiEval(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26290,6 +26355,7 @@ class AiEval(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval',
@@ -26567,6 +26633,7 @@ class EveryEvalAIResult(AiEvalResult):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26660,6 +26727,7 @@ class BenchmarkMetadataCard(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasConsiderationConsentProcedures: Optional[list[str]] = Field(default=None, description="""Information on how consent was obtained (if applicable), especially for datasets involving personal data.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
@@ -26683,6 +26751,7 @@ class BenchmarkMetadataCard(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26782,6 +26851,7 @@ class ThirdPartyEvaluationEngagement(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26883,6 +26953,7 @@ class Question(AiEval):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26900,6 +26971,7 @@ class Question(AiEval):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval',
@@ -26959,6 +27031,7 @@ class Questionnaire(AiEval):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26976,6 +27049,7 @@ class Questionnaire(AiEval):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval',
@@ -26991,6 +27065,97 @@ class Questionnaire(AiEval):
     bestValue: Optional[str] = Field(default=None, description="""Annotation of the best possible result of the evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval']} })
     hasBenchmarkMetadata: Optional[list[str]] = Field(default=None, description="""A relationship to a Benchmark Metadata Card which contains metadata about the benchmark.""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval', 'domain_of': ['AiEval'], 'inverse': 'describesAiEval'} })
     isComposedOf: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an AI evaluation maybe composed of other AI evaluations (e.g. it's an overall average of other scores).""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'AiEval']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
+    notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+
+
+class AiEvaluationStandardTaxonomy(Taxonomy):
+    """
+    A taxonomy of Ai Evaluation Standards
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Documentation',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'BaseAi',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
+                       'Adapter'],
+         'slot_uri': 'airo:hasLicense'} })
+    type: Literal["AiEvaluationStandardTaxonomy"] = Field(default="AiEvaluationStandardTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Organization',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'EvaluationStandard',
+                       'BenchmarkMetadataCard',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -27048,6 +27213,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27061,6 +27227,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'Adapter',
@@ -27228,6 +27395,7 @@ class LLMIntrinsic(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27461,6 +27629,7 @@ class ControlActivity(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27574,6 +27743,7 @@ class ControlActivityPermission(ControlActivity, Permission):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27687,6 +27857,7 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27800,6 +27971,7 @@ class ControlActivityObligation(ControlActivity, Obligation):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27913,6 +28085,7 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -28026,6 +28199,7 @@ class Requirement(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -28062,7 +28236,7 @@ class Container(ConfiguredBaseModel):
     datasets: Optional[list[Dataset]] = Field(default=None, description="""A list of data sets""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     llmintrinsics: Optional[list[LLMIntrinsic]] = Field(default=None, description="""A list of LLMIntrinsics""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     adapters: Optional[list[Adapter]] = Field(default=None, description="""A list of Adapters""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    taxonomies: Optional[list[Union[Taxonomy,RiskTaxonomy,RiskControlGroupTaxonomy,CapabilityTaxonomy,AiTaskTaxonomy]]] = Field(default=None, description="""A list of taxonomies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    taxonomies: Optional[list[Union[Taxonomy,RiskTaxonomy,RiskControlGroupTaxonomy,CapabilityTaxonomy,AiTaskTaxonomy,AiEvaluationStandardTaxonomy]]] = Field(default=None, description="""A list of taxonomies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     concepts: Optional[list[Union[Concept,RiskConcept,CapabilityConcept,CapabilityDomain,CapabilityGroup,Capability,RiskControlGroup,RiskGroup,Risk,RiskControl,RiskIncident,Impact,Action]]] = Field(default=None, description="""A list of concepts""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     entries: Optional[list[Union[Entry,Term,Principle,Certification,EvaluationStandard,LocalityOfUse,Risk,Capability,AiSystem,AiTask,Purpose,Domain,Adapter,LLMIntrinsic,AiAgent]]] = Field(default=None, description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     groups: Optional[list[Union[Group,RiskControlGroup,RiskGroup,CapabilityDomain,CapabilityGroup,AiTaskDomain,AiTaskGroup,StakeholderGroup]]] = Field(default=None, description="""A list of groups""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
@@ -28179,6 +28353,7 @@ EvaluationStandardConformance.model_rebuild()
 ConditionAssessment.model_rebuild()
 Question.model_rebuild()
 Questionnaire.model_rebuild()
+AiEvaluationStandardTaxonomy.model_rebuild()
 Adapter.model_rebuild()
 LLMIntrinsic.model_rebuild()
 AiOffice.model_rebuild()
