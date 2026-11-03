@@ -4357,7 +4357,7 @@ entries:
       - llm022025-sensitive-information-disclosure
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-leaking
     risk_type: inference
@@ -4548,7 +4548,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: social-hacking-attack
     risk_type: inference
@@ -4628,7 +4628,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: indirect-instructions-attack
     risk_type: inference
@@ -5611,7 +5611,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: context-overload-attack
     risk_type: inference
@@ -5958,7 +5958,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: specialized-tokens-attack
     risk_type: inference
@@ -6034,7 +6034,7 @@ entries:
     broad_mappings:
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-injection
     risk_type: inference
@@ -6194,7 +6194,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: direct-instructions-attack
     risk_type: inference
@@ -6396,7 +6396,7 @@ entries:
       - llm01-prompt-injection
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-priming
     risk_type: inference
@@ -6593,7 +6593,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: encoded-interactions-attack
     risk_type: inference
@@ -13598,7 +13598,7 @@ entries:
       - ail-specialized-advice
       - mit-ai-risk-subdomain-7.4
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-009
@@ -13611,7 +13611,7 @@ entries:
       - atlas-lack-of-data-transparency
       - mit-ai-risk-subdomain-7.4
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -13628,7 +13628,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-information-integrity
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -13643,7 +13643,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
   - id: credo-risk-009
     name: Black box decisionmaking (Slattery et al., 2024; IBM, 2024)
@@ -13657,7 +13657,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-011
@@ -13681,7 +13681,7 @@ entries:
       - mit-ai-risk-subdomain-1.1
       - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
     hasRelatedAction:
       - credo-act-control-014
@@ -13704,7 +13704,7 @@ entries:
       - mit-ai-risk-subdomain-1.1
       - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
   - id: credo-risk-012
     name: Unequal access to AI benefits
@@ -13719,7 +13719,7 @@ entries:
       - nist-harmful-bias-and-homogenization
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
     hasRelatedAction:
       - credo-act-control-014
@@ -14075,7 +14075,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - llm082025-vector-and-embedding-weaknesses
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-012
@@ -14092,7 +14092,7 @@ entries:
       - mit-ai-risk-subdomain-5.1
       - mit-ai-risk-subdomain-7.3
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -14108,7 +14108,7 @@ entries:
     related_mappings:
       - llm082025-vector-and-embedding-weaknesses
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-022
@@ -27095,7 +27095,7 @@ stakeholdergroups:
     description: Organization-level stakeholders.
     isDefinedByTaxonomy: csiro-responsible-ai-patterns
     type: StakeholderGroup
-  - id: csiro--stakeholder-group-team-level
+  - id: csiro-stakeholder-group-team-level
     name: Team-level stakeholders
     description: Team-level stakeholders.
     isDefinedByTaxonomy: csiro-responsible-ai-patterns
@@ -33841,6 +33841,17 @@ aievalresults:
     evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
     isResultOf: ai_eval_tulu3_safety
 aimodelfamilies:
+  - id: shieldgemma
+    description: "ShieldGemma is a series of safety content moderation models built
+      upon Gemma 2 that target four harm categories (sexually explicit, dangerous content,
+      hate, and harassment). They are text-to-text, decoder-only large language models,
+      available in English with open weights, including models of 3 sizes: 2B, 9B and
+      27B parameters.
+
+      "
+    url: https://gemma.ai/models/shieldgemma/model-card-v1/
+    hasDocumentation:
+      - shieldgemma-paper
   - id: ibm-granite
     name: IBM Granite
     description:
