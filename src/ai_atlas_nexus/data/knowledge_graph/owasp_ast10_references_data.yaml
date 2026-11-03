@@ -330,7 +330,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C2.1.2 (canonicalization and smuggling defenses), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c2.1.3
     name: AISVS v1.0-C2.1.3
@@ -338,7 +338,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C2.1.3 (screen untrusted inputs), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c2.1.6
     name: AISVS v1.0-C2.1.6
@@ -346,7 +346,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C2.1.6 (instruction hierarchy), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c3.1.2
     name: AISVS v1.0-C3.1.2
@@ -354,7 +354,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C3.1.2 (signed artifacts), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c3.1.3
     name: AISVS v1.0-C3.1.3
@@ -362,7 +362,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C3.1.3 (signature verification at admission or load), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c3.2.3
     name: AISVS v1.0-C3.2.3
@@ -370,7 +370,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C3.2.3 (re-evaluate provider, version, or routing changes), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c4.1.1
     name: AISVS v1.0-C4.1.1
@@ -378,7 +378,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C4.1.1 (sandboxing), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c4.3.3
     name: AISVS v1.0-C4.3.3
@@ -386,7 +386,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C4.3.3 (process, memory, and file isolation), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c5.2.1
     name: AISVS v1.0-C5.2.1
@@ -394,7 +394,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C5.2.1 (default-deny resource authorization), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c6.1.1
     name: AISVS v1.0-C6.1.1
@@ -402,7 +402,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C6.1.1 (malicious-code scanning), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c6.1.2
     name: AISVS v1.0-C6.1.2
@@ -410,7 +410,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C6.1.2 (approved sources), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c6.1.3
     name: AISVS v1.0-C6.1.3
@@ -418,7 +418,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C6.1.3 (artifact integrity), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c6.2.2
     name: AISVS v1.0-C6.2.2
@@ -426,7 +426,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C6.2.2 (signed AI BOMs), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c6.2.3
     name: AISVS v1.0-C6.2.3
@@ -434,7 +434,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C6.2.3 (metadata completeness), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c7.3.4
     name: AISVS v1.0-C7.3.4
@@ -442,7 +442,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C7.3.4 (hidden or encoded output detection), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.2.1
     name: AISVS v1.0-C9.2.1
@@ -450,7 +450,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.2.1 (approval for high-impact actions), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.2.10
     name: AISVS v1.0-C9.2.10
@@ -458,7 +458,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.2.10 (highest-impact control across chains), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.3.1
     name: AISVS v1.0-C9.3.1
@@ -466,7 +466,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.3.1 (least-privilege tool isolation), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.3.3
     name: AISVS v1.0-C9.3.3
@@ -474,7 +474,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.3.3 (manifest-declared privileges and limits), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.3.4
     name: AISVS v1.0-C9.3.4
@@ -482,7 +482,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.3.4 (runtime enforcement of declared requirements), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.3.5
     name: AISVS v1.0-C9.3.5
@@ -490,7 +490,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.3.5 (isolate untrusted-data processing from tool calls), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.3.7
     name: AISVS v1.0-C9.3.7
@@ -498,7 +498,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.3.7 (approved external resources), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.4.2
     name: AISVS v1.0-C9.4.2
@@ -506,7 +506,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.4.2 (cryptographic action-chain binding), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c9.5.1
     name: AISVS v1.0-C9.5.1
@@ -514,7 +514,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C9.5.1 (fine-grained tool and action policy), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c11.1.3
     name: AISVS v1.0-C11.1.3
@@ -522,7 +522,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C11.1.3 (adversarial testing), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c11.4.1
     name: AISVS v1.0-C11.4.1
@@ -530,7 +530,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C11.4.1 (anomaly detection for untrusted inputs), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c12.2.1
     name: AISVS v1.0-C12.2.1
@@ -538,7 +538,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C12.2.1 (prompt-injection and adversarial-input detection), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c12.2.3
     name: AISVS v1.0-C12.2.3
@@ -546,7 +546,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C12.2.3 (custom AI-threat rules), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   - id: owasp-aisvs-v1.0-c12.4.2
     name: AISVS v1.0-C12.4.2
@@ -554,7 +554,7 @@ documents:
       OWASP AI Security Verification Standard v1.0 control C12.4.2 (audit proactive actions and decisions), cited
       as a verification requirement by the OWASP Agentic Skills Top 10.
     author: OWASP
-    url: https://owasp.org/www-project-artificial-intelligence-security-verification-standard/
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
 
   # --- OWASP ASVS chapters cited in the OWASP Mapping blocks ---
   - id: owasp-asvs-v4
