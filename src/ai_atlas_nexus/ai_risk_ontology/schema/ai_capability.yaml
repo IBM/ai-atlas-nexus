@@ -26,6 +26,8 @@ default_prefix: nexus
 
 classes:
   CapabilityTaxonomy:
+    in_subset:
+      - extended
     is_a: Taxonomy
     class_uri: skos:ConceptScheme
     description: A taxonomy of AI capabilities describing the abilities of AI systems.
@@ -37,6 +39,8 @@ classes:
     class_uri: nexus:CapabilityConcept
 
   CapabilityDomain:
+    in_subset:
+      - extended
     is_a: Group
     class_uri: nexus:CapabilityDomain
     description: A high-level domain of AI capabilities (e.g., Language, Reasoning, Knowledge)
@@ -49,6 +53,8 @@ classes:
     slots:
 
   CapabilityGroup:
+    in_subset:
+      - extended
     is_a: Group
     description: A group of AI capabilities that are part of a capability taxonomy, organized under a domain
     mixins:
@@ -70,6 +76,8 @@ classes:
       - belongsToDomain
 
   Capability:
+    in_subset:
+      - extended
     is_a: Entry
     mixins:
       - CapabilityConcept
