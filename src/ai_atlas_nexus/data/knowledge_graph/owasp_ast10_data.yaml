@@ -25,6 +25,53 @@ taxonomies:
       - owasp-agentic-skills-top-10-whitepaper-v1
     hasLicense: license-cc-by-sa-4.0
 
+groups:
+  - id: owasp-ast10-grp-source-and-registry
+    name: Source & Registry
+    description: >-
+      Publishing and registry trust. Skill sourcing and registry trust covers
+      malicious skills, supply chain compromise, and insecure metadata.
+    hasPart:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+    type: RiskGroup
+    isDefinedByTaxonomy: owasp-ast10
+
+  - id: owasp-ast10-grp-execution-boundary
+    name: Execution Boundary
+    description: >-
+      Permissions and isolation. Execution boundaries cover over-privileged
+      skills, untrusted external instructions, and weak isolation.
+    hasPart:
+      - ast03-over-privileged-skills
+      - ast05-untrusted-external-instructions
+      - ast06-weak-isolation
+    type: RiskGroup
+    isDefinedByTaxonomy: owasp-ast10
+
+  - id: owasp-ast10-grp-lifecycle-governance
+    name: Lifecycle Governance
+    description: >-
+      Review, updates, and policy. Lifecycle governance covers update drift,
+      scanning coverage, and governance gaps.
+    hasPart:
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast09-no-governance
+    type: RiskGroup
+    isDefinedByTaxonomy: owasp-ast10
+
+  - id: owasp-ast10-grp-cross-platform-reuse
+    name: Cross-Platform Reuse
+    description: >-
+      Cross-agent portability. Cross-platform reuse covers the loss of security
+      properties as skills move between platforms.
+    hasPart:
+      - ast10-cross-platform-reuse
+    type: RiskGroup
+    isDefinedByTaxonomy: owasp-ast10
+
 entries:
   - id: ast01-malicious-skills
     name: AST01 - Malicious Skills
@@ -38,6 +85,7 @@ entries:
       permissions, a malicious skill can gain access to API keys, SSH
       credentials, wallet files, browser data, and shell capabilities.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast01.html
+    isPartOf: owasp-ast10-grp-source-and-registry
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: malicious-skills
@@ -53,6 +101,7 @@ entries:
       were once passive metadata have become active execution paths - the
       CI/CD pipeline now includes skills as a first-class attack surface.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast02.html
+    isPartOf: owasp-ast10-grp-source-and-registry
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: supply-chain-compromise
@@ -68,6 +117,7 @@ entries:
       database access can be weaponized by a downstream prompt injection
       attack to execute DROP TABLE commands it was never meant to run.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast03.html
+    isPartOf: owasp-ast10-grp-execution-boundary
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: over-privileged-skills
@@ -85,6 +135,7 @@ entries:
       unsafe deserialization of those same files lets an attacker embed
       executable payloads that trigger on load, before any user action.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast04.html
+    isPartOf: owasp-ast10-grp-source-and-registry
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: insecure-metadata
@@ -105,6 +156,7 @@ entries:
       the skill's own author after the skill has passed review - so the skill
       that was audited is never the skill that actually runs.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast05.html
+    isPartOf: owasp-ast10-grp-execution-boundary
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: untrusted-external-instructions
@@ -119,6 +171,7 @@ entries:
       containment guarantees and turns every installed skill into a potential
       full-system compromise.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast06.html
+    isPartOf: owasp-ast10-grp-execution-boundary
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: weak-isolation
@@ -133,6 +186,7 @@ entries:
       known vulnerabilities open) or because auto-update mechanisms blindly
       apply upstream changes that may themselves be malicious.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast07.html
+    isPartOf: owasp-ast10-grp-lifecycle-governance
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: update-drift
@@ -148,6 +202,7 @@ entries:
       malicious skills to pass the checks deployed by current marketplaces and
       development workflows.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast08.html
+    isPartOf: owasp-ast10-grp-lifecycle-governance
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: poor-scanning
@@ -162,6 +217,7 @@ entries:
       approval workflow, and no revocation mechanism - creating a "shadow AI"
       layer that security teams cannot see or control.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast09.html
+    isPartOf: owasp-ast10-grp-lifecycle-governance
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: no-governance
@@ -179,6 +235,7 @@ entries:
       across platforms creates critical security issues like manifest
       stripping, context loss, and uncontrolled execution.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast10.html
+    isPartOf: owasp-ast10-grp-cross-platform-reuse
     type: Risk
     isDefinedByTaxonomy: owasp-ast10
     tag: cross-platform-reuse
