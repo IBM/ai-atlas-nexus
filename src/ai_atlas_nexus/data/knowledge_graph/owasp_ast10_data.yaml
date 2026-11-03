@@ -1,4 +1,3 @@
-# OWASP Agentic Skills Top 10 v1.0 (2026 Edition)
 documents:
   - id: owasp-agentic-skills-top-10-whitepaper-v1
     name: OWASP Agentic Skills Top 10 Whitepaper (V1)
@@ -37,6 +36,8 @@ groups:
       - ast04-insecure-metadata
     type: RiskGroup
     isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
 
   - id: owasp-ast10-grp-execution-boundary
     name: Execution Boundary
@@ -49,6 +50,8 @@ groups:
       - ast06-weak-isolation
     type: RiskGroup
     isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
 
   - id: owasp-ast10-grp-lifecycle-governance
     name: Lifecycle Governance
@@ -61,6 +64,8 @@ groups:
       - ast09-no-governance
     type: RiskGroup
     isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
 
   - id: owasp-ast10-grp-cross-platform-reuse
     name: Cross-Platform Reuse
@@ -71,6 +76,8 @@ groups:
       - ast10-cross-platform-reuse
     type: RiskGroup
     isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
 
 entries:
   - id: ast01-malicious-skills
@@ -90,6 +97,23 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: malicious-skills
     risk_type: agentic
+    isCategorizedAs: ast10-grp-source-and-registry
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-checkpoint-caught-in-the-hook
+      - owasp-ast10-ref-antiy-clawhavoc
+      - owasp-ast10-ref-dirf-arxiv-2508-01997
+      - owasp-ast10-ref-csa-dirf
+      - owasp-ast10-ref-usenix-2026-malicious-agent-skills
+      - owasp-ast10-ref-usenix-2025-package-hallucinations
+      - owasp-ast10-ref-docker-running-containers
+      - owasp-ast10-ref-qsaf-arxiv-2507-15330
+      - owasp-ast10-ref-csa-cdr
+      - owasp-aisvs-v1.0-c6.1.1
+      - owasp-aisvs-v1.0-c9.3.7
+      - owasp-aisvs-v1.0-c12.2.1
+      - owasp-asvs-v14
+      - iso-iec-42001-a.6.2.4
 
   - id: ast02-supply-chain-compromise
     name: AST02 - Supply Chain Compromise
@@ -106,6 +130,21 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: supply-chain-compromise
     risk_type: agentic
+    isCategorizedAs: ast10-grp-source-and-registry
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-checkpoint-caught-in-the-hook
+      - owasp-ast10-ref-antiy-clawhavoc
+      - owasp-ast10-ref-openapi-x-agent-trust
+      - owasp-ast10-ref-ietf-agent-payment-trust
+      - owasp-ast10-ref-rfc-7518-es256
+      - owasp-ast10-ref-trail-of-bits-skill-distribution
+      - owasp-aisvs-v1.0-c6.1.2
+      - owasp-aisvs-v1.0-c6.1.3
+      - owasp-aisvs-v1.0-c6.2.2
+      - owasp-asvs-v14.2
+      - cwe-494
+      - iso-iec-42001-a.10.3
 
   - id: ast03-over-privileged-skills
     name: AST03 - Over-Privileged Skills
@@ -122,6 +161,21 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: over-privileged-skills
     risk_type: agentic
+    isCategorizedAs: ast10-grp-execution-boundary
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-snyk-leaky-skills
+      - owasp-ast10-ref-cisco-state-of-ai-security-2026
+      - owasp-ast10-ref-lpci-arxiv-2507-10457
+      - owasp-ast10-ref-laaf-arxiv-2603-17239
+      - owasp-ast10-ref-microsoft-hidden-boundaries
+      - owasp-ast10-ref-hf-genai-incidents
+      - owasp-aisvs-v1.0-c5.2.1
+      - owasp-aisvs-v1.0-c9.5.1
+      - owasp-aisvs-v1.0-c9.2.1
+      - owasp-asvs-v4
+      - cwe-250
+      - iso-iec-42001-a.6.2.5
 
   - id: ast04-insecure-metadata
     name: AST04 - Insecure Metadata
@@ -140,6 +194,19 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: insecure-metadata
     risk_type: agentic
+    isCategorizedAs: ast10-grp-source-and-registry
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-snyk-toxicskills-goof
+      - owasp-ast10-ref-snyk-skill-md-to-shell-access
+      - owasp-ast10-ref-owasp-top-10-a08-2021
+      - owasp-aisvs-v1.0-c2.1.2
+      - owasp-aisvs-v1.0-c6.2.3
+      - owasp-aisvs-v1.0-c9.3.3
+      - owasp-asvs-v5.5
+      - cwe-345
+      - cwe-502
+      - iso-iec-42001-a.6.2.7
 
   - id: ast05-untrusted-external-instructions
     name: AST05 - Untrusted External Instructions
@@ -161,6 +228,17 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: untrusted-external-instructions
     risk_type: agentic
+    isCategorizedAs: ast10-grp-execution-boundary
+    hasExternalReference:
+      - owasp-ast10-ref-anthropic-agent-skills
+      - owasp-ast10-ref-air-security-story-of-skills
+      - owasp-aisvs-v1.0-c2.1.3
+      - owasp-aisvs-v1.0-c2.1.6
+      - owasp-aisvs-v1.0-c7.3.4
+      - owasp-aisvs-v1.0-c9.3.5
+      - owasp-asvs-v5
+      - cwe-829
+      - iso-iec-42001-a.6.2.6
 
   - id: ast06-weak-isolation
     name: AST06 - Weak Isolation
@@ -176,6 +254,19 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: weak-isolation
     risk_type: agentic
+    isCategorizedAs: ast10-grp-execution-boundary
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-securityscorecard-exposed-openclaw
+      - owasp-ast10-ref-microsoft-defender-openclaw
+      - owasp-ast10-ref-nvd-cve-2026-32025
+      - owasp-ast10-ref-bitdefender-135k-exposed
+      - owasp-aisvs-v1.0-c4.1.1
+      - owasp-aisvs-v1.0-c4.3.3
+      - owasp-aisvs-v1.0-c9.3.1
+      - owasp-asvs-v12
+      - cwe-653
+      - iso-iec-42001-a.4.5
 
   - id: ast07-update-drift
     name: AST07 - Update Drift
@@ -191,6 +282,19 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: update-drift
     risk_type: agentic
+    isCategorizedAs: ast10-grp-lifecycle-governance
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-checkpoint-caught-in-the-hook
+      - owasp-ast10-ref-securityscorecard-exposed-openclaw
+      - owasp-ast10-ref-nvd-cve-2026-32025
+      - owasp-aisvs-v1.0-c3.1.2
+      - owasp-aisvs-v1.0-c3.1.3
+      - owasp-aisvs-v1.0-c3.2.3
+      - owasp-aisvs-v1.0-c6.1.3
+      - owasp-asvs-v14.2
+      - cwe-1329
+      - iso-iec-42001-a.6.2.6
 
   - id: ast08-poor-scanning
     name: AST08 - Poor Scanning
@@ -207,6 +311,29 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: poor-scanning
     risk_type: agentic
+    isCategorizedAs: ast10-grp-lifecycle-governance
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-trail-of-bits-skill-distribution
+      - owasp-ast10-ref-snyk-toxicskills-goof
+      - owasp-ast10-ref-agent-threat-rules
+      - owasp-ast10-ref-snyk-scanner-false-security
+      - owasp-ast10-ref-nvidia-skillspector
+      - owasp-ast10-ref-alice-poisoned-python-bytes
+      - owasp-ast10-ref-python-cached-bytecode
+      - owasp-ast10-ref-hofer-prompt-injection-arxiv-2606-10525
+      - owasp-ast10-ref-carlini-wagner-2017
+      - owasp-ast10-ref-tramer-adaptive-attacks-2020
+      - owasp-ast10-ref-owasp-top-ten-project
+      - owasp-ast10-ref-trail-of-bits-attack-code
+      - owasp-ast10-ref-adversa-scanner-bypass
+      - owasp-aisvs-v1.0-c11.1.3
+      - owasp-aisvs-v1.0-c11.4.1
+      - owasp-aisvs-v1.0-c12.2.1
+      - owasp-aisvs-v1.0-c12.2.3
+      - owasp-asvs-v14.3
+      - cwe-693
+      - iso-iec-42001-a.6.2.4
 
   - id: ast09-no-governance
     name: AST09 - No Governance
@@ -222,6 +349,18 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: no-governance
     risk_type: agentic
+    isCategorizedAs: ast10-grp-lifecycle-governance
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-cisco-state-of-ai-security-2026
+      - owasp-ast10-ref-bitdefender-enterprise-advisory
+      - owasp-ast10-ref-nist-ai-rmf
+      - owasp-ast10-ref-eu-ai-act-2024-1689
+      - owasp-aisvs-v1.0-c9.2.10
+      - owasp-aisvs-v1.0-c9.4.2
+      - owasp-aisvs-v1.0-c12.4.2
+      - owasp-samm-v3
+      - iso-iec-42001-a.2.2
 
   - id: ast10-cross-platform-reuse
     name: AST10 - Cross-Platform Reuse
@@ -240,3 +379,15 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: cross-platform-reuse
     risk_type: agentic
+    isCategorizedAs: ast10-grp-cross-platform-reuse
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-snyk-toxicskills-goof
+      - owasp-ast10-ref-ast10-issue-44
+      - owasp-ast10-ref-owasp-mcp-top-10
+      - owasp-aisvs-v1.0-c3.2.3
+      - owasp-aisvs-v1.0-c6.1.3
+      - owasp-aisvs-v1.0-c9.3.3
+      - owasp-aisvs-v1.0-c9.3.4
+      - cwe-1357
+      - iso-iec-42001-a.8.2

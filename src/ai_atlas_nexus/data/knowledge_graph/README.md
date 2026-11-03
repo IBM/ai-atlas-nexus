@@ -18,6 +18,11 @@ For more information about LinkML data instances see [the LinkML documentation](
 | `owasp_llm_2.0_data.yaml`                   | RiskTaxonomy           | The OWASP Top 10 for Large Language Model Applications version 2 risk definitions.                    |
 | `owasp_asi_data.yaml`                       | RiskTaxonomy           | The OWASP Top 10 for Agentic Applications 2026 risk definitions                                       |
 | `owasp_ast10_data.yaml`                     | RiskTaxonomy           | The OWASP Agentic Skills Top 10 v1.0 (2026 Edition) risk definitions                                  |
+| `owasp_ast10_actions_data.yaml`             | Actions                | Preventive mitigations from the OWASP Agentic Skills Top 10 whitepaper                                |
+| `owasp_ast10_incidents_data.yaml`           | RiskIncidents          | Real-world evidence reported in the OWASP Agentic Skills Top 10 whitepaper                            |
+| `owasp_ast10_references_data.yaml`          | Documents              | External references, and the AISVS/ASVS/CWE/ISO 42001 targets the AST10 mappings point at             |
+| `owasp_mcp_top10_data.yaml`                 | RiskTaxonomy           | The OWASP Top 10 for Model Context Protocol risk definitions                                          |
+| `csa_maestro_data.yaml`                     | RiskTaxonomy           | The CSA MAESTRO seven-layer reference architecture, used to categorise risks by layer                 |
 | `mit_ai_risk_repository_data.yaml`          | RiskTaxonomy           | The MIT AI Risk Repository risk taxonomy                                                              |
 | `ailuminate.yaml`                           | RiskTaxonomy           | The AILuminate benchmark risk taxonomy                                                                |
 | `credo.yaml`                                | RiskTaxonomy           | the Unified Control Framework from Credo                                                              |
