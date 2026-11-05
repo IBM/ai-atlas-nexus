@@ -97,7 +97,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: malicious-skills
     risk_type: agentic
-    isCategorizedAs: ast10-grp-source-and-registry
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-checkpoint-caught-in-the-hook
@@ -130,7 +129,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: supply-chain-compromise
     risk_type: agentic
-    isCategorizedAs: ast10-grp-source-and-registry
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-checkpoint-caught-in-the-hook
@@ -161,7 +159,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: over-privileged-skills
     risk_type: agentic
-    isCategorizedAs: ast10-grp-execution-boundary
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-snyk-leaky-skills
@@ -194,7 +191,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: insecure-metadata
     risk_type: agentic
-    isCategorizedAs: ast10-grp-source-and-registry
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-snyk-toxicskills-goof
@@ -228,7 +224,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: untrusted-external-instructions
     risk_type: agentic
-    isCategorizedAs: ast10-grp-execution-boundary
     hasExternalReference:
       - owasp-ast10-ref-anthropic-agent-skills
       - owasp-ast10-ref-air-security-story-of-skills
@@ -254,7 +249,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: weak-isolation
     risk_type: agentic
-    isCategorizedAs: ast10-grp-execution-boundary
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-securityscorecard-exposed-openclaw
@@ -282,7 +276,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: update-drift
     risk_type: agentic
-    isCategorizedAs: ast10-grp-lifecycle-governance
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-checkpoint-caught-in-the-hook
@@ -311,7 +304,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: poor-scanning
     risk_type: agentic
-    isCategorizedAs: ast10-grp-lifecycle-governance
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-trail-of-bits-skill-distribution
@@ -349,7 +341,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: no-governance
     risk_type: agentic
-    isCategorizedAs: ast10-grp-lifecycle-governance
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-cisco-state-of-ai-security-2026
@@ -379,7 +370,6 @@ entries:
     isDefinedByTaxonomy: owasp-ast10
     tag: cross-platform-reuse
     risk_type: agentic
-    isCategorizedAs: ast10-grp-cross-platform-reuse
     hasExternalReference:
       - owasp-ast10-ref-snyk-toxicskills
       - owasp-ast10-ref-snyk-toxicskills-goof
