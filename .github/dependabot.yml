@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+    versioning-strategy: lockfile-only
+    commit-message:
+      prefix: chore
+      include: scope
+    groups:
+      uv-lock-refresh:
+        patterns:
+          - "*"
+        update-types:
+          - minor
+          - patch

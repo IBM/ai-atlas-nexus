@@ -124,6 +124,8 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 
       Documentation : url
 
+      Documentation : version
+
 
 ```
 
@@ -159,6 +161,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [isCategorizedAs](isCategorizedAs.md)       | \* <br/> [Term](Term.md)                                                                                                                                                                                                              | The category this document falls under, referenced as a catalogued Term rathe... | [Entity](Entity.md) |
 | [hasLifecycleStatus](hasLifecycleStatus.md) | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                                                                                                                                                                                      | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
 | [notes](notes.md)                           | \* <br/> [String](String.md)                                                                                                                                                                                                          | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md) |
+| [version](version.md)                       | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The version of the entity embodied by a specified resource                       | [Entity](Entity.md) |
 
 ## Usages
 
@@ -232,6 +235,7 @@ URI: [airo:Documentation](https://w3id.org/airo#Documentation)
 | [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Question](Question.md)                                             | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Questionnaire](Questionnaire.md)                                   | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Adapter](Adapter.md)                                               | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
 | [Adapter](Adapter.md)                                               | [hasExternalReference](hasExternalReference.md) | range | [Documentation](Documentation.md) |
 | [LLMIntrinsic](LLMIntrinsic.md)                                     | [hasDocumentation](hasDocumentation.md)         | range | [Documentation](Documentation.md) |
@@ -344,6 +348,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   hasJurisdiction:
@@ -545,6 +550,23 @@ attributes:
     range: string
     recommended: false
     multivalued: true
+  version:
+    name: version
+    description: The version of the entity embodied by a specified resource.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:version
+    owner: Documentation
+    domain_of:
+    - Entity
+    - License
+    - Vocabulary
+    - Taxonomy
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
+    range: string
 class_uri: airo:Documentation
 
 ````

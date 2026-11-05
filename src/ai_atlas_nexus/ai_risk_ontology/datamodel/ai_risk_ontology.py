@@ -20398,6 +20398,15 @@ class Entity(ConfiguredBaseModel):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Organization(Entity):
@@ -20447,6 +20456,15 @@ class Organization(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class License(Entity):
@@ -20456,12 +20474,14 @@ class License(Entity):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'airo:License',
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
-    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
                        'Vocabulary',
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
@@ -20498,6 +20518,7 @@ class Dataset(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
@@ -20519,6 +20540,7 @@ class Dataset(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -20539,6 +20561,15 @@ class Dataset(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Documentation(Entity):
@@ -20567,6 +20598,7 @@ class Documentation(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
@@ -20592,6 +20624,15 @@ class Documentation(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Fact(ConfiguredBaseModel):
@@ -20614,12 +20655,14 @@ class Vocabulary(Entity):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
          'mixin': True})
 
-    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
                        'Vocabulary',
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -20640,6 +20683,7 @@ class Vocabulary(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -20653,6 +20697,7 @@ class Vocabulary(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["Vocabulary"] = Field(default="Vocabulary", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -20705,12 +20750,14 @@ class Taxonomy(Entity):
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common',
          'mixin': True})
 
-    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
                        'Vocabulary',
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -20731,6 +20778,7 @@ class Taxonomy(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -20744,6 +20792,7 @@ class Taxonomy(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["Taxonomy"] = Field(default="Taxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -20834,6 +20883,7 @@ class Concept(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -20882,6 +20932,15 @@ class Concept(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Control(Entity):
@@ -20956,6 +21015,15 @@ class Control(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Group(Entity):
@@ -21005,6 +21073,7 @@ class Group(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21058,6 +21127,15 @@ class Group(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Entry(Entity):
@@ -21108,6 +21186,7 @@ class Entry(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21172,6 +21251,15 @@ class Entry(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Term(Entry):
@@ -21201,6 +21289,7 @@ class Term(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21296,6 +21385,15 @@ class Term(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Principle(Entry):
@@ -21324,6 +21422,7 @@ class Principle(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21409,6 +21508,15 @@ class Principle(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Policy(Entity):
@@ -21478,6 +21586,15 @@ class Policy(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class LLMQuestionPolicy(Policy):
@@ -21560,6 +21677,15 @@ class LLMQuestionPolicy(Policy):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Rule(Entity):
@@ -21610,6 +21736,7 @@ class Rule(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21652,6 +21779,15 @@ class Rule(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AttributeConditionRule(Rule):
@@ -21699,6 +21835,7 @@ class AttributeConditionRule(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21741,6 +21878,15 @@ class AttributeConditionRule(Rule):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AnonymousClassExpression(ConfiguredBaseModel):
@@ -21827,6 +21973,7 @@ class Permission(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21846,6 +21993,15 @@ class Permission(Rule):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Prohibition(Rule):
@@ -21919,6 +22075,7 @@ class Prohibition(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -21938,6 +22095,15 @@ class Prohibition(Rule):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Obligation(Rule):
@@ -22011,6 +22177,7 @@ class Obligation(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22030,6 +22197,15 @@ class Obligation(Rule):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Recommendation(Rule):
@@ -22103,6 +22279,7 @@ class Recommendation(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22122,14 +22299,22 @@ class Recommendation(Rule):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Certification(Entry):
     """
     Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
     """
-    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'abstract': True,
-         'class_uri': 'dpv:Certification',
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'dpv:Certification',
          'from_schema': 'https://w3id.org/ai-atlas-nexus/common'})
 
     type: Literal["Certification"] = Field(default="Certification", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -22195,6 +22380,7 @@ class Certification(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22236,6 +22422,15 @@ class Certification(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class EvaluationStandard(Entry):
@@ -22311,6 +22506,7 @@ class EvaluationStandard(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22352,6 +22548,15 @@ class EvaluationStandard(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class LocalityOfUse(Entry):
@@ -22401,6 +22606,7 @@ class LocalityOfUse(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22465,6 +22671,15 @@ class LocalityOfUse(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class RiskTaxonomy(Taxonomy):
@@ -22473,12 +22688,14 @@ class RiskTaxonomy(Taxonomy):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
 
-    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
                        'Vocabulary',
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -22499,6 +22716,7 @@ class RiskTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22512,6 +22730,7 @@ class RiskTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["RiskTaxonomy"] = Field(default="RiskTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -22561,12 +22780,14 @@ class RiskControlGroupTaxonomy(Taxonomy):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_risk'})
 
-    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
                        'Vocabulary',
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -22587,6 +22808,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22600,6 +22822,7 @@ class RiskControlGroupTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["RiskControlGroupTaxonomy"] = Field(default="RiskControlGroupTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -22697,6 +22920,7 @@ class RiskConcept(Concept):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22745,6 +22969,15 @@ class RiskConcept(Concept):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class RiskControlGroup(RiskConcept, Group):
@@ -22812,6 +23045,7 @@ class RiskControlGroup(RiskConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22858,6 +23092,15 @@ class RiskControlGroup(RiskConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
@@ -22930,6 +23173,7 @@ class RiskGroup(RiskConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -22976,6 +23220,15 @@ class RiskGroup(RiskConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
@@ -23061,6 +23314,7 @@ class Risk(RiskConcept, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23118,6 +23372,15 @@ class Risk(RiskConcept, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
@@ -23214,6 +23477,15 @@ class RiskControl(RiskConcept, Control):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
                        'Taxonomy',
@@ -23233,6 +23505,7 @@ class RiskControl(RiskConcept, Control):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23282,6 +23555,7 @@ class Action(RiskControl):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23365,6 +23639,15 @@ class Action(RiskControl):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
@@ -23440,6 +23723,15 @@ class RiskIncident(RiskConcept, Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
                        'Taxonomy',
@@ -23459,6 +23751,7 @@ class RiskIncident(RiskConcept, Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23522,6 +23815,15 @@ class Impact(RiskConcept, Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     isDefinedByTaxonomy: Optional[str] = Field(default=None, description="""A relationship where a concept or a concept group is defined by a taxonomy""", json_schema_extra = { "linkml_meta": {'domain_of': ['Concept',
                        'Control',
                        'Group',
@@ -23560,6 +23862,7 @@ class Impact(RiskConcept, Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23614,6 +23917,15 @@ class IncidentStatus(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class IncidentConcludedclass(IncidentStatus):
@@ -23636,6 +23948,15 @@ class IncidentConcludedclass(IncidentStatus):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class IncidentHaltedclass(IncidentStatus):
@@ -23658,6 +23979,15 @@ class IncidentHaltedclass(IncidentStatus):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class IncidentMitigatedclass(IncidentStatus):
@@ -23680,6 +24010,15 @@ class IncidentMitigatedclass(IncidentStatus):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class IncidentNearMissclass(IncidentStatus):
@@ -23702,6 +24041,15 @@ class IncidentNearMissclass(IncidentStatus):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class IncidentOngoingclass(IncidentStatus):
@@ -23724,6 +24072,15 @@ class IncidentOngoingclass(IncidentStatus):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Severity(Entity):
@@ -23746,6 +24103,15 @@ class Severity(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Likelihood(Entity):
@@ -23768,6 +24134,15 @@ class Likelihood(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Consequence(Entity):
@@ -23790,6 +24165,15 @@ class Consequence(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class CapabilityTaxonomy(Taxonomy):
@@ -23799,12 +24183,14 @@ class CapabilityTaxonomy(Taxonomy):
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'class_uri': 'skos:ConceptScheme',
          'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_capability'})
 
-    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
                        'Vocabulary',
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -23825,6 +24211,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23838,6 +24225,7 @@ class CapabilityTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["CapabilityTaxonomy"] = Field(default="CapabilityTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -23927,6 +24315,7 @@ class CapabilityConcept(Concept):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -23975,6 +24364,15 @@ class CapabilityConcept(Concept):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class CapabilityDomain(CapabilityConcept, Group):
@@ -24027,6 +24425,7 @@ class CapabilityDomain(CapabilityConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24080,6 +24479,15 @@ class CapabilityDomain(CapabilityConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
@@ -24162,6 +24570,7 @@ class CapabilityGroup(CapabilityConcept, Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24207,6 +24616,15 @@ class CapabilityGroup(CapabilityConcept, Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
@@ -24305,6 +24723,7 @@ class Capability(CapabilityConcept, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24363,6 +24782,15 @@ class Capability(CapabilityConcept, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasJurisdiction: Optional[list[Union[Jurisdiction, SubnationalJurisdiction, SupraNationalJurisdiction]]] = Field(default=None, description="""The legal or regulatory jurisdiction(s) applicable to an AI system, policy, risk, or obligation, expressed as an ISO 3166-1 alpha-2 country code (e.g. US), an ISO 3166-2 subdivision code (e.g. US-CA), a supra-national union (e.g. EU, EEA), or International. Values are listed in jurisdictions.yaml from the DPV Location vocabulary. Aligns with dpv:hasJurisdiction.""", json_schema_extra = { "linkml_meta": {'any_of': [{'range': 'Jurisdiction'},
                     {'range': 'SupraNationalJurisdiction'},
                     {'range': 'SubnationalJurisdiction'}],
@@ -24404,6 +24832,7 @@ class BaseAi(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24417,6 +24846,7 @@ class BaseAi(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -24437,6 +24867,15 @@ class BaseAi(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiSystem(BaseAi, Entry):
@@ -24508,6 +24947,7 @@ class AiSystem(BaseAi, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24521,6 +24961,7 @@ class AiSystem(BaseAi, Entry):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -24607,6 +25048,15 @@ class AiSystem(BaseAi, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiAgent(AiSystem):
@@ -24668,6 +25118,7 @@ class AiAgent(AiSystem):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24681,6 +25132,7 @@ class AiAgent(AiSystem):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -24767,6 +25219,15 @@ class AiAgent(AiSystem):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class LargeLanguageModelFamily(Entity):
@@ -24794,6 +25255,7 @@ class LargeLanguageModelFamily(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24813,6 +25275,15 @@ class LargeLanguageModelFamily(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiTask(Entry):
@@ -24868,6 +25339,7 @@ class AiTask(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24929,6 +25401,15 @@ class AiTask(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiTaskTaxonomy(Taxonomy):
@@ -24937,12 +25418,14 @@ class AiTaskTaxonomy(Taxonomy):
     """
     linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_system'})
 
-    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['License',
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
                        'Vocabulary',
                        'Taxonomy',
                        'RiskTaxonomy',
                        'RiskControlGroupTaxonomy',
-                       'AiTaskTaxonomy'],
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
          'slot_uri': 'schema:version'} })
     hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
                        'Vocabulary',
@@ -24963,6 +25446,7 @@ class AiTaskTaxonomy(Taxonomy):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -24976,6 +25460,7 @@ class AiTaskTaxonomy(Taxonomy):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     type: Literal["AiTaskTaxonomy"] = Field(default="AiTaskTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
@@ -25075,6 +25560,7 @@ class AiTaskDomain(Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25121,6 +25607,15 @@ class AiTaskDomain(Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiTaskGroup(Group):
@@ -25187,6 +25682,7 @@ class AiTaskGroup(Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25233,6 +25729,15 @@ class AiTaskGroup(Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiLifecyclePhase(Entity):
@@ -25259,6 +25764,15 @@ class AiLifecyclePhase(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class DataPreprocessing(AiLifecyclePhase):
@@ -25283,6 +25797,15 @@ class DataPreprocessing(AiLifecyclePhase):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiModelValidation(AiLifecyclePhase):
@@ -25307,6 +25830,15 @@ class AiModelValidation(AiLifecyclePhase):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiProvider(Organization):
@@ -25356,6 +25888,15 @@ class AiProvider(Organization):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Modality(Entity):
@@ -25381,6 +25922,15 @@ class Modality(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Input(Entity):
@@ -25406,6 +25956,15 @@ class Input(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Purpose(Entry):
@@ -25455,6 +26014,7 @@ class Purpose(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25519,6 +26079,15 @@ class Purpose(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Domain(Entry):
@@ -25568,6 +26137,7 @@ class Domain(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25632,6 +26202,15 @@ class Domain(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AIComponent(Entity):
@@ -25657,6 +26236,15 @@ class AIComponent(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiModel(AIComponent, BaseAi):
@@ -25696,6 +26284,7 @@ class AiModel(AIComponent, BaseAi):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25709,6 +26298,7 @@ class AiModel(AIComponent, BaseAi):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -25729,6 +26319,15 @@ class AiModel(AIComponent, BaseAi):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class LargeLanguageModel(AiModel):
@@ -25791,6 +26390,7 @@ class LargeLanguageModel(AiModel):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -25804,6 +26404,7 @@ class LargeLanguageModel(AiModel):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     performsTask: Optional[list[str]] = Field(default=None, description="""relationship indicating the AI tasks an AI model can perform.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BaseAi']} })
@@ -25824,6 +26425,15 @@ class LargeLanguageModel(AiModel):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Stakeholder(Entity):
@@ -25880,6 +26490,15 @@ class Stakeholder(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AISubject(Stakeholder):
@@ -25931,6 +26550,15 @@ class AISubject(Stakeholder):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AIOperator(Stakeholder):
@@ -25982,6 +26610,15 @@ class AIOperator(Stakeholder):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AIDeveloper(Stakeholder):
@@ -26033,6 +26670,15 @@ class AIDeveloper(Stakeholder):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AIDeployer(AIOperator):
@@ -26084,6 +26730,15 @@ class AIDeployer(AIOperator):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AIUser(Stakeholder):
@@ -26135,6 +26790,15 @@ class AIUser(Stakeholder):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class StakeholderGroup(Group):
@@ -26181,6 +26845,7 @@ class StakeholderGroup(Group):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26234,6 +26899,15 @@ class StakeholderGroup(Group):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiEval(Entity):
@@ -26273,6 +26947,7 @@ class AiEval(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26290,6 +26965,7 @@ class AiEval(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval',
@@ -26321,6 +26997,15 @@ class AiEval(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiEvalResult(Fact, Entity):
@@ -26350,6 +27035,15 @@ class AiEvalResult(Fact, Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class SourceMetadata(Entity):
@@ -26380,6 +27074,15 @@ class SourceMetadata(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ModelInfo(Entity):
@@ -26407,6 +27110,15 @@ class ModelInfo(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class SourceData(Entity):
@@ -26436,6 +27148,15 @@ class SourceData(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class MetricConfig(Entity):
@@ -26465,6 +27186,15 @@ class MetricConfig(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ScoreDetails(Entity):
@@ -26491,6 +27221,15 @@ class ScoreDetails(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class EvaluationResultRecord(Entity):
@@ -26520,6 +27259,15 @@ class EvaluationResultRecord(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class EveryEvalAIResult(AiEvalResult):
@@ -26567,6 +27315,7 @@ class EveryEvalAIResult(AiEvalResult):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26603,6 +27352,15 @@ class EveryEvalAIResult(AiEvalResult):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class BenchmarkMetadataCard(Entity):
@@ -26660,6 +27418,7 @@ class BenchmarkMetadataCard(Entity):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasConsiderationConsentProcedures: Optional[list[str]] = Field(default=None, description="""Information on how consent was obtained (if applicable), especially for datasets involving personal data.""", json_schema_extra = { "linkml_meta": {'domain_of': ['BenchmarkMetadataCard']} })
@@ -26683,6 +27442,7 @@ class BenchmarkMetadataCard(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26726,6 +27486,15 @@ class BenchmarkMetadataCard(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ThirdPartyEvaluationEngagement(Entity):
@@ -26782,6 +27551,7 @@ class ThirdPartyEvaluationEngagement(Entity):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26801,6 +27571,15 @@ class ThirdPartyEvaluationEngagement(Entity):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class EvaluationStandardConformance(ConfiguredBaseModel):
@@ -26883,6 +27662,7 @@ class Question(AiEval):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26900,6 +27680,7 @@ class Question(AiEval):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval',
@@ -26931,6 +27712,15 @@ class Question(AiEval):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Questionnaire(AiEval):
@@ -26959,6 +27749,7 @@ class Questionnaire(AiEval):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -26976,6 +27767,7 @@ class Questionnaire(AiEval):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval',
@@ -26991,6 +27783,107 @@ class Questionnaire(AiEval):
     bestValue: Optional[str] = Field(default=None, description="""Annotation of the best possible result of the evaluation""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiEval']} })
     hasBenchmarkMetadata: Optional[list[str]] = Field(default=None, description="""A relationship to a Benchmark Metadata Card which contains metadata about the benchmark.""", json_schema_extra = { "linkml_meta": {'domain': 'AiEval', 'domain_of': ['AiEval'], 'inverse': 'describesAiEval'} })
     isComposedOf: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an AI evaluation maybe composed of other AI evaluations (e.g. it's an overall average of other scores).""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiSystem', 'AiEval']} })
+    id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
+    name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
+    description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
+    url: Optional[str] = Field(default=None, description="""An optional URL associated with this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:url'} })
+    dateCreated: Optional[date] = Field(default=None, description="""The date on which the entity was created.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateCreated'} })
+    dateModified: Optional[date] = Field(default=None, description="""The date on which the entity was most recently modified.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:dateModified'} })
+    exact_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:exactMatch'} })
+    close_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:closeMatch'} })
+    related_mappings: Optional[list[Any]] = Field(default=None, description="""The property skos:relatedMatch is used to state an associative mapping link between two concepts.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:relatedMatch'} })
+    narrow_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a narrower concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:narrowMatch'} })
+    broad_mappings: Optional[list[Any]] = Field(default=None, description="""The property is used to state a hierarchical mapping link between two concepts, indicating that the concept linked to, is a broader concept than the originating concept.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'skos:broadMatch'} })
+    isCategorizedAs: Optional[list[Any]] = Field(default=None, description="""A relationship where an entity has been deemed to be categorized""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'nexus:isCategorizedAs'} })
+    hasLifecycleStatus: Optional[LifecycleStatus] = Field(default=None, description="""The editorial / publication lifecycle state of this entity. Distinct from AiLifecyclePhase, which describes an AI system's runtime evolution rather than the editorial workflow of a catalogued entry.""", json_schema_extra = { "linkml_meta": {'aliases': ['lifecycle_status', 'doc_status'],
+         'domain_of': ['Entity'],
+         'slot_uri': 'adms:status'} })
+    notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
+
+
+class AiEvaluationStandardTaxonomy(Taxonomy):
+    """
+    A taxonomy of Ai Evaluation Standards
+    """
+    linkml_meta: ClassVar[LinkMLMeta] = LinkMLMeta({'from_schema': 'https://w3id.org/ai-atlas-nexus/ai_eval'})
+
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
+    hasDocumentation: Optional[list[str]] = Field(default=None, description="""Indicates documentation associated with an entity.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Group',
+                       'Entry',
+                       'Term',
+                       'Principle',
+                       'Rule',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'Action',
+                       'BaseAi',
+                       'LargeLanguageModelFamily',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'EveryEvalAIResult',
+                       'BenchmarkMetadataCard',
+                       'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
+                       'Adapter',
+                       'LLMIntrinsic'],
+         'slot_uri': 'airo:hasDocumentation'} })
+    hasLicense: Optional[str] = Field(default=None, description="""Indicates licenses associated with a resource""", json_schema_extra = { "linkml_meta": {'domain_of': ['Dataset',
+                       'Documentation',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'BaseAi',
+                       'AiTaskTaxonomy',
+                       'AiEval',
+                       'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
+                       'Adapter'],
+         'slot_uri': 'airo:hasLicense'} })
+    type: Literal["AiEvaluationStandardTaxonomy"] = Field(default="AiEvaluationStandardTaxonomy", description="""The type or class designation of this entity instance.""", json_schema_extra = { "linkml_meta": {'designates_type': True,
+         'domain_of': ['Organization',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'Concept',
+                       'Control',
+                       'Group',
+                       'Entry',
+                       'Policy',
+                       'Rule',
+                       'Permission',
+                       'Prohibition',
+                       'Obligation',
+                       'Recommendation',
+                       'Certification',
+                       'EvaluationStandard',
+                       'BenchmarkMetadataCard',
+                       'ControlActivity',
+                       'ControlActivityPermission',
+                       'ControlActivityProhibition',
+                       'ControlActivityObligation',
+                       'ControlActivityRecommendation',
+                       'Requirement']} })
     id: str = Field(default=..., description="""A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:identifier'} })
     name: Optional[str] = Field(default=None, description="""A text name of this instance.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity', 'BenchmarkMetadataCard'], 'slot_uri': 'schema:name'} })
     description: Optional[str] = Field(default=None, description="""The description of an entity""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'slot_uri': 'schema:description'} })
@@ -27048,6 +27941,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27061,6 +27955,7 @@ class Adapter(LargeLanguageModel, Entry):
                        'AiTaskTaxonomy',
                        'AiEval',
                        'BenchmarkMetadataCard',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter'],
          'slot_uri': 'airo:hasLicense'} })
     hasRelatedRisk: Optional[list[str]] = Field(default=None, description="""A relationship where an entity relates to a risk""", json_schema_extra = { "linkml_meta": {'domain': 'Adapter',
@@ -27168,6 +28063,15 @@ class Adapter(LargeLanguageModel, Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
     hasEvaluation: Optional[list[str]] = Field(default=None, description="""A relationship indicating that an entity has an AI evaluation result.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel', 'ThirdPartyEvaluationEngagement'],
          'slot_uri': 'dqv:hasQualityMeasurement'} })
     architecture: Optional[str] = Field(default=None, description="""A description of the architecture of an AI such as 'Decoder-only'.""", json_schema_extra = { "linkml_meta": {'domain_of': ['AiModel']} })
@@ -27228,6 +28132,7 @@ class LLMIntrinsic(Entry):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27320,6 +28225,15 @@ class LLMIntrinsic(Entry):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class AiOffice(Organization):
@@ -27369,6 +28283,15 @@ class AiOffice(Organization):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ControlActivity(Rule):
@@ -27461,6 +28384,7 @@ class ControlActivity(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27480,6 +28404,15 @@ class ControlActivity(Rule):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ControlActivityPermission(ControlActivity, Permission):
@@ -27574,6 +28507,7 @@ class ControlActivityPermission(ControlActivity, Permission):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27593,6 +28527,15 @@ class ControlActivityPermission(ControlActivity, Permission):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ControlActivityProhibition(ControlActivity, Prohibition):
@@ -27687,6 +28630,7 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27706,6 +28650,15 @@ class ControlActivityProhibition(ControlActivity, Prohibition):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ControlActivityObligation(ControlActivity, Obligation):
@@ -27800,6 +28753,7 @@ class ControlActivityObligation(ControlActivity, Obligation):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27819,6 +28773,15 @@ class ControlActivityObligation(ControlActivity, Obligation):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class ControlActivityRecommendation(ControlActivity, Recommendation):
@@ -27913,6 +28876,7 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -27932,6 +28896,15 @@ class ControlActivityRecommendation(ControlActivity, Recommendation):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Requirement(Rule):
@@ -28026,6 +28999,7 @@ class Requirement(Rule):
                        'EveryEvalAIResult',
                        'BenchmarkMetadataCard',
                        'ThirdPartyEvaluationEngagement',
+                       'AiEvaluationStandardTaxonomy',
                        'Adapter',
                        'LLMIntrinsic'],
          'slot_uri': 'airo:hasDocumentation'} })
@@ -28045,6 +29019,15 @@ class Requirement(Rule):
          'domain_of': ['Entity'],
          'slot_uri': 'adms:status'} })
     notes: Optional[list[str]] = Field(default=None, description="""Free-text editorial notes, source breadcrumbs, or build-time provenance that do not belong in the user-facing description. Opaque to consumers.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity'], 'recommended': False, 'slot_uri': 'skos:note'} })
+    version: Optional[str] = Field(default=None, description="""The version of the entity embodied by a specified resource.""", json_schema_extra = { "linkml_meta": {'domain_of': ['Entity',
+                       'License',
+                       'Vocabulary',
+                       'Taxonomy',
+                       'RiskTaxonomy',
+                       'RiskControlGroupTaxonomy',
+                       'AiTaskTaxonomy',
+                       'AiEvaluationStandardTaxonomy'],
+         'slot_uri': 'schema:version'} })
 
 
 class Container(ConfiguredBaseModel):
@@ -28062,7 +29045,7 @@ class Container(ConfiguredBaseModel):
     datasets: Optional[list[Dataset]] = Field(default=None, description="""A list of data sets""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     llmintrinsics: Optional[list[LLMIntrinsic]] = Field(default=None, description="""A list of LLMIntrinsics""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     adapters: Optional[list[Adapter]] = Field(default=None, description="""A list of Adapters""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
-    taxonomies: Optional[list[Union[Taxonomy,RiskTaxonomy,RiskControlGroupTaxonomy,CapabilityTaxonomy,AiTaskTaxonomy]]] = Field(default=None, description="""A list of taxonomies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
+    taxonomies: Optional[list[Union[Taxonomy,RiskTaxonomy,RiskControlGroupTaxonomy,CapabilityTaxonomy,AiTaskTaxonomy,AiEvaluationStandardTaxonomy]]] = Field(default=None, description="""A list of taxonomies""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     concepts: Optional[list[Union[Concept,RiskConcept,CapabilityConcept,CapabilityDomain,CapabilityGroup,Capability,RiskControlGroup,RiskGroup,Risk,RiskControl,RiskIncident,Impact,Action]]] = Field(default=None, description="""A list of concepts""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     entries: Optional[list[Union[Entry,Term,Principle,Certification,EvaluationStandard,LocalityOfUse,Risk,Capability,AiSystem,AiTask,Purpose,Domain,Adapter,LLMIntrinsic,AiAgent]]] = Field(default=None, description="""A list of entries""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
     groups: Optional[list[Union[Group,RiskControlGroup,RiskGroup,CapabilityDomain,CapabilityGroup,AiTaskDomain,AiTaskGroup,StakeholderGroup]]] = Field(default=None, description="""A list of groups""", json_schema_extra = { "linkml_meta": {'domain_of': ['Container']} })
@@ -28179,6 +29162,7 @@ EvaluationStandardConformance.model_rebuild()
 ConditionAssessment.model_rebuild()
 Question.model_rebuild()
 Questionnaire.model_rebuild()
+AiEvaluationStandardTaxonomy.model_rebuild()
 Adapter.model_rebuild()
 LLMIntrinsic.model_rebuild()
 AiOffice.model_rebuild()

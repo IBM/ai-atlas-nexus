@@ -183,6 +183,8 @@ URI: [nexus:Questionnaire](https://w3id.org/ai-atlas-nexus/Questionnaire)
 
       Questionnaire : url
 
+      Questionnaire : version
+
 
 ```
 
@@ -220,6 +222,7 @@ URI: [nexus:Questionnaire](https://w3id.org/ai-atlas-nexus/Questionnaire)
 | [isCategorizedAs](isCategorizedAs.md)           | \* <br/> [Any](Any.md)                                     | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md) |
 | [hasLifecycleStatus](hasLifecycleStatus.md)     | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)           | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md) |
 | [notes](notes.md)                               | \* <br/> [String](String.md)                               | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md) |
+| [version](version.md)                           | 0..1 <br/> [String](String.md)                             | The version of the entity embodied by a specified resource                       | [Entity](Entity.md) |
 
 ## Identifier and Mapping Information
 
@@ -294,6 +297,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -365,6 +369,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   hasRelatedRisk:
@@ -597,6 +602,23 @@ attributes:
     range: string
     recommended: false
     multivalued: true
+  version:
+    name: version
+    description: The version of the entity embodied by a specified resource.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:version
+    owner: Questionnaire
+    domain_of:
+    - Entity
+    - License
+    - Vocabulary
+    - Taxonomy
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
+    range: string
 
 ````
 

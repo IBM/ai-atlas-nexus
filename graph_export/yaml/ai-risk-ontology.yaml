@@ -3751,7 +3751,7 @@ taxonomies:
       in third-party AI audits.
     url: https://taxonomy.eticas.ai
     version: 2.0.0
-    type: Taxonomy
+    type: RiskTaxonomy
   - id: hf-ml-tasks
     name: Hugging Face ML Tasks
     description: "Hugging Face is the home for all Machine Learning tasks. Here you
@@ -3760,7 +3760,7 @@ taxonomies:
     url: https://huggingface.co/tasks
     dateCreated: 2025-12-17
     dateModified: 2025-12-17
-    type: Taxonomy
+    type: AiTaskTaxonomy
   - id: shieldgemma-taxonomy
     name: ShieldGemma Safety Categories
     description: Four-category harm taxonomy for content moderation built on Gemma 2
@@ -3791,7 +3791,7 @@ taxonomies:
     dateCreated: 2025-12-04
     hasDocumentation:
       - AEF-1-Dec-2025
-    type: Taxonomy
+    type: AiEvaluationStandardTaxonomy
   - id: owasp-llm-2.0
     name: OWASP Top 10 for Large Language Model Applications
     description: The OWASP Top 10 for Large Language Model Applications project aims
@@ -4352,14 +4352,12 @@ entries:
       - mit-ai-causal-risk-intent-intentional
       - mit-ai-causal-risk-timing-other
       - mit-ai-risk-subdomain-2.2
-    narrow_mappings:
-      - atlas-prompt-injection
     broad_mappings:
       - atlas-prompt-injection
       - llm022025-sensitive-information-disclosure
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-leaking
     risk_type: inference
@@ -4547,12 +4545,10 @@ entries:
       - aiuc1-req-b002
       - aiuc1-req-b005
       - aiuc1-req-f001
-    narrow_mappings:
-      - atlas-prompt-injection
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: social-hacking-attack
     risk_type: inference
@@ -4629,12 +4625,10 @@ entries:
       - aiuc1-req-b001
       - aiuc1-req-b002
       - ast05-untrusted-external-instructions
-    narrow_mappings:
-      - atlas-prompt-injection
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: indirect-instructions-attack
     risk_type: inference
@@ -5614,12 +5608,10 @@ entries:
     dateModified: 2025-10-10
     related_mappings:
       - aiuc1-req-b002
-    narrow_mappings:
-      - atlas-prompt-injection
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: context-overload-attack
     risk_type: inference
@@ -5963,12 +5955,10 @@ entries:
     related_mappings:
       - aiuc1-req-b001
       - aiuc1-req-b002
-    narrow_mappings:
-      - atlas-prompt-injection
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: specialized-tokens-attack
     risk_type: inference
@@ -6042,16 +6032,9 @@ entries:
       - atlas-social-hacking-attack
       - atlas-specialized-tokens-attack
     broad_mappings:
-      - atlas-context-overload-attack
-      - atlas-direct-instructions-attack
-      - atlas-encoded-interactions-attack
-      - atlas-indirect-instructions-attack
-      - atlas-prompt-leaking
-      - atlas-social-hacking-attack
-      - atlas-specialized-tokens-attack
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-injection
     risk_type: inference
@@ -6208,12 +6191,10 @@ entries:
     related_mappings:
       - aiuc1-req-b001
       - aiuc1-req-b005
-    narrow_mappings:
-      - atlas-prompt-injection
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: direct-instructions-attack
     risk_type: inference
@@ -6415,7 +6396,7 @@ entries:
       - llm01-prompt-injection
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-priming
     risk_type: inference
@@ -6609,12 +6590,10 @@ entries:
     related_mappings:
       - aiuc1-req-b001
       - aiuc1-req-b002
-    narrow_mappings:
-      - atlas-prompt-injection
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: encoded-interactions-attack
     risk_type: inference
@@ -7001,9 +6980,9 @@ entries:
       - ail-violent-crimes
       - atlas-harmful-output
     narrow_mappings:
-      - eticas-misuse-beyond-intended-purpose
-    broad_mappings:
       - atlas-dangerous-use
+    broad_mappings:
+      - eticas-misuse-beyond-intended-purpose
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
     hasRelatedAction:
@@ -7088,7 +7067,7 @@ entries:
       - ail-violent-crimes
       - credo-risk-013
       - credo-risk-015
-    broad_mappings:
+    narrow_mappings:
       - atlas-harmful-code-generation
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
@@ -7142,7 +7121,7 @@ entries:
       - credo-risk-036
       - credo-risk-037
       - atlas-harmful-output
-    broad_mappings:
+    narrow_mappings:
       - atlas-attribute-inference-attack
       - atlas-data-privacy-rights
       - atlas-data-usage-rights
@@ -7199,7 +7178,7 @@ entries:
       - credo-risk-004
     related_mappings:
       - credo-risk-004
-    narrow_mappings:
+    broad_mappings:
       - eticas-hardware-efficiency
       - eticas-inference-energy-consumption
       - eticas-training-resource-consumption
@@ -7224,7 +7203,7 @@ entries:
       - credo-risk-011
       - credo-risk-012
       - credo-risk-022
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-bias
       - atlas-decision-bias
       - atlas-impact-on-affected-communities
@@ -7251,7 +7230,7 @@ entries:
       - credo-risk-017
       - credo-risk-018
       - credo-risk-020
-    broad_mappings:
+    narrow_mappings:
       - atlas-improper-usage
       - atlas-incomplete-usage-definition
       - atlas-non-disclosure
@@ -7332,7 +7311,7 @@ entries:
       - credo-risk-007
       - credo-risk-022
       - credo-risk-032
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-transparency
       - atlas-impact-on-cultural-diversity
       - atlas-impact-on-human-agency
@@ -7436,10 +7415,6 @@ entries:
       - credo-risk-040
       - credo-risk-041
     narrow_mappings:
-      - eticas-data-poisoning
-      - eticas-model-extraction
-      - eticas-prompt-injection
-    broad_mappings:
       - atlas-attribute-inference-attack
       - atlas-data-contamination
       - atlas-data-poisoning
@@ -7450,6 +7425,10 @@ entries:
       - atlas-prompt-leaking
       - atlas-prompt-priming
       - atlas-unreliable-source-attribution
+    broad_mappings:
+      - eticas-data-poisoning
+      - eticas-model-extraction
+      - eticas-prompt-injection
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
     hasRelatedAction:
@@ -7518,7 +7497,7 @@ entries:
       - ail-nonviolent-crimes
       - ail-privacy
       - credo-risk-039
-    broad_mappings:
+    narrow_mappings:
       - atlas-confidential-data-in-prompt
       - atlas-confidential-information-in-data
       - atlas-copyright-infringement
@@ -7575,7 +7554,7 @@ entries:
       - credo-risk-013
       - credo-risk-014
       - atlas-harmful-output
-    broad_mappings:
+    narrow_mappings:
       - atlas-human-exploitation
     isDefinedByTaxonomy: nist-ai-rmf
     type: Risk
@@ -7608,7 +7587,7 @@ entries:
       - credo-risk-048
       - credo-risk-049
       - atlas-unrepresentative-data
-    broad_mappings:
+    narrow_mappings:
       - atlas-data-acquisition
       - atlas-data-contamination
       - atlas-data-curation
@@ -8349,7 +8328,7 @@ entries:
       - atlas-data-bias
       - atlas-decision-bias
       - atlas-output-bias
-    narrow_mappings:
+    broad_mappings:
       - eticas-sentiment-fairness
     isDefinedByTaxonomy: mit-ai-risk-repository
     isPartOf: mit-ai-risk-domain-1
@@ -8459,7 +8438,7 @@ entries:
       - atlas-prompt-injection
       - atlas-prompt-leaking
       - atlas-prompt-priming
-    narrow_mappings:
+    broad_mappings:
       - eticas-data-poisoning
       - eticas-jailbreaking
       - eticas-model-extraction
@@ -8681,7 +8660,7 @@ entries:
     related_mappings:
       - ail-nonviolent-crimes
       - atlas-impact-on-the-environment
-    narrow_mappings:
+    broad_mappings:
       - eticas-inference-energy-consumption
       - eticas-training-resource-consumption
     isDefinedByTaxonomy: mit-ai-risk-repository
@@ -8754,7 +8733,7 @@ entries:
       - atlas-incomplete-advice
       - atlas-poor-model-accuracy
       - atlas-unrepresentative-data
-    narrow_mappings:
+    broad_mappings:
       - eticas-output-drift
       - eticas-output-inconsistency
     isDefinedByTaxonomy: mit-ai-risk-repository
@@ -8786,7 +8765,7 @@ entries:
       - atlas-unexplainable-output
       - atlas-unreliable-source-attribution
       - atlas-untraceable-attribution
-    narrow_mappings:
+    broad_mappings:
       - eticas-right-to-explanation-contestation
     isDefinedByTaxonomy: mit-ai-risk-repository
     isPartOf: mit-ai-risk-domain-7
@@ -13217,7 +13196,7 @@ entries:
       - asi06-memory-and-context-poisoning
       - asi08-cascading-failures
       - asi09-human-agent-trust-exploitation
-    broad_mappings:
+    narrow_mappings:
       - asi01-agent-goal-hijack
       - atlas-jailbreaking
       - atlas-prompt-priming
@@ -13260,7 +13239,7 @@ entries:
       - atlas-reidentification
       - credo-risk-036
       - credo-risk-038
-    broad_mappings:
+    narrow_mappings:
       - atlas-exposing-personal-information
       - atlas-prompt-leaking
       - atlas-revealing-confidential-information
@@ -13285,8 +13264,6 @@ entries:
       - credo-risk-047
       - credo-risk-048
     narrow_mappings:
-      - asi04-agentic-supply-chain-vulnerabilities
-    broad_mappings:
       - atlas-data-acquisition
       - atlas-data-contamination
       - atlas-data-curation
@@ -13295,6 +13272,8 @@ entries:
       - atlas-lack-of-data-transparency
       - atlas-model-usage-rights
       - atlas-untraceable-attribution
+    broad_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
     isDefinedByTaxonomy: owasp-llm-2.0
     type: Risk
   - id: llm042025-data-and-model-poisoning
@@ -13311,7 +13290,7 @@ entries:
       - asi08-cascading-failures
       - credo-risk-040
       - credo-risk-041
-    broad_mappings:
+    narrow_mappings:
       - asi06-memory-and-context-poisoning
       - atlas-data-poisoning
     isDefinedByTaxonomy: owasp-llm-2.0
@@ -13348,7 +13327,7 @@ entries:
       - asi09-human-agent-trust-exploitation
       - atlas-over-or-under-reliance
       - credo-risk-036
-    narrow_mappings:
+    broad_mappings:
       - asi05-unexpected-code-execution
     isDefinedByTaxonomy: owasp-llm-2.0
     type: Risk
@@ -13382,7 +13361,7 @@ entries:
       - credo-risk-017
       - credo-risk-018
       - credo-risk-019
-    narrow_mappings:
+    broad_mappings:
       - asi02-tool-misuse-and-exploitation
       - asi03-identity-and-privilege-abuse
     isDefinedByTaxonomy: owasp-llm-2.0
@@ -13450,7 +13429,7 @@ entries:
       - atlas-harmful-code-generation
       - credo-risk-017
       - credo-risk-021
-    broad_mappings:
+    narrow_mappings:
       - asi09-human-agent-trust-exploitation
       - atlas-incomplete-advice
       - atlas-spreading-disinformation
@@ -13619,7 +13598,7 @@ entries:
       - ail-specialized-advice
       - mit-ai-risk-subdomain-7.4
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-009
@@ -13632,7 +13611,7 @@ entries:
       - atlas-lack-of-data-transparency
       - mit-ai-risk-subdomain-7.4
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -13649,7 +13628,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-information-integrity
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -13664,7 +13643,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
   - id: credo-risk-009
     name: Black box decisionmaking (Slattery et al., 2024; IBM, 2024)
@@ -13678,7 +13657,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-011
@@ -13702,7 +13681,7 @@ entries:
       - mit-ai-risk-subdomain-1.1
       - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
     hasRelatedAction:
       - credo-act-control-014
@@ -13725,7 +13704,7 @@ entries:
       - mit-ai-risk-subdomain-1.1
       - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
   - id: credo-risk-012
     name: Unequal access to AI benefits
@@ -13740,7 +13719,7 @@ entries:
       - nist-harmful-bias-and-homogenization
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
     hasRelatedAction:
       - credo-act-control-014
@@ -14096,7 +14075,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - llm082025-vector-and-embedding-weaknesses
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-012
@@ -14113,7 +14092,7 @@ entries:
       - mit-ai-risk-subdomain-5.1
       - mit-ai-risk-subdomain-7.3
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -14129,7 +14108,7 @@ entries:
     related_mappings:
       - llm082025-vector-and-embedding-weaknesses
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-022
@@ -15529,27 +15508,27 @@ groups:
   - id: hf-ml-tasks-group-multimodal
     name: Mutimodal
     isDefinedByTaxonomy: hf-ml-tasks
-    type: Group
+    type: AiTaskGroup
   - id: hf-ml-tasks-group-nlp
     name: Natural Language Processing
     isDefinedByTaxonomy: hf-ml-tasks
-    type: Group
+    type: AiTaskGroup
   - id: hf-ml-tasks-group-computer-vision
     name: Computer Vision
     isDefinedByTaxonomy: hf-ml-tasks
-    type: Group
+    type: AiTaskGroup
   - id: hf-ml-tasks-group-audio
     name: Audio
     isDefinedByTaxonomy: hf-ml-tasks
-    type: Group
+    type: AiTaskGroup
   - id: hf-ml-tasks-group-tabular
     name: Tabular
     isDefinedByTaxonomy: hf-ml-tasks
-    type: Group
+    type: AiTaskGroup
   - id: hf-ml-tasks-group-reinforcement-learning
     name: Reinforcement Learning
     isDefinedByTaxonomy: hf-ml-tasks
-    type: Group
+    type: AiTaskGroup
   - id: shieldgemma-content-safety-group
     name: Content Safety
     isDefinedByTaxonomy: shieldgemma-taxonomy
@@ -27116,7 +27095,7 @@ stakeholdergroups:
     description: Organization-level stakeholders.
     isDefinedByTaxonomy: csiro-responsible-ai-patterns
     type: StakeholderGroup
-  - id: csiro--stakeholder-group-team-level
+  - id: csiro-stakeholder-group-team-level
     name: Team-level stakeholders
     description: Team-level stakeholders.
     isDefinedByTaxonomy: csiro-responsible-ai-patterns
@@ -33862,6 +33841,17 @@ aievalresults:
     evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
     isResultOf: ai_eval_tulu3_safety
 aimodelfamilies:
+  - id: shieldgemma
+    description: "ShieldGemma is a series of safety content moderation models built
+      upon Gemma 2 that target four harm categories (sexually explicit, dangerous content,
+      hate, and harassment). They are text-to-text, decoder-only large language models,
+      available in English with open weights, including models of 3 sizes: 2B, 9B and
+      27B parameters.
+
+      "
+    url: https://gemma.ai/models/shieldgemma/model-card-v1/
+    hasDocumentation:
+      - shieldgemma-paper
   - id: ibm-granite
     name: IBM Granite
     description:
