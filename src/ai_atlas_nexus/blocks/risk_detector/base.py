@@ -2,6 +2,8 @@ import itertools
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional
 
+from jinja2 import Environment, TemplateSyntaxError, meta
+
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import (
     Container,
     Risk,
@@ -36,6 +38,7 @@ class RiskDetector(ABC):
         max_risk: Optional[int] = None,
         batch_inference: bool = True,
         use_dspy_prompt: bool = False,
+        prompt_template: Optional[str] = None,
     ):
         self.inference_engine = inference_engine
         self._risks = risks
@@ -56,6 +59,15 @@ class RiskDetector(ABC):
         else:
             self.prompt_builder = FewShotPromptBuilder
 
+        self.prompt_template = prompt_template
+        if prompt_template is not None:
+            self._validate_prompt_template(prompt_template)
+            if use_dspy_prompt:
+                LOGGER.warning(
+                    "Both `prompt_template` and `use_dspy_prompt` were given. The custom `prompt_template` takes precedence and the DSPy prompt will not be used."
+                )
+                use_dspy_prompt = False
+
         self.max_risk = max_risk
         self.batch_inference = batch_inference
         self.use_dspy_prompt = use_dspy_prompt
@@ -66,6 +78,27 @@ class RiskDetector(ABC):
                 f"`use_dspy_prompt` flag is enabled but no DSPy prompt is available for {inference_engine.model_name_or_path}. The API will use the generic batch risk identification prompt. Supported LLMs for DSPy prompt-based risk identification - {list(RISK_IDENTIFICATION_PER_RISK_DSPY_TEMPLATES.keys())}"
             )
             self.use_dspy_prompt = False
+
+    @staticmethod
+    def _validate_prompt_template(prompt_template: str) -> None:
+        """Fail early on a custom prompt template that cannot work.
+
+        Raises:
+            ValueError: If the template is not a string, is not valid Jinja, or does
+                not use `{{ usecase }}` (every usecase would get the same prompt).
+        """
+        if not isinstance(prompt_template, str):
+            raise ValueError("`prompt_template` must be a string.")
+        try:
+            variables = meta.find_undeclared_variables(
+                Environment().parse(prompt_template)
+            )
+        except TemplateSyntaxError as e:
+            raise ValueError(f"`prompt_template` is not a valid Jinja template: {e}")
+        if "usecase" not in variables:
+            raise ValueError(
+                "`prompt_template` must contain the `{{ usecase }}` variable, otherwise every usecase would be given the same prompt."
+            )
 
     def get_risks_by_taxonomy_id(
         self, ontology: Container, taxonomy_id: Optional[str] = None
