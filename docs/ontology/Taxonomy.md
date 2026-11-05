@@ -29,6 +29,8 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
         click CapabilityTaxonomy href "../CapabilityTaxonomy/"
       Taxonomy <|-- AiTaskTaxonomy
         click AiTaskTaxonomy href "../AiTaskTaxonomy/"
+      Taxonomy <|-- AiEvaluationStandardTaxonomy
+        click AiEvaluationStandardTaxonomy href "../AiEvaluationStandardTaxonomy/"
 
 
       Taxonomy : broad_mappings
@@ -159,6 +161,7 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
     - [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)
     - [CapabilityTaxonomy](CapabilityTaxonomy.md)
     - [AiTaskTaxonomy](AiTaskTaxonomy.md)
+    - [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)
 
 ## Class Properties
 
@@ -373,6 +376,7 @@ attributes:
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
     range: string
   hasDocumentation:
     name: hasDocumentation
@@ -401,6 +405,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -424,6 +429,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   id:
