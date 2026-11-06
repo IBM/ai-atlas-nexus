@@ -154,7 +154,7 @@ URI: [skos:ConceptScheme](http://www.w3.org/2004/02/skos/core#ConceptScheme)
 
 | Name                                        | Cardinality and Range                            | Description                                                                      | Inheritance                                  |
 | ------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | -------------------------------------------- |
-| [version](version.md)                       | 0..1 <br/> [String](String.md)                   | The version of the entity embodied by a specified resource                       | [Taxonomy](Taxonomy.md), [Entity](Entity.md) |
+| [version](version.md)                       | 0..1 <br/> [String](String.md)                   | The version of the entity embodied by a specified resource                       | [Entity](Entity.md), [Taxonomy](Taxonomy.md) |
 | [hasDocumentation](hasDocumentation.md)     | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Taxonomy](Taxonomy.md)                      |
 | [hasLicense](hasLicense.md)                 | 0..1 <br/> [License](License.md)                 | Indicates licenses associated with a resource                                    | [Taxonomy](Taxonomy.md)                      |
 | [type](type.md)                             | 0..1 <br/> [String](String.md)                   | The type or class designation of this entity instance                            | [Taxonomy](Taxonomy.md)                      |

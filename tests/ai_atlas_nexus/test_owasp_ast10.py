@@ -80,3 +80,78 @@ class TestOWASPAST10Integration(TestCaseBase):
                     risk.id,
                     target.related_mappings or [],
                 )
+
+    def test_risk_groups_follow_the_executive_risk_map(self):
+        """Verify the four groups of the whitepaper's Executive Risk Map."""
+        groups = self.nexus.get_all("groups", taxonomy="owasp-ast10")
+
+        expected = {
+            "owasp-ast10-grp-source-and-registry": {
+                "ast01-malicious-skills",
+                "ast02-supply-chain-compromise",
+                "ast04-insecure-metadata",
+            },
+            "owasp-ast10-grp-execution-boundary": {
+                "ast03-over-privileged-skills",
+                "ast05-untrusted-external-instructions",
+                "ast06-weak-isolation",
+            },
+            "owasp-ast10-grp-lifecycle-governance": {
+                "ast07-update-drift",
+                "ast08-poor-scanning",
+                "ast09-no-governance",
+            },
+            "owasp-ast10-grp-cross-platform-reuse": {
+                "ast10-cross-platform-reuse",
+            },
+        }
+
+        self.assertEqual(
+            {group.id: set(group.hasPart) for group in groups},
+            expected,
+        )
+
+        for group_id, members in expected.items():
+            for risk_id in members:
+                self.assertEqual(
+                    self.nexus.get_risk(id=risk_id).isPartOf,
+                    group_id,
+                )
+
+    def test_actions_point_at_ast10_risks(self):
+        """Verify every AST10 action is linked to an AST10 risk and the whitepaper."""
+        risk_ids = {
+            risk.id for risk in self.nexus.get_all_risks(taxonomy="owasp-ast10")
+        }
+        actions = self.nexus.get_all_actions(taxonomy="owasp-ast10")
+
+        self.assertGreater(len(actions), 0)
+        self.assertEqual(
+            len({action.id for action in actions}),
+            len(actions),
+        )
+        for action in actions:
+            self.assertTrue(action.hasRelatedRisk, action.id)
+            self.assertLessEqual(set(action.hasRelatedRisk), risk_ids, action.id)
+            self.assertIn(
+                "owasp-agentic-skills-top-10-whitepaper-v1",
+                action.hasDocumentation or [],
+                action.id,
+            )
+
+    def test_incidents_point_at_ast10_risks(self):
+        """Verify every AST10 risk incident refers to AST10 risks and has a source."""
+        risk_ids = {
+            risk.id for risk in self.nexus.get_all_risks(taxonomy="owasp-ast10")
+        }
+        incidents = self.nexus.get_risk_incidents(taxonomy="owasp-ast10")
+
+        self.assertGreater(len(incidents), 0)
+        self.assertEqual(
+            len({incident.id for incident in incidents}),
+            len(incidents),
+        )
+        for incident in incidents:
+            self.assertTrue(incident.refersToRisk, incident.id)
+            self.assertLessEqual(set(incident.refersToRisk), risk_ids, incident.id)
+            self.assertTrue(incident.source_uri, incident.id)
