@@ -31,7 +31,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install sssom
-        run: pip install "sssom==0.4.21"
+        run: pip install "sssom==0.4.22"
 
       - name: Validate each mapping file with sssom
         run: |

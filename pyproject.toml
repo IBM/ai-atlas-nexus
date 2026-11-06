@@ -42,7 +42,7 @@ dependencies = [
     "linkml",
     "linkml_runtime",
     "pydantic",
-    "requests",
+    "requests>=2.33.0",
     "rich",
     "sssom",
     "txtai",
@@ -57,7 +57,7 @@ dependencies = [
     "pre-commit",
     "typer",
     "inflect",
-    "chardet==5.2.0",
+    "chardet>=5.2.0,<8",
     "mellea",
     "pyoxigraph",
     "pyshacl"
