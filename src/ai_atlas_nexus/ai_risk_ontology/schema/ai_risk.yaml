@@ -18,6 +18,8 @@ default_prefix: nexus
 
 classes:
   RiskTaxonomy:
+    in_subset:
+      - core
     is_a: Taxonomy
     description: A taxonomy of AI system related risks
     slots:
@@ -26,6 +28,8 @@ classes:
       - hasLicense
 
   RiskControlGroupTaxonomy:
+    in_subset:
+      - extended
     is_a: Taxonomy
     description: A taxonomy of AI system related risk controls groups
     slots:
@@ -34,6 +38,8 @@ classes:
       - hasLicense
 
   RiskControlGroup:
+    in_subset:
+      - extended
     is_a: Group
     description: A group of AI system related risk controls.
     mixins:
@@ -47,6 +53,8 @@ classes:
       - hasPart
 
   RiskGroup:
+    in_subset:
+      - core
     is_a: Group
     description: A group of AI system related risks that are part of a risk taxonomy.
     mixins:
@@ -60,6 +68,8 @@ classes:
       - hasPart
 
   Risk:
+    in_subset:
+      - core
     is_a: Entry
     mixins:
       - RiskConcept
@@ -69,10 +79,14 @@ classes:
       tag:
         description: A shost version of the name
       risk_type:
+        in_subset:
+          - core
         description: Annotation whether an AI risk occurs at input or output or is non-technical.
       phase:
         description: Annotation whether an AI risk shows specifically during the training-tuning or inference phase.
       descriptor:
+        in_subset:
+          - core
         description: Annotates whether an AI risk is a traditional risk, specific to or amplified by AI.
         multivalued: true
       concern:
@@ -98,6 +112,8 @@ classes:
       - isUsedWithinLocality
 
   RiskControl:
+    in_subset:
+      - core
     is_a: Control
     mixin: true
     mixins:
@@ -110,11 +126,16 @@ classes:
       - isDefinedByTaxonomy
 
   Action:
+    in_subset:
+      - core
     is_a: RiskControl
     description: Action to remediate a risk
     attributes:
     slot_usage:
       hasRelatedRisk:
+        in_subset:
+          - core
+          - summary
         domain: Action
         range: Risk
     slots:
@@ -124,6 +145,8 @@ classes:
       - hasAiActorTask
 
   RiskIncident:
+    in_subset:
+      - core
     is_a: Entity
     mixins:
       - RiskConcept
@@ -189,16 +212,22 @@ classes:
 
 slots:
   hasAiActorTask:
+    in_subset:
+      - core
     description: >-
       Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action
       in the subcategory (i.e., some apply to AI development and others apply to AI deployment).
     multivalued: true
   hasRelatedAction:
+    in_subset:
+      - core
     description: A relationship where an entity relates to an action
     range: Action
     multivalued: true
     inlined: false
   detectsRiskConcept:
+    in_subset:
+      - core
     exact_mappings:
       - airo:detectsRiskConcept
     description: >-
@@ -210,6 +239,8 @@ slots:
     inlined: false
     inverse: isDetectedBy
   isDetectedBy:
+    in_subset:
+      - core
     description: >-
       A relationship where a risk, risk source, consequence, or impact is detected by a risk control.
     domain: RiskConcept
@@ -218,6 +249,8 @@ slots:
     inlined: false
     inverse: detectsRiskConcept
   mitigatesRiskConcept:
+    in_subset:
+      - core
     exact_mappings:
       - airo:mitigatesRiskConcept
     description: >-
@@ -228,6 +261,8 @@ slots:
     inlined: false
     inverse: isMitigatedBy
   isMitigatedBy:
+    in_subset:
+      - core
     description: >-
       A relationship where a risk, risk source, consequence, or impact is mitigated by a risk control.
     domain: RiskConcept
@@ -246,6 +281,8 @@ slots:
     domain: RiskConcept
     range: Severity
   hasLikelihood:
+    in_subset:
+      - core
     description: >-
       The likelihood or probability or chance of something taking place or occuring
     domain: RiskConcept
@@ -258,11 +295,15 @@ slots:
     broad_mappings:
       - dpv:hasConsequenceOn
   hasConsequence:
+    in_subset:
+      - core
     description: >-
       Indicates consequence(s) possible or arising from specified concept
     domain: RiskConcept
     range: Consequence
   hasImpact:
+    in_subset:
+      - core
     description: >-
       Indicates impact(s) possible or arising as consequences from specified concept
     domain: RiskConcept
@@ -276,6 +317,9 @@ slots:
     domain: RiskIncident
     range: RiskIncident
   refersToRisk:
+    in_subset:
+      - core
+      - summary
     exact_mappings:
       - dpv:refersToRisk
     description: >-
