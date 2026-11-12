@@ -41,6 +41,8 @@ status:
 
 regenerate_documentation:
 	gen-doc -d docs/ontology $(SOURCE_SCHEMA_PATH)/${LINKML_SCHEMA_NAME}.yaml
+	mkdir -p docs/schema
+	cp $(SOURCE_SCHEMA_PATH)/*.yaml docs/schema/
 
 lift_mappings_from_tsv:
 	python ./src/ai_atlas_nexus/ai_risk_ontology/util/lifting/import_entity_mappings.py
