@@ -87,6 +87,7 @@ classes:
       - isCategorizedAs
       - hasLifecycleStatus
       - notes
+      - version
 
   Organization:
     is_a: Entity

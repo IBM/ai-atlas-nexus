@@ -312,6 +312,7 @@ attributes:
     slot_uri: schema:version
     owner: Vocabulary
     domain_of:
+    - Entity
     - License
     - Vocabulary
     - Taxonomy

@@ -224,6 +224,7 @@ attributes:
     slot_uri: schema:version
     owner: License
     domain_of:
+    - Entity
     - License
     - Vocabulary
     - Taxonomy

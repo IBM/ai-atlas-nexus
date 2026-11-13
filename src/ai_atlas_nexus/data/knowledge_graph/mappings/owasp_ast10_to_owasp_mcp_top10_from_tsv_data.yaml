@@ -1,0 +1,257 @@
+entries:
+  - id: ast01-malicious-skills
+    related_mappings:
+      - mcp03-tool-poisoning
+    type: Risk
+  - id: mcp03-tool-poisoning
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast01-malicious-skills
+    related_mappings:
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+    type: Risk
+  - id: mcp04-software-supply-chain-attacks-and-dependency-tampering
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast01-malicious-skills
+    related_mappings:
+      - mcp05-command-injection-and-execution
+    type: Risk
+  - id: mcp05-command-injection-and-execution
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast01-malicious-skills
+    related_mappings:
+      - mcp10-context-injection-and-over-sharing
+    type: Risk
+  - id: mcp10-context-injection-and-over-sharing
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - mcp03-tool-poisoning
+    type: Risk
+  - id: mcp03-tool-poisoning
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+    type: Risk
+  - id: mcp04-software-supply-chain-attacks-and-dependency-tampering
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - mcp05-command-injection-and-execution
+    type: Risk
+  - id: mcp05-command-injection-and-execution
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - mcp01-token-mismanagement-and-secret-exposure
+    type: Risk
+  - id: mcp01-token-mismanagement-and-secret-exposure
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - mcp02-privilege-escalation-via-scope-creep
+    type: Risk
+  - id: mcp02-privilege-escalation-via-scope-creep
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - mcp07-insufficient-authentication-and-authorization
+    type: Risk
+  - id: mcp07-insufficient-authentication-and-authorization
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - mcp03-tool-poisoning
+    type: Risk
+  - id: mcp03-tool-poisoning
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - mcp06-intent-flow-subversion
+    type: Risk
+  - id: mcp06-intent-flow-subversion
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - mcp10-context-injection-and-over-sharing
+    type: Risk
+  - id: mcp10-context-injection-and-over-sharing
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - mcp03-tool-poisoning
+    type: Risk
+  - id: mcp03-tool-poisoning
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - mcp06-intent-flow-subversion
+    type: Risk
+  - id: mcp06-intent-flow-subversion
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - mcp10-context-injection-and-over-sharing
+    type: Risk
+  - id: mcp10-context-injection-and-over-sharing
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - mcp02-privilege-escalation-via-scope-creep
+    type: Risk
+  - id: mcp02-privilege-escalation-via-scope-creep
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - mcp05-command-injection-and-execution
+    type: Risk
+  - id: mcp05-command-injection-and-execution
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - mcp07-insufficient-authentication-and-authorization
+    type: Risk
+  - id: mcp07-insufficient-authentication-and-authorization
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - mcp03-tool-poisoning
+    type: Risk
+  - id: mcp03-tool-poisoning
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+    type: Risk
+  - id: mcp04-software-supply-chain-attacks-and-dependency-tampering
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - mcp08-lack-of-audit-and-telemetry
+    type: Risk
+  - id: mcp08-lack-of-audit-and-telemetry
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - mcp03-tool-poisoning
+    type: Risk
+  - id: mcp03-tool-poisoning
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+    type: Risk
+  - id: mcp04-software-supply-chain-attacks-and-dependency-tampering
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - mcp08-lack-of-audit-and-telemetry
+    type: Risk
+  - id: mcp08-lack-of-audit-and-telemetry
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - mcp07-insufficient-authentication-and-authorization
+    type: Risk
+  - id: mcp07-insufficient-authentication-and-authorization
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - mcp08-lack-of-audit-and-telemetry
+    type: Risk
+  - id: mcp08-lack-of-audit-and-telemetry
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - mcp09-shadow-mcp-servers
+    type: Risk
+  - id: mcp09-shadow-mcp-servers
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - mcp03-tool-poisoning
+    type: Risk
+  - id: mcp03-tool-poisoning
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+    type: Risk
+  - id: mcp04-software-supply-chain-attacks-and-dependency-tampering
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - mcp07-insufficient-authentication-and-authorization
+    type: Risk
+  - id: mcp07-insufficient-authentication-and-authorization
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - mcp10-context-injection-and-over-sharing
+    type: Risk
+  - id: mcp10-context-injection-and-over-sharing
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk

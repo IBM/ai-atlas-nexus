@@ -1,0 +1,77 @@
+documents:
+  - id: csa-maestro-doc
+    name: "Agentic AI Threat Modeling Framework: MAESTRO"
+    description: >-
+      Cloud Security Alliance article introducing MAESTRO (Multi-Agent Environment,
+      Security, Threat, Risk, and Outcome), a threat modeling framework for agentic AI
+      built on a seven-layer reference architecture attributed to Ken Huang. Each layer
+      hides complexity from those above it to support modular development and separation
+      of concerns.
+    author: Ken Huang
+    dateCreated: 2025-02-06
+    url: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro
+
+taxonomies:
+  - id: csa-maestro
+    name: CSA MAESTRO
+    type: RiskTaxonomy
+    description: >-
+      MAESTRO (Multi-Agent Environment, Security, Threat, Risk, and Outcome), a threat modeling framework designed for
+      Agentic AI.  MAESTRO provides a structured threat modeling approach for agentic AI systems across seven
+      architectural layers.
+    url: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro
+    hasDocumentation:
+      - csa-maestro-doc
+    notes:
+      - >-
+        Recorded at layer granularity only, per-layer threat categories are not modelled here.
+
+groups:
+  - id: csa-maestro-layer-1-foundation-models
+    name: "Layer 1: Foundation Models"
+    description: >-
+      The core AI model on which an agent is built. This can be a large language model (LLM) or other forms of AI.
+    type: RiskGroup
+    isDefinedByTaxonomy: csa-maestro
+
+  - id: csa-maestro-layer-2-data-operations
+    name: "Layer 2: Data Operations"
+    description: >-
+      This is where data is processed, prepared, and stored for the AI agents, including databases, vector stores, RAG (Retrieval Augmented Generation) pipelines, and more.
+    type: RiskGroup
+    isDefinedByTaxonomy: csa-maestro
+
+  - id: csa-maestro-layer-3-agent-frameworks
+    name: "Layer 3: Agent Frameworks"
+    description: >-
+      This layer encompasses the frameworks used to build the AI agents, for example toolkits for conversational AI, or frameworks that integrate data.
+    type: RiskGroup
+    isDefinedByTaxonomy: csa-maestro
+
+  - id: csa-maestro-layer-4-deployment-and-infrastructure
+    name: "Layer 4: Deployment and Infrastructure"
+    description: >-
+      This layer involves the infrastructure on which the AI agents run (e.g., cloud, on-premise).
+    type: RiskGroup
+    isDefinedByTaxonomy: csa-maestro
+
+  - id: csa-maestro-layer-5-evaluation-and-observability
+    name: "Layer 5: Evaluation and Observability"
+    description: >-
+      This layer focuses on how AI agents are evaluated and monitored, including tools and processes for tracking performance and detecting anomalies.
+    type: RiskGroup
+    isDefinedByTaxonomy: csa-maestro
+
+  - id: csa-maestro-layer-6-security-and-compliance
+    name: "Layer 6: Security and Compliance"
+    description: >-
+      This vertical layer cuts across all other layers, ensuring that security and compliance controls are integrated into all AI agent operations. This layer assumes that AI agents are also used as a security tool.
+    type: RiskGroup
+    isDefinedByTaxonomy: csa-maestro
+
+  - id: csa-maestro-layer-7-agent-ecosystem
+    name: "Layer 7: Agent Ecosystem"
+    description: >-
+      The ecosystem layer represents the marketplace where AI agents interface with real-world applications and users. This encompasses a diverse range of business applications, from intelligent customer service platforms to sophisticated enterprise automation solutions.
+    type: RiskGroup
+    isDefinedByTaxonomy: csa-maestro

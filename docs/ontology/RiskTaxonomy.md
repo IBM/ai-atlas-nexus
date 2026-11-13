@@ -217,6 +217,7 @@ attributes:
     slot_uri: schema:version
     owner: RiskTaxonomy
     domain_of:
+    - Entity
     - License
     - Vocabulary
     - Taxonomy

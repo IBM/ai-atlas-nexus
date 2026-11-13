@@ -370,6 +370,7 @@ attributes:
     slot_uri: schema:version
     owner: Taxonomy
     domain_of:
+    - Entity
     - License
     - Vocabulary
     - Taxonomy

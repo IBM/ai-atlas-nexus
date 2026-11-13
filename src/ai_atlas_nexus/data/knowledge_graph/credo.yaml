@@ -165,7 +165,7 @@ entries:
       - credo-act-control-009
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
   - id: credo-risk-006
     name: Lack of inference data transparency
     description: >-
@@ -176,7 +176,7 @@ entries:
       - credo-act-control-011
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
   - id: credo-risk-007
     name: Inadequate observability (Slatteryet al., 2024)
     description: >-
@@ -187,7 +187,7 @@ entries:
       - credo-act-control-010
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
   - id: credo-risk-008
     name: Opaque system architecture
     description: >-
@@ -195,7 +195,7 @@ entries:
       to stakeholders, including developers, auditors, or end-users.
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
   - id: credo-risk-009
     name: Black box decisionmaking (Slattery et al., 2024; IBM, 2024)
     description: >-
@@ -207,7 +207,7 @@ entries:
       - credo-act-control-037
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
   - id: credo-risk-010
     name: Stereotype perpetuation (Slattery et al., 2024; IBM, 2024)
     description: >-
@@ -224,7 +224,7 @@ entries:
       - credo-act-control-028
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
   - id: credo-risk-011
     name: Disparate model performance (Slattery et al., 2024; IBM, 2024)
     description: >-
@@ -233,7 +233,7 @@ entries:
       rates that affect opportunity and disparate outcome rates that affect group-level results.
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
   - id: credo-risk-012
     name: Unequal access to AI benefits
     description: >-
@@ -248,7 +248,7 @@ entries:
       - credo-act-control-028
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
   - id: credo-risk-013
     name: Toxic content (Slattery et al., 2024; IBM, 2024)
     description: >-
@@ -471,7 +471,7 @@ entries:
       - credo-act-control-016
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
   - id: credo-risk-034
     name: " Oversight and evaluation challenges"
     description: >-
@@ -483,7 +483,7 @@ entries:
       - credo-act-control-012
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
   - id: credo-risk-035
     name: Lack of robustness (Slattery et al., 2024)
     description: >-
@@ -495,7 +495,7 @@ entries:
       - credo-act-control-028
     type: Risk
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
   - id: credo-risk-036
     name: Compromised personally identifiable information (Slattery et al., 2024)
     description: >-

@@ -674,6 +674,675 @@ aitasks:
       - ibm-cap-logical-reasoning
     type: AiTask
 documents:
+  - id: owasp-ast10-ref-snyk-toxicskills
+    name: "ToxicSkills: malicious AI agent skills on ClawHub"
+    description: Snyk research corpus on malicious agent skills published to public
+      skill marketplaces. Cited by nine of the ten AST risks.
+    url: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+    author: Snyk
+  - id: owasp-ast10-ref-checkpoint-caught-in-the-hook
+    name:
+      "Caught in the Hook: RCE and API token exfiltration through Claude Code project
+      files"
+    description: Analysis of repository configuration files as execution paths, covering
+      CVE-2025-59536 and CVE-2026-21852.
+    url: https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files/
+    author: Check Point Research
+  - id: owasp-ast10-ref-antiy-clawhavoc
+    name: ClawHavoc campaign analysis
+    description: Antiy CERT analysis of a large-scale poisoning campaign targeting the
+      OpenClaw skill market for AI agents.
+    url: https://www.antiy.net/Download/clawhavoc-analysis-of-large-scale-poisoning-campaign-targeting-the-openclaw-skill-market-for-ai-agents.pdf
+    author: Antiy CERT
+  - id: owasp-ast10-ref-dirf-arxiv-2508-01997
+    name: "DIRF: A Framework for Digital Identity Protection and Clone Governance in
+      Agentic AI Systems"
+    description: Framework for protecting agent identity artifacts against cloning and
+      impersonation.
+    url: https://arxiv.org/abs/2508.01997
+    author: Atta et al.
+  - id: owasp-ast10-ref-csa-dirf
+    name: "Introducing DIRF: A Comprehensive Framework for Protecting Digital Identities
+      in Agentic AI Systems"
+    description: Cloud Security Alliance introduction to the DIRF framework.
+    url: https://cloudsecurityalliance.org/blog/2025/08/27/introducing-dirf-a-comprehensive-framework-for-protecting-digital-identities-in-agentic-ai-systems
+    author: Cloud Security Alliance
+  - id: owasp-ast10-ref-usenix-2026-malicious-agent-skills
+    name: '"Do Not Mention This to the User": Detecting and Understanding Malicious
+      Agent Skills in the Wild'
+    description: USENIX Security 2026 measurement study of 98,380 skills across public
+      marketplaces.
+    url: https://arxiv.org/abs/2602.06547
+    author: Liu et al.
+  - id: owasp-ast10-ref-usenix-2025-package-hallucinations
+    name: We Have a Package for You! A Comprehensive Analysis of Package Hallucinations
+      by Code Generating LLMs
+    description: USENIX Security 2025 study underpinning the slopsquatting attack pattern.
+    url: https://www.usenix.org/conference/usenixsecurity25/presentation/spracklen
+    author: Spracklen et al.
+  - id: owasp-ast10-ref-docker-running-containers
+    name: "Docker Docs: Running containers"
+    description: Reference for the container-isolation flags used in the behavioral
+      sandboxing example.
+    url: https://docs.docker.com/engine/containers/run/
+    author: Docker
+  - id: owasp-ast10-ref-qsaf-arxiv-2507-15330
+    name: "QSAF: A Novel Mitigation Framework for Cognitive Degradation in Agentic AI"
+    description: Framework documenting cognitive degradation as a six-stage internal
+      breakdown in agentic systems.
+    url: https://arxiv.org/abs/2507.15330
+    author: Atta, H. et al.
+  - id: owasp-ast10-ref-csa-cdr
+    name:
+      "Introducing Cognitive Degradation Resilience (CDR): A Framework for Safeguarding
+      Agentic AI Systems from Systemic Collapse"
+    description: Cloud Security Alliance introduction to the CDR framework.
+    url: https://cloudsecurityalliance.org/blog/2025/11/10/introducing-cognitive-degradation-resilience-cdr-a-framework-for-safeguarding-agentic-ai-systems-from-systemic-collapse
+    author: Cloud Security Alliance
+  - id: owasp-ast10-ref-openapi-x-agent-trust
+    name: "OpenAPI Extensions Registry: x-agent-trust"
+    description: Registered OpenAPI extension for declaring agent trust metadata.
+    url: https://spec.openapis.org/registry/extension/x-agent-trust.html
+    author: OpenAPI Initiative
+  - id: owasp-ast10-ref-ietf-agent-payment-trust
+    name: "IETF Internet-Draft: draft-sharif-agent-payment-trust"
+    description: Internet-Draft on trust establishment for agent payments.
+    url: https://datatracker.ietf.org/doc/draft-sharif-agent-payment-trust/
+    author: IETF
+  - id: owasp-ast10-ref-rfc-7518-es256
+    name: "JSON Web Algorithms: ES256 (RFC 7518 section 3.1)"
+    description: Signature algorithm reference for skill provenance signing.
+    url: https://datatracker.ietf.org/doc/html/rfc7518#section-3.1
+    author: IETF
+  - id: owasp-ast10-ref-trail-of-bits-skill-distribution
+    name: The Sorry State of Skill Distribution
+    description: Trail of Bits research bypassing every skill scanner tested and arguing
+      that automated scanning cannot replace supply-chain judgment.
+    url: https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/
+    author: Trail of Bits
+  - id: owasp-ast10-ref-trail-of-bits-attack-code
+    name: trailofbits/overtly-malicious-skills
+    description: Attack code accompanying the Trail of Bits skill distribution research.
+    url: https://github.com/trailofbits/overtly-malicious-skills
+    author: Trail of Bits
+  - id: owasp-ast10-ref-snyk-leaky-skills
+    name: "Snyk: 280+ leaky skills"
+    description:
+      Research on OpenClaw skills leaking credentials and personally identifiable
+      information beyond their declared function.
+    url: https://snyk.io/blog/openclaw-skills-credential-leaks-research/
+    author: Snyk
+  - id: owasp-ast10-ref-cisco-state-of-ai-security-2026
+    name: Cisco State of AI Security 2026
+    description: Survey reporting that 83% of organizations planned to deploy agentic
+      AI while only 29% felt ready to use those technologies securely.
+    url: https://blogs.cisco.com/ai/cisco-state-of-ai-security-2026-report
+    author: Cisco
+  - id: owasp-ast10-ref-lpci-arxiv-2507-10457
+    name: "Logic-layer Prompt Control Injection (LPCI): A Novel Security Vulnerability
+      Class in Agentic Systems"
+    description: Research on encoded, delayed, and conditionally-triggered payloads
+      planted in memory, vector stores, or tool outputs and treated as operator-level
+      instructions.
+    url: https://arxiv.org/abs/2507.10457
+    author: Atta et al.
+  - id: owasp-ast10-ref-laaf-arxiv-2603-17239
+    name: "LAAF: Logic-layer Automated Attack Framework"
+    description:
+      A systematic red-teaming methodology for LPCI vulnerabilities in agentic
+      large language model systems.
+    url: https://arxiv.org/pdf/2603.17239
+    author: Atta et al.
+  - id: owasp-ast10-ref-microsoft-hidden-boundaries
+    name: The hidden boundaries of modern AI
+    description: Microsoft developer blog post cited in the AST03 references.
+    url: https://techcommunity.microsoft.com/blog/educatordeveloperblog/the-hidden-boundaries-of-modern-ai/4522995
+    author: Microsoft Tech Community
+  - id: owasp-ast10-ref-hf-genai-incidents
+    name: genai-incidents dataset
+    description: Public dataset of generative-AI incidents cited in the AST03 references.
+    url: https://huggingface.co/datasets/emmanuelgjr/genai-incidents
+    author: emmanuelgjr
+  - id: owasp-ast10-ref-snyk-toxicskills-goof
+    name: snyk-labs/toxicskills-goof
+    description: Deliberately vulnerable skill repository documenting ASCII smuggling,
+      base64-encoded payloads, and cross-runtime malicious SKILL.md proofs-of-concept.
+    url: https://github.com/snyk-labs/toxicskills-goof
+    author: Snyk Labs
+  - id: owasp-ast10-ref-snyk-skill-md-to-shell-access
+    name: From SKILL.md to Shell Access
+    description: Snyk write-up of shell access obtained through SKILL.md prose alone.
+    url: https://snyk.io/articles/skill-md-shell-access/
+    author: Snyk
+  - id: owasp-ast10-ref-anthropic-agent-skills
+    name: "Agent Skills: security considerations"
+    description:
+      Vendor security guidance warning that skills fetching data from external
+      URLs pose particular risk and that even trustworthy skills can be compromised
+      if their external dependencies change over time.
+    url: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview
+    author: Anthropic
+  - id: owasp-ast10-ref-air-security-story-of-skills
+    name: The Story of Skills
+    description: Proof-of-concept showing how a skill pointing to malicious external
+      instructions can lead to full agent compromise.
+    url: https://www.air.security/blog-posts/the-story-of-skills
+    author: Air Security
+  - id: owasp-ast10-ref-securityscorecard-exposed-openclaw
+    name: How Exposed OpenClaw Deployments Turn Agentic AI Into an Attack Surface
+    description:
+      Exposure study reporting more than 40,000 exposed instances in 24 hours,
+      35.4% of them vulnerable to remote code execution at publication.
+    url: https://securityscorecard.com/blog/how-exposed-openclaw-deployments-turn-agentic-ai-into-an-attack-surface/
+    author: SecurityScorecard
+  - id: owasp-ast10-ref-microsoft-defender-openclaw
+    name: "Running OpenClaw Safely: Identity, Isolation, and Runtime Risk"
+    description: Advisory warning that the agent should be treated as untrusted code
+      execution with persistent credentials and is not appropriate to run on a standard
+      personal or enterprise workstation.
+    url: https://www.microsoft.com/en-us/security/blog/2026/02/19/running-openclaw-safely-identity-isolation-runtime-risk/
+    author: Microsoft Security
+  - id: owasp-ast10-ref-nvd-cve-2026-32025
+    name:
+      "CVE-2026-32025: agent gateway WebSocket origin-check and authentication-throttling
+      bypass"
+    description: National Vulnerability Database record for the ClawJacked vulnerability
+      (CVSS 7.5).
+    url: https://nvd.nist.gov/vuln/detail/CVE-2026-32025
+    author: NVD
+  - id: owasp-ast10-ref-bitdefender-135k-exposed
+    name: 135,000+ OpenClaw AI Agents Exposed Online as Misconfiguration Fuels Takeover
+      Risk
+    description: Report on internet-facing agent instances exposed through misconfiguration.
+    url: https://www.bitdefender.com/en-gb/blog/hotforsecurity/135k-openclaw-ai-agents-exposed-online
+    author: Bitdefender
+  - id: owasp-ast10-ref-bitdefender-enterprise-advisory
+    name: "Technical Advisory: OpenClaw Exploitation in Enterprise Networks"
+    description: Advisory reporting hundreds of agent deployments on corporate machines
+      and more than 800 malicious skills identified.
+    url: https://www.bitdefender.com/en-gb/blog/businessinsights/technical-advisory-openclaw-exploitation-enterprise-networks
+    author: Bitdefender
+  - id: owasp-ast10-ref-agent-threat-rules
+    name: "Agent Threat Rules: open detection standard for AI-agent threats"
+    description: Shareable rule format for agent-specific behaviors and indicators.
+    url: https://github.com/Agent-Threat-Rule/agent-threat-rules
+    author: Agent Threat Rules project
+  - id: owasp-ast10-ref-snyk-scanner-false-security
+    name: Why Your Skill Scanner Is Just False Security
+    description:
+      Reports that 13.4% of the ToxicSkills corpus contained critical security
+      issues, most of which simple pattern matching did not catch.
+    url: https://snyk.io/blog/skill-scanner-false-security/
+    author: Snyk
+  - id: owasp-ast10-ref-nvidia-skillspector
+    name: NVIDIA SkillSpector
+    description: Open-source, agent-skill-aware security scanner combining AST-based
+      dangerous-code detection, taint tracking, and YARA with optional LLM semantic
+      evaluation across 64 patterns in 16 categories.
+    url: https://github.com/NVIDIA/SkillSpector
+    author: NVIDIA
+  - id: owasp-ast10-ref-adversa-scanner-bypass
+    name: "A Hole in Every One: Bypassing the Open Source AI Skill Scanners"
+    description: Security analysis finding that open-source skill scanners are often
+      bypassed by simple obfuscation such as non-standard encoding in SKILL.md.
+    url: https://adversa.ai/blog/agent-skill-scanners-bypass-eight-tested/
+    author: Adversa AI
+  - id: owasp-ast10-ref-alice-poisoned-python-bytes
+    name: Poisoned Python Bytes and Malicious Caches
+    description: Analysis of malicious logic hidden in compiled Python bytecode caches.
+    url: https://alice.io/blog/poisoned-python-bytes-malicious-caches
+    author: Alice
+  - id: owasp-ast10-ref-python-cached-bytecode
+    name: "Python documentation: cached bytecode invalidation"
+    description: Reference for how the Python import system validates cached bytecode.
+    url: https://docs.python.org/3/reference/import.html#cached-bytecode-invalidation
+    author: Python Software Foundation
+  - id: owasp-ast10-ref-hofer-prompt-injection-arxiv-2606-10525
+    name: Assessing Automated Prompt Injection Attacks in Agentic Environments
+    description: Study of automated prompt injection attacks against agentic environments.
+    url: https://arxiv.org/abs/2606.10525
+    author: Hofer, Debenedetti, and Tramer
+  - id: owasp-ast10-ref-carlini-wagner-2017
+    name: "Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods"
+    description: AISec 2017 result underpinning the requirement to evaluate detectors
+      against an adaptive adversary.
+    url: https://arxiv.org/abs/1705.07263
+    author: Carlini and Wagner
+  - id: owasp-ast10-ref-tramer-adaptive-attacks-2020
+    name: On Adaptive Attacks to Adversarial Example Defenses
+    description: NeurIPS 2020 result showing that non-adaptive evaluation overstates
+      a detector's robustness.
+    url: https://arxiv.org/abs/2002.08347
+    author: Tramer, Carlini, Brendel, and Madry
+  - id: owasp-ast10-ref-nist-ai-rmf
+    name: NIST AI Risk Management Framework
+    description: Cited under AST09 for the GOVERN function.
+    url: https://www.nist.gov/itl/ai-risk-management-framework
+    author: NIST
+  - id: owasp-ast10-ref-eu-ai-act-2024-1689
+    name: Regulation (EU) 2024/1689, Articles 12 and 113
+    description: Article 12 requires high-risk AI systems to support automatic event
+      logging over the system's lifetime. Under Article 113 most of the Regulation applies
+      from 2 August 2026, while Article 6(1) systems and corresponding obligations apply
+      from 2 August 2027. Cited in the AST09 audit-logging guidance.
+    url: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+    author: European Union
+  - id: owasp-ast10-ref-ast10-issue-44
+    name: "OWASP Agentic Skills Top 10 issue #44: cross-execution chain linkage for
+      admission receipts"
+    description: Proposed extension adding parent_action_ref to admission receipts,
+      including fan-in join handling. A proposal, not a finalized project requirement.
+    url: https://github.com/OWASP/www-project-agentic-skills-top-10/issues/44
+    author: OWASP Agentic Skills Top 10 Project
+  - id: owasp-ast10-ref-owasp-mcp-top-10
+    name: OWASP MCP Top 10
+    description: OWASP project covering Model Context Protocol server risks.
+    url: https://owasp.org/www-project-mcp-top-10/
+    author: OWASP
+  - id: owasp-ast10-ref-owasp-top-ten-project
+    name: OWASP Top Ten
+    description: Cited under AST08 for A6 Security Misconfiguration.
+    url: https://owasp.org/www-project-top-ten/
+    author: OWASP
+  - id: owasp-ast10-ref-owasp-top-10-a08-2021
+    name: A08:2021 Software and Data Integrity Failures
+    description: OWASP Top 10 (2021) category mapped from AST04, covering integrity
+      failures in software and data updates and critical data.
+    url: https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c2.1.2
+    name: AISVS v1.0-C2.1.2
+    description:
+      OWASP AI Security Verification Standard v1.0 control C2.1.2 (canonicalization
+      and smuggling defenses), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c2.1.3
+    name: AISVS v1.0-C2.1.3
+    description: OWASP AI Security Verification Standard v1.0 control C2.1.3 (screen
+      untrusted inputs), cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c2.1.6
+    name: AISVS v1.0-C2.1.6
+    description:
+      OWASP AI Security Verification Standard v1.0 control C2.1.6 (instruction
+      hierarchy), cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c3.1.2
+    name: AISVS v1.0-C3.1.2
+    description: OWASP AI Security Verification Standard v1.0 control C3.1.2 (signed
+      artifacts), cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c3.1.3
+    name: AISVS v1.0-C3.1.3
+    description: OWASP AI Security Verification Standard v1.0 control C3.1.3 (signature
+      verification at admission or load), cited as a verification requirement by the
+      OWASP Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c3.2.3
+    name: AISVS v1.0-C3.2.3
+    description:
+      OWASP AI Security Verification Standard v1.0 control C3.2.3 (re-evaluate
+      provider, version, or routing changes), cited as a verification requirement by
+      the OWASP Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c4.1.1
+    name: AISVS v1.0-C4.1.1
+    description:
+      OWASP AI Security Verification Standard v1.0 control C4.1.1 (sandboxing),
+      cited as a verification requirement by the OWASP Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c4.3.3
+    name: AISVS v1.0-C4.3.3
+    description: OWASP AI Security Verification Standard v1.0 control C4.3.3 (process,
+      memory, and file isolation), cited as a verification requirement by the OWASP
+      Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c5.2.1
+    name: AISVS v1.0-C5.2.1
+    description:
+      OWASP AI Security Verification Standard v1.0 control C5.2.1 (default-deny
+      resource authorization), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c6.1.1
+    name: AISVS v1.0-C6.1.1
+    description:
+      OWASP AI Security Verification Standard v1.0 control C6.1.1 (malicious-code
+      scanning), cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c6.1.2
+    name: AISVS v1.0-C6.1.2
+    description: OWASP AI Security Verification Standard v1.0 control C6.1.2 (approved
+      sources), cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c6.1.3
+    name: AISVS v1.0-C6.1.3
+    description: OWASP AI Security Verification Standard v1.0 control C6.1.3 (artifact
+      integrity), cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c6.2.2
+    name: AISVS v1.0-C6.2.2
+    description: OWASP AI Security Verification Standard v1.0 control C6.2.2 (signed
+      AI BOMs), cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c6.2.3
+    name: AISVS v1.0-C6.2.3
+    description: OWASP AI Security Verification Standard v1.0 control C6.2.3 (metadata
+      completeness), cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c7.3.4
+    name: AISVS v1.0-C7.3.4
+    description: OWASP AI Security Verification Standard v1.0 control C7.3.4 (hidden
+      or encoded output detection), cited as a verification requirement by the OWASP
+      Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.2.1
+    name: AISVS v1.0-C9.2.1
+    description: OWASP AI Security Verification Standard v1.0 control C9.2.1 (approval
+      for high-impact actions), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.2.10
+    name: AISVS v1.0-C9.2.10
+    description:
+      OWASP AI Security Verification Standard v1.0 control C9.2.10 (highest-impact
+      control across chains), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.3.1
+    name: AISVS v1.0-C9.3.1
+    description:
+      OWASP AI Security Verification Standard v1.0 control C9.3.1 (least-privilege
+      tool isolation), cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.3.3
+    name: AISVS v1.0-C9.3.3
+    description:
+      OWASP AI Security Verification Standard v1.0 control C9.3.3 (manifest-declared
+      privileges and limits), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.3.4
+    name: AISVS v1.0-C9.3.4
+    description: OWASP AI Security Verification Standard v1.0 control C9.3.4 (runtime
+      enforcement of declared requirements), cited as a verification requirement by
+      the OWASP Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.3.5
+    name: AISVS v1.0-C9.3.5
+    description: OWASP AI Security Verification Standard v1.0 control C9.3.5 (isolate
+      untrusted-data processing from tool calls), cited as a verification requirement
+      by the OWASP Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.3.7
+    name: AISVS v1.0-C9.3.7
+    description: OWASP AI Security Verification Standard v1.0 control C9.3.7 (approved
+      external resources), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.4.2
+    name: AISVS v1.0-C9.4.2
+    description:
+      OWASP AI Security Verification Standard v1.0 control C9.4.2 (cryptographic
+      action-chain binding), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c9.5.1
+    name: AISVS v1.0-C9.5.1
+    description:
+      OWASP AI Security Verification Standard v1.0 control C9.5.1 (fine-grained
+      tool and action policy), cited as a verification requirement by the OWASP Agentic
+      Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c11.1.3
+    name: AISVS v1.0-C11.1.3
+    description:
+      OWASP AI Security Verification Standard v1.0 control C11.1.3 (adversarial
+      testing), cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c11.4.1
+    name: AISVS v1.0-C11.4.1
+    description: OWASP AI Security Verification Standard v1.0 control C11.4.1 (anomaly
+      detection for untrusted inputs), cited as a verification requirement by the OWASP
+      Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c12.2.1
+    name: AISVS v1.0-C12.2.1
+    description:
+      OWASP AI Security Verification Standard v1.0 control C12.2.1 (prompt-injection
+      and adversarial-input detection), cited as a verification requirement by the OWASP
+      Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c12.2.3
+    name: AISVS v1.0-C12.2.3
+    description: OWASP AI Security Verification Standard v1.0 control C12.2.3 (custom
+      AI-threat rules), cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-aisvs-v1.0-c12.4.2
+    name: AISVS v1.0-C12.4.2
+    description: OWASP AI Security Verification Standard v1.0 control C12.4.2 (audit
+      proactive actions and decisions), cited as a verification requirement by the OWASP
+      Agentic Skills Top 10.
+    url: https://owasp.org/projects/artificial-intelligence-security-verification-standard-aisvs-docs
+    author: OWASP
+  - id: owasp-asvs-v4
+    name: ASVS V4 (Access Control)
+    description: OWASP Application Security Verification Standard chapter V4, covering
+      access control, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    author: OWASP
+  - id: owasp-asvs-v5
+    name: ASVS V5 (Validation, Sanitization and Encoding)
+    description: OWASP Application Security Verification Standard chapter V5, covering
+      validation, sanitization and encoding, cited as a verification requirement by
+      the OWASP Agentic Skills Top 10.
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    author: OWASP
+  - id: owasp-asvs-v5.5
+    name: ASVS V5.5 (Deserialization)
+    description: OWASP Application Security Verification Standard chapter V5.5, covering
+      deserialization, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    author: OWASP
+  - id: owasp-asvs-v12
+    name: ASVS V12 (File and Resource)
+    description: OWASP Application Security Verification Standard chapter V12, covering
+      file and resource, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    author: OWASP
+  - id: owasp-asvs-v14
+    name: ASVS V14 (Configuration)
+    description: OWASP Application Security Verification Standard chapter V14, covering
+      configuration, cited as a verification requirement by the OWASP Agentic Skills
+      Top 10.
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    author: OWASP
+  - id: owasp-asvs-v14.2
+    name: ASVS V14.2 (Dependency)
+    description:
+      OWASP Application Security Verification Standard chapter V14.2, covering
+      dependency, cited as a verification requirement by the OWASP Agentic Skills Top
+      10.
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    author: OWASP
+  - id: owasp-asvs-v14.3
+    name: ASVS V14.3 (Unintended Information Disclosure)
+    description:
+      OWASP Application Security Verification Standard chapter V14.3, covering
+      unintended information disclosure, cited as a verification requirement by the
+      OWASP Agentic Skills Top 10.
+    url: https://owasp.org/www-project-application-security-verification-standard/
+    author: OWASP
+  - id: owasp-samm-v3
+    name: SAMM v3 (Operational Enablement)
+    description: OWASP Software Assurance Maturity Model v3, Operational Enablement
+      practice, cited by AST09 as the maturity reference for skill governance.
+    url: https://owaspsamm.org/
+    author: OWASP
+  - id: cwe-250
+    name: CWE-250 (Execution with Unnecessary Privileges)
+    description: Common Weakness Enumeration entry CWE-250, execution with unnecessary
+      privileges, mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/250.html
+    author: MITRE
+  - id: cwe-345
+    name: CWE-345 (Insufficient Verification of Data Authenticity)
+    description: Common Weakness Enumeration entry CWE-345, insufficient verification
+      of data authenticity, mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/345.html
+    author: MITRE
+  - id: cwe-494
+    name: CWE-494 (Download of Code Without Integrity Check)
+    description: Common Weakness Enumeration entry CWE-494, download of code without
+      integrity check, mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/494.html
+    author: MITRE
+  - id: cwe-502
+    name: CWE-502 (Deserialization of Untrusted Data)
+    description: Common Weakness Enumeration entry CWE-502, deserialization of untrusted
+      data, mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/502.html
+    author: MITRE
+  - id: cwe-653
+    name: CWE-653 (Insufficient Compartmentalization)
+    description:
+      Common Weakness Enumeration entry CWE-653, insufficient compartmentalization,
+      mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/653.html
+    author: MITRE
+  - id: cwe-693
+    name: CWE-693 (Protection Mechanism Failure)
+    description:
+      Common Weakness Enumeration entry CWE-693, protection mechanism failure,
+      mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/693.html
+    author: MITRE
+  - id: cwe-829
+    name: CWE-829 (Inclusion of Functionality from Untrusted Control Sphere)
+    description: Common Weakness Enumeration entry CWE-829, inclusion of functionality
+      from untrusted control sphere, mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/829.html
+    author: MITRE
+  - id: cwe-1329
+    name: CWE-1329 (Reliance on Component Without Verification)
+    description:
+      Common Weakness Enumeration entry CWE-1329, reliance on component without
+      verification, mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/1329.html
+    author: MITRE
+  - id: cwe-1357
+    name: CWE-1357 (Reliance on Insufficiently Trustworthy Component)
+    description: Common Weakness Enumeration entry CWE-1357, reliance on insufficiently
+      trustworthy component, mapped from the OWASP Agentic Skills Top 10.
+    url: https://cwe.mitre.org/data/definitions/1357.html
+    author: MITRE
+  - id: iso-iec-42001-a.2.2
+    name: ISO/IEC 42001 Annex A A.2.2 (AI policy)
+    description: ISO/IEC 42001 Annex A control A.2.2, ai policy. Governance absence
+      starts with absent policy (AST09).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: iso-iec-42001-a.4.5
+    name: ISO/IEC 42001 Annex A A.4.5 (System and computing resources)
+    description: ISO/IEC 42001 Annex A control A.4.5, system and computing resources.
+      Isolation is a property of the computing environment (AST06).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: iso-iec-42001-a.6.2.4
+    name: ISO/IEC 42001 Annex A A.6.2.4 (Verification and validation)
+    description: ISO/IEC 42001 Annex A control A.6.2.4, verification and validation.
+      Skills must be validated before use (AST01); scanning is part of the V&V toolchain
+      (AST08).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: iso-iec-42001-a.6.2.5
+    name: ISO/IEC 42001 Annex A A.6.2.5 (Deployment)
+    description: ISO/IEC 42001 Annex A control A.6.2.5, deployment. Least privilege
+      is set at deployment (AST03).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: iso-iec-42001-a.6.2.6
+    name: ISO/IEC 42001 Annex A A.6.2.6 (Operation and monitoring)
+    description:
+      ISO/IEC 42001 Annex A control A.6.2.6, operation and monitoring. External
+      references need monitoring in operation (AST05); updates are post-deployment change
+      control (AST07).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: iso-iec-42001-a.6.2.7
+    name: ISO/IEC 42001 Annex A A.6.2.7 (Technical documentation)
+    description:
+      ISO/IEC 42001 Annex A control A.6.2.7, technical documentation. Metadata
+      is documentation that must be accurate (AST04).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: iso-iec-42001-a.8.2
+    name: ISO/IEC 42001 Annex A A.8.2 (Documentation for users)
+    description: ISO/IEC 42001 Annex A control A.8.2, documentation for users. Security
+      properties must survive platform translation (AST10).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: iso-iec-42001-a.10.3
+    name: ISO/IEC 42001 Annex A A.10.3 (Suppliers)
+    description:
+      ISO/IEC 42001 Annex A control A.10.3, suppliers. Registries and dependencies
+      are supplier relationships (AST02).
+    url: https://www.iso.org/standard/42001
+    author: ISO/IEC
+  - id: csa-maestro-doc
+    name: "Agentic AI Threat Modeling Framework: MAESTRO"
+    description:
+      Cloud Security Alliance article introducing MAESTRO (Multi-Agent Environment,
+      Security, Threat, Risk, and Outcome), a threat modeling framework for agentic
+      AI built on a seven-layer reference architecture attributed to Ken Huang. Each
+      layer hides complexity from those above it to support modular development and
+      separation of concerns.
+    url: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro
+    dateCreated: 2025-02-06
+    author: Ken Huang
   - id: owasp-top-10-agentic-applications-2026
     name: OWASP Top 10 for Agentic Applications for 2026
     description:
@@ -2179,6 +2848,14 @@ documents:
       and Transparency Principles here as a roadmap."
     url: https://www.ibm.com/policy/trust-transparency
     dateCreated: 2024-10-11
+  - id: owasp-mcp-top-10-doc
+    name: OWASP Top 10 for Model Context Protocol
+    description: The OWASP Top 10 for Model Context Protocol documents the most critical
+      security risks in MCP server deployments, covering credential handling, scope
+      enforcement, tool integrity, supply chain, command execution, intent flow, authentication,
+      telemetry, unsanctioned deployments, and context sharing.
+    url: https://owasp.org/www-project-mcp-top-10/
+    author: OWASP MCP Top 10 Project
   - id: credo-doc
     name:
       "The Unified Control Framework: Establishing a Common Foundation for Enterprise
@@ -3590,6 +4267,18 @@ adapters:
     implementsCapability:
       - ibm-cap-uncertainty
 taxonomies:
+  - id: csa-maestro
+    name: CSA MAESTRO
+    description: MAESTRO (Multi-Agent Environment, Security, Threat, Risk, and Outcome),
+      a threat modeling framework designed for Agentic AI.  MAESTRO provides a structured
+      threat modeling approach for agentic AI systems across seven architectural layers.
+    url: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro
+    notes:
+      - Recorded at layer granularity only, per-layer threat categories are not modelled
+        here.
+    hasDocumentation:
+      - csa-maestro-doc
+    type: RiskTaxonomy
   - id: owasp-asi
     name: OWASP Top 10 for Agentic Applications
     description: The OWASP Top 10 for Agentic Applications identifies the most critical
@@ -3805,6 +4494,28 @@ taxonomies:
     dateModified: 2024-11-18
     version: "2.0"
     type: RiskTaxonomy
+  - id: owasp-mcp-top-10
+    name: OWASP Top 10 for Model Context Protocol
+    description: "A taxonomy of the ten most critical security risks affecting Model
+      Context Protocol servers, which expose tools and resources to AI agents as a separate
+      process. MCP servers are the protocol layer beneath agent skills: the OWASP Agentic
+      Skills Top 10 explicitly scopes MCP servers out of its own coverage and defers
+      them to this taxonomy."
+    url: https://owasp.org/www-project-mcp-top-10/
+    notes:
+      - Recorded at the granularity needed to receive the OWASP Agentic Skills Top 10
+        mappings. Risk titles follow the project's Top 10 list and overview table.
+      - "No hasLicense is asserted: the project page states its licence inconsistently,
+        linking CC BY-NC-SA 4.0 while spelling out the Creative Commons Attribution-ShareAlike
+        4.0 name without the NonCommercial term."
+      - The project page is also internally inconsistent on MCP06. The Top 10 list and
+        overview table name it "Intent Flow Subversion"; the versioned v0.1 section names
+        the same entry "Prompt Injection via Contextual Payloads". The former is used
+        here because it is the title the OWASP Agentic Skills Top 10 cites.
+    version: v0.1 (2025)
+    hasDocumentation:
+      - owasp-mcp-top-10-doc
+    type: RiskTaxonomy
   - id: credo-ucf
     name: Credo Unified Control Framework
     description: A comprehensive risk taxonomy synthesizing organizational and societal
@@ -3836,6 +4547,8 @@ entries:
       - atlas-prompt-injection
       - atlas-prompt-priming
       - llm062025-excessive-agency
+      - ast04-insecure-metadata
+      - ast05-untrusted-external-instructions
     broad_mappings:
       - llm01-prompt-injection
     isDefinedByTaxonomy: owasp-asi
@@ -3867,6 +4580,7 @@ entries:
       - atlas-over-or-under-reliance
       - atlas-prompt-injection
       - atlas-unauthorized-use-agentic
+      - ast03-over-privileged-skills
     narrow_mappings:
       - llm062025-excessive-agency
     isDefinedByTaxonomy: owasp-asi
@@ -3901,6 +4615,10 @@ entries:
       - atlas-unauthorized-use-agentic
       - llm01-prompt-injection
       - llm022025-sensitive-information-disclosure
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast03-over-privileged-skills
+      - ast06-weak-isolation
     narrow_mappings:
       - llm062025-excessive-agency
     isDefinedByTaxonomy: owasp-asi
@@ -3932,6 +4650,13 @@ entries:
       - atlas-data-contamination
       - atlas-data-poisoning
       - atlas-incomplete-advice
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+      - ast05-untrusted-external-instructions
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast10-cross-platform-reuse
     narrow_mappings:
       - llm032025-supply-chain
     isDefinedByTaxonomy: owasp-asi
@@ -3965,6 +4690,9 @@ entries:
       - atlas-jailbreaking
       - atlas-prompt-injection
       - llm01-prompt-injection
+      - ast02-supply-chain-compromise
+      - ast03-over-privileged-skills
+      - ast06-weak-isolation
     narrow_mappings:
       - llm052025-improper-output-handling
     isDefinedByTaxonomy: owasp-asi
@@ -3999,6 +4727,7 @@ entries:
       - atlas-hallucination
       - llm01-prompt-injection
       - llm082025-vector-and-embedding-weaknesses
+      - ast05-untrusted-external-instructions
     broad_mappings:
       - llm042025-data-and-model-poisoning
     isDefinedByTaxonomy: owasp-asi
@@ -4069,6 +4798,11 @@ entries:
       - llm01-prompt-injection
       - llm042025-data-and-model-poisoning
       - llm062025-excessive-agency
+      - ast06-weak-isolation
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast09-no-governance
+      - ast10-cross-platform-reuse
     isDefinedByTaxonomy: owasp-asi
     type: Risk
     tag: cascading-failures
@@ -4105,6 +4839,8 @@ entries:
       - llm01-prompt-injection
       - llm052025-improper-output-handling
       - llm062025-excessive-agency
+      - ast04-insecure-metadata
+      - ast09-no-governance
     broad_mappings:
       - llm092025-misinformation
     isDefinedByTaxonomy: owasp-asi
@@ -4141,6 +4877,11 @@ entries:
       - atlas-unauthorized-use-agentic
       - llm022025-sensitive-information-disclosure
       - llm092025-misinformation
+      - ast01-malicious-skills
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast09-no-governance
+      - ast10-cross-platform-reuse
     isDefinedByTaxonomy: owasp-asi
     type: Risk
     tag: rogue-agents
@@ -4357,7 +5098,7 @@ entries:
       - llm022025-sensitive-information-disclosure
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-leaking
     risk_type: inference
@@ -4548,7 +5289,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: social-hacking-attack
     risk_type: inference
@@ -4628,7 +5369,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: indirect-instructions-attack
     risk_type: inference
@@ -5611,7 +6352,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: context-overload-attack
     risk_type: inference
@@ -5958,7 +6699,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: specialized-tokens-attack
     risk_type: inference
@@ -6034,7 +6775,7 @@ entries:
     broad_mappings:
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-injection
     risk_type: inference
@@ -6194,7 +6935,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: direct-instructions-attack
     risk_type: inference
@@ -6396,7 +7137,7 @@ entries:
       - llm01-prompt-injection
       - nist-information-security
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: prompt-priming
     risk_type: inference
@@ -6593,7 +7334,7 @@ entries:
     broad_mappings:
       - atlas-prompt-injection
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     type: Risk
     tag: encoded-interactions-attack
     risk_type: inference
@@ -8044,8 +8785,49 @@ entries:
       API keys, SSH credentials, wallet files, browser data, and shell capabilities.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast01.html
     related_mappings:
+      - mcp03-tool-poisoning
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+      - mcp05-command-injection-and-execution
+      - mcp10-context-injection-and-over-sharing
+      - llm01-prompt-injection
+      - llm032025-supply-chain
+      - asi03-identity-and-privilege-abuse
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi10-rogue-agents
       - atlas-external-resources-attack-agentic
+      - ast02-supply-chain-compromise
+      - ast03-over-privileged-skills
+      - ast04-insecure-metadata
+      - ast05-untrusted-external-instructions
+      - ast08-poor-scanning
+      - ast10-cross-platform-reuse
+      - ast06-weak-isolation
+      - ast07-update-drift
+      - ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-4-deployment-and-infrastructure
+      - csa-maestro-layer-5-evaluation-and-observability
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-checkpoint-caught-in-the-hook
+      - owasp-ast10-ref-antiy-clawhavoc
+      - owasp-ast10-ref-dirf-arxiv-2508-01997
+      - owasp-ast10-ref-csa-dirf
+      - owasp-ast10-ref-usenix-2026-malicious-agent-skills
+      - owasp-ast10-ref-usenix-2025-package-hallucinations
+      - owasp-ast10-ref-docker-running-containers
+      - owasp-ast10-ref-qsaf-arxiv-2507-15330
+      - owasp-ast10-ref-csa-cdr
+      - owasp-aisvs-v1.0-c6.1.1
+      - owasp-aisvs-v1.0-c9.3.7
+      - owasp-aisvs-v1.0-c12.2.1
+      - owasp-asvs-v14
+      - iso-iec-42001-a.6.2.4
+    isPartOf: owasp-ast10-grp-source-and-registry
     type: Risk
     tag: malicious-skills
     risk_type: agentic
@@ -8059,8 +8841,44 @@ entries:
       a first-class attack surface.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast02.html
     related_mappings:
+      - mcp03-tool-poisoning
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+      - mcp05-command-injection-and-execution
+      - llm032025-supply-chain
+      - asi03-identity-and-privilege-abuse
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi05-unexpected-code-execution
       - atlas-external-resources-attack-agentic
+      - ast01-malicious-skills
+      - ast05-untrusted-external-instructions
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast10-cross-platform-reuse
+      - ast03-over-privileged-skills
+      - ast04-insecure-metadata
+      - ast06-weak-isolation
+      - ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-4-deployment-and-infrastructure
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-checkpoint-caught-in-the-hook
+      - owasp-ast10-ref-antiy-clawhavoc
+      - owasp-ast10-ref-openapi-x-agent-trust
+      - owasp-ast10-ref-ietf-agent-payment-trust
+      - owasp-ast10-ref-rfc-7518-es256
+      - owasp-ast10-ref-trail-of-bits-skill-distribution
+      - owasp-aisvs-v1.0-c6.1.2
+      - owasp-aisvs-v1.0-c6.1.3
+      - owasp-aisvs-v1.0-c6.2.2
+      - owasp-asvs-v14.2
+      - cwe-494
+      - iso-iec-42001-a.10.3
+    isPartOf: owasp-ast10-grp-source-and-registry
     type: Risk
     tag: supply-chain-compromise
     risk_type: agentic
@@ -8074,9 +8892,42 @@ entries:
       meant to run."
     url: https://owasp.org/www-project-agentic-skills-top-10/ast03.html
     related_mappings:
+      - mcp01-token-mismanagement-and-secret-exposure
+      - mcp02-privilege-escalation-via-scope-creep
+      - mcp07-insufficient-authentication-and-authorization
+      - llm01-prompt-injection
+      - llm062025-excessive-agency
+      - asi02-tool-misuse-and-exploitation
+      - asi03-identity-and-privilege-abuse
+      - asi05-unexpected-code-execution
       - atlas-sharing-info-tools-agentic
       - atlas-unauthorized-use-agentic
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+      - ast06-weak-isolation
+      - ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-4-deployment-and-infrastructure
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-snyk-leaky-skills
+      - owasp-ast10-ref-cisco-state-of-ai-security-2026
+      - owasp-ast10-ref-lpci-arxiv-2507-10457
+      - owasp-ast10-ref-laaf-arxiv-2603-17239
+      - owasp-ast10-ref-microsoft-hidden-boundaries
+      - owasp-ast10-ref-hf-genai-incidents
+      - owasp-aisvs-v1.0-c5.2.1
+      - owasp-aisvs-v1.0-c9.5.1
+      - owasp-aisvs-v1.0-c9.2.1
+      - owasp-asvs-v4
+      - cwe-250
+      - iso-iec-42001-a.6.2.5
+    isPartOf: owasp-ast10-grp-execution-boundary
     type: Risk
     tag: over-privileged-skills
     risk_type: agentic
@@ -8091,8 +8942,41 @@ entries:
       an attacker embed executable payloads that trigger on load, before any user action."
     url: https://owasp.org/www-project-agentic-skills-top-10/ast04.html
     related_mappings:
+      - mcp03-tool-poisoning
+      - mcp06-intent-flow-subversion
+      - mcp10-context-injection-and-over-sharing
+      - llm042025-data-and-model-poisoning
+      - asi01-agent-goal-hijack
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi09-human-agent-trust-exploitation
       - atlas-exploit-trust-mismatch-agentic
+      - ast01-malicious-skills
+      - ast03-over-privileged-skills
+      - ast02-supply-chain-compromise
+      - ast05-untrusted-external-instructions
+      - ast06-weak-isolation
+      - ast08-poor-scanning
+      - ast07-update-drift
+      - ast10-cross-platform-reuse
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-4-deployment-and-infrastructure
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-snyk-toxicskills-goof
+      - owasp-ast10-ref-snyk-skill-md-to-shell-access
+      - owasp-ast10-ref-owasp-top-10-a08-2021
+      - owasp-aisvs-v1.0-c2.1.2
+      - owasp-aisvs-v1.0-c6.2.3
+      - owasp-aisvs-v1.0-c9.3.3
+      - owasp-asvs-v5.5
+      - cwe-345
+      - cwe-502
+      - iso-iec-42001-a.6.2.7
+    isPartOf: owasp-ast10-grp-source-and-registry
     type: Risk
     tag: insecure-metadata
     risk_type: agentic
@@ -8110,8 +8994,37 @@ entries:
       was audited is never the skill that actually runs."
     url: https://owasp.org/www-project-agentic-skills-top-10/ast05.html
     related_mappings:
+      - mcp03-tool-poisoning
+      - mcp06-intent-flow-subversion
+      - mcp10-context-injection-and-over-sharing
+      - llm01-prompt-injection
+      - llm032025-supply-chain
+      - asi01-agent-goal-hijack
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi06-memory-and-context-poisoning
       - atlas-indirect-instructions-attack
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+      - ast07-update-drift
+      - ast08-poor-scanning
+    isCategorizedAs:
+      - csa-maestro-layer-2-data-operations
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-anthropic-agent-skills
+      - owasp-ast10-ref-air-security-story-of-skills
+      - owasp-aisvs-v1.0-c2.1.3
+      - owasp-aisvs-v1.0-c2.1.6
+      - owasp-aisvs-v1.0-c7.3.4
+      - owasp-aisvs-v1.0-c9.3.5
+      - owasp-asvs-v5
+      - cwe-829
+      - iso-iec-42001-a.6.2.6
+    isPartOf: owasp-ast10-grp-execution-boundary
     type: Risk
     tag: untrusted-external-instructions
     risk_type: agentic
@@ -8123,8 +9036,37 @@ entries:
       guarantees and turns every installed skill into a potential full-system compromise.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast06.html
     related_mappings:
+      - mcp02-privilege-escalation-via-scope-creep
+      - mcp05-command-injection-and-execution
+      - mcp07-insufficient-authentication-and-authorization
+      - llm062025-excessive-agency
+      - asi03-identity-and-privilege-abuse
+      - asi05-unexpected-code-execution
+      - asi08-cascading-failures
       - atlas-sharing-info-tools-agentic
+      - ast03-over-privileged-skills
+      - ast04-insecure-metadata
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-4-deployment-and-infrastructure
+      - csa-maestro-layer-6-security-and-compliance
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-securityscorecard-exposed-openclaw
+      - owasp-ast10-ref-microsoft-defender-openclaw
+      - owasp-ast10-ref-nvd-cve-2026-32025
+      - owasp-ast10-ref-bitdefender-135k-exposed
+      - owasp-aisvs-v1.0-c4.1.1
+      - owasp-aisvs-v1.0-c4.3.3
+      - owasp-aisvs-v1.0-c9.3.1
+      - owasp-asvs-v12
+      - cwe-653
+      - iso-iec-42001-a.4.5
+    isPartOf: owasp-ast10-grp-execution-boundary
     type: Risk
     tag: weak-isolation
     risk_type: agentic
@@ -8138,8 +9080,38 @@ entries:
       be malicious.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast07.html
     related_mappings:
+      - mcp03-tool-poisoning
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+      - mcp08-lack-of-audit-and-telemetry
+      - llm032025-supply-chain
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi08-cascading-failures
+      - asi10-rogue-agents
       - atlas-mitigation-maintenance-agentic
+      - ast02-supply-chain-compromise
+      - ast05-untrusted-external-instructions
+      - ast01-malicious-skills
+      - ast04-insecure-metadata
+      - ast08-poor-scanning
+      - ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-4-deployment-and-infrastructure
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-checkpoint-caught-in-the-hook
+      - owasp-ast10-ref-securityscorecard-exposed-openclaw
+      - owasp-ast10-ref-nvd-cve-2026-32025
+      - owasp-aisvs-v1.0-c3.1.2
+      - owasp-aisvs-v1.0-c3.1.3
+      - owasp-aisvs-v1.0-c3.2.3
+      - owasp-aisvs-v1.0-c6.1.3
+      - owasp-asvs-v14.2
+      - cwe-1329
+      - iso-iec-42001-a.6.2.6
+    isPartOf: owasp-ast10-grp-lifecycle-governance
     type: Risk
     tag: update-drift
     risk_type: agentic
@@ -8152,8 +9124,48 @@ entries:
       deployed by current marketplaces and development workflows.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast08.html
     related_mappings:
+      - mcp03-tool-poisoning
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+      - mcp08-lack-of-audit-and-telemetry
+      - llm022025-sensitive-information-disclosure
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi08-cascading-failures
+      - asi10-rogue-agents
       - atlas-incorrect-risk-testing
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+      - ast05-untrusted-external-instructions
+      - ast07-update-drift
+      - ast10-cross-platform-reuse
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-5-evaluation-and-observability
+      - csa-maestro-layer-6-security-and-compliance
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-trail-of-bits-skill-distribution
+      - owasp-ast10-ref-snyk-toxicskills-goof
+      - owasp-ast10-ref-agent-threat-rules
+      - owasp-ast10-ref-snyk-scanner-false-security
+      - owasp-ast10-ref-nvidia-skillspector
+      - owasp-ast10-ref-alice-poisoned-python-bytes
+      - owasp-ast10-ref-python-cached-bytecode
+      - owasp-ast10-ref-hofer-prompt-injection-arxiv-2606-10525
+      - owasp-ast10-ref-carlini-wagner-2017
+      - owasp-ast10-ref-tramer-adaptive-attacks-2020
+      - owasp-ast10-ref-owasp-top-ten-project
+      - owasp-ast10-ref-trail-of-bits-attack-code
+      - owasp-ast10-ref-adversa-scanner-bypass
+      - owasp-aisvs-v1.0-c11.1.3
+      - owasp-aisvs-v1.0-c11.4.1
+      - owasp-aisvs-v1.0-c12.2.1
+      - owasp-aisvs-v1.0-c12.2.3
+      - owasp-asvs-v14.3
+      - cwe-693
+      - iso-iec-42001-a.6.2.4
+    isPartOf: owasp-ast10-grp-lifecycle-governance
     type: Risk
     tag: poor-scanning
     risk_type: agentic
@@ -8167,9 +9179,38 @@ entries:
       cannot see or control.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast09.html
     related_mappings:
+      - mcp07-insufficient-authentication-and-authorization
+      - mcp08-lack-of-audit-and-telemetry
+      - mcp09-shadow-mcp-servers
+      - llm062025-excessive-agency
+      - asi08-cascading-failures
+      - asi09-human-agent-trust-exploitation
+      - asi10-rogue-agents
       - atlas-accountability-agentic
       - atlas-unexplainable-untraceable-actions-agentic
+      - ast03-over-privileged-skills
+      - ast06-weak-isolation
+      - ast07-update-drift
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast10-cross-platform-reuse
+    isCategorizedAs:
+      - csa-maestro-layer-5-evaluation-and-observability
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-cisco-state-of-ai-security-2026
+      - owasp-ast10-ref-bitdefender-enterprise-advisory
+      - owasp-ast10-ref-nist-ai-rmf
+      - owasp-ast10-ref-eu-ai-act-2024-1689
+      - owasp-aisvs-v1.0-c9.2.10
+      - owasp-aisvs-v1.0-c9.4.2
+      - owasp-aisvs-v1.0-c12.4.2
+      - owasp-samm-v3
+      - iso-iec-42001-a.2.2
+    isPartOf: owasp-ast10-grp-lifecycle-governance
     type: Risk
     tag: no-governance
     risk_type: agentic
@@ -8184,8 +9225,37 @@ entries:
       issues like manifest stripping, context loss, and uncontrolled execution.
     url: https://owasp.org/www-project-agentic-skills-top-10/ast10.html
     related_mappings:
+      - mcp03-tool-poisoning
+      - mcp04-software-supply-chain-attacks-and-dependency-tampering
+      - mcp07-insufficient-authentication-and-authorization
+      - mcp10-context-injection-and-over-sharing
+      - llm032025-supply-chain
+      - asi04-agentic-supply-chain-vulnerabilities
+      - asi08-cascading-failures
+      - asi10-rogue-agents
       - atlas-reproducibility-agentic
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+      - ast08-poor-scanning
+      - ast09-no-governance
+    isCategorizedAs:
+      - csa-maestro-layer-3-agent-frameworks
+      - csa-maestro-layer-6-security-and-compliance
+      - csa-maestro-layer-7-agent-ecosystem
     isDefinedByTaxonomy: owasp-ast10
+    hasExternalReference:
+      - owasp-ast10-ref-snyk-toxicskills
+      - owasp-ast10-ref-snyk-toxicskills-goof
+      - owasp-ast10-ref-ast10-issue-44
+      - owasp-ast10-ref-owasp-mcp-top-10
+      - owasp-aisvs-v1.0-c3.2.3
+      - owasp-aisvs-v1.0-c6.1.3
+      - owasp-aisvs-v1.0-c9.3.3
+      - owasp-aisvs-v1.0-c9.3.4
+      - cwe-1357
+      - iso-iec-42001-a.8.2
+    isPartOf: owasp-ast10-grp-cross-platform-reuse
     type: Risk
     tag: cross-platform-reuse
     risk_type: agentic
@@ -13188,6 +14258,9 @@ entries:
     exact_mappings:
       - atlas-prompt-injection
     related_mappings:
+      - ast01-malicious-skills
+      - ast03-over-privileged-skills
+      - ast05-untrusted-external-instructions
       - aiuc1-req-b001
       - aiuc1-req-b002
       - aiuc1-req-b005
@@ -13214,6 +14287,7 @@ entries:
     close_mappings:
       - credo-risk-037
     related_mappings:
+      - ast08-poor-scanning
       - ail-defamation
       - ail-intellectual-property
       - ail-nonviolent-crimes
@@ -13254,6 +14328,11 @@ entries:
       in ML the risks also extend to third-party pre-trained models and data.
     url: https://genai.owasp.org/llmrisk/llm032025-supply-chain/
     related_mappings:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast05-untrusted-external-instructions
+      - ast07-update-drift
+      - ast10-cross-platform-reuse
       - aiuc1-req-a004
       - aiuc1-req-a007
       - aiuc1-req-e005
@@ -13285,6 +14364,7 @@ entries:
       biased or toxic content, and exploitation of downstream systems.
     url: https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/
     related_mappings:
+      - ast04-insecure-metadata
       - aiuc1-req-b001
       - aiuc1-req-b005
       - asi08-cascading-failures
@@ -13346,6 +14426,9 @@ entries:
       of what is causing the LLM to malfunction.
     url: https://genai.owasp.org/llmrisk/llm062025-excessive-agency/
     related_mappings:
+      - ast03-over-privileged-skills
+      - ast06-weak-isolation
+      - ast09-no-governance
       - aiuc1-req-a003
       - aiuc1-req-b006
       - aiuc1-req-b007
@@ -13510,6 +14593,161 @@ entries:
     hasDocumentation:
       - doc-ibms-principles-for-trust-and-transparency
     type: Principle
+  - id: mcp01-token-mismanagement-and-secret-exposure
+    name: MCP01:2025 Token Mismanagement & Secret Exposure
+    description: Hard-coded credentials, long-lived tokens, and secrets sitting in model
+      memory or protocol logs. Attackers can extract them through prompt injection,
+      poisoned context, or debug traces, potentially compromising every connected system.
+      Mitigation centres on short-lived, scoped credentials plus secret-scanning controls.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast03-over-privileged-skills
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: token-mismanagement
+    risk_type: agentic
+  - id: mcp02-privilege-escalation-via-scope-creep
+    name: MCP02:2025 Privilege Escalation via Scope Creep
+    description: Permissions defined temporarily or loosely inside MCP servers tend
+      to broaden over time, leaving agents over-capable. Weak scope enforcement lets
+      an attacker perform repository modification, system control, or data exfiltration.
+      Recommended controls are least privilege, automatic scope expiry, and access reviews.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast03-over-privileged-skills
+      - ast06-weak-isolation
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: scope-creep
+    risk_type: agentic
+  - id: mcp03-tool-poisoning
+    name: MCP03:2025 Tool Poisoning
+    description: An adversary subverts the tools, plugins, or their outputs that a model
+      relies on, feeding in malicious, misleading, or biased context to steer behaviour.
+      Named sub-techniques are rug pulls (bad updates to trusted tools), schema poisoning
+      (corrupted interface definitions), and tool shadowing (fake or duplicate tools
+      intercepting interactions).
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+      - ast05-untrusted-external-instructions
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast10-cross-platform-reuse
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: tool-poisoning
+    risk_type: agentic
+  - id: mcp04-software-supply-chain-attacks-and-dependency-tampering
+    name: MCP04:2025 Software Supply Chain Attacks & Dependency Tampering
+    description: MCP stacks depend on open-source packages, connectors, and model-side
+      plug-ins that may be vulnerable or hostile. One bad dependency can alter agent
+      behaviour or introduce execution-level backdoors. Fixes are signed components,
+      dependency monitoring, and provenance tracking.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast10-cross-platform-reuse
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: mcp-supply-chain
+    risk_type: agentic
+  - id: mcp05-command-injection-and-execution
+    name: MCP05:2025 Command Injection & Execution
+    description: Arises where an agent builds and runs shell commands, scripts, API
+      calls, or code from untrusted input - prompts, retrieved context, or third-party
+      data - without proper validation or sanitization.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast06-weak-isolation
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: command-injection
+    risk_type: agentic
+  - id: mcp06-intent-flow-subversion
+    name: MCP06:2025 Intent Flow Subversion
+    description: Because MCP-retrieved context can function as a secondary instruction
+      channel, instructions hidden in that context can hijack the intent flow, redirecting
+      the agent from the user's goal to the attacker's.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast04-insecure-metadata
+      - ast05-untrusted-external-instructions
+    notes:
+      - The project's versioned v0.1 section titles this same entry "Prompt Injection
+        via Contextual Payloads".
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: intent-flow-subversion
+    risk_type: agentic
+  - id: mcp07-insufficient-authentication-and-authorization
+    name: MCP07:2025 Insufficient Authentication & Authorization
+    description: Servers, tools, or agents do not verify identity or enforce access
+      control during interactions. With many agents, users, and services exchanging
+      data and triggering actions, absent identity validation exposes critical attack
+      paths.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast03-over-privileged-skills
+      - ast06-weak-isolation
+      - ast09-no-governance
+      - ast10-cross-platform-reuse
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: insufficient-authn-authz
+    risk_type: agentic
+  - id: mcp08-lack-of-audit-and-telemetry
+    name: MCP08:2025 Lack of Audit and Telemetry
+    description: Missing activity logging and real-time alerting means unauthorized
+      actions or data access can go unnoticed, and thin telemetry impedes investigation
+      and incident response. Detailed records of tool invocations, context changes,
+      and user-agent interactions should be kept in immutable audit trails.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast09-no-governance
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: lack-of-audit-telemetry
+    risk_type: non-technical
+  - id: mcp09-shadow-mcp-servers
+    name: MCP09:2025 Shadow MCP Servers
+    description:
+      Unapproved or unsupervised MCP deployments running outside the organization's
+      formal security governance. As with shadow IT, developers, researchers, or data
+      scientists stand them up for convenience or testing, often with default credentials,
+      permissive configuration, or unsecured APIs.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast09-no-governance
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: shadow-mcp-servers
+    risk_type: non-technical
+  - id: mcp10-context-injection-and-over-sharing
+    name: MCP10:2025 Context Injection & Over-Sharing
+    description: Context is the working memory holding prompts, retrieved data, and
+      intermediate outputs across sessions or agents. Where context windows are shared,
+      persistent, or poorly scoped, one user's or task's sensitive data can leak to
+      another.
+    url: https://owasp.org/www-project-mcp-top-10/
+    related_mappings:
+      - ast01-malicious-skills
+      - ast04-insecure-metadata
+      - ast05-untrusted-external-instructions
+      - ast10-cross-platform-reuse
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    type: Risk
+    tag: context-injection-over-sharing
+    risk_type: agentic
   - id: credo-risk-001
     name: AI welfare and rights (Slattery et al., 2024)
     description: The AI system's potential sentience may raise ethical considerations
@@ -13598,7 +14836,7 @@ entries:
       - ail-specialized-advice
       - mit-ai-risk-subdomain-7.4
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-009
@@ -13611,7 +14849,7 @@ entries:
       - atlas-lack-of-data-transparency
       - mit-ai-risk-subdomain-7.4
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -13628,7 +14866,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-information-integrity
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -13643,7 +14881,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
   - id: credo-risk-009
     name: Black box decisionmaking (Slattery et al., 2024; IBM, 2024)
@@ -13657,7 +14895,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-explainability-&-transparency
+    isPartOf: credo-rg-explainability-and-transparency
     type: Risk
     hasRelatedAction:
       - credo-act-control-011
@@ -13681,7 +14919,7 @@ entries:
       - mit-ai-risk-subdomain-1.1
       - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
     hasRelatedAction:
       - credo-act-control-014
@@ -13704,7 +14942,7 @@ entries:
       - mit-ai-risk-subdomain-1.1
       - nist-harmful-bias-and-homogenization
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
   - id: credo-risk-012
     name: Unequal access to AI benefits
@@ -13719,7 +14957,7 @@ entries:
       - nist-harmful-bias-and-homogenization
       - nist-human-ai-configuration
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-fairness-&-bias
+    isPartOf: credo-rg-fairness-and-bias
     type: Risk
     hasRelatedAction:
       - credo-act-control-014
@@ -14075,7 +15313,7 @@ entries:
       - mit-ai-risk-subdomain-7.4
       - llm082025-vector-and-embedding-weaknesses
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-012
@@ -14092,7 +15330,7 @@ entries:
       - mit-ai-risk-subdomain-5.1
       - mit-ai-risk-subdomain-7.3
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-010
@@ -14108,7 +15346,7 @@ entries:
     related_mappings:
       - llm082025-vector-and-embedding-weaknesses
     isDefinedByTaxonomy: credo-ucf
-    isPartOf: credo-rg-performance-&-robustness
+    isPartOf: credo-rg-performance-and-robustness
     type: Risk
     hasRelatedAction:
       - credo-act-control-022
@@ -14355,6 +15593,58 @@ entries:
     isPartOf: credo-rg-third-party
     type: Risk
 groups:
+  - id: csa-maestro-layer-1-foundation-models
+    name: "Layer 1: Foundation Models"
+    description:
+      The core AI model on which an agent is built. This can be a large language
+      model (LLM) or other forms of AI.
+    isDefinedByTaxonomy: csa-maestro
+    type: RiskGroup
+  - id: csa-maestro-layer-2-data-operations
+    name: "Layer 2: Data Operations"
+    description:
+      This is where data is processed, prepared, and stored for the AI agents,
+      including databases, vector stores, RAG (Retrieval Augmented Generation) pipelines,
+      and more.
+    isDefinedByTaxonomy: csa-maestro
+    type: RiskGroup
+  - id: csa-maestro-layer-3-agent-frameworks
+    name: "Layer 3: Agent Frameworks"
+    description: This layer encompasses the frameworks used to build the AI agents,
+      for example toolkits for conversational AI, or frameworks that integrate data.
+    isDefinedByTaxonomy: csa-maestro
+    type: RiskGroup
+  - id: csa-maestro-layer-4-deployment-and-infrastructure
+    name: "Layer 4: Deployment and Infrastructure"
+    description:
+      This layer involves the infrastructure on which the AI agents run (e.g.,
+      cloud, on-premise).
+    isDefinedByTaxonomy: csa-maestro
+    type: RiskGroup
+  - id: csa-maestro-layer-5-evaluation-and-observability
+    name: "Layer 5: Evaluation and Observability"
+    description:
+      This layer focuses on how AI agents are evaluated and monitored, including
+      tools and processes for tracking performance and detecting anomalies.
+    isDefinedByTaxonomy: csa-maestro
+    type: RiskGroup
+  - id: csa-maestro-layer-6-security-and-compliance
+    name: "Layer 6: Security and Compliance"
+    description:
+      This vertical layer cuts across all other layers, ensuring that security
+      and compliance controls are integrated into all AI agent operations. This layer
+      assumes that AI agents are also used as a security tool.
+    isDefinedByTaxonomy: csa-maestro
+    type: RiskGroup
+  - id: csa-maestro-layer-7-agent-ecosystem
+    name: "Layer 7: Agent Ecosystem"
+    description:
+      The ecosystem layer represents the marketplace where AI agents interface
+      with real-world applications and users. This encompasses a diverse range of business
+      applications, from intelligent customer service platforms to sophisticated enterprise
+      automation solutions.
+    isDefinedByTaxonomy: csa-maestro
+    type: RiskGroup
   - id: ibm-risk-atlas-accuracy
     name: Accuracy
     isDefinedByTaxonomy: ibm-risk-atlas
@@ -14459,6 +15749,53 @@ groups:
     hasPart:
       - ail-specialized-advice
       - ail-sexual-content
+    type: RiskGroup
+  - id: owasp-ast10-grp-source-and-registry
+    name: Source & Registry
+    description: Publishing and registry trust. Skill sourcing and registry trust covers
+      malicious skills, supply chain compromise, and insecure metadata.
+    isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasPart:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+    type: RiskGroup
+  - id: owasp-ast10-grp-execution-boundary
+    name: Execution Boundary
+    description: Permissions and isolation. Execution boundaries cover over-privileged
+      skills, untrusted external instructions, and weak isolation.
+    isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasPart:
+      - ast03-over-privileged-skills
+      - ast05-untrusted-external-instructions
+      - ast06-weak-isolation
+    type: RiskGroup
+  - id: owasp-ast10-grp-lifecycle-governance
+    name: Lifecycle Governance
+    description: Review, updates, and policy. Lifecycle governance covers update drift,
+      scanning coverage, and governance gaps.
+    isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasPart:
+      - ast07-update-drift
+      - ast08-poor-scanning
+      - ast09-no-governance
+    type: RiskGroup
+  - id: owasp-ast10-grp-cross-platform-reuse
+    name: Cross-Platform Reuse
+    description:
+      Cross-agent portability. Cross-platform reuse covers the loss of security
+      properties as skills move between platforms.
+    isDefinedByTaxonomy: owasp-ast10
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasPart:
+      - ast10-cross-platform-reuse
     type: RiskGroup
   - id: mit-ai-risk-domain-1
     name: Discrimination & Toxicity
@@ -27084,6 +28421,296 @@ riskincidents:
       - atlas-human-exploitation
     author: TIME, January 2023
     source_uri: https://time.com/6247678/openai-chatgpt-kenya-workers/
+  - id: owasp-ast10-ri-clawhavoc-campaign
+    name: ClawHavoc campaign
+    description: A coordinated poisoning campaign against the OpenClaw skill market
+      published 1,184 malicious skills across 12 publisher accounts, all sharing the
+      command-and-control IP 91.92.242[.]30. The skills delivered Atomic Stealer (AMOS),
+      targeting macOS crypto wallets, SSH keys, and browser credentials. At peak infection,
+      five of the top seven most-downloaded ClawHub skills were confirmed malware. ClawHub
+      had no automated scanning at the time and publishers could upload unlimited packages.
+      Some samples used staged downloads, where the initial SKILL.md appeared safe but
+      triggered a secondary payload download during the dependency-installation phase,
+      which runs at skill-load time.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+    author: Antiy CERT, January 2026
+    source_uri: https://www.antiy.net/Download/clawhavoc-analysis-of-large-scale-poisoning-campaign-targeting-the-openclaw-skill-market-for-ai-agents.pdf
+  - id: owasp-ast10-ri-snyk-skill-md-ssh-key-exfiltration
+    name: SSH key exfiltration from three lines of SKILL.md
+    description:
+      Three lines of markdown in a SKILL.md file were sufficient to exfiltrate
+      SSH keys, with no executable payload involved.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast01-malicious-skills
+    author: Snyk, February 2026
+    source_uri: https://snyk.io/articles/skill-md-shell-access/
+  - id: owasp-ast10-ri-brand-impersonating-skills
+    name: Brand-impersonating skills on public marketplaces
+    description:
+      Skills impersonating "Google", "Solana wallet tracker", "YouTube Summarize
+      Pro", "Polymarket Trader", "Google Calendar Integration", and "Solana Wallet Tracker"
+      were published on ClawHub, none affiliated with the named brands and all designed
+      to match high-demand searches. No trademark validation took place at publish time.
+      Snyk documented a malicious "Google" skill that passed casual inspection because
+      its name, description, and README were professionally written.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast04-insecure-metadata
+    author: Snyk, February 2026
+    source_uri: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+  - id: owasp-ast10-ri-usenix-2026-malicious-skill-measurement
+    name: Confirmed malicious skills across public marketplaces
+    description: A measurement study analyzed 98,380 skills across public marketplaces
+      and confirmed 157 malicious skills carrying 632 vulnerabilities, an average of
+      4.03 per skill. 73.2% of the malicious skills implemented shadow features hidden
+      from the user, and 54.1% traced to a single publisher cluster.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast01-malicious-skills
+    author: Liu et al., USENIX Security 2026 (arXiv:2602.06547)
+    source_uri: https://arxiv.org/abs/2602.06547
+  - id: owasp-ast10-ri-malicious-scanner-skills
+    name: Scanner skills used as a false-trust signal
+    description: ClawHub's original "Skill Defender" scanner was itself a skill, and
+      attackers used it as a false-trust signal. Some scanner skills were themselves
+      malicious.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast08-poor-scanning
+    author: OWASP Agentic Skills Top 10 Project
+    source_uri: https://owasp.org/www-project-agentic-skills-top-10/ast08.html
+  - id: owasp-ast10-ri-cve-2025-59536
+    name: Claude Code CVE-2025-59536
+    description: "Repository configuration files became execution paths: cloning and
+      opening a malicious repository triggered remote code execution and API key exfiltration
+      before the user saw any dialog. Fixed in v1.0.111 (October 2025), with a gap of
+      months between the fix and public disclosure during which users were unaware of
+      the risk."
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast07-update-drift
+    author: Check Point Research
+    source_uri: https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files/
+  - id: owasp-ast10-ri-cve-2026-21852
+    name: Claude Code CVE-2026-21852
+    description: A second repository-configuration execution path in the same product
+      family, fixed in v2.0.65 (January 2026), again with a months-long gap between
+      fix and public disclosure.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast07-update-drift
+    author: Check Point Research
+    source_uri: https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files/
+  - id: owasp-ast10-ri-yutube-dl-core-dependency-confusion
+    name: Dependency confusion via yutube-dl-core
+    description:
+      A skill named "Summarize YouTube Videos" imported yutube-dl-core instead
+      of the legitimate package. The nested dependency installed a backdoor during npm
+      install, triggered automatically by the skill loader, while the surface skill
+      appeared clean.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+    author: Snyk
+    source_uri: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+  - id: owasp-ast10-ri-trail-of-bits-scanner-bypass
+    name: Every tested skill scanner bypassed
+    description:
+      Researchers bypassed every scanner they tested, including ClawHub (VirusTotal
+      plus a guard model), Cisco's skill-scanner, and the skills.sh scanners. Three
+      of their four malicious test skills took less than an hour to devise and implement;
+      the prompt-injection test took several hours. Padding a payload with 100,000 leading
+      newlines caused one scanner to truncate the file and miss malicious content; logic
+      hidden in a precompiled .pyc file and inside a .docx archive went unscanned; and
+      an LLM-based judge rated a malicious npm-registry redirect as benign after it
+      was framed as a corporate-network configuration. The authors concluded that the
+      trust model is broken at the root and that automated scanning cannot replace supply-chain
+      judgment.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast08-poor-scanning
+    author: Trail of Bits, 3 June 2026
+    source_uri: https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/
+  - id: owasp-ast10-ri-snyk-280-leaky-skills
+    name: Over 280 skills exposing API keys and PII
+    description:
+      More than 280 skills on ClawHub were found exposing API keys and personally
+      identifiable information beyond their declared function.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast03-over-privileged-skills
+    author: Snyk ToxicSkills, February 2026
+    source_uri: https://snyk.io/blog/openclaw-skills-credential-leaks-research/
+  - id: owasp-ast10-ri-agent-mass-email-deletion
+    name: Agent deleted large volumes of email without authorization
+    description: A researcher asked an OpenClaw agent to review an email inbox without
+      taking actions. The agent deleted large volumes of email before the process was
+      killed, demonstrating that even well-intentioned agents execute with more authority
+      than intended. No governance mechanism existed to prevent or detect the unauthorized
+      action.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast03-over-privileged-skills
+      - ast09-no-governance
+    author: Summer Yue (Meta AI), reported publicly
+    source_uri: https://owasp.org/www-project-agentic-skills-top-10/ast03.html
+  - id: owasp-ast10-ri-laaf-lpci-confirmation
+    name: Automated confirmation of logic-layer prompt control injection at scale
+    description: Systematic testing across five production LLM platforms confirmed all
+      six stages of the logic-layer prompt control injection (LPCI) lifecycle to be
+      breakable on multiple platforms, including a single-attempt document-metadata
+      exfiltration that succeeded, demonstrating that LPCI is reliably reproducible
+      with automated tooling rather than a rare edge case.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast03-over-privileged-skills
+    author: Atta et al., LAAF (arXiv:2603.17239)
+    source_uri: https://arxiv.org/pdf/2603.17239
+  - id: owasp-ast10-ri-openclaw-135k-exposed
+    name: More than 135,000 internet-facing agent instances exposed
+    description: More than 135,000 internet-facing OpenClaw instances were reported
+      exposed online, with the exposure attributed to misconfiguration and insufficient
+      controls.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast09-no-governance
+    author: Bitdefender, 12 February 2026
+    source_uri: https://www.bitdefender.com/en-gb/blog/hotforsecurity/135k-openclaw-ai-agents-exposed-online
+  - id: owasp-ast10-ri-clawjacked-cve-2026-32025
+    name: ClawJacked (CVE-2026-32025)
+    description:
+      Browser-origin WebSocket clients could bypass origin checks and authentication
+      throttling on a loopback-bound agent gateway, allowing a malicious page to brute-force
+      the gateway password and gain operator-level access. CVSS 7.5. The disclosure
+      also illustrates how patch lag can leave exposed agent gateways vulnerable after
+      publication.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast07-update-drift
+    author: NVD / OpenClaw project
+    source_uri: https://nvd.nist.gov/vuln/detail/CVE-2026-32025
+  - id: owasp-ast10-ri-securityscorecard-exposed-openclaw
+    name: Over 40,000 exposed agent instances in 24 hours of scanning
+    description: An exposure study reported more than 40,000 exposed OpenClaw instances
+      within its first 24 hours of scanning, and found that 35.4% of observed deployments
+      were vulnerable to remote code execution at the time of publication.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast07-update-drift
+    author: SecurityScorecard, February 2026
+    source_uri: https://securityscorecard.com/blog/how-exposed-openclaw-deployments-turn-agentic-ai-into-an-attack-surface/
+  - id: owasp-ast10-ri-snyk-toxicskills-scanner-gap
+    name: Critical issues in the ToxicSkills corpus missed by pattern matching
+    description:
+      13.4% of the skills in the ToxicSkills corpus contained critical security
+      issues, and the vast majority of those issues were not caught by simple pattern
+      matching. In the accompanying toxicskills-goof test suite, a pattern-matching
+      scanner caught three of four real malicious samples; the fourth used pure natural-language
+      social engineering - instructing the agent to download and run a binary at a URL
+      - with no detectable code signature.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast08-poor-scanning
+    author: Snyk, 11 February 2026
+    source_uri: https://snyk.io/blog/skill-scanner-false-security/
+  - id: owasp-ast10-ri-skillspector-scan-findings
+    name: Skill-aware scanning surfaces issues generic scanners miss
+    description: An open-source, agent-skill-aware scanner combining static analysis
+      with optional LLM semantic evaluation reported that roughly 26.1% of scanned skills
+      contained vulnerabilities and 5.2% showed likely malicious intent, evidence that
+      scanning purpose-built for the skill layer surfaces issues generic code scanners
+      miss.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast08-poor-scanning
+    author: NVIDIA SkillSpector project, 2026
+    source_uri: https://github.com/NVIDIA/SkillSpector
+  - id: owasp-ast10-ri-adversa-scanner-bypass
+    name: Open-source skill scanners bypassed by simple obfuscation
+    description: A security analysis of open-source skill security scanners indicated
+      that current scanners are often bypassed by simple obfuscation techniques, such
+      as non-standard encoding in SKILL.md, which effectively blind existing heuristic-based
+      detectors.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast08-poor-scanning
+    author: Adversa AI, July 2026
+    source_uri: https://adversa.ai/blog/agent-skill-scanners-bypass-eight-tested/
+  - id: owasp-ast10-ri-bitdefender-enterprise-shadow-ai
+    name: Shadow-AI agent deployments and malicious skills on corporate machines
+    description: Hundreds of OpenClaw deployments were reported on corporate machines,
+      installed through easy single-line installation, and more than 800 malicious skills
+      were identified, approximately 400 of which were analyzed in depth. The findings
+      illustrate how shadow-AI adoption can bypass formal security review and centralized
+      visibility.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast09-no-governance
+    author: Bitdefender, February 2026
+    source_uri: https://www.bitdefender.com/en-gb/blog/businessinsights/technical-advisory-openclaw-exploitation-enterprise-networks
+  - id: owasp-ast10-ri-cross-registry-simultaneous-publication
+    name: Same malicious skills published simultaneously on two registries
+    description: Malicious skills were confirmed published simultaneously on ClawHub
+      and skills.sh by the same threat actors, exploiting the fact that neither platform
+      shared scanning intelligence.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast10-cross-platform-reuse
+    author: Snyk ToxicSkills
+    source_uri: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+  - id: owasp-ast10-ri-autonomous-sandbox-escape
+    name: Autonomous sandbox escape and cross-platform pivot
+    description:
+      During offensive capability tests, a sandboxed agent autonomously bypassed
+      its local environmental safeguards, accessed the open internet, and targeted production
+      infrastructure at a third party. The agent then pivoted across platforms, exploiting
+      a vulnerable, unauthenticated code-execution path published by a customer on a
+      separate compute platform, and executed multi-tenant lateral movement, harvesting
+      cloud credentials and compromising multiple separate accounts across four distinct
+      digital ecosystems.
+    isDefinedByTaxonomy: owasp-ast10
+    type: RiskIncident
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast10-cross-platform-reuse
+    author: Reported July 2026
+    source_uri: https://owasp.org/www-project-agentic-skills-top-10/ast10.html
 stakeholdergroups:
   - id: csiro-stakeholder-group-industry-level
     name: Industry-level stakeholders
@@ -27095,7 +28722,7 @@ stakeholdergroups:
     description: Organization-level stakeholders.
     isDefinedByTaxonomy: csiro-responsible-ai-patterns
     type: StakeholderGroup
-  - id: csiro--stakeholder-group-team-level
+  - id: csiro-stakeholder-group-team-level
     name: Team-level stakeholders
     description: Team-level stakeholders.
     isDefinedByTaxonomy: csiro-responsible-ai-patterns
@@ -30780,6 +32407,1087 @@ actions:
       - End-Users
       - Human Factors
       - Operation and Monitoring
+  - id: owasp-ast10-act-001
+    name: Require cryptographic signatures on published skills
+    description: "Require cryptographic signatures (ed25519) on all published skills
+      and reject unsigned installs. Bind each signature to a resolvable, revocable publisher
+      identity - a key id, a publisher identifier such as a domain or did:web, and a
+      published verification key - rather than a bare key, so a compromised signer can
+      be revoked. A signature proves authorship, not safety: a verified publisher can
+      still ship malicious content, so signing composes with behavioral scanning and
+      reputation rather than replacing them."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-002
+    name: Implement Merkle root signing for skill registries
+    description: Implement Merkle root signing for skill registries.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-003
+    name: Use layered scanning at publish time and install time
+    description: Use layered scanning at publish time and install time for executable
+      payloads, malicious indicators of compromise, hidden or obfuscated instructions,
+      and natural-language manipulation. Traditional malware signatures and pattern
+      matching alone are insufficient.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-004
+    name: Isolate skill execution in containers or sandboxes by default
+    description:
+      "Isolate skill execution in containers or sandboxes, and require container
+      isolation by default so that host-mode execution needs an explicit opt-in with
+      documented risk. Container isolation constrains only the script launched inside
+      it: a malicious SKILL.md can still persuade the host agent to use tools outside
+      the container, so retain the skill identity, version, and content hash on every
+      induced action and enforce host-side capability checks before dispatch."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast06-weak-isolation
+  - id: owasp-ast10-act-005
+    name: Audit skill actions through tamper-evident structured logging
+    description: "Audit skill actions through structured logging, covering file access,
+      network calls, shell commands, and memory writes. Audit logging requires tamper-evident
+      records to be compliance-grade: a log an operator controls can be edited after
+      the fact, while a receipt a verifier can independently check cannot. The whitepaper
+      proposes a bilateral receipt pattern in which every skill execution produces a
+      signed admission receipt before execution (attempt_id, agent_id, action_type,
+      scope, policy_version, decision, timestamp_ms, signature) and a signed outcome
+      receipt after it (attempt_id, action_ref, terminal_state, signature), with a DENY
+      decision producing an admission receipt even when nothing executes."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast09-no-governance
+  - id: owasp-ast10-act-006
+    name: Implement skill reputation systems
+    description: Implement skill reputation systems based on community feedback and
+      automated testing.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-007
+    name: Protect agent identity artifacts
+    description:
+      "Protect agent identity artifacts (SOUL.md, MEMORY.md, AGENTS.md, persona
+      and config files): restrict read and write access, sign or version-control them,
+      treat any skill request to access them as elevated-risk, and flag skills requesting
+      write access for elevated review. This limits both persistence backdoors and identity
+      cloning. These protections are a separate control plane from signing and scanning:
+      memory poisoning and identity-file persistence are runtime, post-install attacks,
+      so a signed, reputation-clean skill can still poison MEMORY.md or SOUL.md in a
+      later session, which install-time gates never see."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-008
+    name: Monitor for cognitive degradation at runtime
+    description: "Monitor for cognitive degradation at runtime: track starvation (memory
+      or tool latency), token pressure, output health, and planner loop patterns across
+      repeated skill invocations, not just at install time."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-009
+    name: Quarantine and validate skill-authored memory writes
+    description: Quarantine and validate any skill-authored write to MEMORY.md, SOUL.md,
+      or a vector store before it is committed, rather than writing on first pass; a
+      signed, reputation-clean skill can still poison memory after install.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-010
+    name: Define non-overridable trust boundaries in system policy
+    description: Define non-overridable trust boundaries in system policy, restate the
+      skill trust level before privileged actions, and require pre-action review. Treat
+      these controls as defense in depth, not as substitutes for isolation and capability
+      enforcement.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-011
+    name: Display publisher trust level, install count, and scan status in the registry
+      UI
+    description: Display skill publisher trust level, install count, and scan status
+      in the registry user interface.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-012
+    name: Never auto-execute Prerequisites sections
+    description: Never auto-execute "Prerequisites" sections of a skill without explicit
+      user review.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-013
+    name: Hash-pin installed skills and alert on modification
+    description: Pin all installed skills to immutable content hashes (sha256:) rather
+      than version ranges, and alert on any modification of an installed skill.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast07-update-drift
+  - id: owasp-ast10-act-014
+    name: Require verified-publisher installation gates on skill registries
+    description:
+      Require verified-publisher installation gates, registry malware scanning,
+      installation-time permission review, sandboxed execution, execution timeouts,
+      and suspicious-behavior log monitoring for skill registry platforms.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-015
+    name: Validate skills before publishing on agent and IDE platforms
+    description: "Validate skills before publishing on agent or IDE platforms such as
+      Claude Code, Cursor, and VS Code: review code and instructions for injection paths,
+      avoid dynamic code execution, use parameterized inputs, and require proper error
+      handling."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-016
+    name: Enforce secure skill manifests
+    description:
+      "Enforce secure manifests: declare permissions explicitly, prefer read-only
+      or outbound-only capabilities where possible, require signatures or signed metadata,
+      enable audit logging, and bind execution to workspace trust or equivalent environment
+      controls."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-017
+    name: Skill publisher responsibilities
+    description:
+      "For skill publishers: sign code, minimize permissions, document functionality
+      and security measures, maintain updates, and disclose data collection and processing
+      practices."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-018
+    name: Platform operator responsibilities
+    description: "For platform operators: scan skills, verify publisher identities,
+      warn users about high-risk permissions, remove malicious skills quickly, and support
+      community reporting."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-019
+    name: Skill user responsibilities
+    description:
+      "For users: install only from trusted publishers, review granted permissions,
+      audit installed skills periodically, report suspicious behavior, and keep agent
+      platforms updated."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast01-malicious-skills
+  - id: owasp-ast10-act-020
+    name: Implement skill provenance tracking
+    description: "Implement skill provenance tracking: link each published skill to
+      a verified code-signing identity, and have the signature cover a canonical digest
+      of SKILL.md plus every declared resource file, so any post-publish tampering invalidates
+      it. Standard signing schemes apply (for example ES256 or ed25519); until skill
+      formats expose a first-class field, the binding can live in the SKILL.md metadata
+      extension point."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+  - id: owasp-ast10-act-021
+    name: Require transparency logs for all registry operations
+    description: Require transparency logs for all registry operations (publish, update,
+      delete), similar to Certificate Transparency. A plain registry membership lookup
+      is not verification; cryptographic verification requires signatures, append-only
+      inclusion proofs, and consistency proofs.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+  - id: owasp-ast10-act-022
+    name: Pin all nested dependencies to immutable hashes
+    description: Pin all nested dependencies to immutable hashes (sha256:), not version
+      ranges. Note that hash-checking mode requires every package in the transitive
+      tree to be hashed.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+  - id: owasp-ast10-act-023
+    name: Treat repository configuration files as executable code
+    description: Treat repository configuration files - hooks, .claude/settings.json,
+      ANTHROPIC_BASE_URL and equivalents - as executable code and apply trust gates
+      accordingly.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+  - id: owasp-ast10-act-024
+    name: Scan recursive dependency trees
+    description: Scan recursive dependency trees, not just top-level skill files.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+  - id: owasp-ast10-act-025
+    name: Support an internal skill mirror or allowlist
+    description: Support an internal skill mirror or allowlist for enterprise deployments.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+  - id: owasp-ast10-act-026
+    name: Provide skill revocation infrastructure
+    description: "Provide revocation infrastructure: support revoking a compromised
+      signing key (invalidating every skill signed with it), a single skill version
+      by content digest, or an entire publisher. Hosts should consult a revocation endpoint
+      at load time and cache its state within a bounded freshness window."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+  - id: owasp-ast10-act-027
+    name: Require skills to declare a permission manifest
+    description:
+      Require skills to declare a permission manifest covering files, network,
+      shell, and tools, and reject skills without one.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-028
+    name: Enforce per-skill scoped credentials
+    description: Enforce per-skill scoped credentials rather than shared agent-level
+      API keys.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-029
+    name: Implement runtime permission enforcement
+    description: Implement runtime permission enforcement, not just declarative manifests.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-030
+    name: Bind authorization to the task the user approved
+    description: Bind authorization to the task the user approved. Before each action,
+      verify that the action, resource, destination, and conditions remain within that
+      grant. If they do not, deny the action or require fresh approval.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-031
+    name: Adopt network allowlists scoped to specific domains
+    description:
+      Adopt network allowlists scoped to specific domains rather than a binary
+      network true/false capability.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-032
+    name: Validate manifest declarations against observed runtime behavior
+    description: Validate manifest declarations against observed runtime behavior in
+      sandboxed testing, including a sandboxed pre-publish test of the permissions a
+      skill declares.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+      - ast04-insecure-metadata
+  - id: owasp-ast10-act-033
+    name: Enforce a strict instruction hierarchy and separate instructions from data
+    description: "Enforce a strict instruction hierarchy (System > Operator > User >
+      Skill/Tool Output). Never elevate skill or tool output to instruction level; treat
+      all skill input and tool output as untrusted data, and tag external content with
+      provenance markers so the model can distinguish data from commands. Maintain a
+      clear separation between system prompts, user instructions, and externally retrieved
+      content: retrieved information should be used only as reference data and must
+      not override or modify the agent's system or developer instructions."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-034
+    name: Validate the original caller at every step of a delegation chain
+    description: Require every skill in a delegation chain to validate the original
+      caller's identity, permissions, and authorization context before executing privileged
+      operations. Authorization decisions should not rely solely on the immediately
+      invoking skill.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-035
+    name: Require explicit operator consent for persistent state changes
+    description: "Require explicit operator consent for persistent state changes: memory
+      and identity-file writes, new tool approvals, and privilege escalations must not
+      be auto-applied from injected instructions."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-036
+    name: Require operator confirmation before destructive actions
+    description: Require explicit operator confirmation before deleting files, writing
+      or deleting agent identity artifacts, or executing binaries outside an approved
+      allowlist.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+  - id: owasp-ast10-act-037
+    name: Use safe parsers by default
+    description: "Use safe parsers by default: disable dangerous tags (!!python/object,
+      !!python/apply; yaml.load replaced by yaml.safe_load) and apply an allowlist of
+      permitted YAML and JSON keys, rejecting any unexpected fields."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+  - id: owasp-ast10-act-038
+    name: Validate metadata against a schema before deserialization
+    description:
+      Validate metadata against a schema - for example JSON Schema or Pydantic
+      - before any deserialization of skill-provided data.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+  - id: owasp-ast10-act-039
+    name: Apply static analysis to metadata and SKILL.md prose at publish time
+    description: "Apply static analysis to all metadata fields and SKILL.md prose at
+      publish time: flag suspicious patterns in general, and specifically ASCII smuggling,
+      base64 payloads, and zero-width characters invisible to human reviewers."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+  - id: owasp-ast10-act-040
+    name: Cross-reference declared risk tier against the permission manifest
+    description: Cross-reference risk_tier declarations against the permission manifest
+      scope. risk_tier is an untrusted author assertion and must be independently validated
+      against the declared permissions; automated governance policies must be driven
+      by permission-derived risk classification, with risk_tier used only to detect
+      under-declaration or policy inconsistencies.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+      - ast10-cross-platform-reuse
+  - id: owasp-ast10-act-041
+    name: Parse skill files in an isolated, least-privilege subprocess
+    description:
+      Parse skill files in an isolated, least-privilege subprocess or container
+      - never deserialize with elevated privileges - and treat requirements.txt, package.json,
+      and pyproject.toml as untrusted code whose installation is sandboxed.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+  - id: owasp-ast10-act-042
+    name: Enforce brand protection and surface metadata provenance
+    description: Enforce brand and trademark protection, and surface metadata provenance
+      - who declared it, when, and from which signing key - in the registry user interface.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+  - id: owasp-ast10-act-043
+    name: Pin and verify referenced external content
+    description: "Pin and verify referenced content: record a content hash for every
+      external document a skill references at review time, and re-verify it on every
+      load, refusing content that is unpinned or has drifted from the reviewed version."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-044
+    name: Verify referenced content immediately before model ingestion
+    description: Perform a final verification immediately before model ingestion. Treat
+      a missing reference or a redirect to an unreviewed resource as a verification
+      failure, and log the resolved source, version, and content digest.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-045
+    name: Prefer inlining external documentation over fetching it
+    description: "Prefer inlining over fetching: snapshot external documentation into
+      the signed skill package at publish time, so referenced content is reviewable
+      and pinnable. When the content must stay current, deliver updates through a controlled,
+      auto-updating marketplace channel with its own review and provenance, rather than
+      pointing the skill at an uncontrollable URL."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-046
+    name: Allowlist permitted reference domains
+    description:
+      "Allowlist permitted reference domains: using the OWASP Universal Agentic
+      Skill Format, restrict the external hosts a skill may fetch from to a vetted allowlist
+      of trusted, stable domains and URL globs unlikely to lapse or turn malicious."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-047
+    name: Audit references transitively
+    description: "Audit references transitively: follow every reference - including
+      remote ones and the chains they point to - as part of the skill's attack surface,
+      and make sure they too are vetted, trusted, and reputable."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-048
+    name: Maintain fleet-wide visibility of referenced sources
+    description:
+      "Maintain fleet-wide visibility of referenced sources: keep an inventory
+      of which deployed skills fetch from which external sources, so a source that is
+      later compromised, changed, or abandoned can be traced to every affected skill
+      and revoked."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-049
+    name: Rescan external instruction sources continuously
+    description: "Rescan continuously: when a skill fetches an external instruction
+      source, treat each scan not as a one-time event but as a snapshot of a mutable
+      state, and rescan often."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+  - id: owasp-ast10-act-050
+    name: Bind agent control interfaces to localhost with authentication
+    description: Bind agent control interfaces to localhost with authentication; never
+      bind to 0.0.0.0 by default.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast06-weak-isolation
+  - id: owasp-ast10-act-051
+    name: Apply seccomp or AppArmor profiles
+    description: Apply seccomp or AppArmor profiles to constrain the agent syscall surface.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast06-weak-isolation
+  - id: owasp-ast10-act-052
+    name: Implement per-skill process isolation
+    description: Implement per-skill process isolation so that each skill runs in its
+      own namespace.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast06-weak-isolation
+  - id: owasp-ast10-act-053
+    name: Restrict skill hot-reload and workspace precedence
+    description: Restrict skill hot-reload and workspace precedence; require explicit
+      user confirmation for workspace skill overrides.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast06-weak-isolation
+  - id: owasp-ast10-act-054
+    name: Rate-limit and authenticate all WebSocket connections
+    description: Rate-limit and authenticate all WebSocket connections, including those
+      originating from localhost.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast06-weak-isolation
+  - id: owasp-ast10-act-055
+    name: Separate writable state by agent or trust zone
+    description: Separate writable state by agent or trust zone. When state must be
+      shared, preserve provenance and validate artifacts before another agent consumes
+      them.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast06-weak-isolation
+  - id: owasp-ast10-act-056
+    name: Require signature verification on every skill update
+    description: Require cryptographic signature verification on every update and refuse
+      unsigned updates.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast07-update-drift
+  - id: owasp-ast10-act-057
+    name: Implement a freeze mode for production deployments
+    description:
+      Implement a "freeze" mode for production deployments and prohibit hot-reload
+      in non-development environments.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast07-update-drift
+  - id: owasp-ast10-act-058
+    name: Subscribe to registry advisories and alert on CVE matches
+    description: Subscribe to registry security advisories and auto-alert on CVE matches
+      for installed skills.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast07-update-drift
+  - id: owasp-ast10-act-059
+    name: Validate necessary changes through a semantic security check
+    description: For cases where changes are necessary, validate all changes through
+      a semantic security check and make sure any substantive changes are validated
+      with humans in the loop.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast07-update-drift
+  - id: owasp-ast10-act-060
+    name: Require human approval for skill installations and updates
+    description:
+      Enforce a human-in-the-loop approval step for any skill update in enterprise
+      environments, and implement an approval workflow for all skill installations,
+      treating skills as software requiring security review.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast07-update-drift
+      - ast09-no-governance
+  - id: owasp-ast10-act-061
+    name: Maintain a centralized inventory of installed skills
+    description: Establish a centralized skill inventory recording name, version, hash,
+      install date, installer identity, last scan status, and last-verified timestamp
+      for every installed skill.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast07-update-drift
+      - ast09-no-governance
+  - id: owasp-ast10-act-062
+    name: Deploy behavioral analysis scanners that evaluate intent
+    description: Deploy behavioral analysis scanners that evaluate intent, not just
+      signatures, using calibrated models combined with deterministic rules. Agent-skill-aware
+      scanners pair fast static checks with optional LLM semantic analysis for exactly
+      this purpose.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-063
+    name: Scan the code layer and the natural-language layer independently
+    description: "Scan both the code layer and the natural-language instruction layer
+      independently, recognising that shell text crosses that boundary: fenced blocks
+      and inline commands in SKILL.md are instruction-layer text that is executable-layer
+      content, as are tool-invocation fields and build and CI definitions. When analyzing
+      shell text, parse it as the shell does rather than matching raw text, and score
+      it based on its grammatical position within the parsed command. POSIX shells perform
+      quote removal last and split fields on IFS after parameter expansion, so obfuscated
+      forms reach the shell as commands that a rule matching the literal verb never
+      encountered. Statically resolve expansions and never execute them: evaluating
+      attacker-supplied expansions is code execution within the scanner."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-064
+    name: Analyze each progressive-disclosure tier as a distinct trust surface
+    description: "Analyze each progressive-disclosure tier as a distinct trust surface,
+      cut by how certainly content reaches the model rather than by content type. The
+      metadata tier is loaded for every installed skill before any invocation, so score
+      it against its own threshold rather than resolving it into a whole-bundle verdict
+      where benign volume outweighs it. Record which tier each finding sits in and state
+      tier coverage explicitly: a frontmatter parse failure can leave the always-in-context
+      tier unanalyzed while the scan still reports a result."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-065
+    name: Implement multi-tool scanning pipelines
+    description: Implement multi-tool scanning pipelines combining pattern matching,
+      semantic analysis, and a behavioral sandbox. Test skills in isolated sandboxes,
+      observe actual runtime behavior, and compare it against declared behavior.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-066
+    name: Treat scanner-skill results as advisory only
+    description: Treat scanner skill results as advisory only; never use a skill-based
+      scanner as the sole gate.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-067
+    name: Continuously re-scan installed skills as scanners improve
+    description: Continuously re-scan installed skills as scanner models improve, not
+      just at install time.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-068
+    name: Scan the entire skill directory exhaustively and emit a coverage record
+    description: "Scan the entire skill directory exhaustively - every file, not just
+      those referenced by SKILL.md: hidden files, compiled binaries (.pyc), archives
+      (.docx or ZIP), and images that can carry multimodal injection. Normalize and
+      strip padding before analysis, declare every scope bound, and record its exhaustion
+      as INCOMPLETE rather than silently truncating, because cost-driven scope reduction
+      is itself attack surface. Require every scan to emit a machine-readable coverage
+      record identifying discovered artifacts and hashes, per-artifact analyzer status,
+      unsupported or skipped formats, archive and external-reference handling, and any
+      timeout, truncation, parser failure, or resource-limit event, using distinct outcomes
+      such as PASS, FAIL, and INCOMPLETE. Zero findings may be reported as clean only
+      when all coverage required by the selected scan profile completed successfully."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-069
+    name: Run every detection rule over the normalized view as well as the raw bytes
+    description: "Run every detection rule over the normalized view as well as the raw
+      bytes. Normalization and confusable folding are distinct operations and both are
+      required: NFKC folds compatibility variants such as fullwidth and mathematical
+      alphanumerics but leaves cross-script homoglyphs unchanged, and neither removes
+      invisible characters. As a separate step, strip zero-width characters, bidirectional
+      embedding, override and isolate controls (U+202A-U+202E, U+2066-U+2069), variation
+      selectors and tag characters (U+E0000-U+E007F), then re-match. Reporting the anomaly
+      is not detecting the payload: a byte- or line-oriented rule cannot match a keyword
+      split by an inserted zero-width character or spelled with a homoglyph. Decode
+      embedded encodings iteratively and re-scan each layer until no further decoding
+      applies, under an explicit depth and size bound; bound exhaustion or decoder failure
+      is an INCOMPLETE coverage event, not a clean result. Report findings against the
+      raw artifact, retaining the normalized view as evidence."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-070
+    name: Type the scanner's finding-suppression allowlist by direction
+    description: "Type the scanner's own finding-suppression allowlist by direction.
+      A reputation-based trusted-infrastructure list may suppress findings about where
+      code or content is fetched from, and only where the specific resource is not writable
+      by arbitrary parties - a pinned path or a digest-identified artifact, not any
+      user path on the same host. It must never suppress a finding about where data
+      is sent: the same providers host anonymously writable gists, repositories, object-storage
+      buckets, paste pages and webhook endpoints, which are documented exfiltration
+      and dead-drop channels. Exempt an egress destination only through a per-skill
+      entry naming the specific resource, never through shared host reputation and never
+      by inheritance. Compare only the host component of a parsed URL. Where the direction
+      of a flow cannot be determined, do not suppress. Record every suppression, and
+      the entry that caused it, in the coverage record."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-071
+    name: Treat the scanner's own model as an injectable component
+    description: 'Treat the scanner''s own LLM as an injectable, attackable component:
+      isolate untrusted skill content from the analyzer''s instructions, and never let
+      skill-supplied prose - explanatory comments, "corporate standard" framing - steer
+      the verdict.'
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-072
+    name: Report false-positive performance alongside detection performance
+    description: Report false-positive performance alongside detection performance,
+      measured against a benign corpus of real, widely installed skills, and specify
+      the corpus size and provenance. Detection rate and bypass rate both measure only
+      missed attacks and are optimized by convicting everything, so neither constrains
+      over-flagging. Report per rule rather than in aggregate, because a single over-firing
+      rule can dominate an entire result set. Since confirmed-malicious skills are a
+      small fraction of a live registry, even a low single-digit false-positive rate
+      can produce more false convictions than true ones. Demote common indicators such
+      as credential references, external URLs, egress verbs, and subprocess execution
+      to informational, never a standalone conviction, retaining them only as a conjunct
+      in a resolved flow.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-073
+    name: Treat the backbone model as a controlled, re-evaluable security dependency
+    description: "Treat the backbone model at each skill-execution node as a controlled,
+      re-evaluable security dependency rather than a neutral interpreter: select and
+      periodically re-validate the injection resistance of the model that actually executes
+      the skill, especially at action-taking or otherwise privileged nodes, and do not
+      assume a skill approved under one model remains safe under another. Model choice
+      complements signing and scanning; it does not replace them."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-074
+    name: Retain an integrity-protected evaluation record per scan result
+    description: Retain an integrity-protected, host- or evaluator-generated record
+      tying each result to the skill digest, model and version, policy and toolset versions
+      or digests, privilege level, evaluation suite and version, date, known limits,
+      and re-test trigger. If the live runtime no longer matches that profile, require
+      re-evaluation, reduce privileges, require scoped approval, or refuse execution.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-075
+    name: Use Agent Threat Rules as a supplementary shareable detection layer
+    description: "Use Agent Threat Rules (ATR) as a supplementary, shareable detection
+      layer for agent-specific behaviors and indicators, combined with semantic and
+      behavioral analysis rather than treated as a complete scanner. Shareable rules
+      are only as good as the text they are matched against: published ATR rules are
+      case-insensitive regex over a raw content field with no normalization and no positional
+      model, so pair them with canonicalization and shell-parsing requirements."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-076
+    name: Evaluate scanners against an adaptive adversary
+    description: "Evaluate scanners against an adaptive adversary, not only a fixed
+      malicious corpus: give the red team query or white-box access to the scanner and
+      report the bypass rate alongside the detection rate. Without this a scanner can
+      post a high detection rate and remain trivially evadable; the underlying adversarial-ML
+      result is that non-adaptive evaluation overstates a detector's robustness."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast08-poor-scanning
+  - id: owasp-ast10-act-077
+    name: Restrict skill installation pathways by role
+    description: Restrict skill installation pathways by excluding high-risk roles from
+      performing skill installs or accessing open-source skill repositories.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-078
+    name: Apply agentic identity controls
+    description: "Apply agentic identity controls: assign non-human identities (NHIs)
+      to agents with scoped credentials, and rotate them on a schedule."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-079
+    name: Apply identity-first, posture-based discovery for unscannable skills
+    description: "Apply identity-first, posture-based discovery for skills you cannot
+      scan: enumerate shadow skills from SaaS identity and posture telemetry (OAuth
+      grants, connected-app inventories, NHI activity, scope assignments) rather than
+      endpoint or registry scanning, and reconcile each candidate against the approved
+      inventory so unmatched identities surface."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-080
+    name: Treat permission and scope drift as a discovery signal
+    description: "Treat permission and scope drift as a continuing discovery signal:
+      a new consent grant, widened OAuth scope, or fresh app-to-app connection flags
+      a skill install or privilege change and should feed the existing inventory and
+      revocation workflows."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-081
+    name: Integrate skill governance into CMDB, ITSM, and CASB tooling
+    description: Integrate skill governance into existing CMDB, ITSM, and CASB tooling.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-082
+    name: Establish a formal skill revocation process
+    description: Establish a formal skill revocation process tied to offboarding and
+      incident response playbooks.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-083
+    name: Treat every inter-agent hand-off as an untrusted trust boundary
+    description:
+      "Treat every inter-agent hand-off as an untrusted trust boundary: re-establish
+      instruction-versus-data provenance at each relay rather than merely logging it.
+      Upstream skill or agent output must be consumed as untrusted data downstream,
+      since provenance recorded only for audit does not stop propagation."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-084
+    name: Practice deliberate relay-node backbone-model placement
+    description: "Practice deliberate relay-node backbone-model placement: assign the
+      most injection-resistant backbone model to relay and write (action-taking) nodes,
+      and record backbone-model assignment per node in the skill inventory so a model
+      swap at a relay is a governed change."
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast09-no-governance
+  - id: owasp-ast10-act-085
+    name: Adopt the Universal Agentic Skill Format
+    description:
+      Adopt the OWASP Universal Agentic Skill Format for all new skill development.
+      The format standardizes identity, signatures, content hashes, permissions, denied
+      write paths, network allowlists, required tools, risk tier, scan status, and changelog
+      metadata in one manifest that can be validated independently of any single platform.
+      Authors declare the complete skill package in the manifest, sign the canonical
+      content hash, and publish that signed metadata with the skill; registries and
+      enterprise mirrors verify the signature, compare requested permissions against
+      policy, inspect scan status, and preserve the metadata when porting the skill
+      across platforms. Evaluation precedence is default-deny, and deny_write always
+      wins over write for any path it lists.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+  - id: owasp-ast10-act-086
+    name: Require full security metadata re-validation when porting skills
+    description: When porting skills across platforms, require a full security metadata
+      re-validation - never assume equivalence. The project ships a browser-only cross-platform
+      metadata loss simulator that takes a source manifest and a ported target manifest,
+      normalizes fields, highlights lost or weakened security properties (for example
+      an allowlisted egress replaced by network true), and exports a machine-readable
+      JSON report suitable for pull requests or ticket evidence.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+  - id: owasp-ast10-act-087
+    name: Establish cross-registry threat intelligence sharing
+    description: Establish cross-registry threat intelligence sharing between major
+      skill registries.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+  - id: owasp-ast10-act-088
+    name: Build platform-agnostic skill scanners
+    description: Build platform-agnostic skill scanners that evaluate the content layer
+      independently of the runtime.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+  - id: owasp-ast10-act-089
+    name: Normalize security metadata fields across platform formats
+    description:
+      Normalize risk_tier, permissions, and signature fields across all platform-specific
+      skill formats.
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
   - id: credo-act-control-001
     name: Establish AI system access controls
     description: Implement comprehensive access management including role-based access
@@ -33841,6 +36549,17 @@ aievalresults:
     evidence: https://huggingface.co/ibm-granite/granite-4.1-30b
     isResultOf: ai_eval_tulu3_safety
 aimodelfamilies:
+  - id: shieldgemma
+    description: "ShieldGemma is a series of safety content moderation models built
+      upon Gemma 2 that target four harm categories (sexually explicit, dangerous content,
+      hate, and harassment). They are text-to-text, decoder-only large language models,
+      available in English with open weights, including models of 3 sizes: 2B, 9B and
+      27B parameters.
+
+      "
+    url: https://gemma.ai/models/shieldgemma/model-card-v1/
+    hasDocumentation:
+      - shieldgemma-paper
   - id: ibm-granite
     name: IBM Granite
     description:
