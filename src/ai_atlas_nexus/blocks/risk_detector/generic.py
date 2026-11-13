@@ -112,7 +112,8 @@ class GenericRiskDetector(RiskDetector):
     ) -> DetectionRun[Risk]:
         prompts = [
             self.prompt_builder(
-                prompt_template=RISK_IDENTIFICATION_BATCH_TEMPLATE
+                prompt_template=self.prompt_template
+                or RISK_IDENTIFICATION_BATCH_TEMPLATE
             ).build(
                 cot_examples=self._examples,
                 usecase=usecase,
@@ -166,8 +167,8 @@ class GenericRiskDetector(RiskDetector):
         all_sources = []
         all_responses = []
 
-        prompt_template = RISK_IDENTIFICATION_PER_RISK_TEMPLATE
-        if self.use_dspy_prompt:
+        prompt_template = self.prompt_template or RISK_IDENTIFICATION_PER_RISK_TEMPLATE
+        if self.use_dspy_prompt and not self.prompt_template:
             for (
                 model_ids,
                 template,

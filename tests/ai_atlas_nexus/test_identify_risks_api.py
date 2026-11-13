@@ -7,10 +7,12 @@ from the `return_metadata` / `explanation_type` flags, and the shape of the dict
 `identify_risks_and_actions_from_usecases` returns.
 """
 
+import jinja2
 import pytest
 
 from ai_atlas_nexus import AIAtlasNexus
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
+from ai_atlas_nexus.blocks.prompt_builder import ZeroShotPromptBuilder
 from ai_atlas_nexus.blocks.risk_detector import DetectionResult, RiskWithExplanation
 from ai_atlas_nexus.metadata_base import ExplanationType
 from tests.ai_atlas_nexus.stub_inference import StubInferenceEngine, StubResponse
@@ -249,3 +251,110 @@ class TestIdentifyRisksAndActions:
         entry = result["per_usecase"][0]
         assert isinstance(entry["risks"][0], RiskWithExplanation)
         assert entry["summary"]["risk_ids"] == [entry["risks"][0].risk.id]
+
+
+class TestCustomPromptTemplate:
+    """`prompt_template` replaces the built-in prompt."""
+
+    BATCH = "CUSTOM BATCH {{ usecase }} | {{ risks }} | {{ max_risk }}"
+    PER_RISK = "CUSTOM PER-RISK {{ usecase }} | {{ risk_name }}"
+
+    def test_batch_prompt_is_rendered(self, nexus, risk_names):
+        engine = _engine(StubResponse([risk_names[0]]), StubResponse([risk_names[1]]))
+
+        result = _identify(
+            nexus, engine, ["first", "second"], prompt_template=self.BATCH, max_risk=3
+        )
+
+        prompts = engine.calls[0].prompts
+        assert prompts[0].startswith("CUSTOM BATCH first | ")
+        assert prompts[1].startswith("CUSTOM BATCH second | ")
+        assert prompts[0].endswith(" | 3")
+        assert risk_names[0] in prompts[0]
+        assert result[0][0].name == risk_names[0]
+        assert result[1][0].name == risk_names[1]
+
+    def test_per_risk_prompt_is_rendered(self, nexus):
+        n = len(nexus.get_all("risks", taxonomy=TAXONOMY))
+        engine = StubInferenceEngine(
+            [StubResponse({"answer": "No"})] * n,
+        )
+
+        _identify(
+            nexus,
+            engine,
+            ["only"],
+            prompt_template=self.PER_RISK,
+            batch_inference=False,
+        )
+
+        prompts = engine.calls[0].prompts
+        assert len(prompts) == n
+        assert all(p.startswith("CUSTOM PER-RISK only | ") for p in prompts)
+
+    def test_default_prompt_is_unchanged(self, nexus, risk_names):
+        default_engine = _engine(StubResponse([risk_names[0]]))
+        _identify(nexus, default_engine, ["x"])
+        assert "CUSTOM" not in default_engine.calls[0].prompts[0]
+        assert "Usecase: x" in default_engine.calls[0].prompts[0]
+
+    def test_overrides_dspy_prompt(self, nexus):
+        n = len(nexus.get_all("risks", taxonomy=TAXONOMY))
+        engine = StubInferenceEngine(
+            [StubResponse({"answer": "No"})] * n, model_name_or_path="granite3.3:8b"
+        )
+
+        _identify(
+            nexus,
+            engine,
+            ["only"],
+            prompt_template=self.PER_RISK,
+            use_dspy_prompt=True,
+        )
+
+        assert all(p.startswith("CUSTOM PER-RISK") for p in engine.calls[0].prompts)
+
+    def test_works_with_metadata_and_explanation(self, nexus, risk_names):
+        engine = _engine(StubResponse([risk_names[0]]))
+
+        result = _identify(
+            nexus,
+            engine,
+            ["x"],
+            prompt_template=self.BATCH,
+            return_metadata=True,
+            explanation_type=ExplanationType.DESCRIPTION,
+        )
+
+        assert isinstance(result, DetectionResult)
+        assert result.data[0][0].risk.name == risk_names[0]
+        assert engine.calls[0].prompts[0].startswith("CUSTOM BATCH x")
+
+    def test_missing_usecase_variable_raises(self, nexus, risk_names):
+        engine = _engine(StubResponse([risk_names[0]]))
+
+        with pytest.raises(Exception, match="usecase"):
+            _identify(nexus, engine, ["x"], prompt_template="no variables here")
+
+    def test_invalid_jinja_raises(self, nexus, risk_names):
+        engine = _engine(StubResponse([risk_names[0]]))
+
+        with pytest.raises(Exception, match="Jinja"):
+            _identify(nexus, engine, ["x"], prompt_template="{{ usecase ")
+
+    def test_actions_variant_passes_prompt_through(self, nexus, risk_names):
+        engine = _engine(StubResponse([risk_names[0]]))
+
+        nexus.identify_risks_and_actions_from_usecases(
+            usecases=["x"],
+            inference_engine=engine,
+            taxonomy=TAXONOMY,
+            prompt_template=self.BATCH,
+        )
+
+        assert engine.calls[0].prompts[0].startswith("CUSTOM BATCH x")
+
+    def test_prompt_template_sandboxed(self):
+        b = ZeroShotPromptBuilder("{{ usecase }} {{ ''.__class__.__mro__ }}")
+        with pytest.raises(Exception, match="access to attribute '__class__' of 'str' object is unsafe."):
+            b.build(usecase="x")

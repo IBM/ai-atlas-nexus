@@ -703,6 +703,7 @@ class AIAtlasNexus:
         use_dspy_prompt: bool = False,
         return_metadata: bool = False,
         explanation_type: ExplanationType = ExplanationType.NONE,
+        prompt_template: Optional[str] = None,
     ) -> Union[
         List[List[Risk]],
         List[List[RiskWithExplanation]],
@@ -736,6 +737,15 @@ class AIAtlasNexus:
                 These are detailed in docs/usage/risk_explanations.md
                 Note REASONING needs an engine that reports the model's thinking, which
                 today is Ollama only; elsewhere the explanation comes back None.
+            prompt_template (str, optional):
+                A custom Jinja prompt template that replaces the built-in risk identification prompt.
+                It must contain `{{ usecase }}`. It takes precedence over `use_dspy_prompt`.
+                The variables available depend on the mode:
+                - batch (default): `usecase`, `risks` (JSON list of category/description), `max_risk`, `cot_examples`
+                - per-risk (`batch_inference=False`): `usecase`, `risk_name`, `risk_description`, `cot_examples`
+                The prompt must still ask for the output the parser expects: a list of risk names in batch mode,
+                or Yes/No in per-risk mode. With `explanation_type=SELF_EXPLANATION` the batch prompt
+                must instead request JSON of the form `{"risks": [{"risk_name": ..., "explanation": ...}]}`.
         Returns:
             If return_metadata=False: List[List[Risk]] or List[List[RiskWithExplanation]] depending on explanation_type
                 Result containing a list of risks (optionally with explanations)
@@ -774,6 +784,12 @@ class AIAtlasNexus:
             int,
             allow_none=True,
             max_risk=max_risk,
+        )
+        type_check(
+            "<RAN5C1A7D2F3>",
+            str,
+            allow_none=True,
+            prompt_template=prompt_template,
         )
         value_check(
             "<RAN4717CF18E>",
@@ -854,6 +870,7 @@ class AIAtlasNexus:
             max_risk=max_risk,
             batch_inference=batch_inference,
             use_dspy_prompt=use_dspy_prompt,
+            prompt_template=prompt_template,
         )
 
         # opt-in features use a decorator around the detector
@@ -877,6 +894,7 @@ class AIAtlasNexus:
         use_dspy_prompt: bool = False,
         return_metadata: bool = False,
         explanation_type: ExplanationType = ExplanationType.NONE,
+        prompt_template: Optional[str] = None,
     ) -> dict:
         """Identify potential risks and actions from usecase descriptions
 
@@ -909,6 +927,9 @@ class AIAtlasNexus:
                 See docs/usage/risk_explanations.md. Note REASONING needs an engine that
                 reports the model's thinking, which today is Ollama only; elsewhere the
                 explanation comes back None.
+            prompt_template (str, optional):
+                A custom Jinja prompt template for risk identification. See
+                `identify_risks_from_usecases` for the available variables.
         Returns:
             dict:
                 `usecases`, `model`, `taxonomy`, and `per_usecase`: one entry per
@@ -962,6 +983,7 @@ class AIAtlasNexus:
             use_dspy_prompt,
             return_metadata=return_metadata,
             explanation_type=explanation_type,
+            prompt_template=prompt_template,
         )
 
         from ai_atlas_nexus.blocks.risk_detector.results import (
