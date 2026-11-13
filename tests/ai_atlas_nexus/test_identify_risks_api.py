@@ -7,10 +7,12 @@ from the `return_metadata` / `explanation_type` flags, and the shape of the dict
 `identify_risks_and_actions_from_usecases` returns.
 """
 
+import jinja2
 import pytest
 
 from ai_atlas_nexus import AIAtlasNexus
 from ai_atlas_nexus.ai_risk_ontology.datamodel.ai_risk_ontology import Risk
+from ai_atlas_nexus.blocks.prompt_builder import ZeroShotPromptBuilder
 from ai_atlas_nexus.blocks.risk_detector import DetectionResult, RiskWithExplanation
 from ai_atlas_nexus.metadata_base import ExplanationType
 from tests.ai_atlas_nexus.stub_inference import StubInferenceEngine, StubResponse
@@ -351,3 +353,8 @@ class TestCustomPromptTemplate:
         )
 
         assert engine.calls[0].prompts[0].startswith("CUSTOM BATCH x")
+
+    def test_prompt_template_sandboxed(self):
+        b = ZeroShotPromptBuilder("{{ usecase }} {{ ''.__class__.__mro__ }}")
+        with pytest.raises(Exception, match="access to attribute '__class__' of 'str' object is unsafe."):
+            b.build(usecase="x")
