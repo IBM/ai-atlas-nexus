@@ -1,0 +1,27 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies (fails if uv.lock is out of date)
+        run: uv sync --locked
+
+      - name: Run tests
+        run: uv run --locked --with pytest pytest -q tests
