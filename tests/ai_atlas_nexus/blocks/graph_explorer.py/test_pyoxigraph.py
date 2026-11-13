@@ -52,7 +52,7 @@ class TestPyoxigraphExplorerBasics:
 
     def test_get_all_risks_count(self, ox_explorer, nexus):
         """Test that risk count matches library."""
-        ox_risks = ox_explorer.get_all("entries")
+        ox_risks = ox_explorer.get_all("Risks")
         lib_risks = nexus.get_all_risks()
         assert len(ox_risks) == len(lib_risks)
 
@@ -95,10 +95,12 @@ class TestPyoxigraphExplorerClassNameResolution:
     """Test _check_subclasses logic for flexible class name resolution."""
 
     def test_collection_key_entries(self, ox_explorer):
-        """Test querying by collection key 'entries'."""
+        """A collection key returns everything in it, including mixed subtypes."""
         results = ox_explorer.get_all("entries")
-        assert len(results) > 0
-        assert all(type(item).__name__ == "Risk" for item in results)
+        types = {type(item).__name__ for item in results}
+        assert "Risk" in types
+        assert len(types) > 1
+        assert len(results) == len(ox_explorer._data.entries)
 
     def test_singular_class_name_risk(self, ox_explorer):
         """Test querying by singular class name 'Risk'."""
@@ -118,7 +120,29 @@ class TestPyoxigraphExplorerClassNameResolution:
         by_singular = ox_explorer.get_all("Risk")
         by_plural = ox_explorer.get_all("Risks")
 
-        assert len(by_key) == len(by_singular) == len(by_plural)
+        assert len(by_singular) == len(by_plural)
+        # `entries` also may contain non-Risk entries (Principle, Capability, ...)
+        assert {r.id for r in by_singular} < {r.id for r in by_key}
+
+    def test_class_name_includes_subclasses(self, ox_explorer):
+        """A base class name returns instances of its subclasses too."""
+        results = ox_explorer.get_all("Entry")
+        types = {type(item).__name__ for item in results}
+        assert {"Risk", "Principle"} <= types
+
+    def test_class_name_respects_filters(self, ox_explorer):
+        """Class-name queries apply taxonomy filters like collection keys do."""
+        by_class = ox_explorer.get_all("Risk", taxonomy="ibm-risk-atlas")
+        by_key = ox_explorer.get_all("entries", taxonomy="ibm-risk-atlas")
+        assert 0 < len(by_class) < len(ox_explorer.get_all("Risk"))
+        assert {r.id for r in by_class} == {r.id for r in by_key}
+
+    def test_mixed_collections_match_atlas(self, ox_explorer, atlas_explorer):
+        """Mixed-type collections return the same items as AtlasExplorer."""
+        for key in ["entries", "groups", "taxonomies", "controls", "rules"]:
+            ox_ids = {i.id for i in ox_explorer.get_all(key)}
+            atlas_ids = {i.id for i in atlas_explorer.get_all(key)}
+            assert ox_ids == atlas_ids, key
 
     def test_collection_key_actions(self, ox_explorer):
         """Test querying actions by collection key."""
@@ -144,7 +168,10 @@ class TestPyoxigraphExplorerClassNameResolution:
         by_singular = ox_explorer.get_all("Action")
         by_plural = ox_explorer.get_all("Actions")
 
-        assert len(by_key) == len(by_singular) == len(by_plural)
+        assert len(by_singular) == len(by_plural)
+        # Some Actions are stored in the `controls` collection, so the class
+        # query is a superset of the `actions` collection.
+        assert {a.id for a in by_key} <= {a.id for a in by_singular}
 
 
 class TestPyoxigraphExplorerFiltering:
@@ -268,7 +295,7 @@ class TestPyoxigraphExplorerComparison:
 
     def test_get_all_risks_matches_library(self, ox_explorer, nexus):
         """Test that PyoxigraphExplorer results match library method."""
-        ox_risks = ox_explorer.get_all("entries")
+        ox_risks = ox_explorer.get_all("Risks")
         lib_risks = nexus.get_all_risks()
 
         # Should have same count
