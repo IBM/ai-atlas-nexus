@@ -206,6 +206,63 @@ class PyoxigraphExplorer(ExplorerBase):
                         return item
         return None
 
+    @staticmethod
+    def _datamodel_classes():
+        """Map lower-cased class name -> pydantic class for the ontology datamodel."""
+        from ai_atlas_nexus.ai_risk_ontology.datamodel import ai_risk_ontology
+
+        return {
+            name.lower(): cls
+            for name, cls in vars(ai_risk_ontology).items()
+            if isinstance(cls, type) and issubclass(cls, BaseModel)
+        }
+
+    @staticmethod
+    def _with_subclasses(cls):
+        """Return the names of `cls` and all of its descendants."""
+        names, stack = set(), [cls]
+        while stack:
+            current = stack.pop()
+            if current.__name__ not in names:
+                names.add(current.__name__)
+                stack.extend(current.__subclasses__())
+        return names
+
+    def _resolve_type_names(self, name):
+        """
+        Resolve a collection key or class name to the rdf:type class names to query.
+        - Note that a Container collection key (e.g. "entries") may contain mixed subtypes.
+        - A class name, singular or plural would denote that class and all of its subclasses (e.g. "Entry" covers Risk, Principle, ...).
+
+        Returns:
+            tuple[list[str], set | None]: Sorted class names (empty if the name is
+            not recognised) and, for a collection key, the ids of the items in that
+            collection so results can be limited to it (None for a class name).
+        """
+        def from_collection(field):
+            items = getattr(self._data, field, None) or []
+            items = [i for i in items if isinstance(i, BaseModel)]
+            return (
+                sorted({type(i).__name__ for i in items}),
+                {i.id for i in items if getattr(i, "id", None)},
+            )
+
+        if name in self._data.model_fields_set:
+            return from_collection(name)
+
+        classes = self._datamodel_classes()
+        for candidate in (name, ie.singular_noun(name)):
+            cls = classes.get(candidate.lower()) if candidate else None
+            if cls is not None:
+                return sorted(self._with_subclasses(cls)), None
+
+        normalised = name.lower().replace("_", "")
+        for field in self._data.model_fields_set:
+            if field.lower().replace("_", "") == normalised:
+                return from_collection(field)
+
+        return [], None
+
     def get_all(
         self,
         class_name: Optional[str] = None,
@@ -242,33 +299,12 @@ class PyoxigraphExplorer(ExplorerBase):
         seen_ids = set()
 
         for key in class_names:
-            # Resolve collection key from model
-            if key not in self._data.model_fields_set:
-                for k in self._data.model_fields_set:
-                    if k.lower().replace("_", "") == key.lower().replace(
-                        "_", ""
-                    ):
-                        key = k
-                        break
-
-            # Derive class name from self._data
-            items = getattr(self._data, key, None) or []
-            class_name_camel = type(items[0]).__name__ if items else None
-
-            if not class_name_camel:
-                # Try to find by class name (e.g., "Risk" or "Action") via _check_subclasses
-                subclass_results = self._check_subclasses([], key)
-                for item in subclass_results:
-                    item_id = getattr(item, "id", None)
-                    if item_id and item_id not in seen_ids:
-                        result.append(item)
-                        seen_ids.add(item_id)
-                    elif not item_id:
-                        result.append(item)
+            type_names, collection_ids = self._resolve_type_names(key)
+            if not type_names:
                 continue
 
             query = self._qb.get_all_instances_of_class(
-                class_name_camel, taxonomy, vocabulary, document
+                type_names, taxonomy, vocabulary, document
             )
 
             for solution in self._store.query(query):
@@ -277,6 +313,12 @@ class PyoxigraphExplorer(ExplorerBase):
                     obj = self._uri_to_pydantic(node)
                     if obj:
                         item_id = getattr(obj, "id", None)
+                        if (
+                            collection_ids is not None
+                            and item_id not in collection_ids
+                        ):
+                            # Same class stored in a different collection.
+                            continue
                         if item_id and item_id not in seen_ids:
                             result.append(obj)
                             seen_ids.add(item_id)
