@@ -64,8 +64,13 @@ def load_yamls_to_container(base_dir):
     for yaml_dir in [system_data_path, base_dir]:
         # Include YAML files from the user defined `base_dir` if exist.
         if yaml_dir is not None:
+            # Sort for a deterministic load order
             master_yaml_files.extend(
-                glob.glob(os.path.join(yaml_dir, "**", "*.yaml"), recursive=True)
+                sorted(
+                    glob.glob(
+                        os.path.join(yaml_dir, "**", "*.yaml"), recursive=True
+                    )
+                )
             )
 
     yml_items_result = {}
