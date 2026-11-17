@@ -27,7 +27,7 @@ default_prefix: nexus
 classes:
   CapabilityTaxonomy:
     is_a: Taxonomy
-    class_uri: skos:ConceptScheme
+    class_uri: nexus:CapabilityTaxonomy
     description: A taxonomy of AI capabilities describing the abilities of AI systems.
 
   CapabilityConcept:
@@ -128,7 +128,7 @@ slots:
       navigation from capabilities to AI systems. This enables queries like "which AI systems have this capability?"
     domain: Capability
     range: BaseAi
-    slot_uri: tech:hasCapability
+    slot_uri: nexus:possessedByAi
     multivalued: true
     inlined: false
     inverse: hasCapability

@@ -61,7 +61,9 @@ classes:
       A capability that can be invoked through a well-defined API that is reasonably stable and independent of how the LLM
       intrinsic itself is implemented.
     is_a: Entry
-    class_uri: ai:Capability
+    class_uri: nexus:LLMIntrinsic
+    broad_mappings:
+      - ai:Capability
     slot_usage:
       implementsCapability:
         domain: LLMIntrinsic

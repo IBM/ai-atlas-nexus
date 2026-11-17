@@ -32,7 +32,7 @@ def test_valid_jurisdictions(code):
     assert Documentation(id="x", hasJurisdiction=[code]).hasJurisdiction == [code]
 
 
-@pytest.mark.parametrize("code", ["XX", "us", "dpv-loc:EU", "https://w3id.org/dpv/loc#EU", "California"])
+@pytest.mark.parametrize("code", ["XX", "us", "dpv_loc:EU", "https://w3id.org/dpv/loc#EU", "California"])
 def test_invalid_jurisdictions(code):
     with pytest.raises(pydantic.ValidationError):
         Documentation(id="x", hasJurisdiction=[code])
@@ -57,7 +57,7 @@ def test_enum_values_mean_dpv_loc():
     for enum_name in ("Jurisdiction", "SupraNationalJurisdiction", "SubnationalJurisdiction"):
         for code, value in sv.get_enum(enum_name).permissible_values.items():
             if code != "International":
-                assert value.meaning == f"dpv-loc:{code}", (enum_name, code)
+                assert value.meaning == f"dpv_loc:{code}", (enum_name, code)
 
 
 def test_member_names_follow_codes():
@@ -69,10 +69,10 @@ def test_build_schema():
     graph = rdflib.Graph().parse(data=_LOC_SAMPLE, format="turtle")
     enums = build_schema(graph)["enums"]
     assert enums["Jurisdiction"]["permissible_values"] == {
-        "US": {"meaning": "dpv-loc:US", "description": "United States of America"}
+        "US": {"meaning": "dpv_loc:US", "description": "United States of America"}
     }
     assert enums["SubnationalJurisdiction"]["permissible_values"] == {
-        "US-CA": {"meaning": "dpv-loc:US-CA", "description": "California"}
+        "US-CA": {"meaning": "dpv_loc:US-CA", "description": "California"}
     }
     assert set(enums["SupraNationalJurisdiction"]["permissible_values"]) == {"EU", "International"}
 

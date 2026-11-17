@@ -118,14 +118,14 @@ class TestRootSchemaPrefixes:
         "prefix,expected_uri",
         [
             ("dpv", "https://w3id.org/dpv#"),
-            ("dpv-loc", "https://w3id.org/dpv/loc#"),
-            ("dpv-risk", "https://w3id.org/dpv/risk#"),
+            ("dpv_loc", "https://w3id.org/dpv/loc#"),
+            ("dpv_risk", "https://w3id.org/dpv/risk#"),
             ("ai", "https://w3id.org/dpv/ai#"),
             ("tech", "https://w3id.org/dpv/tech#"),
             ("dqv", "https://www.w3.org/TR/vocab-dqv/"),
             ("skos", "http://www.w3.org/2004/02/skos/core#"),
             ("adms", "http://www.w3.org/ns/adms#"),
-            ("adms-status", "http://purl.org/adms/status/"),
+            ("adms_status", "http://purl.org/adms/status/"),
             ("pso", "http://purl.org/spar/pso/"),
         ],
     )
