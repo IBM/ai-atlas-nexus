@@ -15,6 +15,19 @@ dictionaries containing key/value pairs and the CoT examples.
 from typing import Any, List
 
 from jinja2 import Template
+from jinja2.sandbox import ImmutableSandboxedEnvironment
+
+
+_SANDBOX_ENV = ImmutableSandboxedEnvironment()
+
+
+def compile_template(prompt_template: str) -> Template:
+    """Compile a prompt template in the sandboxed environment.
+
+    Use this everywhere a template is parsed or rendered (builders and
+    validation) so behaviour is identical.
+    """
+    return _SANDBOX_ENV.from_string(prompt_template)
 
 
 class ZeroShotPromptBuilder:
@@ -37,7 +50,7 @@ class ZeroShotPromptBuilder:
             Prompt str: A formatted instruction prompt for the language model.
         """
 
-        return Template(self.prompt_template).render(**prompt_data)
+        return compile_template(self.prompt_template).render(**prompt_data)
 
 
 class FewShotPromptBuilder:
@@ -73,6 +86,6 @@ class FewShotPromptBuilder:
             len(example) == len(cot_examples[0]) for example in cot_examples
         ), f"All few-shot cot_examples must be of the same length."
 
-        return Template(self.prompt_template).render(
+        return compile_template(self.prompt_template).render(
             cot_examples=cot_examples, **prompt_data
         )
