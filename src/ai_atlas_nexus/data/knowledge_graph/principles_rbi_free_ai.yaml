@@ -1,0 +1,96 @@
+documents:
+  - id: doc-rbi-free-ai-committee-report
+    name: FREE-AI Committee Report - Framework for Responsible and Ethical Enablement of Artificial Intelligence
+    description: >-
+      Report of the committee constituted by the Reserve Bank of India to develop a Framework for Responsible and
+      Ethical Enablement of Artificial Intelligence (FREE-AI) in the financial sector. It sets out 7 Sutras, a set of
+      foundational principles to guide the development, deployment, and governance of AI in the financial sector, and
+      26 Recommendations for AI adoption in the financial sector. It is a committee report; its recommendations are
+      not binding RBI directions.
+    author: Reserve Bank of India, FREE-AI Committee
+    url: https://www.rbi.org.in/Scripts/FS_Publications.aspx?id=1306
+    dateCreated: 2025-08-13
+    hasJurisdiction:
+      - IN
+
+entries:
+  - id: principle-in-rbi-free-ai-trust-is-the-foundation
+    name: Trust is the Foundation (Sutra 1)
+    type: Principle
+    description: >-
+      Trust is non-negotiable and should remain uncompromised.
+
+      In a sector that safeguards people's money, there can be no compromise on trust. AI systems should enhance and
+      not erode public trust in the financial system. When consciously embedded into the essence of AI systems and not
+      treated as a by-product of compliance, trust can be a powerful catalyst for innovation. It is essential to build
+      trust in AI systems and build trust through AI systems.
+    hasDocumentation:
+      - doc-rbi-free-ai-committee-report
+  - id: principle-in-rbi-free-ai-people-first
+    name: People First (Sutra 2)
+    type: Principle
+    description: >-
+      AI should augment human decision-making but defer to human judgment and citizen interest.
+
+      While AI can help to improve efficiency and outcomes, final authority should rest with humans, who should be able
+      to override AI, especially for societal benefit and human safety. Citizens should be made aware of AI-generated
+      content and be informed when interacting with AI systems. Keeping human safety and interest at the core makes AI
+      trusted.
+    hasDocumentation:
+      - doc-rbi-free-ai-committee-report
+  - id: principle-in-rbi-free-ai-innovation-over-restraint
+    name: Innovation over Restraint (Sutra 3)
+    type: Principle
+    description: >-
+      Foster responsible innovation with purpose.
+
+      AI should serve as a catalyst for augmentation and impactful innovation. Responsible AI innovation, that is
+      aligned with societal values and aims to maximise overall benefit while reducing potential harm, should be
+      actively encouraged. All other things being equal, responsible innovation should be prioritised over cautionary
+      restraint.
+    hasDocumentation:
+      - doc-rbi-free-ai-committee-report
+  - id: principle-in-rbi-free-ai-fairness-and-equity
+    name: Fairness and Equity (Sutra 4)
+    type: Principle
+    description: >-
+      AI outcomes should be fair and non-discriminatory.
+
+      AI systems should be designed and tested to ensure that outcomes are unbiased and do not discriminate against
+      individuals or groups. While AI should uphold fairness, it should not accentuate exclusion and inequity. AI should
+      be leveraged to address financial inclusion and access to financial services for all.
+    hasDocumentation:
+      - doc-rbi-free-ai-committee-report
+  - id: principle-in-rbi-free-ai-accountability
+    name: Accountability (Sutra 5)
+    type: Principle
+    description: >-
+      Accountability rests with the entities deploying AI.
+
+      Entities that deploy AI should be responsible and remain fully accountable for the decisions and outcomes that
+      arise from the use of these systems, regardless of their level of automation or autonomous functioning.
+      Accountability should be clearly assigned. Accountability cannot be delegated to the model and underlying
+      algorithm.
+    hasDocumentation:
+      - doc-rbi-free-ai-committee-report
+  - id: principle-in-rbi-free-ai-understandable-by-design
+    name: Understandable by Design (Sutra 6)
+    type: Principle
+    description: >-
+      Ensure explainability for trust.
+
+      Understandability is fundamental to building trust and should be a core design feature, not an afterthought. AI
+      systems must have disclosures, and the outcomes should be understood by the entities deploying them.
+    hasDocumentation:
+      - doc-rbi-free-ai-committee-report
+  - id: principle-in-rbi-free-ai-safety-resilience-and-sustainability
+    name: Safety, Resilience, and Sustainability (Sutra 7)
+    type: Principle
+    description: >-
+      AI systems should be secure, resilient and energy efficient.
+
+      AI systems should operate safely and be resilient to physical, infrastructural, and cyber risks. These systems
+      should have capabilities to detect anomalies and provide early warnings to limit harmful outcomes. AI systems
+      should prioritise energy efficiency and frugality to enable sustainable adoption.
+    hasDocumentation:
+      - doc-rbi-free-ai-committee-report
