@@ -5,7 +5,7 @@
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2025-07-08'
 # mapping_set_description: Additional internal mapping for IBM AI Risk Atlas child risks
-# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/ibm2ibm.tsv
+# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/ibm2ibm.sssom.tsv
 subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	author_label	mapping_date	comment
 ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-direct-instructions-attack	Direct instructions attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas
 ibm-risk-atlas:atlas-prompt-injection	Prompt injection attack	skos:narrowMatch	ibm-risk-atlas:atlas-indirect-instructions-attack	Indirect instructions attack	semapv:ManualMappingCuration	ambrish.rawat@ie.ibm.com	2025-07-08	Represent prompt injection relationships in the IBM AI risk atlas

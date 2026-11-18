@@ -3,7 +3,7 @@
 #   ibm-risk-atlas: https://www.ibm.com/docs/en/watsonx/saas?topic=
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
-#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aiuc1_to_ibm_from_tsv_data.tsv
+#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aiuc1_to_ibm_from_tsv_data.sssom.tsv
 #mapping_set_description: Mapping from AIUC-1 Framework to IBM Risk Atlas
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: '2026-02-12'

@@ -160,7 +160,7 @@ of `Recommendation` in the schema, but it isn't defined in DPV 2.1.
 AEF-1 is mapped to the EU General-Purpose AI Code of Practice (Safety and Security Chapter, final version of
 10 July 2025) and to California SB 53. The provisions are `Documentation` entries in `eu_gpai_code_of_practice_data.yaml`
 and `ca_sb_53_data.yaml`. The mappings are an SSSOM table,
-`src/ai_atlas_nexus/data/mappings/aef1_to_legal_provisions.tsv`, lifted into
+`src/ai_atlas_nexus/data/mappings/aef1_to_legal_provisions.sssom.tsv`, lifted into
 `knowledge_graph/mappings/aef1_to_legal_provisions_from_tsv_data.yaml` as `related_mappings` (`skos:relatedMatch`) in both
 directions.
 

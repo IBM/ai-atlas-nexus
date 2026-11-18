@@ -3,7 +3,7 @@
 #   ibm-risk-atlas: https://www.ibm.com/docs/en/watsonx/saas?topic=
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
-# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_to_ibm_risk_atlas.tsv
+# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_to_ibm_risk_atlas.sssom.tsv
 # mapping_set_description: Candidate related mappings from OWASP Agentic Skills Top 10 v1.0 to IBM AI Risk Atlas for maintainer review
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2026-08-23'

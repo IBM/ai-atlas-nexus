@@ -42,6 +42,12 @@ def load_curated_mappings(
     from ai_atlas_nexus.toolkit.mapping_utils import drop_no_match_rows
 
     path = _MAPPINGS_DIR / filename
+    if not path.exists():
+        if filename.endswith(".sssom.tsv"):
+            alt = filename.removesuffix(".sssom.tsv") + ".tsv"
+        else:
+            alt = filename.removesuffix(".tsv") + ".sssom.tsv"
+        path = _MAPPINGS_DIR / alt
     msdf = drop_no_match_rows(parse_sssom_table(file_path=str(path)))
     mapping_set = msdf.to_mapping_set()
     mappings = [

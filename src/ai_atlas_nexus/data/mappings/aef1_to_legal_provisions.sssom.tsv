@@ -4,7 +4,7 @@
 #   ca-sb53: https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53#
 #   skos: http://www.w3.org/2004/02/skos/core#
 #   semapv: https://w3id.org/semapv/vocab/
-#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aef1_to_legal_provisions.tsv
+#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aef1_to_legal_provisions.sssom.tsv
 #mapping_set_description: Mapping from AEF-1 Minimum Operating Conditions to the EU GPAI Code of Practice (Safety and Security Chapter) and California SB 53
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: '2026-09-28'

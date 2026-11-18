@@ -204,10 +204,10 @@ if __name__ == "__main__":
     mapping_files = [
         file_name
         for file_name in listdir(MAP_DIR)
-        if (file_name.endswith(".md") == False) and isfile(join(MAP_DIR, file_name))
+        if file_name.endswith(".tsv") and isfile(join(MAP_DIR, file_name))
     ]
     for file_name in mapping_files:
-        output_file = DATA_DIR + Path(file_name).stem + "_from_tsv_data.yaml"
+        output_file = DATA_DIR + Path(file_name).stem.removesuffix(".sssom") + "_from_tsv_data.yaml"
         rs = process_mapping_from_tsv_to_entity_mapping(file_name)
         logger.info(f"Processed file: %s, %s valid entries", file_name, len(rs))
         outputs = process_mappings_to_entities(rs)

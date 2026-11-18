@@ -3,7 +3,7 @@
 #   owasp-llm-2.0: https://genai.owasp.org/llmrisk/
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
-# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_to_owasp_llm.tsv
+# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_to_owasp_llm.sssom.tsv
 # mapping_set_description: OWASP Agentic Skills Top 10 to OWASP Top 10 for LLM Applications 2025, transcribed from the OWASP Mapping block of each AST section. Where the whitepaper's cited LLM number and its parenthetical label disagree, the label is followed and the conflict is recorded in the row comment.
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2026-08-24'

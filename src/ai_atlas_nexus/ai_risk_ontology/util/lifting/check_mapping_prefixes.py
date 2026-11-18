@@ -10,8 +10,8 @@ checks a prefix that contains a hyphen (mapping-commons/sssom-py#673, fixed by
 address (mapping-commons/sssom-py#675). This check covers both until a sssom
 release does.
 
-Usage: python check_mapping_prefixes.py [FILE.tsv ...]
-With no arguments it checks every TSV in src/ai_atlas_nexus/data/mappings.
+Usage: python check_mapping_prefixes.py [FILE.sssom.tsv ...]
+With no arguments it checks every .tsv in src/ai_atlas_nexus/data/mappings.
 """
 
 # Standard Library

@@ -3,7 +3,7 @@
 #   csa-maestro: https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro
 #   semapv: https://w3id.org/semapv/vocab/
 #   nexus: https://w3id.org/ai-atlas-nexus/
-# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_to_csa_maestro.tsv
+# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_to_csa_maestro.sssom.tsv
 # mapping_set_description: OWASP Agentic Skills Top 10 risks categorized by CSA MAESTRO architectural layer, transcribed from the CSA MAESTRO Framework Mapping table in each AST section. Each comment carries that table's own AST mapping cell.
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2026-08-24'

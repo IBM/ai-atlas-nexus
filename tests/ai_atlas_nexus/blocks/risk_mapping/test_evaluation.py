@@ -105,7 +105,7 @@ class TestLoadCuratedMappings:
     def test_loads_ibm_mit_manual_pairs(self):
         # exact row count isn't asserted, the file can grow as more mappings
         # are curated; what must hold is that every row is manual and complete
-        mappings = load_curated_mappings("mit-ai-risk-repository_ibm-risk-atlas.tsv")
+        mappings = load_curated_mappings("mit-ai-risk-repository_ibm-risk-atlas.sssom.tsv")
         assert mappings
         assert all(
             m.mapping_justification == "semapv:ManualMappingCuration" for m in mappings
@@ -115,7 +115,7 @@ class TestLoadCuratedMappings:
     def test_default_keeps_only_manual_curation(self):
         # this file mixes ManualMappingCuration with SemanticSimilarityThresholdMatching,
         # so this proves the filter both keeps manual rows and drops non-manual ones
-        mappings = load_curated_mappings("aiuc1_to_ibm_from_tsv_data.tsv")
+        mappings = load_curated_mappings("aiuc1_to_ibm_from_tsv_data.sssom.tsv")
         assert mappings
         assert all(
             m.mapping_justification == "semapv:ManualMappingCuration" for m in mappings
@@ -124,7 +124,7 @@ class TestLoadCuratedMappings:
     def test_drops_no_match_rows(self):
         # this file records "no match" both ways: a negated mapping to the
         # candidate it rejected, and a mapping to sssom:NoTermFound
-        mappings = load_curated_mappings("ibm2owasp.tsv")
+        mappings = load_curated_mappings("ibm2owasp.sssom.tsv")
         assert mappings  # file has manual rows
         assert all(m.predicate_modifier is None for m in mappings)
         assert all(m.object_id != "sssom:NoTermFound" for m in mappings)
@@ -134,7 +134,7 @@ class TestLoadCuratedMappings:
         # must be dropped when risk_ids only lists the real risk on both sides
         risk_ids = {"atlas-attribute-inference-attack", "mit-ai-risk-subdomain-2.2"}
         mappings = load_curated_mappings(
-            "mit-ai-risk-repository_ibm-risk-atlas.tsv", risk_ids=risk_ids
+            "mit-ai-risk-repository_ibm-risk-atlas.sssom.tsv", risk_ids=risk_ids
         )
         assert mappings
         assert all(
