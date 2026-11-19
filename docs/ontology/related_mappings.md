@@ -104,6 +104,7 @@ URI: [skos:relatedMatch](http://www.w3.org/2004/02/skos/core#relatedMatch)
 | [ThirdPartyEvaluationEngagement](ThirdPartyEvaluationEngagement.md) | A single engagement in which an independent third-party evaluator evaluates o... | no            |
 | [Question](Question.md)                                             | An evaluation where a question has to be answered                                | no            |
 | [Questionnaire](Questionnaire.md)                                   | A questionnaire groups questions                                                 | no            |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)     | A taxonomy of Ai Evaluation Standards                                            | no            |
 | [Adapter](Adapter.md)                                               | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [LLMIntrinsic](LLMIntrinsic.md)                                     | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 | [AiOffice](AiOffice.md)                                             | The EU AI Office (https://digital-strategy                                       | no            |

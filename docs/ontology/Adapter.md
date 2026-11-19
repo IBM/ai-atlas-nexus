@@ -386,6 +386,8 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 
       Adapter : url
 
+      Adapter : version
+
 
 ```
 
@@ -416,7 +418,7 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 | [hasTrainingData](hasTrainingData.md)             | \* <br/> [Dataset](Dataset.md)                                     | A relationship indicating the datasets an AI model was trained on                | [LargeLanguageModel](LargeLanguageModel.md)                    |
 | [fine_tuning](fine_tuning.md)                     | 0..1 <br/> [String](String.md)                                     | A description of the fine-tuning mechanism(s) applied to a model                 | [LargeLanguageModel](LargeLanguageModel.md)                    |
 | [supported_languages](supported_languages.md)     | \* <br/> [String](String.md)                                       | A list of languages, expressed as ISO two letter codes                           | [LargeLanguageModel](LargeLanguageModel.md)                    |
-| [isPartOf](isPartOf.md)                           | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models             | [Entry](Entry.md), [LargeLanguageModel](LargeLanguageModel.md) |
+| [isPartOf](isPartOf.md)                           | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models             | [LargeLanguageModel](LargeLanguageModel.md), [Entry](Entry.md) |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                                 | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)                                              |
 | [hasExternalReference](hasExternalReference.md)   | \* <br/> [Documentation](Documentation.md)                         | External references / additional resources related to this entity, such as ar... | [Entry](Entry.md)                                              |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [Any](Any.md)                                             | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)                                              |
@@ -437,6 +439,7 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 | [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                                             | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                                            |
 | [hasLifecycleStatus](hasLifecycleStatus.md)       | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                   | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                                            |
 | [notes](notes.md)                                 | \* <br/> [String](String.md)                                       | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md)                                            |
+| [version](version.md)                             | 0..1 <br/> [String](String.md)                                     | The version of the entity embodied by a specified resource                       | [Entity](Entity.md)                                            |
 | [hasEvaluation](hasEvaluation.md)                 | \* <br/> [AiEvalResult](AiEvalResult.md)                           | A relationship indicating that an entity has an AI evaluation result             | [AiModel](AiModel.md)                                          |
 | [architecture](architecture.md)                   | 0..1 <br/> [String](String.md)                                     | A description of the architecture of an AI such as 'Decoder-only'                | [AiModel](AiModel.md)                                          |
 | [gpu_hours](gpu_hours.md)                         | 0..1 <br/> [Integer](Integer.md)                                   | GPU consumption in terms of hours                                                | [AiModel](AiModel.md)                                          |
@@ -590,6 +593,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -613,6 +617,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   hasRelatedRisk:
@@ -1094,6 +1099,23 @@ attributes:
     range: string
     recommended: false
     multivalued: true
+  version:
+    name: version
+    description: The version of the entity embodied by a specified resource.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:version
+    owner: Adapter
+    domain_of:
+    - Entity
+    - License
+    - Vocabulary
+    - Taxonomy
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
+    range: string
   hasEvaluation:
     name: hasEvaluation
     description: A relationship indicating that an entity has an AI evaluation result.

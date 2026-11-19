@@ -18,6 +18,11 @@ For more information about LinkML data instances see [the LinkML documentation](
 | `owasp_llm_2.0_data.yaml`                   | RiskTaxonomy           | The OWASP Top 10 for Large Language Model Applications version 2 risk definitions.                    |
 | `owasp_asi_data.yaml`                       | RiskTaxonomy           | The OWASP Top 10 for Agentic Applications 2026 risk definitions                                       |
 | `owasp_ast10_data.yaml`                     | RiskTaxonomy           | The OWASP Agentic Skills Top 10 v1.0 (2026 Edition) risk definitions                                  |
+| `owasp_ast10_actions_data.yaml`             | Actions                | Preventive mitigations from the OWASP Agentic Skills Top 10 whitepaper                                |
+| `owasp_ast10_incidents_data.yaml`           | RiskIncidents          | Real-world evidence reported in the OWASP Agentic Skills Top 10 whitepaper                            |
+| `owasp_ast10_references_data.yaml`          | Documents              | External references, and the AISVS/ASVS/CWE/ISO 42001 targets the AST10 mappings point at             |
+| `owasp_mcp_top10_data.yaml`                 | RiskTaxonomy           | The OWASP Top 10 for Model Context Protocol risk definitions                                          |
+| `csa_maestro_data.yaml`                     | RiskTaxonomy           | The CSA MAESTRO seven-layer reference architecture, used to categorise risks by layer                 |
 | `mit_ai_risk_repository_data.yaml`          | RiskTaxonomy           | The MIT AI Risk Repository risk taxonomy                                                              |
 | `ailuminate.yaml`                           | RiskTaxonomy           | The AILuminate benchmark risk taxonomy                                                                |
 | `credo.yaml`                                | RiskTaxonomy           | the Unified Control Framework from Credo                                                              |
@@ -28,6 +33,7 @@ For more information about LinkML data instances see [the LinkML documentation](
 | `principles_un.yaml`                        | Principles             | Principles for the ethical use of artificial intelligence in the United Nations system                |
 | `principles_oecd.yaml`                      | Principles             | OECD AI Principles                                                                                    |
 | `principles_ibm_trust.yaml`                 | Principles             | IBM's Principles for Trust and Transparency                                                           |
+| `principles_rbi_free_ai.yaml`               | Principles             | The 7 Sutras of the Reserve Bank of India FREE-AI Committee Report                                    |
 | `mit_ai_risk_mitigation_data.yaml`          | RiskControlTaxonomy    | MIT AI Risk Mitigation Taxonomy                                                                       |
 | `mit_ai_risk_repository_data_controls.yaml` | RiskControls           | Controls categorised by MIT AI Risk Mitigation Taxonomy                                               |
 | `datasets.yaml`                             | Datasets               | A collection of datasets that are used for AI model training                                          |

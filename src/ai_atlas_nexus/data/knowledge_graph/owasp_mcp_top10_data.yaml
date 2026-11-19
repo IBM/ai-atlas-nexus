@@ -1,0 +1,171 @@
+# OWASP Top 10 for Model Context Protocol (MCP Top 10).
+documents:
+  - id: owasp-mcp-top-10-doc
+    name: OWASP Top 10 for Model Context Protocol
+    description: >-
+      The OWASP Top 10 for Model Context Protocol documents the most critical security
+      risks in MCP server deployments, covering credential handling, scope enforcement,
+      tool integrity, supply chain, command execution, intent flow, authentication,
+      telemetry, unsanctioned deployments, and context sharing.
+    author: OWASP MCP Top 10 Project
+    url: https://owasp.org/www-project-mcp-top-10/
+
+taxonomies:
+  - id: owasp-mcp-top-10
+    name: OWASP Top 10 for Model Context Protocol
+    type: RiskTaxonomy
+    description: >-
+      A taxonomy of the ten most critical security risks affecting Model Context Protocol
+      servers, which expose tools and resources to AI agents as a separate process. MCP
+      servers are the protocol layer beneath agent skills: the OWASP Agentic Skills Top 10
+      explicitly scopes MCP servers out of its own coverage and defers them to this
+      taxonomy.
+    url: https://owasp.org/www-project-mcp-top-10/
+    version: v0.1 (2025)
+    hasDocumentation:
+      - owasp-mcp-top-10-doc
+    notes:
+      - >-
+        Recorded at the granularity needed to receive the OWASP Agentic Skills Top 10
+        mappings. Risk titles follow the project's Top 10 list and overview table.
+      - >-
+        No hasLicense is asserted: the project page states its licence inconsistently,
+        linking CC BY-NC-SA 4.0 while spelling out the Creative Commons
+        Attribution-ShareAlike 4.0 name without the NonCommercial term.
+      - >-
+        The project page is also internally inconsistent on MCP06. The Top 10 list and
+        overview table name it "Intent Flow Subversion"; the versioned v0.1 section names
+        the same entry "Prompt Injection via Contextual Payloads". The former is used here
+        because it is the title the OWASP Agentic Skills Top 10 cites.
+
+entries:
+  - id: mcp01-token-mismanagement-and-secret-exposure
+    name: "MCP01:2025 Token Mismanagement & Secret Exposure"
+    description: >-
+      Hard-coded credentials, long-lived tokens, and secrets sitting in model memory or
+      protocol logs. Attackers can extract them through prompt injection, poisoned
+      context, or debug traces, potentially compromising every connected system.
+      Mitigation centres on short-lived, scoped credentials plus secret-scanning controls.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: token-mismanagement
+    risk_type: agentic
+
+  - id: mcp02-privilege-escalation-via-scope-creep
+    name: "MCP02:2025 Privilege Escalation via Scope Creep"
+    description: >-
+      Permissions defined temporarily or loosely inside MCP servers tend to broaden over
+      time, leaving agents over-capable. Weak scope enforcement lets an attacker perform
+      repository modification, system control, or data exfiltration. Recommended controls
+      are least privilege, automatic scope expiry, and access reviews.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: scope-creep
+    risk_type: agentic
+
+  - id: mcp03-tool-poisoning
+    name: "MCP03:2025 Tool Poisoning"
+    description: >-
+      An adversary subverts the tools, plugins, or their outputs that a model relies on,
+      feeding in malicious, misleading, or biased context to steer behaviour. Named
+      sub-techniques are rug pulls (bad updates to trusted tools), schema poisoning
+      (corrupted interface definitions), and tool shadowing (fake or duplicate tools
+      intercepting interactions).
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: tool-poisoning
+    risk_type: agentic
+
+  - id: mcp04-software-supply-chain-attacks-and-dependency-tampering
+    name: "MCP04:2025 Software Supply Chain Attacks & Dependency Tampering"
+    description: >-
+      MCP stacks depend on open-source packages, connectors, and model-side plug-ins that
+      may be vulnerable or hostile. One bad dependency can alter agent behaviour or
+      introduce execution-level backdoors. Fixes are signed components, dependency
+      monitoring, and provenance tracking.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: mcp-supply-chain
+    risk_type: agentic
+
+  - id: mcp05-command-injection-and-execution
+    name: "MCP05:2025 Command Injection & Execution"
+    description: >-
+      Arises where an agent builds and runs shell commands, scripts, API calls, or code
+      from untrusted input - prompts, retrieved context, or third-party data - without
+      proper validation or sanitization.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: command-injection
+    risk_type: agentic
+
+  - id: mcp06-intent-flow-subversion
+    name: "MCP06:2025 Intent Flow Subversion"
+    description: >-
+      Because MCP-retrieved context can function as a secondary instruction channel,
+      instructions hidden in that context can hijack the intent flow, redirecting the agent
+      from the user's goal to the attacker's.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: intent-flow-subversion
+    risk_type: agentic
+    notes:
+      - >-
+        The project's versioned v0.1 section titles this same entry "Prompt Injection via
+        Contextual Payloads".
+
+  - id: mcp07-insufficient-authentication-and-authorization
+    name: "MCP07:2025 Insufficient Authentication & Authorization"
+    description: >-
+      Servers, tools, or agents do not verify identity or enforce access control during
+      interactions. With many agents, users, and services exchanging data and triggering
+      actions, absent identity validation exposes critical attack paths.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: insufficient-authn-authz
+    risk_type: agentic
+
+  - id: mcp08-lack-of-audit-and-telemetry
+    name: "MCP08:2025 Lack of Audit and Telemetry"
+    description: >-
+      Missing activity logging and real-time alerting means unauthorized actions or data
+      access can go unnoticed, and thin telemetry impedes investigation and incident
+      response. Detailed records of tool invocations, context changes, and user-agent
+      interactions should be kept in immutable audit trails.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: lack-of-audit-telemetry
+    risk_type: non-technical
+
+  - id: mcp09-shadow-mcp-servers
+    name: "MCP09:2025 Shadow MCP Servers"
+    description: >-
+      Unapproved or unsupervised MCP deployments running outside the organization's formal
+      security governance. As with shadow IT, developers, researchers, or data scientists
+      stand them up for convenience or testing, often with default credentials, permissive
+      configuration, or unsecured APIs.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: shadow-mcp-servers
+    risk_type: non-technical
+
+  - id: mcp10-context-injection-and-over-sharing
+    name: "MCP10:2025 Context Injection & Over-Sharing"
+    description: >-
+      Context is the working memory holding prompts, retrieved data, and intermediate
+      outputs across sessions or agents. Where context windows are shared, persistent, or
+      poorly scoped, one user's or task's sensitive data can leak to another.
+    url: https://owasp.org/www-project-mcp-top-10/
+    type: Risk
+    isDefinedByTaxonomy: owasp-mcp-top-10
+    tag: context-injection-over-sharing
+    risk_type: agentic

@@ -390,6 +390,8 @@ URI: [nexus:AiAgent](https://w3id.org/ai-atlas-nexus/AiAgent)
 
       AiAgent : url
 
+      AiAgent : version
+
 
 ```
 
@@ -425,7 +427,7 @@ URI: [nexus:AiAgent](https://w3id.org/ai-atlas-nexus/AiAgent)
 | [hasRelatedRisk](hasRelatedRisk.md)               | \* <br/> [Risk](Risk.md)                           | A relationship where an entity relates to a risk                                 | [AiSystem](AiSystem.md)                |
 | [isProducedBy](isProducedBy.md)                   | 0..1 <br/> [Organization](Organization.md)         | A relationship to the Organization instance which produces this instance         | [BaseAi](BaseAi.md)                    |
 | [hasModelCard](hasModelCard.md)                   | \* <br/> [String](String.md)                       | A relationship to model card references                                          | [BaseAi](BaseAi.md)                    |
-| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [Entry](Entry.md), [BaseAi](BaseAi.md) |
+| [hasDocumentation](hasDocumentation.md)           | \* <br/> [Documentation](Documentation.md)         | Indicates documentation associated with an entity                                | [BaseAi](BaseAi.md), [Entry](Entry.md) |
 | [hasLicense](hasLicense.md)                       | 0..1 <br/> [License](License.md)                   | Indicates licenses associated with a resource                                    | [BaseAi](BaseAi.md)                    |
 | [performsTask](performsTask.md)                   | \* <br/> [AiTask](AiTask.md)                       | relationship indicating the AI tasks an AI model can perform                     | [BaseAi](BaseAi.md)                    |
 | [isProvidedBy](isProvidedBy.md)                   | 0..1 <br/> [AiProvider](AiProvider.md)             | A relationship indicating the AI agent has been provided by an AI systems pro... | [BaseAi](BaseAi.md)                    |
@@ -452,6 +454,7 @@ URI: [nexus:AiAgent](https://w3id.org/ai-atlas-nexus/AiAgent)
 | [isCategorizedAs](isCategorizedAs.md)             | \* <br/> [Any](Any.md)                             | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                    |
 | [hasLifecycleStatus](hasLifecycleStatus.md)       | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)   | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                    |
 | [notes](notes.md)                                 | \* <br/> [String](String.md)                       | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md)                    |
+| [version](version.md)                             | 0..1 <br/> [String](String.md)                     | The version of the entity embodied by a specified resource                       | [Entity](Entity.md)                    |
 
 ## Mixin Usage
 
@@ -720,6 +723,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -743,6 +747,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEval
     - BenchmarkMetadataCard
+    - AiEvaluationStandardTaxonomy
     - Adapter
     range: License
   performsTask:
@@ -1112,6 +1117,23 @@ attributes:
     range: string
     recommended: false
     multivalued: true
+  version:
+    name: version
+    description: The version of the entity embodied by a specified resource.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:version
+    owner: AiAgent
+    domain_of:
+    - Entity
+    - License
+    - Vocabulary
+    - Taxonomy
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
+    range: string
 
 ````
 

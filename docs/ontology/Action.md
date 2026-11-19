@@ -225,6 +225,8 @@ URI: [nexus:Action](https://w3id.org/ai-atlas-nexus/Action)
 
       Action : url
 
+      Action : version
+
 
 ```
 
@@ -265,6 +267,7 @@ URI: [nexus:Action](https://w3id.org/ai-atlas-nexus/Action)
 | [isCategorizedAs](isCategorizedAs.md)               | \* <br/> [Any](Any.md)                                                                                                                                                                                                                | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                          |
 | [hasLifecycleStatus](hasLifecycleStatus.md)         | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                                                                                                                                                                                      | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                          |
 | [notes](notes.md)                                   | \* <br/> [String](String.md)                                                                                                                                                                                                          | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md)                          |
+| [version](version.md)                               | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The version of the entity embodied by a specified resource                       | [Entity](Entity.md)                          |
 | [hasJurisdiction](hasJurisdiction.md)               | \* <br/> [String](String.md)&nbsp;or&nbsp;<br />[Jurisdiction](Jurisdiction.md)&nbsp;or&nbsp;<br />[SupraNationalJurisdiction](SupraNationalJurisdiction.md)&nbsp;or&nbsp;<br />[SubnationalJurisdiction](SubnationalJurisdiction.md) | The legal or regulatory jurisdiction(s) applicable to an AI system, policy, r... | [Concept](Concept.md)                        |
 
 ## Usages
@@ -375,6 +378,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -732,6 +736,23 @@ attributes:
     range: string
     recommended: false
     multivalued: true
+  version:
+    name: version
+    description: The version of the entity embodied by a specified resource.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:version
+    owner: Action
+    domain_of:
+    - Entity
+    - License
+    - Vocabulary
+    - Taxonomy
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
+    range: string
   hasJurisdiction:
     name: hasJurisdiction
     description: The legal or regulatory jurisdiction(s) applicable to an AI system,

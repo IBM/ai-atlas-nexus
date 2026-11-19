@@ -1,0 +1,241 @@
+entries:
+  - id: ast01-malicious-skills
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast01-malicious-skills
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast01-malicious-skills
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk

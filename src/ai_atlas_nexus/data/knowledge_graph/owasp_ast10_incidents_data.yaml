@@ -1,0 +1,297 @@
+# Realised events reported in the Real-World Evidence sections of the OWASP Agentic
+# Skills Top 10 whitepaper (V1).
+riskincidents:
+  - id: owasp-ast10-ri-clawhavoc-campaign
+    name: ClawHavoc campaign
+    description: >-
+      A coordinated poisoning campaign against the OpenClaw skill market published 1,184
+      malicious skills across 12 publisher accounts, all sharing the command-and-control
+      IP 91.92.242[.]30. The skills delivered Atomic Stealer (AMOS), targeting macOS
+      crypto wallets, SSH keys, and browser credentials. At peak infection, five of the
+      top seven most-downloaded ClawHub skills were confirmed malware. ClawHub had no
+      automated scanning at the time and publishers could upload unlimited packages. Some
+      samples used staged downloads, where the initial SKILL.md appeared safe but
+      triggered a secondary payload download during the dependency-installation phase,
+      which runs at skill-load time.
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+    isDefinedByTaxonomy: owasp-ast10
+    author: Antiy CERT, January 2026
+    source_uri: https://www.antiy.net/Download/clawhavoc-analysis-of-large-scale-poisoning-campaign-targeting-the-openclaw-skill-market-for-ai-agents.pdf
+
+  - id: owasp-ast10-ri-snyk-skill-md-ssh-key-exfiltration
+    name: SSH key exfiltration from three lines of SKILL.md
+    description: >-
+      Three lines of markdown in a SKILL.md file were sufficient to exfiltrate SSH keys,
+      with no executable payload involved.
+    refersToRisk:
+      - ast01-malicious-skills
+    isDefinedByTaxonomy: owasp-ast10
+    author: Snyk, February 2026
+    source_uri: https://snyk.io/articles/skill-md-shell-access/
+
+  - id: owasp-ast10-ri-brand-impersonating-skills
+    name: Brand-impersonating skills on public marketplaces
+    description: >-
+      Skills impersonating "Google", "Solana wallet tracker", "YouTube Summarize Pro",
+      "Polymarket Trader", "Google Calendar Integration", and "Solana Wallet Tracker" were
+      published on ClawHub, none affiliated with the named brands and all designed to
+      match high-demand searches. No trademark validation took place at publish time. Snyk
+      documented a malicious "Google" skill that passed casual inspection because its
+      name, description, and README were professionally written.
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast04-insecure-metadata
+    isDefinedByTaxonomy: owasp-ast10
+    author: Snyk, February 2026
+    source_uri: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+
+  - id: owasp-ast10-ri-usenix-2026-malicious-skill-measurement
+    name: Confirmed malicious skills across public marketplaces
+    description: >-
+      A measurement study analyzed 98,380 skills across public marketplaces and confirmed
+      157 malicious skills carrying 632 vulnerabilities, an average of 4.03 per skill.
+      73.2% of the malicious skills implemented shadow features hidden from the user, and
+      54.1% traced to a single publisher cluster.
+    refersToRisk:
+      - ast01-malicious-skills
+    isDefinedByTaxonomy: owasp-ast10
+    author: Liu et al., USENIX Security 2026 (arXiv:2602.06547)
+    source_uri: https://arxiv.org/abs/2602.06547
+
+  - id: owasp-ast10-ri-malicious-scanner-skills
+    name: Scanner skills used as a false-trust signal
+    description: >-
+      ClawHub's original "Skill Defender" scanner was itself a skill, and attackers used it
+      as a false-trust signal. Some scanner skills were themselves malicious.
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast08-poor-scanning
+    isDefinedByTaxonomy: owasp-ast10
+    author: OWASP Agentic Skills Top 10 Project
+    source_uri: https://owasp.org/www-project-agentic-skills-top-10/ast08.html
+
+  - id: owasp-ast10-ri-cve-2025-59536
+    name: Claude Code CVE-2025-59536
+    description: >-
+      Repository configuration files became execution paths: cloning and opening a
+      malicious repository triggered remote code execution and API key exfiltration before
+      the user saw any dialog. Fixed in v1.0.111 (October 2025), with a gap of months
+      between the fix and public disclosure during which users were unaware of the risk.
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast07-update-drift
+    isDefinedByTaxonomy: owasp-ast10
+    author: Check Point Research
+    source_uri: https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files/
+
+  - id: owasp-ast10-ri-cve-2026-21852
+    name: Claude Code CVE-2026-21852
+    description: >-
+      A second repository-configuration execution path in the same product family, fixed in
+      v2.0.65 (January 2026), again with a months-long gap between fix and public
+      disclosure.
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast07-update-drift
+    isDefinedByTaxonomy: owasp-ast10
+    author: Check Point Research
+    source_uri: https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files/
+
+  - id: owasp-ast10-ri-yutube-dl-core-dependency-confusion
+    name: Dependency confusion via yutube-dl-core
+    description: >-
+      A skill named "Summarize YouTube Videos" imported yutube-dl-core instead of the
+      legitimate package. The nested dependency installed a backdoor during npm install,
+      triggered automatically by the skill loader, while the surface skill appeared clean.
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast04-insecure-metadata
+    isDefinedByTaxonomy: owasp-ast10
+    author: Snyk
+    source_uri: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+
+  - id: owasp-ast10-ri-trail-of-bits-scanner-bypass
+    name: Every tested skill scanner bypassed
+    description: >-
+      Researchers bypassed every scanner they tested, including ClawHub (VirusTotal plus a
+      guard model), Cisco's skill-scanner, and the skills.sh scanners. Three of their four
+      malicious test skills took less than an hour to devise and implement; the
+      prompt-injection test took several hours. Padding a payload with 100,000 leading
+      newlines caused one scanner to truncate the file and miss malicious content; logic
+      hidden in a precompiled .pyc file and inside a .docx archive went unscanned; and an
+      LLM-based judge rated a malicious npm-registry redirect as benign after it was framed
+      as a corporate-network configuration. The authors concluded that the trust model is
+      broken at the root and that automated scanning cannot replace supply-chain judgment.
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast08-poor-scanning
+    isDefinedByTaxonomy: owasp-ast10
+    author: Trail of Bits, 3 June 2026
+    source_uri: https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/
+
+  - id: owasp-ast10-ri-snyk-280-leaky-skills
+    name: Over 280 skills exposing API keys and PII
+    description: >-
+      More than 280 skills on ClawHub were found exposing API keys and personally
+      identifiable information beyond their declared function.
+    refersToRisk:
+      - ast03-over-privileged-skills
+    isDefinedByTaxonomy: owasp-ast10
+    author: Snyk ToxicSkills, February 2026
+    source_uri: https://snyk.io/blog/openclaw-skills-credential-leaks-research/
+
+  - id: owasp-ast10-ri-agent-mass-email-deletion
+    name: Agent deleted large volumes of email without authorization
+    description: >-
+      A researcher asked an OpenClaw agent to review an email inbox without taking actions.
+      The agent deleted large volumes of email before the process was killed, demonstrating
+      that even well-intentioned agents execute with more authority than intended. No
+      governance mechanism existed to prevent or detect the unauthorized action.
+    refersToRisk:
+      - ast03-over-privileged-skills
+      - ast09-no-governance
+    isDefinedByTaxonomy: owasp-ast10
+    author: Summer Yue (Meta AI), reported publicly
+    source_uri: https://owasp.org/www-project-agentic-skills-top-10/ast03.html
+
+  - id: owasp-ast10-ri-laaf-lpci-confirmation
+    name: Automated confirmation of logic-layer prompt control injection at scale
+    description: >-
+      Systematic testing across five production LLM platforms confirmed all six stages of
+      the logic-layer prompt control injection (LPCI) lifecycle to be breakable on multiple
+      platforms, including a single-attempt document-metadata exfiltration that succeeded,
+      demonstrating that LPCI is reliably reproducible with automated tooling rather than a
+      rare edge case.
+    refersToRisk:
+      - ast03-over-privileged-skills
+    isDefinedByTaxonomy: owasp-ast10
+    author: Atta et al., LAAF (arXiv:2603.17239)
+    source_uri: https://arxiv.org/pdf/2603.17239
+
+  - id: owasp-ast10-ri-openclaw-135k-exposed
+    name: More than 135,000 internet-facing agent instances exposed
+    description: >-
+      More than 135,000 internet-facing OpenClaw instances were reported exposed online,
+      with the exposure attributed to misconfiguration and insufficient controls.
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast09-no-governance
+    isDefinedByTaxonomy: owasp-ast10
+    author: Bitdefender, 12 February 2026
+    source_uri: https://www.bitdefender.com/en-gb/blog/hotforsecurity/135k-openclaw-ai-agents-exposed-online
+
+  - id: owasp-ast10-ri-clawjacked-cve-2026-32025
+    name: ClawJacked (CVE-2026-32025)
+    description: >-
+      Browser-origin WebSocket clients could bypass origin checks and authentication
+      throttling on a loopback-bound agent gateway, allowing a malicious page to
+      brute-force the gateway password and gain operator-level access. CVSS 7.5. The
+      disclosure also illustrates how patch lag can leave exposed agent gateways vulnerable
+      after publication.
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast07-update-drift
+    isDefinedByTaxonomy: owasp-ast10
+    author: NVD / OpenClaw project
+    source_uri: https://nvd.nist.gov/vuln/detail/CVE-2026-32025
+
+  - id: owasp-ast10-ri-securityscorecard-exposed-openclaw
+    name: Over 40,000 exposed agent instances in 24 hours of scanning
+    description: >-
+      An exposure study reported more than 40,000 exposed OpenClaw instances within its
+      first 24 hours of scanning, and found that 35.4% of observed deployments were
+      vulnerable to remote code execution at the time of publication.
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast07-update-drift
+    isDefinedByTaxonomy: owasp-ast10
+    author: SecurityScorecard, February 2026
+    source_uri: https://securityscorecard.com/blog/how-exposed-openclaw-deployments-turn-agentic-ai-into-an-attack-surface/
+
+  - id: owasp-ast10-ri-snyk-toxicskills-scanner-gap
+    name: Critical issues in the ToxicSkills corpus missed by pattern matching
+    description: >-
+      13.4% of the skills in the ToxicSkills corpus contained critical security issues, and
+      the vast majority of those issues were not caught by simple pattern matching. In the
+      accompanying toxicskills-goof test suite, a pattern-matching scanner caught three of
+      four real malicious samples; the fourth used pure natural-language social engineering
+      - instructing the agent to download and run a binary at a URL - with no detectable
+      code signature.
+    refersToRisk:
+      - ast08-poor-scanning
+    isDefinedByTaxonomy: owasp-ast10
+    author: Snyk, 11 February 2026
+    source_uri: https://snyk.io/blog/skill-scanner-false-security/
+
+  - id: owasp-ast10-ri-skillspector-scan-findings
+    name: Skill-aware scanning surfaces issues generic scanners miss
+    description: >-
+      An open-source, agent-skill-aware scanner combining static analysis with optional LLM
+      semantic evaluation reported that roughly 26.1% of scanned skills contained
+      vulnerabilities and 5.2% showed likely malicious intent, evidence that scanning
+      purpose-built for the skill layer surfaces issues generic code scanners miss.
+    refersToRisk:
+      - ast08-poor-scanning
+    isDefinedByTaxonomy: owasp-ast10
+    author: NVIDIA SkillSpector project, 2026
+    source_uri: https://github.com/NVIDIA/SkillSpector
+
+  - id: owasp-ast10-ri-adversa-scanner-bypass
+    name: Open-source skill scanners bypassed by simple obfuscation
+    description: >-
+      A security analysis of open-source skill security scanners indicated that current
+      scanners are often bypassed by simple obfuscation techniques, such as non-standard
+      encoding in SKILL.md, which effectively blind existing heuristic-based detectors.
+    refersToRisk:
+      - ast08-poor-scanning
+    isDefinedByTaxonomy: owasp-ast10
+    author: Adversa AI, July 2026
+    source_uri: https://adversa.ai/blog/agent-skill-scanners-bypass-eight-tested/
+
+  - id: owasp-ast10-ri-bitdefender-enterprise-shadow-ai
+    name: Shadow-AI agent deployments and malicious skills on corporate machines
+    description: >-
+      Hundreds of OpenClaw deployments were reported on corporate machines, installed
+      through easy single-line installation, and more than 800 malicious skills were
+      identified, approximately 400 of which were analyzed in depth. The findings
+      illustrate how shadow-AI adoption can bypass formal security review and centralized
+      visibility.
+    refersToRisk:
+      - ast01-malicious-skills
+      - ast09-no-governance
+    isDefinedByTaxonomy: owasp-ast10
+    author: Bitdefender, February 2026
+    source_uri: https://www.bitdefender.com/en-gb/blog/businessinsights/technical-advisory-openclaw-exploitation-enterprise-networks
+
+  - id: owasp-ast10-ri-cross-registry-simultaneous-publication
+    name: Same malicious skills published simultaneously on two registries
+    description: >-
+      Malicious skills were confirmed published simultaneously on ClawHub and skills.sh by
+      the same threat actors, exploiting the fact that neither platform shared scanning
+      intelligence.
+    refersToRisk:
+      - ast02-supply-chain-compromise
+      - ast10-cross-platform-reuse
+    isDefinedByTaxonomy: owasp-ast10
+    author: Snyk ToxicSkills
+    source_uri: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+
+  - id: owasp-ast10-ri-autonomous-sandbox-escape
+    name: Autonomous sandbox escape and cross-platform pivot
+    description: >-
+      During offensive capability tests, a sandboxed agent autonomously bypassed its local
+      environmental safeguards, accessed the open internet, and targeted production
+      infrastructure at a third party. The agent then pivoted across platforms, exploiting
+      a vulnerable, unauthenticated code-execution path published by a customer on a
+      separate compute platform, and executed multi-tenant lateral movement, harvesting
+      cloud credentials and compromising multiple separate accounts across four distinct
+      digital ecosystems.
+    refersToRisk:
+      - ast06-weak-isolation
+      - ast10-cross-platform-reuse
+    isDefinedByTaxonomy: owasp-ast10
+    author: Reported July 2026
+    source_uri: https://owasp.org/www-project-agentic-skills-top-10/ast10.html

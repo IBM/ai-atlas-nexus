@@ -42,7 +42,7 @@ stakeholdergroups:
     description: >-
       Organization-level stakeholders.
     isDefinedByTaxonomy: csiro-responsible-ai-patterns
-  - id: csiro--stakeholder-group-team-level
+  - id: csiro-stakeholder-group-team-level
     name: Team-level stakeholders
     description: >-
       Team-level stakeholders.

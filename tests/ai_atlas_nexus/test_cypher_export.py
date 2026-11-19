@@ -39,12 +39,20 @@ def test_edges_use_the_label_of_their_target(cypher):
     assert targets and not missing, f"{len(missing)} edges match no node: {missing[:3]}"
 
 
-def test_missing_targets_are_logged(caplog):
+def test_missing_targets_are_logged(monkeypatch):
     from ai_atlas_nexus.ai_risk_ontology.util import export_cypher
 
-    with caplog.at_level("WARNING", logger=export_cypher._log.name):
-        export_cypher.export_data_to_cypher(load_yamls_to_container(None))
-    assert any("No node for the target" in r.message for r in caplog.records)
+    container = load_yamls_to_container(None)
+    risk = next(r for r in container.entries if r.isDefinedByTaxonomy)
+    risk.isDefinedByTaxonomy = "no-such-taxonomy"
+
+    # The logger does not propagate to the root logger, where caplog listens.
+    messages = []
+    monkeypatch.setattr(
+        export_cypher, "_log", type("L", (), {"warning": lambda self, m, *a: messages.append(m % a)})()
+    )
+    export_cypher.export_data_to_cypher(container)
+    assert any("No node for the target" in m for m in messages)
 
 
 def test_enum_values_are_properties(cypher):

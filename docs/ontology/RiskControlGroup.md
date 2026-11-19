@@ -196,6 +196,8 @@ URI: [nexus:RiskControlGroup](https://w3id.org/ai-atlas-nexus/RiskControlGroup)
 
       RiskControlGroup : url
 
+      RiskControlGroup : version
+
 
 ```
 
@@ -214,9 +216,9 @@ URI: [nexus:RiskControlGroup](https://w3id.org/ai-atlas-nexus/RiskControlGroup)
 | [isDetectedBy](isDetectedBy.md)                 | \* <br/> [RiskControl](RiskControl.md)                                                                                                                                                                                                | A relationship where a risk, risk source, consequence, or impact is detected ... | [RiskConcept](RiskConcept.md)            |
 | [isMitigatedBy](isMitigatedBy.md)               | \* <br/> [RiskControl](RiskControl.md)                                                                                                                                                                                                | A relationship where a risk, risk source, consequence, or impact is mitigated... | [RiskConcept](RiskConcept.md)            |
 | [isUsedWithinLocality](isUsedWithinLocality.md) | \* <br/> [LocalityOfUse](LocalityOfUse.md)                                                                                                                                                                                            | Specifies the domain an AI system is used within                                 | [RiskConcept](RiskConcept.md)            |
-| [hasDocumentation](hasDocumentation.md)         | \* <br/> [Documentation](Documentation.md)                                                                                                                                                                                            | Indicates documentation associated with an entity                                | [Concept](Concept.md), [Group](Group.md) |
+| [hasDocumentation](hasDocumentation.md)         | \* <br/> [Documentation](Documentation.md)                                                                                                                                                                                            | Indicates documentation associated with an entity                                | [Group](Group.md), [Concept](Concept.md) |
 | [belongsToDomain](belongsToDomain.md)           | 0..1 <br/> [Any](Any.md)                                                                                                                                                                                                              | A relationship where a group belongs to a domain                                 | [Group](Group.md)                        |
-| [type](type.md)                                 | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The type or class designation of this entity instance                            | [Concept](Concept.md), [Group](Group.md) |
+| [type](type.md)                                 | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The type or class designation of this entity instance                            | [Group](Group.md), [Concept](Concept.md) |
 | [narrower](narrower.md)                         | \* <br/> [String](String.md)                                                                                                                                                                                                          | Related concepts that are narrower in scope or hierarchy                         | [Group](Group.md)                        |
 | [broader](broader.md)                           | \* <br/> [String](String.md)                                                                                                                                                                                                          | Related concepts that are broader in scope or hierarchy                          | [Group](Group.md)                        |
 | [id](id.md)                                     | 1 <br/> [String](String.md)                                                                                                                                                                                                           | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                      |
@@ -233,6 +235,7 @@ URI: [nexus:RiskControlGroup](https://w3id.org/ai-atlas-nexus/RiskControlGroup)
 | [isCategorizedAs](isCategorizedAs.md)           | \* <br/> [Any](Any.md)                                                                                                                                                                                                                | A relationship where an entity has been deemed to be categorized                 | [Entity](Entity.md)                      |
 | [hasLifecycleStatus](hasLifecycleStatus.md)     | 0..1 <br/> [LifecycleStatus](LifecycleStatus.md)                                                                                                                                                                                      | The editorial / publication lifecycle state of this entity                       | [Entity](Entity.md)                      |
 | [notes](notes.md)                               | \* <br/> [String](String.md)                                                                                                                                                                                                          | Free-text editorial notes, source breadcrumbs, or build-time provenance that ... | [Entity](Entity.md)                      |
+| [version](version.md)                           | 0..1 <br/> [String](String.md)                                                                                                                                                                                                        | The version of the entity embodied by a specified resource                       | [Entity](Entity.md)                      |
 | [hasJurisdiction](hasJurisdiction.md)           | \* <br/> [String](String.md)&nbsp;or&nbsp;<br />[Jurisdiction](Jurisdiction.md)&nbsp;or&nbsp;<br />[SupraNationalJurisdiction](SupraNationalJurisdiction.md)&nbsp;or&nbsp;<br />[SubnationalJurisdiction](SubnationalJurisdiction.md) | The legal or regulatory jurisdiction(s) applicable to an AI system, policy, r... | [Concept](Concept.md)                    |
 
 ## Identifier and Mapping Information
@@ -402,6 +405,7 @@ attributes:
     - EveryEvalAIResult
     - BenchmarkMetadataCard
     - ThirdPartyEvaluationEngagement
+    - AiEvaluationStandardTaxonomy
     - Adapter
     - LLMIntrinsic
     range: Documentation
@@ -647,6 +651,23 @@ attributes:
     range: string
     recommended: false
     multivalued: true
+  version:
+    name: version
+    description: The version of the entity embodied by a specified resource.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    slot_uri: schema:version
+    owner: RiskControlGroup
+    domain_of:
+    - Entity
+    - License
+    - Vocabulary
+    - Taxonomy
+    - RiskTaxonomy
+    - RiskControlGroupTaxonomy
+    - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
+    range: string
   hasJurisdiction:
     name: hasJurisdiction
     description: The legal or regulatory jurisdiction(s) applicable to an AI system,

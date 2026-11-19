@@ -208,7 +208,7 @@ entries:
     dateCreated: "2024-03-06"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: prompt-leaking
     risk_type: inference
     type: Risk
@@ -331,7 +331,7 @@ entries:
     dateCreated: "2025-04-28"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: social-hacking-attack
     risk_type: inference
     type: Risk
@@ -367,7 +367,7 @@ entries:
     dateCreated: "2025-04-28"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: indirect-instructions-attack
     risk_type: inference
     type: Risk
@@ -1049,7 +1049,7 @@ entries:
     dateCreated: "2025-04-28"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: context-overload-attack
     risk_type: inference
     type: Risk
@@ -1306,7 +1306,7 @@ entries:
     dateCreated: "2025-04-28"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: specialized-tokens-attack
     risk_type: inference
     type: Risk
@@ -1344,7 +1344,7 @@ entries:
     dateCreated: "2024-03-06"
     dateModified: "2025-10-22"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: prompt-injection
     risk_type: inference
     type: Risk
@@ -1454,7 +1454,7 @@ entries:
     dateCreated: "2025-04-28"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: direct-instructions-attack
     risk_type: inference
     type: Risk
@@ -1580,7 +1580,7 @@ entries:
     dateCreated: "2024-03-06"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: prompt-priming
     risk_type: inference
     type: Risk
@@ -1712,7 +1712,7 @@ entries:
     dateCreated: "2025-04-28"
     dateModified: "2025-10-10"
     isDefinedByTaxonomy: ibm-risk-atlas
-    isPartOf: ibm-risk-atlas-robustness-Prompt-attacks
+    isPartOf: ibm-risk-atlas-robustness-prompt-attacks
     tag: encoded-interactions-attack
     risk_type: inference
     type: Risk

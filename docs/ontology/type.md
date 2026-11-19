@@ -61,6 +61,7 @@ URI: [nexus:type](https://w3id.org/ai-atlas-nexus/type)
 | [Domain](Domain.md)                                               | An area, sector, or industry that is associated with economic activities         | no            |
 | [StakeholderGroup](StakeholderGroup.md)                           | An AI system stakeholder grouping                                                | no            |
 | [BenchmarkMetadataCard](BenchmarkMetadataCard.md)                 | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md)   | A taxonomy of Ai Evaluation Standards                                            | no            |
 | [Adapter](Adapter.md)                                             | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
 | [LLMIntrinsic](LLMIntrinsic.md)                                   | A capability that can be invoked through a well-defined API that is reasonabl... | no            |
 | [AiOffice](AiOffice.md)                                           | The EU AI Office (https://digital-strategy                                       | no            |

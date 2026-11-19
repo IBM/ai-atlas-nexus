@@ -1,0 +1,105 @@
+entries:
+  - id: ast01-malicious-skills
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast01-malicious-skills
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ast01-malicious-skills
+    type: Risk
+  - id: ast02-supply-chain-compromise
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ast02-supply-chain-compromise
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast03-over-privileged-skills
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - ast03-over-privileged-skills
+    type: Risk
+  - id: ast04-insecure-metadata
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - ast04-insecure-metadata
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast05-untrusted-external-instructions
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ast05-untrusted-external-instructions
+    type: Risk
+  - id: ast06-weak-isolation
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - ast06-weak-isolation
+    type: Risk
+  - id: ast07-update-drift
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ast07-update-drift
+    type: Risk
+  - id: ast08-poor-scanning
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ast08-poor-scanning
+    type: Risk
+  - id: ast09-no-governance
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - ast09-no-governance
+    type: Risk
+  - id: ast10-cross-platform-reuse
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ast10-cross-platform-reuse
+    type: Risk

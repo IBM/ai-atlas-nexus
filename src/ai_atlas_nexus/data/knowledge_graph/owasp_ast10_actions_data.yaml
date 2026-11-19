@@ -1,0 +1,1223 @@
+actions:
+  - id: owasp-ast10-act-001
+    name: Require cryptographic signatures on published skills
+    description: >-
+      Require cryptographic signatures (ed25519) on all published skills and reject
+      unsigned installs. Bind each signature to a resolvable, revocable publisher identity
+      - a key id, a publisher identifier such as a domain or did:web, and a published
+      verification key - rather than a bare key, so a compromised signer can be revoked. A
+      signature proves authorship, not safety: a verified publisher can still ship
+      malicious content, so signing composes with behavioral scanning and reputation
+      rather than replacing them.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-002
+    name: Implement Merkle root signing for skill registries
+    description: Implement Merkle root signing for skill registries.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-003
+    name: Use layered scanning at publish time and install time
+    description: >-
+      Use layered scanning at publish time and install time for executable payloads,
+      malicious indicators of compromise, hidden or obfuscated instructions, and
+      natural-language manipulation. Traditional malware signatures and pattern matching
+      alone are insufficient.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-004
+    name: Isolate skill execution in containers or sandboxes by default
+    description: >-
+      Isolate skill execution in containers or sandboxes, and require container isolation
+      by default so that host-mode execution needs an explicit opt-in with documented
+      risk. Container isolation constrains only the script launched inside it: a malicious
+      SKILL.md can still persuade the host agent to use tools outside the container, so
+      retain the skill identity, version, and content hash on every induced action and
+      enforce host-side capability checks before dispatch.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast06-weak-isolation
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-005
+    name: Audit skill actions through tamper-evident structured logging
+    description: >-
+      Audit skill actions through structured logging, covering file access, network calls,
+      shell commands, and memory writes. Audit logging requires tamper-evident records to
+      be compliance-grade: a log an operator controls can be edited after the fact, while
+      a receipt a verifier can independently check cannot. The whitepaper proposes a
+      bilateral receipt pattern in which every skill execution produces a signed admission
+      receipt before execution (attempt_id, agent_id, action_type, scope, policy_version,
+      decision, timestamp_ms, signature) and a signed outcome receipt after it
+      (attempt_id, action_ref, terminal_state, signature), with a DENY decision producing
+      an admission receipt even when nothing executes.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-006
+    name: Implement skill reputation systems
+    description: >-
+      Implement skill reputation systems based on community feedback and automated
+      testing.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-007
+    name: Protect agent identity artifacts
+    description: >-
+      Protect agent identity artifacts (SOUL.md, MEMORY.md, AGENTS.md, persona and config
+      files): restrict read and write access, sign or version-control them, treat any
+      skill request to access them as elevated-risk, and flag skills requesting write
+      access for elevated review. This limits both persistence backdoors and identity
+      cloning. These protections are a separate control plane from signing and scanning:
+      memory poisoning and identity-file persistence are runtime, post-install attacks, so
+      a signed, reputation-clean skill can still poison MEMORY.md or SOUL.md in a later
+      session, which install-time gates never see.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-008
+    name: Monitor for cognitive degradation at runtime
+    description: >-
+      Monitor for cognitive degradation at runtime: track starvation (memory or tool
+      latency), token pressure, output health, and planner loop patterns across repeated
+      skill invocations, not just at install time.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-009
+    name: Quarantine and validate skill-authored memory writes
+    description: >-
+      Quarantine and validate any skill-authored write to MEMORY.md, SOUL.md, or a vector
+      store before it is committed, rather than writing on first pass; a signed,
+      reputation-clean skill can still poison memory after install.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-010
+    name: Define non-overridable trust boundaries in system policy
+    description: >-
+      Define non-overridable trust boundaries in system policy, restate the skill trust
+      level before privileged actions, and require pre-action review. Treat these controls
+      as defense in depth, not as substitutes for isolation and capability enforcement.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-011
+    name: Display publisher trust level, install count, and scan status in the registry UI
+    description: >-
+      Display skill publisher trust level, install count, and scan status in the registry
+      user interface.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-012
+    name: Never auto-execute Prerequisites sections
+    description: >-
+      Never auto-execute "Prerequisites" sections of a skill without explicit user review.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-013
+    name: Hash-pin installed skills and alert on modification
+    description: >-
+      Pin all installed skills to immutable content hashes (sha256:) rather than version
+      ranges, and alert on any modification of an installed skill.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+      - ast07-update-drift
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-014
+    name: Require verified-publisher installation gates on skill registries
+    description: >-
+      Require verified-publisher installation gates, registry malware scanning,
+      installation-time permission review, sandboxed execution, execution timeouts, and
+      suspicious-behavior log monitoring for skill registry platforms.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-015
+    name: Validate skills before publishing on agent and IDE platforms
+    description: >-
+      Validate skills before publishing on agent or IDE platforms such as Claude Code,
+      Cursor, and VS Code: review code and instructions for injection paths, avoid dynamic
+      code execution, use parameterized inputs, and require proper error handling.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-016
+    name: Enforce secure skill manifests
+    description: >-
+      Enforce secure manifests: declare permissions explicitly, prefer read-only or
+      outbound-only capabilities where possible, require signatures or signed metadata,
+      enable audit logging, and bind execution to workspace trust or equivalent
+      environment controls.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-017
+    name: Skill publisher responsibilities
+    description: >-
+      For skill publishers: sign code, minimize permissions, document functionality and
+      security measures, maintain updates, and disclose data collection and processing
+      practices.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-018
+    name: Platform operator responsibilities
+    description: >-
+      For platform operators: scan skills, verify publisher identities, warn users about
+      high-risk permissions, remove malicious skills quickly, and support community
+      reporting.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-019
+    name: Skill user responsibilities
+    description: >-
+      For users: install only from trusted publishers, review granted permissions, audit
+      installed skills periodically, report suspicious behavior, and keep agent platforms
+      updated.
+    hasRelatedRisk:
+      - ast01-malicious-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-020
+    name: Implement skill provenance tracking
+    description: >-
+      Implement skill provenance tracking: link each published skill to a verified
+      code-signing identity, and have the signature cover a canonical digest of SKILL.md
+      plus every declared resource file, so any post-publish tampering invalidates it.
+      Standard signing schemes apply (for example ES256 or ed25519); until skill formats
+      expose a first-class field, the binding can live in the SKILL.md metadata extension
+      point.
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-021
+    name: Require transparency logs for all registry operations
+    description: >-
+      Require transparency logs for all registry operations (publish, update, delete),
+      similar to Certificate Transparency. A plain registry membership lookup is not
+      verification; cryptographic verification requires signatures, append-only inclusion
+      proofs, and consistency proofs.
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-022
+    name: Pin all nested dependencies to immutable hashes
+    description: >-
+      Pin all nested dependencies to immutable hashes (sha256:), not version ranges. Note
+      that hash-checking mode requires every package in the transitive tree to be hashed.
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-023
+    name: Treat repository configuration files as executable code
+    description: >-
+      Treat repository configuration files - hooks, .claude/settings.json,
+      ANTHROPIC_BASE_URL and equivalents - as executable code and apply trust gates
+      accordingly.
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-024
+    name: Scan recursive dependency trees
+    description: Scan recursive dependency trees, not just top-level skill files.
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-025
+    name: Support an internal skill mirror or allowlist
+    description: >-
+      Support an internal skill mirror or allowlist for enterprise deployments.
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-026
+    name: Provide skill revocation infrastructure
+    description: >-
+      Provide revocation infrastructure: support revoking a compromised signing key
+      (invalidating every skill signed with it), a single skill version by content digest,
+      or an entire publisher. Hosts should consult a revocation endpoint at load time and
+      cache its state within a bounded freshness window.
+    hasRelatedRisk:
+      - ast02-supply-chain-compromise
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-027
+    name: Require skills to declare a permission manifest
+    description: >-
+      Require skills to declare a permission manifest covering files, network, shell, and
+      tools, and reject skills without one.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-028
+    name: Enforce per-skill scoped credentials
+    description: >-
+      Enforce per-skill scoped credentials rather than shared agent-level API keys.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-029
+    name: Implement runtime permission enforcement
+    description: Implement runtime permission enforcement, not just declarative manifests.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-030
+    name: Bind authorization to the task the user approved
+    description: >-
+      Bind authorization to the task the user approved. Before each action, verify that
+      the action, resource, destination, and conditions remain within that grant. If they
+      do not, deny the action or require fresh approval.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-031
+    name: Adopt network allowlists scoped to specific domains
+    description: >-
+      Adopt network allowlists scoped to specific domains rather than a binary
+      network true/false capability.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-032
+    name: Validate manifest declarations against observed runtime behavior
+    description: >-
+      Validate manifest declarations against observed runtime behavior in sandboxed
+      testing, including a sandboxed pre-publish test of the permissions a skill declares.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+      - ast04-insecure-metadata
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-033
+    name: Enforce a strict instruction hierarchy and separate instructions from data
+    description: >-
+      Enforce a strict instruction hierarchy (System > Operator > User > Skill/Tool
+      Output). Never elevate skill or tool output to instruction level; treat all skill
+      input and tool output as untrusted data, and tag external content with provenance
+      markers so the model can distinguish data from commands. Maintain a clear separation
+      between system prompts, user instructions, and externally retrieved content:
+      retrieved information should be used only as reference data and must not override or
+      modify the agent's system or developer instructions.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-034
+    name: Validate the original caller at every step of a delegation chain
+    description: >-
+      Require every skill in a delegation chain to validate the original caller's
+      identity, permissions, and authorization context before executing privileged
+      operations. Authorization decisions should not rely solely on the immediately
+      invoking skill.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-035
+    name: Require explicit operator consent for persistent state changes
+    description: >-
+      Require explicit operator consent for persistent state changes: memory and
+      identity-file writes, new tool approvals, and privilege escalations must not be
+      auto-applied from injected instructions.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-036
+    name: Require operator confirmation before destructive actions
+    description: >-
+      Require explicit operator confirmation before deleting files, writing or deleting
+      agent identity artifacts, or executing binaries outside an approved allowlist.
+    hasRelatedRisk:
+      - ast03-over-privileged-skills
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-037
+    name: Use safe parsers by default
+    description: >-
+      Use safe parsers by default: disable dangerous tags (!!python/object,
+      !!python/apply; yaml.load replaced by yaml.safe_load) and apply an allowlist of
+      permitted YAML and JSON keys, rejecting any unexpected fields.
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-038
+    name: Validate metadata against a schema before deserialization
+    description: >-
+      Validate metadata against a schema - for example JSON Schema or Pydantic - before
+      any deserialization of skill-provided data.
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-039
+    name: Apply static analysis to metadata and SKILL.md prose at publish time
+    description: >-
+      Apply static analysis to all metadata fields and SKILL.md prose at publish time:
+      flag suspicious patterns in general, and specifically ASCII smuggling, base64
+      payloads, and zero-width characters invisible to human reviewers.
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-040
+    name: Cross-reference declared risk tier against the permission manifest
+    description: >-
+      Cross-reference risk_tier declarations against the permission manifest scope.
+      risk_tier is an untrusted author assertion and must be independently validated
+      against the declared permissions; automated governance policies must be driven by
+      permission-derived risk classification, with risk_tier used only to detect
+      under-declaration or policy inconsistencies.
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+      - ast10-cross-platform-reuse
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-041
+    name: Parse skill files in an isolated, least-privilege subprocess
+    description: >-
+      Parse skill files in an isolated, least-privilege subprocess or container - never
+      deserialize with elevated privileges - and treat requirements.txt, package.json, and
+      pyproject.toml as untrusted code whose installation is sandboxed.
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-042
+    name: Enforce brand protection and surface metadata provenance
+    description: >-
+      Enforce brand and trademark protection, and surface metadata provenance - who
+      declared it, when, and from which signing key - in the registry user interface.
+    hasRelatedRisk:
+      - ast04-insecure-metadata
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-043
+    name: Pin and verify referenced external content
+    description: >-
+      Pin and verify referenced content: record a content hash for every external document
+      a skill references at review time, and re-verify it on every load, refusing content
+      that is unpinned or has drifted from the reviewed version.
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-044
+    name: Verify referenced content immediately before model ingestion
+    description: >-
+      Perform a final verification immediately before model ingestion. Treat a missing
+      reference or a redirect to an unreviewed resource as a verification failure, and log
+      the resolved source, version, and content digest.
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-045
+    name: Prefer inlining external documentation over fetching it
+    description: >-
+      Prefer inlining over fetching: snapshot external documentation into the signed skill
+      package at publish time, so referenced content is reviewable and pinnable. When the
+      content must stay current, deliver updates through a controlled, auto-updating
+      marketplace channel with its own review and provenance, rather than pointing the
+      skill at an uncontrollable URL.
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-046
+    name: Allowlist permitted reference domains
+    description: >-
+      Allowlist permitted reference domains: using the OWASP Universal Agentic Skill
+      Format, restrict the external hosts a skill may fetch from to a vetted allowlist of
+      trusted, stable domains and URL globs unlikely to lapse or turn malicious.
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-047
+    name: Audit references transitively
+    description: >-
+      Audit references transitively: follow every reference - including remote ones and
+      the chains they point to - as part of the skill's attack surface, and make sure they
+      too are vetted, trusted, and reputable.
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-048
+    name: Maintain fleet-wide visibility of referenced sources
+    description: >-
+      Maintain fleet-wide visibility of referenced sources: keep an inventory of which
+      deployed skills fetch from which external sources, so a source that is later
+      compromised, changed, or abandoned can be traced to every affected skill and
+      revoked.
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-049
+    name: Rescan external instruction sources continuously
+    description: >-
+      Rescan continuously: when a skill fetches an external instruction source, treat each
+      scan not as a one-time event but as a snapshot of a mutable state, and rescan often.
+    hasRelatedRisk:
+      - ast05-untrusted-external-instructions
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-050
+    name: Bind agent control interfaces to localhost with authentication
+    description: >-
+      Bind agent control interfaces to localhost with authentication; never bind to
+      0.0.0.0 by default.
+    hasRelatedRisk:
+      - ast06-weak-isolation
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-051
+    name: Apply seccomp or AppArmor profiles
+    description: >-
+      Apply seccomp or AppArmor profiles to constrain the agent syscall surface.
+    hasRelatedRisk:
+      - ast06-weak-isolation
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-052
+    name: Implement per-skill process isolation
+    description: >-
+      Implement per-skill process isolation so that each skill runs in its own namespace.
+    hasRelatedRisk:
+      - ast06-weak-isolation
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-053
+    name: Restrict skill hot-reload and workspace precedence
+    description: >-
+      Restrict skill hot-reload and workspace precedence; require explicit user
+      confirmation for workspace skill overrides.
+    hasRelatedRisk:
+      - ast06-weak-isolation
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-054
+    name: Rate-limit and authenticate all WebSocket connections
+    description: >-
+      Rate-limit and authenticate all WebSocket connections, including those originating
+      from localhost.
+    hasRelatedRisk:
+      - ast06-weak-isolation
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-055
+    name: Separate writable state by agent or trust zone
+    description: >-
+      Separate writable state by agent or trust zone. When state must be shared, preserve
+      provenance and validate artifacts before another agent consumes them.
+    hasRelatedRisk:
+      - ast06-weak-isolation
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-056
+    name: Require signature verification on every skill update
+    description: >-
+      Require cryptographic signature verification on every update and refuse unsigned
+      updates.
+    hasRelatedRisk:
+      - ast07-update-drift
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-057
+    name: Implement a freeze mode for production deployments
+    description: >-
+      Implement a "freeze" mode for production deployments and prohibit hot-reload in
+      non-development environments.
+    hasRelatedRisk:
+      - ast07-update-drift
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-058
+    name: Subscribe to registry advisories and alert on CVE matches
+    description: >-
+      Subscribe to registry security advisories and auto-alert on CVE matches for
+      installed skills.
+    hasRelatedRisk:
+      - ast07-update-drift
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-059
+    name: Validate necessary changes through a semantic security check
+    description: >-
+      For cases where changes are necessary, validate all changes through a semantic
+      security check and make sure any substantive changes are validated with humans in the
+      loop.
+    hasRelatedRisk:
+      - ast07-update-drift
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-060
+    name: Require human approval for skill installations and updates
+    description: >-
+      Enforce a human-in-the-loop approval step for any skill update in enterprise
+      environments, and implement an approval workflow for all skill installations,
+      treating skills as software requiring security review.
+    hasRelatedRisk:
+      - ast07-update-drift
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-061
+    name: Maintain a centralized inventory of installed skills
+    description: >-
+      Establish a centralized skill inventory recording name, version, hash, install date,
+      installer identity, last scan status, and last-verified timestamp for every
+      installed skill.
+    hasRelatedRisk:
+      - ast07-update-drift
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-062
+    name: Deploy behavioral analysis scanners that evaluate intent
+    description: >-
+      Deploy behavioral analysis scanners that evaluate intent, not just signatures, using
+      calibrated models combined with deterministic rules. Agent-skill-aware scanners pair
+      fast static checks with optional LLM semantic analysis for exactly this purpose.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-063
+    name: Scan the code layer and the natural-language layer independently
+    description: >-
+      Scan both the code layer and the natural-language instruction layer independently,
+      recognising that shell text crosses that boundary: fenced blocks and inline commands
+      in SKILL.md are instruction-layer text that is executable-layer content, as are
+      tool-invocation fields and build and CI definitions. When analyzing shell text, parse
+      it as the shell does rather than matching raw text, and score it based on its
+      grammatical position within the parsed command. POSIX shells perform quote removal
+      last and split fields on IFS after parameter expansion, so obfuscated forms reach the
+      shell as commands that a rule matching the literal verb never encountered. Statically
+      resolve expansions and never execute them: evaluating attacker-supplied expansions is
+      code execution within the scanner.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-064
+    name: Analyze each progressive-disclosure tier as a distinct trust surface
+    description: >-
+      Analyze each progressive-disclosure tier as a distinct trust surface, cut by how
+      certainly content reaches the model rather than by content type. The metadata tier is
+      loaded for every installed skill before any invocation, so score it against its own
+      threshold rather than resolving it into a whole-bundle verdict where benign volume
+      outweighs it. Record which tier each finding sits in and state tier coverage
+      explicitly: a frontmatter parse failure can leave the always-in-context tier
+      unanalyzed while the scan still reports a result.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-065
+    name: Implement multi-tool scanning pipelines
+    description: >-
+      Implement multi-tool scanning pipelines combining pattern matching, semantic
+      analysis, and a behavioral sandbox. Test skills in isolated sandboxes, observe actual
+      runtime behavior, and compare it against declared behavior.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-066
+    name: Treat scanner-skill results as advisory only
+    description: >-
+      Treat scanner skill results as advisory only; never use a skill-based scanner as the
+      sole gate.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-067
+    name: Continuously re-scan installed skills as scanners improve
+    description: >-
+      Continuously re-scan installed skills as scanner models improve, not just at install
+      time.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-068
+    name: Scan the entire skill directory exhaustively and emit a coverage record
+    description: >-
+      Scan the entire skill directory exhaustively - every file, not just those referenced
+      by SKILL.md: hidden files, compiled binaries (.pyc), archives (.docx or ZIP), and
+      images that can carry multimodal injection. Normalize and strip padding before
+      analysis, declare every scope bound, and record its exhaustion as INCOMPLETE rather
+      than silently truncating, because cost-driven scope reduction is itself attack
+      surface. Require every scan to emit a machine-readable coverage record identifying
+      discovered artifacts and hashes, per-artifact analyzer status, unsupported or skipped
+      formats, archive and external-reference handling, and any timeout, truncation, parser
+      failure, or resource-limit event, using distinct outcomes such as PASS, FAIL, and
+      INCOMPLETE. Zero findings may be reported as clean only when all coverage required by
+      the selected scan profile completed successfully.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-069
+    name: Run every detection rule over the normalized view as well as the raw bytes
+    description: >-
+      Run every detection rule over the normalized view as well as the raw bytes.
+      Normalization and confusable folding are distinct operations and both are required:
+      NFKC folds compatibility variants such as fullwidth and mathematical alphanumerics
+      but leaves cross-script homoglyphs unchanged, and neither removes invisible
+      characters. As a separate step, strip zero-width characters, bidirectional
+      embedding, override and isolate controls (U+202A-U+202E, U+2066-U+2069), variation
+      selectors and tag characters (U+E0000-U+E007F), then re-match. Reporting the anomaly
+      is not detecting the payload: a byte- or line-oriented rule cannot match a keyword
+      split by an inserted zero-width character or spelled with a homoglyph. Decode
+      embedded encodings iteratively and re-scan each layer until no further decoding
+      applies, under an explicit depth and size bound; bound exhaustion or decoder failure
+      is an INCOMPLETE coverage event, not a clean result. Report findings against the raw
+      artifact, retaining the normalized view as evidence.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-070
+    name: Type the scanner's finding-suppression allowlist by direction
+    description: >-
+      Type the scanner's own finding-suppression allowlist by direction. A reputation-based
+      trusted-infrastructure list may suppress findings about where code or content is
+      fetched from, and only where the specific resource is not writable by arbitrary
+      parties - a pinned path or a digest-identified artifact, not any user path on the
+      same host. It must never suppress a finding about where data is sent: the same
+      providers host anonymously writable gists, repositories, object-storage buckets,
+      paste pages and webhook endpoints, which are documented exfiltration and dead-drop
+      channels. Exempt an egress destination only through a per-skill entry naming the
+      specific resource, never through shared host reputation and never by inheritance.
+      Compare only the host component of a parsed URL. Where the direction of a flow cannot
+      be determined, do not suppress. Record every suppression, and the entry that caused
+      it, in the coverage record.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-071
+    name: Treat the scanner's own model as an injectable component
+    description: >-
+      Treat the scanner's own LLM as an injectable, attackable component: isolate untrusted
+      skill content from the analyzer's instructions, and never let skill-supplied prose -
+      explanatory comments, "corporate standard" framing - steer the verdict.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-072
+    name: Report false-positive performance alongside detection performance
+    description: >-
+      Report false-positive performance alongside detection performance, measured against a
+      benign corpus of real, widely installed skills, and specify the corpus size and
+      provenance. Detection rate and bypass rate both measure only missed attacks and are
+      optimized by convicting everything, so neither constrains over-flagging. Report per
+      rule rather than in aggregate, because a single over-firing rule can dominate an
+      entire result set. Since confirmed-malicious skills are a small fraction of a live
+      registry, even a low single-digit false-positive rate can produce more false
+      convictions than true ones. Demote common indicators such as credential references,
+      external URLs, egress verbs, and subprocess execution to informational, never a
+      standalone conviction, retaining them only as a conjunct in a resolved flow.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-073
+    name: Treat the backbone model as a controlled, re-evaluable security dependency
+    description: >-
+      Treat the backbone model at each skill-execution node as a controlled, re-evaluable
+      security dependency rather than a neutral interpreter: select and periodically
+      re-validate the injection resistance of the model that actually executes the skill,
+      especially at action-taking or otherwise privileged nodes, and do not assume a skill
+      approved under one model remains safe under another. Model choice complements signing
+      and scanning; it does not replace them.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-074
+    name: Retain an integrity-protected evaluation record per scan result
+    description: >-
+      Retain an integrity-protected, host- or evaluator-generated record tying each result
+      to the skill digest, model and version, policy and toolset versions or digests,
+      privilege level, evaluation suite and version, date, known limits, and re-test
+      trigger. If the live runtime no longer matches that profile, require re-evaluation,
+      reduce privileges, require scoped approval, or refuse execution.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-075
+    name: Use Agent Threat Rules as a supplementary shareable detection layer
+    description: >-
+      Use Agent Threat Rules (ATR) as a supplementary, shareable detection layer for
+      agent-specific behaviors and indicators, combined with semantic and behavioral
+      analysis rather than treated as a complete scanner. Shareable rules are only as good
+      as the text they are matched against: published ATR rules are case-insensitive regex
+      over a raw content field with no normalization and no positional model, so pair them
+      with canonicalization and shell-parsing requirements.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-076
+    name: Evaluate scanners against an adaptive adversary
+    description: >-
+      Evaluate scanners against an adaptive adversary, not only a fixed malicious corpus:
+      give the red team query or white-box access to the scanner and report the bypass rate
+      alongside the detection rate. Without this a scanner can post a high detection rate
+      and remain trivially evadable; the underlying adversarial-ML result is that
+      non-adaptive evaluation overstates a detector's robustness.
+    hasRelatedRisk:
+      - ast08-poor-scanning
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-077
+    name: Restrict skill installation pathways by role
+    description: >-
+      Restrict skill installation pathways by excluding high-risk roles from performing
+      skill installs or accessing open-source skill repositories.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-078
+    name: Apply agentic identity controls
+    description: >-
+      Apply agentic identity controls: assign non-human identities (NHIs) to agents with
+      scoped credentials, and rotate them on a schedule.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-079
+    name: Apply identity-first, posture-based discovery for unscannable skills
+    description: >-
+      Apply identity-first, posture-based discovery for skills you cannot scan: enumerate
+      shadow skills from SaaS identity and posture telemetry (OAuth grants, connected-app
+      inventories, NHI activity, scope assignments) rather than endpoint or registry
+      scanning, and reconcile each candidate against the approved inventory so unmatched
+      identities surface.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-080
+    name: Treat permission and scope drift as a discovery signal
+    description: >-
+      Treat permission and scope drift as a continuing discovery signal: a new consent
+      grant, widened OAuth scope, or fresh app-to-app connection flags a skill install or
+      privilege change and should feed the existing inventory and revocation workflows.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-081
+    name: Integrate skill governance into CMDB, ITSM, and CASB tooling
+    description: >-
+      Integrate skill governance into existing CMDB, ITSM, and CASB tooling.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-082
+    name: Establish a formal skill revocation process
+    description: >-
+      Establish a formal skill revocation process tied to offboarding and incident response
+      playbooks.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-083
+    name: Treat every inter-agent hand-off as an untrusted trust boundary
+    description: >-
+      Treat every inter-agent hand-off as an untrusted trust boundary: re-establish
+      instruction-versus-data provenance at each relay rather than merely logging it.
+      Upstream skill or agent output must be consumed as untrusted data downstream, since
+      provenance recorded only for audit does not stop propagation.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-084
+    name: Practice deliberate relay-node backbone-model placement
+    description: >-
+      Practice deliberate relay-node backbone-model placement: assign the most
+      injection-resistant backbone model to relay and write (action-taking) nodes, and
+      record backbone-model assignment per node in the skill inventory so a model swap at a
+      relay is a governed change.
+    hasRelatedRisk:
+      - ast09-no-governance
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-085
+    name: Adopt the Universal Agentic Skill Format
+    description: >-
+      Adopt the OWASP Universal Agentic Skill Format for all new skill development. The
+      format standardizes identity, signatures, content hashes, permissions, denied write
+      paths, network allowlists, required tools, risk tier, scan status, and changelog
+      metadata in one manifest that can be validated independently of any single platform.
+      Authors declare the complete skill package in the manifest, sign the canonical
+      content hash, and publish that signed metadata with the skill; registries and
+      enterprise mirrors verify the signature, compare requested permissions against
+      policy, inspect scan status, and preserve the metadata when porting the skill across
+      platforms. Evaluation precedence is default-deny, and deny_write always wins over
+      write for any path it lists.
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-086
+    name: Require full security metadata re-validation when porting skills
+    description: >-
+      When porting skills across platforms, require a full security metadata
+      re-validation - never assume equivalence. The project ships a browser-only
+      cross-platform metadata loss simulator that takes a source manifest and a ported
+      target manifest, normalizes fields, highlights lost or weakened security properties
+      (for example an allowlisted egress replaced by network true), and exports a
+      machine-readable JSON report suitable for pull requests or ticket evidence.
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-087
+    name: Establish cross-registry threat intelligence sharing
+    description: >-
+      Establish cross-registry threat intelligence sharing between major skill registries.
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-088
+    name: Build platform-agnostic skill scanners
+    description: >-
+      Build platform-agnostic skill scanners that evaluate the content layer independently
+      of the runtime.
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action
+
+  - id: owasp-ast10-act-089
+    name: Normalize security metadata fields across platform formats
+    description: >-
+      Normalize risk_tier, permissions, and signature fields across all platform-specific
+      skill formats.
+    hasRelatedRisk:
+      - ast10-cross-platform-reuse
+    hasDocumentation:
+      - owasp-agentic-skills-top-10-whitepaper-v1
+    isDefinedByTaxonomy: owasp-ast10
+    type: Action

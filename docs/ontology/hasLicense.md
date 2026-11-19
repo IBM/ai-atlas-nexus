@@ -15,36 +15,37 @@ URI: [airo:hasLicense](https://w3id.org/airo#hasLicense)
 
 ## Applicable Classes
 
-| Name                                                    | Description                                                                      | Modifies Slot |
-| ------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
-| [Dataset](Dataset.md)                                   | A body of structured information describing some topic(s) of interest            | no            |
-| [Documentation](Documentation.md)                       | Documented information about a concept or other topic(s) of interest             | no            |
-| [Vocabulary](Vocabulary.md)                             | A collection of terms, with their definitions and relationships                  | no            |
-| [Taxonomy](Taxonomy.md)                                 | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
-| [RiskTaxonomy](RiskTaxonomy.md)                         | A taxonomy of AI system related risks                                            | no            |
-| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | A taxonomy of AI system related risk controls groups                             | no            |
-| [BaseAi](BaseAi.md)                                     | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
-| [AiTaskTaxonomy](AiTaskTaxonomy.md)                     | A taxonomy of AI Tasks                                                           | no            |
-| [AiEval](AiEval.md)                                     | An AI Evaluation, e                                                              | no            |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
-| [Adapter](Adapter.md)                                   | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
-| [AiSystem](AiSystem.md)                                 | A compound AI System composed of one or more AI capablities                      | no            |
-| [AiAgent](AiAgent.md)                                   | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
-| [AiModel](AiModel.md)                                   | A base AI Model class                                                            | no            |
-| [LargeLanguageModel](LargeLanguageModel.md)             | A large language model (LLM) is an AI model which supports a range of languag... | no            |
-| [Question](Question.md)                                 | An evaluation where a question has to be answered                                | no            |
-| [Questionnaire](Questionnaire.md)                       | A questionnaire groups questions                                                 | no            |
+| Name                                                            | Description                                                                      | Modifies Slot |
+| --------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------- |
+| [Dataset](Dataset.md)                                           | A body of structured information describing some topic(s) of interest            | no            |
+| [Documentation](Documentation.md)                               | Documented information about a concept or other topic(s) of interest             | no            |
+| [Vocabulary](Vocabulary.md)                                     | A collection of terms, with their definitions and relationships                  | no            |
+| [Taxonomy](Taxonomy.md)                                         | A hierachical taxonomy of concepts, with their definitions and relationships     | no            |
+| [RiskTaxonomy](RiskTaxonomy.md)                                 | A taxonomy of AI system related risks                                            | no            |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)         | A taxonomy of AI system related risk controls groups                             | no            |
+| [BaseAi](BaseAi.md)                                             | Any type of AI, be it a LLM, RL agent, SVM, etc                                  | no            |
+| [AiTaskTaxonomy](AiTaskTaxonomy.md)                             | A taxonomy of AI Tasks                                                           | no            |
+| [AiEval](AiEval.md)                                             | An AI Evaluation, e                                                              | no            |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)               | Benchmark metadata cards offer a standardized way to document LLM benchmarks ... | no            |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md) | A taxonomy of Ai Evaluation Standards                                            | no            |
+| [Adapter](Adapter.md)                                           | Adapter-based methods add extra trainable parameters after the attention and ... | no            |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)                     | A taxonomy of AI capabilities describing the abilities of AI systems             | no            |
+| [AiSystem](AiSystem.md)                                         | A compound AI System composed of one or more AI capablities                      | no            |
+| [AiAgent](AiAgent.md)                                           | An artificial intelligence (AI) agent refers to a system or program that is c... | no            |
+| [AiModel](AiModel.md)                                           | A base AI Model class                                                            | no            |
+| [LargeLanguageModel](LargeLanguageModel.md)                     | A large language model (LLM) is an AI model which supports a range of languag... | no            |
+| [Question](Question.md)                                         | An evaluation where a question has to be answered                                | no            |
+| [Questionnaire](Questionnaire.md)                               | A questionnaire groups questions                                                 | no            |
 
 ## Properties
 
 ### Type and Range
 
-| Property  | Value                                                                                                                                                                                                                                                                                                                                                             |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Range     | [License](License.md)                                                                                                                                                                                                                                                                                                                                             |
-| Domain Of | [Dataset](Dataset.md), [Documentation](Documentation.md), [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [RiskTaxonomy](RiskTaxonomy.md), [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md), [BaseAi](BaseAi.md), [AiTaskTaxonomy](AiTaskTaxonomy.md), [AiEval](AiEval.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [Adapter](Adapter.md) |
-| Slot URI  | [airo:hasLicense](https://w3id.org/airo#hasLicense)                                                                                                                                                                                                                                                                                                               |
+| Property  | Value                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Range     | [License](License.md)                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Domain Of | [Dataset](Dataset.md), [Documentation](Documentation.md), [Vocabulary](Vocabulary.md), [Taxonomy](Taxonomy.md), [RiskTaxonomy](RiskTaxonomy.md), [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md), [BaseAi](BaseAi.md), [AiTaskTaxonomy](AiTaskTaxonomy.md), [AiEval](AiEval.md), [BenchmarkMetadataCard](BenchmarkMetadataCard.md), [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md), [Adapter](Adapter.md) |
+| Slot URI  | [airo:hasLicense](https://w3id.org/airo#hasLicense)                                                                                                                                                                                                                                                                                                                                                                                |
 
 ### Cardinality and Requirements
 
@@ -84,6 +85,7 @@ domain_of:
 - AiTaskTaxonomy
 - AiEval
 - BenchmarkMetadataCard
+- AiEvaluationStandardTaxonomy
 - Adapter
 range: License
 

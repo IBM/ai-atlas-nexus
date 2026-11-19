@@ -1,7 +1,7 @@
 taxonomies:
   - id: hf-ml-tasks
     name: Hugging Face ML Tasks
-    type: Taxonomy
+    type: AiTaskTaxonomy
     description: >-
       Hugging Face is the home for all Machine Learning tasks. Here you can find what you need to get started with a task:
       demos, use cases, models, datasets, and more!
@@ -12,21 +12,27 @@ taxonomies:
 groups:
   - id: hf-ml-tasks-group-multimodal
     name: Mutimodal
+    type: AiTaskGroup
     isDefinedByTaxonomy: hf-ml-tasks
   - id: hf-ml-tasks-group-nlp
     name: Natural Language Processing
+    type: AiTaskGroup
     isDefinedByTaxonomy: hf-ml-tasks
   - id: hf-ml-tasks-group-computer-vision
     name: Computer Vision
+    type: AiTaskGroup
     isDefinedByTaxonomy: hf-ml-tasks
   - id: hf-ml-tasks-group-audio
     name: Audio
+    type: AiTaskGroup
     isDefinedByTaxonomy: hf-ml-tasks
   - id: hf-ml-tasks-group-tabular
     name: Tabular
+    type: AiTaskGroup
     isDefinedByTaxonomy: hf-ml-tasks
   - id: hf-ml-tasks-group-reinforcement-learning
     name: Reinforcement Learning
+    type: AiTaskGroup
     isDefinedByTaxonomy: hf-ml-tasks
 
 aitasks:

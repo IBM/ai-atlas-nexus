@@ -147,30 +147,31 @@ URI: [airo:License](https://w3id.org/airo#License)
 
 ## Usages
 
-| used by                                                 | used in                             | type  | used                  |
-| ------------------------------------------------------- | ----------------------------------- | ----- | --------------------- |
-| [Container](Container.md)                               | [licenses](licenses.md)             | range | [License](License.md) |
-| [Organization](Organization.md)                         | [grants_license](grants_license.md) | range | [License](License.md) |
-| [Dataset](Dataset.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Documentation](Documentation.md)                       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Vocabulary](Vocabulary.md)                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Taxonomy](Taxonomy.md)                                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [RiskTaxonomy](RiskTaxonomy.md)                         | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md) | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [CapabilityTaxonomy](CapabilityTaxonomy.md)             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [BaseAi](BaseAi.md)                                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiSystem](AiSystem.md)                                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiAgent](AiAgent.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiModel](AiModel.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [LargeLanguageModel](LargeLanguageModel.md)             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiTaskTaxonomy](AiTaskTaxonomy.md)                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiProvider](AiProvider.md)                             | [grants_license](grants_license.md) | range | [License](License.md) |
-| [AiEval](AiEval.md)                                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Question](Question.md)                                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Questionnaire](Questionnaire.md)                       | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [Adapter](Adapter.md)                                   | [hasLicense](hasLicense.md)         | range | [License](License.md) |
-| [AiOffice](AiOffice.md)                                 | [grants_license](grants_license.md) | range | [License](License.md) |
+| used by                                                         | used in                             | type  | used                  |
+| --------------------------------------------------------------- | ----------------------------------- | ----- | --------------------- |
+| [Container](Container.md)                                       | [licenses](licenses.md)             | range | [License](License.md) |
+| [Organization](Organization.md)                                 | [grants_license](grants_license.md) | range | [License](License.md) |
+| [Dataset](Dataset.md)                                           | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Documentation](Documentation.md)                               | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Vocabulary](Vocabulary.md)                                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Taxonomy](Taxonomy.md)                                         | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [RiskTaxonomy](RiskTaxonomy.md)                                 | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [RiskControlGroupTaxonomy](RiskControlGroupTaxonomy.md)         | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [CapabilityTaxonomy](CapabilityTaxonomy.md)                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [BaseAi](BaseAi.md)                                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiSystem](AiSystem.md)                                         | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiAgent](AiAgent.md)                                           | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiModel](AiModel.md)                                           | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [LargeLanguageModel](LargeLanguageModel.md)                     | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiTaskTaxonomy](AiTaskTaxonomy.md)                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiProvider](AiProvider.md)                                     | [grants_license](grants_license.md) | range | [License](License.md) |
+| [AiEval](AiEval.md)                                             | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [BenchmarkMetadataCard](BenchmarkMetadataCard.md)               | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Question](Question.md)                                         | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Questionnaire](Questionnaire.md)                               | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiEvaluationStandardTaxonomy](AiEvaluationStandardTaxonomy.md) | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [Adapter](Adapter.md)                                           | [hasLicense](hasLicense.md)         | range | [License](License.md) |
+| [AiOffice](AiOffice.md)                                         | [grants_license](grants_license.md) | range | [License](License.md) |
 
 ## Identifier and Mapping Information
 
@@ -223,12 +224,14 @@ attributes:
     slot_uri: schema:version
     owner: License
     domain_of:
+    - Entity
     - License
     - Vocabulary
     - Taxonomy
     - RiskTaxonomy
     - RiskControlGroupTaxonomy
     - AiTaskTaxonomy
+    - AiEvaluationStandardTaxonomy
     range: string
   id:
     name: id

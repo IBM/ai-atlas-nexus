@@ -18,6 +18,14 @@ organizations:
       search engine technology, email, cloud computing, software, quantum computing, e-commerce, consumer electronics, and
       artificial intelligence.
 
+aimodelfamilies:
+  - id: shieldgemma
+    hasDocumentation:
+      - shieldgemma-paper
+    description: >
+      ShieldGemma is a series of safety content moderation models built upon Gemma 2 that target four harm categories (sexually explicit, dangerous content, hate, and harassment). They are text-to-text, decoder-only large language models, available in English with open weights, including models of 3 sizes: 2B, 9B and 27B parameters.
+    url: https://gemma.ai/models/shieldgemma/model-card-v1/
+
 aimodels:
   - id: shieldgemma-2b
     name: ShieldGemma 2B
