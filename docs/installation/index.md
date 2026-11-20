@@ -1,6 +1,6 @@
-This project targets python version ">=3.11, <3.12". You can download specific versions of python here: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+This project targets python version ">=3.11, <=3.14.7". You can download specific versions of python here: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-**Note:** Replace `INFERENCE_LIB` with one of the LLM inference library [ollama, vllm, wml, rits] as explained [here](#install-for-inference-apis)
+**Note:** Replace `INFERENCE_LIB` with `ollama`, `vllm`, `wml` or `bedrock` (see [inference APIs](#install-for-inference-apis)). OpenAI, Hugging Face and RITS need no extra.
 
 To install the current release
 
@@ -20,18 +20,21 @@ pip install -e ".[INFERENCE_LIB]"
 
 ### Install for inference APIs
 
-AI Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:
+Risk, task and domain identification call a Large Language Model (LLM). AI Atlas Nexus supports these inference APIs:
 
 - [IBM Watsonx AI](https://www.ibm.com/products/watsonx-ai) (Watson Machine Learning)
 - [Ollama](https://ollama.com/)
 - [vLLM](https://docs.vllm.ai/en/latest/)
+- [OpenAI](https://platform.openai.com/) (and OpenAI-compatible endpoints)
+- [AWS Bedrock](https://aws.amazon.com/bedrock/)
+- [Hugging Face](https://huggingface.co/docs/inference-providers) Inference Providers
 - [RITS](https://rits.fmaas.res.ibm.com) (IBM Internal Only)
 
 #### IBM Watsonx AI (WML)
 
 When using the WML platform, you need to:
 
-1. Add configuration to `.env` file as follows. Please follow this [documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-credentials.html?context=wx&locale=en) on obtaining WML credentials.
+1. Add following variables to the configuration file `.env` or set them as environment variables. Please follow this [documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-credentials.html?context=wx&locale=en) on obtaining WML credentials.
 
 ```yaml
 WML_API_KEY=<WML api key goes here>
@@ -48,6 +51,8 @@ Either 'WML_PROJECT_ID' or 'WML_SPACE_ID' need to be specified.
 pip install -e ".[wml]"
 ```
 
+**Note**: WML utilizes the function-calling feature for structured outputs. Since the AI Atlas Nexus APIs extensively use structured output, your WML model must support tool calling to be compatible with the AI Atlas Nexus APIs.
+
 #### Ollama
 
 When using the Ollama inference, you need to:
@@ -61,6 +66,8 @@ pip install -e ".[ollama]"
 2. Please follow the [quickstart](https://github.com/ollama/ollama/blob/main/README.md#ollama) guide to start Ollama LLM server. Server will start by default at http://localhost:11434
 
 3. When selecting Ollama engine in AI Atlas Nexus, use the server address `localhost:11434` as the `api_url` in the credentials or set the environment variable `OLLAMA_API_URL` with this value.
+
+4. The API will automatically download the OLLAMA model if it is not present. Large models may take a long time to download. Set `auto_download_model` to False to disable this behavior.
 
 #### vLLM
 
@@ -86,6 +93,47 @@ The CUSTOM_API_KEY can be any string that you choose to use as your API key. Abo
 
 **Note:** When selecting vLLM engine in AI Atlas Nexus, pass `api_url` as `host:port` and given `api_key` to `credentials` with values from the vllm serve command above.
 
+#### OpenAI
+
+Set these in `.env`, in the environment, or in `credentials`:
+
+```yaml
+OPENAI_API_KEY=<OpenAI api key goes here>
+OPENAI_API_URL=<Optional, defaults to https://api.openai.com/v1; set it to use an OpenAI-compatible endpoint>
+```
+
+The base install is enough.
+
+#### AWS Bedrock
+
+Bedrock runs `openai.*` models through `invoke_model`.
+
+1. Set these in `.env`, in the environment, or in `credentials`:
+
+```yaml
+AWS_ACCESS_KEY_ID=<AWS access key id goes here>
+AWS_SECRET_ACCESS_KEY=<AWS secret access key goes here>
+AWS_DEFAULT_REGION=<Optional, defaults to us-east-1>
+```
+
+2. Install Bedrock dependencies as follows:
+
+```command
+pip install -e ".[bedrock]"
+```
+
+#### Hugging Face
+
+Set these in `.env`, in the environment, or in `credentials`:
+
+```yaml
+HF_TOKEN=<Hugging Face access token goes here>
+HF_API_URL=<Optional, defaults to https://router.huggingface.co/v1>
+HF_ORG=<Optional, organization to bill>
+```
+
+The base install is enough.
+
 #### RITS (IBM Internal Only)
 
 When using the RITS platform, you need to:
@@ -97,11 +145,7 @@ RITS_API_KEY=<RITS api key goes here>
 RITS_API_URL=<RITS url key goes here>
 ```
 
-2. Install RITS dependencies as follows:
-
-```command
-pip install -e ".[rits]"
-```
+2. The base install is enough.
 
 ## AI Atlas Nexus Extensions
 
