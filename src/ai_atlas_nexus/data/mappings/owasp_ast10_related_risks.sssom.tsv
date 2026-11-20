@@ -2,7 +2,7 @@
 #   owasp-ast10: https://owasp.org/www-project-agentic-skills-top-10/
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
-# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_related_risks.tsv
+# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/mappings/owasp_ast10_related_risks.sssom.tsv
 # mapping_set_description: Related Agentic Skill Risks stated in each section of the OWASP Agentic Skills Top 10 whitepaper V1. Each comment is the whitepaper's own explanation of the relationship; both directions are recorded where the whitepaper states both.
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2026-08-24'

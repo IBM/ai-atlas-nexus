@@ -3,7 +3,7 @@
 #   owasp-llm-2.0: https://owasp.org/www-project-top-10-for-large-language-model-applications/
 #   skos: http://www.w3.org/2004/02/skos/core#
 #   semapv: https://w3id.org/semapv/vocab/
-#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aiuc1_to_owasp_llm_from_tsv_data.tsv
+#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/aiuc1_to_owasp_llm_from_tsv_data.sssom.tsv
 #mapping_set_description: Mapping from AIUC-1 Framework to OWASP Top 10 for LLM Applications 2025
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: '2026-02-16'

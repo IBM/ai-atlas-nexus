@@ -6,7 +6,7 @@
 #  semapv: https://w3id.org/semapv/vocab/
 #  skos: http://www.w3.org/2004/02/skos/core#
 #  nexus: https://w3id.org/ai-atlas-nexus/
-#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/owasp_asi2ibm_risk_atlas.tsv
+#mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/owasp_asi2ibm_risk_atlas.sssom.tsv
 #mapping_set_description: Mapping from OWASP Top 10 for Agentic Applications 2026 to IBM AI Risk Atlas, Granite Guardian and AIUC-1
 #license: https://www.apache.org/licenses/LICENSE-2.0.html
 #mapping_date: "2026-06-17"

@@ -3,7 +3,7 @@
 #   semapv: https://w3id.org/semapv/vocab/
 #   skos: http://www.w3.org/2004/02/skos/core#
 #   owasp-llm-2.0: https://owasp.org/www-project-top-10-for-large-language-model-applications/
-# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/ibm2owasp.tsv
+# mapping_set_id: https://github.com/IBM/ai-atlas-nexus/tree/main/src/data/mappings/ibm2owasp.sssom.tsv
 # mapping_set_description: Mapping of IBM AI Risk Atlas to OWASP Gen AI Top 10 2025
 # license: https://www.apache.org/licenses/LICENSE-2.0.html
 # mapping_date: '2025-01-27'
