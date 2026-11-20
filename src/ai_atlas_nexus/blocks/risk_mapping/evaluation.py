@@ -45,9 +45,12 @@ def load_curated_mappings(
     if not path.exists():
         if filename.endswith(".sssom.tsv"):
             alt = filename.removesuffix(".sssom.tsv") + ".tsv"
-        else:
+        elif filename.endswith(".tsv"):
             alt = filename.removesuffix(".tsv") + ".sssom.tsv"
-        path = _MAPPINGS_DIR / alt
+        else:
+            alt = None
+        if alt and (_MAPPINGS_DIR / alt).exists():
+            path = _MAPPINGS_DIR / alt
     msdf = drop_no_match_rows(parse_sssom_table(file_path=str(path)))
     mapping_set = msdf.to_mapping_set()
     mappings = [
