@@ -343,7 +343,7 @@ Name: ai-risk-ontology
 | [text](text.md)                                                                           | The question itself                                                              |
 | [thirdpartyevaluationengagements](thirdpartyevaluationengagements.md)                     | A list of third-party evaluation engagements                                     |
 | [training_data_preprocessing](training_data_preprocessing.md)                             |                                                                                  |
-| [type](type.md)                                                                           | The type or class designation of this entity instance                            |
+| [type](type.md)                                                                           | The class of this instance, used to select the class when loading data           |
 | [url](url.md)                                                                             | An optional URL associated with this instance                                    |
 | [usesEvaluation](usesEvaluation.md)                                                       | The benchmarks, metrics, or other AI evaluations run as part of the engagemen... |
 | [value](value.md)                                                                         | Some numeric or string value                                                     |

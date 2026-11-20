@@ -9,7 +9,7 @@ _A relationship where a term or a term group is defined by a vocabulary_
 
 <div data-search-exclude markdown="1">
 
-URI: [schema:isPartOf](http://schema.org/isPartOf)
+URI: [nexus:isDefinedByVocabulary](https://w3id.org/ai-atlas-nexus/isDefinedByVocabulary)
 
 <!-- no inheritance hierarchy -->
 
@@ -41,7 +41,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 | --------- | ------------------------------------------------------------------------------------------ |
 | Range     | [Vocabulary](Vocabulary.md)                                                                |
 | Domain Of | [Entry](Entry.md), [Term](Term.md), [Adapter](Adapter.md), [LLMIntrinsic](LLMIntrinsic.md) |
-| Slot URI  | [schema:isPartOf](http://schema.org/isPartOf)                                              |
+| Slot URI  | [nexus:isDefinedByVocabulary](https://w3id.org/ai-atlas-nexus/isDefinedByVocabulary)       |
 
 ### Cardinality and Requirements
 
@@ -58,8 +58,9 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 
 | Mapping Type | Mapped Value                |
 | ------------ | --------------------------- |
-| self         | schema:isPartOf             |
+| self         | nexus:isDefinedByVocabulary |
 | native       | nexus:isDefinedByVocabulary |
+| broad        | schema:isPartOf             |
 
 ## LinkML Source
 
@@ -68,8 +69,10 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 name: isDefinedByVocabulary
 description: A relationship where a term or a term group is defined by a vocabulary
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+broad_mappings:
+- schema:isPartOf
 rank: 1000
-slot_uri: schema:isPartOf
+slot_uri: nexus:isDefinedByVocabulary
 domain_of:
 - Entry
 - Term

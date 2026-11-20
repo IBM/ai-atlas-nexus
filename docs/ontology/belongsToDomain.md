@@ -9,7 +9,7 @@ _A relationship where a group belongs to a domain_
 
 <div data-search-exclude markdown="1">
 
-URI: [schema:isPartOf](http://schema.org/isPartOf)
+URI: [nexus:belongsToDomain](https://w3id.org/ai-atlas-nexus/belongsToDomain)
 
 <!-- no inheritance hierarchy -->
 
@@ -30,11 +30,11 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 
 ### Type and Range
 
-| Property  | Value                                                    |
-| --------- | -------------------------------------------------------- |
-| Range     | [Any](Any.md)                                            |
-| Domain Of | [Group](Group.md), [CapabilityGroup](CapabilityGroup.md) |
-| Slot URI  | [schema:isPartOf](http://schema.org/isPartOf)            |
+| Property  | Value                                                                    |
+| --------- | ------------------------------------------------------------------------ |
+| Range     | [Any](Any.md)                                                            |
+| Domain Of | [Group](Group.md), [CapabilityGroup](CapabilityGroup.md)                 |
+| Slot URI  | [nexus:belongsToDomain](https://w3id.org/ai-atlas-nexus/belongsToDomain) |
 
 ### Cardinality and Requirements
 
@@ -51,8 +51,9 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 
 | Mapping Type | Mapped Value          |
 | ------------ | --------------------- |
-| self         | schema:isPartOf       |
+| self         | nexus:belongsToDomain |
 | native       | nexus:belongsToDomain |
+| broad        | schema:isPartOf       |
 
 ## LinkML Source
 
@@ -61,8 +62,10 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 name: belongsToDomain
 description: A relationship where a group belongs to a domain
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+broad_mappings:
+- schema:isPartOf
 rank: 1000
-slot_uri: schema:isPartOf
+slot_uri: nexus:belongsToDomain
 domain_of:
 - Group
 - CapabilityGroup

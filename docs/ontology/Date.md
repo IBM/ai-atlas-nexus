@@ -34,7 +34,7 @@ URI: [xsd:date](http://www.w3.org/2001/XMLSchema#date)
 | Mapping Type | Mapped Value |
 | ------------ | ------------ |
 | self         | xsd:date     |
-| native       | nexus:date   |
+| native       | nexus:Date   |
 | exact        | schema:Date  |
 
 </div>

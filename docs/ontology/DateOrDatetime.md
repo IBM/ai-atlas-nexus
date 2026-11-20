@@ -30,9 +30,9 @@ URI: [linkml:DateOrDatetime](https://w3id.org/linkml/DateOrDatetime)
 
 ## Mappings
 
-| Mapping Type | Mapped Value           |
-| ------------ | ---------------------- |
-| self         | linkml:DateOrDatetime  |
-| native       | nexus:date_or_datetime |
+| Mapping Type | Mapped Value          |
+| ------------ | --------------------- |
+| self         | linkml:DateOrDatetime |
+| native       | nexus:DateOrDatetime  |
 
 </div>

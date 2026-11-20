@@ -224,9 +224,9 @@ URI: [nexus:Requirement](https://w3id.org/ai-atlas-nexus/Requirement)
 | [hasRequirementType](hasRequirementType.md)             | 0..1 <br/> [AIUC1RequirementType](AIUC1RequirementType.md)       | The requirement type of whether this is preventive, detective, etc               | direct              |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)           | 0..1 <br/> [Taxonomy](Taxonomy.md)                               | A relationship where a concept or a concept group is defined by a taxonomy       | direct              |
 | [hasRule](hasRule.md)                                   | \* <br/> [Rule](Rule.md)                                         | Relationship indicating the control activities (rules) of which the requireme... | direct              |
-| [type](type.md)                                         | 0..1 <br/> [String](String.md)                                   |                                                                                  | direct              |
 | [hasDocumentation](hasDocumentation.md)                 | \* <br/> [Documentation](Documentation.md)                       | Indicates documentation associated with an entity                                | [Rule](Rule.md)     |
 | [id](id.md)                                             | 1 <br/> [String](String.md)                                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [type](type.md)                                         | 0..1 <br/> [String](String.md)                                   | The class of this instance, used to select the class when loading data           | [Entity](Entity.md) |
 | [name](name.md)                                         | 0..1 <br/> [String](String.md)                                   | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                           | 0..1 <br/> [String](String.md)                                   | The description of an entity                                                     | [Entity](Entity.md) |
 | [url](url.md)                                           | 0..1 <br/> [Uri](Uri.md)                                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
@@ -296,35 +296,6 @@ slot_usage:
     description: Relationship indicating the control activities (rules) of which the
       requirement is composed.
     inlined: false
-attributes:
-  type:
-    name: type
-    from_schema: https://w3id.org/ai-atlas-nexus/ai_aiuc
-    designates_type: true
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
 
 ````
 </details>
@@ -345,35 +316,6 @@ slot_usage:
       requirement is composed.
     inlined: false
 attributes:
-  type:
-    name: type
-    from_schema: https://w3id.org/ai-atlas-nexus/ai_aiuc
-    designates_type: true
-    owner: Requirement
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
   hasApplication:
     name: hasApplication
     description: The application category, Optional or Mandatory.
@@ -456,8 +398,10 @@ attributes:
     description: A relationship where a concept or a concept group is defined by a
       taxonomy
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByTaxonomy
     owner: Requirement
     domain_of:
     - Concept
@@ -541,6 +485,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: Requirement
+    domain_of:
+    - Entity
+    range: string
   name:
     name: name
     description: A text name of this instance.

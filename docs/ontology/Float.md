@@ -32,7 +32,7 @@ URI: [xsd:float](http://www.w3.org/2001/XMLSchema#float)
 | Mapping Type | Mapped Value |
 | ------------ | ------------ |
 | self         | xsd:float    |
-| native       | nexus:float  |
+| native       | nexus:Float  |
 | exact        | schema:Float |
 
 </div>

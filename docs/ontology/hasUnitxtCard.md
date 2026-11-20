@@ -9,7 +9,7 @@ _A relationship to a Unitxt card defining the risk evaluation_
 
 <div data-search-exclude markdown="1">
 
-URI: [schema:url](http://schema.org/url)
+URI: [nexus:hasUnitxtCard](https://w3id.org/ai-atlas-nexus/hasUnitxtCard)
 
 <!-- no inheritance hierarchy -->
 
@@ -25,11 +25,11 @@ URI: [schema:url](http://schema.org/url)
 
 ### Type and Range
 
-| Property  | Value                               |
-| --------- | ----------------------------------- |
-| Range     | [Uri](Uri.md)                       |
-| Domain Of | [AiEval](AiEval.md)                 |
-| Slot URI  | [schema:url](http://schema.org/url) |
+| Property  | Value                                                                |
+| --------- | -------------------------------------------------------------------- |
+| Range     | [Uri](Uri.md)                                                        |
+| Domain Of | [AiEval](AiEval.md)                                                  |
+| Slot URI  | [nexus:hasUnitxtCard](https://w3id.org/ai-atlas-nexus/hasUnitxtCard) |
 
 ### Cardinality and Requirements
 
@@ -47,7 +47,7 @@ URI: [schema:url](http://schema.org/url)
 
 | Mapping Type | Mapped Value        |
 | ------------ | ------------------- |
-| self         | schema:url          |
+| self         | nexus:hasUnitxtCard |
 | native       | nexus:hasUnitxtCard |
 
 ## LinkML Source
@@ -58,7 +58,7 @@ name: hasUnitxtCard
 description: A relationship to a Unitxt card defining the risk evaluation
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-slot_uri: schema:url
+slot_uri: nexus:hasUnitxtCard
 domain_of:
 - AiEval
 range: uri
