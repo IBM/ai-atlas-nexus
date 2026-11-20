@@ -1,0 +1,286 @@
+id: https://w3id.org/ai-atlas-nexus/ai_risk
+name: ai_risk
+description: Vocabulary describing AI risks as used by IBM Risk Atlas
+default_curi_maps:
+  - semweb_context
+imports:
+  - linkml:types
+  - ./common
+  - ./ai_intrinsic
+prefixes:
+  linkml: https://w3id.org/linkml/
+  airo: https://w3id.org/airo#
+  nexus: https://w3id.org/ai-atlas-nexus/
+  dpv: https://w3id.org/dpv#
+  dpv-risk: https://w3id.org/dpv/risk#
+default_range: string
+default_prefix: nexus
+
+classes:
+  RiskTaxonomy:
+    is_a: Taxonomy
+    description: A taxonomy of AI system related risks
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  RiskControlGroupTaxonomy:
+    is_a: Taxonomy
+    description: A taxonomy of AI system related risk controls groups
+    slots:
+      - version
+      - hasDocumentation
+      - hasLicense
+
+  RiskControlGroup:
+    is_a: Group
+    description: A group of AI system related risk controls.
+    mixins:
+      - RiskConcept
+    slot_usage:
+      hasPart:
+        description: A relationship where a riskcontrolgroup has a risk control
+        range: RiskControl
+    slots:
+      - isDefinedByTaxonomy
+      - hasPart
+
+  RiskGroup:
+    is_a: Group
+    description: A group of AI system related risks that are part of a risk taxonomy.
+    mixins:
+      - RiskConcept
+    slot_usage:
+      hasPart:
+        description: A relationship where a riskgroup has a risk
+        range: Risk
+    slots:
+      - isDefinedByTaxonomy
+      - hasPart
+
+  Risk:
+    is_a: Entry
+    mixins:
+      - RiskConcept
+    description: The state of uncertainty associated with an AI system, that has the potential to cause harms
+    class_uri: airo:Risk
+    attributes:
+      tag:
+        description: A shost version of the name
+      risk_type:
+        description: Annotation whether an AI risk occurs at input or output or is non-technical.
+      phase:
+        description: Annotation whether an AI risk shows specifically during the training-tuning or inference phase.
+      descriptor:
+        description: Annotates whether an AI risk is a traditional risk, specific to or amplified by AI.
+        multivalued: true
+      concern:
+        description: Some explanation about the concern related to an AI risk
+    slot_usage:
+      isPartOf:
+        description: A relationship where a risk is part of a risk group
+        range: RiskGroup
+    slots:
+      - hasRelatedAction
+      - isDefinedByTaxonomy
+      - isPartOf
+      - detectsRiskConcept
+
+  RiskConcept:
+    is_a: Concept
+    mixin: true
+    description: An umbrella term for referring to risk, risk source, consequence and impact.
+    class_uri: airo:RiskConcept
+    slots:
+      - isDetectedBy
+      - isMitigatedBy
+      - isUsedWithinLocality
+
+  RiskControl:
+    is_a: Control
+    mixin: true
+    mixins:
+      - RiskConcept
+    class_uri: airo:RiskControl
+    description: A measure that maintains and/or modifies risk (and risk concepts)
+    slots:
+      - detectsRiskConcept
+      - mitigatesRiskConcept
+      - isDefinedByTaxonomy
+
+  Action:
+    is_a: RiskControl
+    description: Action to remediate a risk
+    attributes:
+    slot_usage:
+      hasRelatedRisk:
+        domain: Action
+        range: Risk
+    slots:
+      - hasRelatedRisk
+      - hasDocumentation
+      - isDefinedByTaxonomy
+      - hasAiActorTask
+
+  RiskIncident:
+    is_a: Entity
+    mixins:
+      - RiskConcept
+    class_uri: dpv-risk:Incident
+    description: An event occuring or occured which is a realised or materialised risk.
+    attributes:
+      author:
+        description: The author or authors of the incident report
+      source_uri:
+        description: The uri of the incident
+    slots:
+      - refersToRisk
+      - isDefinedByTaxonomy
+      - hasStatus
+      - hasSeverity
+      - hasLikelihood
+      - hasImpactOn
+      - hasConsequence
+      - hasImpact
+      - hasVariant
+
+  Impact:
+    is_a: Entity
+    mixins:
+      - RiskConcept
+    class_uri: dpv:Impact
+
+  IncidentStatus:
+    is_a: Entity
+    class_uri: dpv:IncidentStatus
+
+  IncidentConcludedclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentConcludedclass
+
+  IncidentHaltedclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentHaltedclass
+
+  IncidentMitigatedclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentMitigatedclass
+
+  IncidentNearMissclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentNearMissclass
+
+  IncidentOngoingclass:
+    is_a: IncidentStatus
+    class_uri: dpv:IncidentOngoingclass
+
+  Severity:
+    is_a: Entity
+    class_uri: dpv:Severity
+
+  Likelihood:
+    is_a: Entity
+    class_uri: dpv:Likelihood
+
+  Consequence:
+    is_a: Entity
+    class_uri: dpv:Consequence
+
+slots:
+  hasAiActorTask:
+    description: >-
+      Pertinent AI Actor Tasks for each subcategory. Not every AI Actor Task listed will apply to every suggested action
+      in the subcategory (i.e., some apply to AI development and others apply to AI deployment).
+    multivalued: true
+  hasRelatedAction:
+    description: A relationship where an entity relates to an action
+    range: Action
+    multivalued: true
+    inlined: false
+  detectsRiskConcept:
+    exact_mappings:
+      - airo:detectsRiskConcept
+    description: >-
+      The property airo:detectsRiskConcept indicates the control used for detecting risks, risk sources, consequences,
+      and impacts.
+    domain: RiskControl
+    range: RiskConcept
+    multivalued: true
+    inlined: false
+    inverse: isDetectedBy
+  isDetectedBy:
+    description: >-
+      A relationship where a risk, risk source, consequence, or impact is detected by a risk control.
+    domain: RiskConcept
+    range: RiskControl
+    multivalued: true
+    inlined: false
+    inverse: detectsRiskConcept
+  mitigatesRiskConcept:
+    exact_mappings:
+      - airo:mitigatesRiskConcept
+    description: >-
+      Indicates the control used for mitigating risks, risk sources, consequences, and impacts.
+    domain: RiskControl
+    range: RiskConcept
+    multivalued: true
+    inlined: false
+    inverse: isMitigatedBy
+  isMitigatedBy:
+    description: >-
+      A relationship where a risk, risk source, consequence, or impact is mitigated by a risk control.
+    domain: RiskConcept
+    range: RiskControl
+    multivalued: true
+    inlined: false
+    inverse: mitigatesRiskConcept
+  hasStatus:
+    description: >-
+      Indicates the status of specified concept
+    domain: RiskConcept
+    range: IncidentStatus
+  hasSeverity:
+    description: >-
+      Indicates the severity associated with a concept
+    domain: RiskConcept
+    range: Severity
+  hasLikelihood:
+    description: >-
+      The likelihood or probability or chance of something taking place or occuring
+    domain: RiskConcept
+    range: Likelihood
+  hasImpactOn:
+    description: >-
+      Indicates impact(s) possible or arising as consequences from specified concept
+    domain: RiskConcept
+    range: Impact
+    broad_mappings:
+      - dpv:hasConsequenceOn
+  hasConsequence:
+    description: >-
+      Indicates consequence(s) possible or arising from specified concept
+    domain: RiskConcept
+    range: Consequence
+  hasImpact:
+    description: >-
+      Indicates impact(s) possible or arising as consequences from specified concept
+    domain: RiskConcept
+    range: Impact
+    broad_mappings:
+      - dpv:hasConsequence
+  hasVariant:
+    description: >-
+      Indicates an incident that shares the same causative factors, produces similar harms, and involves the same
+      intelligent systems as a known AI incident.
+    domain: RiskIncident
+    range: RiskIncident
+  refersToRisk:
+    exact_mappings:
+      - dpv:refersToRisk
+    description: >-
+      Indicates the incident (subject) is a materialisation of the indicated risk (object)
+    domain: RiskIncident
+    range: Risk
+    multivalued: true
+    inlined: false
