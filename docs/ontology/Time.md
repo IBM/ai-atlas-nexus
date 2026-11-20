@@ -34,7 +34,7 @@ URI: [xsd:time](http://www.w3.org/2001/XMLSchema#time)
 | Mapping Type | Mapped Value |
 | ------------ | ------------ |
 | self         | xsd:time     |
-| native       | nexus:time   |
+| native       | nexus:Time   |
 | exact        | schema:Time  |
 
 </div>

@@ -17,7 +17,7 @@ default_prefix: nexus
 classes:
   AiOffice:
     is_a: Organization
-    class_uri: schema:Organization
+    class_uri: nexus:AiOffice
     description: The EU AI Office (https://digital-strategy.ec.europa.eu/en/policies/ai-office)
 
 enums:

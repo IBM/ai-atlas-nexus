@@ -233,9 +233,6 @@ classes:
         description: The official name of the benchmark.
       overview:
         description: A brief description of the benchmark's main goals and scope.
-      type:
-        range: string
-        designates_type: true
     slot_usage:
       hasRelatedRisk:
         domain: BenchmarkMetadataCard
@@ -367,13 +364,13 @@ classes:
 
 slots:
   hasImplementation:
-    slot_uri: schema:url
+    slot_uri: nexus:hasImplementation
     description: A relationship to a implementation defining the risk evaluation
     range: uri
     multivalued: true
     inlined: false
   hasUnitxtCard:
-    slot_uri: schema:url
+    slot_uri: nexus:hasUnitxtCard
     description: A relationship to a Unitxt card defining the risk evaluation
     range: uri
     multivalued: true

@@ -14,7 +14,7 @@ still lints, still generates, and still produces plausible-looking RDF. The crit
 trap is that ADMS has *two* namespaces: the vocabulary ``http://www.w3.org/ns/adms#``
 (which defines ``adms:status`` and only 4 classes / 13 properties) and the separate
 value codelist ``http://purl.org/adms/status/``. Writing ``adms:Completed`` instead of
-``adms-status:Completed`` mints a term into a W3C namespace we do not own -- see
+``adms_status:Completed`` mints a term into a W3C namespace we do not own -- see
 ``test_no_meaning_lands_in_adms_vocabulary_namespace``.
 
 These tests read the schema itself rather than any generated artifact: at time of
@@ -107,7 +107,7 @@ class TestLifecycleStatusVocabularyAlignment:
     Those URIs were copied from ADMS and PSO by hand, and nothing here goes back to
     check them. So these tests won't notice if a term is renamed upstream -- only if
     the schema stops matching what we wrote down: a typo'd CURIE, a moved prefix,
-    ``adms:`` where ``adms-status:`` belongs, a lost or duplicated meaning.
+    ``adms:`` where ``adms_status:`` belongs, a lost or duplicated meaning.
 
     Checking the upstream end stays a manual job. Update ``_EXPECTED_MEANINGS``
     when you do it.
@@ -142,7 +142,7 @@ class TestLifecycleStatusVocabularyAlignment:
         assert not offenders, (
             f"permissible values point into the ADMS *vocabulary* namespace: {offenders}. "
             f"Status values live in the codelist {_ADMS_CODELIST} -- use the "
-            "'adms-status:' prefix, not 'adms:'."
+            "'adms_status:' prefix, not 'adms:'."
         )
 
     def test_meanings_are_distinct(self, lifecycle_enum):
@@ -224,7 +224,7 @@ class TestLifecycleStatusPrefixes:
 
     @pytest.mark.parametrize(
         "prefix,expected",
-        [("adms", _ADMS_VOCAB), ("adms-status", _ADMS_CODELIST), ("pso", _PSO)],
+        [("adms", _ADMS_VOCAB), ("adms_status", _ADMS_CODELIST), ("pso", _PSO)],
     )
     def test_prefix_resolves(self, sv, prefix, expected):
         namespaces = sv.namespaces()
@@ -233,7 +233,7 @@ class TestLifecycleStatusPrefixes:
 
     def test_adms_and_adms_status_are_not_the_same_namespace(self, sv):
         namespaces = sv.namespaces()
-        assert str(namespaces["adms"]) != str(namespaces["adms-status"]), (
+        assert str(namespaces["adms"]) != str(namespaces["adms_status"]), (
             "The ADMS vocabulary and its status codelist are different namespaces; "
             "collapsing them reintroduces the fabricated-term bug."
         )

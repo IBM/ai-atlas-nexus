@@ -17,12 +17,12 @@ URI: [dpv:SupraNationalUnion](https://w3id.org/dpv#SupraNationalUnion)
 
 | Value         | Meaning       | Description                                                                      |
 | ------------- | ------------- | -------------------------------------------------------------------------------- |
-| EEA           | dpv-loc:EEA   | European Economic Area (EEA)                                                     |
-| EEA30         | dpv-loc:EEA30 | EEA 30 Member States                                                             |
-| EEA31         | dpv-loc:EEA31 | EEA 31 Member States                                                             |
-| EU            | dpv-loc:EU    | European Union (EU)                                                              |
-| EU27          | dpv-loc:EU27  | EU 27 Member States                                                              |
-| EU28          | dpv-loc:EU28  | EU 28 Member States                                                              |
+| EEA           | dpv_loc:EEA   | European Economic Area (EEA)                                                     |
+| EEA30         | dpv_loc:EEA30 | EEA 30 Member States                                                             |
+| EEA31         | dpv_loc:EEA31 | EEA 31 Member States                                                             |
+| EU            | dpv_loc:EU    | European Union (EU)                                                              |
+| EU27          | dpv_loc:EU27  | EU 27 Member States                                                              |
+| EU28          | dpv_loc:EU28  | EU 28 Member States                                                              |
 | International | None          | Explicitly global scope not attributable to any single country or recognised ... |
 
 ## See Also
@@ -52,27 +52,27 @@ permissible_values:
   EEA:
     text: EEA
     description: European Economic Area (EEA)
-    meaning: dpv-loc:EEA
+    meaning: dpv_loc:EEA
   EEA30:
     text: EEA30
     description: EEA 30 Member States
-    meaning: dpv-loc:EEA30
+    meaning: dpv_loc:EEA30
   EEA31:
     text: EEA31
     description: EEA 31 Member States
-    meaning: dpv-loc:EEA31
+    meaning: dpv_loc:EEA31
   EU:
     text: EU
     description: European Union (EU)
-    meaning: dpv-loc:EU
+    meaning: dpv_loc:EU
   EU27:
     text: EU27
     description: EU 27 Member States
-    meaning: dpv-loc:EU27
+    meaning: dpv_loc:EU27
   EU28:
     text: EU28
     description: EU 28 Member States
-    meaning: dpv-loc:EU28
+    meaning: dpv_loc:EU28
   International:
     text: International
     description: Explicitly global scope not attributable to any single country or

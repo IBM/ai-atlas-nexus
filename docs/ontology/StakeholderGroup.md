@@ -42,6 +42,15 @@ URI: [nexus:StakeholderGroup](https://w3id.org/ai-atlas-nexus/StakeholderGroup)
 
       StakeholderGroup : broader
 
+
+
+
+
+        StakeholderGroup --> "*" Group : broader
+        click Group href "../Group/"
+
+
+
       StakeholderGroup : close_mappings
 
 
@@ -133,6 +142,15 @@ URI: [nexus:StakeholderGroup](https://w3id.org/ai-atlas-nexus/StakeholderGroup)
 
       StakeholderGroup : narrower
 
+
+
+
+
+        StakeholderGroup --> "*" Group : narrower
+        click Group href "../Group/"
+
+
+
       StakeholderGroup : notes
 
       StakeholderGroup : related_mappings
@@ -169,10 +187,10 @@ URI: [nexus:StakeholderGroup](https://w3id.org/ai-atlas-nexus/StakeholderGroup)
 | [hasDocumentation](hasDocumentation.md)       | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | [Group](Group.md)   |
 | [hasPart](hasPart.md)                         | \* <br/> [String](String.md)                     | A relationship where an entity has another entity                                | [Group](Group.md)   |
 | [belongsToDomain](belongsToDomain.md)         | 0..1 <br/> [Any](Any.md)                         | A relationship where a group belongs to a domain                                 | [Group](Group.md)   |
-| [type](type.md)                               | 0..1 <br/> [String](String.md)                   | The type or class designation of this entity instance                            | [Group](Group.md)   |
-| [narrower](narrower.md)                       | \* <br/> [String](String.md)                     | Related concepts that are narrower in scope or hierarchy                         | [Group](Group.md)   |
-| [broader](broader.md)                         | \* <br/> [String](String.md)                     | Related concepts that are broader in scope or hierarchy                          | [Group](Group.md)   |
+| [narrower](narrower.md)                       | \* <br/> [Group](Group.md)                       | Related concepts that are narrower in scope or hierarchy                         | [Group](Group.md)   |
+| [broader](broader.md)                         | \* <br/> [Group](Group.md)                       | Related concepts that are broader in scope or hierarchy                          | [Group](Group.md)   |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                   | The class of this instance, used to select the class when loading data           | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
 | [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
@@ -245,8 +263,10 @@ attributes:
     description: A relationship where a concept or a concept group is defined by a
       taxonomy
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByTaxonomy
     owner: StakeholderGroup
     domain_of:
     - Concept
@@ -321,8 +341,10 @@ attributes:
     name: belongsToDomain
     description: A relationship where a group belongs to a domain
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:belongsToDomain
     owner: StakeholderGroup
     domain_of:
     - Group
@@ -330,37 +352,6 @@ attributes:
     range: Any
     multivalued: false
     inlined: false
-  type:
-    name: type
-    description: The type or class designation of this entity instance.
-    from_schema: https://w3id.org/ai-atlas-nexus/common
-    ifabsent: string(Group)
-    designates_type: true
-    owner: StakeholderGroup
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
   narrower:
     name: narrower
     description: Related concepts that are narrower in scope or hierarchy.
@@ -370,18 +361,18 @@ attributes:
     owner: StakeholderGroup
     domain_of:
     - Group
-    range: string
+    range: Group
     multivalued: true
   broader:
     name: broader
     description: Related concepts that are broader in scope or hierarchy.
     from_schema: https://w3id.org/ai-atlas-nexus/common
     rank: 1000
-    slot_uri: skos:narrower
+    slot_uri: skos:broader
     owner: StakeholderGroup
     domain_of:
     - Group
-    range: string
+    range: Group
     multivalued: true
   id:
     name: id
@@ -396,6 +387,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: StakeholderGroup
+    domain_of:
+    - Entity
+    range: string
   name:
     name: name
     description: A text name of this instance.

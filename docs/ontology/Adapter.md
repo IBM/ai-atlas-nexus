@@ -418,14 +418,14 @@ URI: [nexus:Adapter](https://w3id.org/ai-atlas-nexus/Adapter)
 | [hasTrainingData](hasTrainingData.md)             | \* <br/> [Dataset](Dataset.md)                                     | A relationship indicating the datasets an AI model was trained on                | [LargeLanguageModel](LargeLanguageModel.md)                    |
 | [fine_tuning](fine_tuning.md)                     | 0..1 <br/> [String](String.md)                                     | A description of the fine-tuning mechanism(s) applied to a model                 | [LargeLanguageModel](LargeLanguageModel.md)                    |
 | [supported_languages](supported_languages.md)     | \* <br/> [String](String.md)                                       | A list of languages, expressed as ISO two letter codes                           | [LargeLanguageModel](LargeLanguageModel.md)                    |
-| [isPartOf](isPartOf.md)                           | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models             | [LargeLanguageModel](LargeLanguageModel.md), [Entry](Entry.md) |
+| [isPartOf](isPartOf.md)                           | 0..1 <br/> [LargeLanguageModelFamily](LargeLanguageModelFamily.md) | Annotation that a Large Language model is part of a family of models             | [Entry](Entry.md), [LargeLanguageModel](LargeLanguageModel.md) |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)     | 0..1 <br/> [Taxonomy](Taxonomy.md)                                 | A relationship where a concept or a concept group is defined by a taxonomy       | [Entry](Entry.md)                                              |
 | [hasExternalReference](hasExternalReference.md)   | \* <br/> [Documentation](Documentation.md)                         | External references / additional resources related to this entity, such as ar... | [Entry](Entry.md)                                              |
 | [requiredByTask](requiredByTask.md)               | \* <br/> [Any](Any.md)                                             | Indicates that this entry is required to perform a specific AI task              | [Entry](Entry.md)                                              |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Any](Any.md)                                             | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)                                              |
 | [hasRule](hasRule.md)                             | \* <br/> [Rule](Rule.md)                                           | Specifying applicability or inclusion of a rule within specified context         | [Entry](Entry.md)                                              |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                     | The entry type or class designation specifying what kind of entry this is        | [Entry](Entry.md)                                              |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                                        | A unique identifier to this instance of the model element                        | [Entity](Entity.md)                                            |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                     | The class of this instance, used to select the class when loading data           | [Entity](Entity.md)                                            |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)                                     | A text name of this instance                                                     | [Entity](Entity.md)                                            |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)                                     | The description of an entity                                                     | [Entity](Entity.md)                                            |
 | [url](url.md)                                     | 0..1 <br/> [Uri](Uri.md)                                           | An optional URL associated with this instance                                    | [Entity](Entity.md)                                            |
@@ -557,8 +557,10 @@ attributes:
     name: isDefinedByVocabulary
     description: A relationship where a term or a term group is defined by a vocabulary
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByVocabulary
     owner: Adapter
     domain_of:
     - Entry
@@ -804,8 +806,10 @@ attributes:
     description: A relationship where a concept or a concept group is defined by a
       taxonomy
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByTaxonomy
     owner: Adapter
     domain_of:
     - Concept
@@ -894,37 +898,6 @@ attributes:
     range: Rule
     multivalued: true
     inlined: false
-  type:
-    name: type
-    description: The entry type or class designation specifying what kind of entry
-      this is.
-    from_schema: https://w3id.org/ai-atlas-nexus/common
-    designates_type: true
-    owner: Adapter
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -938,6 +911,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: Adapter
+    domain_of:
+    - Entity
+    range: string
   name:
     name: name
     description: A text name of this instance.

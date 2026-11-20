@@ -255,8 +255,8 @@ URI: [nexus:benchmarkmetadatacard](https://w3id.org/ai-atlas-nexus/benchmarkmeta
 | [hasDocumentation](hasDocumentation.md)                                                   | \* <br/> [Documentation](Documentation.md)       | Indicates documentation associated with an entity                                | direct              |
 | [name](name.md)                                                                           | 0..1 <br/> [String](String.md)                   | The official name of the benchmark                                               | direct              |
 | [overview](overview.md)                                                                   | 0..1 <br/> [String](String.md)                   | A brief description of the benchmark's main goals and scope                      | direct              |
-| [type](type.md)                                                                           | 0..1 <br/> [String](String.md)                   |                                                                                  | direct              |
 | [id](id.md)                                                                               | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [type](type.md)                                                                           | 0..1 <br/> [String](String.md)                   | The class of this instance, used to select the class when loading data           | [Entity](Entity.md) |
 | [description](description.md)                                                             | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
 | [url](url.md)                                                                             | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
 | [dateCreated](dateCreated.md)                                                             | 0..1 <br/> [Date](Date.md)                       | The date on which the entity was created                                         | [Entity](Entity.md) |
@@ -361,34 +361,6 @@ attributes:
     rank: 1000
     domain_of:
     - BenchmarkMetadataCard
-  type:
-    name: type
-    from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
-    designates_type: true
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
 class_uri: nexus:benchmarkmetadatacard
 
 ````
@@ -430,35 +402,6 @@ attributes:
     owner: BenchmarkMetadataCard
     domain_of:
     - BenchmarkMetadataCard
-    range: string
-  type:
-    name: type
-    from_schema: https://w3id.org/ai-atlas-nexus/ai_eval
-    designates_type: true
-    owner: BenchmarkMetadataCard
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
     range: string
   describesAiEval:
     name: describesAiEval
@@ -830,6 +773,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: BenchmarkMetadataCard
+    domain_of:
+    - Entity
+    range: string
   description:
     name: description
     description: The description of an entity

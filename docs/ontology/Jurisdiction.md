@@ -17,255 +17,255 @@ URI: [dpv:Country](https://w3id.org/dpv#Country)
 
 | Value | Meaning    | Description                                          |
 | ----- | ---------- | ---------------------------------------------------- |
-| AD    | dpv-loc:AD | Andorra                                              |
-| AE    | dpv-loc:AE | United Arab Emirates                                 |
-| AF    | dpv-loc:AF | Afghanistan                                          |
-| AG    | dpv-loc:AG | Antigua and Barbuda                                  |
-| AI    | dpv-loc:AI | Anguilla                                             |
-| AL    | dpv-loc:AL | Albania                                              |
-| AM    | dpv-loc:AM | Armenia                                              |
-| AO    | dpv-loc:AO | Angola                                               |
-| AQ    | dpv-loc:AQ | Antarctica                                           |
-| AR    | dpv-loc:AR | Argentina                                            |
-| AS    | dpv-loc:AS | American Samoa                                       |
-| AT    | dpv-loc:AT | Austria                                              |
-| AU    | dpv-loc:AU | Australia                                            |
-| AW    | dpv-loc:AW | Aruba                                                |
-| AX    | dpv-loc:AX | Åland Islands                                        |
-| AZ    | dpv-loc:AZ | Azerbaijan                                           |
-| BA    | dpv-loc:BA | Bosnia and Herzegovina                               |
-| BB    | dpv-loc:BB | Barbados                                             |
-| BD    | dpv-loc:BD | Bangladesh                                           |
-| BE    | dpv-loc:BE | Belgium                                              |
-| BF    | dpv-loc:BF | Burkina Faso                                         |
-| BG    | dpv-loc:BG | Bulgaria                                             |
-| BH    | dpv-loc:BH | Bahrain                                              |
-| BI    | dpv-loc:BI | Burundi                                              |
-| BJ    | dpv-loc:BJ | Benin                                                |
-| BL    | dpv-loc:BL | Saint Barthélemy                                     |
-| BM    | dpv-loc:BM | Bermuda                                              |
-| BN    | dpv-loc:BN | Brunei Darussalam                                    |
-| BO    | dpv-loc:BO | Bolivia (Plurinational State of)                     |
-| BQ    | dpv-loc:BQ | Bonaire, Sint Eustatius and Saba                     |
-| BR    | dpv-loc:BR | Brazil                                               |
-| BS    | dpv-loc:BS | Bahamas                                              |
-| BT    | dpv-loc:BT | Bhutan                                               |
-| BV    | dpv-loc:BV | Bouvet Island                                        |
-| BW    | dpv-loc:BW | Botswana                                             |
-| BY    | dpv-loc:BY | Belarus                                              |
-| BZ    | dpv-loc:BZ | Belize                                               |
-| CA    | dpv-loc:CA | Canada                                               |
-| CC    | dpv-loc:CC | Cocos (Keeling) Islands                              |
-| CD    | dpv-loc:CD | Democratic Republic of the Congo                     |
-| CF    | dpv-loc:CF | Central African Republic                             |
-| CG    | dpv-loc:CG | Congo                                                |
-| CH    | dpv-loc:CH | Switzerland                                          |
-| CI    | dpv-loc:CI | Côte d’Ivoire                                        |
-| CK    | dpv-loc:CK | Cook Islands                                         |
-| CL    | dpv-loc:CL | Chile                                                |
-| CM    | dpv-loc:CM | Cameroon                                             |
-| CN    | dpv-loc:CN | China                                                |
-| CO    | dpv-loc:CO | Colombia                                             |
-| CR    | dpv-loc:CR | Costa Rica                                           |
-| CU    | dpv-loc:CU | Cuba                                                 |
-| CV    | dpv-loc:CV | Cabo Verde                                           |
-| CW    | dpv-loc:CW | Curaçao                                              |
-| CX    | dpv-loc:CX | Christmas Island                                     |
-| CY    | dpv-loc:CY | Cyprus                                               |
-| CZ    | dpv-loc:CZ | Czechia                                              |
-| DE    | dpv-loc:DE | Germany                                              |
-| DJ    | dpv-loc:DJ | Djibouti                                             |
-| DK    | dpv-loc:DK | Denmark                                              |
-| DM    | dpv-loc:DM | Dominica                                             |
-| DO    | dpv-loc:DO | Dominican Republic                                   |
-| DZ    | dpv-loc:DZ | Algeria                                              |
-| EC    | dpv-loc:EC | Ecuador                                              |
-| EE    | dpv-loc:EE | Estonia                                              |
-| EG    | dpv-loc:EG | Egypt                                                |
-| EH    | dpv-loc:EH | Western Sahara                                       |
-| ER    | dpv-loc:ER | Eritrea                                              |
-| ES    | dpv-loc:ES | Spain                                                |
-| ET    | dpv-loc:ET | Ethiopia                                             |
-| FI    | dpv-loc:FI | Finland                                              |
-| FJ    | dpv-loc:FJ | Fiji                                                 |
-| FK    | dpv-loc:FK | Falkland Islands (Malvinas)                          |
-| FM    | dpv-loc:FM | Micronesia (Federated States of)                     |
-| FO    | dpv-loc:FO | Faroe Islands                                        |
-| FR    | dpv-loc:FR | France                                               |
-| GA    | dpv-loc:GA | Gabon                                                |
-| GB    | dpv-loc:GB | United Kingdom of Great Britain and Northern Ireland |
-| GD    | dpv-loc:GD | Grenada                                              |
-| GE    | dpv-loc:GE | Georgia                                              |
-| GF    | dpv-loc:GF | French Guiana                                        |
-| GG    | dpv-loc:GG | Guernsey                                             |
-| GH    | dpv-loc:GH | Ghana                                                |
-| GI    | dpv-loc:GI | Gibraltar                                            |
-| GL    | dpv-loc:GL | Greenland                                            |
-| GM    | dpv-loc:GM | Gambia                                               |
-| GN    | dpv-loc:GN | Guinea                                               |
-| GP    | dpv-loc:GP | Guadeloupe                                           |
-| GQ    | dpv-loc:GQ | Equatorial Guinea                                    |
-| GR    | dpv-loc:GR | Greece                                               |
-| GS    | dpv-loc:GS | South Georgia and the South Sandwich Islands         |
-| GT    | dpv-loc:GT | Guatemala                                            |
-| GU    | dpv-loc:GU | Guam                                                 |
-| GW    | dpv-loc:GW | Guinea-Bissau                                        |
-| GY    | dpv-loc:GY | Guyana                                               |
-| HK    | dpv-loc:HK | China, Hong Kong Special Administrative Region       |
-| HM    | dpv-loc:HM | Heard Island and McDonald Islands                    |
-| HN    | dpv-loc:HN | Honduras                                             |
-| HR    | dpv-loc:HR | Croatia                                              |
-| HT    | dpv-loc:HT | Haiti                                                |
-| HU    | dpv-loc:HU | Hungary                                              |
-| ID    | dpv-loc:ID | Indonesia                                            |
-| IE    | dpv-loc:IE | Ireland                                              |
-| IL    | dpv-loc:IL | Israel                                               |
-| IM    | dpv-loc:IM | Isle of Man                                          |
-| IN    | dpv-loc:IN | India                                                |
-| IO    | dpv-loc:IO | British Indian Ocean Territory                       |
-| IQ    | dpv-loc:IQ | Iraq                                                 |
-| IR    | dpv-loc:IR | Iran (Islamic Republic of)                           |
-| IS    | dpv-loc:IS | Iceland                                              |
-| IT    | dpv-loc:IT | Italy                                                |
-| JE    | dpv-loc:JE | Jersey                                               |
-| JM    | dpv-loc:JM | Jamaica                                              |
-| JO    | dpv-loc:JO | Jordan                                               |
-| JP    | dpv-loc:JP | Japan                                                |
-| KE    | dpv-loc:KE | Kenya                                                |
-| KG    | dpv-loc:KG | Kyrgyzstan                                           |
-| KH    | dpv-loc:KH | Cambodia                                             |
-| KI    | dpv-loc:KI | Kiribati                                             |
-| KM    | dpv-loc:KM | Comoros                                              |
-| KN    | dpv-loc:KN | Saint Kitts and Nevis                                |
-| KP    | dpv-loc:KP | Democratic People's Republic of Korea                |
-| KR    | dpv-loc:KR | Republic of Korea                                    |
-| KW    | dpv-loc:KW | Kuwait                                               |
-| KY    | dpv-loc:KY | Cayman Islands                                       |
-| KZ    | dpv-loc:KZ | Kazakhstan                                           |
-| LA    | dpv-loc:LA | Lao People's Democratic Republic                     |
-| LB    | dpv-loc:LB | Lebanon                                              |
-| LC    | dpv-loc:LC | Saint Lucia                                          |
-| LI    | dpv-loc:LI | Liechtenstein                                        |
-| LK    | dpv-loc:LK | Sri Lanka                                            |
-| LR    | dpv-loc:LR | Liberia                                              |
-| LS    | dpv-loc:LS | Lesotho                                              |
-| LT    | dpv-loc:LT | Lithuania                                            |
-| LU    | dpv-loc:LU | Luxembourg                                           |
-| LV    | dpv-loc:LV | Latvia                                               |
-| LY    | dpv-loc:LY | Libya                                                |
-| MA    | dpv-loc:MA | Morocco                                              |
-| MC    | dpv-loc:MC | Monaco                                               |
-| MD    | dpv-loc:MD | Republic of Moldova                                  |
-| ME    | dpv-loc:ME | Montenegro                                           |
-| MF    | dpv-loc:MF | Saint Martin (French Part)                           |
-| MG    | dpv-loc:MG | Madagascar                                           |
-| MH    | dpv-loc:MH | Marshall Islands                                     |
-| MK    | dpv-loc:MK | North Macedonia                                      |
-| ML    | dpv-loc:ML | Mali                                                 |
-| MM    | dpv-loc:MM | Myanmar                                              |
-| MN    | dpv-loc:MN | Mongolia                                             |
-| MO    | dpv-loc:MO | China, Macao Special Administrative Region           |
-| MP    | dpv-loc:MP | Northern Mariana Islands                             |
-| MQ    | dpv-loc:MQ | Martinique                                           |
-| MR    | dpv-loc:MR | Mauritania                                           |
-| MS    | dpv-loc:MS | Montserrat                                           |
-| MT    | dpv-loc:MT | Malta                                                |
-| MU    | dpv-loc:MU | Mauritius                                            |
-| MV    | dpv-loc:MV | Maldives                                             |
-| MW    | dpv-loc:MW | Malawi                                               |
-| MX    | dpv-loc:MX | Mexico                                               |
-| MY    | dpv-loc:MY | Malaysia                                             |
-| MZ    | dpv-loc:MZ | Mozambique                                           |
-| NA    | dpv-loc:NA | Namibia                                              |
-| NC    | dpv-loc:NC | New Caledonia                                        |
-| NE    | dpv-loc:NE | Niger                                                |
-| NF    | dpv-loc:NF | Norfolk Island                                       |
-| NG    | dpv-loc:NG | Nigeria                                              |
-| NI    | dpv-loc:NI | Nicaragua                                            |
-| NL    | dpv-loc:NL | Netherlands                                          |
-| NO    | dpv-loc:NO | Norway                                               |
-| NP    | dpv-loc:NP | Nepal                                                |
-| NR    | dpv-loc:NR | Nauru                                                |
-| NU    | dpv-loc:NU | Niue                                                 |
-| NZ    | dpv-loc:NZ | New Zealand                                          |
-| OM    | dpv-loc:OM | Oman                                                 |
-| PA    | dpv-loc:PA | Panama                                               |
-| PE    | dpv-loc:PE | Peru                                                 |
-| PF    | dpv-loc:PF | French Polynesia                                     |
-| PG    | dpv-loc:PG | Papua New Guinea                                     |
-| PH    | dpv-loc:PH | Philippines                                          |
-| PK    | dpv-loc:PK | Pakistan                                             |
-| PL    | dpv-loc:PL | Poland                                               |
-| PM    | dpv-loc:PM | Saint Pierre and Miquelon                            |
-| PN    | dpv-loc:PN | Pitcairn                                             |
-| PR    | dpv-loc:PR | Puerto Rico                                          |
-| PS    | dpv-loc:PS | State of Palestine                                   |
-| PT    | dpv-loc:PT | Portugal                                             |
-| PW    | dpv-loc:PW | Palau                                                |
-| PY    | dpv-loc:PY | Paraguay                                             |
-| QA    | dpv-loc:QA | Qatar                                                |
-| RE    | dpv-loc:RE | Réunion                                              |
-| RO    | dpv-loc:RO | Romania                                              |
-| RS    | dpv-loc:RS | Serbia                                               |
-| RU    | dpv-loc:RU | Russian Federation                                   |
-| RW    | dpv-loc:RW | Rwanda                                               |
-| SA    | dpv-loc:SA | Saudi Arabia                                         |
-| SB    | dpv-loc:SB | Solomon Islands                                      |
-| SC    | dpv-loc:SC | Seychelles                                           |
-| SD    | dpv-loc:SD | Sudan                                                |
-| SE    | dpv-loc:SE | Sweden                                               |
-| SG    | dpv-loc:SG | Singapore                                            |
-| SH    | dpv-loc:SH | Saint Helena                                         |
-| SI    | dpv-loc:SI | Slovenia                                             |
-| SJ    | dpv-loc:SJ | Svalbard and Jan Mayen Islands                       |
-| SK    | dpv-loc:SK | Slovakia                                             |
-| SL    | dpv-loc:SL | Sierra Leone                                         |
-| SM    | dpv-loc:SM | San Marino                                           |
-| SN    | dpv-loc:SN | Senegal                                              |
-| SO    | dpv-loc:SO | Somalia                                              |
-| SR    | dpv-loc:SR | Suriname                                             |
-| SS    | dpv-loc:SS | South Sudan                                          |
-| ST    | dpv-loc:ST | Sao Tome and Principe                                |
-| SV    | dpv-loc:SV | El Salvador                                          |
-| SX    | dpv-loc:SX | Sint Maarten (Dutch part)                            |
-| SY    | dpv-loc:SY | Syrian Arab Republic                                 |
-| SZ    | dpv-loc:SZ | Eswatini                                             |
-| TC    | dpv-loc:TC | Turks and Caicos Islands                             |
-| TD    | dpv-loc:TD | Chad                                                 |
-| TF    | dpv-loc:TF | French Southern Territories                          |
-| TG    | dpv-loc:TG | Togo                                                 |
-| TH    | dpv-loc:TH | Thailand                                             |
-| TJ    | dpv-loc:TJ | Tajikistan                                           |
-| TK    | dpv-loc:TK | Tokelau                                              |
-| TL    | dpv-loc:TL | Timor-Leste                                          |
-| TM    | dpv-loc:TM | Turkmenistan                                         |
-| TN    | dpv-loc:TN | Tunisia                                              |
-| TO    | dpv-loc:TO | Tonga                                                |
-| TR    | dpv-loc:TR | Turkey                                               |
-| TT    | dpv-loc:TT | Trinidad and Tobago                                  |
-| TV    | dpv-loc:TV | Tuvalu                                               |
-| TW    | dpv-loc:TW | Taiwan (Province of China)                           |
-| TZ    | dpv-loc:TZ | United Republic of Tanzania                          |
-| UA    | dpv-loc:UA | Ukraine                                              |
-| UG    | dpv-loc:UG | Uganda                                               |
-| UM    | dpv-loc:UM | United States Minor Outlying Islands                 |
-| US    | dpv-loc:US | United States of America                             |
-| UY    | dpv-loc:UY | Uruguay                                              |
-| UZ    | dpv-loc:UZ | Uzbekistan                                           |
-| VA    | dpv-loc:VA | Holy See                                             |
-| VC    | dpv-loc:VC | Saint Vincent and the Grenadines                     |
-| VE    | dpv-loc:VE | Venezuela (Bolivarian Republic of)                   |
-| VG    | dpv-loc:VG | British Virgin Islands                               |
-| VI    | dpv-loc:VI | United States Virgin Islands                         |
-| VN    | dpv-loc:VN | Viet Nam                                             |
-| VU    | dpv-loc:VU | Vanuatu                                              |
-| WF    | dpv-loc:WF | Wallis and Futuna Islands                            |
-| WS    | dpv-loc:WS | Samoa                                                |
-| YE    | dpv-loc:YE | Yemen                                                |
-| YT    | dpv-loc:YT | Mayotte                                              |
-| ZA    | dpv-loc:ZA | South Africa                                         |
-| ZM    | dpv-loc:ZM | Zambia                                               |
-| ZW    | dpv-loc:ZW | Zimbabwe                                             |
+| AD    | dpv_loc:AD | Andorra                                              |
+| AE    | dpv_loc:AE | United Arab Emirates                                 |
+| AF    | dpv_loc:AF | Afghanistan                                          |
+| AG    | dpv_loc:AG | Antigua and Barbuda                                  |
+| AI    | dpv_loc:AI | Anguilla                                             |
+| AL    | dpv_loc:AL | Albania                                              |
+| AM    | dpv_loc:AM | Armenia                                              |
+| AO    | dpv_loc:AO | Angola                                               |
+| AQ    | dpv_loc:AQ | Antarctica                                           |
+| AR    | dpv_loc:AR | Argentina                                            |
+| AS    | dpv_loc:AS | American Samoa                                       |
+| AT    | dpv_loc:AT | Austria                                              |
+| AU    | dpv_loc:AU | Australia                                            |
+| AW    | dpv_loc:AW | Aruba                                                |
+| AX    | dpv_loc:AX | Åland Islands                                        |
+| AZ    | dpv_loc:AZ | Azerbaijan                                           |
+| BA    | dpv_loc:BA | Bosnia and Herzegovina                               |
+| BB    | dpv_loc:BB | Barbados                                             |
+| BD    | dpv_loc:BD | Bangladesh                                           |
+| BE    | dpv_loc:BE | Belgium                                              |
+| BF    | dpv_loc:BF | Burkina Faso                                         |
+| BG    | dpv_loc:BG | Bulgaria                                             |
+| BH    | dpv_loc:BH | Bahrain                                              |
+| BI    | dpv_loc:BI | Burundi                                              |
+| BJ    | dpv_loc:BJ | Benin                                                |
+| BL    | dpv_loc:BL | Saint Barthélemy                                     |
+| BM    | dpv_loc:BM | Bermuda                                              |
+| BN    | dpv_loc:BN | Brunei Darussalam                                    |
+| BO    | dpv_loc:BO | Bolivia (Plurinational State of)                     |
+| BQ    | dpv_loc:BQ | Bonaire, Sint Eustatius and Saba                     |
+| BR    | dpv_loc:BR | Brazil                                               |
+| BS    | dpv_loc:BS | Bahamas                                              |
+| BT    | dpv_loc:BT | Bhutan                                               |
+| BV    | dpv_loc:BV | Bouvet Island                                        |
+| BW    | dpv_loc:BW | Botswana                                             |
+| BY    | dpv_loc:BY | Belarus                                              |
+| BZ    | dpv_loc:BZ | Belize                                               |
+| CA    | dpv_loc:CA | Canada                                               |
+| CC    | dpv_loc:CC | Cocos (Keeling) Islands                              |
+| CD    | dpv_loc:CD | Democratic Republic of the Congo                     |
+| CF    | dpv_loc:CF | Central African Republic                             |
+| CG    | dpv_loc:CG | Congo                                                |
+| CH    | dpv_loc:CH | Switzerland                                          |
+| CI    | dpv_loc:CI | Côte d’Ivoire                                        |
+| CK    | dpv_loc:CK | Cook Islands                                         |
+| CL    | dpv_loc:CL | Chile                                                |
+| CM    | dpv_loc:CM | Cameroon                                             |
+| CN    | dpv_loc:CN | China                                                |
+| CO    | dpv_loc:CO | Colombia                                             |
+| CR    | dpv_loc:CR | Costa Rica                                           |
+| CU    | dpv_loc:CU | Cuba                                                 |
+| CV    | dpv_loc:CV | Cabo Verde                                           |
+| CW    | dpv_loc:CW | Curaçao                                              |
+| CX    | dpv_loc:CX | Christmas Island                                     |
+| CY    | dpv_loc:CY | Cyprus                                               |
+| CZ    | dpv_loc:CZ | Czechia                                              |
+| DE    | dpv_loc:DE | Germany                                              |
+| DJ    | dpv_loc:DJ | Djibouti                                             |
+| DK    | dpv_loc:DK | Denmark                                              |
+| DM    | dpv_loc:DM | Dominica                                             |
+| DO    | dpv_loc:DO | Dominican Republic                                   |
+| DZ    | dpv_loc:DZ | Algeria                                              |
+| EC    | dpv_loc:EC | Ecuador                                              |
+| EE    | dpv_loc:EE | Estonia                                              |
+| EG    | dpv_loc:EG | Egypt                                                |
+| EH    | dpv_loc:EH | Western Sahara                                       |
+| ER    | dpv_loc:ER | Eritrea                                              |
+| ES    | dpv_loc:ES | Spain                                                |
+| ET    | dpv_loc:ET | Ethiopia                                             |
+| FI    | dpv_loc:FI | Finland                                              |
+| FJ    | dpv_loc:FJ | Fiji                                                 |
+| FK    | dpv_loc:FK | Falkland Islands (Malvinas)                          |
+| FM    | dpv_loc:FM | Micronesia (Federated States of)                     |
+| FO    | dpv_loc:FO | Faroe Islands                                        |
+| FR    | dpv_loc:FR | France                                               |
+| GA    | dpv_loc:GA | Gabon                                                |
+| GB    | dpv_loc:GB | United Kingdom of Great Britain and Northern Ireland |
+| GD    | dpv_loc:GD | Grenada                                              |
+| GE    | dpv_loc:GE | Georgia                                              |
+| GF    | dpv_loc:GF | French Guiana                                        |
+| GG    | dpv_loc:GG | Guernsey                                             |
+| GH    | dpv_loc:GH | Ghana                                                |
+| GI    | dpv_loc:GI | Gibraltar                                            |
+| GL    | dpv_loc:GL | Greenland                                            |
+| GM    | dpv_loc:GM | Gambia                                               |
+| GN    | dpv_loc:GN | Guinea                                               |
+| GP    | dpv_loc:GP | Guadeloupe                                           |
+| GQ    | dpv_loc:GQ | Equatorial Guinea                                    |
+| GR    | dpv_loc:GR | Greece                                               |
+| GS    | dpv_loc:GS | South Georgia and the South Sandwich Islands         |
+| GT    | dpv_loc:GT | Guatemala                                            |
+| GU    | dpv_loc:GU | Guam                                                 |
+| GW    | dpv_loc:GW | Guinea-Bissau                                        |
+| GY    | dpv_loc:GY | Guyana                                               |
+| HK    | dpv_loc:HK | China, Hong Kong Special Administrative Region       |
+| HM    | dpv_loc:HM | Heard Island and McDonald Islands                    |
+| HN    | dpv_loc:HN | Honduras                                             |
+| HR    | dpv_loc:HR | Croatia                                              |
+| HT    | dpv_loc:HT | Haiti                                                |
+| HU    | dpv_loc:HU | Hungary                                              |
+| ID    | dpv_loc:ID | Indonesia                                            |
+| IE    | dpv_loc:IE | Ireland                                              |
+| IL    | dpv_loc:IL | Israel                                               |
+| IM    | dpv_loc:IM | Isle of Man                                          |
+| IN    | dpv_loc:IN | India                                                |
+| IO    | dpv_loc:IO | British Indian Ocean Territory                       |
+| IQ    | dpv_loc:IQ | Iraq                                                 |
+| IR    | dpv_loc:IR | Iran (Islamic Republic of)                           |
+| IS    | dpv_loc:IS | Iceland                                              |
+| IT    | dpv_loc:IT | Italy                                                |
+| JE    | dpv_loc:JE | Jersey                                               |
+| JM    | dpv_loc:JM | Jamaica                                              |
+| JO    | dpv_loc:JO | Jordan                                               |
+| JP    | dpv_loc:JP | Japan                                                |
+| KE    | dpv_loc:KE | Kenya                                                |
+| KG    | dpv_loc:KG | Kyrgyzstan                                           |
+| KH    | dpv_loc:KH | Cambodia                                             |
+| KI    | dpv_loc:KI | Kiribati                                             |
+| KM    | dpv_loc:KM | Comoros                                              |
+| KN    | dpv_loc:KN | Saint Kitts and Nevis                                |
+| KP    | dpv_loc:KP | Democratic People's Republic of Korea                |
+| KR    | dpv_loc:KR | Republic of Korea                                    |
+| KW    | dpv_loc:KW | Kuwait                                               |
+| KY    | dpv_loc:KY | Cayman Islands                                       |
+| KZ    | dpv_loc:KZ | Kazakhstan                                           |
+| LA    | dpv_loc:LA | Lao People's Democratic Republic                     |
+| LB    | dpv_loc:LB | Lebanon                                              |
+| LC    | dpv_loc:LC | Saint Lucia                                          |
+| LI    | dpv_loc:LI | Liechtenstein                                        |
+| LK    | dpv_loc:LK | Sri Lanka                                            |
+| LR    | dpv_loc:LR | Liberia                                              |
+| LS    | dpv_loc:LS | Lesotho                                              |
+| LT    | dpv_loc:LT | Lithuania                                            |
+| LU    | dpv_loc:LU | Luxembourg                                           |
+| LV    | dpv_loc:LV | Latvia                                               |
+| LY    | dpv_loc:LY | Libya                                                |
+| MA    | dpv_loc:MA | Morocco                                              |
+| MC    | dpv_loc:MC | Monaco                                               |
+| MD    | dpv_loc:MD | Republic of Moldova                                  |
+| ME    | dpv_loc:ME | Montenegro                                           |
+| MF    | dpv_loc:MF | Saint Martin (French Part)                           |
+| MG    | dpv_loc:MG | Madagascar                                           |
+| MH    | dpv_loc:MH | Marshall Islands                                     |
+| MK    | dpv_loc:MK | North Macedonia                                      |
+| ML    | dpv_loc:ML | Mali                                                 |
+| MM    | dpv_loc:MM | Myanmar                                              |
+| MN    | dpv_loc:MN | Mongolia                                             |
+| MO    | dpv_loc:MO | China, Macao Special Administrative Region           |
+| MP    | dpv_loc:MP | Northern Mariana Islands                             |
+| MQ    | dpv_loc:MQ | Martinique                                           |
+| MR    | dpv_loc:MR | Mauritania                                           |
+| MS    | dpv_loc:MS | Montserrat                                           |
+| MT    | dpv_loc:MT | Malta                                                |
+| MU    | dpv_loc:MU | Mauritius                                            |
+| MV    | dpv_loc:MV | Maldives                                             |
+| MW    | dpv_loc:MW | Malawi                                               |
+| MX    | dpv_loc:MX | Mexico                                               |
+| MY    | dpv_loc:MY | Malaysia                                             |
+| MZ    | dpv_loc:MZ | Mozambique                                           |
+| NA    | dpv_loc:NA | Namibia                                              |
+| NC    | dpv_loc:NC | New Caledonia                                        |
+| NE    | dpv_loc:NE | Niger                                                |
+| NF    | dpv_loc:NF | Norfolk Island                                       |
+| NG    | dpv_loc:NG | Nigeria                                              |
+| NI    | dpv_loc:NI | Nicaragua                                            |
+| NL    | dpv_loc:NL | Netherlands                                          |
+| NO    | dpv_loc:NO | Norway                                               |
+| NP    | dpv_loc:NP | Nepal                                                |
+| NR    | dpv_loc:NR | Nauru                                                |
+| NU    | dpv_loc:NU | Niue                                                 |
+| NZ    | dpv_loc:NZ | New Zealand                                          |
+| OM    | dpv_loc:OM | Oman                                                 |
+| PA    | dpv_loc:PA | Panama                                               |
+| PE    | dpv_loc:PE | Peru                                                 |
+| PF    | dpv_loc:PF | French Polynesia                                     |
+| PG    | dpv_loc:PG | Papua New Guinea                                     |
+| PH    | dpv_loc:PH | Philippines                                          |
+| PK    | dpv_loc:PK | Pakistan                                             |
+| PL    | dpv_loc:PL | Poland                                               |
+| PM    | dpv_loc:PM | Saint Pierre and Miquelon                            |
+| PN    | dpv_loc:PN | Pitcairn                                             |
+| PR    | dpv_loc:PR | Puerto Rico                                          |
+| PS    | dpv_loc:PS | State of Palestine                                   |
+| PT    | dpv_loc:PT | Portugal                                             |
+| PW    | dpv_loc:PW | Palau                                                |
+| PY    | dpv_loc:PY | Paraguay                                             |
+| QA    | dpv_loc:QA | Qatar                                                |
+| RE    | dpv_loc:RE | Réunion                                              |
+| RO    | dpv_loc:RO | Romania                                              |
+| RS    | dpv_loc:RS | Serbia                                               |
+| RU    | dpv_loc:RU | Russian Federation                                   |
+| RW    | dpv_loc:RW | Rwanda                                               |
+| SA    | dpv_loc:SA | Saudi Arabia                                         |
+| SB    | dpv_loc:SB | Solomon Islands                                      |
+| SC    | dpv_loc:SC | Seychelles                                           |
+| SD    | dpv_loc:SD | Sudan                                                |
+| SE    | dpv_loc:SE | Sweden                                               |
+| SG    | dpv_loc:SG | Singapore                                            |
+| SH    | dpv_loc:SH | Saint Helena                                         |
+| SI    | dpv_loc:SI | Slovenia                                             |
+| SJ    | dpv_loc:SJ | Svalbard and Jan Mayen Islands                       |
+| SK    | dpv_loc:SK | Slovakia                                             |
+| SL    | dpv_loc:SL | Sierra Leone                                         |
+| SM    | dpv_loc:SM | San Marino                                           |
+| SN    | dpv_loc:SN | Senegal                                              |
+| SO    | dpv_loc:SO | Somalia                                              |
+| SR    | dpv_loc:SR | Suriname                                             |
+| SS    | dpv_loc:SS | South Sudan                                          |
+| ST    | dpv_loc:ST | Sao Tome and Principe                                |
+| SV    | dpv_loc:SV | El Salvador                                          |
+| SX    | dpv_loc:SX | Sint Maarten (Dutch part)                            |
+| SY    | dpv_loc:SY | Syrian Arab Republic                                 |
+| SZ    | dpv_loc:SZ | Eswatini                                             |
+| TC    | dpv_loc:TC | Turks and Caicos Islands                             |
+| TD    | dpv_loc:TD | Chad                                                 |
+| TF    | dpv_loc:TF | French Southern Territories                          |
+| TG    | dpv_loc:TG | Togo                                                 |
+| TH    | dpv_loc:TH | Thailand                                             |
+| TJ    | dpv_loc:TJ | Tajikistan                                           |
+| TK    | dpv_loc:TK | Tokelau                                              |
+| TL    | dpv_loc:TL | Timor-Leste                                          |
+| TM    | dpv_loc:TM | Turkmenistan                                         |
+| TN    | dpv_loc:TN | Tunisia                                              |
+| TO    | dpv_loc:TO | Tonga                                                |
+| TR    | dpv_loc:TR | Turkey                                               |
+| TT    | dpv_loc:TT | Trinidad and Tobago                                  |
+| TV    | dpv_loc:TV | Tuvalu                                               |
+| TW    | dpv_loc:TW | Taiwan (Province of China)                           |
+| TZ    | dpv_loc:TZ | United Republic of Tanzania                          |
+| UA    | dpv_loc:UA | Ukraine                                              |
+| UG    | dpv_loc:UG | Uganda                                               |
+| UM    | dpv_loc:UM | United States Minor Outlying Islands                 |
+| US    | dpv_loc:US | United States of America                             |
+| UY    | dpv_loc:UY | Uruguay                                              |
+| UZ    | dpv_loc:UZ | Uzbekistan                                           |
+| VA    | dpv_loc:VA | Holy See                                             |
+| VC    | dpv_loc:VC | Saint Vincent and the Grenadines                     |
+| VE    | dpv_loc:VE | Venezuela (Bolivarian Republic of)                   |
+| VG    | dpv_loc:VG | British Virgin Islands                               |
+| VI    | dpv_loc:VI | United States Virgin Islands                         |
+| VN    | dpv_loc:VN | Viet Nam                                             |
+| VU    | dpv_loc:VU | Vanuatu                                              |
+| WF    | dpv_loc:WF | Wallis and Futuna Islands                            |
+| WS    | dpv_loc:WS | Samoa                                                |
+| YE    | dpv_loc:YE | Yemen                                                |
+| YT    | dpv_loc:YT | Mayotte                                              |
+| ZA    | dpv_loc:ZA | South Africa                                         |
+| ZM    | dpv_loc:ZM | Zambia                                               |
+| ZW    | dpv_loc:ZW | Zimbabwe                                             |
 
 ## See Also
 
@@ -293,999 +293,999 @@ permissible_values:
   AD:
     text: AD
     description: Andorra
-    meaning: dpv-loc:AD
+    meaning: dpv_loc:AD
   AE:
     text: AE
     description: United Arab Emirates
-    meaning: dpv-loc:AE
+    meaning: dpv_loc:AE
   AF:
     text: AF
     description: Afghanistan
-    meaning: dpv-loc:AF
+    meaning: dpv_loc:AF
   AG:
     text: AG
     description: Antigua and Barbuda
-    meaning: dpv-loc:AG
+    meaning: dpv_loc:AG
   AI:
     text: AI
     description: Anguilla
-    meaning: dpv-loc:AI
+    meaning: dpv_loc:AI
   AL:
     text: AL
     description: Albania
-    meaning: dpv-loc:AL
+    meaning: dpv_loc:AL
   AM:
     text: AM
     description: Armenia
-    meaning: dpv-loc:AM
+    meaning: dpv_loc:AM
   AO:
     text: AO
     description: Angola
-    meaning: dpv-loc:AO
+    meaning: dpv_loc:AO
   AQ:
     text: AQ
     description: Antarctica
-    meaning: dpv-loc:AQ
+    meaning: dpv_loc:AQ
   AR:
     text: AR
     description: Argentina
-    meaning: dpv-loc:AR
+    meaning: dpv_loc:AR
   AS:
     text: AS
     description: American Samoa
-    meaning: dpv-loc:AS
+    meaning: dpv_loc:AS
   AT:
     text: AT
     description: Austria
-    meaning: dpv-loc:AT
+    meaning: dpv_loc:AT
   AU:
     text: AU
     description: Australia
-    meaning: dpv-loc:AU
+    meaning: dpv_loc:AU
   AW:
     text: AW
     description: Aruba
-    meaning: dpv-loc:AW
+    meaning: dpv_loc:AW
   AX:
     text: AX
     description: Åland Islands
-    meaning: dpv-loc:AX
+    meaning: dpv_loc:AX
   AZ:
     text: AZ
     description: Azerbaijan
-    meaning: dpv-loc:AZ
+    meaning: dpv_loc:AZ
   BA:
     text: BA
     description: Bosnia and Herzegovina
-    meaning: dpv-loc:BA
+    meaning: dpv_loc:BA
   BB:
     text: BB
     description: Barbados
-    meaning: dpv-loc:BB
+    meaning: dpv_loc:BB
   BD:
     text: BD
     description: Bangladesh
-    meaning: dpv-loc:BD
+    meaning: dpv_loc:BD
   BE:
     text: BE
     description: Belgium
-    meaning: dpv-loc:BE
+    meaning: dpv_loc:BE
   BF:
     text: BF
     description: Burkina Faso
-    meaning: dpv-loc:BF
+    meaning: dpv_loc:BF
   BG:
     text: BG
     description: Bulgaria
-    meaning: dpv-loc:BG
+    meaning: dpv_loc:BG
   BH:
     text: BH
     description: Bahrain
-    meaning: dpv-loc:BH
+    meaning: dpv_loc:BH
   BI:
     text: BI
     description: Burundi
-    meaning: dpv-loc:BI
+    meaning: dpv_loc:BI
   BJ:
     text: BJ
     description: Benin
-    meaning: dpv-loc:BJ
+    meaning: dpv_loc:BJ
   BL:
     text: BL
     description: Saint Barthélemy
-    meaning: dpv-loc:BL
+    meaning: dpv_loc:BL
   BM:
     text: BM
     description: Bermuda
-    meaning: dpv-loc:BM
+    meaning: dpv_loc:BM
   BN:
     text: BN
     description: Brunei Darussalam
-    meaning: dpv-loc:BN
+    meaning: dpv_loc:BN
   BO:
     text: BO
     description: Bolivia (Plurinational State of)
-    meaning: dpv-loc:BO
+    meaning: dpv_loc:BO
   BQ:
     text: BQ
     description: Bonaire, Sint Eustatius and Saba
-    meaning: dpv-loc:BQ
+    meaning: dpv_loc:BQ
   BR:
     text: BR
     description: Brazil
-    meaning: dpv-loc:BR
+    meaning: dpv_loc:BR
   BS:
     text: BS
     description: Bahamas
-    meaning: dpv-loc:BS
+    meaning: dpv_loc:BS
   BT:
     text: BT
     description: Bhutan
-    meaning: dpv-loc:BT
+    meaning: dpv_loc:BT
   BV:
     text: BV
     description: Bouvet Island
-    meaning: dpv-loc:BV
+    meaning: dpv_loc:BV
   BW:
     text: BW
     description: Botswana
-    meaning: dpv-loc:BW
+    meaning: dpv_loc:BW
   BY:
     text: BY
     description: Belarus
-    meaning: dpv-loc:BY
+    meaning: dpv_loc:BY
   BZ:
     text: BZ
     description: Belize
-    meaning: dpv-loc:BZ
+    meaning: dpv_loc:BZ
   CA:
     text: CA
     description: Canada
-    meaning: dpv-loc:CA
+    meaning: dpv_loc:CA
   CC:
     text: CC
     description: Cocos (Keeling) Islands
-    meaning: dpv-loc:CC
+    meaning: dpv_loc:CC
   CD:
     text: CD
     description: Democratic Republic of the Congo
-    meaning: dpv-loc:CD
+    meaning: dpv_loc:CD
   CF:
     text: CF
     description: Central African Republic
-    meaning: dpv-loc:CF
+    meaning: dpv_loc:CF
   CG:
     text: CG
     description: Congo
-    meaning: dpv-loc:CG
+    meaning: dpv_loc:CG
   CH:
     text: CH
     description: Switzerland
-    meaning: dpv-loc:CH
+    meaning: dpv_loc:CH
   CI:
     text: CI
     description: Côte d’Ivoire
-    meaning: dpv-loc:CI
+    meaning: dpv_loc:CI
   CK:
     text: CK
     description: Cook Islands
-    meaning: dpv-loc:CK
+    meaning: dpv_loc:CK
   CL:
     text: CL
     description: Chile
-    meaning: dpv-loc:CL
+    meaning: dpv_loc:CL
   CM:
     text: CM
     description: Cameroon
-    meaning: dpv-loc:CM
+    meaning: dpv_loc:CM
   CN:
     text: CN
     description: China
-    meaning: dpv-loc:CN
+    meaning: dpv_loc:CN
   CO:
     text: CO
     description: Colombia
-    meaning: dpv-loc:CO
+    meaning: dpv_loc:CO
   CR:
     text: CR
     description: Costa Rica
-    meaning: dpv-loc:CR
+    meaning: dpv_loc:CR
   CU:
     text: CU
     description: Cuba
-    meaning: dpv-loc:CU
+    meaning: dpv_loc:CU
   CV:
     text: CV
     description: Cabo Verde
-    meaning: dpv-loc:CV
+    meaning: dpv_loc:CV
   CW:
     text: CW
     description: Curaçao
-    meaning: dpv-loc:CW
+    meaning: dpv_loc:CW
   CX:
     text: CX
     description: Christmas Island
-    meaning: dpv-loc:CX
+    meaning: dpv_loc:CX
   CY:
     text: CY
     description: Cyprus
-    meaning: dpv-loc:CY
+    meaning: dpv_loc:CY
   CZ:
     text: CZ
     description: Czechia
-    meaning: dpv-loc:CZ
+    meaning: dpv_loc:CZ
   DE:
     text: DE
     description: Germany
-    meaning: dpv-loc:DE
+    meaning: dpv_loc:DE
   DJ:
     text: DJ
     description: Djibouti
-    meaning: dpv-loc:DJ
+    meaning: dpv_loc:DJ
   DK:
     text: DK
     description: Denmark
-    meaning: dpv-loc:DK
+    meaning: dpv_loc:DK
   DM:
     text: DM
     description: Dominica
-    meaning: dpv-loc:DM
+    meaning: dpv_loc:DM
   DO:
     text: DO
     description: Dominican Republic
-    meaning: dpv-loc:DO
+    meaning: dpv_loc:DO
   DZ:
     text: DZ
     description: Algeria
-    meaning: dpv-loc:DZ
+    meaning: dpv_loc:DZ
   EC:
     text: EC
     description: Ecuador
-    meaning: dpv-loc:EC
+    meaning: dpv_loc:EC
   EE:
     text: EE
     description: Estonia
-    meaning: dpv-loc:EE
+    meaning: dpv_loc:EE
   EG:
     text: EG
     description: Egypt
-    meaning: dpv-loc:EG
+    meaning: dpv_loc:EG
   EH:
     text: EH
     description: Western Sahara
-    meaning: dpv-loc:EH
+    meaning: dpv_loc:EH
   ER:
     text: ER
     description: Eritrea
-    meaning: dpv-loc:ER
+    meaning: dpv_loc:ER
   ES:
     text: ES
     description: Spain
-    meaning: dpv-loc:ES
+    meaning: dpv_loc:ES
   ET:
     text: ET
     description: Ethiopia
-    meaning: dpv-loc:ET
+    meaning: dpv_loc:ET
   FI:
     text: FI
     description: Finland
-    meaning: dpv-loc:FI
+    meaning: dpv_loc:FI
   FJ:
     text: FJ
     description: Fiji
-    meaning: dpv-loc:FJ
+    meaning: dpv_loc:FJ
   FK:
     text: FK
     description: Falkland Islands (Malvinas)
-    meaning: dpv-loc:FK
+    meaning: dpv_loc:FK
   FM:
     text: FM
     description: Micronesia (Federated States of)
-    meaning: dpv-loc:FM
+    meaning: dpv_loc:FM
   FO:
     text: FO
     description: Faroe Islands
-    meaning: dpv-loc:FO
+    meaning: dpv_loc:FO
   FR:
     text: FR
     description: France
-    meaning: dpv-loc:FR
+    meaning: dpv_loc:FR
   GA:
     text: GA
     description: Gabon
-    meaning: dpv-loc:GA
+    meaning: dpv_loc:GA
   GB:
     text: GB
     description: United Kingdom of Great Britain and Northern Ireland
-    meaning: dpv-loc:GB
+    meaning: dpv_loc:GB
   GD:
     text: GD
     description: Grenada
-    meaning: dpv-loc:GD
+    meaning: dpv_loc:GD
   GE:
     text: GE
     description: Georgia
-    meaning: dpv-loc:GE
+    meaning: dpv_loc:GE
   GF:
     text: GF
     description: French Guiana
-    meaning: dpv-loc:GF
+    meaning: dpv_loc:GF
   GG:
     text: GG
     description: Guernsey
-    meaning: dpv-loc:GG
+    meaning: dpv_loc:GG
   GH:
     text: GH
     description: Ghana
-    meaning: dpv-loc:GH
+    meaning: dpv_loc:GH
   GI:
     text: GI
     description: Gibraltar
-    meaning: dpv-loc:GI
+    meaning: dpv_loc:GI
   GL:
     text: GL
     description: Greenland
-    meaning: dpv-loc:GL
+    meaning: dpv_loc:GL
   GM:
     text: GM
     description: Gambia
-    meaning: dpv-loc:GM
+    meaning: dpv_loc:GM
   GN:
     text: GN
     description: Guinea
-    meaning: dpv-loc:GN
+    meaning: dpv_loc:GN
   GP:
     text: GP
     description: Guadeloupe
-    meaning: dpv-loc:GP
+    meaning: dpv_loc:GP
   GQ:
     text: GQ
     description: Equatorial Guinea
-    meaning: dpv-loc:GQ
+    meaning: dpv_loc:GQ
   GR:
     text: GR
     description: Greece
-    meaning: dpv-loc:GR
+    meaning: dpv_loc:GR
   GS:
     text: GS
     description: South Georgia and the South Sandwich Islands
-    meaning: dpv-loc:GS
+    meaning: dpv_loc:GS
   GT:
     text: GT
     description: Guatemala
-    meaning: dpv-loc:GT
+    meaning: dpv_loc:GT
   GU:
     text: GU
     description: Guam
-    meaning: dpv-loc:GU
+    meaning: dpv_loc:GU
   GW:
     text: GW
     description: Guinea-Bissau
-    meaning: dpv-loc:GW
+    meaning: dpv_loc:GW
   GY:
     text: GY
     description: Guyana
-    meaning: dpv-loc:GY
+    meaning: dpv_loc:GY
   HK:
     text: HK
     description: China, Hong Kong Special Administrative Region
-    meaning: dpv-loc:HK
+    meaning: dpv_loc:HK
   HM:
     text: HM
     description: Heard Island and McDonald Islands
-    meaning: dpv-loc:HM
+    meaning: dpv_loc:HM
   HN:
     text: HN
     description: Honduras
-    meaning: dpv-loc:HN
+    meaning: dpv_loc:HN
   HR:
     text: HR
     description: Croatia
-    meaning: dpv-loc:HR
+    meaning: dpv_loc:HR
   HT:
     text: HT
     description: Haiti
-    meaning: dpv-loc:HT
+    meaning: dpv_loc:HT
   HU:
     text: HU
     description: Hungary
-    meaning: dpv-loc:HU
+    meaning: dpv_loc:HU
   ID:
     text: ID
     description: Indonesia
-    meaning: dpv-loc:ID
+    meaning: dpv_loc:ID
   IE:
     text: IE
     description: Ireland
-    meaning: dpv-loc:IE
+    meaning: dpv_loc:IE
   IL:
     text: IL
     description: Israel
-    meaning: dpv-loc:IL
+    meaning: dpv_loc:IL
   IM:
     text: IM
     description: Isle of Man
-    meaning: dpv-loc:IM
+    meaning: dpv_loc:IM
   IN:
     text: IN
     description: India
-    meaning: dpv-loc:IN
+    meaning: dpv_loc:IN
   IO:
     text: IO
     description: British Indian Ocean Territory
-    meaning: dpv-loc:IO
+    meaning: dpv_loc:IO
   IQ:
     text: IQ
     description: Iraq
-    meaning: dpv-loc:IQ
+    meaning: dpv_loc:IQ
   IR:
     text: IR
     description: Iran (Islamic Republic of)
-    meaning: dpv-loc:IR
+    meaning: dpv_loc:IR
   IS:
     text: IS
     description: Iceland
-    meaning: dpv-loc:IS
+    meaning: dpv_loc:IS
   IT:
     text: IT
     description: Italy
-    meaning: dpv-loc:IT
+    meaning: dpv_loc:IT
   JE:
     text: JE
     description: Jersey
-    meaning: dpv-loc:JE
+    meaning: dpv_loc:JE
   JM:
     text: JM
     description: Jamaica
-    meaning: dpv-loc:JM
+    meaning: dpv_loc:JM
   JO:
     text: JO
     description: Jordan
-    meaning: dpv-loc:JO
+    meaning: dpv_loc:JO
   JP:
     text: JP
     description: Japan
-    meaning: dpv-loc:JP
+    meaning: dpv_loc:JP
   KE:
     text: KE
     description: Kenya
-    meaning: dpv-loc:KE
+    meaning: dpv_loc:KE
   KG:
     text: KG
     description: Kyrgyzstan
-    meaning: dpv-loc:KG
+    meaning: dpv_loc:KG
   KH:
     text: KH
     description: Cambodia
-    meaning: dpv-loc:KH
+    meaning: dpv_loc:KH
   KI:
     text: KI
     description: Kiribati
-    meaning: dpv-loc:KI
+    meaning: dpv_loc:KI
   KM:
     text: KM
     description: Comoros
-    meaning: dpv-loc:KM
+    meaning: dpv_loc:KM
   KN:
     text: KN
     description: Saint Kitts and Nevis
-    meaning: dpv-loc:KN
+    meaning: dpv_loc:KN
   KP:
     text: KP
     description: Democratic People's Republic of Korea
-    meaning: dpv-loc:KP
+    meaning: dpv_loc:KP
   KR:
     text: KR
     description: Republic of Korea
-    meaning: dpv-loc:KR
+    meaning: dpv_loc:KR
   KW:
     text: KW
     description: Kuwait
-    meaning: dpv-loc:KW
+    meaning: dpv_loc:KW
   KY:
     text: KY
     description: Cayman Islands
-    meaning: dpv-loc:KY
+    meaning: dpv_loc:KY
   KZ:
     text: KZ
     description: Kazakhstan
-    meaning: dpv-loc:KZ
+    meaning: dpv_loc:KZ
   LA:
     text: LA
     description: Lao People's Democratic Republic
-    meaning: dpv-loc:LA
+    meaning: dpv_loc:LA
   LB:
     text: LB
     description: Lebanon
-    meaning: dpv-loc:LB
+    meaning: dpv_loc:LB
   LC:
     text: LC
     description: Saint Lucia
-    meaning: dpv-loc:LC
+    meaning: dpv_loc:LC
   LI:
     text: LI
     description: Liechtenstein
-    meaning: dpv-loc:LI
+    meaning: dpv_loc:LI
   LK:
     text: LK
     description: Sri Lanka
-    meaning: dpv-loc:LK
+    meaning: dpv_loc:LK
   LR:
     text: LR
     description: Liberia
-    meaning: dpv-loc:LR
+    meaning: dpv_loc:LR
   LS:
     text: LS
     description: Lesotho
-    meaning: dpv-loc:LS
+    meaning: dpv_loc:LS
   LT:
     text: LT
     description: Lithuania
-    meaning: dpv-loc:LT
+    meaning: dpv_loc:LT
   LU:
     text: LU
     description: Luxembourg
-    meaning: dpv-loc:LU
+    meaning: dpv_loc:LU
   LV:
     text: LV
     description: Latvia
-    meaning: dpv-loc:LV
+    meaning: dpv_loc:LV
   LY:
     text: LY
     description: Libya
-    meaning: dpv-loc:LY
+    meaning: dpv_loc:LY
   MA:
     text: MA
     description: Morocco
-    meaning: dpv-loc:MA
+    meaning: dpv_loc:MA
   MC:
     text: MC
     description: Monaco
-    meaning: dpv-loc:MC
+    meaning: dpv_loc:MC
   MD:
     text: MD
     description: Republic of Moldova
-    meaning: dpv-loc:MD
+    meaning: dpv_loc:MD
   ME:
     text: ME
     description: Montenegro
-    meaning: dpv-loc:ME
+    meaning: dpv_loc:ME
   MF:
     text: MF
     description: Saint Martin (French Part)
-    meaning: dpv-loc:MF
+    meaning: dpv_loc:MF
   MG:
     text: MG
     description: Madagascar
-    meaning: dpv-loc:MG
+    meaning: dpv_loc:MG
   MH:
     text: MH
     description: Marshall Islands
-    meaning: dpv-loc:MH
+    meaning: dpv_loc:MH
   MK:
     text: MK
     description: North Macedonia
-    meaning: dpv-loc:MK
+    meaning: dpv_loc:MK
   ML:
     text: ML
     description: Mali
-    meaning: dpv-loc:ML
+    meaning: dpv_loc:ML
   MM:
     text: MM
     description: Myanmar
-    meaning: dpv-loc:MM
+    meaning: dpv_loc:MM
   MN:
     text: MN
     description: Mongolia
-    meaning: dpv-loc:MN
+    meaning: dpv_loc:MN
   MO:
     text: MO
     description: China, Macao Special Administrative Region
-    meaning: dpv-loc:MO
+    meaning: dpv_loc:MO
   MP:
     text: MP
     description: Northern Mariana Islands
-    meaning: dpv-loc:MP
+    meaning: dpv_loc:MP
   MQ:
     text: MQ
     description: Martinique
-    meaning: dpv-loc:MQ
+    meaning: dpv_loc:MQ
   MR:
     text: MR
     description: Mauritania
-    meaning: dpv-loc:MR
+    meaning: dpv_loc:MR
   MS:
     text: MS
     description: Montserrat
-    meaning: dpv-loc:MS
+    meaning: dpv_loc:MS
   MT:
     text: MT
     description: Malta
-    meaning: dpv-loc:MT
+    meaning: dpv_loc:MT
   MU:
     text: MU
     description: Mauritius
-    meaning: dpv-loc:MU
+    meaning: dpv_loc:MU
   MV:
     text: MV
     description: Maldives
-    meaning: dpv-loc:MV
+    meaning: dpv_loc:MV
   MW:
     text: MW
     description: Malawi
-    meaning: dpv-loc:MW
+    meaning: dpv_loc:MW
   MX:
     text: MX
     description: Mexico
-    meaning: dpv-loc:MX
+    meaning: dpv_loc:MX
   MY:
     text: MY
     description: Malaysia
-    meaning: dpv-loc:MY
+    meaning: dpv_loc:MY
   MZ:
     text: MZ
     description: Mozambique
-    meaning: dpv-loc:MZ
+    meaning: dpv_loc:MZ
   NA:
     text: NA
     description: Namibia
-    meaning: dpv-loc:NA
+    meaning: dpv_loc:NA
   NC:
     text: NC
     description: New Caledonia
-    meaning: dpv-loc:NC
+    meaning: dpv_loc:NC
   NE:
     text: NE
     description: Niger
-    meaning: dpv-loc:NE
+    meaning: dpv_loc:NE
   NF:
     text: NF
     description: Norfolk Island
-    meaning: dpv-loc:NF
+    meaning: dpv_loc:NF
   NG:
     text: NG
     description: Nigeria
-    meaning: dpv-loc:NG
+    meaning: dpv_loc:NG
   NI:
     text: NI
     description: Nicaragua
-    meaning: dpv-loc:NI
+    meaning: dpv_loc:NI
   NL:
     text: NL
     description: Netherlands
-    meaning: dpv-loc:NL
+    meaning: dpv_loc:NL
   'NO':
     text: 'NO'
     description: Norway
-    meaning: dpv-loc:NO
+    meaning: dpv_loc:NO
   NP:
     text: NP
     description: Nepal
-    meaning: dpv-loc:NP
+    meaning: dpv_loc:NP
   NR:
     text: NR
     description: Nauru
-    meaning: dpv-loc:NR
+    meaning: dpv_loc:NR
   NU:
     text: NU
     description: Niue
-    meaning: dpv-loc:NU
+    meaning: dpv_loc:NU
   NZ:
     text: NZ
     description: New Zealand
-    meaning: dpv-loc:NZ
+    meaning: dpv_loc:NZ
   OM:
     text: OM
     description: Oman
-    meaning: dpv-loc:OM
+    meaning: dpv_loc:OM
   PA:
     text: PA
     description: Panama
-    meaning: dpv-loc:PA
+    meaning: dpv_loc:PA
   PE:
     text: PE
     description: Peru
-    meaning: dpv-loc:PE
+    meaning: dpv_loc:PE
   PF:
     text: PF
     description: French Polynesia
-    meaning: dpv-loc:PF
+    meaning: dpv_loc:PF
   PG:
     text: PG
     description: Papua New Guinea
-    meaning: dpv-loc:PG
+    meaning: dpv_loc:PG
   PH:
     text: PH
     description: Philippines
-    meaning: dpv-loc:PH
+    meaning: dpv_loc:PH
   PK:
     text: PK
     description: Pakistan
-    meaning: dpv-loc:PK
+    meaning: dpv_loc:PK
   PL:
     text: PL
     description: Poland
-    meaning: dpv-loc:PL
+    meaning: dpv_loc:PL
   PM:
     text: PM
     description: Saint Pierre and Miquelon
-    meaning: dpv-loc:PM
+    meaning: dpv_loc:PM
   PN:
     text: PN
     description: Pitcairn
-    meaning: dpv-loc:PN
+    meaning: dpv_loc:PN
   PR:
     text: PR
     description: Puerto Rico
-    meaning: dpv-loc:PR
+    meaning: dpv_loc:PR
   PS:
     text: PS
     description: State of Palestine
-    meaning: dpv-loc:PS
+    meaning: dpv_loc:PS
   PT:
     text: PT
     description: Portugal
-    meaning: dpv-loc:PT
+    meaning: dpv_loc:PT
   PW:
     text: PW
     description: Palau
-    meaning: dpv-loc:PW
+    meaning: dpv_loc:PW
   PY:
     text: PY
     description: Paraguay
-    meaning: dpv-loc:PY
+    meaning: dpv_loc:PY
   QA:
     text: QA
     description: Qatar
-    meaning: dpv-loc:QA
+    meaning: dpv_loc:QA
   RE:
     text: RE
     description: Réunion
-    meaning: dpv-loc:RE
+    meaning: dpv_loc:RE
   RO:
     text: RO
     description: Romania
-    meaning: dpv-loc:RO
+    meaning: dpv_loc:RO
   RS:
     text: RS
     description: Serbia
-    meaning: dpv-loc:RS
+    meaning: dpv_loc:RS
   RU:
     text: RU
     description: Russian Federation
-    meaning: dpv-loc:RU
+    meaning: dpv_loc:RU
   RW:
     text: RW
     description: Rwanda
-    meaning: dpv-loc:RW
+    meaning: dpv_loc:RW
   SA:
     text: SA
     description: Saudi Arabia
-    meaning: dpv-loc:SA
+    meaning: dpv_loc:SA
   SB:
     text: SB
     description: Solomon Islands
-    meaning: dpv-loc:SB
+    meaning: dpv_loc:SB
   SC:
     text: SC
     description: Seychelles
-    meaning: dpv-loc:SC
+    meaning: dpv_loc:SC
   SD:
     text: SD
     description: Sudan
-    meaning: dpv-loc:SD
+    meaning: dpv_loc:SD
   SE:
     text: SE
     description: Sweden
-    meaning: dpv-loc:SE
+    meaning: dpv_loc:SE
   SG:
     text: SG
     description: Singapore
-    meaning: dpv-loc:SG
+    meaning: dpv_loc:SG
   SH:
     text: SH
     description: Saint Helena
-    meaning: dpv-loc:SH
+    meaning: dpv_loc:SH
   SI:
     text: SI
     description: Slovenia
-    meaning: dpv-loc:SI
+    meaning: dpv_loc:SI
   SJ:
     text: SJ
     description: Svalbard and Jan Mayen Islands
-    meaning: dpv-loc:SJ
+    meaning: dpv_loc:SJ
   SK:
     text: SK
     description: Slovakia
-    meaning: dpv-loc:SK
+    meaning: dpv_loc:SK
   SL:
     text: SL
     description: Sierra Leone
-    meaning: dpv-loc:SL
+    meaning: dpv_loc:SL
   SM:
     text: SM
     description: San Marino
-    meaning: dpv-loc:SM
+    meaning: dpv_loc:SM
   SN:
     text: SN
     description: Senegal
-    meaning: dpv-loc:SN
+    meaning: dpv_loc:SN
   SO:
     text: SO
     description: Somalia
-    meaning: dpv-loc:SO
+    meaning: dpv_loc:SO
   SR:
     text: SR
     description: Suriname
-    meaning: dpv-loc:SR
+    meaning: dpv_loc:SR
   SS:
     text: SS
     description: South Sudan
-    meaning: dpv-loc:SS
+    meaning: dpv_loc:SS
   ST:
     text: ST
     description: Sao Tome and Principe
-    meaning: dpv-loc:ST
+    meaning: dpv_loc:ST
   SV:
     text: SV
     description: El Salvador
-    meaning: dpv-loc:SV
+    meaning: dpv_loc:SV
   SX:
     text: SX
     description: Sint Maarten (Dutch part)
-    meaning: dpv-loc:SX
+    meaning: dpv_loc:SX
   SY:
     text: SY
     description: Syrian Arab Republic
-    meaning: dpv-loc:SY
+    meaning: dpv_loc:SY
   SZ:
     text: SZ
     description: Eswatini
-    meaning: dpv-loc:SZ
+    meaning: dpv_loc:SZ
   TC:
     text: TC
     description: Turks and Caicos Islands
-    meaning: dpv-loc:TC
+    meaning: dpv_loc:TC
   TD:
     text: TD
     description: Chad
-    meaning: dpv-loc:TD
+    meaning: dpv_loc:TD
   TF:
     text: TF
     description: French Southern Territories
-    meaning: dpv-loc:TF
+    meaning: dpv_loc:TF
   TG:
     text: TG
     description: Togo
-    meaning: dpv-loc:TG
+    meaning: dpv_loc:TG
   TH:
     text: TH
     description: Thailand
-    meaning: dpv-loc:TH
+    meaning: dpv_loc:TH
   TJ:
     text: TJ
     description: Tajikistan
-    meaning: dpv-loc:TJ
+    meaning: dpv_loc:TJ
   TK:
     text: TK
     description: Tokelau
-    meaning: dpv-loc:TK
+    meaning: dpv_loc:TK
   TL:
     text: TL
     description: Timor-Leste
-    meaning: dpv-loc:TL
+    meaning: dpv_loc:TL
   TM:
     text: TM
     description: Turkmenistan
-    meaning: dpv-loc:TM
+    meaning: dpv_loc:TM
   TN:
     text: TN
     description: Tunisia
-    meaning: dpv-loc:TN
+    meaning: dpv_loc:TN
   TO:
     text: TO
     description: Tonga
-    meaning: dpv-loc:TO
+    meaning: dpv_loc:TO
   TR:
     text: TR
     description: Turkey
-    meaning: dpv-loc:TR
+    meaning: dpv_loc:TR
   TT:
     text: TT
     description: Trinidad and Tobago
-    meaning: dpv-loc:TT
+    meaning: dpv_loc:TT
   TV:
     text: TV
     description: Tuvalu
-    meaning: dpv-loc:TV
+    meaning: dpv_loc:TV
   TW:
     text: TW
     description: Taiwan (Province of China)
-    meaning: dpv-loc:TW
+    meaning: dpv_loc:TW
   TZ:
     text: TZ
     description: United Republic of Tanzania
-    meaning: dpv-loc:TZ
+    meaning: dpv_loc:TZ
   UA:
     text: UA
     description: Ukraine
-    meaning: dpv-loc:UA
+    meaning: dpv_loc:UA
   UG:
     text: UG
     description: Uganda
-    meaning: dpv-loc:UG
+    meaning: dpv_loc:UG
   UM:
     text: UM
     description: United States Minor Outlying Islands
-    meaning: dpv-loc:UM
+    meaning: dpv_loc:UM
   US:
     text: US
     description: United States of America
-    meaning: dpv-loc:US
+    meaning: dpv_loc:US
   UY:
     text: UY
     description: Uruguay
-    meaning: dpv-loc:UY
+    meaning: dpv_loc:UY
   UZ:
     text: UZ
     description: Uzbekistan
-    meaning: dpv-loc:UZ
+    meaning: dpv_loc:UZ
   VA:
     text: VA
     description: Holy See
-    meaning: dpv-loc:VA
+    meaning: dpv_loc:VA
   VC:
     text: VC
     description: Saint Vincent and the Grenadines
-    meaning: dpv-loc:VC
+    meaning: dpv_loc:VC
   VE:
     text: VE
     description: Venezuela (Bolivarian Republic of)
-    meaning: dpv-loc:VE
+    meaning: dpv_loc:VE
   VG:
     text: VG
     description: British Virgin Islands
-    meaning: dpv-loc:VG
+    meaning: dpv_loc:VG
   VI:
     text: VI
     description: United States Virgin Islands
-    meaning: dpv-loc:VI
+    meaning: dpv_loc:VI
   VN:
     text: VN
     description: Viet Nam
-    meaning: dpv-loc:VN
+    meaning: dpv_loc:VN
   VU:
     text: VU
     description: Vanuatu
-    meaning: dpv-loc:VU
+    meaning: dpv_loc:VU
   WF:
     text: WF
     description: Wallis and Futuna Islands
-    meaning: dpv-loc:WF
+    meaning: dpv_loc:WF
   WS:
     text: WS
     description: Samoa
-    meaning: dpv-loc:WS
+    meaning: dpv_loc:WS
   YE:
     text: YE
     description: Yemen
-    meaning: dpv-loc:YE
+    meaning: dpv_loc:YE
   YT:
     text: YT
     description: Mayotte
-    meaning: dpv-loc:YT
+    meaning: dpv_loc:YT
   ZA:
     text: ZA
     description: South Africa
-    meaning: dpv-loc:ZA
+    meaning: dpv_loc:ZA
   ZM:
     text: ZM
     description: Zambia
-    meaning: dpv-loc:ZM
+    meaning: dpv_loc:ZM
   ZW:
     text: ZW
     description: Zimbabwe
-    meaning: dpv-loc:ZW
+    meaning: dpv_loc:ZW
 
 ```
 </details>

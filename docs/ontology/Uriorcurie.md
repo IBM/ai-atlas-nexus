@@ -33,6 +33,6 @@ URI: [xsd:anyURI](http://www.w3.org/2001/XMLSchema#anyURI)
 | Mapping Type | Mapped Value     |
 | ------------ | ---------------- |
 | self         | xsd:anyURI       |
-| native       | nexus:uriorcurie |
+| native       | nexus:Uriorcurie |
 
 </div>

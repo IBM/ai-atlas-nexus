@@ -33,7 +33,7 @@ URI: [xsd:boolean](http://www.w3.org/2001/XMLSchema#boolean)
 | Mapping Type | Mapped Value   |
 | ------------ | -------------- |
 | self         | xsd:boolean    |
-| native       | nexus:boolean  |
+| native       | nexus:Boolean  |
 | exact        | schema:Boolean |
 
 </div>
