@@ -32,7 +32,7 @@ URI: [skos:narrower](http://www.w3.org/2004/02/skos/core#narrower)
 
 | Property  | Value                                                         |
 | --------- | ------------------------------------------------------------- |
-| Range     | [String](String.md)                                           |
+| Range     | [Group](Group.md)                                             |
 | Domain Of | [Group](Group.md)                                             |
 | Slot URI  | [skos:narrower](http://www.w3.org/2004/02/skos/core#narrower) |
 
@@ -73,7 +73,7 @@ slot_uri: skos:narrower
 owner: Group
 domain_of:
 - Group
-range: string
+range: Group
 multivalued: true
 
 ```

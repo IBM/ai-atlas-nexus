@@ -140,6 +140,8 @@ URI: [airo:Stakeholder](https://w3id.org/airo#Stakeholder)
 
 
 
+      Stakeholder : type
+
       Stakeholder : url
 
       Stakeholder : version
@@ -169,6 +171,7 @@ URI: [airo:Stakeholder](https://w3id.org/airo#Stakeholder)
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md) | 0..1 <br/> [Taxonomy](Taxonomy.md)                 | A relationship where a concept or a concept group is defined by a taxonomy       | direct              |
 | [isPartOf](isPartOf.md)                       | 0..1 <br/> [StakeholderGroup](StakeholderGroup.md) | A relationship where a stakeholder is part of a stakeholder group                | direct              |
 | [id](id.md)                                   | 1 <br/> [String](String.md)                        | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [type](type.md)                               | 0..1 <br/> [String](String.md)                     | The class of this instance, used to select the class when loading data           | [Entity](Entity.md) |
 | [name](name.md)                               | 0..1 <br/> [String](String.md)                     | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                 | 0..1 <br/> [String](String.md)                     | The description of an entity                                                     | [Entity](Entity.md) |
 | [url](url.md)                                 | 0..1 <br/> [Uri](Uri.md)                           | An optional URL associated with this instance                                    | [Entity](Entity.md) |
@@ -251,8 +254,10 @@ attributes:
     description: A relationship where a concept or a concept group is defined by a
       taxonomy
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByTaxonomy
     owner: Stakeholder
     domain_of:
     - Concept
@@ -302,6 +307,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: Stakeholder
+    domain_of:
+    - Entity
+    range: string
   name:
     name: name
     description: A text name of this instance.

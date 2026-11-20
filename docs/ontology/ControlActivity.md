@@ -242,11 +242,11 @@ URI: [nexus:ControlActivity](https://w3id.org/ai-atlas-nexus/ControlActivity)
 | [hasRequirement](hasRequirement.md)                     | 0..1 <br/> [Requirement](Requirement.md)                                         | This requirement this rule belongs to                                            | direct              |
 | [hasRequirementType](hasRequirementType.md)             | 0..1 <br/> [AIUC1RequirementType](AIUC1RequirementType.md)                       | The requirement type of whether this is preventive, detective, etc               | direct              |
 | [hasTypicalEvidence](hasTypicalEvidence.md)             | 0..1 <br/> [String](String.md)                                                   | The evidence is usually found here                                               | direct              |
-| [type](type.md)                                         | 0..1 <br/> [String](String.md)                                                   |                                                                                  | direct              |
 | [isDefinedByTaxonomy](isDefinedByTaxonomy.md)           | 0..1 <br/> [Taxonomy](Taxonomy.md)                                               | A relationship where a concept or a concept group is defined by a taxonomy       | [Rule](Rule.md)     |
 | [hasRule](hasRule.md)                                   | \* <br/> [Rule](Rule.md)                                                         | Specifying applicability or inclusion of a rule within specified context         | [Rule](Rule.md)     |
 | [hasDocumentation](hasDocumentation.md)                 | \* <br/> [Documentation](Documentation.md)                                       | Indicates documentation associated with an entity                                | [Rule](Rule.md)     |
 | [id](id.md)                                             | 1 <br/> [String](String.md)                                                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [type](type.md)                                         | 0..1 <br/> [String](String.md)                                                   | The class of this instance, used to select the class when loading data           | [Entity](Entity.md) |
 | [name](name.md)                                         | 0..1 <br/> [String](String.md)                                                   | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                           | 0..1 <br/> [String](String.md)                                                   | The description of an entity                                                     | [Entity](Entity.md) |
 | [url](url.md)                                           | 0..1 <br/> [Uri](Uri.md)                                                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
@@ -342,35 +342,6 @@ slots:
 - hasRequirement
 - hasRequirementType
 - hasTypicalEvidence
-attributes:
-  type:
-    name: type
-    from_schema: https://w3id.org/ai-atlas-nexus/ai_aiuc
-    designates_type: true
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
 
 ````
 </details>
@@ -385,35 +356,6 @@ from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 is_a: Rule
 mixin: true
 attributes:
-  type:
-    name: type
-    from_schema: https://w3id.org/ai-atlas-nexus/ai_aiuc
-    designates_type: true
-    owner: ControlActivity
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
   hasControlApplication:
     name: hasControlApplication
     description: Which of the AIUC-1 ControlApplicationCategory this control activity
@@ -510,8 +452,10 @@ attributes:
     description: A relationship where a concept or a concept group is defined by a
       taxonomy
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByTaxonomy
     owner: ControlActivity
     domain_of:
     - Concept
@@ -595,6 +539,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: ControlActivity
+    domain_of:
+    - Entity
+    range: string
   name:
     name: name
     description: A text name of this instance.

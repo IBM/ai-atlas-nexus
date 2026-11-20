@@ -9,7 +9,7 @@ _Related concepts that are broader in scope or hierarchy._
 
 <div data-search-exclude markdown="1">
 
-URI: [skos:narrower](http://www.w3.org/2004/02/skos/core#narrower)
+URI: [skos:broader](http://www.w3.org/2004/02/skos/core#broader)
 
 <!-- no inheritance hierarchy -->
 
@@ -30,11 +30,11 @@ URI: [skos:narrower](http://www.w3.org/2004/02/skos/core#narrower)
 
 ### Type and Range
 
-| Property  | Value                                                         |
-| --------- | ------------------------------------------------------------- |
-| Range     | [String](String.md)                                           |
-| Domain Of | [Group](Group.md)                                             |
-| Slot URI  | [skos:narrower](http://www.w3.org/2004/02/skos/core#narrower) |
+| Property  | Value                                                       |
+| --------- | ----------------------------------------------------------- |
+| Range     | [Group](Group.md)                                           |
+| Domain Of | [Group](Group.md)                                           |
+| Slot URI  | [skos:broader](http://www.w3.org/2004/02/skos/core#broader) |
 
 ### Cardinality and Requirements
 
@@ -58,7 +58,7 @@ URI: [skos:narrower](http://www.w3.org/2004/02/skos/core#narrower)
 
 | Mapping Type | Mapped Value  |
 | ------------ | ------------- |
-| self         | skos:narrower |
+| self         | skos:broader  |
 | native       | nexus:broader |
 
 ## LinkML Source
@@ -69,11 +69,11 @@ name: broader
 description: Related concepts that are broader in scope or hierarchy.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
-slot_uri: skos:narrower
+slot_uri: skos:broader
 owner: Group
 domain_of:
 - Group
-range: string
+range: Group
 multivalued: true
 
 ```

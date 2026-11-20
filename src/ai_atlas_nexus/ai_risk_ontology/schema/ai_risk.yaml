@@ -12,7 +12,7 @@ prefixes:
   airo: https://w3id.org/airo#
   nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
-  dpv-risk: https://w3id.org/dpv/risk#
+  dpv_risk: https://w3id.org/dpv/risk#
 default_range: string
 default_prefix: nexus
 
@@ -127,7 +127,7 @@ classes:
     is_a: Entity
     mixins:
       - RiskConcept
-    class_uri: dpv-risk:Incident
+    class_uri: dpv_risk:Incident
     description: An event occuring or occured which is a realised or materialised risk.
     attributes:
       author:

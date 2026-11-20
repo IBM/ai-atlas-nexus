@@ -15,12 +15,12 @@ URI: [nexus:LifecycleStatus](https://w3id.org/ai-atlas-nexus/LifecycleStatus)
 
 | Value      | Meaning                      | Description                                 |
 | ---------- | ---------------------------- | ------------------------------------------- |
-| DRAFT      | adms-status:UnderDevelopment | Initial draft under development             |
+| DRAFT      | adms_status:UnderDevelopment | Initial draft under development             |
 | REVIEW     | pso:under-review             | Under editorial or technical review         |
-| APPROVED   | adms-status:Completed        | Approved / published as authoritative       |
-| DEPRECATED | adms-status:Deprecated       | Discouraged for new use but still available |
+| APPROVED   | adms_status:Completed        | Approved / published as authoritative       |
+| DEPRECATED | adms_status:Deprecated       | Discouraged for new use but still available |
 | SUPERSEDED | None                         | Replaced by a newer version of this entity  |
-| WITHDRAWN  | adms-status:Withdrawn        | Removed / no longer available               |
+| WITHDRAWN  | adms_status:Withdrawn        | Removed / no longer available               |
 
 ## Slots
 
@@ -58,7 +58,7 @@ permissible_values:
   DRAFT:
     text: DRAFT
     description: Initial draft under development.
-    meaning: adms-status:UnderDevelopment
+    meaning: adms_status:UnderDevelopment
   REVIEW:
     text: REVIEW
     description: Under editorial or technical review.
@@ -68,11 +68,11 @@ permissible_values:
   APPROVED:
     text: APPROVED
     description: Approved / published as authoritative.
-    meaning: adms-status:Completed
+    meaning: adms_status:Completed
   DEPRECATED:
     text: DEPRECATED
     description: Discouraged for new use but still available.
-    meaning: adms-status:Deprecated
+    meaning: adms_status:Deprecated
   SUPERSEDED:
     text: SUPERSEDED
     description: Replaced by a newer version of this entity.
@@ -86,11 +86,11 @@ permissible_values:
     - Neither ADMS nor PSO defines a supersession status, so this value is minted
       in the nexus namespace rather than aligned to an external vocabulary.
     close_mappings:
-    - adms-status:Deprecated
+    - adms_status:Deprecated
   WITHDRAWN:
     text: WITHDRAWN
     description: Removed / no longer available.
-    meaning: adms-status:Withdrawn
+    meaning: adms_status:Withdrawn
 
 ```
 </details>

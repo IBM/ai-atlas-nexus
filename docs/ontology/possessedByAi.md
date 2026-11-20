@@ -9,7 +9,7 @@ _Indicates that this capability is possessed by a specific AI system or componen
 
 <div data-search-exclude markdown="1">
 
-URI: [tech:hasCapability](https://w3id.org/dpv/tech#hasCapability)
+URI: [nexus:possessedByAi](https://w3id.org/ai-atlas-nexus/possessedByAi)
 
 <!-- no inheritance hierarchy -->
 
@@ -17,11 +17,11 @@ URI: [tech:hasCapability](https://w3id.org/dpv/tech#hasCapability)
 
 ### Type and Range
 
-| Property | Value                                                         |
-| -------- | ------------------------------------------------------------- |
-| Range    | [BaseAi](BaseAi.md)                                           |
-| Domain   | [Capability](Capability.md)                                   |
-| Slot URI | [tech:hasCapability](https://w3id.org/dpv/tech#hasCapability) |
+| Property | Value                                                                |
+| -------- | -------------------------------------------------------------------- |
+| Range    | [BaseAi](BaseAi.md)                                                  |
+| Domain   | [Capability](Capability.md)                                          |
+| Slot URI | [nexus:possessedByAi](https://w3id.org/ai-atlas-nexus/possessedByAi) |
 
 ### Cardinality and Requirements
 
@@ -48,7 +48,7 @@ URI: [tech:hasCapability](https://w3id.org/dpv/tech#hasCapability)
 
 | Mapping Type | Mapped Value        |
 | ------------ | ------------------- |
-| self         | tech:hasCapability  |
+| self         | nexus:possessedByAi |
 | native       | nexus:possessedByAi |
 
 ## LinkML Source
@@ -62,7 +62,7 @@ description: Indicates that this capability is possessed by a specific AI system
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
 rank: 1000
 domain: Capability
-slot_uri: tech:hasCapability
+slot_uri: nexus:possessedByAi
 inverse: hasCapability
 range: BaseAi
 multivalued: true

@@ -112,6 +112,8 @@ URI: [airo:AIComponent](https://w3id.org/airo#AIComponent)
 
 
 
+      AIComponent : type
+
       AIComponent : url
 
       AIComponent : version
@@ -135,6 +137,7 @@ URI: [airo:AIComponent](https://w3id.org/airo#AIComponent)
 | Name                                        | Cardinality and Range                            | Description                                                                      | Inheritance         |
 | ------------------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- | ------------------- |
 | [id](id.md)                                 | 1 <br/> [String](String.md)                      | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [type](type.md)                             | 0..1 <br/> [String](String.md)                   | The class of this instance, used to select the class when loading data           | [Entity](Entity.md) |
 | [name](name.md)                             | 0..1 <br/> [String](String.md)                   | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)               | 0..1 <br/> [String](String.md)                   | The description of an entity                                                     | [Entity](Entity.md) |
 | [url](url.md)                               | 0..1 <br/> [Uri](Uri.md)                         | An optional URL associated with this instance                                    | [Entity](Entity.md) |
@@ -202,6 +205,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: AIComponent
+    domain_of:
+    - Entity
+    range: string
   name:
     name: name
     description: A text name of this instance.

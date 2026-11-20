@@ -11,12 +11,12 @@ prefixes:
   airo: https://w3id.org/airo#
   nexus: https://w3id.org/ai-atlas-nexus/
   dpv: https://w3id.org/dpv#
-  dpv-loc: https://w3id.org/dpv/loc#
+  dpv_loc: https://w3id.org/dpv/loc#
   ai: https://w3id.org/dpv/ai#
   skos: http://www.w3.org/2004/02/skos/core#
   tech: https://w3id.org/dpv/tech#
   adms: http://www.w3.org/ns/adms#
-  adms-status: http://purl.org/adms/status/
+  adms_status: http://purl.org/adms/status/
   pso: http://purl.org/spar/pso/
 
 default_range: string
@@ -35,7 +35,7 @@ enums:
     permissible_values:
       DRAFT:
         description: Initial draft under development.
-        meaning: adms-status:UnderDevelopment
+        meaning: adms_status:UnderDevelopment
       REVIEW:
         description: Under editorial or technical review.
         meaning: pso:under-review
@@ -43,10 +43,10 @@ enums:
           - No ADMS equivalent. PSO covers peer review which is sufficient.
       APPROVED:
         description: Approved / published as authoritative.
-        meaning: adms-status:Completed
+        meaning: adms_status:Completed
       DEPRECATED:
         description: Discouraged for new use but still available.
-        meaning: adms-status:Deprecated
+        meaning: adms_status:Deprecated
       SUPERSEDED:
         description: Replaced by a newer version of this entity.
         comments:
@@ -59,12 +59,12 @@ enums:
             Deprecated, which is already the exact meaning of DEPRECATED, and two values
             sharing one meaning URI would be indistinguishable in RDF.
         close_mappings:
-          - adms-status:Deprecated
+          - adms_status:Deprecated
         todos:
           - Is 'superseded' permissible value needed? Keep for now, remove later if unsure.
       WITHDRAWN:
         description: Removed / no longer available.
-        meaning: adms-status:Withdrawn
+        meaning: adms_status:Withdrawn
 
 classes:
   Entity:
@@ -74,6 +74,7 @@ classes:
     class_uri: schema:Thing
     slots:
       - id
+      - type
       - name
       - description
       - url
@@ -93,11 +94,6 @@ classes:
     is_a: Entity
     class_uri: schema:Organization
     description: Any organizational entity such as a corporation, educational institution, consortium, government, etc.
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     slots:
       - grants_license
 
@@ -150,13 +146,10 @@ classes:
   Vocabulary:
     is_a: Entity
     mixin: true
-    class_uri: skos:ConceptScheme
+    class_uri: nexus:Vocabulary
+    exact_mappings:
+      - skos:ConceptScheme
     description: A collection of terms, with their definitions and relationships.
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     slots:
       - version
       - hasDocumentation
@@ -168,11 +161,6 @@ classes:
     mixin: true
     class_uri: skos:ConceptScheme
     description: A hierachical taxonomy of concepts, with their definitions and relationships.
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     slots:
       - version
       - hasDocumentation
@@ -184,11 +172,6 @@ classes:
     mixin: true
     class_uri: skos:Concept
     description: A concept
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     slots:
       - isDefinedByTaxonomy
       - hasDocumentation
@@ -200,11 +183,6 @@ classes:
     mixin: true
     class_uri: nexus:Control
     description: A measure that maintains and/or modifies
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     slots:
       - isDefinedByTaxonomy
       - isApplicableinLocality
@@ -217,19 +195,16 @@ classes:
     class_uri: skos:Collection
     description: Labelled groups of concepts.
     attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
-        ifabsent: string(Group)
       narrower:
         description: Related concepts that are narrower in scope or hierarchy.
         multivalued: true
+        range: Group
         slot_uri: skos:narrower
       broader:
         description: Related concepts that are broader in scope or hierarchy.
         multivalued: true
-        slot_uri: skos:narrower
+        range: Group
+        slot_uri: skos:broader
     slots:
       - isDefinedByTaxonomy
       - hasDocumentation
@@ -241,11 +216,6 @@ classes:
     abstract: true
     class_uri: nexus:Entry
     description: An entry and its definitions.
-    attributes:
-      type:
-        description: The entry type or class designation specifying what kind of entry this is.
-        range: string
-        designates_type: true
     slots:
       - isDefinedByTaxonomy
       - isDefinedByVocabulary
@@ -279,11 +249,6 @@ classes:
     abstract: true
     description: "A guidance document outlining any of: procedures, plans, principles, decisions, intent, or protocols."
     class_uri: dpv:Policy
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     slots:
       - isDefinedByTaxonomy
       - isApplicableinLocality
@@ -301,11 +266,6 @@ classes:
   Rule:
     is_a: Entity
     abstract: true
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     class_uri: dpv:Rule
     description: >-
       A rule describing a process or control that directs or determines if and how an activity should be conducted.
@@ -346,64 +306,34 @@ classes:
   Permission:
     is_a: Rule
     abstract: true
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     description: A rule describing a permission to perform an activity
     class_uri: dpv:Permission
 
   Prohibition:
     is_a: Rule
     abstract: true
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     description: A rule describing a prohibition to perform an activity
     class_uri: dpv:Prohibition
 
   Obligation:
     is_a: Rule
     abstract: true
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     description: A rule describing an obligation for performing an activity
     class_uri: dpv:Obligation
 
   Recommendation:
     is_a: Rule
     abstract: true
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     description: A rule describing a recommendation for performing an activity
     class_uri: dpv:Recommendation
 
   Certification:
     is_a: Entry
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     description: Certification mechanisms, seals, and marks for the purpose of demonstrating compliance
     class_uri: dpv:Certification
 
   EvaluationStandard:
     is_a: Entry
-    attributes:
-      type:
-        description: The type or class designation of this entity instance.
-        range: string
-        designates_type: true
     description: >-
       A standard defining minimum conditions, processes, or independence criteria required for conducting AI
       evaluations
@@ -426,8 +356,14 @@ slots:
     slot_uri: schema:identifier
     description: >-
       A unique identifier to this instance of the model element. Example identifiers include UUID, URI, URN, etc.
+  type:
+    description: The class of this instance, used to select the class when loading data.
+    range: string
+    designates_type: true
   isDefinedByVocabulary:
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByVocabulary
+    broad_mappings:
+      - schema:isPartOf
     description: A relationship where a term or a term group is defined by a vocabulary
     range: Vocabulary
   name:
@@ -596,7 +532,9 @@ slots:
     inlined: true
     description: Exception type
   isDefinedByTaxonomy:
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByTaxonomy
+    broad_mappings:
+      - schema:isPartOf
     description: A relationship where a concept or a concept group is defined by a taxonomy
     range: Taxonomy
   close_mappings:
@@ -643,7 +581,9 @@ slots:
     range: Any
     multivalued: false
     inlined: false
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:belongsToDomain
+    broad_mappings:
+      - schema:isPartOf
   isCategorizedAs:
     description: >-
       A relationship where an entity has been deemed to be categorized

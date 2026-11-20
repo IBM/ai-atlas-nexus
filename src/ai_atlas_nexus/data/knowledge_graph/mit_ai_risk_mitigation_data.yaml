@@ -136,7 +136,7 @@ documents:
     url: https://arxiv.org/abs/2503.05937
     dateCreated: 2025-03-07
     dateModified: 2025-03-07
-  - id: doc-EU AI Office2025
+  - id: doc-EU-AI-Office2025
     name: "EU AI Act: General Purpose AI Code of Practice (Draft 3)"
     description: >-
       The implementing guidance for the EU AI Act's requirements on general-purpose AI systems, detailing specific measures
@@ -163,7 +163,7 @@ documents:
     url: https://arxiv.org/abs/2410.23472
     dateCreated: 2024-10-30
     dateModified: 2024-10-30
-  - id: doc-UK Government2023
+  - id: doc-UK-Government2023
     name: Emerging Processes for Frontier AI Safety
     description: >-
       The UK recognises the enormous opportunities that AI can unlock across our economy and our society. However, without

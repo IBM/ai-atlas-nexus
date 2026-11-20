@@ -71,7 +71,7 @@ def load_values(graph, dpv_class):
             continue
         code = iri[len(LOC) :]
         label = graph.value(subject, SKOS.prefLabel)
-        value = {"meaning": f"dpv-loc:{code}"}
+        value = {"meaning": f"dpv_loc:{code}"}
         if label is not None:
             value["description"] = str(label)
         values[code] = value
@@ -101,7 +101,7 @@ def build_schema(graph):
             "linkml": "https://w3id.org/linkml/",
             "nexus": "https://w3id.org/ai-atlas-nexus/",
             "dpv": "https://w3id.org/dpv#",
-            "dpv-loc": LOC,
+            "dpv_loc": LOC,
         },
         "default_prefix": "nexus",
         "enums": enums,

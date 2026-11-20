@@ -9,7 +9,7 @@ _A capability that can be invoked through a well-defined API that is reasonably 
 
 <div data-search-exclude markdown="1">
 
-URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
+URI: [nexus:LLMIntrinsic](https://w3id.org/ai-atlas-nexus/LLMIntrinsic)
 
 ```mermaid
  classDiagram
@@ -269,9 +269,9 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
 ## Class Properties
 
-| Property  | Value                                               |
-| --------- | --------------------------------------------------- |
-| Class URI | [ai:Capability](https://w3id.org/dpv/ai#Capability) |
+| Property  | Value                                                              |
+| --------- | ------------------------------------------------------------------ |
+| Class URI | [nexus:LLMIntrinsic](https://w3id.org/ai-atlas-nexus/LLMIntrinsic) |
 
 ## Slots
 
@@ -291,8 +291,8 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 | [requiresCapability](requiresCapability.md)       | \* <br/> [Any](Any.md)                                                    | Indicates that this entry requires a specific capability                         | [Entry](Entry.md)   |
 | [implementedByAdapter](implementedByAdapter.md)   | \* <br/> [Any](Any.md)                                                    | Indicates that this capability is implemented by a specific adapter              | [Entry](Entry.md)   |
 | [hasRule](hasRule.md)                             | \* <br/> [Rule](Rule.md)                                                  | Specifying applicability or inclusion of a rule within specified context         | [Entry](Entry.md)   |
-| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                            | The entry type or class designation specifying what kind of entry this is        | [Entry](Entry.md)   |
 | [id](id.md)                                       | 1 <br/> [String](String.md)                                               | A unique identifier to this instance of the model element                        | [Entity](Entity.md) |
+| [type](type.md)                                   | 0..1 <br/> [String](String.md)                                            | The class of this instance, used to select the class when loading data           | [Entity](Entity.md) |
 | [name](name.md)                                   | 0..1 <br/> [String](String.md)                                            | A text name of this instance                                                     | [Entity](Entity.md) |
 | [description](description.md)                     | 0..1 <br/> [String](String.md)                                            | The description of an entity                                                     | [Entity](Entity.md) |
 | [url](url.md)                                     | 0..1 <br/> [Uri](Uri.md)                                                  | An optional URL associated with this instance                                    | [Entity](Entity.md) |
@@ -327,8 +327,9 @@ URI: [ai:Capability](https://w3id.org/dpv/ai#Capability)
 
 | Mapping Type | Mapped Value       |
 | ------------ | ------------------ |
-| self         | ai:Capability      |
+| self         | nexus:LLMIntrinsic |
 | native       | nexus:LLMIntrinsic |
+| broad        | ai:Capability      |
 
 ## LinkML Source
 
@@ -342,6 +343,8 @@ name: LLMIntrinsic
 description: A capability that can be invoked through a well-defined API that is reasonably
   stable and independent of how the LLM intrinsic itself is implemented.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+broad_mappings:
+- ai:Capability
 is_a: Entry
 slots:
 - hasRelatedRisk
@@ -361,7 +364,7 @@ slot_usage:
     name: hasRelatedRisk
     domain: LLMIntrinsic
     range: RiskConcept
-class_uri: ai:Capability
+class_uri: nexus:LLMIntrinsic
 
 ````
 </details>
@@ -374,6 +377,8 @@ name: LLMIntrinsic
 description: A capability that can be invoked through a well-defined API that is reasonably
   stable and independent of how the LLM intrinsic itself is implemented.
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+broad_mappings:
+- ai:Capability
 is_a: Entry
 slot_usage:
   implementsCapability:
@@ -458,8 +463,10 @@ attributes:
     name: isDefinedByVocabulary
     description: A relationship where a term or a term group is defined by a vocabulary
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByVocabulary
     owner: LLMIntrinsic
     domain_of:
     - Entry
@@ -514,8 +521,10 @@ attributes:
     description: A relationship where a concept or a concept group is defined by a
       taxonomy
     from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    broad_mappings:
+    - schema:isPartOf
     rank: 1000
-    slot_uri: schema:isPartOf
+    slot_uri: nexus:isDefinedByTaxonomy
     owner: LLMIntrinsic
     domain_of:
     - Concept
@@ -635,37 +644,6 @@ attributes:
     range: Rule
     multivalued: true
     inlined: false
-  type:
-    name: type
-    description: The entry type or class designation specifying what kind of entry
-      this is.
-    from_schema: https://w3id.org/ai-atlas-nexus/common
-    designates_type: true
-    owner: LLMIntrinsic
-    domain_of:
-    - Organization
-    - Vocabulary
-    - Taxonomy
-    - Concept
-    - Control
-    - Group
-    - Entry
-    - Policy
-    - Rule
-    - Permission
-    - Prohibition
-    - Obligation
-    - Recommendation
-    - Certification
-    - EvaluationStandard
-    - BenchmarkMetadataCard
-    - ControlActivity
-    - ControlActivityPermission
-    - ControlActivityProhibition
-    - ControlActivityObligation
-    - ControlActivityRecommendation
-    - Requirement
-    range: string
   id:
     name: id
     description: A unique identifier to this instance of the model element. Example
@@ -679,6 +657,17 @@ attributes:
     - Entity
     range: string
     required: true
+  type:
+    name: type
+    description: The class of this instance, used to select the class when loading
+      data.
+    from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+    rank: 1000
+    designates_type: true
+    owner: LLMIntrinsic
+    domain_of:
+    - Entity
+    range: string
   name:
     name: name
     description: A text name of this instance.
@@ -857,7 +846,7 @@ attributes:
     - AiTaskTaxonomy
     - AiEvaluationStandardTaxonomy
     range: string
-class_uri: ai:Capability
+class_uri: nexus:LLMIntrinsic
 
 ````
 

@@ -9,7 +9,7 @@ _A relationship where a concept or a concept group is defined by a taxonomy_
 
 <div data-search-exclude markdown="1">
 
-URI: [schema:isPartOf](http://schema.org/isPartOf)
+URI: [nexus:isDefinedByTaxonomy](https://w3id.org/ai-atlas-nexus/isDefinedByTaxonomy)
 
 <!-- no inheritance hierarchy -->
 
@@ -77,7 +77,7 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Range     | [Taxonomy](Taxonomy.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Domain Of | [Concept](Concept.md), [Control](Control.md), [Group](Group.md), [Entry](Entry.md), [Policy](Policy.md), [Rule](Rule.md), [RiskControlGroup](RiskControlGroup.md), [RiskGroup](RiskGroup.md), [Risk](Risk.md), [RiskControl](RiskControl.md), [Action](Action.md), [RiskIncident](RiskIncident.md), [CapabilityGroup](CapabilityGroup.md), [AiTaskDomain](AiTaskDomain.md), [AiTaskGroup](AiTaskGroup.md), [Stakeholder](Stakeholder.md), [StakeholderGroup](StakeholderGroup.md), [Requirement](Requirement.md) |
-| Slot URI  | [schema:isPartOf](http://schema.org/isPartOf)                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Slot URI  | [nexus:isDefinedByTaxonomy](https://w3id.org/ai-atlas-nexus/isDefinedByTaxonomy)                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ### Cardinality and Requirements
 
@@ -94,8 +94,9 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 
 | Mapping Type | Mapped Value              |
 | ------------ | ------------------------- |
-| self         | schema:isPartOf           |
+| self         | nexus:isDefinedByTaxonomy |
 | native       | nexus:isDefinedByTaxonomy |
+| broad        | schema:isPartOf           |
 
 ## LinkML Source
 
@@ -104,8 +105,10 @@ URI: [schema:isPartOf](http://schema.org/isPartOf)
 name: isDefinedByTaxonomy
 description: A relationship where a concept or a concept group is defined by a taxonomy
 from_schema: https://w3id.org/ai-atlas-nexus/ai-risk-ontology
+broad_mappings:
+- schema:isPartOf
 rank: 1000
-slot_uri: schema:isPartOf
+slot_uri: nexus:isDefinedByTaxonomy
 domain_of:
 - Concept
 - Control

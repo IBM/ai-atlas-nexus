@@ -106,7 +106,7 @@ controls:
       GPAISRs across all levels of the organisation; (2) allocating appropriate resources to actors who have been assigned
       responsibilities for managing systemic risk; and (3) promoting a healthy risk culture.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0286_Campos2025
     name: Decision-Making Executives
@@ -246,7 +246,7 @@ controls:
       include board sign-off for the responsible capability scaling policy, and named individual accountability for key
       decisions.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0827_UK_Government2023
     name: Training Relevant Actors in AI Security
@@ -255,7 +255,7 @@ controls:
       security culture where leaders demonstrate good security practice and staff from across a project understand enough
       about AI security to understand the potential consequences of decisions they take.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0847_UK_Government2023
     name: Board-level Responsibility for Protective Security
@@ -264,7 +264,7 @@ controls:
       business and a firm understanding of the risks the organisation faces. Ensure stakeholder engagement throughout the
       business for specialist insight and development and implementation of an insider risk mitigation programme.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0850_UK_Government2023
     name: Proportionate Policies
@@ -272,7 +272,7 @@ controls:
       Put in place proportionate policies, clear reporting procedures and escalation guidelines that are accessible,
       understood and consistently enforced.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0851_UK_Government2023
     name: Appropriate Security Training
@@ -280,7 +280,7 @@ controls:
       Provide appropriate security education and training for all workers. Without effective education and training
       individuals cannot be expected to know what procedures are in place to maintain security.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0852_UK_Government2023
     name: Program of Monitoring for Security Issues
@@ -288,7 +288,7 @@ controls:
       Ensure that a programme of monitoring and review is in place to enable potential security issues, or personal issues
       that may impact on an employee's work, to be recognised and dealt with effectively throughout their career
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0906_UK_Government2023
     name: Governance Responses to Worst-case of Misuse Scenarios
@@ -299,7 +299,7 @@ controls:
       withdraw a model, the types of misuse that would warrant such actions, and the timeframe under which such actions would
       occur.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A1034_Uuk2024
     name: Risk-focused governance structures
@@ -559,7 +559,7 @@ controls:
       into account model affordances, safe originator models, and the context in which the model may be made available on the
       market and/or used and its effects
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0266_EU_AI_Office2025
     name: Systemic risk assessment and mitigations
@@ -568,7 +568,7 @@ controls:
       particular before making the model available on the market. Specifically, signatories commit to starting to assess and
       mitigate systemic risks during the development of a GPAISR.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0272_EU_AI_Office2025
     name: Systemic Risk Acceptance Documentation
@@ -577,7 +577,7 @@ controls:
       results of their systemic risk analysis to their pre-defined systemic risk acceptance criteria, in order to ensure
       proportionality between the systemic risks of the GPAISR and their mitigations.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0274_EU_AI_Office2025
     name: Adequacy Assessments
@@ -585,7 +585,7 @@ controls:
       Signatories commit to assessing the adequacy of their safety and security framework and to updating it based on new
       findings
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0276_Campos2025
     name: Classification of applicable known risks
@@ -1413,7 +1413,7 @@ controls:
       account the potential benefits of the model. Include learnings from information exchanges with industry, academia and
       government on the capabilities of comparable models"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0765_UK_Government2023
     name: Pre-Deployment Risk Assessments
@@ -1422,7 +1422,7 @@ controls:
       Pre-development risk assessments are also important, because training a high-risk system can still lead to harm if the
       model is leaked, stolen, or otherwise unintentionally distributed.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0766_UK_Government2023
     name: Development and Post-Deployment Monitoring
@@ -1432,7 +1432,7 @@ controls:
       tools or plugins. This could occur alongside attempts to detect unexpected developments and new information that might
       have changed the results of the existing risk assessment, and which could also trigger a new risk assessment.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0767_UK_Government2023
     name: Risk Thresholds for Specific Models
@@ -1442,7 +1442,7 @@ controls:
       existing mitigations. Given the high uncertainty around future model capabilities, risk thresholds may be refined
       periodically.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0768_UK_Government2023
     name: Defining Risk Thresholds
@@ -1452,7 +1452,7 @@ controls:
       identify the objective of avoiding deploying an AI system that significantly increases the risk of cyberattacks or
       fraud.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0769_UK_Government2023
     name: Operationalizing Risk Thresholds
@@ -1470,7 +1470,7 @@ controls:
       organisations. In particular, consideration may be given to any risks caused by the combination of a given model with
       other models or tools, whether developed by the same frontier AI organisation or otherwise."
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0770_UK_Government2023
     name: Refinement of Risk Evaluation Frameworks
@@ -1481,7 +1481,7 @@ controls:
       a robust framework will probably be iterative. Risk evaluation frameworks may use multiple methods, including
       probability estimations and qualitative assessments of current capabilities.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0771_UK_Government2023
     name: Mitigation of Overshooting Risk Thresholds
@@ -1490,7 +1490,7 @@ controls:
       thresholds, including using intentionally lower buffer thresholds to trigger actions, such that the most concerning
       thresholds are difficult to overshoot without having already implemented mitigations at an earlier stage.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0772_UK_Government2023
     name: Risk Threshold Engagement with Relevant External Stakeholders
@@ -1501,7 +1501,7 @@ controls:
       be made public to allow for external scrutiny, with thresholds set in consultation with relevant external stakeholders
       including relevant government authorities.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0774_UK_Government2023
     name: Reassessment of Residual Risk
@@ -1513,7 +1513,7 @@ controls:
       may evolve with time, and could be quantitative or qualitative. For example, risk may only be accepted if it has been
       reduced to a level ‘as low as reasonably practicable’.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0775_UK_Government2023
     name: Disclosure of Risk Threshold to Government Authorities
@@ -1522,7 +1522,7 @@ controls:
       governments again, in advance of deployment, when the mitigations and residual risk assessment have been carried out.
       Proactively engage other relevant actors in addition to governments as appropriate.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0776_UK_Government2023
     name: Adaptation of Mitigations to Development and Deployment Stages
@@ -1533,7 +1533,7 @@ controls:
       large-scale ways e.g., public release via API ; 4) Extension of model through greater affordances, e.g., tool use or
       internet access; 5) Irreversible deployment e.g. open-sourcing of models"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0777_UK_Government2023
     name: Adaptation of Mitigations for Unintended Model Use
@@ -1544,7 +1544,7 @@ controls:
       even internal use of a model within a frontier AI organisation. In general, the use of caution may be helpful, given
       current limitations in information security controls and the prediction of models’ emergent abilities.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0778_UK_Government2023
     name: Recognition of Dangerous Model Possession
@@ -1553,7 +1553,7 @@ controls:
       the risk of being unable to secure a model sufficiently to prevent, for instance, a bad actor obtaining the model
       weights. In contrast, other models may pose significant risk only if deployed in a large-scale or irreversible way.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0781_UK_Government2023
     name: Risks of Open-Source Models
@@ -1564,7 +1564,7 @@ controls:
       the significant benefits of “open-source” AI systems for researchers, including for advancing AI safety, which may in
       some cases outweigh these potential risks.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0784_UK_Government2023
     name: Effective Risk Governance
@@ -1573,7 +1573,7 @@ controls:
       their nature and scale transparently reported. Most importantly, provide internal checks and balances, which may
       include thoughtful separation of roles within risk management.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0822_UK_Government2023
     name: Documentation of the Cyber security threats
@@ -1582,7 +1582,7 @@ controls:
       vulnerabilities. Good documentation and monitoring will inform your overall risk posture and help you respond in the
       event of a security incident.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0823_UK_Government2023
     name: Value of AI-related Assets
@@ -1591,7 +1591,7 @@ controls:
       documentation, and assessments (including information about potentially unsafe capabilities and failure modes) to their
       organisation. Protect these different categories of information as appropriate.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0824_UK_Government2023
     name: Security Integration into Business Decisions
@@ -1600,7 +1600,7 @@ controls:
       proportionate cyber, physical and personnel security measures. Secure Innovation guidance from NCSC and NPSA is
       available to help companies and investors to protect their technology .
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0828_UK_Government2023
     name: Awareness of Security Threats
@@ -1609,7 +1609,7 @@ controls:
       development and cyber security are two different skill sets and building a team at the intersection of the two will
       require effort and time.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0829_UK_Government2023
     name: Model of System Threats in Misuse Scenarios
@@ -1618,7 +1618,7 @@ controls:
       model is misused or behaves unexpectedly. This can help build systems where unanticipated model outputs are handled
       safely by other parts of a data pipeline.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0839_UK_Government2023
     name: Identification of Assets of Organizational Value
@@ -1626,7 +1626,7 @@ controls:
       Identify assets & systems that are important for the delivery of effective operations, or are of specific
       organisational value (e.g. commercially sensitive information)
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0840_UK_Government2023
     name: Categorization of Assets
@@ -1634,7 +1634,7 @@ controls:
       Categorise and classify assets in order to ensure that the correct level of resource is used in implementing risk
       mitigations. - risk management
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0841_UK_Government2023
     name: Threat Identification
@@ -1642,13 +1642,13 @@ controls:
       Identify threats. These may include terrorism or hostile state threats and/or more local and specific threats, and use
       a range of internal and external resources.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0842_UK_Government2023
     name: Risk Assessment via Recognized Processes
     description: Assess risk using recognised processes.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0843_UK_Government2023
     name: Protective Security Risk Register
@@ -1656,7 +1656,7 @@ controls:
       Build a protective security risk register to record, in sufficient detail, all the data gathered during this risk
       management process, ensuring compatibility with existing organisational risk management registers and processes.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0844_UK_Government2023
     name: Development of Protective Security Strategy
@@ -1665,7 +1665,7 @@ controls:
       in relation to a prioritised list of risks. Where mitigations are assessed as inadequate, additional measures could be
       proposed for approval by the decision maker(s).
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0845_UK_Government2023
     name: Development and Implementation Plans
@@ -1674,7 +1674,7 @@ controls:
       mitigations, which span physical, personnel and cyber security disciplines, and are linked to the technical guidance
       needed to implement them.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0846_UK_Government2023
     name: Regular Risk Management Review
@@ -1683,7 +1683,7 @@ controls:
       environment, or to assess the suitability of new measures implemented. More detailed description of protective security
       risk management is provided on the NPSA website.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0849_UK_Government2023
     name: Role-Based Security Risk Assessment
@@ -1691,7 +1691,7 @@ controls:
       Use Role-Based Security Risk Assessment to identify physical, personnel or cyber security measures that need to be
       applied in order to mitigate insider risk
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0853_UK_Government2023
     name: Use of Established Security Guidance
@@ -1699,7 +1699,7 @@ controls:
       Use established, evidence based guidance to fully address personnel security risks e.g. NPSA guidance on Personnel
       Security
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0927_UK_Government2023
     name: Input Data Audits for Pre-Development/deployment Risk Assessments
@@ -1709,7 +1709,7 @@ controls:
       data audits can also be used to improve context-based understanding of how data impacts system capabilities, which will
       strengthen future risk assessments and mitigation techniques.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0957_Gipiskis2024
     name: Demonstrating a “margin of safety” for the worst plausible system failures
@@ -2013,7 +2013,7 @@ controls:
       Signatories commit to not retaliating against any worker providing information about systemic risks stemming from the
       signatories' GPAISRs to the AI Office or national competent authorities.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0268_EU_AI_Office2025
     name: Systemic Risk Identification
@@ -2021,7 +2021,7 @@ controls:
       Signatories commit to selecting and further characterizing systemic risks stemming from their GPAISRs that are
       significant enough to warrant further assessment and mitigation.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0336_Campos2025
     name: Speak-Up Culture
@@ -2229,7 +2229,7 @@ controls:
       and governance risk mitigation measures and procedures that they intend to adopt to keep systemic risks stemming from
       their GPAISRs within acceptable levels."
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0279_Campos2025
     name: Modeling of the risks
@@ -2348,7 +2348,7 @@ controls:
       At each risk threshold, proactively commit to only proceed with certain development or deployment steps if specific
       mitigations are in place. Such mitigations could include many of the practices outlined in this document.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0780_UK_Government2023
     name: Pause of Training Runs
@@ -2357,7 +2357,7 @@ controls:
       committed risk mitigations being in place. This may involve warning existing customers that access reductions are a
       possibility and creating contingency plans to minimise negative impacts on customer use.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0790_UK_Government2023
     name: Response Processes for Evaluation Results
@@ -2367,7 +2367,7 @@ controls:
       practices outlined in other sections of this document such as preventing model misuse, information sharing and other
       risk mitigation measures.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0881_UK_Government2023
     name: Defense Tool Availability Before system release
@@ -2375,7 +2375,7 @@ controls:
       The larger the risk is and the more effective tools may be, the more important it is to prepare defensive tools ahead
       of time. It may be important to delay system releases until appropriate defensive tools are ready.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A1038_Uuk2024
     name: Safety vs. capabilities investments
@@ -2751,7 +2751,7 @@ controls:
       could also facilitate research on the societal impacts of their AI systems by providing access to the necessary
       infrastructure and compute.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0885_UK_Government2023
     name: Third Party Knowledge for AI systems' Downstream societal impacts
@@ -2760,7 +2760,7 @@ controls:
       impacts of their AI systems. Impact assessments that account for a wide range of potential societal impacts and
       meaningfully involve affected stakeholder groups could help to anticipate further downstream societal impacts.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0886_UK_Government2023
     name: Societal Impact Informed Risk Assessments
@@ -2770,7 +2770,7 @@ controls:
       assessments of AI systems, alongside more direct risks. See the Responsible Capability Scaling section for more
       information on good practices for risk assessment.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0910_UK_Government2023
     name: Assessment of Safeguard Costs for Users
@@ -2782,7 +2782,7 @@ controls:
       and conducting user interviews to understand how concerned informed users are about losses in privacy and the emergence
       of biases in algorithmically filtered content.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0634_Barrett2024
     name: Trustworthy AI practices
@@ -2970,7 +2970,7 @@ controls:
       well-resourced and motivated non-state-level adversaries, including insider threats from humans or AI systems, so as to
       meet at least the RAND SL3 security goal or equivalent, and achieve higher security goals (e.g., RAND SL4 or SL5)
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0513_NIST2024
     name: Architecture Monitoring Verification
@@ -3018,7 +3018,7 @@ controls:
       Apply good infrastructure principles to every part of this process from design to decommissioning. This is important as
       threats can occur at different stages of an AI project’s life cycle.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0820_UK_Government2023
     name: Regular Assessment of Supply Chain Security
@@ -3027,7 +3027,7 @@ controls:
       organisation applies. Ensuring data, software components and hardware are obtained from trusted sources will help
       mitigate supply chain risk.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0825_UK_Government2023
     name: Tracking Tools for Security and Version Control Assets
@@ -3036,7 +3036,7 @@ controls:
       safe state in the event of a compromise. This is important as data and models do not remain static during the whole
       lifespan of an AI project.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0835_UK_Government2023
     name: Default Integration of Secure Settings
@@ -3044,7 +3044,7 @@ controls:
       Integrate the most secure settings within your products by default. Where configuration is necessary, default options
       should be broadly secure against common threats.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0836_UK_Government2023
     name: Default Necessary Security Updates
@@ -3052,7 +3052,7 @@ controls:
       Ensure necessary security updates are a default part of every product and use secure, modular update procedures to
       distribute them. This will help your products remain secure in the face of new and developing threats.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0848_UK_Government2023
     name: Suitable Level of Screening
@@ -3060,19 +3060,19 @@ controls:
       Apply a suitable level of screening, informed by a role-based risk assessment, to all individuals who are provided
       access to organisational assets including permanent, temporary and contract workers.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0875_UK_Government2023
     name: Privacy Research
     description: Improving our ability to address the privacy risks associated with AI systems
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0876_UK_Government2023
     name: Cybersecurity Research
     description: Improving our ability to ensure the security of AI systems
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0877_UK_Government2023
     name: Criminality Research
@@ -3080,7 +3080,7 @@ controls:
       Improving our ability to prevent criminal behaviour through the use of AI systems (e.g. fraud, online child sexual
       abuse)
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0895_UK_Government2023
     name: Discretion for Development, Storage, and Sharing of Content Filters
@@ -3090,7 +3090,7 @@ controls:
       models. For instance, a classifier that evaluates the aggressiveness of a model’s outputs may be used to train the
       model to be more aggressive.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0984_Gipiskis2024
     name: Protect proprietary or unreleased AI model ar- chitecture and parameters
@@ -3151,7 +3151,7 @@ controls:
     name: Interpretability and Explainability Research
     description: Improving our ability to understand the inner functioning of AI systems and explain their behaviour
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0873_UK_Government2023
     name: Reliability and controllability (or “alignment”) research
@@ -3161,7 +3161,7 @@ controls:
       developer does not want (e.g. producing offensive or biased responses, not refusing harmful requests, or employing
       harmful capabilities without prompting)
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0896_UK_Government2023
     name: Fine-Tuning Models
@@ -3172,7 +3172,7 @@ controls:
       fine-tuning models on curated datasets of appropriate responses to prompts. Where human feedback is used, the mental
       wellbeing of moderators may need to be considered.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0929_UK_Government2023
     name: Harmful Data for Reduction of Dangerous Capabilities
@@ -3181,7 +3181,7 @@ controls:
       develop mitigation tools. For example, by fine-tuning a system using labelled harmful content to refuse requests
       related to the harmful information.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0978_Gipiskis2024
     name: AI model-assisted oversight of AI systems
@@ -3278,7 +3278,7 @@ controls:
       GPAISRs, in order to reduce the systemic risks of such models to acceptable levels, and further reduce systemic risk as
       appropriate; and (2) ensuring that safety mitigations are proportionate and state-of-the-art."
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0417_NIST2024
     name: Threat Modeling Process
@@ -3350,13 +3350,13 @@ controls:
     name: Robustness Research
     description: Improving the resilience of AI systems e.g. against attacks intended to disrupt their proper functioning
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0874_UK_Government2023
     name: Bias and discrimination Research
     description: Improving our ability to address bias and discrimination in AI systems
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0878_UK_Government2023
     name: Research into other Societal Harms
@@ -3364,7 +3364,7 @@ controls:
       Improving our ability to prevent other societal harms arising from the use of AI systems, including psychological harm,
       misinformation, and other societal harms.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0879_UK_Government2023
     name: Built-in Tools for Harm Mitigation
@@ -3374,7 +3374,7 @@ controls:
       exploitation and abuse content, some social media platforms are developing tools for identifying and removing child
       sexual abuse content.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0892_UK_Government2023
     name: Content Filters
@@ -3384,7 +3384,7 @@ controls:
       prompts to elicit non-harmful responses. The output filters can block harmful model outputs (e.g. instructions on
       building weapons) from being sent back to the user.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0894_UK_Government2023
     name: Robust Content Filters
@@ -3392,7 +3392,7 @@ controls:
       Invest in making content filters robust to “jailbreaking” attempts. Work to ensure filters are robust to jailbreaking
       attempts, for instance by including examples of jailbreaking attempts in the datasets used to develop filters.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0897_UK_Government2023
     name: Model Prompting
@@ -3401,7 +3401,7 @@ controls:
       that it should ignore requests to cause harm. Alternatively, prompt distillation or other methods can be used to
       fine-tune their models to behave as though they have received particular prompts.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0898_UK_Government2023
     name: Rejection Sampling
@@ -3409,7 +3409,7 @@ controls:
       Consider also applying “rejection sampling” methods to model outputs. These methods involve generating several outputs,
       scoring them on their harmfulness, and then only presenting the least harmful outputs to the user.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0908_UK_Government2023
     name: Exploration of New Safeguards
@@ -3417,7 +3417,7 @@ controls:
       Explore new safeguards and countermeasures in response to patterns of misuse, recognising that appropriate measures may
       vary based on model type, usage patterns, and our technical understanding of model capabilities.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0911_UK_Government2023
     name: Reduction of Costs for Users
@@ -3426,7 +3426,7 @@ controls:
       the cost of usage monitoring to user privacy, or tiered access to models with different safeguards for differently
       qualified users.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0935_Gipiskis2024
     name: Restrict web access during AI training
@@ -3743,7 +3743,7 @@ controls:
       to humans, but can be picked up by a detector, provided a long enough sequence of text. However, this approach may not
       be robust to attempts to scrub off the watermark e.g. by having another AI model paraphrase the text.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0868_UK_Government2023
     name: Robust Watermarks for AI generated content
@@ -3756,7 +3756,7 @@ controls:
       where relevant, such means of circumvention. It also includes a recognition that watermarking however may not be
       appropriate in all circumstances given the limitations.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0869_UK_Government2023
     name: AI Output Databases
@@ -3770,7 +3770,7 @@ controls:
       various frontier AI organisations could facilitate a unified search, allowing for the identification of AI-generated
       content across all frontier AI organisations simultaneously.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0974_Gipiskis2024
     name: AI identification
@@ -4014,7 +4014,7 @@ controls:
       including model evaluations, unless the model can be deemed sufficiently safe. After placing the GPAISR on the market,
       signatories commit to facilitating exploratory independent external assessments, including model evaluations.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0277_Campos2025
     name: Identification of unknown risks
@@ -4665,7 +4665,7 @@ controls:
       actions); 3) Capabilities that can assist users in developing, designing, acquiring, or using biological, chemical, or
       radiological weapons (e.g. helping users “troubleshoot” their efforts to produce biological weapons)"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0787_UK_Government2023
     name: Model Evaluation of Controllability
@@ -4674,7 +4674,7 @@ controls:
       models’ users nor the models’ developers want). This could include, for example, autonomous replication and adaptation
       (i.e. capabilities that could allow a model to copy and run itself on other computer systems).
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0788_UK_Government2023
     name: Model Evaluation of Societal Harm
@@ -4684,13 +4684,13 @@ controls:
       decisions), recognising that ‘bias’ can be difficult to define and can be subject to different interpretations in
       different contexts.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0789_UK_Government2023
     name: Model Evaluation of System Security
     description: Evaluate models for system security
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0791_UK_Government2023
     name: Evaluation of Predecessor Models
@@ -4699,7 +4699,7 @@ controls:
       (e.g. dangerous capabilities) scale with the overall size of the model. These preliminary evaluations can inform risk
       assessments.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0792_UK_Government2023
     name: Pre-training and Fine-tuning of Models
@@ -4708,7 +4708,7 @@ controls:
       inaccuracies in pretraining predictions. These evaluations could be undertaken at various pre-specified checkpoints,
       and could inform decisions about whether to pause or adjust the training process.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0793_UK_Government2023
     name: Pre-Deployment Evaluations
@@ -4719,7 +4719,7 @@ controls:
       account the model’s capabilities, novelty, expected domains of use, and number of individuals expected to be affected
       by it.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0794_UK_Government2023
     name: Post-Deployment Evaluations
@@ -4729,7 +4729,7 @@ controls:
       obsolete. Post-deployment evaluations can inform decisions to update the system’s safeguards, increase security around
       the model, temporarily limit access, or roll back deployment.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0795_UK_Government2023
     name: Context-Specific Model Evaluations
@@ -4737,7 +4737,7 @@ controls:
       Require organisations who deploy their models to conduct context-specific model evaluations. This requires that the
       information and data required to successfully conduct such assessments is provided to deployers.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0796_UK_Government2023
     name: Independent Evaluation with Subject Matter Expertise
@@ -4749,7 +4749,7 @@ controls:
       system’s features. For instance, experts on topics as wide as fairness, psychological harm, and catastrophic risk will
       be needed.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0798_UK_Government2023
     name: Sufficient Time for External Evaluators
@@ -4757,7 +4757,7 @@ controls:
       Give external evaluators sufficient time. As expected risks from models increase or models get more complex to
       evaluate, the time afforded for evaluation may need to increase as well.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0804_UK_Government2023
     name: Development and testing of Model Evaluation Methods
@@ -4767,7 +4767,7 @@ controls:
       are. This could involve frontier AI organisations developing model evaluation methods themselves or facilitating the
       efforts of others, such as by providing access to capable infrastructure for evaluation.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0821_UK_Government2023
     name: Model Robustness to Adversarial Attacks
@@ -4776,19 +4776,19 @@ controls:
       model stealing), based on priorities derived from threat modelling. This could involve a combination of benchmarking
       and red teaming.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0837_UK_Government2023
     name: Release After Security Evaluations
     description: Only release models after they have been through security evaluations, including benchmarking and red teaming.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0871_UK_Government2023
     name: Evaluation Research
     description: Improving our ability to assess the capabilities, limitations, and safety- relevant features of AI systems
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0893_UK_Government2023
     name: Evaluation of Different Content Filters
@@ -4798,7 +4798,7 @@ controls:
       combination if doing so substantially increases efficacy. Best practice could be shared with other frontier AI
       organisations or published broadly.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0907_UK_Government2023
     name: Monitoring and Safeguard Efficacy
@@ -4810,7 +4810,7 @@ controls:
       misuse. Risks are expected to increase as AI capabilities increase. Hence, active increases in investment in safety,
       security, and monitoring may be valuable.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0923_UK_Government2023
     name: Data Audits for AI System Behavior
@@ -4819,7 +4819,7 @@ controls:
       evaluations reveal a potentially dangerous capability, data audits can help ascertain the extent to which the training
       data contributed to it.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0924_UK_Government2023
     name: Data Audits for AI System Behavior
@@ -4828,7 +4828,7 @@ controls:
       evaluations reveal a potentially dangerous capability, data audits can help ascertain the extent to which the training
       data contributed to it.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0942_Gipiskis2024
     name: Scope red-teaming activities based on deploy- ment context
@@ -5241,7 +5241,7 @@ controls:
       technologies. Signatories are encouraged to make publicly available and keep up-to-date a summary of their copyright
       policy.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0389_NIST2024
     name: Training Data Transparency
@@ -5467,7 +5467,7 @@ controls:
       of misuse, access to logs from several months prior may be necessary to understand in maximal detail the causes of the
       misuse. However, in some cases extended retention schedules may disproportionately affect privacy.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0912_UK_Government2023
     name: Accounting of Applicable Regulatory Frameworks
@@ -5477,7 +5477,7 @@ controls:
       This could help to mitigate risks further down the line, such as the system revealing personally identifiable
       information.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0913_UK_Government2023
     name: Principle of Data Minimisation
@@ -5486,7 +5486,7 @@ controls:
       explore the practice of “data pruning”, which has been shown to improve data quality and system performance while
       minimising the quantity of pre-training data required.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0914_UK_Government2023
     name: Datatset Auditing
@@ -5494,7 +5494,7 @@ controls:
       Audit datasets used for pre-training but also those used for fine-tuning, classifiers, and other tools. Inappropriate
       datasets could result in systems that fail to disobey harmful instructions.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0915_UK_Government2023
     name: Technical Tools for Auditing
@@ -5502,7 +5502,7 @@ controls:
       Use technical tools – such as classifiers and filters – to audit large datasets to support scalability and privacy.
       These could be used in combination with human oversight, which can verify and augment these assessments.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0916_UK_Government2023
     name: Assessment of Training Data
@@ -5512,7 +5512,7 @@ controls:
       are simple, reliable predictors of risk, and provide an additional line of defence where more targeted assessments are
       limited.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0917_UK_Government2023
     name: Audits for Dangerous System Capabilities
@@ -5521,7 +5521,7 @@ controls:
 
       about weapons manufacturing or terrorism."
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0918_UK_Government2023
     name: Audits for Private or Sensitive Information
@@ -5530,7 +5530,7 @@ controls:
       training data, or may even reveal this information accidentally. This makes it important to know whether datasets
       include private or sensitive information e.g. names, addresses, or security vulnerabilities.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0919_UK_Government2023
     name: Audits for Biases in the Data
@@ -5539,7 +5539,7 @@ controls:
       personal characteristics or providing a skewed picture of particular groups. Ensuring a better balance in the training
       data could help to address this.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0920_UK_Government2023
     name: Audits for Harmful Content
@@ -5548,7 +5548,7 @@ controls:
       harmful content in datasets can inform safety measures (e.g. by highlighting domains where additional safeguards like
       content filters should be applied).
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0921_UK_Government2023
     name: Audits for Misinformation
@@ -5556,7 +5556,7 @@ controls:
       Training an AI system on inaccurate information increases the likelihood the outputs of the system will be inaccurate
       and could lead to harm.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0922_UK_Government2023
     name: External Expertise for Input Data Audits
@@ -5564,7 +5564,7 @@ controls:
       Draw on external expertise in conducting input data audits. For example, biosecurity experts could be consulted to
       identify information relevant to biological weapons manufacturing, which may not be readily obvious to non-experts.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0925_UK_Government2023
     name: Audits on Datasets for Customer Fine-Tuning
@@ -5575,7 +5575,7 @@ controls:
       to identify potential harms upstream. It is important that frontier AI organisations are mindful of privacy concerns
       and make use of privacy preserving techniques, where appropriate.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0928_UK_Government2023
     name: Removal of Harmful Input Data
@@ -5584,7 +5584,7 @@ controls:
       abilities of AI systems, data curation may prove insufficient to prevent dangerous system behaviour but could provide
       an additional layer of defence alongside other measures such as fine-tuning and content filters.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0930_UK_Government2023
     name: Sourcing or Generation of Additional Data for Training Dataset
@@ -5594,7 +5594,7 @@ controls:
       potential negative societal impacts and discriminatory effects. However, additional data should only be sought through
       appropriate means that respect and empower those individuals who are missing from the data.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0931_UK_Government2023
     name: Limitations of Input Data Audit
@@ -5604,7 +5604,7 @@ controls:
       reasoning about or discovering that information). Other risk mitigation measures will be required and further research
       on improving data input audit techniques is important.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0934_Gipiskis2024
     name: Use of Synthetic Data
@@ -5815,7 +5815,7 @@ controls:
       genuine use, for example to legitimate AI safety researchers attempting to examine model behaviour, or to users
       struggling to access legitimate sources of help on difficult topics like self-harm.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0901_UK_Government2023
     name: Know Your Customer (KYC) Checks
@@ -5826,7 +5826,7 @@ controls:
       or high- volume usage of the model. It is important to weigh up KYC checks against potential privacy and access
       tradeoffs of requiring registrations.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0902_UK_Government2023
     name: Trusted Categories API access
@@ -5835,7 +5835,7 @@ controls:
       to offer high usage rates, fine-tuning access, permissive content filters, as well as access to models with high misuse
       potential only to verified users in established enterprises, non-profits, and universities.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0970_Gipiskis2024
     name: Limit deployment scope
@@ -5932,7 +5932,7 @@ controls:
       Deploy models in small-scale or reversible ways before deploying models in large-scale or irreversible ways. This makes
       it possible for frontier AI organisations to notice and mitigate harm before the harm becomes too large or unavoidable.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0968_Gipiskis2024
     name: Staged release of model weights
@@ -6408,7 +6408,7 @@ controls:
       indication of an attack or could indicate that a model is encountering data that is different from that which it was
       trained on. Either way, further investigation may be required.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0832_UK_Government2023
     name: Monitoring Inputs to AI Systems for Audit Development
@@ -6417,7 +6417,7 @@ controls:
       attacks against AI systems rely on repeated querying. Proper logging will help you audit your system and identify any
       anomalous inputs.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0889_UK_Government2023
     name: Misuse Mapping
@@ -6426,7 +6426,7 @@ controls:
       people have begun using a competitor’s model to conduct phishing attacks, for example, may lead a frontier AI
       organisation to become more concerned that its own model will be misused in this way.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0909_UK_Government2023
     name: Diverse Monitoring Techniques
@@ -6435,7 +6435,7 @@ controls:
       will generally combine automated and human review, in recognition that automated reviews may miss intricate issues,
       while human reviews are not always scalable and can pose privacy issues.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0950_Gipiskis2024
     name: Dashboard of model properties
@@ -6788,13 +6788,13 @@ controls:
       reflected in organisational incident response planning. A well-planned response will help minimise the damage caused by
       an attack and support recovery.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0833_UK_Government2023
     name: Mitigation Actions for AI-related security incidents
     description: Take action to mitigate and remediate issues and document any AI-related security incidents and vulnerabilities.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0883_UK_Government2023
     name: Continuous Updating of Defensive Tools
@@ -6802,7 +6802,7 @@ controls:
       Continuously update defensive tools as workarounds are discovered. In some cases, this may be an ongoing effort that
       requires sustained investment.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0904_UK_Government2023
     name: Worst-case scenario Response
@@ -6812,7 +6812,7 @@ controls:
       threats, or withdrawing access to a model altogether, may be proportionate actions in such situations of extreme threat
       or consistent misuse. Running periodic dry runs could increase preparedness for such situations.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0941_Gipiskis2024
     name: Internal data poisoning diagnosis
@@ -6942,7 +6942,7 @@ controls:
       GPAISRs, including keeping up-to-date model documentation and providing relevant information to providers of AI systems
       who intend to integrate the general-purpose AI model into their AI systems
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0388_NIST2024
     name: Legal Compliance Alignment
@@ -7287,7 +7287,7 @@ controls:
       supply chain and build consumer confidence. This could include uses of the model that are against their terms of
       service, and could be provided to users through user terms or published information about the model.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0826_UK_Government2023
     name: Data Documentation
@@ -7296,7 +7296,7 @@ controls:
       cards, model cards and software bills of materials (SBOMs). This will allow you to identify and share key information,
       including particular security concerns, quickly and easily.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0926_UK_Government2023
     name: Documentation of Results of Input Data Audits
@@ -7304,7 +7304,7 @@ controls:
       Document the results of input data audits, including metadata. Frontier AI organisations could look to emerging
       standards when documenting the results of input data audits, such as datasheets for datasets
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0938_Gipiskis2024
     name: Calibrated confidence measures for model pre- dictions
@@ -7414,7 +7414,7 @@ controls:
       GPAISRs, where necessary to effectively enable assessment and mitigation of systemic risks, including new or updated
       versions of their Frameworks and Model Reports.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0273_EU_AI_Office2025
     name: Safety and Security Model Reports
@@ -7425,7 +7425,7 @@ controls:
       mitigation for the model in question; and (2) justifications of decisions to make the model in question available on
       the market."
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0280_Campos2025
     name: Stakeholder Sharing of Risk Documentation
@@ -7511,7 +7511,7 @@ controls:
       Which teams and individuals are involved at different stages of the risk management process (and how, if at all, third
       parties are involved); 5) Measures taken to address specific categories of risk, such as cybersecurity measures"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0803_UK_Government2023
     name: Discretionary Evaluator Disclosure
@@ -7521,7 +7521,7 @@ controls:
       would have an adverse effect on competition in the market. Sharing the results of evaluations can allow governments,
       regulators, users, and other frontier AI organisations to make informed decisions.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0805_UK_Government2023
     name: Disclosure of Model Evaluation Research and Development
@@ -7531,7 +7531,7 @@ controls:
       expected harm is sufficiently small, the AI research community, other frontier AI organisations, and relevant
       government bodies could benefit from being informed of their work.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0806_UK_Government2023
     name: Disclosure of Risk Assessment Processes
@@ -7539,7 +7539,7 @@ controls:
       Share details of risk assessment processes and risk mitigation measures with relevant government authorities and other
       AI companies, as set out in Responsible Capability Scaling.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0809_UK_Government2023
     name: Pre-training Disclosure of High-Level Model Details to Government Authorities
@@ -7555,7 +7555,7 @@ controls:
       the project’s design, as well as risk and impact assessment; 7) Plans for model evaluations during and after training,
       as well as predicted dangerous capabilities"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0810_UK_Government2023
     name: Updates to Government Authorities During Training
@@ -7566,7 +7566,7 @@ controls:
       emergent dangerous capabilities and whether these were expected; 3) Whether and how the risk context has changed (e.g.
       if other AI tools have been published that the model could interact with)"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0811_UK_Government2023
     name: Disclosure of Risk Context to Government Authorities at Deployment
@@ -7601,7 +7601,7 @@ controls:
       post-deployment safety measures); 12) Descriptions of post-deployment access controls; 13) Expected compute
       requirements for running the model during deployment"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0812_UK_Government2023
     name: Adjucation around Publicly Sharing Risks
@@ -7616,7 +7616,7 @@ controls:
       Protective Security Authority (NPSA) guidance on a security-minded approach to information management may prove helpful
       for sharing information appropriately.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0813_UK_Government2023
     name: Principled Policies for Disclosure
@@ -7628,7 +7628,7 @@ controls:
       could be guided and overseen by an independent review panel of multidisciplinary experts to ensure decisions made about
       or against information sharing are justifiable and oriented to optimal transparency.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0814_UK_Government2023
     name: Disclosure of Information with AI-focused Government Authorities
@@ -7642,7 +7642,7 @@ controls:
       physical or cybersecurity threat incidents. Robust security measures are in place when sharing more sensitive
       information.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0815_UK_Government2023
     name: Sharing of Limited Information
@@ -7655,7 +7655,7 @@ controls:
       model-specific information, which may be more commercially sensitive. It will also be important to consider that there
       is no privileged access to information that may give a competitive advantage to some firms.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0818_UK_Government2023
     name: Sharing General Information with the Public
@@ -7665,7 +7665,7 @@ controls:
       mitigation processes, high-level details of safety and security incidents, summaries of risk governance processes, and
       general overviews of model purpose, use cases, and the results of risk assessments and capability evaluations.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0863_UK_Government2023
     name: Cost-Benefit Analysis of Sharing Vulnerability Reports
@@ -7675,7 +7675,7 @@ controls:
       particularly important factor is how easily fixable the model vulnerability is. If a vulnerability will take a very
       long time to fix, or cannot be fixed, then public reporting may not be justified.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0864_UK_Government2023
     name: Development of Protocols for Disclosure of Model Vulnerability Information
@@ -7684,7 +7684,7 @@ controls:
       protocols may, for example, outline conditions under which information is to be shared with different actors depending
       on the type of harm or vulnerability identified.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0865_UK_Government2023
     name: Mechanisms to Disclose Vulnerability Reports to Third Parties
@@ -7693,7 +7693,7 @@ controls:
       enforcement, and other affected organisations. This may be particularly relevant for vulnerabilities where public
       disclosure might increase the risk of harm.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0866_UK_Government2023
     name: Public Sharing of Model Vulnerability Reporting Programs
@@ -7703,7 +7703,7 @@ controls:
       via a mechanism similar to the National Institute for Science and Technology’s National Vulnerability Database in the
       US.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0882_UK_Government2023
     name: Discretion around sharing Defense Tools
@@ -7712,7 +7712,7 @@ controls:
       particular actors. In some cases, making a tool freely available (e.g. by open-sourcing it) may reduce its
       effectiveness by allowing malicious actors to study it and circumvent it.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0888_UK_Government2023
     name: Public Sharing of Societal Impact Assessments
@@ -7720,7 +7720,7 @@ controls:
       In the absence of sufficiently substantial downsides to sharing, frontier AI organisations are encouraged to share the
       products of this work broadly.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0890_UK_Government2023
     name: Reporting of Broad Patterns of Misuse
@@ -7730,7 +7730,7 @@ controls:
       as the rate of harmful inputs filtered or the number of users banned for misuse. This information may benefit from
       being presented in a clear and understandable way and made optimally accessible.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0903_UK_Government2023
     name: Protocols for Sharing API users Information with government authorities
@@ -7740,7 +7740,7 @@ controls:
       shared with government bodies (e.g. cases where there is reason to think a user may be attempting to cause grave harm),
       and how to respond to government requests for data.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0933_UK_Government2023
     name: Disclosure of Input Data Audits with External Stakeholders
@@ -7750,7 +7750,7 @@ controls:
       procedures, and measures taken to reduce risk (see Model Reporting and Information Sharing). More sensitive information
       may be shared directly with regulators and external auditors.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A1032_Uuk2024
     name: Pre-registration of large training runs
@@ -7840,7 +7840,7 @@ controls:
       national competent authorities without undue delay relevant information about serious incidents throughout the entire
       model lifecycle and possible corrective measures to address them.
     hasDocumentation:
-      - doc-EU AI Office2025
+      - doc-EU-AI-Office2025
     type: Action
   - id: A0408_NIST2024
     name: Incident Communication Framework
@@ -7921,7 +7921,7 @@ controls:
       incidents - with sensitive information removed - could also be made public, such as have been shared in the AI incident
       database.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0838_UK_Government2023
     name: Open Lines of Communication for Product Security Feedback
@@ -7931,7 +7931,7 @@ controls:
       for doing so, and for escalating issues to the wider community. Helping to share knowledge and threat information will
       strengthen the overall community’s ability to respond to AI security threats.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0854_UK_Government2023
     name: Jailbreaking Method Vulnerability Reports
@@ -7941,7 +7941,7 @@ controls:
       vulnerabilities and methods for exploiting them, including: Reports for inducing models to bypass moderation features,
       which the frontier AI organisation has attempted to prevent through the use of filters or fine-tuning"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0855_UK_Government2023
     name: Prompt Injection Vulnerability Reports
@@ -7951,7 +7951,7 @@ controls:
       vulnerabilities and methods for exploiting them, including:Reports used by malicious actors to induce models to exhibit
       behaviours they want by presenting models with prompts that contain instructions to perform these behaviours
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0856_UK_Government2023
     name: Privacy Attacks Vulnerability Reports
@@ -7961,7 +7961,7 @@ controls:
       vulnerabilities and methods for exploiting them, including: methods for extracting information that should be private
       from models (e.g. sensitive information from training data or users’ private conversations with models)"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0857_UK_Government2023
     name: Vulnerability Reports for Unaddressed Misuse Opportunities
@@ -7971,7 +7971,7 @@ controls:
       vulnerabilities and methods for exploiting them, including: methods for using the capabilities of models to cause harm,
       which have not already been addressed"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0858_UK_Government2023
     name: Vulnerability Reports for Poisoning Attacks
@@ -7981,7 +7981,7 @@ controls:
       vulnerabilities and methods for exploiting them, including: Reports for when an adversary has manipulated training data
       in order to degrade model performance"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0859_UK_Government2023
     name: Vulnerability Reports for Bias and Discrimination
@@ -7991,7 +7991,7 @@ controls:
       vulnerabilities and methods for exploiting them, including:Reports for when a model is exhibiting behaviours that
       reveal specific biases or discrimination regarding known protected characteristics
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0860_UK_Government2023
     name: Vulnerability Reports for Performance Issues
@@ -8001,7 +8001,7 @@ controls:
       vulnerabilities and methods for exploiting them, including: when a model performs inadequately for a situation it is
       being deployed in e.g. a healthcare chatbot AI that provides incorrect information and causes harm to patients"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0861_UK_Government2023
     name: Vulnerability Reports for Controllability Issues (i.e., 'Misalignment')
@@ -8011,7 +8011,7 @@ controls:
       vulnerabilities and methods for exploiting them, including: when models apply their capabilities in ways that
       substantially diverge from what users intend or desire"
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0862_UK_Government2023
     name: Model Vulnerability Reports
@@ -8024,7 +8024,7 @@ controls:
       reports of traditional software vulnerabilities. It is crucial that these policies are made publicly accessible and
       function effectively."
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0982_Gipiskis2024
     name: Encourage reporting of critical vulnerabilities to the upstream provider or other relevant stakeholders
@@ -8211,7 +8211,7 @@ controls:
       Include verification mechanisms, such that external actors can have increased confidence that responsible capability
       scaling policies are executed as intended.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0807_UK_Government2023
     name: Disclosure of Information about Internal Governance Processes
@@ -8221,7 +8221,7 @@ controls:
       actors to identify gaps that might lead to risks being overlooked. This information could be updated regularly (e.g.
       every 12 months). This information could also be made public, provided sensitive details are removed.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0972_Gipiskis2024
     name: Release strategy disagreement between developers
@@ -8322,7 +8322,7 @@ controls:
       facilitate widespread model distribution in other ways, such as requiring in-depth KYC checks or watermarking copies of
       the model.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0799_UK_Government2023
     name: Fine-tuning by External Evaluators
@@ -8331,7 +8331,7 @@ controls:
       assess risks associated with widespread model distribution if they cannot fine-tune the model. This may involve
       providing external evaluators with access to capable infrastructure to enable fine-tuning.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0800_UK_Government2023
     name: External Evaluation of Model without Safety Regulations
@@ -8341,7 +8341,7 @@ controls:
       safeguards (i.e. “jailbreak” the model). If the model is open-sourced, leaked, or stolen, users may also simply be able
       to remove or bypass the safety mitigations.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0801_UK_Government2023
     name: External Evaluation of Model Families
@@ -8351,7 +8351,7 @@ controls:
       compute. Evaluating such a model family would enable scaling analysis to better forecast future performance,
       capabilities and risks.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0802_UK_Government2023
     name: External Evaluation of Deployed System Components
@@ -8363,7 +8363,7 @@ controls:
       test all of its different components. It is important to consider the need to balance external evaluators’ ability to
       access all components of the system against the need to protect information that would allow bypassing model defences.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0816_UK_Government2023
     name: Sharing with Independent Third-Parties
@@ -8372,7 +8372,7 @@ controls:
       Evaluations and Red Teaming). This may require sharing much of the same information that is shared with governments in
       full but may be shared on a case-by- case basis.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0887_UK_Government2023
     name: Equitable Access to Frontier AI Systems
@@ -8382,7 +8382,7 @@ controls:
       for example, not withholding access based on previous or expected criticism and encouraging different types of
       academics, civil society groups and independent researchers to study AI systems.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0932_UK_Government2023
     name: Independent Data Input Audits
@@ -8393,7 +8393,7 @@ controls:
       explore the possibility of providing synthetic datasets to auditors with sensitive information removed, or providing
       auditors with privacy-preserving access to the training data.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0944_Gipiskis2024
     name: Pre-deployment access by third-party auditors
@@ -8579,7 +8579,7 @@ controls:
       Communicate clearly to users which elements of security they are responsible for and where and how their data may be
       used or accessed.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0900_UK_Government2023
     name: Communication of and Appeal for API access Reduction Policies
@@ -8589,7 +8589,7 @@ controls:
       have not been applied correctly. Alternatively, users may be able to perform actions to mitigate misuse risks, such as
       providing evidence to justify behaviour.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0905_UK_Government2023
     name: User Informed Rapid Rollback of models
@@ -8598,7 +8598,7 @@ controls:
       will be minimised as far as safely possible. This is especially important where models are deployed in safety critical
       domains.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action
   - id: A0041_Casper2025
     name: AI governance institutes
@@ -8707,5 +8707,5 @@ controls:
       needs. For instance collaborating closely with social media organisations to help them produce more capable tools for
       identifying AI-generated content.
     hasDocumentation:
-      - doc-UK Government2023
+      - doc-UK-Government2023
     type: Action

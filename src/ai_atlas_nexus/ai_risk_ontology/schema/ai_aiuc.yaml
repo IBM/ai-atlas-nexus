@@ -73,10 +73,6 @@ classes:
     description: >-
       An obligation, permission, or prohibition for AI system assurance.
     mixin: true
-    attributes:
-      type:
-        range: string
-        designates_type: true
     slots:
       - hasControlApplication
       - hasEvidenceCategory
@@ -90,10 +86,6 @@ classes:
     is_a: Permission
     mixins:
       - ControlActivity
-    attributes:
-      type:
-        range: string
-        designates_type: true
     description: A control activity (rule) describing a permission to perform an activity
     class_uri: nexus:ControlActivityPermission
 
@@ -101,10 +93,6 @@ classes:
     is_a: Prohibition
     mixins:
       - ControlActivity
-    attributes:
-      type:
-        range: string
-        designates_type: true
     description: A control activity (rule) describing a prohibition to perform an activity
     class_uri: nexus:ControlActivityProhibition
 
@@ -112,10 +100,6 @@ classes:
     is_a: Obligation
     mixins:
       - ControlActivity
-    attributes:
-      type:
-        range: string
-        designates_type: true
     description: A control activity (rule) describing an obligation for performing an activity
     class_uri: nexus:ControlActivityObligation
 
@@ -123,10 +107,6 @@ classes:
     is_a: Recommendation
     mixins:
       - ControlActivity
-    attributes:
-      type:
-        range: string
-        designates_type: true
     description: A control activity (rule) describing a recommendation for performing an activity
     class_uri: nexus:ControlActivityRecommendation
 
@@ -134,10 +114,6 @@ classes:
     is_a: Rule
     description: >-
       A requirement representing a combination of obligation, permission, or prohibition for AI system assurance.
-    attributes:
-      type:
-        range: string
-        designates_type: true
     slot_usage:
       hasRule:
         description: Relationship indicating the control activities (rules) of which the requirement is composed.

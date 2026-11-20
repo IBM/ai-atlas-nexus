@@ -33,6 +33,7 @@ For more information about LinkML data instances see [the LinkML documentation](
 | `principles_un.yaml`                        | Principles             | Principles for the ethical use of artificial intelligence in the United Nations system                |
 | `principles_oecd.yaml`                      | Principles             | OECD AI Principles                                                                                    |
 | `principles_ibm_trust.yaml`                 | Principles             | IBM's Principles for Trust and Transparency                                                           |
+| `principles_rbi_free_ai.yaml`               | Principles             | The 7 Sutras of the Reserve Bank of India FREE-AI Committee Report                                    |
 | `mit_ai_risk_mitigation_data.yaml`          | RiskControlTaxonomy    | MIT AI Risk Mitigation Taxonomy                                                                       |
 | `mit_ai_risk_repository_data_controls.yaml` | RiskControls           | Controls categorised by MIT AI Risk Mitigation Taxonomy                                               |
 | `datasets.yaml`                             | Datasets               | A collection of datasets that are used for AI model training                                          |

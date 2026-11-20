@@ -112,7 +112,7 @@ aitasks:
     url: https://huggingface.co/tasks/visual-question-answering
     isDefinedByTaxonomy: hf-ml-tasks
     isPartOf: hf-ml-tasks-group-multimodal
-  - id: feature extraction
+  - id: feature-extraction
     name: Feature Extraction
     description: >-
       Feature extraction is the task of extracting features learnt in a model.
