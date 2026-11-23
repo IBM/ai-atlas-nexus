@@ -31,6 +31,7 @@ Our intention is to create a starting point for an open AI Systems ontology whos
 
 - **AI Risk Ontology**
   - [LinkML schema documentation](docs/ontology/index.md)
+  - [Persistent identifiers and downstream imports](src/ai_atlas_nexus/ai_risk_ontology/README.md#persistent-identifiers) (`https://w3id.org/ai-atlas-nexus/`)
   - [LinkML instance data for an example knowledge graph](https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/knowledge_graph/README.md)
   - [Download a populated graph](https://github.com/IBM/ai-atlas-nexus/blob/main/graph_export/README.md)
   - [Contribute your own taxonomy files and CoT templates](docs/concepts/Contributing_a_taxonomy.md)
