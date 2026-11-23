@@ -2,7 +2,7 @@
 
 <img src="https://github.com/IBM/ai-atlas-nexus/blob/main/resources/images/ai_atlas_nexus_vector.svg?raw=true" width="200">
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0) ![main branch](https://github.com/IBM/ai-atlas-nexus/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main) [![](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/) <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0) ![main branch](https://github.com/IBM/ai-atlas-nexus/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main) [![](https://img.shields.io/badge/python-3.11%20to%203.14-blue.svg)](https://www.python.org/downloads/) <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 
 👉 (Jun-2025) The [demo projects repository](https://github.com/IBM/ai-atlas-nexus-demos) showcases implementations of AI Atlas Nexus.
 
@@ -14,18 +14,19 @@ Our intention is to create a starting point for an open AI Systems ontology whos
 
 ## Features
 
-- 🏗️ An ontology that combines the AI risk view (taxonomies, risks, actions) with an AI model view (AI systems, AI models, model evaluations) into one coherent schema
-- 📚 AI Risks collected from IBM AI Risk Atlas, IBM Granite Guardian, MIT AI Risk Repository, NIST Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile, the AI Risk Taxonomy (AIR 2024), the AILuminate Benchmark, Credo's Unified Control Framework, OWASP Top 10 for Large Language Model Applications, OWASP Top 10 for Agentic Applications, and OWASP Agentic Skills Top 10
-- 🔗 Mappings are proposed between the taxonomies and between risks and actions
-- 🐍 Use the python library methods to quickly explore available risks, relations and actions
-- 🚨 Use the python library methods to detect potential risks in your usecase
-- 📤 Download an exported graph populated with data instances
-- ✨ Example use-case of auto-assistance in compliance questionnaires using CoT examples and AI Atlas Nexus
-- 🔧 Tooling to convert the LinkML schema and instance data into a Cypher representation to populate a graph database
+- 🏗️ **Ontology:** one LinkML schema joins the risk view (taxonomies, risks, actions, controls, incidents) to the AI model view (systems, models, evaluations, adapters)
+- 📚 **Taxonomies:** IBM AI Risk Atlas, Granite Guardian, ShieldGemma, MIT AI Risk Repository and mitigations, NIST AI RMF and GenAI Profile, AIR 2024, AILuminate, Credo UCF, AIUC-1, AEF-1, EU GPAI Code of Practice, California SB 53, CSA MAESTRO, Eticas, CSIRO Responsible AI Patterns, OWASP Top 10s (LLM, Agentic Applications, MCP, Agentic Skills), and the OECD, UN, Australian, IBM and RBI principles
+- 🔗 **Mappings:** SSSOM crosswalks between taxonomies and between risks and actions, with LLM-proposed new mappings
+- 🐍 **Exploration:** a Python API and a schema-generated `ran query` command over risks, actions, controls, incidents, evaluations and datasets
+- 🚨 **Detection:** LLM identification of risks, actions, AI tasks and domains from a usecase, with severity and explanations, on WML, Ollama, vLLM, OpenAI, Bedrock, Hugging Face or RITS
+- ✅ **Conformance:** SHACL validation and rule inference, and checks of evaluation engagements against standards such as AEF-1
+- 📤 **Export:** YAML, OWL, Cypher, sigma.js JSON and LaTeX graphs, queryable with SPARQL through Pyoxigraph
+- ✨ **Assistance:** chain-of-thought and few-shot completion of compliance questionnaires
+- 🤗 **Data loading:** benchmark and evaluation data from Hugging Face
 
 ## Architecture
 
-![Architecture](https://github.com/IBM/ai-atlas-nexus/blob/main/resources/images/architecture.png?raw=true)
+![Architecture](resources/images/architecture_v2.png)
 
 ## Links
 
@@ -34,26 +35,30 @@ Our intention is to create a starting point for an open AI Systems ontology whos
   - [LinkML instance data for an example knowledge graph](https://github.com/IBM/ai-atlas-nexus/blob/main/src/ai_atlas_nexus/data/knowledge_graph/README.md)
   - [Download a populated graph](https://github.com/IBM/ai-atlas-nexus/blob/main/graph_export/README.md)
   - [Contribute your own taxonomy files and CoT templates](docs/concepts/Contributing_a_taxonomy.md)
+  - [Documentation site](https://ibm.github.io/ai-atlas-nexus/) User guide, concepts and API reference
 - **Notebooks:**
-  - [AI Atlas Nexus Quickstart](docs/examples/notebooks/AI_Atlas_Nexus_Quickstart.ipynb) Overview of library functionality
-  - [Risk identification](docs/examples/notebooks/risk_identification.ipynb) Uncover risks related to your usecase
-  - [Auto assist questionnaire](docs/examples/notebooks/autoassist_questionnaire.ipynb) Auto-fill questionnaire using Chain of Thought or Few-Shot Examples
-  - [AI Tasks identification](docs/examples/notebooks/ai_tasks_identification.ipynb) Uncover ai tasks related to your usecase
-  - [AI Domain identification](docs/examples/notebooks/domain_identification.ipynb) Uncover ai domain from your usecase
-  - [Risk Categorization](docs/examples/notebooks/risk_categorization.ipynb) Assess and categorize the severity of risks associated with an AI system usecase. Prompt templates are used with thanks to https://doi.org/10.48550/arXiv.2407.12454.
-  - [Crosswalk](docs/examples/notebooks/generate_crosswalk.ipynb) An example of generating crosswalk information between risks of two different taxonomies.
-  - [Risk to ARES Evaluation](docs/examples/notebooks/risk_to_ares_evaluation.ipynb) ARES Integration for AI Atlas Nexus allows you to run AI robustness evaluations on AI Systems derived from use cases.
+  - [Quickstart](docs/examples/notebooks/AI_Atlas_Nexus_Quickstart.ipynb) Tour of the library
+  - [Risk identification](docs/examples/notebooks/risk_identification.ipynb) Risks for a usecase
+  - [AI tasks](docs/examples/notebooks/ai_tasks_identification.ipynb), [domains](docs/examples/notebooks/domain_identification.ipynb) and [capabilities](docs/examples/notebooks/AI_Capabilities_Identification.ipynb) Identification from a usecase
+  - [Risk categorization](docs/examples/notebooks/risk_categorization.ipynb) Severity of usecase risks, with prompt templates from https://doi.org/10.48550/arXiv.2407.12454
+  - [Auto assist questionnaire](docs/examples/notebooks/autoassist_questionnaire.ipynb) Chain-of-thought and few-shot answers
+  - [Crosswalk](docs/examples/notebooks/generate_crosswalk.ipynb), [AIUC-1 crosswalk](docs/examples/notebooks/Crosswalk_with_AIUC-1.ipynb), [preparing](docs/examples/notebooks/Prepare_taxonomy_mappings.ipynb) and [evaluating](docs/examples/notebooks/Evaluate_taxonomy_mappings.ipynb) mappings Relating taxonomies
+  - [AEF-1 Minimum Operating Conditions](docs/examples/notebooks/AEF-1_Minimum_Operating_Conditions.ipynb) Conformance of evaluation engagements
+  - [Pyoxigraph Explorer](docs/examples/notebooks/Pyoxigraph%20Explorer.ipynb) and [subgraph similarity](docs/examples/notebooks/Subgraph_Extraction_and_Similarity.ipynb) SPARQL and graph comparison
+  - [SHACL rule inference](docs/examples/notebooks/shacl_rule_inference.ipynb) and [certification portability](docs/examples/notebooks/shacl_certification_portability.ipynb) Validation and inference
+  - [Hugging Face data](docs/examples/notebooks/Loading%20data%20from%20Huggingface.ipynb) and [schema viewer](docs/examples/notebooks/schema_viewer.ipynb)
+  - [Risk to ARES Evaluation](docs/examples/notebooks/risk_to_ares_evaluation.ipynb) Robustness evaluation of AI systems derived from usecases
 - **Additional Resources:**
-  - [Demonstrations](https://github.com/IBM/ai-atlas-nexus-demos) A repo containing some demo applications using ai-atlas-nexus.
-  - [Extensions](https://github.com/IBM/ai-atlas-nexus-extensions) A repo containing extensions and a cookie cutter template to create new open source ai-atlas-nexus extensions.
+  - [Demonstrations](https://github.com/IBM/ai-atlas-nexus-demos) Demo applications.
+  - [Extensions](https://github.com/IBM/ai-atlas-nexus-extensions) Extensions and a cookiecutter template for new ones.
   - [IBM AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas)
   - [Usage Governance Advisor: From Intent to AI Governance](https://arxiv.org/abs/2412.01957)
 
 ## Installation
 
-This project targets python version ">=3.11, <3.12". You can download specific versions of python here: https://www.python.org/downloads/
+This project targets python version ">=3.11, <=3.14.7". You can download specific versions of python here: https://www.python.org/downloads/
 
-**Note:** Replace `INFERENCE_LIB` with one of the LLM inference library [ollama, vllm, wml, rits] as explained [here](#install-for-inference-apis)
+**Note:** Replace `INFERENCE_LIB` with `ollama`, `vllm`, `wml` or `bedrock` (see [inference APIs](#install-for-inference-apis)). OpenAI, Hugging Face and RITS need no extra.
 
 To install the current release
 
@@ -73,11 +78,14 @@ pip install -e ".[INFERENCE_LIB]"
 
 ### Install for inference APIs
 
-AI Atlas Nexus uses Large Language Models (LLMs) to infer risks and risks data. Therefore, requires access to LLMs to inference or call the model. The following LLM inference APIs are supported:
+Risk, task and domain identification call a Large Language Model (LLM). AI Atlas Nexus supports these inference APIs:
 
 - [IBM Watsonx AI](https://www.ibm.com/products/watsonx-ai) (Watson Machine Learning)
 - [Ollama](https://ollama.com/)
 - [vLLM](https://docs.vllm.ai/en/latest/)
+- [OpenAI](https://platform.openai.com/) (and OpenAI-compatible endpoints)
+- [AWS Bedrock](https://aws.amazon.com/bedrock/)
+- [Hugging Face](https://huggingface.co/docs/inference-providers) Inference Providers
 - [RITS](https://rits.fmaas.res.ibm.com) (IBM Internal Only)
 
 #### IBM Watsonx AI (WML)
@@ -143,6 +151,47 @@ The CUSTOM_API_KEY can be any string that you choose to use as your API key. Abo
 
 **Note:** When selecting vLLM engine in AI Atlas Nexus, pass `api_url` as `host:port` and given `api_key` to `credentials` with values from the vllm serve command above.
 
+#### OpenAI
+
+Set these in `.env`, in the environment, or in `credentials`:
+
+```yaml
+OPENAI_API_KEY=<OpenAI api key goes here>
+OPENAI_API_URL=<Optional, defaults to https://api.openai.com/v1; set it to use an OpenAI-compatible endpoint>
+```
+
+The base install is enough.
+
+#### AWS Bedrock
+
+Bedrock runs `openai.*` models through `invoke_model`.
+
+1. Set these in `.env`, in the environment, or in `credentials`:
+
+```yaml
+AWS_ACCESS_KEY_ID=<AWS access key id goes here>
+AWS_SECRET_ACCESS_KEY=<AWS secret access key goes here>
+AWS_DEFAULT_REGION=<Optional, defaults to us-east-1>
+```
+
+2. Install Bedrock dependencies as follows:
+
+```command
+pip install -e ".[bedrock]"
+```
+
+#### Hugging Face
+
+Set these in `.env`, in the environment, or in `credentials`:
+
+```yaml
+HF_TOKEN=<Hugging Face access token goes here>
+HF_API_URL=<Optional, defaults to https://router.huggingface.co/v1>
+HF_ORG=<Optional, organization to bill>
+```
+
+The base install is enough.
+
 #### RITS (IBM Internal Only)
 
 When using the RITS platform, you need to:
@@ -154,11 +203,7 @@ RITS_API_KEY=<RITS api key goes here>
 RITS_API_URL=<RITS url key goes here>
 ```
 
-2. Install RITS dependencies as follows:
-
-```command
-pip install -e ".[rits]"
-```
+2. The base install is enough.
 
 ## Command line
 
@@ -186,6 +231,7 @@ Currently, following extensions are available
 
 ## Compatibility
 
+- Python >=3.11, <=3.14.7.
 - View the [releases changelog](https://github.com/IBM/ai-atlas-nexus/releases).
 
 ## Referencing the project
@@ -211,7 +257,7 @@ AI Atlas Nexus is provided under Apache 2.0 license.
 ## Contributing
 
 - Get started by checking our [contribution guidelines](CONTRIBUTING.md).
-- Read the wiki for more technical and design details.
+- Read the [documentation site](https://ibm.github.io/ai-atlas-nexus/) for more technical and design details.
 - If you have any questions, just ask!
 - [Contribute your own taxonomy files and CoT templates](docs/concepts/Contributing_a_taxonomy.md)
 
@@ -222,7 +268,6 @@ Tip: Use the makefile provided to regenerate artifacts provided in the repositor
 - Try out a quick demo at the [HF spaces demo site](https://huggingface.co/spaces/ibm/risk-atlas-nexus)
 - Read the publication [AI Risk Atlas: Taxonomy and Tooling for Navigating AI Risks and Resources](https://arxiv.org/pdf/2503.05780)
 - Explore [IBM's AI Risk Atlas](https://www.ibm.com/docs/en/watsonx/saas?topic=ai-risk-atlas) on the IBM documentation site
-- View the [demo projects repository](https://github.com/IBM/ai-atlas-nexus-demos) showcasing implementations of AI Atlas Nexus.
 - Read the the IBM AI Ethics Board publication [Foundation models: Opportunities, risks and mitigations](https://www.ibm.com/downloads/documents/us-en/10a99803d8afd656) which goes into more detail about the risk taxonomy, and describes the point of view of IBM on the ethics of foundation models.
 - ['Usage Governance Advisor: From Intent to AI Governance'](https://arxiv.org/abs/2412.01957) presents a system for semi-structured governance information, identifying and prioritising risks according to the intended use case, recommending appropriate benchmarks and risk assessments and proposing mitigation strategies and actions.
 

@@ -21,6 +21,7 @@ nav:
           - "Risk explanations": usage/risk_explanations.md
           - "Token usage metadata": usage/token_usage_metadata.md
           - "Custom prompts": usage/custom_prompts.md
+          - "Migrating to 2.0": usage/migration_v2.md
   - Concepts:
       - Concepts: concepts/index.md
       - IBM AI Risk Atlas: concepts/IBM_AI_Risk_Atlas.md
